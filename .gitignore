@@ -1,0 +1,67 @@
+# --- Node / npm / pnpm / yarn ---
+node_modules/
+.pnp
+.pnp.*
+.yarn/install-state.gz
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.yarn-integrity
+
+# --- Next.js ---
+.next/
+out/
+build/
+dist/
+next-env.d.ts
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- Testing ---
+coverage/
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Caches ---
+.eslintcache
+.cache/
+.turbo/
+.parcel-cache/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Editors ---
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# --- Vercel / Cloudflare ---
+.vercel
+.wrangler/
+.dev.vars
+.open-next/
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Misc ---
+*.local
+
+# --- Project-specific (temporary) ---
+# Raw asset dump pending dedupe and split between public/images and docs/site-os/inputs.
+/Images/
