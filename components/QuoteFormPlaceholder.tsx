@@ -17,11 +17,23 @@ const DEFAULT_SERVICES = [
 type QuoteFormPlaceholderProps = {
   title?: string;
   services?: string[];
+  /**
+   * When true, renders a ZIP Code field between Phone and Service Needed.
+   * Default: false (matches the homepage form, which omits ZIP).
+   */
+  includeZip?: boolean;
+  /**
+   * Override the submit button label.
+   * Default: "Request Service" (matches the homepage form).
+   */
+  submitLabel?: string;
 };
 
 export function QuoteFormPlaceholder({
   title = "Get Plumbing Help Today",
   services = DEFAULT_SERVICES,
+  includeZip = false,
+  submitLabel = "Request Service",
 }: QuoteFormPlaceholderProps) {
   const [submitted, setSubmitted] = useState(false);
 
@@ -98,6 +110,27 @@ export function QuoteFormPlaceholder({
           />
         </div>
 
+        {includeZip ? (
+          <div>
+            <label
+              htmlFor="qf-zip"
+              className="block text-sm font-medium text-brand-dark"
+            >
+              ZIP Code
+            </label>
+            <input
+              id="qf-zip"
+              name="zip"
+              type="text"
+              required
+              autoComplete="postal-code"
+              inputMode="numeric"
+              pattern="[0-9]{5}(-[0-9]{4})?"
+              className="mt-1 block w-full rounded-lg border border-brand-surface-alt bg-white px-3 py-2.5 text-base text-brand-dark shadow-sm outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/30"
+            />
+          </div>
+        ) : null}
+
         <div>
           <label
             htmlFor="qf-service"
@@ -142,7 +175,7 @@ export function QuoteFormPlaceholder({
           type="submit"
           className="mt-2 inline-flex w-full items-center justify-center rounded-lg bg-brand-primary px-4 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
         >
-          Request Service
+          {submitLabel}
         </button>
       </div>
     </form>
