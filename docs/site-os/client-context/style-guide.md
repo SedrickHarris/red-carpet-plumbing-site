@@ -47,83 +47,75 @@ The site should feel like a dependable Las Vegas plumbing company that can respo
 
 ## 4. Brand Color System
 
-Exact brand colors should be confirmed from the approved logo files before final token lock.
+The color system should preserve the current Red Carpet Plumbing brand identity while supporting a polished, modern, high-conversion service website.
 
-Recommended color roles:
+Exact color values should come from logo files and live-site styling where possible. Any color not directly confirmed should be marked as a best estimate.
 
-### 4.1 Primary Brand Color
+### 4.1 Confirmed or Working Color Tokens
 
-Use the strongest Red Carpet Plumbing brand color from the logo as the primary action color.
+| Color Role | Hex | Usage | Source | Status |
+|---|---:|---|---|---|
+| Primary Brand Red | `#981C1E` | Primary buttons, CTA accents, active states, emergency highlights | Logo asset (`Images/brand/logo/Logo.png` wordmark; dominant red cluster on pixel histogram) | Confirmed from logo asset |
+| Deep Red / Dark Accent | `#7A1618` | Button hover states, dark red CTA accents, dividers | Derived as a darker shade of the primary red for interaction states | Best estimate, needs confirmation |
+| Secondary Brand Blue | `#17469E` | Small icon accents, informational highlights, secondary illustration-aligned accents, and selected service-card details. Do not use as the primary CTA color. | Logo asset illustration color | Confirmed from logo asset, optional supporting token |
+| Dark Neutral | `#231F20` | Headings, body text on light backgrounds, header text, illustration outlines | Logo asset (dominant outline/wordmark stroke; near-Pantone Process Black) | Confirmed from logo asset |
+| Charcoal / Footer Dark | `#111827` | Footer background, strong CTA sections, dark cards | Neutral deep gray chosen to sit heavier than the logo black so footer reads distinct | Best estimate, needs confirmation |
+| White | `#FFFFFF` | Main backgrounds, cards, form fields, text on dark backgrounds | Standard UI; also the logo background color | Confirmed |
+| Off White / Warm Background | `#FAF8F5` | Page background, alternating sections, soft cards | Warm-neutral tint to pair with brand red without feeling clinical | Best estimate, needs confirmation |
+| Light Gray | `#F3F4F6` | Section backgrounds, service grid backings, form outlines | Neutral UI gray | Best estimate, needs confirmation |
+| Medium Gray | `#6B7280` | Secondary text, helper text, muted labels | Passes WCAG AA on white (4.5:1+) | Best estimate, needs confirmation |
+| Emergency Accent | `#981C1E` | Emergency callouts, 24/7 badges, call-now strip | Reuses the brand red rather than introducing a competing alert hue; the brand already carries urgency | Confirmed from logo asset |
+| Success / Confirmation | `#15803D` | Form success states and positive UI feedback only | UI support color chosen to complement brand red without clashing | Best estimate, needs confirmation |
+| Warning / Attention | `#B45309` | Non-emergency notices and caution UI only | UI support color | Best estimate, needs confirmation |
 
-Suggested use:
+### 4.2 Color Usage Rules
 
-- Primary buttons
-- CTA strips
-- Icon accents
-- Active navigation states
-- Important callouts
+- Use Primary Brand Red for the main conversion path.
+- Use dark neutrals for readability, footer sections, and high-trust content blocks.
+- Use white and off-white backgrounds to keep the site clean and service-focused.
+- Use light gray backgrounds to separate service grids, FAQ sections, and location blocks.
+- Use Emergency Accent only for urgent plumbing support, 24/7 callouts, and call-now prompts.
+- Do not overuse red across every section. Reserve it for CTAs, accents, and important conversion signals.
+- Do not use low-contrast red text on dark backgrounds.
+- Do not place long paragraphs on dark red backgrounds unless contrast is verified.
+- Do not create fake badges, fake awards, or fake review graphics with brand colors.
 
-Status:
+### 4.3 Recommended Tailwind Token Mapping
 
-- Pending confirmation from logo/design assets
+Use this as the future Tailwind/theme reference:
 
-### 4.2 Dark Neutral
+| Token | Suggested Hex | Use |
+|---|---:|---|
+| `brand.primary` | `#981C1E` | Main CTA and brand accents |
+| `brand.primaryHover` | `#7A1618` | CTA hover state |
+| `brand.secondary` | `#17469E` | Optional supporting accent for small icons, info highlights, and illustration-aligned details. Not a CTA color. |
+| `brand.dark` | `#231F20` | Headings, illustration outlines, dark UI elements |
+| `brand.text` | `#1F2937` | Default body text |
+| `brand.muted` | `#6B7280` | Secondary text |
+| `brand.border` | `#E5E7EB` | Borders and dividers |
+| `brand.surface` | `#FFFFFF` | Cards and forms |
+| `brand.surfaceAlt` | `#F3F4F6` | Alternating sections |
+| `brand.emergency` | `#981C1E` | Emergency CTA treatment |
 
-Use a dark neutral for:
+### 4.4 Accessibility Requirements
 
-- Header text
-- Footer background
-- High-contrast CTA sections
-- Strong trust sections
+- Primary buttons must pass WCAG AA contrast against their text color. (`#981C1E` on white = 7.2:1, which passes AAA for normal text.)
+- Body text must pass WCAG AA contrast on all backgrounds.
+- Red should not be the only indicator of urgency or error. Pair with an icon or a text label.
+- Focus states must be visible. Use an outline ring that is distinct on both light and dark backgrounds.
+- Link states must be distinguishable from body text. Underline on hover at minimum.
+- Dark sections must use high-contrast text and clear CTA treatment.
 
-Suggested role:
+### 4.5 Pending Color Confirmation Notes
 
-- Deep charcoal, near black, or dark navy/black depending on approved brand direction
+The following items are not yet locked and should be reviewed before the production Tailwind config is finalized:
 
-Status:
-
-- Pending confirmation
-
-### 4.3 Light Background
-
-Use warm white or clean white for:
-
-- Main page background
-- Cards
-- Forms
-- FAQ blocks
-- Service cards
-
-Status:
-
-- Approved as a general style direction
-
-### 4.4 Soft Section Background
-
-Use a soft gray or very light warm neutral for:
-
-- Alternating sections
-- Service grids
-- Local service area sections
-- FAQ sections
-- Trust sections
-
-Status:
-
-- Approved as a general style direction
-
-### 4.5 Alert / Emergency Accent
-
-Use a strong accent treatment for emergency plumbing CTAs.
-
-Suggested use:
-
-- Emergency call strip
-- 24/7 service badges
-- Urgent service cards
-- Call-now buttons
-
-Do not overuse the emergency color. It should create urgency without making the site feel alarmist.
+- **Deep Red / Dark Accent (`#7A1618`)** is a derived hover shade. Confirm against the production design system, brand glassware (vehicle wraps, business cards), or any approved interaction-state mock.
+- **Charcoal / Footer Dark (`#111827`)** and **Off White / Warm Background (`#FAF8F5`)** are UI choices, not brand-locked tones. Confirm against any existing print or signage palette before lock.
+- **Light Gray (`#F3F4F6`)** and **Medium Gray (`#6B7280`)** are neutral UI support tones; verify they pair correctly with the brand red and the chosen body font once typography is selected.
+- **Success (`#15803D`)** and **Warning (`#B45309`)** are UI-only support colors with no logo source; confirm before any form or notification component goes live.
+- **Secondary Brand Blue (`#17469E`)** is confirmed from the logo illustration (cap and overalls of the mascot plumber, 5928-pixel dominant cluster) and mapped as an optional supporting token (`brand.secondary`). It must not be used as the primary CTA color; Primary Brand Red (`#981C1E`) remains the main CTA and emergency accent. Reserve the blue for small icon accents, informational highlights, and illustration-aligned details on service cards.
+- All sampled values came from logo PNG assets. The live site (`https://redcarpetplumbing.com/`) inline HTML did not expose a CSS palette during fetch; only a placeholder fill `#cfd4db` at 10% opacity appeared inside SVG image stand-ins. Re-confirm against the rendered live site CSS (DevTools color picker on the live page) before locking tokens.
 
 ## 5. Typography
 
@@ -627,6 +619,10 @@ Do not use:
 - Double hyphens in customer-facing copy
 
 ## 16. Tailwind / Component Implementation Notes
+
+### Color Implementation Note
+
+Before production build styling is locked, convert the confirmed color system into reusable Tailwind design tokens or CSS variables. Do not scatter raw hex values throughout page components unless a token does not exist yet.
 
 When implementing:
 
