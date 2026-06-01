@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
@@ -378,30 +377,48 @@ export default function Home() {
           aria-label="Why Las Vegas homeowners and businesses choose Red Carpet Plumbing"
           className="bg-brand-primary text-white"
         >
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
+          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
             <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-6">
-              {TRUST_STRIP_ITEMS.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center justify-center gap-2 text-center"
-                >
-                  <TrustCheck />
-                  <span className="text-sm font-semibold">{item}</span>
-                </li>
-              ))}
+              {TRUST_STRIP_ITEMS.map((item, index) => {
+                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
+                return (
+                  <li
+                    key={item}
+                    className={`relative flex items-center gap-2${
+                      isLast
+                        ? ""
+                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
+                    }`}
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="h-4 w-4 flex-shrink-0 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="text-sm font-semibold">{item}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>
 
         {/* SECTION 3: 24/7 EMERGENCY CTA */}
-        <section className="bg-brand-charcoal text-white">
-          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-3">
-              <div className="lg:col-span-2">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        <section className="bg-brand-charcoal">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   24/7 Emergency Plumbing in Las Vegas
                 </h2>
-                <p className="mt-4 text-lg leading-8 text-white/90">
+                <p className="mt-6 text-lg leading-8 text-white/80">
                   Plumbing emergencies do not follow a schedule. Burst pipes,
                   sewer backups, water heater failures, and severe leaks can
                   cause serious damage if not addressed immediately. Red Carpet
@@ -410,13 +427,16 @@ export default function Home() {
                   night, and we will get to you.
                 </p>
               </div>
-              <div className="flex justify-start lg:justify-end">
+              <div className="flex flex-col items-start lg:items-end gap-4">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call Now: (702) 567-9172
                 </a>
+                <p className="text-sm text-white/60">
+                  Available 24 hours a day, 7 days a week
+                </p>
               </div>
             </div>
           </div>
@@ -427,7 +447,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <SectionReveal>
               <SectionRevealItem>
-                <div className="mx-auto max-w-3xl text-center">
+                <div className="max-w-3xl text-left">
                   <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Plumbing Services in Las Vegas, NV
                   </h2>
@@ -476,7 +496,7 @@ export default function Home() {
                 </div>
               </SectionRevealItem>
 
-              <SectionRevealItem className="mt-12 text-center">
+              <SectionRevealItem className="mt-12 text-left">
                 <Link
                   href="/plumbing-services/"
                   className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-transform motion-safe:active:scale-[0.97]"
@@ -493,7 +513,7 @@ export default function Home() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionReveal>
               <SectionRevealItem>
-                <div className="text-center">
+                <div className="text-left">
                   <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Common Plumbing Problems in Las Vegas
                   </h2>
@@ -528,7 +548,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <SectionReveal>
               <SectionRevealItem>
-                <div className="mx-auto max-w-3xl text-center">
+                <div className="max-w-3xl text-left">
                   <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
                     Plumbing Services Across the Las Vegas Valley
                   </h2>
@@ -544,17 +564,16 @@ export default function Home() {
               <SectionRevealItem className="mt-12">
                 <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
                   {SERVICE_AREAS.map((area) => (
-                    <li
-                      key={area}
-                      className="flex h-full items-center rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-sm font-medium text-white/85"
-                    >
-                      <span>{area}</span>
+                    <li key={area}>
+                      <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
+                        {area}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </SectionRevealItem>
 
-              <SectionRevealItem className="mt-10 text-center">
+              <SectionRevealItem className="mt-10 text-left">
                 <Link
                   href="/service-areas/"
                   className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:active:scale-[0.97]"
@@ -571,7 +590,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <SectionReveal>
               <SectionRevealItem>
-                <div className="mx-auto max-w-3xl text-center">
+                <div className="max-w-3xl text-left">
                   <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Why Las Vegas Homeowners and Businesses Choose Red Carpet
                     Plumbing
@@ -582,14 +601,14 @@ export default function Home() {
               <SectionRevealItem className="mt-14">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                   {WHY_CHOOSE_REASONS.map((reason) => (
-                    <article key={reason.title} className="flex flex-col gap-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-primary/10 text-brand-primary">
-                        <TrustCheck className="h-6 w-6" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-brand-dark">
+                    <article
+                      key={reason.title}
+                      className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                    >
+                      <h3 className="text-lg font-semibold text-brand-dark">
                         {reason.title}
                       </h3>
-                      <p className="text-base leading-7 text-brand-dark/80">
+                      <p className="mt-2 text-base leading-7 text-brand-dark/80">
                         {reason.body}
                       </p>
                     </article>
@@ -602,8 +621,8 @@ export default function Home() {
 
         {/* SECTION 8: FAQ */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-center">
+          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Frequently Asked Questions About Las Vegas Plumbing
               </h2>
@@ -627,20 +646,36 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SECTION 9: FINAL CTA */}
-        <CTASection
-          background="red"
-          headline="Ready to Schedule Plumbing Service in Las Vegas?"
-          body="Red Carpet Plumbing is available for emergency plumbing, scheduled repairs, and plumbing installations throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated, over 40 years in business."
-          primaryCTA={{
-            label: "Request Plumbing Service",
-            href: "/contact/",
-          }}
-          secondaryCTA={{
-            label: "Call (702) 567-9172",
-            href: "tel:+17025679172",
-          }}
-        />
+        {/* SECTION 9: FINAL CTA — oversized centered typography (single deliberate centered moment) */}
+        <section className="bg-brand-primary text-white">
+          <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
+            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Ready to Schedule Plumbing Service in Las Vegas?
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
+              Red Carpet Plumbing is available for emergency plumbing,
+              scheduled repairs, and plumbing installations throughout Las
+              Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star
+              rated, over 40 years in business.
+            </p>
+            <div className="mt-10">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
+                <Link
+                  href="/contact/"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                >
+                  Request Plumbing Service
+                </Link>
+                <a
+                  href="tel:+17025679172"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/60 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                >
+                  Call (702) 567-9172
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <SiteFooter />
@@ -650,25 +685,6 @@ export default function Home() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function TrustCheck({ className = "h-5 w-5" }: { className?: string }) {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className={`flex-none ${className}`}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2.25}
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M5 12.5l4.5 4.5L19 7.5"
-      />
-    </svg>
   );
 }
 
