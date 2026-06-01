@@ -214,8 +214,7 @@ const WHY_CHOOSE_REASONS = [
   },
   {
     title: "Licensed Plumbers",
-    body: "Every job Red Carpet Plumbing takes on is handled by licensed plumbing professionals.",
-    extraNote: "license",
+    body: "Every job Red Carpet Plumbing takes on is handled by licensed plumbing professionals. NV Contractor License #0048585A (C-1 Plumbing and Heating).",
   },
   {
     title: "24/7 Emergency Service",
@@ -283,6 +282,16 @@ const plumberSchema = {
   ],
   description:
     "Red Carpet Plumbing is a local, family-owned Las Vegas plumbing company with over 40 years of experience. We provide 24/7 emergency plumbing, drain cleaning, water heater repair, leak detection, slab leak repair, sewer line services, re-piping, and commercial plumbing throughout the Las Vegas Valley. Licensed plumbers, transparent pricing, no hidden fees.",
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: "license",
+    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    identifier: "0048585A",
+    issuedBy: {
+      "@type": "Organization",
+      name: "State of Nevada Contractors Board",
+    },
+  },
   logo: "https://redcarpetplumbing.com/images/brand/logo/red-carpet-plumbing-logo.png",
   image: "https://redcarpetplumbing.com/images/hero/homepage/hero-primary.webp",
 };
@@ -583,12 +592,6 @@ export default function Home() {
                       <p className="text-base leading-7 text-brand-dark/80">
                         {reason.body}
                       </p>
-                      {reason.extraNote === "license" ? (
-                        /* TODO: Add NV contractor license number when confirmed by owner */
-                        <span className="sr-only">
-                          NV contractor license number pending
-                        </span>
-                      ) : null}
                     </article>
                   ))}
                 </div>
