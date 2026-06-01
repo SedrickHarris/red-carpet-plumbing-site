@@ -1,35 +1,65 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const CORE_SERVICES = [
-  { label: "Emergency Plumbing", href: "/emergency-plumbing/" },
-  { label: "Drain Cleaning", href: "/drain-cleaning/" },
-  { label: "Leak Detection and Repair", href: "/leak-detection-repair/" },
+type FooterLink = { label: string; href: string; built: boolean };
+
+const CORE_SERVICES: FooterLink[] = [
+  { label: "Emergency Plumbing", href: "/emergency-plumbing/", built: true },
+  { label: "Drain Cleaning", href: "/drain-cleaning/", built: true },
+  { label: "Leak Detection and Repair", href: "/leak-detection-repair/", built: true },
   {
     label: "Water Heater Repair and Installation",
     href: "/water-heater-repair-installation/",
+    built: true,
   },
   {
     label: "Slab Leak Detection and Repair",
     href: "/slab-leak-detection-repair/",
+    built: true,
   },
-  { label: "Sewer Line Services", href: "/sewer-line-services/" },
-  { label: "Re-Piping", href: "/re-piping/" },
-  { label: "Commercial Plumbing", href: "/commercial-plumbing/" },
+  { label: "Sewer Line Services", href: "/sewer-line-services/", built: true },
+  { label: "Re-Piping", href: "/re-piping/", built: true },
+  { label: "Commercial Plumbing", href: "/commercial-plumbing/", built: false },
 ];
 
-const TIER_1_LOCATIONS = [
-  { label: "Las Vegas", href: "/las-vegas-plumbing-services/" },
-  { label: "Henderson", href: "/henderson-plumbing-services/" },
-  { label: "North Las Vegas", href: "/north-las-vegas-plumbing-services/" },
-  { label: "Paradise", href: "/paradise-plumbing-services/" },
-  { label: "Summerlin", href: "/summerlin-plumbing-services/" },
-  { label: "Spring Valley", href: "/spring-valley-plumbing-services/" },
-  { label: "Enterprise", href: "/enterprise-plumbing-services/" },
-  { label: "Boulder City", href: "/boulder-city-plumbing-services/" },
-  { label: "Green Valley", href: "/green-valley-plumbing-services/" },
-  { label: "Lake Las Vegas", href: "/lake-las-vegas-plumbing-services/" },
+const TIER_1_LOCATIONS: FooterLink[] = [
+  { label: "Las Vegas", href: "/las-vegas-plumbing-services/", built: false },
+  { label: "Henderson", href: "/henderson-plumbing-services/", built: false },
+  { label: "North Las Vegas", href: "/north-las-vegas-plumbing-services/", built: false },
+  { label: "Paradise", href: "/paradise-plumbing-services/", built: false },
+  { label: "Summerlin", href: "/summerlin-plumbing-services/", built: false },
+  { label: "Spring Valley", href: "/spring-valley-plumbing-services/", built: false },
+  { label: "Enterprise", href: "/enterprise-plumbing-services/", built: false },
+  { label: "Boulder City", href: "/boulder-city-plumbing-services/", built: false },
+  { label: "Green Valley", href: "/green-valley-plumbing-services/", built: false },
+  { label: "Lake Las Vegas", href: "/lake-las-vegas-plumbing-services/", built: false },
+  { label: "Aliante Area", href: "/north-las-vegas/aliante-area-plumbing/", built: false },
 ];
+
+const GET_IN_TOUCH: FooterLink[] = [
+  { label: "Contact", href: "/contact/", built: true },
+  { label: "About", href: "/about/", built: false },
+  { label: "All Service Areas", href: "/service-areas/", built: true },
+  { label: "All Plumbing Services", href: "/plumbing-services/", built: true },
+];
+
+function FooterItem({ link }: { link: FooterLink }) {
+  if (!link.built) {
+    return (
+      <span className="block text-sm text-white/55" aria-disabled="true">
+        {link.label}
+      </span>
+    );
+  }
+  return (
+    <Link
+      href={link.href}
+      className="block text-sm text-white/80 transition-colors hover:text-white"
+    >
+      {link.label}
+    </Link>
+  );
+}
 
 export function SiteFooter() {
   return (
@@ -63,12 +93,7 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-2">
               {CORE_SERVICES.map((service) => (
                 <li key={service.href}>
-                  <Link
-                    href={service.href}
-                    className="text-sm text-white/80 transition hover:text-white"
-                  >
-                    {service.label}
-                  </Link>
+                  <FooterItem link={service} />
                 </li>
               ))}
             </ul>
@@ -81,12 +106,7 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-2">
               {TIER_1_LOCATIONS.map((location) => (
                 <li key={location.href}>
-                  <Link
-                    href={location.href}
-                    className="text-sm text-white/80 transition hover:text-white"
-                  >
-                    {location.label}
-                  </Link>
+                  <FooterItem link={location} />
                 </li>
               ))}
             </ul>
@@ -97,40 +117,13 @@ export function SiteFooter() {
               Get In Touch
             </h3>
             <ul className="mt-4 space-y-2">
-              <li>
-                <Link
-                  href="/contact/"
-                  className="text-sm text-white/80 transition hover:text-white"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about/"
-                  className="text-sm text-white/80 transition hover:text-white"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/service-areas/"
-                  className="text-sm text-white/80 transition hover:text-white"
-                >
-                  All Service Areas
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/plumbing-services/"
-                  className="text-sm text-white/80 transition hover:text-white"
-                >
-                  All Plumbing Services
-                </Link>
-              </li>
+              {GET_IN_TOUCH.map((link) => (
+                <li key={link.href}>
+                  <FooterItem link={link} />
+                </li>
+              ))}
             </ul>
-            {/* TODO: Replace disabled phone CTA with confirmed phone number before launch. */}
+            {/* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE ENABLING */}
             <p className="mt-4 text-sm text-white/70">
               Phone number pending
             </p>
@@ -139,8 +132,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center">
           <p className="text-xs text-white/60">
-            © {new Date().getFullYear()} Red Carpet Plumbing. All Rights
-            Reserved.
+            {`© ${new Date().getFullYear()} Red Carpet Plumbing. All Rights Reserved.`}
           </p>
           <p className="text-xs text-white/60">
             Las Vegas, Nevada plumbing services
