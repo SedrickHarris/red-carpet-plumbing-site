@@ -347,7 +347,12 @@ export default function Home() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Company in Las Vegas, NV"
+          headline={
+            <>
+              Plumbing Company
+              <br className="hidden sm:block" /> in Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides plumbing services for homes and businesses throughout Las Vegas and the Las Vegas Valley. From emergency plumbing and drain cleaning to water heater repair, slab leak detection, and full re-piping, our local team is ready to help. We have been serving Las Vegas for over 40 years as a licensed, family-owned plumbing company."
           trustItems={[
             "4.8 stars, 76 Google reviews",
@@ -515,7 +520,8 @@ export default function Home() {
               <SectionRevealItem>
                 <div className="text-left">
                   <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                    Common Plumbing Problems in Las Vegas
+                    Common Plumbing Problems
+                    <br className="hidden sm:block" /> in Las Vegas
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Las Vegas homes and businesses face specific plumbing
@@ -553,7 +559,8 @@ export default function Home() {
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
                   <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-                    Plumbing Services Across the Las Vegas Valley
+                    Plumbing Services Across
+                    <br className="hidden sm:block" /> the Las Vegas Valley
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-white/85">
                     Red Carpet Plumbing serves communities throughout the Las
@@ -653,7 +660,8 @@ export default function Home() {
         <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Ready to Schedule Plumbing Service in Las Vegas?
+              Ready to Schedule Plumbing Service
+              <br className="hidden sm:block" /> in Las Vegas?
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
               Red Carpet Plumbing is available for emergency plumbing,
