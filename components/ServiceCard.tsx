@@ -20,7 +20,7 @@ export function ServiceCard({
   built = true,
 }: ServiceCardProps) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-brand-surface-alt motion-safe:transition-shadow motion-safe:hover:shadow-lg">
+    <article className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-brand-surface-alt border-b-2 border-brand-primary motion-safe:transition-shadow motion-safe:hover:shadow-lg">
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-surface-alt">
         {image ? (
           <Image

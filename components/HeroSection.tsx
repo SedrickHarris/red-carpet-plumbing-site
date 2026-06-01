@@ -68,7 +68,7 @@ export function HeroSection({
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[radial-gradient(70%_90%_at_100%_0%,_var(--color-brand-surface-alt),_transparent_65%)]"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_60%_at_top_right,color-mix(in_srgb,var(--color-brand-primary)_6%,transparent),transparent_70%)]"
       />
 
       {backgroundImage ? (
@@ -86,12 +86,17 @@ export function HeroSection({
       ) : null}
 
       <div
-        className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16 ${
+        className={`relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16 ${
           hasSplit
             ? "grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(420px,0.75fr)] lg:gap-14 xl:gap-20"
             : ""
         }`}
       >
+        <span
+          aria-hidden="true"
+          className="absolute left-0 top-0 h-1 w-20 rounded-r-full bg-brand-primary"
+        />
+
         <motion.div
           className={hasSplit ? "min-w-0" : "mx-auto max-w-3xl text-center"}
           variants={containerVariants}
