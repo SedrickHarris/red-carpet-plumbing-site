@@ -8,7 +8,7 @@ type CTA = {
 };
 
 type CTASectionProps = {
-  headline: string;
+  headline: ReactNode;
   body?: string;
   primaryCTA: CTA;
   secondaryCTA?: CTA;
