@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
+import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
+import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title:
     "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "No hot water in Las Vegas? Red Carpet Plumbing repairs and installs tank and tankless water heaters for homes and businesses throughout the Las Vegas Valley.",
+    "Red Carpet Plumbing repairs and installs water heaters throughout Las Vegas and the Las Vegas Valley. Tank and tankless water heaters, licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/water-heater-repair-installation/",
@@ -21,200 +23,238 @@ export const metadata: Metadata = {
     title:
       "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Water heater problems in Las Vegas? Red Carpet Plumbing diagnoses, repairs, and installs tank and tankless water heaters for homes and businesses throughout the Las Vegas Valley.",
+      "Red Carpet Plumbing repairs and installs water heaters throughout Las Vegas and the Las Vegas Valley. Tank and tankless water heaters, licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
-    locale: "en_US",
     type: "website",
   },
-  robots: { index: true, follow: true },
 };
 
-// ---------------------------------------------------------------------------
-// FAQ source of truth. The visible FAQ section AND the FAQPage JSON-LD
-// schema both derive from this list, guaranteeing character-for-character
-// match. Do not edit one without the other.
-// ---------------------------------------------------------------------------
 const WATER_HEATER_FAQS = [
   {
-    question: "How long do water heaters last in Las Vegas?",
+    question: "How long does a water heater last in Las Vegas?",
     answer:
-      "Most tank water heaters last between 8 and 12 years under normal conditions. In Las Vegas, hard water accelerates sediment accumulation inside the tank, which reduces heating efficiency and puts added stress on the heating elements and tank lining over time. Las Vegas homeowners may find their water heaters require more frequent maintenance or reach the end of their useful life sooner than the national average suggests. Regular flushing and anode rod inspection can help extend unit life.",
+      "In Las Vegas, tank water heaters typically last 8 to 12 years, often shorter than the national average due to the valley's extremely hard water. Hard water causes sediment buildup and accelerates anode rod depletion, both of which shorten tank life. Tankless water heaters generally last 15 to 20 years but require annual descaling to remove hard water mineral deposits from the heat exchanger.",
+  },
+  {
+    question: "What are the signs my water heater needs repair?",
+    answer:
+      "Common signs include no hot water or insufficient hot water, popping or rumbling noises from the tank, rust-colored or cloudy hot water, a small leak at pipe connections, a pilot light that keeps going out on a gas unit, or a tripped breaker on an electric unit. Popping and rumbling sounds are especially common in Las Vegas homes due to hard water sediment buildup inside the tank.",
   },
   {
     question: "Should I repair or replace my water heater?",
     answer:
-      "Repair is generally worth considering when a water heater is less than 8 years old, the problem is isolated to a single component such as a heating element, thermostat, or pilot assembly, and the repair cost is significantly less than replacement. Replacement makes more sense when the unit is older than 10 years, the tank is visibly leaking or corroded, the repair cost approaches half the cost of a new unit, or the unit has required multiple repairs in a short period. A plumber can help you evaluate the condition of your current unit and the options available.",
+      "For water heaters under 8 years old with repairable components, repair is usually the right choice. For units 10 years or older, units with visible tank corrosion, or units that are leaking from the tank body itself, replacement typically makes more financial sense than continued repairs. Red Carpet Plumbing will give you an honest assessment of both options before recommending a course of action.",
+  },
+  {
+    question: "Is a tankless water heater worth it in Las Vegas?",
+    answer:
+      "Tankless water heaters offer longer service life, no standby heat loss, and continuous hot water on demand. In Las Vegas, they require annual descaling to remove hard water mineral deposits from the heat exchanger. For homes with high hot water demand or older tank units nearing end of life, a tankless water heater is often a sound long-term investment. Red Carpet Plumbing can help you evaluate whether a tankless unit makes sense for your specific household.",
+  },
+  {
+    question: "Why does my water heater make popping or rumbling noises?",
+    answer:
+      "Popping and rumbling sounds from a water heater are caused by sediment buildup on the bottom of the tank. In Las Vegas, the high mineral content in the water causes sediment to accumulate faster than in most other cities. Water trapped under sediment layers boils and creates these sounds during the heating cycle. Annual flushing removes sediment before it hardens into scale and reduces efficiency.",
+  },
+  {
+    question: "How often should I flush my water heater in Las Vegas?",
+    answer:
+      "Annual flushing is recommended for Las Vegas homes due to the valley's extremely hard water. The standard recommendation in softer-water cities is every one to two years, but Las Vegas water hardness of 17 to 24 grains per gallon causes sediment to accumulate faster and harden into scale more quickly. Annual flushing removes deposits before they reduce efficiency or damage the tank.",
+  },
+  {
+    question: "What is an anode rod and why does it matter in Las Vegas?",
+    answer:
+      "The anode rod is a sacrificial metal rod inside every tank water heater that corrodes in place of the steel tank, protecting it from internal rust. In Las Vegas, the extremely hard water depletes anode rods significantly faster than the typical three to five year replacement interval. A depleted anode rod leaves the tank unprotected and can lead to rapid corrosion and early tank failure. Annual water heater inspections that check the anode rod condition are strongly recommended for Las Vegas homes.",
   },
   {
     question:
-      "Why does my water heater make a rumbling or popping noise?",
+      "Does Red Carpet Plumbing serve Henderson and Summerlin for water heater service?",
     answer:
-      "Rumbling, popping, or banging sounds from a water heater are usually caused by sediment that has settled at the bottom of the tank. As the burner heats the water, it also heats the sediment layer, causing trapped water pockets to pop and steam bubbles to push through the buildup. In Las Vegas, hard water deposits sediment more rapidly than in softer water areas. Flushing the tank can help, but if the sediment layer is significant, the unit may already have reduced efficiency and a shortened remaining lifespan.",
-  },
-  {
-    question:
-      "What is the difference between a tank water heater and a tankless water heater?",
-    answer:
-      "A tank water heater stores a set volume of heated water and keeps it warm until it is used. It is the most common type in Las Vegas homes and is generally less expensive to install than a tankless unit. A tankless water heater heats water on demand as it flows through the unit, which eliminates the need for a storage tank and can reduce energy use in some households. Tankless units have a higher upfront cost and require proper sizing to meet household demand. A plumber can help you determine which type is the right fit for your home or business.",
-  },
-  {
-    question: "What causes rusty or discolored hot water?",
-    answer:
-      "Rusty or brownish hot water typically indicates corrosion inside the water heater tank. This often happens when the anode rod, which is designed to attract corrosive elements and protect the tank lining, has been depleted and is no longer providing protection. In Las Vegas hard water conditions, anode rods may wear down faster than in softer water areas. If the tank lining itself is corroding, replacement is usually the recommended solution.",
-  },
-  {
-    question:
-      "Does Red Carpet Plumbing service water heaters outside of Las Vegas?",
-    answer:
-      "Yes. Red Carpet Plumbing provides water heater repair and installation throughout the Las Vegas Valley including Henderson, North Las Vegas, Summerlin, Spring Valley, Enterprise, Paradise, Green Valley, Lake Las Vegas, and surrounding communities.",
+      "Yes. Red Carpet Plumbing provides water heater repair and installation throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
 ];
 
 const TRUST_STRIP_ITEMS = [
-  "Water Heater Repair and Installation",
-  "Serving Las Vegas and the Las Vegas Valley",
-  "Residential and Commercial Service",
-  // SOURCE-SITE CLAIM: verify before publish
-  "Transparent Pricing",
-  // SOURCE-SITE CLAIM: verify before publish
-  "Customer Satisfaction Focus",
+  "4.8 Stars, 76 Google Reviews",
+  "NV Licensed, #0048585A",
+  "Over 40 Years in Las Vegas",
+  "24/7 Emergency Service",
+  "Transparent Pricing, No Hidden Fees",
 ];
 
-const DIRECT_ANSWER_BULLETS = [
-  "No hot water or water that runs cold faster than expected",
-  "Inconsistent water temperature throughout the day",
-  "Visible leaks or rust staining near the water heater",
-  "Rumbling, popping, or banging sounds during heating cycles",
-  "Rusty or discolored hot water at the tap",
+const SIGNS_NEED_REPAIR = [
+  "No hot water or insufficient hot water from your taps",
+  "Popping or rumbling noises from the tank during heating cycles",
+  "Rust-colored or cloudy hot water from your faucets",
+  "A small leak at pipe connections or the pressure relief valve",
+  "A pilot light that keeps going out on a gas water heater",
+  "A breaker that keeps tripping on an electric water heater",
+  "Hot water that runs out faster than it used to",
 ];
 
-const SIGNS_LIST = [
-  "You have no hot water or the hot water runs out much faster than usual",
-  "Water temperature is inconsistent or the water never gets fully hot",
-  "Your water heater is making rumbling, popping, or banging sounds",
-  "You notice water pooling near the base of the unit",
-  "Hot water has a rusty, metallic, or discolored appearance",
-  "Your water heater is more than 10 years old and performance has declined",
-  "The pilot light on a gas water heater keeps going out or will not stay lit",
-  "Your energy bills have increased without a change in usage habits",
+const SIGNS_NEED_REPLACEMENT = [
+  "The water heater is 10 years old or older",
+  "Visible tank corrosion or rust on the exterior of the unit",
+  "A leak coming from the tank body itself, not from connections",
+  "Repeated repairs to the same unit in a short period of time",
+  "Significantly higher utility bills with no other explanation",
+  "Reduced hot water output even after maintenance and flushing",
 ];
 
-const SERVICE_COVERS = [
-  "Diagnosis of no-hot-water problems and temperature inconsistency",
-  "Thermostat inspection and adjustment",
-  "Heating element repair or replacement for electric units",
-  "Gas burner and pilot assembly assessment for gas water heaters",
-  "Anode rod inspection and replacement to protect against tank corrosion",
-  "Sediment flushing to improve efficiency and reduce noise",
-  "Full water heater replacement when repair is not practical",
-  "New water heater installation for remodels and replacement projects",
-  "Tankless water heater service and installation",
-];
-
-const PROCESS_STEPS = [
-  {
-    heading: "Contact us.",
-    body: "Reach out by phone or through our online contact form. Describe the problem, including what symptoms you have noticed and how long the issue has been occurring.",
-  },
-  {
-    heading: "Schedule service.",
-    body: "We will confirm your appointment and let you know if there are any preparation steps before our plumber arrives.",
-  },
-  {
-    heading: "Diagnosis.",
-    body: "Our plumber will inspect the unit, assess the symptoms, and identify the cause of the problem. We will explain our findings clearly before recommending a course of action.",
-  },
-  {
-    heading: "Repair or replacement.",
-    body: "If the unit can be repaired, we will complete the work and confirm the system is functioning properly. If replacement is the right choice, we will explain the options and complete the installation.",
-  },
-  {
-    heading: "System check and guidance.",
-    body: "After completing the repair or installation, we will confirm everything is working correctly and provide any maintenance guidance relevant to your new or repaired unit.",
-  },
-];
-
-type RelatedServiceLink = {
-  label: string;
-  href: string;
+type ServiceTypeCard = {
+  title: string;
   description: string;
-  exists: boolean;
+  href: string;
 };
 
-const RELATED_SERVICES: RelatedServiceLink[] = [
+// TODO: Replace ServiceImagePlaceholder with approved water heater service image when available
+const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
   {
-    label: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    title: "Water Heater Repair",
     description:
-      "Water heater failures and leaks that need immediate attention",
-    exists: true,
+      "Red Carpet Plumbing diagnoses and repairs all types of water heater problems including failed heating elements, faulty thermostats, tripped breakers, pilot light issues, pressure relief valve failures, and sediment buildup. We assess the unit's age and condition before recommending repair to ensure the repair makes sense given the remaining service life of the heater.",
+    href: "/water-heater-repair-installation/repair/",
   },
   {
-    label: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
+    title: "Water Heater Replacement",
     description:
-      "Hidden leaks connected to water heater lines or supply pipes",
-    exists: false,
+      "When repair is no longer cost-effective or the tank has reached the end of its service life, we replace the unit with a new water heater matched to your household's hot water demand. We handle the full installation including disconnecting the old unit, installing the new unit to Clark County code, and testing before we leave.",
+    href: "/water-heater-repair-installation/replacement/",
   },
   {
-    label: "Plumbing Fixture Repair, Replacement and Installation",
-    href: "/plumbing-fixture-repair-replacement-installation/",
+    title: "Tankless Water Heater Installation",
     description:
-      "Fixture upgrades and replacements often paired with new water heater installs",
-    exists: false,
+      "Tankless water heaters heat water on demand rather than storing a tank of heated water. They can last 15 to 20 years with proper maintenance and eliminate standby heat loss. In Las Vegas, tankless units require annual descaling to remove hard water mineral deposits from the heat exchanger. We install and service tankless water heaters for residential and commercial properties.",
+    href: "/water-heater-repair-installation/tankless/",
   },
   {
-    label: "Water Meter and Pressure Regulator Services",
-    href: "/water-meter-pressure-regulator-services/",
+    title: "Water Heater Flush and Maintenance",
     description:
-      "Pressure issues that can affect water heater performance",
-    exists: false,
+      "Las Vegas hard water causes sediment to accumulate inside water heater tanks faster than in most other cities. Annual flushing removes calcium and magnesium deposits that reduce efficiency, cause popping and rumbling noises, and shorten tank life. Red Carpet Plumbing recommends annual flushing for Las Vegas homes rather than the standard two-year interval used in softer-water cities.",
+    href: "/water-heater-repair-installation/maintenance/",
   },
   {
-    label: "Plumbing Services",
-    href: "/plumbing-services/",
+    title: "Anode Rod Replacement",
     description:
-      "Full list of residential and commercial plumbing services",
-    exists: true,
+      "The anode rod is a sacrificial metal component inside every tank water heater that protects the tank from internal corrosion. In Las Vegas, the extremely hard water depletes anode rods significantly faster than the national average. A depleted anode rod leads to rapid internal tank corrosion. We inspect and replace anode rods as part of water heater maintenance to extend tank life.",
+    href: "/water-heater-repair-installation/anode-rod/",
+  },
+  {
+    title: "Thermal Expansion Tank Installation",
+    description:
+      "Las Vegas residential plumbing typically operates on a closed-loop system due to backflow preventers at the street meter. When a water heater heats water, the expanding water volume has nowhere to go in a closed system, causing pressure spikes that stress the tank and plumbing. A thermal expansion tank absorbs this pressure. Clark County code and most water heater warranties require a thermal expansion tank on closed-loop systems.",
+    href: "/water-heater-repair-installation/expansion-tank/",
+  },
+  {
+    title: "Gas Water Heater Service",
+    description:
+      "Red Carpet Plumbing services gas water heaters including conventional tank units and gas tankless models. We diagnose and repair pilot light failures, thermocouple issues, gas valve problems, and venting concerns. All gas line work is performed under our NV Contractor License #0048585A (C-1 Plumbing and Heating).",
+    href: "/water-heater-repair-installation/gas/",
+  },
+  {
+    title: "Electric Water Heater Service",
+    description:
+      "We diagnose and repair electric water heaters including failed upper and lower heating elements, thermostat failures, wiring issues, and tripped breakers. We also install electric tankless water heaters and can advise on the electrical panel capacity requirements for high-demand electric tankless units.",
+    href: "/water-heater-repair-installation/electric/",
   },
 ];
 
-// ---------------------------------------------------------------------------
-// JSON-LD payloads
-// ---------------------------------------------------------------------------
-
-const webPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
-  description:
-    "Red Carpet Plumbing repairs and installs tank and tankless water heaters for homes and businesses throughout Las Vegas, Henderson, North Las Vegas, Summerlin, and surrounding Las Vegas Valley communities.",
-  url: "https://redcarpetplumbing.com/water-heater-repair-installation/",
-  breadcrumb: {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://redcarpetplumbing.com/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Plumbing Services",
-        item: "https://redcarpetplumbing.com/plumbing-services/",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Water Heater Repair and Installation",
-        item: "https://redcarpetplumbing.com/water-heater-repair-installation/",
-      },
-    ],
+const LV_WATER_HEATER_FACTORS = [
+  {
+    title: "Extreme Hard Water Mineral Buildup",
+    body: "Las Vegas municipal water averages 17 to 24 grains of hardness per gallon, making it among the hardest water in the United States. This high mineral content causes calcium and magnesium deposits to accumulate inside water heater tanks and heat exchangers much faster than in softer-water cities. Sediment buildup reduces heating efficiency, causes the characteristic popping and rumbling noises Las Vegas homeowners often report, and shortens tank lifespan. Flushing your water heater annually is more important in Las Vegas than almost anywhere else in the country.",
   },
+  {
+    title: "Rapid Anode Rod Depletion",
+    body: "The anode rod inside every tank water heater is a sacrificial component designed to corrode before the tank does, protecting the steel tank from internal rust. In Las Vegas, the extremely high mineral content in the water depletes anode rods significantly faster than the three to five year national average. A failed anode rod in a Las Vegas home can lead to rapid internal tank corrosion within one to two years. Annual water heater inspections that include anode rod checks are strongly recommended for Las Vegas homes.",
+  },
+  {
+    title: "Closed-Loop Pressure System Requirements",
+    body: "Most Las Vegas homes operate on a closed-loop plumbing system due to backflow preventers installed at the street meter to protect the municipal water supply. When a water heater heats water, it expands. In a closed-loop system, this expanding water has nowhere to go, causing repeated pressure spikes inside the tank that stress the glass lining and connections. Without a thermal expansion tank to absorb these pressure spikes, Las Vegas water heaters are subject to accelerated internal wear. Clark County plumbing code and most manufacturer warranties require a thermal expansion tank on closed-loop installations.",
+  },
+  {
+    title: "Desert Heat and Seismic Installation Requirements",
+    body: "Nevada is one of the most seismically active states in the country. Clark County building code requires water heater installations to include seismic bracing, with two heavy-gauge steel straps secured to wall studs at specific heights to prevent the unit from tipping during a seismic event. A full 50-gallon water heater weighs approximately 500 pounds when full. Red Carpet Plumbing installs all water heaters to current Clark County code including seismic bracing requirements.",
+  },
+];
+
+const WATER_HEATER_STEPS = [
+  {
+    name: "Diagnose the water heater problem",
+    body: "We start by gathering information about the unit, including its age, the symptoms you are experiencing, and its maintenance history. We inspect the unit for sediment buildup, anode rod condition, pressure relief valve function, and any visible damage or corrosion. This gives us a complete picture of the unit's current condition before we make any recommendations.",
+  },
+  {
+    name: "Assess repair versus replacement",
+    body: "For units under 8 years old with repairable components, repair is usually the right choice. For units 10 years or older, or units with tank corrosion or a failed tank body, replacement typically makes more long-term financial sense than repeated repairs. We give you a clear, honest assessment of both options including estimated repair cost versus replacement cost so you can make an informed decision.",
+  },
+  {
+    name: "Present your options clearly",
+    body: "Before any work begins, we explain what we found, what the repair or replacement involves, and what the job will cost. We do not start work without your approval. If a replacement is needed, we discuss the right size and type of water heater for your household's hot water demand and the pros and cons of tank versus tankless for your specific situation.",
+  },
+  {
+    name: "Complete the repair or installation to code",
+    body: "All water heater work is completed to current Clark County plumbing code including seismic bracing on new installations, thermal expansion tank installation on closed-loop systems, and proper venting on gas units. We test the unit before we leave to confirm it is operating correctly.",
+  },
+];
+
+const SERVICE_AREAS = [
+  "Las Vegas",
+  "Henderson",
+  "North Las Vegas",
+  "Summerlin",
+  "Paradise",
+  "Spring Valley",
+  "Enterprise",
+  "Boulder City",
+];
+
+type RelatedService = {
+  title: string;
+  description: string;
+  href: string;
+  image?: string;
+  imageAlt?: string;
+  built: boolean;
 };
+
+const RELATED_SERVICES: RelatedService[] = [
+  {
+    title: "Drain Cleaning",
+    description:
+      "Professional drain cleaning and hydro jetting to clear clogs and restore proper flow.",
+    href: "/drain-cleaning/",
+    image: "/images/services/drain-cleaning/card.webp",
+    imageAlt: "Hydro jetting equipment clearing a tough drain clog",
+    built: true,
+  },
+  {
+    title: "Leak Detection and Repair",
+    description:
+      "Accurate leak detection using advanced equipment to find hidden leaks before they cause serious damage.",
+    href: "/leak-detection-repair/",
+    image: "/images/services/leak-detection-repair/card.webp",
+    imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
+    built: true,
+  },
+  {
+    title: "Slab Leak Detection and Repair",
+    description:
+      "Specialized slab leak detection and repair for Las Vegas homes where shifting desert soils and hard water accelerate pipe damage.",
+    href: "/slab-leak-detection-repair/",
+    image: "/images/services/slab-leak-detection-repair/card.webp",
+    imageAlt: "Home foundation showing signs of a slab leak",
+    built: true,
+  },
+  {
+    title: "Emergency Plumbing",
+    description:
+      "Fast response to burst pipes, major leaks, and plumbing emergencies throughout Las Vegas.",
+    href: "/emergency-plumbing/",
+    image: "/images/services/emergency-plumbing/card.webp",
+    imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
+    built: true,
+  },
+];
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -222,28 +262,90 @@ const serviceSchema = {
   name: "Water Heater Repair and Installation",
   serviceType: "Water Heater Repair and Installation",
   description:
-    "Water heater repair, replacement, and installation for tank and tankless units in residential and commercial properties throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Enterprise, Paradise, Green Valley, Lake Las Vegas, and surrounding Las Vegas Valley communities.",
+    "Red Carpet Plumbing repairs and installs water heaters for homes and businesses throughout Las Vegas and the Las Vegas Valley, including tank water heater repair and replacement, tankless water heater installation, water heater flush and maintenance, anode rod replacement, and thermal expansion tank installation.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
+    telephone: "+17025679172",
     url: "https://redcarpetplumbing.com",
-    // FLAG: ADD telephone field to Service provider once phone number is confirmed
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "license",
+      name: "Nevada C-1 Plumbing and Heating Contractor License",
+      identifier: "0048585A",
+      issuedBy: {
+        "@type": "Organization",
+        name: "State of Nevada Contractors Board",
+      },
+    },
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "76",
+    bestRating: "5",
+    worstRating: "1",
   },
   areaServed: [
-    {
-      "@type": "City",
-      name: "Las Vegas",
-      sameAs: "https://www.wikidata.org/wiki/Q23768",
-    },
-    { "@type": "City", name: "Henderson" },
-    { "@type": "City", name: "North Las Vegas" },
-    { "@type": "City", name: "Summerlin" },
-    { "@type": "City", name: "Spring Valley" },
-    { "@type": "City", name: "Enterprise" },
-    { "@type": "City", name: "Paradise" },
-    { "@type": "City", name: "Green Valley" },
-    { "@type": "City", name: "Lake Las Vegas" },
+    "Las Vegas, NV",
+    "Henderson, NV",
+    "North Las Vegas, NV",
+    "Paradise, NV",
+    "Summerlin, NV",
+    "Spring Valley, NV",
+    "Enterprise, NV",
+    "Boulder City, NV",
+    "Green Valley, NV",
+    "Lake Las Vegas, NV",
+    "Las Vegas Valley, NV",
   ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://redcarpetplumbing.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Water Heater Repair and Installation",
+      item: "https://redcarpetplumbing.com/water-heater-repair-installation/",
+    },
+  ],
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How Red Carpet Plumbing Handles Water Heater Service",
+  description:
+    "The water heater repair and replacement assessment process used by Red Carpet Plumbing for Las Vegas homes and businesses.",
+  step: WATER_HEATER_STEPS.map((step, index) => ({
+    "@type": "HowToStep",
+    position: index + 1,
+    name: step.name,
+    text: step.body,
+  })),
+};
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+  description:
+    "Red Carpet Plumbing repairs and installs water heaters throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+  url: "https://redcarpetplumbing.com/water-heater-repair-installation/",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Red Carpet Plumbing",
+    url: "https://redcarpetplumbing.com",
+  },
 };
 
 const faqSchema = {
@@ -262,426 +364,460 @@ const faqSchema = {
 export default function WaterHeaterRepairInstallationPage() {
   return (
     <>
-      <JsonLd data={webPageSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={howToSchema} />
+      <JsonLd data={webpageSchema} />
       <JsonLd data={faqSchema} />
 
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        {/* BREADCRUMBS */}
         <Breadcrumbs
           trail={[
             { label: "Home", href: "/" },
-            { label: "Plumbing Services", href: "/plumbing-services/" },
             { label: "Water Heater Repair and Installation" },
           ]}
         />
 
-        {/* EYEBROW (above the hero so the H1 stays a clean single-string heading for SEO/AEO) */}
-        <div className="bg-white pt-10 sm:pt-12 lg:pt-14">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12">
-            <p className="text-sm font-semibold uppercase tracking-wider text-brand-primary">
-              Water Heater Service in Las Vegas
-            </p>
-          </div>
-        </div>
-
         {/* SECTION 1: HERO */}
-        {/* TODO: Replace low-resolution hero image with a higher-quality approved asset before launch if visual QA shows pixelation */}
         <HeroSection
           headingLevel="h1"
-          headline="Water Heater Repair and Installation in Las Vegas, NV"
-          subheading="No hot water, inconsistent water temperature, or a water heater making unusual noises are signs that your system needs attention. Red Carpet Plumbing provides water heater repair and installation for homes and businesses throughout Las Vegas and the Las Vegas Valley. Whether your unit needs a repair or it is time for a new installation, our team can help you understand your options and get your hot water restored."
+          headline={
+            <>
+              Water Heater Repair
+              <br className="hidden sm:block" /> and Installation
+              <br className="hidden sm:block" /> in Las Vegas, NV
+            </>
+          }
+          subheading="Red Carpet Plumbing repairs and installs water heaters for homes and businesses throughout Las Vegas and the Las Vegas Valley. Whether your water heater has stopped working, is leaking, or is reaching the end of its service life, our licensed plumbers diagnose the problem and provide clear options before any work begins."
+          trustItems={[
+            "4.8 stars, 76 Google reviews",
+            "NV Licensed Plumbers, #0048585A",
+            "Over 40 years serving Las Vegas",
+            "Transparent pricing, no hidden fees",
+          ]}
           primaryCTA={{
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
+          }}
+          secondaryCTA={{
             label: "Request Water Heater Service",
             href: "/contact/",
           }}
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
-          secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
-          }}
-          formSlot={
-            <QuoteFormPlaceholder
-              title="Request Water Heater Service"
-              includeZip
-              submitLabel="Request Service"
-            />
-          }
-          backgroundImage={{
-            src: "/images/services/water-heater-repair-installation/hero.webp",
-            alt: "Expert water heater installation in a Las Vegas home",
-          }}
+          ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
+          formSlot={<QuoteFormPlaceholder title="Get Water Heater Help" />}
+          accentWidth="sm"
         />
 
-        {/* SECTION 2: TRUST STRIP (dark bg) */}
+        {/* SECTION 2: TRUST STRIP */}
         <section
-          aria-labelledby="water-heater-trust-label"
-          className="bg-brand-charcoal text-white"
+          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for water heater service"
+          className="bg-brand-primary text-white"
         >
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
-            <p id="water-heater-trust-label" className="sr-only">
-              Why Las Vegas Customers Choose Red Carpet Plumbing for Water Heater Service
-            </p>
-            {/* FLAG: VERIFY TRANSPARENT PRICING CLAIM BEFORE PUBLISH */}
-            {/* FLAG: VERIFY CUSTOMER SATISFACTION FOCUS CLAIM BEFORE PUBLISH */}
+          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
             <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center justify-center gap-2 text-center"
-                >
-                  <CheckIcon className="h-5 w-5 flex-none text-brand-primary" />
-                  <span className="text-sm font-medium text-white">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* SECTION 3: DIRECT ANSWER */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              Water Heater Repair and Installation in Las Vegas
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              When a water heater stops working or begins showing signs of
-              wear, you generally have two options: repair the existing unit
-              or replace it with a new system. Red Carpet Plumbing helps
-              homeowners and business owners throughout Las Vegas evaluate
-              both options based on the age of the unit, the nature of the
-              problem, and the hot water demands of the property. We service
-              both tank-style and tankless water heaters for residential and
-              commercial properties.
-            </p>
-            <ul className="mt-6 space-y-3">
-              {DIRECT_ANSWER_BULLETS.map((bullet) => (
-                <li key={bullet} className="flex items-start gap-3">
-                  <BulletIcon className="mt-1.5 h-2 w-2 flex-none text-brand-primary" />
-                  <span className="text-base leading-7 text-brand-dark/80">
-                    {bullet}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* SECTION 4: SIGNS YOU NEED SERVICE */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              Signs Your Water Heater Needs Repair or Replacement
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              Water heaters often show warning signs before they fail
-              completely. Recognizing these signs early can help you avoid a
-              sudden loss of hot water or a leak that causes property damage.
-            </p>
-            <ol className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {SIGNS_LIST.map((sign, index) => (
-                <li
-                  key={sign}
-                  className="flex items-start gap-4 rounded-2xl border-l-4 border-brand-primary bg-white p-5 shadow-sm ring-1 ring-brand-surface-alt"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-primary/10 text-sm font-semibold text-brand-primary"
+              {TRUST_STRIP_ITEMS.map((item, index) => {
+                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
+                return (
+                  <li
+                    key={item}
+                    className={`relative flex items-center gap-2${
+                      isLast
+                        ? ""
+                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
+                    }`}
                   >
-                    {index + 1}
-                  </span>
-                  <span className="text-base leading-7 text-brand-dark/80">
-                    {sign}
-                  </span>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* SECTION 5: WHAT THE SERVICE COVERS */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              What Our Water Heater Service Covers
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              Red Carpet Plumbing provides water heater repair and
-              installation services for a range of system types and
-              conditions throughout the Las Vegas Valley.
-            </p>
-            {/* FLAG: CLIENT MUST CONFIRM specific brands serviced, tankless system types supported, and full service scope before launch */}
-            <ul className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2">
-              {SERVICE_COVERS.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-sm ring-1 ring-brand-surface-alt"
-                >
-                  <CheckIcon className="mt-1 h-5 w-5 flex-none text-brand-primary" />
-                  <span className="text-base leading-7 text-brand-dark/80">
-                    {item}
-                  </span>
-                </li>
-              ))}
+                    <svg
+                      aria-hidden="true"
+                      className="h-4 w-4 flex-shrink-0 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="text-sm font-semibold">{item}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>
 
-        {/* SECTION 6: LOCAL LAS VEGAS CONTEXT */}
+        {/* SECTION 3: SIGNS YOUR WATER HEATER NEEDS SERVICE */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="max-w-3xl text-left">
+              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                Signs Your Water Heater
+                <br className="hidden sm:block" /> Needs Service
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                Most water heater problems give you warning signs before they
+                become emergencies. Catching these signals early gives you the
+                option to repair rather than replace.
+              </p>
+            </div>
+
+            <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2">
+              <article className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary">
+                <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
+                  Signs You May Need Repair
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  {SIGNS_NEED_REPAIR.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span
+                        aria-hidden="true"
+                        className="mt-2 inline-block h-2 w-2 flex-none rounded-full bg-brand-primary"
+                      />
+                      <span className="text-base leading-7 text-brand-dark/80">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+
+              <article className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-muted/40">
+                <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
+                  Signs You May Need Replacement
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  {SIGNS_NEED_REPLACEMENT.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span
+                        aria-hidden="true"
+                        className="mt-2 inline-block h-2 w-2 flex-none rounded-full bg-brand-muted/60"
+                      />
+                      <span className="text-base leading-7 text-brand-dark/80">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+
+            <p className="mt-10 max-w-3xl text-base leading-7 text-brand-dark/80">
+              If you are unsure whether repair or replacement is the right
+              choice, Red Carpet Plumbing will give you a clear assessment of
+              the unit&apos;s condition and an honest recommendation before any work
+              begins.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 4: WATER HEATER SERVICES */}
+        <section className="bg-brand-surface-alt">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="max-w-3xl text-left">
+                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    Water Heater Services
+                    <br className="hidden sm:block" /> in Las Vegas
+                  </h2>
+                  <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                    Red Carpet Plumbing handles the full range of water heater
+                    repair and installation services for residential and
+                    commercial properties throughout Las Vegas and the Las
+                    Vegas Valley.
+                  </p>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-14">
+                {/* TODO: Replace ServiceImagePlaceholder with approved water heater service image when available */}
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {WATER_HEATER_SERVICES.map((card) => (
+                    <ServiceCard
+                      key={card.href}
+                      title={card.title}
+                      description={card.description}
+                      href={card.href}
+                      built={false}
+                    />
+                  ))}
+                </div>
+              </SectionRevealItem>
+            </SectionReveal>
+          </div>
+        </section>
+
+        {/* SECTION 5: WHY LAS VEGAS IS HARD ON WATER HEATERS */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="text-left">
+                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    Why Las Vegas Is Hard
+                    <br className="hidden sm:block" /> on Water Heaters
+                  </h2>
+                  <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                    Las Vegas has some of the most demanding conditions for
+                    water heater performance in the country. Understanding the
+                    local factors that affect water heater lifespan helps
+                    homeowners make informed decisions about maintenance,
+                    repair, and replacement timing.
+                  </p>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-12 space-y-10">
+                {LV_WATER_HEATER_FACTORS.map((factor) => (
+                  <article
+                    key={factor.title}
+                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                  >
+                    <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
+                      {factor.title}
+                    </h3>
+                    <p className="mt-3 text-base leading-7 text-brand-dark/80">
+                      {factor.body}
+                    </p>
+                  </article>
+                ))}
+              </SectionRevealItem>
+            </SectionReveal>
+          </div>
+        </section>
+
+        {/* SECTION 6: PROCESS (HowTo) */}
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              Why Las Vegas Water Heaters Work Harder
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              Las Vegas water is among the hardest in the United States, with
-              high concentrations of calcium and magnesium that leave mineral
-              deposits on everything the water touches. Inside a water heater
-              tank, that mineral content settles as sediment at the bottom of
-              the unit over time. The sediment layer acts as an insulating
-              barrier between the burner and the water, forcing the system to
-              run longer and work harder to reach the set temperature. Over
-              months and years, this buildup reduces heating efficiency,
-              increases energy use, and puts added stress on the tank lining
-              and heating components.
-            </p>
-            <p className="mt-4 text-lg leading-8 text-brand-dark/80">
-              Because of how hard water interacts with water heater systems,
-              Las Vegas homeowners may find that their units require more
-              frequent maintenance and may reach the end of their useful life
-              sooner than the 10 to 12 year national average suggests.
-              Regular sediment flushing and anode rod inspection can help
-              slow that process and extend unit life. Red Carpet Plumbing
-              serves Las Vegas, Henderson, North Las Vegas, Summerlin, Spring
-              Valley, Enterprise, Green Valley, Lake Las Vegas, and
-              surrounding communities throughout the{" "}
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="text-left">
+                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    How Red Carpet Plumbing
+                    <br className="hidden sm:block" /> Handles Water Heater Service
+                  </h2>
+                  <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                    When you call Red Carpet Plumbing about a water heater
+                    problem, we follow a clear process to make sure you get an
+                    honest assessment and the right solution for your
+                    situation.
+                  </p>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-12">
+                <ol className="space-y-8">
+                  {WATER_HEATER_STEPS.map((step, index) => (
+                    <li key={step.name} className="flex items-start gap-4">
+                      <span
+                        aria-hidden="true"
+                        className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full bg-brand-primary text-lg font-semibold text-white"
+                      >
+                        {index + 1}
+                      </span>
+                      <div>
+                        <h3 className="text-xl font-semibold text-brand-dark">
+                          {step.name}
+                        </h3>
+                        <p className="mt-2 text-base leading-7 text-brand-dark/80">
+                          {step.body}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </SectionRevealItem>
+            </SectionReveal>
+          </div>
+        </section>
+
+        {/* SECTION 7: MID-PAGE CTA */}
+        <section className="bg-brand-charcoal">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                  Water Heater Problem
+                  <br className="hidden sm:block" /> in Las Vegas?
+                </h2>
+                <p className="mt-6 text-lg leading-8 text-white/80">
+                  Red Carpet Plumbing provides water heater repair and
+                  installation throughout Las Vegas and the Las Vegas Valley.
+                  Our licensed plumbers diagnose the problem honestly and give
+                  you clear options before any work begins.
+                </p>
+              </div>
+              <div className="flex flex-col items-start lg:items-end gap-4">
+                <a
+                  href="tel:+17025679172"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                >
+                  Call Now: (702) 567-9172
+                </a>
+                <p className="text-sm text-white/60">
+                  Available for emergency water heater service
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 8: SERVICE AREAS */}
+        <section className="bg-brand-charcoal text-white">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <div className="max-w-3xl text-left">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                Water Heater Service Areas
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-white/85">
+                Red Carpet Plumbing provides water heater repair and
+                installation throughout the Las Vegas Valley.
+              </p>
+            </div>
+
+            {/* TODO-BATCH-PHASE3: /las-vegas/water-heater-repair-installation/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /henderson/water-heater-repair-installation/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /north-las-vegas/water-heater-repair-installation/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /summerlin/water-heater-repair-installation/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /paradise/water-heater-repair-installation/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /spring-valley/water-heater-repair-installation/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /enterprise/water-heater-repair-installation/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /boulder-city/water-heater-repair-installation/ not yet built */}
+            <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {SERVICE_AREAS.map((area) => (
+                <li key={area}>
+                  <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
+                    {area}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-10 text-left">
               <Link
                 href="/service-areas/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:active:scale-[0.97]"
               >
-                Las Vegas Valley
+                View All Service Areas
               </Link>
-              . Contact us to learn more about water heater service in your
-              area.
-            </p>
+            </div>
           </div>
         </section>
 
-        {/* SECTION 7: REPAIR vs REPLACE (decision framework) */}
+        {/* SECTION 9: RELATED SERVICES */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              Should I Repair or Replace My Water Heater?
-            </h2>
-            {/* FLAG: Do not add pricing data to this section without client confirmation */}
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              The repair vs. replace decision depends on several factors
-              including the age of the unit, the nature of the problem, and
-              the cost of the repair relative to the cost of a new system.
-              Repair is generally the right choice when a water heater is
-              less than 8 years old, the problem is limited to a single
-              component such as a heating element, thermostat, or pilot
-              assembly, and the repair cost is significantly less than
-              replacement. In those situations, a repair can restore full
-              function and extend the life of the unit for several more
-              years.
-            </p>
-            <p className="mt-4 text-lg leading-8 text-brand-dark/80">
-              Replacement tends to make more sense when the unit is older
-              than 10 years, the tank itself is leaking or visibly corroded,
-              the unit has needed multiple repairs in a short period, or the
-              repair cost approaches a substantial portion of the cost of a
-              new system. In Las Vegas, hard water conditions can shorten
-              the effective lifespan of a water heater, making earlier
-              replacement a reasonable option when a unit is aging and
-              showing multiple symptoms. Our plumbers can assess the
-              condition of your unit, explain the repair and replacement
-              options available, and help you make a decision based on the
-              actual state of your system.
-            </p>
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="max-w-3xl text-left">
+                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    Related Plumbing Services
+                  </h2>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-14">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {RELATED_SERVICES.map((service) => (
+                    <ServiceCard
+                      key={service.href}
+                      title={service.title}
+                      description={service.description}
+                      href={service.href}
+                      image={service.image}
+                      imageAlt={service.imageAlt}
+                      built={service.built}
+                    />
+                  ))}
+                </div>
+              </SectionRevealItem>
+            </SectionReveal>
           </div>
         </section>
 
-        {/* SECTION 8: PROCESS (5 numbered steps; NOT HowTo schema) */}
+        {/* SECTION 10: FAQ */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              How Our Water Heater Service Process Works
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              When you contact Red Carpet Plumbing for water heater service,
-              here is what to expect.
-            </p>
-            {/* FLAG: CLIENT MUST CONFIRM process steps and service scope before launch */}
-            <ol className="mt-8 space-y-6">
-              {PROCESS_STEPS.map((step, index) => (
-                <li key={step.heading} className="flex items-start gap-4">
-                  <span
-                    aria-hidden="true"
-                    className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full bg-brand-primary text-base font-semibold text-white"
-                  >
-                    {index + 1}
-                  </span>
-                  <div>
-                    <h3 className="text-lg font-semibold text-brand-dark">
-                      {step.heading}
-                    </h3>
-                    <p className="mt-2 text-base leading-7 text-brand-dark/80">
-                      {step.body}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* SECTION 9: MID-PAGE CTA */}
-        <CTASection
-          background="red"
-          headline="Ready to Restore Your Hot Water?"
-          body="Contact Red Carpet Plumbing for water heater repair and installation in Las Vegas and the surrounding Las Vegas Valley."
-          primaryCTA={{
-            label: "Schedule Water Heater Service",
-            href: "/contact/",
-          }}
-        />
-
-        {/* SECTION 10: RELATED SERVICES */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              Related Plumbing Services
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              Water heater issues sometimes connect to other plumbing
-              concerns. Red Carpet Plumbing offers a full range of services
-              to address water heater problems and any related issues in
-              your home or business.
-            </p>
-            <ul className="mt-8 space-y-3">
-              {RELATED_SERVICES.map((service) => (
-                <li
-                  key={service.href}
-                  className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-brand-surface-alt"
-                >
-                  <Link
-                    // /emergency-plumbing/ and /plumbing-services/ are live; the other 3 are forward links.
-                    // TODO-BATCH-NEXT: /leak-detection-repair/ /plumbing-fixture-repair-replacement-installation/ /water-meter-pressure-regulator-services/ not yet built
-                    href={service.href}
-                    className="flex items-start gap-3 text-base text-brand-dark/80 hover:text-brand-primary"
-                  >
-                    <span aria-hidden="true" className="text-brand-primary">
-                      →
-                    </span>
-                    <span>
-                      <span className="font-semibold text-brand-dark">
-                        {service.label}
-                      </span>{" "}
-                      - {service.description}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            {/* TODO-BATCH-NEXT: Add these service-location links once pages are live: */}
-            {/* - Water Heater Repair in Las Vegas: /las-vegas/water-heater-repair-installation/ */}
-            {/* - Water Heater Repair in Henderson: /henderson/water-heater-repair-installation/ */}
-            {/* - Water Heater Repair in North Las Vegas: /north-las-vegas/water-heater-repair-installation/ */}
-            {/* - Water Heater Repair in Summerlin: /summerlin/water-heater-repair-installation/ */}
-            {/* - Water Heater Repair in Spring Valley: /spring-valley/water-heater-repair-installation/ */}
-            {/* - Water Heater Repair in Enterprise: /enterprise/water-heater-repair-installation/ */}
-            {/* - Water Heater Repair in Green Valley: /green-valley/water-heater-repair-installation/ */}
-            {/* - Water Heater Repair in Lake Las Vegas: /lake-las-vegas/water-heater-repair-installation/ */}
-          </div>
-        </section>
-
-        {/* SECTION 11: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-center">
+          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Water Heater Questions Answered
+                Frequently Asked Questions
+                <br className="hidden sm:block" /> About Water Heater Service in Las Vegas
               </h2>
             </div>
-            <dl className="mt-12 space-y-4">
+            <div className="mt-12 space-y-4">
               {WATER_HEATER_FAQS.map((faq) => (
-                <div
+                <details
                   key={faq.question}
-                  className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt sm:p-8"
+                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
                 >
-                  <dt>
-                    <h3 className="text-lg font-semibold text-brand-dark sm:text-xl">
-                      {faq.question}
-                    </h3>
-                  </dt>
-                  <dd className="mt-3 text-base leading-7 text-brand-dark/80">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
+                    <span>{faq.question}</span>
+                    <FaqChevron />
+                  </summary>
+                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
                     {faq.answer}
-                  </dd>
-                </div>
+                  </p>
+                </details>
               ))}
-            </dl>
+            </div>
           </div>
         </section>
 
-        {/* SECTION 12: FINAL CTA */}
-        <CTASection
-          background="red"
-          headline="Contact Red Carpet Plumbing for Water Heater Service in Las Vegas"
-          body="Whether your water heater needs a repair today or you are planning a replacement, Red Carpet Plumbing can help. Contact our team to describe your situation and get the information you need to make the right decision for your home or business."
-          primaryCTA={{
-            label: "Request Water Heater Service",
-            href: "/contact/",
-          }}
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
-          secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
-          }}
-        />
+        {/* SECTION 11: FINAL CTA */}
+        <section className="bg-brand-primary text-white">
+          <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
+            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Ready to Schedule
+              <br className="hidden sm:block" /> Water Heater Service in Las Vegas?
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
+              Red Carpet Plumbing is available for water heater repair and
+              installation throughout Las Vegas and the Las Vegas Valley.
+              Licensed plumbers, 4.8-star rated, NV #0048585A.
+            </p>
+            <div className="mt-10">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
+                <a
+                  href="tel:+17025679172"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                >
+                  Call (702) 567-9172
+                </a>
+                <Link
+                  href="/contact/"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/60 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                >
+                  Request Service
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <SiteFooter />
+
+      {/* Spacer so the fixed sticky mobile CTA never covers footer content. */}
+      <div className="h-16 lg:hidden" aria-hidden="true" />
+
+      <StickyMobileCTA />
     </>
   );
 }
 
-// ---------------------------------------------------------------------------
-// Local icon helpers (decorative, aria-hidden)
-// ---------------------------------------------------------------------------
-
-type IconProps = { className?: string };
-
-function CheckIcon({ className = "" }: IconProps) {
+function FaqChevron() {
   return (
     <svg
       aria-hidden="true"
       viewBox="0 0 24 24"
-      className={className}
+      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
       fill="none"
       stroke="currentColor"
       strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
     >
-      <path d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function BulletIcon({ className = "" }: IconProps) {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 8 8"
-      className={className}
-      fill="currentColor"
-    >
-      <circle cx="4" cy="4" r="4" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }
