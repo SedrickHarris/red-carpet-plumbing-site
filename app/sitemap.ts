@@ -72,5 +72,71 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: "https://redcarpetplumbing.com/gas-line-plumbing/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://redcarpetplumbing.com/commercial-plumbing/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://redcarpetplumbing.com/toilet-repair-installation/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://redcarpetplumbing.com/faucet-sink-repair-installation/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://redcarpetplumbing.com/garbage-disposal-repair-installation/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://redcarpetplumbing.com/backflow-prevention/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://redcarpetplumbing.com/video-camera-plumbing-inspections/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://redcarpetplumbing.com/plumbing-fixture-repair-replacement-installation/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://redcarpetplumbing.com/trenchless-piping/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://redcarpetplumbing.com/water-pipe-repair-replacement/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://redcarpetplumbing.com/water-meter-pressure-regulator-services/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }

@@ -156,7 +156,7 @@ const SERVICE_CARDS: ServiceCardEntry[] = [
     description:
       "Commercial plumbing services for businesses, property managers, and commercial properties throughout the Las Vegas Valley.",
     href: "/commercial-plumbing/",
-    built: false,
+    built: true,
   },
 ];
 
@@ -474,7 +474,6 @@ export default function Home() {
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {SERVICE_CARDS.map((card) => {
                     if (!card.built) {
-                      // TODO-BATCH-NEXT: /commercial-plumbing/ not yet built — render as plain text until route is created
                       return (
                         <ServiceCard
                           key={card.href}

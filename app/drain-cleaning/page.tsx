@@ -236,12 +236,11 @@ const RELATED_SERVICES: RelatedService[] = [
     built: true,
   },
   {
-    // TODO-BATCH-NEXT: /video-camera-plumbing-inspections/ not yet built — render as plain text until route is created
     title: "Video Camera Plumbing Inspections",
     description:
       "Video camera inspection to identify the type and location of blockages, confirm lines are clear after cleaning, and check for pipe damage, root intrusion, or structural issues.",
     href: "/video-camera-plumbing-inspections/",
-    built: false,
+    built: true,
   },
 ];
 
