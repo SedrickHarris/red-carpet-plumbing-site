@@ -1,249 +1,271 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
+import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
+import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 
-// TODO: Set `alternates.canonical` and `openGraph.url` (and `metadataBase`)
-// once the production domain is confirmed.
 export const metadata: Metadata = {
   title: "Plumbing Company in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing serves Las Vegas and the Valley with emergency plumbing, drain cleaning, water heaters, leak detection, and more. Call today.",
+    "Local, family-owned Las Vegas plumbers since 1980+. 24/7 emergency plumbing, drain cleaning, water heater repair, and more. Call (702) 567-9172.",
+  alternates: {
+    canonical: "https://redcarpetplumbing.com/",
+  },
   openGraph: {
     title: "Plumbing Company in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Red Carpet Plumbing provides residential and commercial plumbing services throughout Las Vegas, Henderson, North Las Vegas, Summerlin, and nearby communities. Call or request service online.",
-    images: [
-      {
-        url: "/images/hero/homepage/hero-primary.webp",
-        alt: "Red Carpet Plumbing plumber at work in a Las Vegas home",
-      },
-    ],
+      "Local Las Vegas plumbers available 24/7. Emergency plumbing, drain cleaning, water heater repair, leak detection, slab leak repair, and more. Serving the full Las Vegas Valley. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/",
+    siteName: "Red Carpet Plumbing",
     type: "website",
   },
-  robots: { index: true, follow: true },
 };
 
-// ---------------------------------------------------------------------------
-// Single source of truth: visible FAQ text AND FAQPage JSON-LD share this list.
-// ---------------------------------------------------------------------------
 const HOMEPAGE_FAQS = [
   {
     question:
-      "Does Red Carpet Plumbing offer emergency plumbing service in Las Vegas?",
+      "Does Red Carpet Plumbing offer 24/7 emergency plumbing in Las Vegas?",
     answer:
-      "Red Carpet Plumbing provides emergency plumbing service throughout Las Vegas and the surrounding communities in the Las Vegas Valley. If you have a burst pipe, major leak, drain backup, or other urgent plumbing problem, contact us for immediate support.",
+      "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service throughout Las Vegas and the Las Vegas Valley. Emergency services include burst pipes, severe leaks, sewer backups, water heater failures, and other urgent plumbing situations. Call (702) 567-9172 for immediate assistance.",
   },
   {
     question: "What areas does Red Carpet Plumbing serve?",
     answer:
-      "Red Carpet Plumbing serves Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, the Aliante Area, and nearby communities throughout the Las Vegas Valley. Contact us to confirm service availability in your specific area.",
+      "Red Carpet Plumbing serves Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities throughout the Las Vegas Valley.",
   },
   {
-    question: "What plumbing services does Red Carpet Plumbing provide?",
+    question: "How long has Red Carpet Plumbing been in business?",
     answer:
-      "Red Carpet Plumbing provides a comprehensive range of plumbing services including emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection and repair, sewer line services, re-piping, water pipe repair and replacement, gas line plumbing, commercial plumbing, toilet repair and installation, faucet and sink repair, garbage disposal service, backflow prevention, and video camera plumbing inspections.",
+      "Red Carpet Plumbing has been serving the Las Vegas Valley for over 40 years. The company is a local, family-owned plumbing business with deep experience in Las Vegas plumbing conditions and service needs.",
   },
   {
-    question: "Why are slab leaks so common in Las Vegas?",
+    question:
+      "Does Red Carpet Plumbing handle both residential and commercial plumbing?",
     answer:
-      "Slab leaks are common in Las Vegas because desert soil shifts with temperature and moisture changes, which stresses pipes buried beneath concrete foundations. Las Vegas also has very hard water with high mineral content that accelerates pipe corrosion over time. Older homes, particularly those built before 1995, often have copper or galvanized pipe systems that are now reaching the end of their expected lifespan in these conditions.",
+      "Yes. Red Carpet Plumbing provides plumbing services for both residential and commercial customers throughout the Las Vegas Valley. Commercial services include repair, installation, drain service, backflow prevention, and gas line support.",
   },
   {
-    question: "How do I know if I have a water leak in my Las Vegas home?",
+    question: "What plumbing services does Red Carpet Plumbing offer?",
     answer:
-      "Common signs of a water leak include an unexplained increase in your water bill, the sound of running water when no fixtures are in use, wet spots or warm areas on floors or walls, low water pressure, and mold or mildew odors. If you notice any of these signs, contact a licensed plumber for a professional leak detection inspection.",
+      "Red Carpet Plumbing offers a full range of plumbing services including emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection and repair, sewer line services, re-piping, gas line plumbing, commercial plumbing, and more.",
   },
   {
-    question: "Does Red Carpet Plumbing work with commercial properties?",
+    question: "Does Red Carpet Plumbing offer transparent pricing?",
     answer:
-      "Yes. Red Carpet Plumbing provides commercial plumbing services for businesses, property managers, and commercial properties throughout the Las Vegas Valley. We handle commercial drain cleaning, water heater service, leak repair, backflow prevention, and other commercial plumbing needs.",
+      "Yes. Red Carpet Plumbing provides upfront pricing with no hidden fees. Customers are informed of the cost before any work begins.",
+  },
+  {
+    question: "Why are slab leaks common in Las Vegas homes?",
+    answer:
+      "Slab leaks are common in Las Vegas due to the desert climate, soil shifting, hard water mineral buildup in pipes, and aging pipe materials in older neighborhoods. Red Carpet Plumbing provides slab leak detection and repair throughout the Las Vegas Valley.",
   },
   {
     question: "How do I schedule plumbing service with Red Carpet Plumbing?",
     answer:
-      "You can schedule plumbing service by calling Red Carpet Plumbing directly or by submitting a service request through the contact form on our website. For emergency plumbing situations, call us for the fastest response.",
-  },
-  {
-    question: "Does hard water in Las Vegas damage plumbing?",
-    answer:
-      "Yes. Las Vegas has some of the hardest water in the country due to high calcium and magnesium mineral content. Over time, these minerals build up inside pipes and on fixtures, restricting water flow, stressing joints, and accelerating corrosion. Water heaters, faucets, and appliances are all affected by hard water buildup. Regular maintenance and inspections can help identify damage early.",
+      "You can schedule service by calling (702) 567-9172 or by submitting a service request on the contact page. For plumbing emergencies, calling directly is recommended for the fastest response.",
   },
 ];
 
 const TRUST_STRIP_ITEMS = [
-  "Local Las Vegas Plumber",
-  "Residential and Commercial",
-  "Emergency Plumbing Service",
-  "Transparent Pricing",
+  "4.8 Stars, 76 Google Reviews",
+  "Over 40 Years Serving Las Vegas",
+  "Local, Family-Owned Business",
   "Licensed Plumbers",
-  "Customer Satisfaction Focused",
+  "24/7 Emergency Service",
+  "Transparent Pricing, No Hidden Fees",
 ];
 
-type ServiceCard = {
+type ServiceCardEntry = {
   title: string;
   description: string;
-  image?: string;
-  alt: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
+  built: boolean;
 };
 
-const SERVICE_CARDS: ServiceCard[] = [
+const SERVICE_CARDS: ServiceCardEntry[] = [
   {
     title: "Emergency Plumbing",
     description:
       "Fast response to burst pipes, major leaks, and plumbing emergencies throughout Las Vegas.",
-    image: "/images/services/emergency-plumbing/card.webp",
-    alt: "Twenty four hour emergency plumbing service in Las Vegas",
     href: "/emergency-plumbing/",
+    image: "/images/services/emergency-plumbing/card.webp",
+    imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
+    built: true,
   },
   {
     title: "Drain Cleaning",
     description:
       "Professional drain cleaning and hydro jetting to clear clogs and restore proper flow.",
-    image: "/images/services/drain-cleaning/card.webp",
-    alt: "Hydro jetting equipment clearing a tough drain clog",
     href: "/drain-cleaning/",
+    image: "/images/services/drain-cleaning/card.webp",
+    imageAlt: "Hydro jetting equipment clearing a tough drain clog",
+    built: true,
   },
   {
     title: "Leak Detection and Repair",
     description:
       "Accurate leak detection using advanced equipment to find hidden leaks before they cause serious damage.",
-    image: "/images/services/leak-detection-repair/card.webp",
-    alt: "Advanced leak detection equipment in use at a Las Vegas home",
     href: "/leak-detection-repair/",
+    image: "/images/services/leak-detection-repair/card.webp",
+    imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
+    built: true,
   },
   {
     title: "Water Heater Repair and Installation",
     description:
       "Water heater diagnostics, repair, and installation for traditional and tankless systems.",
-    image: "/images/services/water-heater-repair-installation/card.webp",
-    alt: "Modern energy efficient water heater installation",
     href: "/water-heater-repair-installation/",
+    image: "/images/services/water-heater-repair-installation/card.webp",
+    imageAlt: "Modern energy efficient water heater installation",
+    built: true,
   },
   {
     title: "Slab Leak Detection and Repair",
     description:
       "Specialized slab leak detection and repair for Las Vegas homes where shifting desert soils and hard water accelerate pipe damage.",
-    image: "/images/services/slab-leak-detection-repair/card.webp",
-    alt: "Home foundation showing signs of a slab leak",
     href: "/slab-leak-detection-repair/",
+    image: "/images/services/slab-leak-detection-repair/card.webp",
+    imageAlt: "Home foundation showing signs of a slab leak",
+    built: true,
   },
   {
     title: "Sewer Line Services",
     description:
       "Sewer line inspection, cleaning, repair, and replacement for residential and commercial properties.",
-    image: undefined,
-    alt: "Sewer line service and repair in Las Vegas",
     href: "/sewer-line-services/",
+    built: true,
   },
   {
     title: "Re-Piping",
     description:
       "Whole-home and commercial re-piping to replace aging, corroded, or failing pipe systems.",
-    image: "/images/services/re-piping/hero.webp",
-    alt: "Professional re-piping service for a Las Vegas home",
     href: "/re-piping/",
+    image: "/images/services/re-piping/hero.webp",
+    imageAlt: "Professional re-piping service for a Las Vegas home",
+    built: true,
   },
   {
     title: "Commercial Plumbing",
     description:
       "Commercial plumbing services for businesses, property managers, and commercial properties throughout the Las Vegas Valley.",
-    image: undefined,
-    alt: "Commercial plumbing services in Las Vegas",
     href: "/commercial-plumbing/",
+    built: false,
   },
 ];
 
 const LOCAL_ISSUES = [
   {
-    title: "Hard Water and Mineral Buildup",
-    body: "Las Vegas has some of the hardest water in the country, with high levels of calcium and magnesium. These minerals accumulate inside pipes, restrict water flow, and accelerate joint and fitting corrosion. Water heaters, faucets, and appliances all wear faster in high mineral-content water.",
+    question: "Why Is Hard Water a Problem for Las Vegas Plumbing?",
+    answer:
+      "Las Vegas has some of the hardest water in the United States. High mineral content, primarily calcium and magnesium, builds up inside pipes, water heaters, and fixtures over time. This buildup reduces water flow, shortens the lifespan of water heaters, and can cause fixture damage. Regular water heater flushing and pipe inspection help Las Vegas homeowners manage hard water effects before they become expensive problems.",
   },
   {
-    title: "Slab Leaks",
-    body: "Desert soil shifts with temperature changes and moisture variation, which stresses pipes buried beneath concrete foundations. Older homes across Paradise, East Las Vegas, and other established neighborhoods often still have copper piping that is approaching the end of its expected service life, increasing slab leak risk.",
+    question: "What Causes Slab Leaks in Las Vegas Homes?",
+    answer:
+      "Slab leaks occur when water pipes running beneath a home's concrete foundation develop cracks or holes. In Las Vegas, a combination of hard water mineral corrosion, shifting desert soil, and temperature fluctuations accelerates pipe deterioration under the slab. Slab leaks are one of the most serious plumbing issues in the valley because they can go undetected for months while causing structural damage and mold growth.",
   },
   {
-    title: "Extreme Temperature Swings",
-    body: "Las Vegas temperatures can exceed 110 degrees Fahrenheit in summer and drop near freezing in winter. These swings cause pipes to expand and contract repeatedly, loosening joints and stressing connections over time.",
+    question: "How Does Desert Heat Affect Plumbing Pipes?",
+    answer:
+      "Las Vegas summer temperatures regularly exceed 110 degrees Fahrenheit. This extreme heat causes pipes to expand and contract repeatedly, which stresses pipe joints and connections over time. Outdoor pipes and pipes near exterior walls are particularly vulnerable. Older copper and galvanized pipes that have already weakened from hard water buildup are at higher risk of failure during heat stress periods.",
   },
   {
-    title: "Aging Pipe Systems",
-    body: "Many Las Vegas homes built before 1995 used copper or galvanized steel piping. Galvanized pipes typically show significant corrosion after 15 to 20 years in Las Vegas conditions. Copper systems from earlier decades are now at or past their expected lifespan in the desert climate.",
+    question: "Why Do Las Vegas Homes Have Water Pressure Problems?",
+    answer:
+      "Water pressure issues are common in Las Vegas, particularly in older neighborhoods and high-rise buildings. Mineral-clogged pipes restrict water flow and reduce pressure at fixtures. Failing pressure regulator valves, which control incoming water pressure from the municipal supply, can also cause pressure that is too high or too low. Both conditions affect everyday water use and can damage appliances over time.",
   },
   {
-    title: "Water Pressure Problems",
-    body: "Pressure issues are common across the Las Vegas Valley and can result from aging pressure regulators, mineral buildup inside pipes, or supply line problems. Both high and low water pressure can damage plumbing systems and appliances.",
-  },
-  {
-    title: "High-Demand Commercial Properties",
-    body: "Las Vegas commercial and hospitality properties experience heavy daily plumbing use that accelerates wear on drains, fixtures, water heaters, and supply lines. Commercial properties require regular maintenance and faster response to keep operations running.",
+    question: "What Happens to Older Pipes in the Las Vegas Climate?",
+    answer:
+      "Many Las Vegas homes built before the 1990s still have original galvanized steel or early copper plumbing. These older pipe materials were not designed for Las Vegas's hard water conditions and decades of heat stress. Galvanized pipes corrode from the inside out, reducing water quality and flow. When older pipes reach the end of their usable life, re-piping with modern materials is the most durable long-term solution.",
   },
 ];
 
-const SERVICE_AREA_TILES = [
-  { label: "Las Vegas", href: "/las-vegas-plumbing-services/" },
-  { label: "Henderson", href: "/henderson-plumbing-services/" },
-  { label: "North Las Vegas", href: "/north-las-vegas-plumbing-services/" },
-  { label: "Paradise", href: "/paradise-plumbing-services/" },
-  { label: "Summerlin", href: "/summerlin-plumbing-services/" },
-  { label: "Spring Valley", href: "/spring-valley-plumbing-services/" },
-  { label: "Enterprise", href: "/enterprise-plumbing-services/" },
-  { label: "Boulder City", href: "/boulder-city-plumbing-services/" },
-  { label: "Green Valley", href: "/green-valley-plumbing-services/" },
-  { label: "Lake Las Vegas", href: "/lake-las-vegas-plumbing-services/" },
-  { label: "Aliante Area", href: "/north-las-vegas/aliante-area-plumbing/" },
+const SERVICE_AREAS = [
+  "Las Vegas",
+  "Henderson",
+  "North Las Vegas",
+  "Paradise",
+  "Summerlin",
+  "Spring Valley",
+  "Enterprise",
+  "Boulder City",
+  "Green Valley",
+  "Lake Las Vegas",
+  "Aliante Area",
 ];
 
 const WHY_CHOOSE_REASONS = [
   {
-    title: "Local Las Vegas Expertise",
-    body: "We know the plumbing challenges that come with living in the desert Valley. From hard water damage to slab leaks to aging pipe systems, we have hands-on experience with the conditions Las Vegas properties face.",
+    title: "Over 40 Years Serving Las Vegas",
+    body: "Red Carpet Plumbing has been serving Las Vegas homes and businesses for over 40 years. That means four decades of experience with the specific plumbing conditions, water quality, and climate challenges that affect properties throughout the Las Vegas Valley.",
   },
   {
-    title: "Residential and Commercial Service",
-    body: "We serve homeowners, property managers, and business owners throughout the Las Vegas Valley. From a single-family home to a commercial building, we bring the same commitment to quality.",
+    title: "Local, Family-Owned",
+    body: "We are a local, family-owned Las Vegas plumbing company, not a national franchise. When you call Red Carpet Plumbing, you are calling a neighbor who has a stake in this community and a commitment to doing the job right.",
   },
   {
-    title: "Clear Communication",
-    body: "We explain what is going on, what your options are, and what each option costs before we start any work. No surprises.",
+    title: "Licensed Plumbers",
+    body: "Every job Red Carpet Plumbing takes on is handled by licensed plumbing professionals.",
+    extraNote: "license",
   },
   {
-    title: "Emergency Plumbing Available",
-    body: "Plumbing emergencies do not keep business hours. Red Carpet Plumbing provides emergency plumbing service when you need it.",
+    title: "24/7 Emergency Service",
+    body: "Plumbing emergencies happen outside of business hours. Red Carpet Plumbing is available 24 hours a day, 7 days a week for emergency plumbing situations throughout Las Vegas and the Las Vegas Valley.",
   },
   {
-    title: "Quality Workmanship",
-    body: "We take care of your home and property throughout every job. Clean work, proper repairs, and attention to detail on every call.",
+    title: "Transparent Pricing, No Hidden Fees",
+    body: "We provide upfront pricing before work begins. No surprises on the invoice. You know what the job costs before our plumber starts.",
   },
   {
-    title: "Customer Satisfaction Focused",
-    body: "Our goal is for every customer to feel confident in the work we did and comfortable calling us again. We stand behind the plumbing services we provide.",
+    title: "Customer Satisfaction Guarantee",
+    body: "Red Carpet Plumbing stands behind every service we provide. Our goal is for every customer to feel confident in the work completed and comfortable calling us again.",
   },
 ];
 
-// ---------------------------------------------------------------------------
-// JSON-LD schema payloads
-// TODO: When production domain is confirmed, add absolute `url` fields to
-// Plumber / WebSite / WebPage payloads and switch `logo` / `image` to
-// absolute URLs.
-// TODO: Confirm telephone, address (if applicable), opening hours, and
-// sameAs profile URLs before publishing.
-// ---------------------------------------------------------------------------
 const plumberSchema = {
   "@context": "https://schema.org",
   "@type": "Plumber",
   name: "Red Carpet Plumbing",
-  logo: "/images/brand/logo/red-carpet-plumbing-logo.png",
-  image: "/images/hero/homepage/hero-primary.webp",
-  description:
-    "Red Carpet Plumbing provides residential and commercial plumbing services throughout Las Vegas and the Las Vegas Valley, including emergency plumbing, drain cleaning, water heater repair, leak detection, slab leak repair, sewer line services, and re-piping.",
+  url: "https://redcarpetplumbing.com",
+  telephone: "+17025679172",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3330 W. Hacienda Ave Ste. 405",
+    addressLocality: "Las Vegas",
+    addressRegion: "NV",
+    postalCode: "89118",
+    addressCountry: "US",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "76",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "07:30",
+      closes: "16:30",
+    },
+  ],
+  sameAs: [
+    "https://share.google/oY5LcfC0lhWJXVjJj",
+    "https://www.facebook.com/redcarpetplumbing/",
+    "https://www.instagram.com/redcarpetplumbing/",
+    "https://x.com/redcarpetplumb",
+  ],
   areaServed: [
     "Las Vegas, NV",
     "Henderson, NV",
@@ -255,13 +277,21 @@ const plumberSchema = {
     "Boulder City, NV",
     "Green Valley, NV",
     "Lake Las Vegas, NV",
+    "Aliante, NV",
+    "Las Vegas Valley, NV",
+    "Clark County, NV",
   ],
+  description:
+    "Red Carpet Plumbing is a local, family-owned Las Vegas plumbing company with over 40 years of experience. We provide 24/7 emergency plumbing, drain cleaning, water heater repair, leak detection, slab leak repair, sewer line services, re-piping, and commercial plumbing throughout the Las Vegas Valley. Licensed plumbers, transparent pricing, no hidden fees.",
+  logo: "https://redcarpetplumbing.com/images/brand/logo/red-carpet-plumbing-logo.png",
+  image: "https://redcarpetplumbing.com/images/hero/homepage/hero-primary.webp",
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Red Carpet Plumbing",
+  url: "https://redcarpetplumbing.com",
 };
 
 const webpageSchema = {
@@ -269,10 +299,12 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Plumbing Company in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing serves Las Vegas and the Valley with emergency plumbing, drain cleaning, water heaters, leak detection, and more. Call today.",
+    "Local, family-owned Las Vegas plumbers since 1980+. 24/7 emergency plumbing, drain cleaning, water heater repair, and more. Call (702) 567-9172.",
+  url: "https://redcarpetplumbing.com/",
   isPartOf: {
     "@type": "WebSite",
     name: "Red Carpet Plumbing",
+    url: "https://redcarpetplumbing.com",
   },
   publisher: {
     "@type": "Organization",
@@ -308,264 +340,260 @@ export default function Home() {
         <HeroSection
           headingLevel="h1"
           headline="Plumbing Company in Las Vegas, NV"
-          subheading="Red Carpet Plumbing provides responsive plumbing services for homes and businesses throughout Las Vegas and the Las Vegas Valley. Whether you need emergency plumbing support, drain cleaning, water heater repair, leak detection, or sewer line service, our team is ready to help."
+          subheading="Red Carpet Plumbing provides plumbing services for homes and businesses throughout Las Vegas and the Las Vegas Valley. From emergency plumbing and drain cleaning to water heater repair, slab leak detection, and full re-piping, our local team is ready to help. We have been serving Las Vegas for over 40 years as a licensed, family-owned plumbing company."
           trustItems={[
-            "Local Las Vegas plumber",
-            "Residential and commercial service",
-            "Emergency plumbing available",
-            "Transparent pricing, no hidden fees",
+            "4.8 stars, 76 Google reviews",
+            "Local, family-owned, over 40 years in Las Vegas",
+            "Licensed plumbers, transparent pricing",
+            "24/7 emergency plumbing available",
           ]}
           primaryCTA={{
             label: "Request Plumbing Service",
             href: "/contact/",
           }}
-          /* TODO: Replace disabled phone CTA with confirmed phone number before launch. */
           secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
           }}
-          formSlot={<QuoteFormPlaceholder />}
-          backgroundImage={{
-            src: "/images/hero/homepage/hero-primary.webp",
-            alt: "Red Carpet Plumbing plumber at work in a Las Vegas home",
-          }}
+          ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
+          formSlot={
+            <>
+              {/* FLAG: Confirm SiriusSys endpoint https://link.siriussys.io/widget/form/AfdLCY7bAzZ0rN9eDFD2 before wiring form. LAUNCH BLOCKER. Do not enable until owner confirms. */}
+              <QuoteFormPlaceholder />
+            </>
+          }
         />
 
         {/* SECTION 2: TRUST STRIP */}
         <section
-          aria-labelledby="trust-strip-label"
-          className="border-y border-brand-surface-alt bg-brand-surface-alt"
+          aria-label="Why Las Vegas homeowners and businesses choose Red Carpet Plumbing"
+          className="bg-brand-primary text-white"
         >
           <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
-            <p
-              id="trust-strip-label"
-              className="text-center text-sm font-semibold uppercase tracking-wider text-brand-muted"
-            >
-              Why Las Vegas Homeowners and Businesses Choose Red Carpet Plumbing
-            </p>
-            <ul className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-6">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-6">
               {TRUST_STRIP_ITEMS.map((item) => (
                 <li
                   key={item}
                   className="flex items-center justify-center gap-2 text-center"
                 >
-                  <CheckIcon className="h-5 w-5 flex-none text-brand-primary" />
-                  <span className="text-sm font-medium text-brand-dark">
-                    {item}
-                  </span>
+                  <TrustCheck />
+                  <span className="text-sm font-semibold">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
         </section>
 
-        {/* SECTION 3: EMERGENCY PLUMBING CTA */}
-        <section className="bg-brand-primary text-white">
-          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 xl:px-12">
+        {/* SECTION 3: 24/7 EMERGENCY CTA */}
+        <section className="bg-brand-charcoal text-white">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-3">
               <div className="lg:col-span-2">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                  Emergency Plumbing in Las Vegas
+                  24/7 Emergency Plumbing in Las Vegas
                 </h2>
                 <p className="mt-4 text-lg leading-8 text-white/90">
-                  Plumbing emergencies can cause serious damage to your home or
-                  property. If you are dealing with a burst pipe, major leak,
-                  drain backup, water heater failure, or sewer problem, Red
-                  Carpet Plumbing is ready to help. We provide emergency
-                  plumbing service throughout Las Vegas and the surrounding
-                  communities.
+                  Plumbing emergencies do not follow a schedule. Burst pipes,
+                  sewer backups, water heater failures, and severe leaks can
+                  cause serious damage if not addressed immediately. Red Carpet
+                  Plumbing provides 24/7 emergency plumbing service throughout
+                  Las Vegas and the Las Vegas Valley. Call us any time, day or
+                  night, and we will get to you.
                 </p>
               </div>
-              <div className="flex flex-col items-start gap-2 lg:items-end">
-                {/* TODO: Replace disabled phone CTA with confirmed phone number before launch. */}
-                <span
-                  role="button"
-                  aria-disabled="true"
-                  title="Phone number pending"
-                  className="inline-flex min-h-12 cursor-not-allowed items-center justify-center rounded-lg border border-white/40 bg-transparent px-6 py-3 text-base font-semibold text-white/85"
+              <div className="flex justify-start lg:justify-end">
+                <a
+                  href="tel:+17025679172"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:active:scale-[0.97]"
                 >
-                  Get Emergency Plumbing Help
-                </span>
-                <p className="text-xs text-white/70">Phone number pending</p>
-                <Link
-                  href="/emergency-plumbing/"
-                  className="mt-2 text-sm font-medium text-white underline-offset-4 hover:underline"
-                >
-                  Learn about our Emergency Plumbing services
-                </Link>
+                  Call Now: (702) 567-9172
+                </a>
               </div>
             </div>
           </div>
         </section>
 
         {/* SECTION 4: CORE SERVICES PREVIEW */}
-        <section className="bg-white">
+        <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Las Vegas Plumbing Services
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-                From routine plumbing repairs to emergency response, Red Carpet
-                Plumbing provides a full range of residential and commercial
-                plumbing services throughout Las Vegas and the Las Vegas Valley.
-              </p>
-            </div>
-            <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {SERVICE_CARDS.map((card) => (
-                <article
-                  key={card.href}
-                  className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-brand-surface-alt transition hover:shadow-lg"
-                >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-surface-alt">
-                    {card.image ? (
-                      <Image
-                        src={card.image}
-                        alt={card.alt}
-                        fill
-                        sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                        className="object-cover transition group-hover:scale-105"
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="mx-auto max-w-3xl text-center">
+                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    Plumbing Services in Las Vegas, NV
+                  </h2>
+                  <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                    Red Carpet Plumbing offers a full range of residential and
+                    commercial plumbing services throughout Las Vegas and the
+                    Las Vegas Valley. Whether you need emergency repairs,
+                    routine maintenance, or a full re-pipe, our licensed
+                    plumbers handle every job with care. Our services include
+                    emergency plumbing, drain cleaning, water heater repair and
+                    installation, leak detection and repair, slab leak detection
+                    and repair, sewer line services, re-piping, and commercial
+                    plumbing.
+                  </p>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-14">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {SERVICE_CARDS.map((card) => {
+                    if (!card.built) {
+                      // TODO-BATCH-NEXT: /commercial-plumbing/ not yet built — render as plain text until route is created
+                      return (
+                        <ServiceCard
+                          key={card.href}
+                          title={card.title}
+                          description={card.description}
+                          href={card.href}
+                          image={card.image}
+                          imageAlt={card.imageAlt}
+                          built={false}
+                        />
+                      );
+                    }
+                    return (
+                      <ServiceCard
+                        key={card.href}
+                        title={card.title}
+                        description={card.description}
+                        href={card.href}
+                        image={card.image}
+                        imageAlt={card.imageAlt}
                       />
-                    ) : (
-                      <ServiceCardPlaceholder alt={card.alt} />
-                    )}
-                  </div>
-                  <div className="flex flex-1 flex-col p-6">
-                    <h3 className="text-xl font-semibold text-brand-dark">
-                      {card.title}
-                    </h3>
-                    <p className="mt-3 flex-1 text-sm leading-6 text-brand-dark/80">
-                      {card.description}
-                    </p>
-                    <Link
-                      href={card.href}
-                      className="mt-4 inline-flex items-center text-sm font-semibold text-brand-primary hover:text-brand-primary-hover"
-                    >
-                      Learn More
-                      <span aria-hidden="true" className="ml-1">
-                        →
-                      </span>
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <div className="mt-12 text-center">
-              <Link
-                href="/plumbing-services/"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
-              >
-                See All Plumbing Services
-              </Link>
-            </div>
+                    );
+                  })}
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-12 text-center">
+                <Link
+                  href="/plumbing-services/"
+                  className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-transform motion-safe:active:scale-[0.97]"
+                >
+                  See All Plumbing Services
+                </Link>
+              </SectionRevealItem>
+            </SectionReveal>
           </div>
         </section>
 
         {/* SECTION 5: LOCAL LAS VEGAS PLUMBING ISSUES */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Common Plumbing Issues in Las Vegas Homes
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-                Las Vegas presents unique plumbing challenges that homeowners
-                and property managers face more often here than in most other
-                cities. Understanding these issues helps you catch problems
-                early and avoid costly repairs.
-              </p>
-            </div>
-            <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {LOCAL_ISSUES.map((issue) => (
-                <article
-                  key={issue.title}
-                  className="rounded-2xl border-l-4 border-brand-primary bg-white p-6 shadow-sm"
-                >
-                  <h3 className="text-lg font-semibold text-brand-dark">
-                    {issue.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-6 text-brand-dark/80">
-                    {issue.body}
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="text-center">
+                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    Common Plumbing Problems in Las Vegas
+                  </h2>
+                  <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                    Las Vegas homes and businesses face specific plumbing
+                    challenges driven by the desert climate, hard water supply,
+                    and local soil conditions. Understanding these problems
+                    helps homeowners catch issues early and avoid costly
+                    repairs.
                   </p>
-                </article>
-              ))}
-            </div>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-12 space-y-10">
+                {LOCAL_ISSUES.map((issue) => (
+                  <article key={issue.question}>
+                    <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
+                      {issue.question}
+                    </h3>
+                    <p className="mt-3 text-base leading-7 text-brand-dark/80">
+                      {issue.answer}
+                    </p>
+                  </article>
+                ))}
+              </SectionRevealItem>
+            </SectionReveal>
           </div>
         </section>
 
         {/* SECTION 6: SERVICE AREAS PREVIEW */}
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-                Las Vegas Valley Plumbing Service Areas
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-white/85">
-                Red Carpet Plumbing serves communities throughout the Las Vegas
-                Valley, from the Las Vegas Strip corridor to Summerlin,
-                Henderson, North Las Vegas, and beyond.
-              </p>
-            </div>
-            <ul className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {SERVICE_AREA_TILES.map((area) => (
-                <li key={area.href}>
-                  <Link
-                    href={area.href}
-                    className="flex h-full items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/10"
-                  >
-                    <span>{area.label}</span>
-                    <span aria-hidden="true" className="text-white/60">
-                      →
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-10 text-center text-base text-white/80">
-              Also serving Whitney, Winchester, Desert Shores, Sunrise Manor,
-              Seven Hills, and other Las Vegas Valley communities. Contact us to
-              confirm service availability in your area.
-            </p>
-            <div className="mt-10 text-center">
-              <Link
-                href="/service-areas/"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-charcoal shadow-sm transition hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                See All Service Areas
-              </Link>
-            </div>
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="mx-auto max-w-3xl text-center">
+                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                    Plumbing Services Across the Las Vegas Valley
+                  </h2>
+                  <p className="mt-6 text-lg leading-8 text-white/85">
+                    Red Carpet Plumbing serves communities throughout the Las
+                    Vegas Valley. Whether you are in a single-family home, a
+                    commercial property, or a multi-unit building, our licensed
+                    plumbers cover your area.
+                  </p>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-12">
+                <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+                  {SERVICE_AREAS.map((area) => (
+                    <li
+                      key={area}
+                      className="flex h-full items-center rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-sm font-medium text-white/85"
+                    >
+                      <span>{area}</span>
+                    </li>
+                  ))}
+                </ul>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-10 text-center">
+                <Link
+                  href="/service-areas/"
+                  className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:active:scale-[0.97]"
+                >
+                  View All Service Areas
+                </Link>
+              </SectionRevealItem>
+            </SectionReveal>
           </div>
         </section>
 
         {/* SECTION 7: WHY CHOOSE RED CARPET PLUMBING */}
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Why Choose Red Carpet Plumbing
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-                When you call a plumber, you want someone who shows up prepared,
-                communicates clearly, and takes care of your home. Here is what
-                customers can expect when they work with Red Carpet Plumbing.
-              </p>
-            </div>
-            <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {WHY_CHOOSE_REASONS.map((reason) => (
-                <article key={reason.title} className="flex flex-col gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-primary/10 text-brand-primary">
-                    <CheckIcon className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-brand-dark">
-                    {reason.title}
-                  </h3>
-                  <p className="text-base leading-7 text-brand-dark/80">
-                    {reason.body}
-                  </p>
-                </article>
-              ))}
-            </div>
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="mx-auto max-w-3xl text-center">
+                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    Why Las Vegas Homeowners and Businesses Choose Red Carpet
+                    Plumbing
+                  </h2>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-14">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                  {WHY_CHOOSE_REASONS.map((reason) => (
+                    <article key={reason.title} className="flex flex-col gap-3">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-primary/10 text-brand-primary">
+                        <TrustCheck className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-brand-dark">
+                        {reason.title}
+                      </h3>
+                      <p className="text-base leading-7 text-brand-dark/80">
+                        {reason.body}
+                      </p>
+                      {reason.extraNote === "license" ? (
+                        /* TODO: Add NV contractor license number when confirmed by owner */
+                        <span className="sr-only">
+                          NV contractor license number pending
+                        </span>
+                      ) : null}
+                    </article>
+                  ))}
+                </div>
+              </SectionRevealItem>
+            </SectionReveal>
           </div>
         </section>
 
@@ -577,63 +605,60 @@ export default function Home() {
                 Frequently Asked Questions About Las Vegas Plumbing
               </h2>
             </div>
-            <dl className="mt-12 space-y-4">
+            <div className="mt-12 space-y-4">
               {HOMEPAGE_FAQS.map((faq) => (
-                <div
+                <details
                   key={faq.question}
-                  className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt sm:p-8"
+                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt sm:p-8"
                 >
-                  <dt>
-                    <h3 className="text-lg font-semibold text-brand-dark sm:text-xl">
-                      {faq.question}
-                    </h3>
-                  </dt>
-                  <dd className="mt-3 text-base leading-7 text-brand-dark/80">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
+                    <span>{faq.question}</span>
+                    <FaqChevron />
+                  </summary>
+                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
                     {faq.answer}
-                  </dd>
-                </div>
+                  </p>
+                </details>
               ))}
-            </dl>
+            </div>
           </div>
         </section>
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Ready to Schedule Las Vegas Plumbing Service?"
-          body="Whether you have an urgent plumbing problem or want to schedule routine service, Red Carpet Plumbing is ready to help. Call us today or submit a service request online and we will follow up promptly."
+          headline="Ready to Schedule Plumbing Service in Las Vegas?"
+          body="Red Carpet Plumbing is available for emergency plumbing, scheduled repairs, and plumbing installations throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated, over 40 years in business."
           primaryCTA={{
             label: "Request Plumbing Service",
             href: "/contact/",
           }}
-          /* TODO: Replace disabled phone CTA with confirmed phone number before launch. */
           secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
           }}
-          formSlot={<QuoteFormPlaceholder title="Request Service Today" />}
         />
       </main>
 
       <SiteFooter />
+
+      {/* Spacer so the fixed sticky mobile CTA never covers footer content. */}
+      <div className="h-16 lg:hidden" aria-hidden="true" />
+
+      <StickyMobileCTA />
     </>
   );
 }
 
-// ---------------------------------------------------------------------------
-// Small helpers used only on this page.
-// ---------------------------------------------------------------------------
-
-function CheckIcon({ className = "" }: { className?: string }) {
+function TrustCheck({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg
       aria-hidden="true"
       viewBox="0 0 24 24"
-      className={className}
+      className={`flex-none ${className}`}
       fill="none"
       stroke="currentColor"
-      strokeWidth={2}
+      strokeWidth={2.25}
     >
       <path
         strokeLinecap="round"
@@ -644,27 +669,17 @@ function CheckIcon({ className = "" }: { className?: string }) {
   );
 }
 
-function ServiceCardPlaceholder({ alt }: { alt: string }) {
+function FaqChevron() {
   return (
-    <div
-      role="img"
-      aria-label={alt}
-      className="flex h-full w-full items-center justify-center bg-brand-primary"
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
     >
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 64 64"
-        className="h-16 w-16 text-white"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={3}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        {/* simple wrench glyph */}
-        <path d="M44 8a12 12 0 0 0-11.3 16L10 46.7 17.3 54l22.7-22.7A12 12 0 1 0 44 8z" />
-        <circle cx="44" cy="20" r="3" />
-      </svg>
-    </div>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+    </svg>
   );
 }

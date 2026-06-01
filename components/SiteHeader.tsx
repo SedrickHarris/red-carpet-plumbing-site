@@ -126,16 +126,13 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
-            {/* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE ENABLING */}
             <div className="hidden sm:block">
               <Button
-                href="#call-now"
+                href="tel:+17025679172"
                 variant="primary"
                 size="default"
-                disabled
-                title="Phone number pending"
               >
-                Call Now
+                Call (702) 567-9172
               </Button>
             </div>
 
@@ -199,21 +196,15 @@ export function SiteHeader() {
                     </li>
                   ))}
                 </ul>
-                {/* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE ENABLING */}
                 <div className="mt-3">
                   <Button
-                    href="#call-now"
+                    href="tel:+17025679172"
                     variant="primary"
                     size="default"
-                    disabled
-                    title="Phone number pending"
                     fullWidth
                   >
-                    Call Now
+                    Call (702) 567-9172
                   </Button>
-                  <p className="mt-2 text-xs text-brand-muted">
-                    Phone number pending
-                  </p>
                 </div>
               </div>
             </motion.nav>

@@ -123,9 +123,13 @@ export function SiteFooter() {
                 </li>
               ))}
             </ul>
-            {/* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE ENABLING */}
-            <p className="mt-4 text-sm text-white/70">
-              Phone number pending
+            <p className="mt-4 text-sm">
+              <a
+                href="tel:+17025679172"
+                className="font-semibold text-white transition-colors hover:text-white/80"
+              >
+                Call (702) 567-9172
+              </a>
             </p>
           </div>
         </div>
