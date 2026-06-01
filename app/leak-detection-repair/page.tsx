@@ -1,194 +1,250 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
+import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
+import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title: "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Suspect a hidden water leak in Las Vegas? Red Carpet Plumbing detects and repairs visible and hidden leaks for homes and businesses throughout the Las Vegas Valley.",
+    "Red Carpet Plumbing provides professional leak detection and repair throughout Las Vegas and the Las Vegas Valley. Hidden leaks, slab leaks, wall leaks, underground lines. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/leak-detection-repair/",
   },
   openGraph: {
     title: "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Hidden leak, damp walls, or unexplained water bill in Las Vegas? Red Carpet Plumbing locates and repairs water leaks for homes and businesses throughout the Las Vegas Valley.",
+      "Red Carpet Plumbing provides professional leak detection and repair throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
-    locale: "en_US",
     type: "website",
   },
-  robots: { index: true, follow: true },
 };
 
-// ---------------------------------------------------------------------------
-// FAQ source of truth. The visible FAQ section AND the FAQPage JSON-LD
-// schema both derive from this list, guaranteeing character-for-character
-// match. Do not edit one without the other.
-// ---------------------------------------------------------------------------
 const LEAK_DETECTION_FAQS = [
   {
-    question: "How do I know if I have a hidden water leak?",
+    question: "What are the signs of a hidden water leak in a Las Vegas home?",
     answer:
-      "Common signs of a hidden water leak include an unexplained increase in your monthly water bill without a change in usage, damp or discolored patches on walls or ceilings, warm spots on the floor that may indicate a leak beneath a slab, a drop in water pressure throughout the home, the sound of running water when all fixtures are turned off, and musty or mildew odors in areas that are not exposed to moisture. Any of these signs is worth having a plumber evaluate.",
+      "The most common signs are an unexplained increase in your water bill, the sound of running water when all fixtures are off, warm or wet spots on floors or walls, discoloration or bubbling paint, a persistent musty odor, reduced water pressure, and unexplained cracks in walls or flooring. In Las Vegas, hidden leaks are especially common in older homes due to hard water pipe corrosion and desert soil movement.",
+  },
+  {
+    question: "How do I check if I have a water leak using my meter?",
+    answer:
+      "Turn off every water fixture and appliance in the home. Find your water meter near the street in a ground-level box and check whether the dial or digital display is still moving. If the meter continues to advance with all water off, water is being used somewhere in your system. Call a plumber for a professional inspection to locate the source.",
+  },
+  {
+    question: "What causes hidden leaks in Las Vegas homes?",
+    answer:
+      "The most common causes in Las Vegas are hard water mineral corrosion inside copper and galvanized pipes, desert soil movement that stresses underground pipes and slab connections, aging plumbing in homes built before 2000, and tree root intrusion into underground sewer lines. Las Vegas pipes develop leaks faster than in most cities due to the valley's extremely hard water.",
+  },
+  {
+    question: "How does non-invasive leak detection work?",
+    answer:
+      "Non-invasive leak detection uses acoustic sensors to listen for the sound of pressurized water escaping from pipes through walls, floors, and underground. Electronic detection equipment amplifies these sounds to pinpoint the leak location within a few inches without opening large sections of the home. Thermal imaging can also identify temperature differences caused by water escaping from hot water lines.",
+  },
+  {
+    question: "Can a small hidden leak really cause serious damage?",
+    answer:
+      "Yes. A small hidden leak inside a wall can cause significant mold growth within 24 to 48 hours and can damage wood framing, drywall, insulation, and flooring over weeks and months without any visible sign. A slab leak can erode soil beneath the foundation and cause concrete cracking. Even a slow drip from an underground supply line can waste hundreds of gallons per month and create saturated soil conditions that affect the foundation.",
   },
   {
     question:
-      "Can a plumber detect a leak without opening walls or floors?",
+      "Does Red Carpet Plumbing detect leaks without tearing up walls?",
     answer:
-      "In most cases, professional leak detection can locate the source of a hidden leak using specialized equipment without requiring major demolition of walls or floors. The goal is to pinpoint the location accurately before any repair work begins, which minimizes unnecessary damage to the structure. Some repairs may still require access to the pipe, but the detection phase itself is typically non-invasive or minimally invasive.",
-  },
-  {
-    question: "What happens if a water leak is left unrepaired?",
-    answer:
-      "An unrepaired water leak can cause progressive damage over time. Water that escapes into wall cavities, under flooring, or beneath a concrete slab can weaken structural materials, promote mold and mildew growth, damage insulation and drywall, and in the case of slab leaks, create voids beneath the foundation. Water bills continue to increase for as long as the leak remains active. Early detection and repair reduces both the repair cost and the risk of secondary damage.",
-  },
-  {
-    question: "Is a hidden water leak considered a plumbing emergency?",
-    answer:
-      "Whether a hidden leak qualifies as an emergency depends on its severity and location. A slow hidden leak that has been developing gradually can typically be scheduled for a service appointment. A leak that is actively causing visible water damage, affecting structural materials, or associated with a significant pressure drop should be treated with more urgency. If you are unsure, it is better to contact a plumber promptly rather than wait.",
+      "Yes. Red Carpet Plumbing uses professional electronic detection equipment and acoustic sensors to locate hidden leaks precisely before any repair work begins. This allows us to make targeted repairs rather than opening large sections of wall, floor, or concrete to search for the leak location.",
   },
   {
     question:
-      "What is the difference between leak detection and slab leak detection?",
+      "What is the difference between a slab leak and a wall leak?",
     answer:
-      "Leak detection covers the full range of hidden and visible water leaks throughout a home or building, including supply lines, drain lines, fixtures, walls, ceilings, and floors. Slab leak detection is a specialized subset that focuses specifically on leaks in pipes that run beneath a concrete slab foundation. Because slab leaks are harder to access and require specific techniques to locate and repair, they are handled as a distinct service. Red Carpet Plumbing provides both general leak detection and specialized slab leak detection and repair.",
+      "A slab leak is a leak in water or sewer pipes running beneath the concrete foundation of a home. Signs include warm spots on floors, running water sounds when fixtures are off, and unexplained water bill increases. A wall leak is a leak inside the wall cavity from supply lines, drain lines, or connections behind finished surfaces. Signs include damp spots, discoloration, bubbling paint, and musty odors. Both require professional detection equipment to locate precisely.",
   },
   {
     question:
-      "Does Red Carpet Plumbing provide leak detection outside of Las Vegas?",
+      "Does Red Carpet Plumbing serve Henderson and Summerlin for leak detection?",
     answer:
-      "Yes. Red Carpet Plumbing provides leak detection and repair throughout the Las Vegas Valley including Henderson, North Las Vegas, Summerlin, Spring Valley, Enterprise, Paradise, Green Valley, and surrounding communities.",
+      "Yes. Red Carpet Plumbing provides leak detection and repair throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
 ];
 
 const TRUST_STRIP_ITEMS = [
-  "Leak Detection and Repair",
-  "Serving Las Vegas and the Las Vegas Valley",
-  "Residential and Commercial Service",
-  // SOURCE-SITE CLAIM: verify before publish
-  "Transparent Pricing",
-  // SOURCE-SITE CLAIM: verify before publish
-  "Customer Satisfaction Focus",
+  "4.8 Stars, 76 Google Reviews",
+  "NV Licensed, #0048585A",
+  "Over 40 Years in Las Vegas",
+  "24/7 Emergency Service",
+  "Transparent Pricing, No Hidden Fees",
 ];
 
-const DIRECT_ANSWER_BULLETS = [
-  "Locates hidden leaks in walls, floors, ceilings, and underground supply lines",
-  "Identifies the cause of unexplained water bill increases",
-  "Pinpoints leaks without unnecessary wall or floor damage where possible",
-  "Covers pipe leaks, supply line leaks, and fixture connection leaks",
-  "Includes repair once the source is confirmed and the scope is understood",
-  "Serves both residential and commercial properties throughout the Las Vegas Valley",
+const LEAK_WARNING_SIGNS = [
+  "An unexplained increase in your water bill",
+  "The sound of running water when all fixtures are off",
+  "Warm or wet spots on floors or walls",
+  "Discoloration or bubbling paint on walls or ceilings",
+  "A persistent musty odor in part of the home",
+  "Reduced water pressure with no other explanation",
+  "Unexplained cracks in walls or flooring",
 ];
 
-const SIGNS_LIST = [
-  "Your monthly water bill has increased noticeably without a change in usage",
-  "You can hear running water inside walls or under the floor when all fixtures are off",
-  "Walls, ceilings, or floors have damp patches, stains, or soft spots",
-  "A specific area of flooring feels warm or unusually soft underfoot",
-  "You detect a musty or mildew smell in a room without an obvious moisture source",
-  "Your water pressure has dropped throughout the home without explanation",
-  "Paint or wallpaper is bubbling, peeling, or warping on an interior wall",
-  "Your water meter continues to move when all fixtures and appliances are turned off",
-];
-
-const SERVICE_COVERS = [
-  "Hidden leak location using specialized detection equipment",
-  "Visible pipe and fitting leak assessment and repair",
-  "Supply line leak detection for water supply pipes throughout the home",
-  "Ceiling and wall moisture investigation for leaks above living spaces",
-  "Under-floor moisture detection for slab-adjacent and crawl space properties",
-  "Water meter test to confirm active water loss before inspection",
-  "Pipe repair or section replacement once the leak source is confirmed",
-  "Referral to slab leak detection service for confirmed or suspected slab leaks",
-];
-
-type RelatedServiceLink = {
-  label: string;
-  href: string;
+type ServiceTypeCard = {
+  title: string;
   description: string;
-  exists: boolean;
+  href: string;
 };
 
-const RELATED_SERVICES: RelatedServiceLink[] = [
+// TODO: Replace ServiceImagePlaceholder with approved leak detection service image when available
+const LEAK_SERVICES: ServiceTypeCard[] = [
   {
-    label: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
+    title: "Electronic Leak Detection",
     description:
-      "Specialized detection and repair for leaks beneath concrete slab foundations",
-    exists: false,
+      "Red Carpet Plumbing uses professional electronic leak detection equipment to locate hidden leaks precisely. Electronic detectors use acoustic sensors to identify the sound of water escaping from pressurized pipes through walls, floors, and underground, allowing us to pinpoint the leak location without opening up large sections of the home.",
+    href: "/leak-detection-repair/electronic/",
   },
   {
-    label: "Water Pipe Repair and Replacement",
-    href: "/water-pipe-repair-replacement/",
+    title: "Wall and Ceiling Leak Detection",
     description:
-      "Repair and replacement of damaged or deteriorating water supply pipes",
-    exists: false,
+      "Leaks inside walls and ceilings are among the most common and most damaging hidden leaks in Las Vegas homes. Corroded copper or galvanized pipes, failed supply line connections, and leaking drain lines can all release water inside walls without any visible sign until significant damage has occurred. We locate wall and ceiling leaks using acoustic and moisture detection equipment.",
+    href: "/leak-detection-repair/wall-ceiling/",
   },
   {
-    label: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    title: "Slab Leak Detection",
     description:
-      "Urgent leak situations that cannot wait for a scheduled appointment",
-    exists: true,
+      "Slab leaks occur when water or sewer pipes running beneath a home's concrete foundation develop cracks or holes. They are among the most serious and most common plumbing problems in Las Vegas due to the combination of hard water corrosion and desert soil movement. We locate slab leaks using acoustic sensors, thermal imaging, and pressure testing to identify the precise location before any repair begins.",
+    href: "/leak-detection-repair/slab-leak/",
   },
   {
-    label: "Video Camera Plumbing Inspections",
-    href: "/video-camera-plumbing-inspections/",
+    title: "Underground Line Leak Detection",
     description:
-      "Camera inspection to see inside pipes and confirm leak location or pipe condition",
-    exists: false,
+      "Buried water supply lines, irrigation lines, and sewer lines can develop leaks from pipe corrosion, root intrusion, soil movement, and connection failures. Underground leaks are difficult to detect without professional equipment because the water often does not surface near the actual leak location. We locate underground line leaks using electronic detection equipment and pressure testing.",
+    href: "/leak-detection-repair/underground/",
   },
   {
-    label: "Plumbing Services",
-    href: "/plumbing-services/",
+    title: "Gas Line Leak Detection",
     description:
-      "Full list of residential and commercial plumbing services",
-    exists: true,
+      "If you smell gas in or around your home, leave immediately and call your gas utility before calling a plumber. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under our NV Contractor License #0048585A (C-1 Plumbing and Heating). We detect gas line leaks using pressure testing and gas-specific detection equipment.",
+    href: "/leak-detection-repair/gas-line/",
+  },
+  {
+    title: "Water Supply Line Leak Repair",
+    description:
+      "Once the source of a leak is located, Red Carpet Plumbing repairs or replaces the damaged section of pipe. For supply line leaks inside walls or ceilings, we make targeted repairs with minimal opening of the wall surface. For leaks in accessible locations, we repair or replace the affected section and test the line before closing up.",
+    href: "/leak-detection-repair/supply-line/",
+  },
+  {
+    title: "Slab Leak Repair",
+    description:
+      "Slab leak repair depends on the location and severity of the leak. Options include direct access repair through the concrete, pipe rerouting through walls or attic spaces to bypass the damaged section, or epoxy pipe lining for some pipe configurations. We discuss the options and the pros and cons of each approach before any repair begins.",
+    href: "/leak-detection-repair/slab-repair/",
+  },
+  {
+    title: "Commercial Leak Detection",
+    description:
+      "Red Carpet Plumbing provides leak detection and repair for commercial buildings, retail properties, office buildings, and multi-unit residential properties throughout Las Vegas and the Las Vegas Valley. Commercial properties with high water usage are particularly vulnerable to undetected leaks that accumulate significant costs before being discovered.",
+    href: "/leak-detection-repair/commercial/",
   },
 ];
 
-// ---------------------------------------------------------------------------
-// JSON-LD payloads
-// ---------------------------------------------------------------------------
-
-const webPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
-  description:
-    "Red Carpet Plumbing detects and repairs visible and hidden water leaks for homes and businesses throughout Las Vegas, Henderson, North Las Vegas, Summerlin, and surrounding Las Vegas Valley communities.",
-  url: "https://redcarpetplumbing.com/leak-detection-repair/",
-  breadcrumb: {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://redcarpetplumbing.com/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Plumbing Services",
-        item: "https://redcarpetplumbing.com/plumbing-services/",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Leak Detection and Repair",
-        item: "https://redcarpetplumbing.com/leak-detection-repair/",
-      },
-    ],
+const LV_LEAK_FACTORS = [
+  {
+    title: "Hard Water Corrosion Inside Pipes",
+    body: "Las Vegas water averages 17 to 24 grains of hardness per gallon. Over years of exposure, calcium and magnesium deposits build up inside copper and galvanized steel pipes, thinning the pipe walls from the inside out. This process, called mineral corrosion, is the primary cause of pinhole leaks in Las Vegas homes, particularly in properties built before 2000 with original copper plumbing. A pipe that looks fine on the outside can have significant internal thinning that eventually leads to a hidden leak.",
   },
+  {
+    title: "Desert Soil Movement and Slab Pressure",
+    body: "The Las Vegas Valley sits on a combination of caliche and expansive clay soils that shift with temperature changes and the occasional heavy rainfall. This movement puts constant stress on pipes buried beneath slabs and underground. When soil shifts, it can bend, crack, or separate pipe joints, particularly on older, more brittle pipes, creating leaks that develop gradually underground before any surface signs appear.",
+  },
+  {
+    title: "Aging Plumbing in Older Las Vegas Neighborhoods",
+    body: "Las Vegas experienced rapid growth during the 1970s, 1980s, and early 1990s, and many homes from that era still have original plumbing that is approaching or past its expected service life. Galvanized steel pipes corrode from the inside out and can develop small leaks that worsen over time. Copper pipes in hard water environments develop pinhole leaks as the pipe wall thins from mineral exposure. In older Las Vegas neighborhoods, hidden leaks are a common maintenance reality rather than an exception.",
+  },
+  {
+    title: "Root Intrusion in Underground Lines",
+    body: "Desert-adapted trees and shrubs have aggressive root systems that actively seek moisture. Underground water and sewer lines are reliable moisture sources, and small cracks or aging joints provide root entry points. Root intrusion into underground pipes is a frequent cause of hidden sewer line leaks in Las Vegas properties with established landscaping. These leaks often go undetected until the root mass has grown large enough to cause a backup or a visible wet area in the yard.",
+  },
+];
+
+const LEAK_DETECTION_STEPS = [
+  {
+    name: "Gather information and identify symptoms",
+    body: "We start by asking about the symptoms you have noticed, including high water bills, sounds of running water, wet spots, odors, or reduced pressure, and reviewing the age and type of plumbing in your home. This helps us identify the most likely leak locations before we deploy detection equipment.",
+  },
+  {
+    name: "Perform pressure testing and meter verification",
+    body: "We isolate sections of the plumbing system and perform pressure tests to confirm where water loss is occurring. We also verify the water meter reading with all water off to confirm active water loss and establish a baseline for the detection process.",
+  },
+  {
+    name: "Use electronic detection equipment to locate the leak",
+    body: "We deploy acoustic sensors, electronic detection equipment, and where appropriate thermal imaging to locate the precise source of the leak. This non-invasive process allows us to identify the leak location within a few inches without opening walls, removing flooring, or excavating unnecessarily.",
+  },
+  {
+    name: "Present repair options and complete the repair",
+    body: "Once the leak is located, we explain the repair options, the scope of work involved, and the cost before starting. We make targeted repairs to restore the plumbing system and verify the repair is complete by retesting the affected section before we leave.",
+  },
+];
+
+const SERVICE_AREAS = [
+  "Las Vegas",
+  "Henderson",
+  "North Las Vegas",
+  "Summerlin",
+  "Paradise",
+  "Spring Valley",
+  "Enterprise",
+  "Boulder City",
+];
+
+type RelatedService = {
+  title: string;
+  description: string;
+  href: string;
+  image?: string;
+  imageAlt?: string;
+  built: boolean;
 };
+
+const RELATED_SERVICES: RelatedService[] = [
+  {
+    title: "Slab Leak Detection and Repair",
+    description:
+      "Specialized slab leak detection and repair for Las Vegas homes where shifting desert soils and hard water accelerate pipe damage.",
+    href: "/slab-leak-detection-repair/",
+    image: "/images/services/slab-leak-detection-repair/card.webp",
+    imageAlt: "Home foundation showing signs of a slab leak",
+    built: true,
+  },
+  {
+    title: "Emergency Plumbing",
+    description:
+      "Fast response to burst pipes, major leaks, and plumbing emergencies throughout Las Vegas.",
+    href: "/emergency-plumbing/",
+    image: "/images/services/emergency-plumbing/card.webp",
+    imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
+    built: true,
+  },
+  {
+    title: "Drain Cleaning",
+    description:
+      "Professional drain cleaning and hydro jetting to clear clogs and restore proper flow.",
+    href: "/drain-cleaning/",
+    image: "/images/services/drain-cleaning/card.webp",
+    imageAlt: "Hydro jetting equipment clearing a tough drain clog",
+    built: true,
+  },
+  {
+    title: "Water Heater Repair and Installation",
+    description:
+      "Water heater diagnostics, repair, and installation for traditional and tankless systems.",
+    href: "/water-heater-repair-installation/",
+    image: "/images/services/water-heater-repair-installation/card.webp",
+    imageAlt: "Modern energy efficient water heater installation",
+    built: true,
+  },
+];
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -196,27 +252,90 @@ const serviceSchema = {
   name: "Leak Detection and Repair",
   serviceType: "Leak Detection and Repair",
   description:
-    "Professional leak detection and repair for visible and hidden water leaks in residential and commercial properties throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Enterprise, Paradise, and Green Valley.",
+    "Red Carpet Plumbing provides professional leak detection and repair for homes and businesses throughout Las Vegas and the Las Vegas Valley, including electronic leak detection, wall and ceiling leak detection, slab leak detection, underground line leak detection, gas line leak detection, and leak repair.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
+    telephone: "+17025679172",
     url: "https://redcarpetplumbing.com",
-    // FLAG: ADD telephone field to Service provider once phone number is confirmed
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "license",
+      name: "Nevada C-1 Plumbing and Heating Contractor License",
+      identifier: "0048585A",
+      issuedBy: {
+        "@type": "Organization",
+        name: "State of Nevada Contractors Board",
+      },
+    },
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "76",
+    bestRating: "5",
+    worstRating: "1",
   },
   areaServed: [
-    {
-      "@type": "City",
-      name: "Las Vegas",
-      sameAs: "https://www.wikidata.org/wiki/Q23768",
-    },
-    { "@type": "City", name: "Henderson" },
-    { "@type": "City", name: "North Las Vegas" },
-    { "@type": "City", name: "Summerlin" },
-    { "@type": "City", name: "Spring Valley" },
-    { "@type": "City", name: "Enterprise" },
-    { "@type": "City", name: "Paradise" },
-    { "@type": "City", name: "Green Valley" },
+    "Las Vegas, NV",
+    "Henderson, NV",
+    "North Las Vegas, NV",
+    "Paradise, NV",
+    "Summerlin, NV",
+    "Spring Valley, NV",
+    "Enterprise, NV",
+    "Boulder City, NV",
+    "Green Valley, NV",
+    "Lake Las Vegas, NV",
+    "Las Vegas Valley, NV",
   ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://redcarpetplumbing.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Leak Detection and Repair",
+      item: "https://redcarpetplumbing.com/leak-detection-repair/",
+    },
+  ],
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How Red Carpet Plumbing Detects Hidden Leaks",
+  description:
+    "The leak detection process used by Red Carpet Plumbing for Las Vegas homes and businesses.",
+  step: LEAK_DETECTION_STEPS.map((step, index) => ({
+    "@type": "HowToStep",
+    position: index + 1,
+    name: step.name,
+    text: step.body,
+  })),
+};
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+  description:
+    "Red Carpet Plumbing provides professional leak detection and repair throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+  url: "https://redcarpetplumbing.com/leak-detection-repair/",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Red Carpet Plumbing",
+    url: "https://redcarpetplumbing.com",
+  },
 };
 
 const faqSchema = {
@@ -232,488 +351,448 @@ const faqSchema = {
   })),
 };
 
-export default function LeakDetectionRepairPage() {
+export default function LeakDetectionAndRepairPage() {
   return (
     <>
-      <JsonLd data={webPageSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={howToSchema} />
+      <JsonLd data={webpageSchema} />
       <JsonLd data={faqSchema} />
 
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        {/* BREADCRUMBS */}
         <Breadcrumbs
           trail={[
             { label: "Home", href: "/" },
-            { label: "Plumbing Services", href: "/plumbing-services/" },
             { label: "Leak Detection and Repair" },
           ]}
         />
 
-        {/* EYEBROW (above the hero so the H1 stays a clean single-string heading for SEO/AEO) */}
-        <div className="bg-white pt-10 sm:pt-12 lg:pt-14">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12">
-            <p className="text-sm font-semibold uppercase tracking-wider text-brand-primary">
-              Leak Detection and Repair in Las Vegas
-            </p>
-          </div>
-        </div>
-
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Leak Detection and Repair in Las Vegas, NV"
-          subheading="A hidden water leak can cause significant damage before you ever see a visible sign. Red Carpet Plumbing provides professional leak detection and repair for homes and businesses throughout Las Vegas and the Las Vegas Valley. Whether you have noticed damp walls, an unexplained increase in your water bill, or a pressure drop you cannot explain, our team can locate the source and help you understand the repair options."
+          headline={
+            <>
+              Leak Detection and Repair
+              <br className="hidden sm:block" /> in Las Vegas, NV
+            </>
+          }
+          subheading="Red Carpet Plumbing locates and repairs hidden water leaks for homes and businesses throughout Las Vegas and the Las Vegas Valley. From unexplained high water bills to the sound of running water with all fixtures off, our licensed plumbers use professional detection equipment to find leaks behind walls, under slabs, and underground without unnecessary demolition."
+          trustItems={[
+            "4.8 stars, 76 Google reviews",
+            "NV Licensed Plumbers, #0048585A",
+            "Over 40 years serving Las Vegas",
+            "Transparent pricing, no hidden fees",
+          ]}
           primaryCTA={{
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
+          }}
+          secondaryCTA={{
             label: "Request Leak Detection Service",
             href: "/contact/",
           }}
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
-          secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
-          }}
-          formSlot={
-            <QuoteFormPlaceholder
-              title="Request Leak Detection Service"
-              includeZip
-              submitLabel="Request Service"
-            />
-          }
-          backgroundImage={{
-            src: "/images/services/leak-detection-repair/hero.webp",
-            alt: "Licensed plumber locating a hidden water leak in a Las Vegas home",
-          }}
+          ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
+          formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
+          accentWidth="sm"
         />
 
-        {/* SECTION 2: TRUST STRIP (dark bg) */}
+        {/* SECTION 2: TRUST STRIP */}
         <section
-          aria-labelledby="leak-detection-trust-label"
-          className="bg-brand-charcoal text-white"
+          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for leak detection"
+          className="bg-brand-primary text-white"
         >
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
-            <p id="leak-detection-trust-label" className="sr-only">
-              Why Las Vegas Customers Choose Red Carpet Plumbing for Leak Detection
-            </p>
-            {/* FLAG: VERIFY TRANSPARENT PRICING CLAIM BEFORE PUBLISH */}
-            {/* FLAG: VERIFY CUSTOMER SATISFACTION FOCUS CLAIM BEFORE PUBLISH */}
+          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
             <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center justify-center gap-2 text-center"
-                >
-                  <CheckIcon className="h-5 w-5 flex-none text-brand-primary" />
-                  <span className="text-sm font-medium text-white">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* SECTION 3: DIRECT ANSWER */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              What Is Leak Detection and Repair?
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              Leak detection is the process of locating the source of a water
-              leak, including leaks that are not visible from the surface.
-              Professional leak detection uses specialized equipment to
-              identify where water is escaping from a pipe, fitting, or
-              supply line without requiring unnecessary damage to walls,
-              floors, or foundations. Once the source is confirmed, leak
-              repair addresses the damaged pipe or component. Red Carpet
-              Plumbing provides both leak detection and repair for
-              residential and commercial properties throughout Las Vegas and
-              the Las Vegas Valley.
-            </p>
-            <ul className="mt-6 space-y-3">
-              {DIRECT_ANSWER_BULLETS.map((bullet) => (
-                <li key={bullet} className="flex items-start gap-3">
-                  <BulletIcon className="mt-1.5 h-2 w-2 flex-none text-brand-primary" />
-                  <span className="text-base leading-7 text-brand-dark/80">
-                    {bullet}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* SECTION 4: SIGNS YOU HAVE A HIDDEN LEAK */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              Signs You May Have a Hidden Water Leak
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              Hidden leaks are not always obvious. Many develop gradually and
-              show indirect signs before the damage becomes visible. Contact
-              a plumber if you notice any of the following.
-            </p>
-            <ol className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {SIGNS_LIST.map((sign, index) => (
-                <li
-                  key={sign}
-                  className="flex items-start gap-4 rounded-2xl border-l-4 border-brand-primary bg-white p-5 shadow-sm ring-1 ring-brand-surface-alt"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-primary/10 text-sm font-semibold text-brand-primary"
+              {TRUST_STRIP_ITEMS.map((item, index) => {
+                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
+                return (
+                  <li
+                    key={item}
+                    className={`relative flex items-center gap-2${
+                      isLast
+                        ? ""
+                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
+                    }`}
                   >
-                    {index + 1}
-                  </span>
-                  <span className="text-base leading-7 text-brand-dark/80">
-                    {sign}
-                  </span>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* SECTION 5: WHAT THE SERVICE COVERS */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              What Our Leak Detection and Repair Service Covers
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              Red Carpet Plumbing provides leak detection and repair for a
-              range of leak types and property conditions throughout the Las
-              Vegas Valley.
-            </p>
-            {/* FLAG: CLIENT MUST CONFIRM specific leak detection equipment and methods used before launch */}
-            <ul className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2">
-              {SERVICE_COVERS.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-sm ring-1 ring-brand-surface-alt"
-                >
-                  <CheckIcon className="mt-1 h-5 w-5 flex-none text-brand-primary" />
-                  <span className="text-base leading-7 text-brand-dark/80">
-                    {item}
-                  </span>
-                </li>
-              ))}
+                    <svg
+                      aria-hidden="true"
+                      className="h-4 w-4 flex-shrink-0 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="text-sm font-semibold">{item}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>
 
-        {/* SECTION 6: LOCAL LAS VEGAS CONTEXT */}
+        {/* SECTION 3: SIGNS OF A HIDDEN WATER LEAK */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="max-w-3xl text-left">
+              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                Signs You May Have
+                <br className="hidden sm:block" /> a Hidden Water Leak
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                Hidden water leaks in Las Vegas homes often cause significant
+                damage before any visible sign appears. Recognizing the warning
+                signs early and knowing how to verify a leak using your water
+                meter helps you act before the problem worsens.
+              </p>
+            </div>
+
+            <article className="mt-12 relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary">
+              <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
+                Warning Signs to Call a Plumber
+              </h3>
+              <ul className="mt-4 space-y-3">
+                {LEAK_WARNING_SIGNS.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span
+                      aria-hidden="true"
+                      className="mt-2 inline-block h-2 w-2 flex-none rounded-full bg-brand-primary"
+                    />
+                    <span className="text-base leading-7 text-brand-dark/80">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="mt-10 relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-muted/40">
+              <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
+                The Water Meter Test
+              </h3>
+              <p className="mt-3 text-base leading-7 text-brand-dark/80">
+                Turn off every water fixture and appliance in the home. Find
+                your water meter near the street in a ground-level box and
+                check whether the dial or digital display is still moving. If
+                the meter continues to advance with all water off, water is
+                being used somewhere in your system. Call a plumber for a
+                professional inspection to locate the source.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        {/* SECTION 4: LEAK DETECTION SERVICES */}
+        <section className="bg-brand-surface-alt">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="max-w-3xl text-left">
+                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    Leak Detection Services
+                    <br className="hidden sm:block" /> in Las Vegas
+                  </h2>
+                  <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                    Red Carpet Plumbing provides professional leak detection
+                    and repair for all types of hidden leaks in residential and
+                    commercial properties throughout Las Vegas and the Las
+                    Vegas Valley.
+                  </p>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-14">
+                {/* TODO: Replace ServiceImagePlaceholder with approved leak detection service image when available */}
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {LEAK_SERVICES.map((card) => (
+                    <ServiceCard
+                      key={card.href}
+                      title={card.title}
+                      description={card.description}
+                      href={card.href}
+                      built={false}
+                    />
+                  ))}
+                </div>
+              </SectionRevealItem>
+            </SectionReveal>
+          </div>
+        </section>
+
+        {/* SECTION 5: WHY LAS VEGAS HOMES ARE PRONE TO HIDDEN LEAKS */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="text-left">
+                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    Why Las Vegas Homes Are Prone
+                    <br className="hidden sm:block" /> to Hidden Leaks
+                  </h2>
+                  <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                    Las Vegas plumbing faces conditions that produce hidden
+                    leaks more often than in most other regions. Understanding
+                    the local factors helps homeowners recognize the risk and
+                    act early when warning signs appear.
+                  </p>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-12 space-y-10">
+                {LV_LEAK_FACTORS.map((factor) => (
+                  <article
+                    key={factor.title}
+                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                  >
+                    <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
+                      {factor.title}
+                    </h3>
+                    <p className="mt-3 text-base leading-7 text-brand-dark/80">
+                      {factor.body}
+                    </p>
+                  </article>
+                ))}
+              </SectionRevealItem>
+            </SectionReveal>
+          </div>
+        </section>
+
+        {/* SECTION 6: DETECTION PROCESS (HowTo) */}
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              Why Las Vegas Homes Are Prone to Hidden Leaks
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              Most homes in Las Vegas are built on concrete slabs rather than
-              raised foundations. Water supply pipes are routed beneath the
-              slab and through the walls of the home, which means that when
-              a pipe develops a small failure, the water escapes into areas
-              that are not visible without detection equipment. Because the
-              leak is hidden beneath concrete or inside wall cavities, it
-              can continue for weeks or months before the homeowner notices
-              a symptom at the surface. By the time damp flooring, a warm
-              spot, or a stained ceiling appears, significant water damage
-              may already be present in the structure.
-            </p>
-            <p className="mt-4 text-lg leading-8 text-brand-dark/80">
-              Las Vegas hard water and the {"region's"} extreme temperature
-              cycling between hot summers and cooler nights also place added
-              stress on pipe joints, fittings, and supply line connections
-              throughout the home. Older homes in central Las Vegas, North
-              Las Vegas, Henderson, and Green Valley may have pipe materials
-              that are more susceptible to pinhole leaks and joint failures
-              as they age. Catching a hidden leak early reduces the risk of
-              structural damage, mold growth, and foundation complications
-              that become significantly more expensive to address the longer
-              they go undetected. Red Carpet Plumbing serves the{" "}
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="text-left">
+                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    How Red Carpet Plumbing
+                    <br className="hidden sm:block" /> Detects Hidden Leaks
+                  </h2>
+                  <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                    Finding a hidden leak without unnecessary demolition
+                    requires professional equipment and a systematic process.
+                    Here is how Red Carpet Plumbing approaches leak detection
+                    for Las Vegas homes and businesses.
+                  </p>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-12">
+                <ol className="space-y-8">
+                  {LEAK_DETECTION_STEPS.map((step, index) => (
+                    <li key={step.name} className="flex items-start gap-4">
+                      <span
+                        aria-hidden="true"
+                        className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full bg-brand-primary text-lg font-semibold text-white"
+                      >
+                        {index + 1}
+                      </span>
+                      <div>
+                        <h3 className="text-xl font-semibold text-brand-dark">
+                          {step.name}
+                        </h3>
+                        <p className="mt-2 text-base leading-7 text-brand-dark/80">
+                          {step.body}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </SectionRevealItem>
+            </SectionReveal>
+          </div>
+        </section>
+
+        {/* SECTION 7: MID-PAGE CTA */}
+        <section className="bg-brand-charcoal">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                  Suspected Hidden Leak
+                  <br className="hidden sm:block" /> in Las Vegas?
+                </h2>
+                <p className="mt-6 text-lg leading-8 text-white/80">
+                  Red Carpet Plumbing provides professional leak detection
+                  throughout Las Vegas and the Las Vegas Valley. Our licensed
+                  plumbers use electronic detection equipment to locate leaks
+                  precisely without unnecessary demolition.
+                </p>
+              </div>
+              <div className="flex flex-col items-start lg:items-end gap-4">
+                <a
+                  href="tel:+17025679172"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                >
+                  Call Now: (702) 567-9172
+                </a>
+                <p className="text-sm text-white/60">
+                  Available for emergency leak detection
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 8: SERVICE AREAS */}
+        <section className="bg-brand-charcoal text-white">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <div className="max-w-3xl text-left">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                Leak Detection Service Areas
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-white/85">
+                Red Carpet Plumbing provides leak detection and repair
+                throughout the Las Vegas Valley.
+              </p>
+            </div>
+
+            {/* TODO-BATCH-PHASE3: /las-vegas/leak-detection-repair/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /henderson/leak-detection-repair/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /north-las-vegas/leak-detection-repair/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /summerlin/leak-detection-repair/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /paradise/leak-detection-repair/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /spring-valley/leak-detection-repair/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /enterprise/leak-detection-repair/ not yet built */}
+            {/* TODO-BATCH-PHASE3: /boulder-city/leak-detection-repair/ not yet built */}
+            <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {SERVICE_AREAS.map((area) => (
+                <li key={area}>
+                  <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
+                    {area}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-10 text-left">
               <Link
                 href="/service-areas/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:active:scale-[0.97]"
               >
-                Las Vegas Valley
-              </Link>{" "}
-              including Summerlin, Spring Valley, Enterprise, and
-              surrounding communities. If you suspect a leak, do not wait to
-              have it evaluated.
-            </p>
+                View All Service Areas
+              </Link>
+            </div>
           </div>
         </section>
-
-        {/* SECTION 7: PROCESS (5 numbered steps; NOT HowTo schema) */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              How Our Leak Detection and Repair Process Works
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              When you contact Red Carpet Plumbing for leak detection, here
-              is what to expect.
-            </p>
-            {/* FLAG: CLIENT MUST CONFIRM detection methods, equipment used, and process scope before launch */}
-            <ol className="mt-8 space-y-6">
-              {/* Step 1 */}
-              <li className="flex items-start gap-4">
-                <span
-                  aria-hidden="true"
-                  className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full bg-brand-primary text-base font-semibold text-white"
-                >
-                  1
-                </span>
-                <div>
-                  <h3 className="text-lg font-semibold text-brand-dark">
-                    Contact us.
-                  </h3>
-                  <p className="mt-2 text-base leading-7 text-brand-dark/80">
-                    Describe the symptoms you have noticed, including where
-                    the issue appears to be located and how long it has been
-                    occurring. The more detail you can provide, the better
-                    prepared our plumber will be.
-                  </p>
-                </div>
-              </li>
-
-              {/* Step 2 */}
-              <li className="flex items-start gap-4">
-                <span
-                  aria-hidden="true"
-                  className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full bg-brand-primary text-base font-semibold text-white"
-                >
-                  2
-                </span>
-                <div>
-                  <h3 className="text-lg font-semibold text-brand-dark">
-                    Schedule service.
-                  </h3>
-                  <p className="mt-2 text-base leading-7 text-brand-dark/80">
-                    We will confirm your appointment. For situations where
-                    visible damage is progressing, we will advise on urgency
-                    and any steps to take before arrival.
-                  </p>
-                </div>
-              </li>
-
-              {/* Step 3 */}
-              <li className="flex items-start gap-4">
-                <span
-                  aria-hidden="true"
-                  className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full bg-brand-primary text-base font-semibold text-white"
-                >
-                  3
-                </span>
-                <div>
-                  <h3 className="text-lg font-semibold text-brand-dark">
-                    Site assessment.
-                  </h3>
-                  <p className="mt-2 text-base leading-7 text-brand-dark/80">
-                    Our plumber will review the symptoms, check accessible
-                    areas, and run a water meter test to confirm whether
-                    active water loss is present.
-                  </p>
-                </div>
-              </li>
-
-              {/* Step 4 */}
-              <li className="flex items-start gap-4">
-                <span
-                  aria-hidden="true"
-                  className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full bg-brand-primary text-base font-semibold text-white"
-                >
-                  4
-                </span>
-                <div>
-                  <h3 className="text-lg font-semibold text-brand-dark">
-                    Detection.
-                  </h3>
-                  <p className="mt-2 text-base leading-7 text-brand-dark/80">
-                    Using specialized equipment, we will locate the source
-                    of the leak. In most cases this process is performed
-                    without requiring major demolition of walls or floors.
-                    The goal is to pinpoint the location accurately before
-                    any repair work begins.
-                  </p>
-                </div>
-              </li>
-
-              {/* Step 5 — contains inline forward link to /slab-leak-detection-repair/ */}
-              <li className="flex items-start gap-4">
-                <span
-                  aria-hidden="true"
-                  className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full bg-brand-primary text-base font-semibold text-white"
-                >
-                  5
-                </span>
-                <div>
-                  <h3 className="text-lg font-semibold text-brand-dark">
-                    Repair and report.
-                  </h3>
-                  <p className="mt-2 text-base leading-7 text-brand-dark/80">
-                    Once the source is confirmed, we will explain the repair
-                    options and complete the work. If a slab leak is
-                    identified, we will refer you to our{" "}
-                    <Link
-                      // TODO-BATCH-NEXT: /slab-leak-detection-repair/ not yet built
-                      href="/slab-leak-detection-repair/"
-                      className="font-semibold text-brand-primary hover:text-brand-primary-hover"
-                    >
-                      slab leak detection and repair
-                    </Link>{" "}
-                    service for the appropriate follow-up.
-                  </p>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </section>
-
-        {/* SECTION 8: MID-PAGE CTA */}
-        <CTASection
-          background="red"
-          headline="Think You Have a Leak?"
-          body="Contact Red Carpet Plumbing for professional leak detection and repair in Las Vegas and the surrounding Las Vegas Valley."
-          primaryCTA={{
-            label: "Request Leak Detection Service",
-            href: "/contact/",
-          }}
-        />
 
         {/* SECTION 9: RELATED SERVICES */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-              Related Plumbing Services
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-              Leak detection often connects to related plumbing services
-              depending on what is found. Red Carpet Plumbing provides a
-              full range of services to address leaks and any underlying
-              pipe conditions.
-            </p>
-            <ul className="mt-8 space-y-3">
-              {RELATED_SERVICES.map((service) => (
-                <li
-                  key={service.href}
-                  className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-brand-surface-alt"
-                >
-                  <Link
-                    // /emergency-plumbing/ and /plumbing-services/ are live; the other 3 are forward links.
-                    // TODO-BATCH-NEXT: /slab-leak-detection-repair/ /water-pipe-repair-replacement/ /video-camera-plumbing-inspections/ not yet built
-                    href={service.href}
-                    className="flex items-start gap-3 text-base text-brand-dark/80 hover:text-brand-primary"
-                  >
-                    <span aria-hidden="true" className="text-brand-primary">
-                      →
-                    </span>
-                    <span>
-                      <span className="font-semibold text-brand-dark">
-                        {service.label}
-                      </span>{" "}
-                      - {service.description}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            {/* TODO-BATCH-NEXT: Add these service-location links once pages are live: */}
-            {/* - Leak Detection in Las Vegas: /las-vegas/leak-detection-repair/ */}
-            {/* - Leak Detection in Henderson: /henderson/leak-detection-repair/ */}
-            {/* - Leak Detection in North Las Vegas: /north-las-vegas/leak-detection-repair/ */}
-            {/* - Leak Detection in Summerlin: /summerlin/leak-detection-repair/ */}
-            {/* - Leak Detection in Spring Valley: /spring-valley/leak-detection-repair/ */}
-            {/* - Leak Detection in Enterprise: /enterprise/leak-detection-repair/ */}
-            {/* - Leak Detection in Green Valley: /green-valley/leak-detection-repair/ */}
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="max-w-3xl text-left">
+                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    Related Plumbing Services
+                  </h2>
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-14">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {RELATED_SERVICES.map((service) => (
+                    <ServiceCard
+                      key={service.href}
+                      title={service.title}
+                      description={service.description}
+                      href={service.href}
+                      image={service.image}
+                      imageAlt={service.imageAlt}
+                      built={service.built}
+                    />
+                  ))}
+                </div>
+              </SectionRevealItem>
+            </SectionReveal>
           </div>
         </section>
 
         {/* SECTION 10: FAQ */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-center">
+          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Leak Detection Questions Answered
+                Frequently Asked Questions
+                <br className="hidden sm:block" /> About Leak Detection in Las Vegas
               </h2>
             </div>
-            <dl className="mt-12 space-y-4">
+            <div className="mt-12 space-y-4">
               {LEAK_DETECTION_FAQS.map((faq) => (
-                <div
+                <details
                   key={faq.question}
-                  className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt sm:p-8"
+                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
                 >
-                  <dt>
-                    <h3 className="text-lg font-semibold text-brand-dark sm:text-xl">
-                      {faq.question}
-                    </h3>
-                  </dt>
-                  <dd className="mt-3 text-base leading-7 text-brand-dark/80">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
+                    <span>{faq.question}</span>
+                    <FaqChevron />
+                  </summary>
+                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
                     {faq.answer}
-                  </dd>
-                </div>
+                  </p>
+                </details>
               ))}
-            </dl>
+            </div>
           </div>
         </section>
 
         {/* SECTION 11: FINAL CTA */}
-        <CTASection
-          background="red"
-          headline="Contact Red Carpet Plumbing for Leak Detection in Las Vegas"
-          body="If you suspect a water leak in your Las Vegas home or business, do not wait for the damage to become visible. Contact Red Carpet Plumbing to schedule a leak detection service and get a clear picture of what is happening inside your plumbing system."
-          primaryCTA={{
-            label: "Request Leak Detection Service",
-            href: "/contact/",
-          }}
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
-          secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
-          }}
-        />
+        <section className="bg-brand-primary text-white">
+          <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
+            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Ready to Schedule
+              <br className="hidden sm:block" /> Leak Detection in Las Vegas?
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
+              Red Carpet Plumbing is available for leak detection and repair
+              throughout Las Vegas and the Las Vegas Valley. Licensed plumbers,
+              4.8-star rated, NV #0048585A.
+            </p>
+            <div className="mt-10">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
+                <a
+                  href="tel:+17025679172"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                >
+                  Call (702) 567-9172
+                </a>
+                <Link
+                  href="/contact/"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/60 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                >
+                  Request Service
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <SiteFooter />
+
+      {/* Spacer so the fixed sticky mobile CTA never covers footer content. */}
+      <div className="h-16 lg:hidden" aria-hidden="true" />
+
+      <StickyMobileCTA />
     </>
   );
 }
 
-// ---------------------------------------------------------------------------
-// Local icon helpers (decorative, aria-hidden)
-// ---------------------------------------------------------------------------
-
-type IconProps = { className?: string };
-
-function CheckIcon({ className = "" }: IconProps) {
+function FaqChevron() {
   return (
     <svg
       aria-hidden="true"
       viewBox="0 0 24 24"
-      className={className}
+      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
       fill="none"
       stroke="currentColor"
       strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
     >
-      <path d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function BulletIcon({ className = "" }: IconProps) {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 8 8"
-      className={className}
-      fill="currentColor"
-    >
-      <circle cx="4" cy="4" r="4" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }
