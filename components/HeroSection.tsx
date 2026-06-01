@@ -21,6 +21,7 @@ type HeroSectionProps = {
   ctaNote?: ReactNode;
   formSlot?: ReactNode;
   backgroundImage?: { src: string; alt: string };
+  accentWidth?: "sm" | "md" | "lg";
   className?: string;
 };
 
@@ -34,11 +35,13 @@ export function HeroSection({
   ctaNote,
   formSlot,
   backgroundImage,
+  accentWidth = "md",
   className = "",
 }: HeroSectionProps) {
   const Heading = headingLevel;
   const hasSplit = Boolean(formSlot);
   const shouldReduceMotion = useReducedMotion();
+  const accentWidthClass = { sm: "w-12", md: "w-20", lg: "w-32" }[accentWidth];
 
   const containerVariants: Variants = {
     hidden: {},
@@ -94,7 +97,7 @@ export function HeroSection({
       >
         <span
           aria-hidden="true"
-          className="absolute left-0 top-0 h-1 w-20 rounded-r-full bg-brand-primary"
+          className={`absolute left-0 top-0 h-1 ${accentWidthClass} rounded-r-full bg-brand-primary`}
         />
 
         <motion.div
