@@ -529,7 +529,10 @@ export default function Home() {
 
               <SectionRevealItem className="mt-12 space-y-10">
                 {LOCAL_ISSUES.map((issue) => (
-                  <article key={issue.question}>
+                  <article
+                    key={issue.question}
+                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                  >
                     <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                       {issue.question}
                     </h3>
