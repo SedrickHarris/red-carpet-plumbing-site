@@ -109,69 +109,69 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
   {
     title: "Burst Pipe Repair",
     description:
-      "Burst or ruptured water pipes with active flooding. Our team responds quickly to shut off water and repair the line before further damage occurs.",
+      "A burst pipe can release dozens of gallons of water per minute, causing rapid flooding and structural damage. In Las Vegas, burst pipes are most common during extreme summer heat that stresses aging pipe joints and during occasional winter cold snaps that affect exposed lines in garages and exterior walls. Shut off your main water supply immediately and call Red Carpet Plumbing.",
     href: "/emergency-plumbing/burst-pipe-repair/",
   },
   {
-    title: "Sewer Backup Clearing",
+    title: "Sewer Backup and Overflow",
     description:
-      "Sewage backup or overflow into the home. We clear the blockage, assess the source, and stop further damage to flooring, walls, and air quality.",
+      "A sewer backup means wastewater is flowing back into your home through drains, toilets, or floor drains. This is a health emergency. Do not use any drains or toilets in the building until the blockage is cleared. A plumber can clear the line, inspect for damage, and identify the underlying cause.",
     href: "/emergency-plumbing/sewer-backup/",
   },
   {
-    title: "Gas Line Emergencies",
+    title: "Water Heater Emergency",
     description:
-      "Smell of gas or suspected gas line leak. Leave the building first, call your gas utility, then call us for inspection and repair after the area is declared safe.",
+      "A water heater emergency includes an active leak at the tank or connections, a gas smell near the heater, unusual sounds indicating pressure buildup, or total loss of hot water combined with visible damage. Turn off the water supply to the heater and, for gas units, turn off the gas supply at the valve before calling.",
+    href: "/emergency-plumbing/water-heater/",
+  },
+  {
+    title: "Slab Leak Emergency",
+    description:
+      "A slab leak under your home's foundation becomes an emergency when it causes visible water damage, sudden water pressure loss, warm spots on floors, or the sound of running water when all fixtures are off. Las Vegas homes are particularly vulnerable to slab leaks due to hard water corrosion and desert soil movement. Early detection prevents major structural damage.",
+    href: "/emergency-plumbing/slab-leak/",
+  },
+  {
+    title: "Gas Line Emergency",
+    description:
+      "If you smell gas, leave the building immediately without operating any light switches or electrical devices. Call your gas utility from outside, then call a licensed plumber for gas line inspection and repair. Red Carpet Plumbing is licensed for gas line work under NV #0048585A (C-1 Plumbing and Heating).",
     href: "/emergency-plumbing/gas-line/",
   },
   {
-    title: "Major Leak Repair",
+    title: "Major Active Water Leak",
     description:
-      "Major active water leaks you cannot stop with the main shutoff. We diagnose the source, contain the leak, and complete the repair before further damage occurs.",
+      "An active water leak that is too large to contain with a bucket or towels should be treated as an emergency. Locate your main water shutoff valve, turn off the water supply, and call a plumber. Even a slow hidden leak inside a wall can cause mold growth and structural damage if left unaddressed.",
     href: "/emergency-plumbing/major-leak/",
-  },
-  {
-    title: "Complete Water Loss",
-    description:
-      "Complete loss of water supply to the building. We diagnose main line, pressure regulator, or supply-side issues and restore service to the property.",
-    href: "/emergency-plumbing/water-loss/",
-  },
-  {
-    title: "Water Heater Emergencies",
-    description:
-      "Water heater failure with active flooding or a gas smell. Shut off the unit, leave the area if gas is present, and call us for immediate response.",
-    href: "/emergency-plumbing/water-heater/",
   },
   {
     title: "Overflowing Toilet",
     description:
-      "Overflowing toilets that cannot be stopped with the shutoff valve. Often indicates a deeper blockage that requires professional clearing.",
+      "If a toilet is overflowing and cannot be stopped with a plunger, locate the shutoff valve at the base of the toilet and turn it clockwise to stop the water flow. If the toilet continues to overflow or if multiple toilets are backing up simultaneously, this may indicate a main sewer line problem requiring immediate professional attention.",
     href: "/emergency-plumbing/overflowing-toilet/",
   },
   {
-    title: "Slab Leak Response",
+    title: "Loss of Water Supply",
     description:
-      "Slab leaks that cause visible water damage, sudden pressure loss, warm spots on the floor, or the sound of running water when all fixtures are off.",
-    href: "/emergency-plumbing/slab-leak/",
+      "A sudden complete loss of water to your home or building can indicate a main line break, a failed pressure regulator, or a municipal supply issue. Check with neighbors to determine if the outage is isolated to your property. If it is, call a plumber for emergency diagnosis.",
+    href: "/emergency-plumbing/water-loss/",
   },
 ];
 
 const LV_RISK_FACTORS = [
   {
-    title: "Hard Water Mineral Corrosion Stresses Pipes",
-    body: "Las Vegas has some of the hardest water in the United States. Mineral content, primarily calcium and magnesium, accumulates inside pipes, water heaters, and fixtures over time. This buildup narrows water lines, stresses joints and fittings, and accelerates corrosion. Water heaters, faucets, and supply lines all wear faster in high mineral content water, which increases the risk of sudden failures that turn into emergencies.",
-  },
-  {
-    title: "Desert Soil Movement Affects Underground Pipes",
-    body: "Caliche and expansive clay soils in the Las Vegas Valley shift with temperature and moisture changes. This soil movement stresses water pipes buried beneath foundations, yards, and driveways. Slab leaks, broken main lines, and sewer line ruptures are all more common in homes built on shifting desert soil than in homes built on stable ground.",
-  },
-  {
     title: "Extreme Heat and Temperature Swings",
-    body: "Las Vegas summer temperatures regularly exceed 110 degrees Fahrenheit, while winter nights can drop near freezing. This range causes pipes to expand and contract repeatedly, loosening joints and stressing connections over time. Outdoor pipes and pipes near exterior walls are most vulnerable, and the cumulative stress over decades is a leading cause of emergency pipe failures in older homes.",
+    body: "Las Vegas summer temperatures regularly exceed 110 degrees Fahrenheit, and pipes in exterior walls, garages, and under direct sun exposure expand and contract significantly with daily temperature swings of 40 degrees or more. This repeated stress weakens pipe joints and fittings over time. Older pipes that have already been weakened by hard water corrosion are at the highest risk of sudden failure during extreme heat periods.",
   },
   {
-    title: "Aging Copper and Galvanized Pipes",
-    body: "Many Las Vegas homes built before the 1990s still have original copper or galvanized steel plumbing. These materials were not designed for Las Vegas hard water conditions and decades of heat stress. Galvanized pipes corrode from the inside out, copper pipes thin from mineral exposure, and both reach the end of their usable life faster here than in milder climates.",
+    title: "Hard Water Mineral Corrosion",
+    body: "Las Vegas has some of the hardest water in the United States, with high concentrations of calcium and magnesium that deposit inside pipes and accelerate metal corrosion. Homes with copper or galvanized steel pipes built before the 1990s are particularly vulnerable. Hard water corrosion thins pipe walls over years of exposure, which can lead to sudden pinhole leaks or complete pipe failure without visible warning.",
+  },
+  {
+    title: "Desert Soil Movement and Slab Pressure",
+    body: "The Las Vegas Valley sits on a combination of caliche (calcium carbonate-cemented soil) and expansive clay that shifts with temperature changes and the rare heavy rainfall events. This soil movement puts stress on underground pipes and slab-embedded lines, which is one reason slab leaks are significantly more common in Las Vegas than in most other regions of the country.",
+  },
+  {
+    title: "Aging Pipes in Older Las Vegas Neighborhoods",
+    body: "Many Las Vegas neighborhoods built during the growth periods of the 1970s, 1980s, and early 1990s still have original plumbing materials that have reached the end of their expected service life. Polybutylene pipe, which was widely used from the mid-1970s through the mid-1990s, is particularly prone to sudden failure. Galvanized steel pipes in pre-1975 homes corrode from the inside out, reducing flow and eventually failing without external warning signs.",
   },
 ];
 
