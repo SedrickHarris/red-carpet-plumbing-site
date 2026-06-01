@@ -379,7 +379,12 @@ export default function EmergencyPlumbingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Emergency Plumbing in Las Vegas, NV"
+          headline={
+            <>
+              Emergency Plumbing
+              <br className="hidden sm:block" /> in Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides 24/7 emergency plumbing service for homes and businesses throughout Las Vegas and the Las Vegas Valley. If you have a burst pipe, sewer backup, water heater failure, or any urgent plumbing situation, call us now at (702) 567-9172."
           trustItems={[
             "4.8 stars, 76 Google reviews",
@@ -503,7 +508,8 @@ export default function EmergencyPlumbingPage() {
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
                   <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                    Emergency Plumbing Services in Las Vegas
+                    Emergency Plumbing Services
+                    <br className="hidden sm:block" /> in Las Vegas
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Red Carpet Plumbing responds to all types of plumbing
@@ -539,7 +545,8 @@ export default function EmergencyPlumbingPage() {
               <SectionRevealItem>
                 <div className="text-left">
                   <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                    Why Las Vegas Homes Experience More Plumbing Emergencies
+                    Why Las Vegas Homes Experience
+                    <br className="hidden sm:block" /> More Plumbing Emergencies
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Las Vegas homes face plumbing conditions that are more
@@ -614,7 +621,12 @@ export default function EmergencyPlumbingPage() {
         {/* SECTION 7: MID-PAGE EMERGENCY CTA */}
         <CTASection
           background="dark"
-          headline="Need an Emergency Plumber in Las Vegas Now?"
+          headline={
+            <>
+              Need an Emergency Plumber
+              <br className="hidden sm:block" /> in Las Vegas Now?
+            </>
+          }
           body="Call Red Carpet Plumbing for 24/7 emergency plumbing service throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated, over 40 years in the valley."
           primaryCTA={{
             label: "Call Now: (702) 567-9172",
@@ -699,8 +711,8 @@ export default function EmergencyPlumbingPage() {
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions About Emergency Plumbing in Las
-                Vegas
+                Frequently Asked Questions About Emergency Plumbing
+                <br className="hidden sm:block" /> in Las Vegas
               </h2>
             </div>
             <div className="mt-12 space-y-4">
@@ -725,7 +737,12 @@ export default function EmergencyPlumbingPage() {
         {/* SECTION 11: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Ready for Emergency Plumbing Help in Las Vegas?"
+          headline={
+            <>
+              Ready for Emergency Plumbing Help
+              <br className="hidden sm:block" /> in Las Vegas?
+            </>
+          }
           body="Red Carpet Plumbing is available 24 hours a day for emergency plumbing throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated, NV #0048585A."
           primaryCTA={{
             label: "Call (702) 567-9172",
