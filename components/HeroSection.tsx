@@ -18,6 +18,7 @@ type HeroSectionProps = {
   trustItems?: string[];
   primaryCTA?: CTA;
   secondaryCTA?: CTA;
+  ctaNote?: ReactNode;
   formSlot?: ReactNode;
   backgroundImage?: { src: string; alt: string };
   className?: string;
@@ -30,6 +31,7 @@ export function HeroSection({
   trustItems,
   primaryCTA,
   secondaryCTA,
+  ctaNote,
   formSlot,
   backgroundImage,
   className = "",
@@ -155,6 +157,9 @@ export function HeroSection({
                   </Button>
                 ) : null}
               </div>
+              {ctaNote ? (
+                <p className="mt-3 text-sm text-brand-muted">{ctaNote}</p>
+              ) : null}
               {primaryCTA?.disabled || secondaryCTA?.disabled ? (
                 <p className="mt-3 text-xs text-brand-muted">
                   Phone number pending
