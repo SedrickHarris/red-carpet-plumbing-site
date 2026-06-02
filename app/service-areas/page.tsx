@@ -399,14 +399,11 @@ export default function ServiceAreasPage() {
           }
           primaryCTA={{
             label: "Request Plumbing Service",
-            // TODO-BATCH-NEXT: /contact/ not yet built
             href: "/contact/",
           }}
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
           secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
           }}
           formSlot={
             <QuoteFormPlaceholder
@@ -483,14 +480,11 @@ export default function ServiceAreasPage() {
           headline="Need a Plumber in the Las Vegas Valley?"
           primaryCTA={{
             label: "Request Plumbing Service",
-            // TODO-BATCH-NEXT: /contact/ not yet built
             href: "/contact/",
           }}
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
           secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
           }}
         />
 
@@ -592,7 +586,6 @@ export default function ServiceAreasPage() {
               {POPULAR_SERVICES.map((service) => (
                 <li key={service.href}>
                   <Link
-                    // TODO-BATCH-NEXT: service.href service route not yet built
                     href={service.href}
                     className="flex items-center gap-2 rounded-lg bg-white px-4 py-3 text-base font-medium text-brand-dark shadow-sm ring-1 ring-brand-surface-alt transition hover:text-brand-primary hover:shadow-md"
                   >
@@ -640,21 +633,17 @@ export default function ServiceAreasPage() {
               <div className="mt-10">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
                   <Link
-                    // TODO-BATCH-NEXT: /emergency-plumbing/ not yet built
                     href="/emergency-plumbing/"
                     className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-primary shadow-sm transition hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
                     Get Emergency Plumbing Help
                   </Link>
-                  {/* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */}
-                  <span
-                    role="button"
-                    aria-disabled="true"
-                    title="Phone number pending"
-                    className="inline-flex min-h-12 cursor-not-allowed items-center justify-center rounded-lg border border-white/40 bg-transparent px-6 py-3 text-base font-semibold text-white/75"
+                  <a
+                    href="tel:+17025679172"
+                    className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/40 bg-transparent px-6 py-3 text-base font-semibold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
-                    Call Now
-                  </span>
+                    Call (702) 567-9172
+                  </a>
                 </div>
                 <p className="mt-3 text-center text-xs text-white/70">
                   Phone number pending
@@ -734,14 +723,11 @@ export default function ServiceAreasPage() {
           body="Contact Red Carpet Plumbing to request service in your area, ask about coverage, or get a free quote for your plumbing project."
           primaryCTA={{
             label: "Request Plumbing Service",
-            // TODO-BATCH-NEXT: /contact/ not yet built
             href: "/contact/",
           }}
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
           secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
           }}
         />
       </main>

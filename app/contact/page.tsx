@@ -169,15 +169,35 @@ const webPageSchema = {
   },
 };
 
-// FLAG: Add streetAddress when client confirms whether to publish a business address
-// FLAG: Add sameAs GBP URL when client confirms Google Business Profile URL
-// FLAG: Add openingHoursSpecification when client confirms business hours
 const plumberSchema = {
   "@context": "https://schema.org",
   "@type": "Plumber",
   name: "Red Carpet Plumbing",
   url: "https://redcarpetplumbing.com",
-  // FLAG: ADD telephone field once phone number is confirmed
+  telephone: "+17025679172",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3330 W. Hacienda Ave Ste. 405",
+    addressLocality: "Las Vegas",
+    addressRegion: "NV",
+    postalCode: "89118",
+    addressCountry: "US",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+      ],
+      opens: "07:30",
+      closes: "16:30",
+    },
+  ],
+  sameAs: ["https://share.google/oY5LcfC0lhWJXVjJj"],
   description:
     "Red Carpet Plumbing provides residential and commercial plumbing services throughout Las Vegas and the Las Vegas Valley, including emergency plumbing, drain cleaning, leak detection, water heater repair, slab leak detection, sewer line services, re-piping, and more.",
   areaServed: [
@@ -195,7 +215,7 @@ const plumberSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    // FLAG: ADD telephone field once phone number is confirmed
+    telephone: "+17025679172",
     areaServed: "Las Vegas Valley, NV",
     availableLanguage: "English",
   },
@@ -252,12 +272,9 @@ export default function ContactPage() {
               </span>
             </>
           }
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
-          /* FLAG: Replace PLACEHOLDER_PHONE with confirmed number before launch */
           primaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
           }}
           secondaryCTA={{
             label: "View Service Areas",
@@ -277,14 +294,18 @@ export default function ContactPage() {
             </div>
             <dl className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {/* Phone */}
-              {/* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH */}
               <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt">
                 <dt className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-muted">
                   <PhoneIcon className="h-4 w-4 text-brand-primary" />
                   Phone
                 </dt>
                 <dd className="mt-3 text-base text-brand-dark/80">
-                  Phone number pending
+                  <a
+                    href="tel:+17025679172"
+                    className="font-medium text-brand-dark hover:text-brand-primary"
+                  >
+                    (702) 567-9172
+                  </a>
                 </dd>
               </div>
 
@@ -301,28 +322,39 @@ export default function ContactPage() {
               </div>
 
               {/* Hours */}
-              {/* FLAG: CLIENT MUST CONFIRM BUSINESS HOURS BEFORE LAUNCH — do not invent */}
               <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt">
                 <dt className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-muted">
                   <ClockIcon className="h-4 w-4 text-brand-primary" />
                   Hours
                 </dt>
                 <dd className="mt-3 text-base text-brand-dark/80">
-                  Hours pending
+                  <span className="block">
+                    Monday through Friday: 7:30 AM to 4:30 PM
+                  </span>
+                  <span className="mt-1 block">
+                    Saturday and Sunday: Closed
+                  </span>
+                  <span className="mt-2 block">
+                    24/7 emergency service available, call{" "}
+                    <a
+                      href="tel:+17025679172"
+                      className="font-medium text-brand-dark hover:text-brand-primary"
+                    >
+                      (702) 567-9172
+                    </a>
+                  </span>
                 </dd>
               </div>
 
-              {/* Service Area */}
-              {/* FLAG: Add street address only if client confirms it should be published publicly */}
+              {/* Address */}
               <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt sm:col-span-2 lg:col-span-2">
                 <dt className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-muted">
                   <PinIcon className="h-4 w-4 text-brand-primary" />
-                  Service Area
+                  Address
                 </dt>
                 <dd className="mt-3 text-base text-brand-dark/80">
-                  Serving Las Vegas, Henderson, North Las Vegas, Summerlin,
-                  Spring Valley, Paradise, Enterprise, Boulder City, Green
-                  Valley, and the Las Vegas Valley
+                  <span className="block">3330 W. Hacienda Ave Ste. 405</span>
+                  <span className="mt-1 block">Las Vegas, NV 89118</span>
                 </dd>
               </div>
 
@@ -432,7 +464,6 @@ export default function ContactPage() {
               {SERVICE_QUICK_LINKS.map((service) => (
                 <li key={service.href}>
                   <Link
-                    // TODO-BATCH-NEXT: service.href service route not yet built
                     href={service.href}
                     className="flex items-center gap-2 rounded-lg bg-white px-4 py-3 text-base font-medium text-brand-dark shadow-sm ring-1 ring-brand-surface-alt transition hover:text-brand-primary hover:shadow-md"
                   >
@@ -490,11 +521,9 @@ export default function ContactPage() {
           background="red"
           headline="Plumbing Emergency in Las Vegas?"
           body="For urgent plumbing situations including burst pipes, severe leaks, sewer backups, and water heater failures, call Red Carpet Plumbing directly for the fastest response."
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
           primaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
           }}
         />
       </main>

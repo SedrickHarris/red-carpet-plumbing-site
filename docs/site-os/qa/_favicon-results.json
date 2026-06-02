@@ -1,0 +1,66 @@
+{
+  "source": "Images/brand/logo/Red Carpet Plumbing logo-trimmed.png",
+  "sourceDimensions": "414x347",
+  "pngFiles": [
+    {
+      "size": 16,
+      "name": "favicon-16x16.png",
+      "publicPath": "public/images/brand/favicon/favicon-16x16.png",
+      "bytes": 586
+    },
+    {
+      "size": 32,
+      "name": "favicon-32x32.png",
+      "publicPath": "public/images/brand/favicon/favicon-32x32.png",
+      "bytes": 1558
+    },
+    {
+      "size": 48,
+      "name": "favicon-48x48.png",
+      "publicPath": "public/images/brand/favicon/favicon-48x48.png",
+      "bytes": 2705
+    },
+    {
+      "size": 180,
+      "name": "apple-touch-icon-180x180.png",
+      "publicPath": "public/images/brand/favicon/apple-touch-icon-180x180.png",
+      "bytes": 19529
+    },
+    {
+      "size": 192,
+      "name": "android-chrome-192x192.png",
+      "publicPath": "public/images/brand/favicon/android-chrome-192x192.png",
+      "bytes": 21895
+    },
+    {
+      "size": 512,
+      "name": "android-chrome-512x512.png",
+      "publicPath": "public/images/brand/favicon/android-chrome-512x512.png",
+      "bytes": 126151
+    },
+    {
+      "size": 512,
+      "name": "site-icon-512x512.png",
+      "publicPath": "public/images/brand/favicon/site-icon-512x512.png",
+      "bytes": 126151
+    },
+    {
+      "size": 1024,
+      "name": "favicon-source.png",
+      "publicPath": "public/images/brand/favicon/favicon-source.png",
+      "bytes": 447738
+    }
+  ],
+  "icoFile": {
+    "path": "app/favicon.ico",
+    "embeddedSizes": [
+      16,
+      32,
+      48
+    ],
+    "bytes": 4903,
+    "priorIcoExisted": true,
+    "backupCreated": true,
+    "backupPath": "app/favicon.ico.scaffold-backup"
+  }
+}

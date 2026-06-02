@@ -82,11 +82,8 @@ const PLUMBING_SERVICES_FAQS = [
 const TRUST_STRIP_ITEMS = [
   "Local Las Vegas Plumbing Company",
   "Residential and Commercial Service",
-  // SOURCE-SITE CLAIM: verify supporting documentation before final launch
   "Emergency Plumbing Support",
-  // SOURCE-SITE CLAIM: verify supporting documentation before final launch
   "Transparent Pricing",
-  // SOURCE-SITE CLAIM: verify supporting documentation before final launch
   "Customer Satisfaction Focus",
 ];
 
@@ -114,7 +111,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Fast response for burst pipes, severe leaks, sewer backups, water heater failures, and other urgent plumbing situations in Las Vegas.",
     href: "/emergency-plumbing/",
-    todo: "TODO-BATCH-NEXT: /emergency-plumbing/ not yet built",
   },
   {
     title: "Drain Cleaning",
@@ -123,7 +119,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Professional drain cleaning for slow drains, clogged drains, and recurring blockages in kitchens, bathrooms, and main lines.",
     href: "/drain-cleaning/",
-    todo: "TODO-BATCH-NEXT: /drain-cleaning/ not yet built",
   },
   {
     title: "Leak Detection and Repair",
@@ -132,7 +127,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Accurate leak detection and repair for visible and hidden leaks throughout your home or business plumbing system.",
     href: "/leak-detection-repair/",
-    todo: "TODO-BATCH-NEXT: /leak-detection-repair/ not yet built",
   },
   {
     title: "Water Heater Repair and Installation",
@@ -141,7 +135,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Water heater diagnosis, repair, and installation for tank and tankless units in Las Vegas homes and businesses.",
     href: "/water-heater-repair-installation/",
-    todo: "TODO-BATCH-NEXT: /water-heater-repair-installation/ not yet built",
   },
   {
     title: "Slab Leak Detection and Repair",
@@ -150,7 +143,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Detection and repair of water leaks beneath concrete slabs, protecting your foundation and preventing water damage.",
     href: "/slab-leak-detection-repair/",
-    todo: "TODO-BATCH-NEXT: /slab-leak-detection-repair/ not yet built",
   },
   {
     title: "Sewer Line Services",
@@ -159,7 +151,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Sewer line inspection, cleaning, repair, and replacement for residential and commercial properties in Las Vegas.",
     href: "/sewer-line-services/",
-    todo: "TODO-BATCH-NEXT: /sewer-line-services/ not yet built",
   },
   {
     title: "Re-Piping",
@@ -168,7 +159,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Full and partial re-piping services for homes and businesses with aging, corroded, or failing pipe systems.",
     href: "/re-piping/",
-    todo: "TODO-BATCH-NEXT: /re-piping/ not yet built",
   },
   {
     title: "Water Pipe Repair and Replacement",
@@ -177,7 +167,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Repair and replacement of damaged, corroded, or leaking water supply pipes throughout your property.",
     href: "/water-pipe-repair-replacement/",
-    todo: "TODO-BATCH-NEXT: /water-pipe-repair-replacement/ not yet built",
   },
   {
     title: "Gas Line Plumbing",
@@ -186,7 +175,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Gas line inspection, repair, and installation for homes and businesses by trained plumbing professionals.",
     href: "/gas-line-plumbing/",
-    todo: "TODO-BATCH-NEXT: /gas-line-plumbing/ not yet built",
   },
   {
     title: "Commercial Plumbing",
@@ -195,7 +183,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Commercial plumbing repair, installation, drain service, and inspection for businesses and property managers in Las Vegas.",
     href: "/commercial-plumbing/",
-    todo: "TODO-BATCH-NEXT: /commercial-plumbing/ not yet built",
   },
   {
     title: "Toilet Repair and Installation",
@@ -204,7 +191,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Toilet repair, replacement, and installation for all makes and models in residential and commercial settings.",
     href: "/toilet-repair-installation/",
-    todo: "TODO-BATCH-NEXT: /toilet-repair-installation/ not yet built",
   },
   {
     title: "Faucet and Sink Repair and Installation",
@@ -213,7 +199,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Faucet and sink repair, replacement, and installation for kitchens, bathrooms, and utility areas.",
     href: "/faucet-sink-repair-installation/",
-    todo: "TODO-BATCH-NEXT: /faucet-sink-repair-installation/ not yet built",
   },
   {
     title: "Garbage Disposal Repair and Installation",
@@ -222,7 +207,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Garbage disposal repair, replacement, and installation for kitchen sinks throughout the Las Vegas Valley.",
     href: "/garbage-disposal-repair-installation/",
-    todo: "TODO-BATCH-NEXT: /garbage-disposal-repair-installation/ not yet built",
   },
   {
     title: "Backflow Prevention",
@@ -231,7 +215,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Backflow prevention device installation, testing, and repair to protect your water supply from contamination.",
     href: "/backflow-prevention/",
-    todo: "TODO-BATCH-NEXT: /backflow-prevention/ not yet built",
   },
   {
     title: "Video Camera Plumbing Inspections",
@@ -240,7 +223,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Camera inspection inside pipes to identify blockages, damage, root intrusion, and hidden plumbing problems.",
     href: "/video-camera-plumbing-inspections/",
-    todo: "TODO-BATCH-NEXT: /video-camera-plumbing-inspections/ not yet built",
   },
   {
     title: "Plumbing Fixture Repair, Replacement and Installation",
@@ -249,7 +231,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Repair, replacement, and installation of plumbing fixtures including faucets, toilets, showers, tubs, and sinks.",
     href: "/plumbing-fixture-repair-replacement-installation/",
-    todo: "TODO-BATCH-NEXT: /plumbing-fixture-repair-replacement-installation/ not yet built",
   },
   {
     title: "Trenchless Piping",
@@ -258,7 +239,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Trenchless pipe repair and replacement methods that minimize excavation and disruption to your property.",
     href: "/trenchless-piping/",
-    todo: "TODO-BATCH-NEXT: /trenchless-piping/ not yet built",
   },
   {
     title: "Water Meter and Pressure Regulator Services",
@@ -267,7 +247,6 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       "Water meter inspection and pressure regulator service to maintain safe, consistent water pressure in your plumbing system.",
     href: "/water-meter-pressure-regulator-services/",
-    todo: "TODO-BATCH-NEXT: /water-meter-pressure-regulator-services/ not yet built",
   },
 ];
 
@@ -396,14 +375,11 @@ export default function PlumbingServicesPage() {
           }
           primaryCTA={{
             label: "Request Plumbing Service",
-            // TODO-BATCH-NEXT: /contact/ not yet built
             href: "/contact/",
           }}
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
           secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
           }}
           formSlot={
             <div>
@@ -453,14 +429,11 @@ export default function PlumbingServicesPage() {
           headline="Plumbing Emergency? Get Fast Help."
           primaryCTA={{
             label: "Get Emergency Plumbing Help",
-            // TODO-BATCH-NEXT: /emergency-plumbing/ not yet built
             href: "/emergency-plumbing/",
           }}
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
           secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
           }}
         />
 
@@ -562,7 +535,6 @@ export default function PlumbingServicesPage() {
             </p>
             <div className="mt-8">
               <Link
-                // TODO-BATCH-NEXT: /commercial-plumbing/ not yet built
                 href="/commercial-plumbing/"
                 className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
               >
@@ -586,7 +558,6 @@ export default function PlumbingServicesPage() {
             </p>
             <div className="mt-8">
               <Link
-                // TODO-BATCH-NEXT: /service-areas/ not yet built
                 href="/service-areas/"
                 className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-charcoal shadow-sm transition hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
@@ -663,14 +634,11 @@ export default function PlumbingServicesPage() {
           body="Contact Red Carpet Plumbing today to request service, get a free quote, or ask about plumbing in your area."
           primaryCTA={{
             label: "Request Plumbing Service",
-            // TODO-BATCH-NEXT: /contact/ not yet built
             href: "/contact/",
           }}
-          /* FLAG: CLIENT MUST CONFIRM PHONE NUMBER BEFORE LAUNCH — do not invent */
           secondaryCTA={{
-            label: "Call Now",
-            href: "#",
-            disabled: true,
+            label: "Call (702) 567-9172",
+            href: "tel:+17025679172",
           }}
         />
       </main>
