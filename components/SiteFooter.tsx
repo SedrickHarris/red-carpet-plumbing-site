@@ -19,7 +19,7 @@ const CORE_SERVICES: FooterLink[] = [
   },
   { label: "Sewer Line Services", href: "/sewer-line-services/", built: true },
   { label: "Re-Piping", href: "/re-piping/", built: true },
-  { label: "Commercial Plumbing", href: "/commercial-plumbing/", built: false },
+  { label: "Commercial Plumbing", href: "/commercial-plumbing/", built: true },
 ];
 
 const TIER_1_LOCATIONS: FooterLink[] = [
@@ -38,7 +38,7 @@ const TIER_1_LOCATIONS: FooterLink[] = [
 
 const GET_IN_TOUCH: FooterLink[] = [
   { label: "Contact", href: "/contact/", built: true },
-  { label: "About", href: "/about/", built: false },
+  { label: "About", href: "/about/", built: true },
   { label: "All Service Areas", href: "/service-areas/", built: true },
   { label: "All Plumbing Services", href: "/plumbing-services/", built: true },
 ];
