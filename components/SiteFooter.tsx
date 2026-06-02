@@ -131,6 +131,10 @@ export function SiteFooter() {
                 Call (702) 567-9172
               </a>
             </p>
+            <address className="mt-4 text-sm not-italic leading-6 text-white/80">
+              <span className="block">3330 W. Hacienda Ave Ste. 405</span>
+              <span className="block">Las Vegas, NV 89118</span>
+            </address>
           </div>
         </div>
 
