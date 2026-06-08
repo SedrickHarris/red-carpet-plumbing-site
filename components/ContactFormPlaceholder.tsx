@@ -3,8 +3,10 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 
-// TODO: Replace with confirmed webhook URL before launch.
-// One edit here updates all pages.
+// TODO: Replace with confirmed GHL webhook URL before launch.
+// Architecture decision (confirmed): Native Next.js form POST to GHL webhook.
+// Payload shape is defined below. One edit here updates all pages.
+// Request the GHL webhook URL from the project owner before going live.
 const CONTACT_WEBHOOK_URL = "";
 
 const DEFAULT_SERVICES = [
