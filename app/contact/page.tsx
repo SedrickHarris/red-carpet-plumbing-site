@@ -310,14 +310,18 @@ export default function ContactPage() {
               </div>
 
               {/* Email */}
-              {/* FLAG: CLIENT MUST CONFIRM EMAIL ADDRESS BEFORE LAUNCH — do not invent */}
               <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt">
                 <dt className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-muted">
                   <MailIcon className="h-4 w-4 text-brand-primary" />
                   Email
                 </dt>
                 <dd className="mt-3 text-base text-brand-dark/80">
-                  Email pending
+                  <a
+                    href="mailto:info@redcarpetplumbing.com"
+                    className="font-medium text-brand-dark hover:text-brand-primary"
+                  >
+                    info@redcarpetplumbing.com
+                  </a>
                 </dd>
               </div>
 
