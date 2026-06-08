@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 
@@ -375,9 +376,9 @@ export function ContactFormPlaceholder({
 
         <p className="text-xs leading-5 text-brand-muted">
           By submitting this form you agree to our{" "}
-          {/* FLAG: CLIENT MUST CONFIRM PRIVACY POLICY URL BEFORE LAUNCH. Wrap "Privacy Policy" in a Link when URL is provided. */}
-          <span>Privacy Policy</span> and consent to being contacted about your
-          service request.
+          {/* TODO: /privacy-policy/ route not yet built — stub page needed before launch */}
+          <Link href="/privacy-policy/">Privacy Policy</Link> and consent to
+          being contacted about your service request.
         </p>
 
         <button
