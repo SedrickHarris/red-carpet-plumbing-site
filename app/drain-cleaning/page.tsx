@@ -661,11 +661,33 @@ export default function DrainCleaningPage() {
                 Red Carpet Plumbing provides drain cleaning throughout Las
                 Vegas and the Las Vegas Valley.
               </p>
+              <p className="mt-4 text-base leading-7 text-white/80">
+                See our dedicated drain cleaning pages for{" "}
+                <Link
+                  href="/las-vegas/drain-cleaning/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Las Vegas
+                </Link>
+                ,{" "}
+                <Link
+                  href="/henderson/drain-cleaning/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Henderson
+                </Link>
+                , and{" "}
+                <Link
+                  href="/north-las-vegas/drain-cleaning/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  North Las Vegas
+                </Link>
+                .
+              </p>
             </div>
 
-            {/* TODO-BATCH-PHASE3: /las-vegas/drain-cleaning/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /henderson/drain-cleaning/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /north-las-vegas/drain-cleaning/ not yet built */}
+            {/* /las-vegas/, /henderson/, and /north-las-vegas/ drain-cleaning are live (Batch 5). */}
             {/* TODO-BATCH-PHASE3: /summerlin/drain-cleaning/ not yet built */}
             {/* TODO-BATCH-PHASE3: /paradise/drain-cleaning/ not yet built */}
             {/* TODO-BATCH-PHASE3: /spring-valley/drain-cleaning/ not yet built */}

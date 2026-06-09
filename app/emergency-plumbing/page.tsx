@@ -645,11 +645,33 @@ export default function EmergencyPlumbingPage() {
                 Red Carpet Plumbing provides emergency plumbing service
                 throughout Las Vegas and the Las Vegas Valley.
               </p>
+              <p className="mt-4 text-base leading-7 text-white/80">
+                See our dedicated emergency plumbing pages for{" "}
+                <Link
+                  href="/las-vegas/emergency-plumbing/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Las Vegas
+                </Link>
+                ,{" "}
+                <Link
+                  href="/henderson/emergency-plumbing/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Henderson
+                </Link>
+                , and{" "}
+                <Link
+                  href="/north-las-vegas/emergency-plumbing/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  North Las Vegas
+                </Link>
+                .
+              </p>
             </div>
 
-            {/* TODO-BATCH-PHASE3: /las-vegas/emergency-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /henderson/emergency-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /north-las-vegas/emergency-plumbing/ not yet built */}
+            {/* /las-vegas/, /henderson/, and /north-las-vegas/ emergency-plumbing are live (Batch 5). */}
             {/* TODO-BATCH-PHASE3: /summerlin/emergency-plumbing/ not yet built */}
             {/* TODO-BATCH-PHASE3: /paradise/emergency-plumbing/ not yet built */}
             {/* TODO-BATCH-PHASE3: /spring-valley/emergency-plumbing/ not yet built */}

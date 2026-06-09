@@ -675,11 +675,33 @@ export default function WaterHeaterRepairInstallationPage() {
                 Red Carpet Plumbing provides water heater repair and
                 installation throughout the Las Vegas Valley.
               </p>
+              <p className="mt-4 text-base leading-7 text-white/80">
+                See our dedicated water heater pages for{" "}
+                <Link
+                  href="/las-vegas/water-heater-repair-installation/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Las Vegas
+                </Link>
+                ,{" "}
+                <Link
+                  href="/henderson/water-heater-repair-installation/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Henderson
+                </Link>
+                , and{" "}
+                <Link
+                  href="/north-las-vegas/water-heater-repair-installation/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  North Las Vegas
+                </Link>
+                .
+              </p>
             </div>
 
-            {/* TODO-BATCH-PHASE3: /las-vegas/water-heater-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /henderson/water-heater-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /north-las-vegas/water-heater-repair-installation/ not yet built */}
+            {/* /las-vegas/, /henderson/, and /north-las-vegas/ water-heater-repair-installation are live (Batch 5). */}
             {/* TODO-BATCH-PHASE3: /summerlin/water-heater-repair-installation/ not yet built */}
             {/* TODO-BATCH-PHASE3: /paradise/water-heater-repair-installation/ not yet built */}
             {/* TODO-BATCH-PHASE3: /spring-valley/water-heater-repair-installation/ not yet built */}
