@@ -14,14 +14,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Plumbing Services in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Licensed plumbing in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, drain cleaning, water heater repair. NV #0048585A. Call (702) 567-9172.",
+    "Plumbing services in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, water heater repair. NV #0048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Licensed plumbing in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, drain cleaning, water heater repair. NV #0048585A. Call (702) 567-9172.",
+      "Plumbing services in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, water heater repair. NV #0048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -61,7 +61,7 @@ const HENDERSON_FAQS = [
   {
     question: "Does Red Carpet Plumbing serve Green Valley and Lake Las Vegas?",
     answer:
-      "Yes. Red Carpet Plumbing serves both Green Valley and Lake Las Vegas, along with Seven Hills, Anthem, MacDonald Ranch, and other Henderson communities. Call (702) 567-9172 to confirm coverage for your neighborhood.",
+      "Yes. Red Carpet Plumbing serves both Green Valley and Lake Las Vegas. We have dedicated plumbing service pages for Green Valley and Lake Las Vegas with more information about plumbing services, common issues, and coverage in those communities.",
   },
   {
     question: "Is Red Carpet Plumbing licensed to work in Henderson, NV?",

@@ -14,14 +14,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Plumbing Services in Green Valley, NV | Red Carpet Plumbing",
   description:
-    "Licensed plumbing in Green Valley, NV. Slab leak detection, re-piping, water heater repair, drain cleaning for original and newer Green Valley homes. NV #0048585A. Call (702) 567-9172.",
+    "Plumbing services in Green Valley, NV. Slab leak detection, re-piping, water heater repair for original and newer homes. NV #0048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/green-valley-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Green Valley, NV | Red Carpet Plumbing",
     description:
-      "Licensed plumbing in Green Valley, NV. Slab leak detection, re-piping, water heater repair, drain cleaning for original and newer Green Valley homes. NV #0048585A. Call (702) 567-9172.",
+      "Plumbing services in Green Valley, NV. Slab leak detection, re-piping, water heater repair for original and newer homes. NV #0048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/green-valley-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

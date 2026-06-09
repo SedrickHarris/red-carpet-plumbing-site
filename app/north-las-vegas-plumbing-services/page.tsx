@@ -14,7 +14,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Plumbing Services in North Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Licensed plumbing in North Las Vegas, NV including the Aliante area. Emergency plumbing, drain cleaning, water heater repair. NV #0048585A. Call (702) 567-9172.",
+    "Plumbing services in North Las Vegas, NV including the Aliante area. Emergency plumbing, water heater repair, drain cleaning. NV #0048585A. (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas-plumbing-services/",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Plumbing Services in North Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed plumbing in North Las Vegas, NV including the Aliante area. Emergency plumbing, drain cleaning, water heater repair. NV #0048585A. Call (702) 567-9172.",
+      "Plumbing services in North Las Vegas, NV including the Aliante area. Emergency plumbing, water heater repair, drain cleaning. NV #0048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
