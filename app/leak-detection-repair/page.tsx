@@ -650,9 +650,19 @@ export default function LeakDetectionAndRepairPage() {
                 Red Carpet Plumbing provides leak detection and repair
                 throughout the Las Vegas Valley.
               </p>
+              <p className="mt-4 text-base leading-7 text-white/80">
+                See our dedicated{" "}
+                <Link
+                  href="/las-vegas/leak-detection-repair/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  leak detection and repair in Las Vegas
+                </Link>{" "}
+                page for local details.
+              </p>
             </div>
 
-            {/* TODO-BATCH-PHASE3: /las-vegas/leak-detection-repair/ not yet built */}
+            {/* /las-vegas/leak-detection-repair/ is live (Batch 5). */}
             {/* TODO-BATCH-PHASE3: /henderson/leak-detection-repair/ not yet built */}
             {/* TODO-BATCH-PHASE3: /north-las-vegas/leak-detection-repair/ not yet built */}
             {/* TODO-BATCH-PHASE3: /summerlin/leak-detection-repair/ not yet built */}
