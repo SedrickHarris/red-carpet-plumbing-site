@@ -14,14 +14,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Plumbing Services in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Licensed plumbing in Summerlin, NV including Summerlin North and South. Emergency plumbing, water heater repair, slab leak detection, re-piping. NV #0048585A. Call (702) 567-9172.",
+    "Plumbing services in Summerlin, NV. Emergency plumbing, water heater repair, slab leak detection, re-piping for Summerlin homes. NV #0048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Licensed plumbing in Summerlin, NV including Summerlin North and South. Emergency plumbing, water heater repair, slab leak detection, re-piping. NV #0048585A. Call (702) 567-9172.",
+      "Plumbing services in Summerlin, NV. Emergency plumbing, water heater repair, slab leak detection, re-piping for Summerlin homes. NV #0048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

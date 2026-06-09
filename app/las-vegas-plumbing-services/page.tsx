@@ -14,14 +14,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Licensed plumbing services throughout Las Vegas, NV. Emergency plumbing, drain cleaning, water heater repair, slab leak detection. NV #0048585A. Call (702) 567-9172.",
+    "Plumbing services in Las Vegas, NV. Emergency plumbing, drain cleaning, water heater repair, slab leak detection. Licensed. NV #0048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed plumbing services throughout Las Vegas, NV. Emergency plumbing, drain cleaning, water heater repair, slab leak detection. NV #0048585A. Call (702) 567-9172.",
+      "Plumbing services in Las Vegas, NV. Emergency plumbing, drain cleaning, water heater repair, slab leak detection. Licensed. NV #0048585A. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
