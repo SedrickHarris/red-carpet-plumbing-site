@@ -591,8 +591,29 @@ export default function SpringValleyEmergencyPlumbingPage() {
               >
                 Spring Valley plumbing services
               </Link>{" "}
-              including drain cleaning, water heater repair, slab leak detection,
-              and re-piping. We also serve communities near Spring Valley including{" "}
+              including{" "}
+              <Link
+                href="/spring-valley/drain-cleaning/"
+                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+              >
+                drain cleaning
+              </Link>
+              ,{" "}
+              <Link
+                href="/spring-valley/water-heater-repair-installation/"
+                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+              >
+                water heater repair
+              </Link>
+              ,{" "}
+              <Link
+                href="/spring-valley/slab-leak-detection-repair/"
+                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+              >
+                slab leak detection
+              </Link>
+              , and re-piping. We also serve communities near Spring Valley
+              including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
                 className="font-semibold text-brand-primary hover:text-brand-primary-hover"
