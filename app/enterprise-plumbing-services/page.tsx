@@ -76,11 +76,13 @@ const ENTERPRISE_FAQS = [
 ];
 
 // ---------------------------------------------------------------------------
-// All 18 core service pages. Each links to a live route (built=true).
+// The 18 service cards. Each links to a live route (built=true).
 // card.webp assets exist for the first five services; the rest use the
 // ServiceCard ServiceImagePlaceholder fallback (no image prop passed).
-// TODO-BATCH-PHASE4: /enterprise/[service]/ service-location pages not yet
-// built. ServiceCards link to core service pages only.
+// Built /enterprise/[service]/ service-location pages (emergency, drain
+// cleaning, leak detection, water heater, slab leak) link to those pages; the
+// remaining services link to their core service page until an Enterprise
+// location page is built.
 // ---------------------------------------------------------------------------
 type ServiceLink = {
   title: string;
@@ -92,31 +94,31 @@ type ServiceLink = {
 const ENTERPRISE_SERVICES: ServiceLink[] = [
   {
     title: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    href: "/enterprise/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/card.webp",
     imageAlt: "24/7 emergency plumbing service in Enterprise, NV",
   },
   {
     title: "Drain Cleaning",
-    href: "/drain-cleaning/",
+    href: "/enterprise/drain-cleaning/",
     image: "/images/services/drain-cleaning/card.webp",
     imageAlt: "Drain cleaning service in Enterprise, NV",
   },
   {
     title: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
+    href: "/enterprise/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/card.webp",
     imageAlt: "Leak detection and repair in Enterprise, NV",
   },
   {
     title: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/enterprise/water-heater-repair-installation/",
     image: "/images/services/water-heater-repair-installation/card.webp",
     imageAlt: "Water heater repair and installation in Enterprise, NV",
   },
   {
     title: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
+    href: "/enterprise/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Slab leak detection and repair in Enterprise, NV",
   },
@@ -468,8 +470,8 @@ export default function EnterprisePlumbingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO-BATCH-PHASE4: /enterprise/[service]/ service-location pages not yet built. */}
-                {/* ServiceCards link to core service pages only. */}
+                {/* Built /enterprise/[service]/ service-location pages are linked here. */}
+                {/* Services without an Enterprise location page yet link to the core service page. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {ENTERPRISE_SERVICES.map((service) => (
                     <ServiceCard

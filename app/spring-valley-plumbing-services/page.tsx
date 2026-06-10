@@ -75,11 +75,13 @@ const SPRING_VALLEY_FAQS = [
 ];
 
 // ---------------------------------------------------------------------------
-// All 18 core service pages. Each links to a live route (built=true).
+// The 18 service cards. Each links to a live route (built=true).
 // card.webp assets exist for the first five services; the rest use the
 // ServiceCard ServiceImagePlaceholder fallback (no image prop passed).
-// TODO-BATCH-PHASE4: /spring-valley/[service]/ service-location pages not yet
-// built. ServiceCards link to core service pages only.
+// Built /spring-valley/[service]/ service-location pages (drain cleaning, leak
+// detection, water heater, slab leak, re-piping, commercial) link to those
+// pages; the remaining services link to their core service page until a Spring
+// Valley location page is built.
 // ---------------------------------------------------------------------------
 type ServiceLink = {
   title: string;
@@ -97,25 +99,25 @@ const SPRING_VALLEY_SERVICES: ServiceLink[] = [
   },
   {
     title: "Drain Cleaning",
-    href: "/drain-cleaning/",
+    href: "/spring-valley/drain-cleaning/",
     image: "/images/services/drain-cleaning/card.webp",
     imageAlt: "Drain cleaning service in Spring Valley",
   },
   {
     title: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
+    href: "/spring-valley/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/card.webp",
     imageAlt: "Leak detection and repair in Spring Valley",
   },
   {
     title: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/spring-valley/water-heater-repair-installation/",
     image: "/images/services/water-heater-repair-installation/card.webp",
     imageAlt: "Water heater repair and installation in Spring Valley",
   },
   {
     title: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
+    href: "/spring-valley/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Slab leak detection and repair in Spring Valley",
   },
@@ -126,7 +128,7 @@ const SPRING_VALLEY_SERVICES: ServiceLink[] = [
   },
   {
     title: "Re-Piping",
-    href: "/re-piping/",
+    href: "/spring-valley/re-piping/",
     imageAlt: "Re-piping services in Spring Valley",
   },
   {
@@ -141,7 +143,7 @@ const SPRING_VALLEY_SERVICES: ServiceLink[] = [
   },
   {
     title: "Commercial Plumbing",
-    href: "/commercial-plumbing/",
+    href: "/spring-valley/commercial-plumbing/",
     imageAlt: "Commercial plumbing services in Spring Valley",
   },
   {
@@ -466,8 +468,8 @@ export default function SpringValleyPlumbingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO-BATCH-PHASE4: /spring-valley/[service]/ service-location pages not yet built. */}
-                {/* ServiceCards link to core service pages only. */}
+                {/* Built /spring-valley/[service]/ service-location pages are linked here. */}
+                {/* Services without a Spring Valley location page yet link to the core service page. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {SPRING_VALLEY_SERVICES.map((service) => (
                     <ServiceCard
