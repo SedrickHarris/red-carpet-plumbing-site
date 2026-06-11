@@ -263,3 +263,14 @@ Append-only build log for Site OS implementation work. One entry per build.
 - All five Green Valley service-location pages built and self-QA passed: drain-cleaning (P30), water-heater-repair-installation (P31), leak-detection-repair (P32), slab-leak-detection-repair (P33), re-piping (P34).
 - All use the Green Valley areaServed schema (`Place` → `City` Henderson → `State` Nevada), pair Green Valley with Henderson throughout, and lead with the two-era (original GV / Green Valley Ranch) narrative.
 - **Open follow-ups (each needs an in-scope brief):** (a) P33 rerouting cross-link → `/green-valley/re-piping/`; (b) `/green-valley-plumbing-services/` hub card repoints to the five built GV pages; (c) core service-page back-links (e.g., `/drain-cleaning/` → `/green-valley/drain-cleaning/`).
+
+---
+
+## Green Valley Follow-Up Activations (Post-Batch-6 P30-P34)
+
+- **Task A** — `app/green-valley/slab-leak-detection-repair/page.tsx` — rerouting card `linkHref` repointed from `/re-piping/` to `/green-valley/re-piping/`; `linkText` updated to "Green Valley re-piping services"; the TODO-BATCH-6 comment and unused `todo` field on that card removed and replaced with an ACTIVATED note. P34 is confirmed built and committed.
+- **Task B** — `app/green-valley-plumbing-services/page.tsx` — five `GREEN_VALLEY_SERVICES` card `href` values repointed from core routes to built GV service-location routes: Drain Cleaning, Leak Detection and Repair, Water Heater Repair and Installation, Slab Leak Detection and Repair, Re-Piping. Both TODO-BATCH-PHASE4 comments (the data-block comment above the array AND the matching render-side JSX comment) replaced with ACTIVATED notes. The remaining service cards (Sewer Line, Commercial, Toilet, etc.) were left pointing at core routes, per brief scope.
+- **Task C** — `app/drain-cleaning/page.tsx` — `/green-valley/drain-cleaning/` added to the service areas inline link list as the final Oxford-comma item alongside Las Vegas, Henderson, and North Las Vegas.
+- **Out of scope / carry-forward:** P33's related-services "Green Valley Re-Piping" chip remains a plain-text `<span>` with a TODO-BATCH-6 comment (the brief's Task A scoped only the rerouting card). It can be activated to a live `/green-valley/re-piping/` link in a future brief. Likewise, core `/water-heater-repair-installation/`, `/leak-detection-repair/`, `/slab-leak-detection-repair/`, and `/re-piping/` still need Green Valley added to their service-area sections (separate brief each).
+- **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (all 91 routes prerendered static ○). All pass.
+- **Commits:** 3 separate commits, staged by path (d7257a6, 35cd978, 8c70d2a). Pushed to `origin/main`.
