@@ -651,20 +651,39 @@ export default function LeakDetectionAndRepairPage() {
                 throughout the Las Vegas Valley.
               </p>
               <p className="mt-4 text-base leading-7 text-white/80">
-                See our dedicated{" "}
+                See our dedicated leak detection pages for{" "}
                 <Link
                   href="/las-vegas/leak-detection-repair/"
                   className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
                 >
-                  leak detection and repair in Las Vegas
-                </Link>{" "}
-                page for local details.
+                  Las Vegas
+                </Link>
+                ,{" "}
+                <Link
+                  href="/henderson/leak-detection-repair/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Henderson
+                </Link>
+                ,{" "}
+                <Link
+                  href="/north-las-vegas/leak-detection-repair/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  North Las Vegas
+                </Link>
+                , and{" "}
+                <Link
+                  href="/green-valley/leak-detection-repair/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Green Valley
+                </Link>
+                .
               </p>
             </div>
 
-            {/* /las-vegas/leak-detection-repair/ is live (Batch 5). */}
-            {/* TODO-BATCH-PHASE3: /henderson/leak-detection-repair/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /north-las-vegas/leak-detection-repair/ not yet built */}
+            {/* /las-vegas/, /henderson/, /north-las-vegas/, and /green-valley/ leak-detection-repair are live. */}
             {/* TODO-BATCH-PHASE3: /summerlin/leak-detection-repair/ not yet built */}
             {/* TODO-BATCH-PHASE3: /paradise/leak-detection-repair/ not yet built */}
             {/* TODO-BATCH-PHASE3: /spring-valley/leak-detection-repair/ not yet built */}
