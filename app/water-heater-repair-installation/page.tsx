@@ -690,18 +690,25 @@ export default function WaterHeaterRepairInstallationPage() {
                 >
                   Henderson
                 </Link>
-                , and{" "}
+                ,{" "}
                 <Link
                   href="/north-las-vegas/water-heater-repair-installation/"
                   className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
                 >
                   North Las Vegas
                 </Link>
+                , and{" "}
+                <Link
+                  href="/green-valley/water-heater-repair-installation/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Green Valley
+                </Link>
                 .
               </p>
             </div>
 
-            {/* /las-vegas/, /henderson/, and /north-las-vegas/ water-heater-repair-installation are live (Batch 5). */}
+            {/* /las-vegas/, /henderson/, /north-las-vegas/, and /green-valley/ water-heater-repair-installation are live. */}
             {/* TODO-BATCH-PHASE3: /summerlin/water-heater-repair-installation/ not yet built */}
             {/* TODO-BATCH-PHASE3: /paradise/water-heater-repair-installation/ not yet built */}
             {/* TODO-BATCH-PHASE3: /spring-valley/water-heater-repair-installation/ not yet built */}
