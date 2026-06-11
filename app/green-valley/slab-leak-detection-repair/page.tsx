@@ -249,8 +249,8 @@ const RELATED_SERVICES: { label: string; href?: string }[] = [
     label: "Green Valley Water Heater Repair",
     href: "/green-valley/water-heater-repair-installation/",
   },
-  // TODO-BATCH-6: activate to /green-valley/re-piping/ once confirmed built and QA-passed
-  { label: "Green Valley Re-Piping" },
+  // ACTIVATED: /green-valley/re-piping/ (P34) built and committed.
+  { label: "Green Valley Re-Piping", href: "/green-valley/re-piping/" },
 ];
 
 // ---------------------------------------------------------------------------
