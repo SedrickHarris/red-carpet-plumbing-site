@@ -171,14 +171,11 @@ const REPAIR_OPTIONS: {
     heading: "Pipe rerouting",
     body: "Pipe rerouting bypasses the damaged section entirely by running a new supply line through walls, ceilings, or accessible above-slab pathways, removing the aging pipe from beneath the foundation. For original Green Valley homes where copper or polybutylene supply lines have been thinned by 30 to 45 years of hard water exposure, rerouting is often the more durable long-term solution because it eliminates the source of future slab leaks on that line.",
     linkPre: " See our ",
-    // TODO-BATCH-6: when /green-valley/re-piping/ (P34) is built, repoint
-    // linkHref from /re-piping/ to /green-valley/re-piping/ and update the
-    // linkText to "Green Valley re-piping services".
-    linkHref: "/re-piping/",
-    linkText: "re-piping services",
+    // ACTIVATED: /green-valley/re-piping/ (P34) built and committed.
+    linkHref: "/green-valley/re-piping/",
+    linkText: "Green Valley re-piping services",
     linkPost:
       " for homes where the full supply system may be approaching similar age and condition.",
-    todo: "TODO-BATCH-6: activate link to /green-valley/re-piping/ once confirmed built and QA-passed",
   },
   {
     heading: "Epoxy pipe lining",
