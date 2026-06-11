@@ -676,12 +676,19 @@ export default function DrainCleaningPage() {
                 >
                   Henderson
                 </Link>
-                , and{" "}
+                ,{" "}
                 <Link
                   href="/north-las-vegas/drain-cleaning/"
                   className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
                 >
                   North Las Vegas
+                </Link>
+                , and{" "}
+                <Link
+                  href="/green-valley/drain-cleaning/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Green Valley
                 </Link>
                 .
               </p>
