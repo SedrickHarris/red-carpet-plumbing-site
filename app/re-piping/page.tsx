@@ -663,11 +663,34 @@ export default function RePipingServicesPage() {
                 Red Carpet Plumbing provides repiping services throughout the
                 Las Vegas Valley.
               </p>
+              <p className="mt-4 text-base leading-7 text-white/80">
+                See our dedicated re-piping pages for{" "}
+                <Link
+                  href="/las-vegas/re-piping/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Las Vegas
+                </Link>
+                ,{" "}
+                <Link
+                  href="/henderson/re-piping/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Henderson
+                </Link>
+                , and{" "}
+                <Link
+                  href="/green-valley/re-piping/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Green Valley
+                </Link>
+                .
+              </p>
             </div>
 
-            {/* TODO-BATCH-PHASE3: /las-vegas/re-piping/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /henderson/re-piping/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /north-las-vegas/re-piping/ not yet built */}
+            {/* /las-vegas/, /henderson/, and /green-valley/ re-piping are live. */}
+            {/* TODO-BATCH-FUTURE: add /north-las-vegas/re-piping/ once built */}
             {/* TODO-BATCH-PHASE3: /summerlin/re-piping/ not yet built */}
             {/* TODO-BATCH-PHASE3: /paradise/re-piping/ not yet built */}
             {/* TODO-BATCH-PHASE3: /spring-valley/re-piping/ not yet built */}
