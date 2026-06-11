@@ -274,3 +274,17 @@ Append-only build log for Site OS implementation work. One entry per build.
 - **Out of scope / carry-forward:** P33's related-services "Green Valley Re-Piping" chip remains a plain-text `<span>` with a TODO-BATCH-6 comment (the brief's Task A scoped only the rerouting card). It can be activated to a live `/green-valley/re-piping/` link in a future brief. Likewise, core `/water-heater-repair-installation/`, `/leak-detection-repair/`, `/slab-leak-detection-repair/`, and `/re-piping/` still need Green Valley added to their service-area sections (separate brief each).
 - **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (all 91 routes prerendered static ○). All pass.
 - **Commits:** 3 separate commits, staged by path (d7257a6, 35cd978, 8c70d2a). Pushed to `origin/main`.
+
+---
+
+## Green Valley Core Service Page Back-Links
+
+Added `/green-valley/[service]/` as a live inline link to the service-areas section of four core service pages. NOTE: the four pages were NOT structurally identical, so the edits differed per file (caught and confirmed before applying):
+
+- `app/water-heater-repair-installation/page.tsx` — surgical Oxford-comma append to the existing Las Vegas / Henderson / North Las Vegas list, adding `/green-valley/water-heater-repair-installation/`. Comment updated to list all four live. (Committed + pushed separately first: beab4f1.)
+- `app/leak-detection-repair/page.tsx` — the existing paragraph linked Las Vegas ONLY; expanded it into a Las Vegas / Henderson / North Las Vegas / Green Valley list (all four built) and de-staled the comment block (Henderson/NLV were marked "not yet built" but are live).
+- `app/slab-leak-detection-repair/page.tsx` — no inline link paragraph existed; inserted a new dedicated-pages `<p>` (Las Vegas, Henderson, Green Valley, all built) before the chip grid. North Las Vegas slab leak route is NOT built, so it was excluded and left as `TODO-BATCH-FUTURE`.
+- `app/re-piping/page.tsx` — same as slab: inserted a new dedicated-pages `<p>` (Las Vegas, Henderson, Green Valley, all built) before the chip grid. North Las Vegas re-piping route is NOT built; left as `TODO-BATCH-FUTURE`.
+- **Out of scope / left untouched:** the remaining stale "not yet built" comment lines for other location clusters (summerlin / paradise / spring-valley / enterprise / boulder-city) on the leak / slab / re-piping pages were not modified — different locations, outside this brief's scope, even though several are now built.
+- **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (all 91 routes prerendered static ○). All pass.
+- **Commits:** 4 separate page commits (beab4f1, 3babeff, 84ab835, 188186d), staged by path. Pushed to `origin/main`.
