@@ -78,13 +78,8 @@ const GREEN_VALLEY_FAQS = [
 // All 18 core service pages. Each links to a live route (built=true).
 // card.webp assets exist for the first five services; the rest use the
 // ServiceCard ServiceImagePlaceholder fallback (no image prop passed).
-// TODO-BATCH-PHASE4: Green Valley service-location pages not yet built:
-//   /green-valley/drain-cleaning/
-//   /green-valley/water-heater-repair-installation/
-//   /green-valley/leak-detection-repair/
-//   /green-valley/slab-leak-detection-repair/
-//   /green-valley/re-piping/
-// ServiceCards link to core service pages only.
+// ACTIVATED: All five Green Valley service-location pages are built (Batch 6, P30-P34).
+// ServiceCards now link to GV-specific routes.
 // ---------------------------------------------------------------------------
 type ServiceLink = {
   title: string;
@@ -102,25 +97,25 @@ const GREEN_VALLEY_SERVICES: ServiceLink[] = [
   },
   {
     title: "Drain Cleaning",
-    href: "/drain-cleaning/",
+    href: "/green-valley/drain-cleaning/",
     image: "/images/services/drain-cleaning/card.webp",
     imageAlt: "Drain cleaning service in Green Valley, NV",
   },
   {
     title: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
+    href: "/green-valley/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/card.webp",
     imageAlt: "Leak detection and repair in Green Valley, NV",
   },
   {
     title: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/green-valley/water-heater-repair-installation/",
     image: "/images/services/water-heater-repair-installation/card.webp",
     imageAlt: "Water heater repair and installation in Green Valley, NV",
   },
   {
     title: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
+    href: "/green-valley/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Slab leak detection and repair in Green Valley, NV",
   },
@@ -131,7 +126,7 @@ const GREEN_VALLEY_SERVICES: ServiceLink[] = [
   },
   {
     title: "Re-Piping",
-    href: "/re-piping/",
+    href: "/green-valley/re-piping/",
     imageAlt: "Re-piping services in Green Valley, NV",
   },
   {
@@ -484,10 +479,7 @@ export default function GreenValleyPlumbingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO-BATCH-PHASE4: Green Valley service-location pages not yet built: */}
-                {/* /green-valley/drain-cleaning/, /green-valley/water-heater-repair-installation/, */}
-                {/* /green-valley/leak-detection-repair/, /green-valley/slab-leak-detection-repair/, */}
-                {/* /green-valley/re-piping/. ServiceCards link to core service pages only. */}
+                {/* ACTIVATED: All five Green Valley service-location pages are built (Batch 6, P30-P34); cards link to GV-specific routes. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {GREEN_VALLEY_SERVICES.map((service) => (
                     <ServiceCard
