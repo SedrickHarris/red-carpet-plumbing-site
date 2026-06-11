@@ -288,3 +288,11 @@ Added `/green-valley/[service]/` as a live inline link to the service-areas sect
 - **Out of scope / left untouched:** the remaining stale "not yet built" comment lines for other location clusters (summerlin / paradise / spring-valley / enterprise / boulder-city) on the leak / slab / re-piping pages were not modified — different locations, outside this brief's scope, even though several are now built.
 - **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (all 91 routes prerendered static ○). All pass.
 - **Commits:** 4 separate page commits (beab4f1, 3babeff, 84ab835, 188186d), staged by path. Pushed to `origin/main`.
+
+---
+
+## P33 Related-Services Chip Activation (Final Green Valley Cluster Follow-Up)
+
+- `app/green-valley/slab-leak-detection-repair/page.tsx` — "Green Valley Re-Piping" related-services chip activated from plain-text `<span>` to live `<Link href="/green-valley/re-piping/">`. TODO-BATCH-6 comment replaced with ACTIVATED note. This is the last deferred item from the Green Valley service-location cluster (P30-P34).
+- **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (all routes prerendered static ○). All pass.
+- **Commit:** 1 file, staged by path. Pushed to `origin/main`.
