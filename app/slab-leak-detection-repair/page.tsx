@@ -661,11 +661,34 @@ export default function SlabLeakDetectionAndRepairPage() {
                 Red Carpet Plumbing provides slab leak detection and repair
                 throughout the Las Vegas Valley.
               </p>
+              <p className="mt-4 text-base leading-7 text-white/80">
+                See our dedicated slab leak pages for{" "}
+                <Link
+                  href="/las-vegas/slab-leak-detection-repair/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Las Vegas
+                </Link>
+                ,{" "}
+                <Link
+                  href="/henderson/slab-leak-detection-repair/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Henderson
+                </Link>
+                , and{" "}
+                <Link
+                  href="/green-valley/slab-leak-detection-repair/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Green Valley
+                </Link>
+                .
+              </p>
             </div>
 
-            {/* TODO-BATCH-PHASE3: /las-vegas/slab-leak-detection-repair/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /henderson/slab-leak-detection-repair/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /north-las-vegas/slab-leak-detection-repair/ not yet built */}
+            {/* /las-vegas/, /henderson/, and /green-valley/ slab-leak-detection-repair are live. */}
+            {/* TODO-BATCH-FUTURE: add /north-las-vegas/slab-leak-detection-repair/ once built */}
             {/* TODO-BATCH-PHASE3: /summerlin/slab-leak-detection-repair/ not yet built */}
             {/* TODO-BATCH-PHASE3: /paradise/slab-leak-detection-repair/ not yet built */}
             {/* TODO-BATCH-PHASE3: /spring-valley/slab-leak-detection-repair/ not yet built */}
