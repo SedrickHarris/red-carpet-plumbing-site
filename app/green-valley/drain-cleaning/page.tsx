@@ -178,7 +178,7 @@ const GV_DRAIN_STEPS: { name: string; body: string }[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Related services block. TODO-BATCH-6 routes are plain text only.
+// Related services block. All Green Valley sibling routes are built and linked.
 // ---------------------------------------------------------------------------
 const RELATED_SERVICES: { label: string; href?: string }[] = [
   {
@@ -205,13 +205,15 @@ const RELATED_SERVICES: { label: string; href?: string }[] = [
     label: "Video Camera Plumbing Inspections",
     href: "/video-camera-plumbing-inspections/",
   },
-  // TODO-BATCH-6: activate to /green-valley/water-heater-repair-installation/ once confirmed built and QA-passed
   {
+    // ACTIVATED: P31 built and staged
     label: "Green Valley Water Heater Repair",
+    href: "/green-valley/water-heater-repair-installation/",
   },
-  // TODO-BATCH-6: activate to /green-valley/leak-detection-repair/ once confirmed built and QA-passed
   {
+    // ACTIVATED: P32 built and staged
     label: "Green Valley Leak Detection and Repair",
+    href: "/green-valley/leak-detection-repair/",
   },
 ];
 
@@ -484,9 +486,14 @@ export default function GreenValleyDrainCleaningPage() {
                 <p>
                   Homeowners in original Green Valley neighborhoods also face
                   higher slab leak risk due to aging copper lines under caliche
-                  soil conditions, a topic covered in detail on our Green Valley
-                  slab leak detection page once available.
-                  {/* TODO-BATCH-6: activate link to /green-valley/slab-leak-detection-repair/ once confirmed built and QA-passed */}
+                  soil conditions, a topic covered in detail on our{" "}
+                  <Link
+                    href="/green-valley/slab-leak-detection-repair/"
+                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  >
+                    Green Valley slab leak detection
+                  </Link>{" "}
+                  page.
                 </p>
               </div>
             </div>
@@ -706,7 +713,7 @@ export default function GreenValleyDrainCleaningPage() {
                       </Link>
                     </li>
                   ) : (
-                    // TODO-BATCH-6: activate to the Green Valley service-location route once confirmed built and QA-passed
+                    // Fallback render branch for href-less related items (currently unused).
                     <li key={s.label}>
                       <span className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark/70 ring-1 ring-brand-surface-alt">
                         <span aria-hidden="true" className="text-brand-primary">

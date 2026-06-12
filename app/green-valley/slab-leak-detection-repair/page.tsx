@@ -146,8 +146,7 @@ const GV_SLAB_CAUSES: { title: string; body: string }[] = [
 // ---------------------------------------------------------------------------
 // Repair options — Section 5. Three H3 article cards.
 // Spot repair links to /water-pipe-repair-replacement/.
-// Rerouting links to /re-piping/ (core fallback); TODO-BATCH-6 to activate
-//   /green-valley/re-piping/ once P34 built (see inline note on the item).
+// Rerouting links to the built /green-valley/re-piping/ route.
 // Epoxy has no link.
 // ---------------------------------------------------------------------------
 const REPAIR_OPTIONS: {
@@ -217,8 +216,8 @@ const SLAB_TRUST_STRIP: string[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Related services block. P30, P31, P32 are now built.
-// P34 (/green-valley/re-piping/) is TODO-BATCH-6.
+// Related services block. All Green Valley sibling routes (P30-P34) are built
+// and linked, including /green-valley/re-piping/.
 // ---------------------------------------------------------------------------
 const RELATED_SERVICES: { label: string; href?: string }[] = [
   {
@@ -779,7 +778,7 @@ export default function GreenValleySlabLeakPage() {
                       </Link>
                     </li>
                   ) : (
-                    // TODO-BATCH-6: activate to /green-valley/re-piping/ once confirmed built and QA-passed
+                    // Fallback render branch for href-less related items (currently unused).
                     <li key={s.label}>
                       <span className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark/70 ring-1 ring-brand-surface-alt">
                         <span aria-hidden="true" className="text-brand-primary">

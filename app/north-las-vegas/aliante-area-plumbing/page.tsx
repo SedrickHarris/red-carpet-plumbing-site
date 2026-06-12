@@ -77,13 +77,12 @@ const ALIANTE_FAQS = [
 // All 18 core service pages. Each links to a live route (built=true).
 // card.webp assets exist for the first five services; the rest use the
 // ServiceCard ServiceImagePlaceholder fallback (no image prop passed).
-// TODO-BATCH-PHASE4: Aliante-area service-location pages not yet built:
-//   /north-las-vegas/aliante-area/emergency-plumbing/
-//   /north-las-vegas/aliante-area/drain-cleaning/
-//   /north-las-vegas/aliante-area/water-heater-repair-installation/
-//   /north-las-vegas/aliante-area/leak-detection-repair/
-//   /north-las-vegas/aliante-area/slab-leak-detection-repair/
-// ServiceCards link to core service pages only.
+// ACTIVATED: /north-las-vegas/aliante-area/emergency-plumbing/ built (P40).
+// ACTIVATED: /north-las-vegas/aliante-area/drain-cleaning/ built (P41).
+// ACTIVATED: /north-las-vegas/aliante-area/water-heater-repair-installation/ built (P42).
+// ACTIVATED: /north-las-vegas/aliante-area/leak-detection-repair/ built (P43).
+// ACTIVATED: /north-las-vegas/aliante-area/slab-leak-detection-repair/ built (P44).
+// All Aliante-area service-location ServiceCards now link to built routes.
 // ---------------------------------------------------------------------------
 type ServiceLink = {
   title: string;
@@ -94,32 +93,37 @@ type ServiceLink = {
 
 const ALIANTE_SERVICES: ServiceLink[] = [
   {
+    // ACTIVATED: P40 built and staged.
     title: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    href: "/north-las-vegas/aliante-area/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/card.webp",
     imageAlt: "24/7 emergency plumbing service in the Aliante area",
   },
   {
+    // ACTIVATED: P41 built and staged
     title: "Drain Cleaning",
-    href: "/drain-cleaning/",
+    href: "/north-las-vegas/aliante-area/drain-cleaning/",
     image: "/images/services/drain-cleaning/card.webp",
     imageAlt: "Drain cleaning service in the Aliante area",
   },
   {
+    // ACTIVATED: P43 built and staged
     title: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
+    href: "/north-las-vegas/aliante-area/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/card.webp",
     imageAlt: "Leak detection and repair in the Aliante area",
   },
   {
+    // ACTIVATED: P42 built and staged
     title: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/north-las-vegas/aliante-area/water-heater-repair-installation/",
     image: "/images/services/water-heater-repair-installation/card.webp",
     imageAlt: "Water heater repair and installation in the Aliante area",
   },
   {
+    // ACTIVATED: P44 built and staged
     title: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
+    href: "/north-las-vegas/aliante-area/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Slab leak detection and repair in the Aliante area",
   },
@@ -480,13 +484,12 @@ export default function AlianteAreaPlumbingPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO-BATCH-PHASE4: Aliante-area service-location pages not yet built: */}
-                {/* /north-las-vegas/aliante-area/emergency-plumbing/, */}
-                {/* /north-las-vegas/aliante-area/drain-cleaning/, */}
-                {/* /north-las-vegas/aliante-area/water-heater-repair-installation/, */}
-                {/* /north-las-vegas/aliante-area/leak-detection-repair/, */}
-                {/* /north-las-vegas/aliante-area/slab-leak-detection-repair/. */}
-                {/* ServiceCards link to core service pages only. */}
+                {/* ACTIVATED: /north-las-vegas/aliante-area/emergency-plumbing/ built (P40). */}
+                {/* ACTIVATED: /north-las-vegas/aliante-area/drain-cleaning/ built (P41). */}
+                {/* ACTIVATED: /north-las-vegas/aliante-area/water-heater-repair-installation/ built (P42). */}
+                {/* ACTIVATED: /north-las-vegas/aliante-area/leak-detection-repair/ built (P43). */}
+                {/* ACTIVATED: /north-las-vegas/aliante-area/slab-leak-detection-repair/ built (P44). */}
+                {/* All Aliante-area service-location ServiceCards now link to built routes. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {ALIANTE_SERVICES.map((service) => (
                     <ServiceCard

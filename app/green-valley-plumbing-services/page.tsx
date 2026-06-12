@@ -145,13 +145,15 @@ const GREEN_VALLEY_SERVICES: ServiceLink[] = [
     imageAlt: "Commercial plumbing services in Green Valley, NV",
   },
   {
+    // ACTIVATED: P45 built and staged
     title: "Toilet Repair and Installation",
-    href: "/toilet-repair-installation/",
+    href: "/green-valley/toilet-repair-installation/",
     imageAlt: "Toilet repair and installation in Green Valley, NV",
   },
   {
+    // ACTIVATED: P46 built and staged
     title: "Faucet and Sink Repair and Installation",
-    href: "/faucet-sink-repair-installation/",
+    href: "/green-valley/faucet-sink-repair-installation/",
     imageAlt: "Faucet and sink repair and installation in Green Valley, NV",
   },
   {
