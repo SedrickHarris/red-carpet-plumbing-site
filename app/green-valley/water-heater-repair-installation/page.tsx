@@ -107,9 +107,11 @@ const GV_WH_CAUSES: {
   {
     label: "Original Green Valley homes and aging water heaters",
     body: "Green Valley's original neighborhoods, developed from the late 1970s through the mid-1990s, are now 30 to 45 years old. Most water heaters in these homes have been replaced at least once, and many are on their second or third unit, all operating under Las Vegas Valley hard water conditions that accelerate sediment buildup, deplete anode rods faster, and reduce tank lifespan. Some original Green Valley homes also have copper supply lines that have thinned from decades of hard water mineral exposure, which can affect water quality and water heater performance. Original Green Valley homeowners represent the highest concentration of water heater service and replacement candidates in Henderson.",
-    // TODO-BATCH-6: when /green-valley/slab-leak-detection-repair/ is built,
-    // add a closing sentence referencing slab leak risk from aging copper —
-    // cross-link opportunity. Plain text note only for now.
+    // ACTIVATED: P33 built and staged
+    link: {
+      href: "/green-valley/slab-leak-detection-repair/",
+      text: "Green Valley slab leak detection",
+    },
   },
   {
     label: "Green Valley Ranch entering the second replacement cycle",
@@ -206,8 +208,8 @@ const GV_WH_STEPS: { name: string; body: string }[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Related services block. P30 (/green-valley/drain-cleaning/) is now built.
-// TODO-BATCH-6 routes are plain text only.
+// Related services block. All Green Valley sibling routes (drain, leak, slab)
+// are built and linked.
 // ---------------------------------------------------------------------------
 const RELATED_SERVICES: { label: string; href?: string }[] = [
   {
@@ -230,10 +232,16 @@ const RELATED_SERVICES: { label: string; href?: string }[] = [
     label: "Green Valley Drain Cleaning",
     href: "/green-valley/drain-cleaning/",
   },
-  // TODO-BATCH-6: activate to /green-valley/leak-detection-repair/ once confirmed built and QA-passed
-  { label: "Green Valley Leak Detection and Repair" },
-  // TODO-BATCH-6: activate to /green-valley/slab-leak-detection-repair/ once confirmed built and QA-passed
-  { label: "Green Valley Slab Leak Detection and Repair" },
+  {
+    // ACTIVATED: P32 built and staged
+    label: "Green Valley Leak Detection and Repair",
+    href: "/green-valley/leak-detection-repair/",
+  },
+  {
+    // ACTIVATED: P33 built and staged
+    label: "Green Valley Slab Leak Detection and Repair",
+    href: "/green-valley/slab-leak-detection-repair/",
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -494,6 +502,20 @@ export default function GreenValleyWaterHeaterPage() {
                           {c.label}.
                         </strong>{" "}
                         {c.body}
+                        {c.link ? (
+                          <>
+                            {" "}
+                            Aging copper supply lines in these homes also raise
+                            slab leak risk; see our{" "}
+                            <Link
+                              href={c.link.href}
+                              className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                            >
+                              {c.link.text}
+                            </Link>{" "}
+                            page.
+                          </>
+                        ) : null}
                       </p>
                     </li>
                   ))}
@@ -504,8 +526,14 @@ export default function GreenValleyWaterHeaterPage() {
                 <p className="text-base leading-7 text-brand-dark/80">
                   Original Green Valley homeowners with aging copper supply
                   systems may also want to review their slab leak risk alongside
-                  a water heater service visit.
-                  {/* TODO-BATCH-6: activate link to /green-valley/slab-leak-detection-repair/ once confirmed built and QA-passed */}
+                  a water heater service visit. See our{" "}
+                  <Link
+                    href="/green-valley/slab-leak-detection-repair/"
+                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  >
+                    Green Valley slab leak detection
+                  </Link>{" "}
+                  page for more information.
                 </p>
               </SectionRevealItem>
             </SectionReveal>
@@ -764,7 +792,7 @@ export default function GreenValleyWaterHeaterPage() {
                       </Link>
                     </li>
                   ) : (
-                    // TODO-BATCH-6: activate to the Green Valley service-location route once confirmed built and QA-passed
+                    // Fallback render branch for href-less related items (currently unused).
                     <li key={s.label}>
                       <span className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark/70 ring-1 ring-brand-surface-alt">
                         <span aria-hidden="true" className="text-brand-primary">

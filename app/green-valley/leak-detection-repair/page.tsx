@@ -148,14 +148,15 @@ const GV_LEAK_CAUSES: { title: string; body: string }[] = [
 
 // ---------------------------------------------------------------------------
 // Leak detection services — Section 5.
-// Slab service card links to core /slab-leak-detection-repair/.
+// Slab service card links to core /slab-leak-detection-repair/ and the built
+// /green-valley/slab-leak-detection-repair/ page.
 // Video camera card links to core /video-camera-plumbing-inspections/.
-// GV slab page (P33) is TODO-BATCH-6 (see inline comment on the slab item).
 // ---------------------------------------------------------------------------
 const GV_LEAK_SERVICES: {
   label: string;
   body: string;
   link?: { href: string; text: string };
+  gvLink?: { href: string; text: string };
   todo?: string;
 }[] = [
   {
@@ -173,9 +174,11 @@ const GV_LEAK_SERVICES: {
       href: "/slab-leak-detection-repair/",
       text: "slab leak detection and repair",
     },
-    // TODO-BATCH-6: when /green-valley/slab-leak-detection-repair/ is built,
-    // add a closing sentence: "For Green Valley-specific slab leak information,
-    // see our Green Valley slab leak detection page" with link to that route.
+    // ACTIVATED: P33 built and staged
+    gvLink: {
+      href: "/green-valley/slab-leak-detection-repair/",
+      text: "Green Valley slab leak detection",
+    },
   },
   {
     label: "Pressure testing and leak confirmation",
@@ -226,8 +229,8 @@ const LEAK_TRUST_STRIP: string[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Related services block. P30 and P31 are now built.
-// P33 (/green-valley/slab-leak-detection-repair/) is TODO-BATCH-6.
+// Related services block. All Green Valley sibling routes (drain, water heater,
+// slab leak) are built and linked.
 // ---------------------------------------------------------------------------
 const RELATED_SERVICES: { label: string; href?: string }[] = [
   {
@@ -258,8 +261,11 @@ const RELATED_SERVICES: { label: string; href?: string }[] = [
     label: "Slab Leak Detection and Repair",
     href: "/slab-leak-detection-repair/",
   },
-  // TODO-BATCH-6: activate to /green-valley/slab-leak-detection-repair/ once confirmed built and QA-passed
-  { label: "Green Valley Slab Leak Detection and Repair" },
+  {
+    // ACTIVATED: P33 built and staged
+    label: "Green Valley Slab Leak Detection and Repair",
+    href: "/green-valley/slab-leak-detection-repair/",
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -663,6 +669,19 @@ export default function GreenValleyLeakDetectionPage() {
                         .
                       </>
                     ) : null}
+                    {s.gvLink ? (
+                      <>
+                        {" "}
+                        For Green Valley-specific slab leak information, see our{" "}
+                        <Link
+                          href={s.gvLink.href}
+                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        >
+                          {s.gvLink.text}
+                        </Link>{" "}
+                        page.
+                      </>
+                    ) : null}
                   </p>
                 </li>
               ))}
@@ -803,7 +822,7 @@ export default function GreenValleyLeakDetectionPage() {
                       </Link>
                     </li>
                   ) : (
-                    // TODO-BATCH-6: activate to /green-valley/slab-leak-detection-repair/ once confirmed built and QA-passed
+                    // Fallback render branch for href-less related items (currently unused).
                     <li key={s.label}>
                       <span className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark/70 ring-1 ring-brand-surface-alt">
                         <span aria-hidden="true" className="text-brand-primary">

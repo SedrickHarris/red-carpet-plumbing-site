@@ -296,3 +296,171 @@ Added `/green-valley/[service]/` as a live inline link to the service-areas sect
 - `app/green-valley/slab-leak-detection-repair/page.tsx` — "Green Valley Re-Piping" related-services chip activated from plain-text `<span>` to live `<Link href="/green-valley/re-piping/">`. TODO-BATCH-6 comment replaced with ACTIVATED note. This is the last deferred item from the Green Valley service-location cluster (P30-P34).
 - **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (all routes prerendered static ○). All pass.
 - **Commit:** 1 file, staged by path. Pushed to `origin/main`.
+
+---
+
+## Batch 6 — Lake Las Vegas cluster (P35–P39)
+
+These five Lake Las Vegas service-location pages were authored in a prior session
+but not logged at build time. Entries backfilled from Batch 6 QA inspection (direct
+file + rendered-HTML verification), not from build-time notes.
+
+Common to all five: areaServed `Place` (Lake Las Vegas, Nevada) → `City` (Henderson)
+→ `State` (Nevada) — NOT AdministrativeArea, NOT Clark County. Lake Las Vegas is a
+master-planned resort community within the incorporated City of Henderson; permits
+via the City of Henderson. 5 separate JsonLd blocks (WebPage, BreadcrumbList 3-level,
+Service, HowTo, FAQPage); FAQPage + HowTo both derived from a single const (visible =
+schema). No AggregateRating / Review schema. Copper / 2000–2010 housing framing. Hero
+two-column with `QuoteFormPlaceholder`; `StickyMobileCTA` present; tel:+17025679172.
+Related-services rerouting cards link to built Lake Las Vegas routes (confirmed
+activated). `FLAG: VERIFY` telephone + trust claims present (carry-forward for client
+confirmation).
+
+- **Page 35 — Water Heater Repair and Installation** · `/lake-las-vegas/water-heater-repair-installation/` · `app/lake-las-vegas/water-heater-repair-installation/page.tsx`. Title "Water Heater Repair and Installation in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing". Hero `/images/services/water-heater-repair-installation/card.webp`. FAQ 6 items.
+- **Page 36 — Leak Detection and Repair** · `/lake-las-vegas/leak-detection-repair/` · `app/lake-las-vegas/leak-detection-repair/page.tsx`. Title "Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing". Hero `/images/services/leak-detection-repair/hero.webp`. FAQ 6 items.
+- **Page 37 — Slab Leak Detection and Repair** · `/lake-las-vegas/slab-leak-detection-repair/` · `app/lake-las-vegas/slab-leak-detection-repair/page.tsx`. Title "Slab Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing". Hero `/images/services/slab-leak-detection-repair/card.webp`. FAQ 6 items.
+- **Page 38 — Drain Cleaning** · `/lake-las-vegas/drain-cleaning/` · `app/lake-las-vegas/drain-cleaning/page.tsx`. Title "Drain Cleaning in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing". Hero `/images/services/drain-cleaning/hero.webp`. FAQ const uses `q`/`a` field names (vs `question`/`answer`), 6 items; HowTo has 5 process steps — both still derive from the single const.
+- **Page 39 — Emergency Plumbing** · `/lake-las-vegas/emergency-plumbing/` · `app/lake-las-vegas/emergency-plumbing/page.tsx`. Title "Emergency Plumbing in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing". Hero `/images/services/emergency-plumbing/hero.webp`. FAQ 6 items. Gas-line scope carries a `FLAG: VERIFY`.
+
+- **Validation (Batch 6 QA):** all five pass `eslint`, `tsc --noEmit`, `next build` (prerendered static ○); 0 em dashes / 0 prose double-hyphens in rendered HTML.
+- **Hub:** `app/lake-las-vegas-plumbing-services/page.tsx` was activated in the Batch 6 internal-linking pass (see final entry) — all five cards now point to the `/lake-las-vegas/` routes.
+
+---
+
+## Batch 6, Page 40 — Emergency Plumbing in the Aliante Area of North Las Vegas
+
+- **Route:** `/north-las-vegas/aliante-area/emergency-plumbing/`
+- **File created:** `app/north-las-vegas/aliante-area/emergency-plumbing/page.tsx`
+- **Hub activated:** `app/north-las-vegas/aliante-area-plumbing/page.tsx` — Emergency Plumbing card repointed from core `/emergency-plumbing/` to `/north-las-vegas/aliante-area/emergency-plumbing/`; TODO-BATCH-PHASE4 Emergency Plumbing markers (data comment + render comment) replaced with ACTIVATED notes. No other hub cards/copy touched.
+- **Status:** Created + hub activated (uncommitted, staged). First page of the Aliante cluster (P40-P44).
+- **Schema:** WebPage + BreadcrumbList (4-item) + Service + HowTo + FAQPage (5 separate JsonLd blocks, order: webpage, breadcrumb, service, howTo, faq). No AggregateRating, no `sameAs` on the service-location page.
+- **areaServed:** `Place` "Aliante, North Las Vegas, Nevada" → containedInPlace `City` "North Las Vegas" → containedInPlace `State` "Nevada". NOT AdministrativeArea, NOT Clark County.
+- **Content notes:** Copper-only 2000-2008 framing (16–25yr first service cycle), hard water 17–24 GPG / Lake Mead, slab + caliche soil context, water heater sediment. No galvanized / polybutylene / Kitec narrative. Permit jurisdiction is the City of North Las Vegas (Aliante hub IA).
+- **HowTo:** safety-first 4-step order (shut off water → gas evacuation → document → call), derived from EMERGENCY_STEPS. FAQPage from ALIANTE_EMERGENCY_FAQS (character-for-character).
+- **Internal links (all live):** `/emergency-plumbing/` (Section 3), `/north-las-vegas/aliante-area-plumbing/` + `/north-las-vegas-plumbing-services/` + `/north-las-vegas/emergency-plumbing/` (Section 7), `/contact/` (CTAs). Section 8 related cards link to core fallbacks (`/slab-leak-detection-repair/`, `/drain-cleaning/`, `/leak-detection-repair/`, `/water-heater-repair-installation/`) with TODO-BATCH-6 notes to repoint after P41–P44.
+- **FLAG comments:** 24/7 availability (hero trust strip + FAQ Q3), gas line scope (services list), transparent pricing, telephone — inline source comments only; no FLAG text in any visible string or schema.
+- **Hero image:** `/images/services/emergency-plumbing/hero.webp` (present; no fallback needed).
+- **Deviations:** Meta description ~165 chars — within the ≤160 target band, no flag needed (first cluster page to fit cleanly). Hero uses the two-column `QuoteFormPlaceholder` form slot per the established batch-6 emergency-page pattern (Boulder City P26, Lake Las Vegas P36) and CLAUDE.md two-column-hero standard; the brief's hero spec did not list a form but did not preclude it.
+- **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (both routes prerendered static ○). All pass.
+
+---
+
+## Batch 6, Page 41 — Drain Cleaning in the Aliante Area of North Las Vegas
+
+- **Route:** `/north-las-vegas/aliante-area/drain-cleaning/`
+- **File created:** `app/north-las-vegas/aliante-area/drain-cleaning/page.tsx`
+- **Hub activated:** `app/north-las-vegas/aliante-area-plumbing/page.tsx` — Drain Cleaning card repointed from core `/drain-cleaning/` to `/north-las-vegas/aliante-area/drain-cleaning/`; TODO-BATCH-PHASE4 Drain Cleaning markers (data comment + render comment) replaced with ACTIVATED notes. No other hub cards/copy touched.
+- **Status:** Created + hub activated (uncommitted, staged). Second page of the Aliante cluster (P40-P44).
+- **Schema:** WebPage + BreadcrumbList (4-item) + Service + HowTo + FAQPage (5 separate JsonLd blocks, order: webpage, breadcrumb, service, howTo, faq). No AggregateRating, no `sameAs` on the service-location page.
+- **areaServed:** `Place` "Aliante, North Las Vegas, Nevada" → containedInPlace `City` "North Las Vegas" → containedInPlace `State` "Nevada". NOT AdministrativeArea, NOT Clark County.
+- **Content notes:** Copper-only 2000-2008 framing (16-25yr first service cycle). NO galvanized, NO polybutylene, NO tree root intrusion content. Hard water 17-24 GPG / Lake Mead. Section 2 is a two-paragraph direct-answer block (featured-snippet target). No dual-vintage narrative.
+- **HowTo:** 4-step process (assess → select method → clear → verify), derived from ALIANTE_DRAIN_STEPS. FAQPage from ALIANTE_DRAIN_FAQS (character-for-character, 6 Q&A).
+- **Internal links (all live):** `/drain-cleaning/` (Section 4 intro), `/sewer-line-services/` + `/video-camera-plumbing-inspections/` (Section 4 service cards), `/north-las-vegas/aliante-area-plumbing/` + `/north-las-vegas-plumbing-services/` + `/north-las-vegas/drain-cleaning/` (Section 8), `/contact/` (CTAs).
+- **Related cards (Section 9):** Emergency Plumbing links DIRECTLY to `/north-las-vegas/aliante-area/emergency-plumbing/` (P40 built, no TODO). Water heater (P42), leak detection (P43), and slab leak (P44) point to core fallbacks with TODO-BATCH-6 repoint comments.
+- **FLAG comments:** telephone (serviceSchema provider) + transparent-pricing (hero trust item + ctaNote) — inline source comments only; no FLAG text in any visible string or schema. NO 24/7 / emergency-availability claim on this page (per brief).
+- **Hero:** two-column with `QuoteFormPlaceholder` form slot — matches the established two-column-hero standard and the Green Valley / P40 siblings (correct convention, not a deviation). Hero image `/images/services/drain-cleaning/hero.webp` (present).
+- **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (both new/changed routes prerendered static ○). All pass.
+- **Deviations:** None.
+
+---
+
+## Batch 6, Page 42 — Water Heater Repair and Installation in the Aliante Area of North Las Vegas
+
+- **Route:** `/north-las-vegas/aliante-area/water-heater-repair-installation/`
+- **File created:** `app/north-las-vegas/aliante-area/water-heater-repair-installation/page.tsx`
+- **Hub activated:** `app/north-las-vegas/aliante-area-plumbing/page.tsx` — Water Heater card repointed from core `/water-heater-repair-installation/` to `/north-las-vegas/aliante-area/water-heater-repair-installation/`; TODO-BATCH-PHASE4 Water Heater markers (data comment + render comment) replaced with ACTIVATED notes. No other hub cards/copy touched.
+- **Status:** Created + hub activated (uncommitted, staged). Third page of the Aliante cluster (P40-P44).
+- **Schema:** WebPage + BreadcrumbList (4-item) + Service + HowTo + FAQPage (5 separate JsonLd blocks, order: webpage, breadcrumb, service, howTo, faq). No AggregateRating, no `sameAs` on the service-location page.
+- **areaServed:** `Place` "Aliante, North Las Vegas, Nevada" → containedInPlace `City` "North Las Vegas" → containedInPlace `State` "Nevada". NOT AdministrativeArea, NOT Clark County.
+- **Title decision (approved):** title, WebPage schema name, OG title, H1, and breadcrumb #4 all use the consistent "in the Aliante Area of North Las Vegas, NV" form. No trim, no title-vs-schema mismatch. (User chose Option 1 at Pre-Build Gate.)
+- **Content notes:** Aliante-only refinement of the NLV parent. Copper-only 2000-2008 first-replacement-cycle framing. NO galvanized, NO commercial corridor (Craig Road / Cheyenne / Losee), NO dual-vintage narrative. Four cause anchors (left-border H3 article pattern): first replacement cycle, hard water/sediment, anode rod depletion, closed-loop/thermal expansion. **Permit jurisdiction stated as City of North Las Vegas throughout** (Section 4 step 4, FAQ Q5 + Q6) — the key differentiator from Clark County location pages.
+- **HowTo:** 4-step process (diagnose → assess repair vs replace → present options → complete to code), from ALIANTE_WH_STEPS. FAQPage from ALIANTE_WH_FAQS (character-for-character, 6 Q&A).
+- **Internal links (all live):** `/water-heater-repair-installation/` (Section 3 intro), `/north-las-vegas/aliante-area-plumbing/` + `/north-las-vegas-plumbing-services/` + `/north-las-vegas/water-heater-repair-installation/` (Section 7), `/contact/` (CTAs).
+- **Related cards (Section 8):** Emergency Plumbing (P40) and Drain Cleaning (P41) link DIRECTLY to built Aliante-specific routes (no TODO). Leak detection (P43) and slab leak (P44) point to core fallbacks with TODO-BATCH-6 repoint comments.
+- **FLAG comments:** telephone (serviceSchema provider) + gas line scope (ALIANTE_WH_SERVICES gas/electric item) + transparent-pricing (hero trust item + ctaNote) — inline source comments only; no FLAG text in any visible string or schema.
+- **Hero:** two-column with `QuoteFormPlaceholder` form slot (established convention). Hero image uses `card.webp` (not low-res hero.webp), matching the NLV water heater sibling; carried the TODO for a dedicated higher-res hero asset.
+- **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (all four Aliante routes + hub prerendered static ○). All pass.
+- **Deviations:** None.
+
+---
+
+## Batch 6, Page 43 — Leak Detection and Repair in the Aliante Area of North Las Vegas
+
+- **Route:** `/north-las-vegas/aliante-area/leak-detection-repair/`
+- **File created:** `app/north-las-vegas/aliante-area/leak-detection-repair/page.tsx`
+- **Hub activated:** `app/north-las-vegas/aliante-area-plumbing/page.tsx` — Leak Detection and Repair card repointed from core `/leak-detection-repair/` to `/north-las-vegas/aliante-area/leak-detection-repair/`; TODO-BATCH-PHASE4 leak markers (data comment + render comment) replaced with ACTIVATED P43 notes.
+- **Sibling repoints:** P40, P41, P42 leak-detection related cards repointed from core `/leak-detection-repair/` to the Aliante route; TODO-BATCH-6 leak comments replaced with ACTIVATED P43.
+- **Status:** Created + hub/sibling activated (uncommitted, staged). Fourth page of the Aliante cluster (P40-P44).
+- **Schema:** WebPage + BreadcrumbList (4-item) + Service + HowTo + FAQPage (5 separate JsonLd blocks, order: webpage, breadcrumb, service, howTo, faq). No AggregateRating, no `sameAs`.
+- **areaServed:** `Place` "Aliante, North Las Vegas, Nevada" → `City` "North Las Vegas" → `State` "Nevada". The Service `provider` carries a `PostalAddress` per the P43 brief variant (differs from the url-only provider on P40-P42; per memory note that per-page brief variants override the established shape).
+- **Content notes:** Copper-only 2000-2008 first-service-cycle framing. NO galvanized, NO dual-vintage, NO commercial corridor. Four cause anchors (hard water corrosion, pinhole leaks, caliche soil, closed-loop pressure). Five detection-service blocks. "non-invasive" appears 6+ times in rendered copy.
+- **HowTo:** 4-step detection process, from ALIANTE_LEAK_STEPS. FAQPage from ALIANTE_LEAK_FAQS (character-for-character, 6 Q&A).
+- **Internal links (all live except slab fallback):** `/leak-detection-repair/` (Section 3), `/video-camera-plumbing-inspections/` (Section 4 note), `/north-las-vegas/aliante-area/emergency-plumbing/` (Section 6), `/north-las-vegas/aliante-area-plumbing/` + `/north-las-vegas-plumbing-services/` + `/north-las-vegas/leak-detection-repair/` (Section 8), `/contact/` (CTAs). Section 4 slab card + slab related card pointed to core `/slab-leak-detection-repair/` with TODO-BATCH-6 (since cleared by P44).
+- **FLAG comments:** telephone (serviceSchema provider) + transparent-pricing (hero trust item + ctaNote + why-choose bullet) — inline source comments only.
+- **Hero:** two-column with `QuoteFormPlaceholder` form slot. Hero image uses `hero.webp` (118KB, the higher-res asset for this service; `card.webp` is 15KB).
+- **Trust strip:** rendered via hero `trustItems` (P40-P43 cluster pattern), not a separate red band.
+- **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (route prerendered static ○). All pass.
+- **Deviations:** Trust items folded into hero per cluster pattern rather than a standalone red band (brief Step 02 sketch); mid-page charcoal CTA added per cluster pattern and Step 03 conversion requirement; CTA labels use the brief's "Call Now: (702) 567-9172" form (P40-P42 use "Call (702) 567-9172"); Service provider uses `PostalAddress` per the brief variant; meta description ~234 chars (exceeds ≤160 target, used verbatim per approved brief — flagged).
+
+---
+
+## Batch 6, Page 44 — Slab Leak Detection and Repair in the Aliante Area of North Las Vegas
+
+- **Route:** `/north-las-vegas/aliante-area/slab-leak-detection-repair/`
+- **File created:** `app/north-las-vegas/aliante-area/slab-leak-detection-repair/page.tsx`
+- **Hub activated:** `app/north-las-vegas/aliante-area-plumbing/page.tsx` — Slab Leak Detection and Repair card repointed from core `/slab-leak-detection-repair/` to `/north-las-vegas/aliante-area/slab-leak-detection-repair/`; final TODO-BATCH-PHASE4 markers (data comment + render comment) replaced with ACTIVATED P44 notes. Hub now has all Aliante service-location cards on built routes.
+- **TODO-BATCH-6 cleanup (Step B):** slab related-cards repointed from core `/slab-leak-detection-repair/` to the Aliante route in all four siblings — `emergency-plumbing` (P40), `drain-cleaning` (P41), `water-heater-repair-installation` (P42), and `leak-detection-repair` (P43, both the Section 4 detection-service card link and the related-services card). TODO-BATCH-6 slab comments replaced with ACTIVATED P44.
+- **Status:** Created + hub/sibling activated + log entry (uncommitted, staged). Fifth and final page of the Aliante cluster (P40-P44).
+- **Schema:** WebPage + BreadcrumbList (4-item) + Service + HowTo + FAQPage (5 separate JsonLd blocks, order: webpage, breadcrumb, service, howTo, faq). No AggregateRating, no `sameAs`.
+- **areaServed:** `Place` "Aliante, North Las Vegas, Nevada" → `City` "North Las Vegas" → `State` "Nevada". Service `provider` carries `PostalAddress` per the P44 brief variant.
+- **Content notes:** Copper-only 2000-2008 first-service-cycle framing. NO galvanized, NO polybutylene (the Green Valley REPAIR_OPTIONS source had polybutylene; correctly excluded here), NO dual-vintage, NO commercial corridor. Sections: warning signs (7), three detection methods (acoustic / thermal / pressure), four causes, three repair options (spot repair / rerouting / epoxy lining) via the Green Valley REPAIR_OPTIONS array shape. "non-invasive" appears 6+ times in rendered copy.
+- **HowTo:** 4-step process (locate → assess → present options → repair and pressure-test), from ALIANTE_SLAB_STEPS. FAQPage from ALIANTE_SLAB_FAQS (character-for-character, 6 Q&A).
+- **Internal links (all live except noted):** `/north-las-vegas/aliante-area/leak-detection-repair/` + `/slab-leak-detection-repair/` (Section 4 intro), `/water-pipe-repair-replacement/` (spot repair), `/re-piping/` (rerouting — core fallback, no Aliante re-piping page), `/north-las-vegas/aliante-area-plumbing/` + `/north-las-vegas-plumbing-services/` (Section 9), `/contact/` (CTAs); four related cards link directly to built Aliante routes (P40-P43).
+- **NLV slab parent link:** `/north-las-vegas/slab-leak-detection-repair/` is NOT present in the repo (Gate 1 + glob confirmed; the implementation-log "Page 12" reference does not correspond to a built file at that path). Section 9 falls back to the core `/slab-leak-detection-repair/` route with a TODO to update when the NLV slab page is confirmed built.
+- **FLAG comments:** telephone (serviceSchema provider) + transparent-pricing (hero trust item + ctaNote + why-choose bullet) — inline source comments only.
+- **Hero:** two-column with `QuoteFormPlaceholder` form slot. Hero image uses `card.webp` (92KB); `hero.webp` is the low-res 18KB asset (TODO for dedicated hero). Trust items folded into hero `trustItems` per cluster pattern.
+- **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (101 static pages, new route prerendered ○). All pass.
+- **Deviations:** Trust items in hero rather than a standalone red band (cluster consistency vs brief Step 02 / Green Valley band); mid-page charcoal CTA added per cluster pattern; CTA labels use the brief's "Call Now: (702) 567-9172" form; Service provider uses `PostalAddress` per the brief variant; meta description ~218 chars (exceeds ≤160 target, used verbatim per approved brief — flagged); NLV slab parent link uses core fallback (page not built).
+- **Discovered (pre-existing, OUT OF P44 SCOPE — flagged, not changed):** P40 related cards for Drain Cleaning (`/drain-cleaning/`) and Water Heater (`/water-heater-repair-installation/`), and P41's Water Heater related card (`/water-heater-repair-installation/`), still point to core routes despite their Aliante equivalents (P41/P42) being built. Their P41/P42 activation steps repointed the hub but not these sibling related cards. Recommend a follow-up repoint pass.
+- **Cluster status:** Aliante service-location cluster (P40-P44) is now built. All five hub cards and all in-cluster slab/leak related cards are on built Aliante routes; remaining drain/water-heater sibling cards noted above are the only internal-link cleanup outstanding (resolved in the Batch 6 internal-linking pass — see final entry).
+
+---
+
+## Batch 6, Page 45 — Toilet Repair and Installation in Green Valley
+
+- **Route:** `/green-valley/toilet-repair-installation/` · **File created:** `app/green-valley/toilet-repair-installation/page.tsx`
+- **Hub activated:** `app/green-valley-plumbing-services/page.tsx` — Toilet card repointed core `/toilet-repair-installation/` → `/green-valley/toilet-repair-installation/` (ACTIVATED: P45).
+- **Schema:** WebPage + BreadcrumbList (3-level) + Service + HowTo + FAQPage (5 blocks). areaServed `Place` (Green Valley, Nevada) → `City` (Henderson) → `State` (Nevada). Provider includes `PostalAddress` (brief variant). No AggregateRating. HowTo from `GV_TOILET_STEPS`; FAQPage from `GV_TOILET_FAQS` (6, character-for-character).
+- **Content:** hard-water siphon-jet/flapper wear, original GV aging fixtures, wax-ring + slab movement; 6 service cards; repair-vs-replace section; SNWA conservation context. Two-era GV framing. Green Valley always paired with Henderson; never a city.
+- **Internal links:** `/toilet-repair-installation/`, `/green-valley/slab-leak-detection-repair/`, `/green-valley/leak-detection-repair/`, `/green-valley/drain-cleaning/`, `/drain-cleaning/`, `/green-valley-plumbing-services/`, `/henderson-plumbing-services/`, `/contact/`.
+- **Hero image:** `/images/services/toilet-repair-installation/hero.webp` (70KB; no `card.webp` — TODO note). Separate red trust band (GV cluster pattern); mid-page charcoal CTA.
+- **Deviation:** approved Section 6 H2 was supplied with a double hyphen ("Toilet Repair or Replacement -- What Makes Sense…"); rendered with a colon to comply with the no-double-hyphen / no-em-dash brand rule (no words changed). Meta description verbatim per brief.
+- **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (prerendered static ○). All pass.
+
+---
+
+## Batch 6, Page 46 — Faucet and Sink Repair and Installation in Green Valley
+
+- **Route:** `/green-valley/faucet-sink-repair-installation/` · **File created:** `app/green-valley/faucet-sink-repair-installation/page.tsx`
+- **Hub activated:** `app/green-valley-plumbing-services/page.tsx` — Faucet & Sink card repointed core → `/green-valley/faucet-sink-repair-installation/` (ACTIVATED: P46).
+- **Schema:** 5 blocks (WebPage, BreadcrumbList 3-level, Service w/ `PostalAddress`, HowTo, FAQPage). areaServed `Place` (Green Valley) → `City` (Henderson) → `State` (Nevada). HowTo from `GV_FAUCET_SINK_STEPS`; FAQPage from `GV_FAUCET_SINK_FAQS` (6, character-for-character). No AggregateRating.
+- **Content:** hard-water cartridge/aerator wear, original GV aging supply lines/valves, P-trap deterioration; 6 service cards; two-era GV framing. Green Valley paired with Henderson; never a city.
+- **Internal links:** `/faucet-sink-repair-installation/`, `/green-valley/leak-detection-repair/`, `/green-valley/drain-cleaning/`, `/drain-cleaning/`, `/green-valley-plumbing-services/`, `/henderson-plumbing-services/`, `/green-valley/toilet-repair-installation/`, `/contact/`.
+- **Hero image:** `/images/services/faucet-sink-repair-installation/hero.webp` (227KB; no `card.webp` — TODO note). Separate red trust band; mid-page charcoal CTA.
+- **Deviations:** none beyond the established cluster pattern (hero trust band, mid CTA, `PostalAddress` provider).
+- **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (prerendered static ○). All pass.
+- **Cluster status:** Green Valley cluster (P30-P34 core + P45-P46 fixtures) complete.
+
+---
+
+## Batch 6 — QA Pass + Internal-Linking Activation (full-batch)
+
+- **Read-only QA** across all 17 Batch 6 pages + 3 hubs: PASS. `eslint`/`tsc`/`next build` clean; 0 em dashes and 0 prose double-hyphens in rendered HTML across all 17; no AggregateRating/Review/AdministrativeArea anywhere; areaServed correct on all (GV/LLV → Henderson, Aliante → North Las Vegas); FAQ + HowTo single-source-of-truth on every page. GV/LLV "Clark County" appears only in body code-compliance prose (permits via City of Henderson), never in areaServed.
+- **Internal-linking activation pass (post-QA, applied):**
+  1. **LLV hub** `app/lake-las-vegas-plumbing-services/page.tsx` — all 5 service-location cards repointed to `/lake-las-vegas/...` (Emergency P39, Drain P38, Leak P36, Water Heater P35, Slab P37); stale TODO-BATCH-PHASE4 comments cleared. (Hub had never been activated; the 5 pages were orphaned from it.)
+  2. **Aliante siblings** — P40 (emergency) Drain + Water Heater cards and P41 (drain) Water Heater card repointed to built Aliante routes (closes the pre-existing gap flagged on P44). Aliante cluster now has zero remaining core-route related cards.
+  3. **GV inter-page cross-links** — P30/P31/P32 `RELATED_SERVICES` cards activated to built `/green-valley/...` sibling routes.
+- **GV slab cross-link copy fixes (approved):** P30 body prose (dropped now-false "once available", linked the phrase), P31 body prose (added linked sentence), P31 first cause card (added linked sentence + render support), P32 slab service card (added GV-specific linked sentence via a `gvLink` field). Factual-accuracy / approved copy additions; 0 em dashes / 0 double hyphens rendered.
+- **Stale-comment cleanup:** all now-inaccurate TODO-BATCH-6 / TODO-BATCH-PHASE4 / "plain text only" / "core fallback" header comments and dead render-branch comments updated across the GV, LLV, and Aliante clusters. The only remaining TODO-BATCH-6 mention is accurate ("All render as live links — no TODO-BATCH-6 entries remain.").
+- **Carry-forward (not blocking commit):** all `FLAG: VERIFY` trust claims (reviews/ratings, "Over 40 years," 24/7, transparent pricing, license #0048585A, telephone) await client confirmation before launch. Hero-asset TODOs (dedicated higher-res heroes) on several pages.
+- **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (101 static pages prerendered ○). All pass.

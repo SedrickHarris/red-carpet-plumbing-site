@@ -78,12 +78,14 @@ const LAKE_LAS_VEGAS_FAQS = [
 // All 18 core service pages. Each links to a live route (built=true).
 // card.webp assets exist for the first five services; the rest use the
 // ServiceCard ServiceImagePlaceholder fallback (no image prop passed).
-// TODO-BATCH-PHASE4: only three Lake Las Vegas service-location pages are
-// documented in the build list:
-//   /lake-las-vegas/water-heater-repair-installation/
-//   /lake-las-vegas/leak-detection-repair/
-//   /lake-las-vegas/slab-leak-detection-repair/
-// ServiceCards link to core service pages only.
+// ACTIVATED: all five Lake Las Vegas service-location pages (P35-P39) are built
+// and staged. These five cards link directly to the Lake Las Vegas routes:
+//   /lake-las-vegas/emergency-plumbing/ (P39)
+//   /lake-las-vegas/drain-cleaning/ (P38)
+//   /lake-las-vegas/leak-detection-repair/ (P36)
+//   /lake-las-vegas/water-heater-repair-installation/ (P35)
+//   /lake-las-vegas/slab-leak-detection-repair/ (P37)
+// Remaining ServiceCards (sewer, etc.) link to core service pages.
 // ---------------------------------------------------------------------------
 type ServiceLink = {
   title: string;
@@ -94,32 +96,37 @@ type ServiceLink = {
 
 const LAKE_LAS_VEGAS_SERVICES: ServiceLink[] = [
   {
+    // ACTIVATED: P39 built and staged
     title: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    href: "/lake-las-vegas/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/card.webp",
     imageAlt: "24/7 emergency plumbing service in Lake Las Vegas, NV",
   },
   {
+    // ACTIVATED: P38 built and staged
     title: "Drain Cleaning",
-    href: "/drain-cleaning/",
+    href: "/lake-las-vegas/drain-cleaning/",
     image: "/images/services/drain-cleaning/card.webp",
     imageAlt: "Drain cleaning service in Lake Las Vegas, NV",
   },
   {
+    // ACTIVATED: P36 built and staged
     title: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
+    href: "/lake-las-vegas/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/card.webp",
     imageAlt: "Leak detection and repair in Lake Las Vegas, NV",
   },
   {
+    // ACTIVATED: P35 built and staged
     title: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/lake-las-vegas/water-heater-repair-installation/",
     image: "/images/services/water-heater-repair-installation/card.webp",
     imageAlt: "Water heater repair and installation in Lake Las Vegas, NV",
   },
   {
+    // ACTIVATED: P37 built and staged
     title: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
+    href: "/lake-las-vegas/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Slab leak detection and repair in Lake Las Vegas, NV",
   },
@@ -481,11 +488,9 @@ export default function LakeLasVegasPlumbingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO-BATCH-PHASE4: Lake Las Vegas service-location pages not yet built: */}
-                {/* /lake-las-vegas/water-heater-repair-installation/, */}
-                {/* /lake-las-vegas/leak-detection-repair/, */}
-                {/* /lake-las-vegas/slab-leak-detection-repair/. */}
-                {/* ServiceCards link to core service pages only. */}
+                {/* ACTIVATED: all five Lake Las Vegas service-location pages */}
+                {/* (P35-P39) are built; their cards link directly to the */}
+                {/* /lake-las-vegas/ routes. Remaining cards link to core pages. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {LAKE_LAS_VEGAS_SERVICES.map((service) => (
                     <ServiceCard

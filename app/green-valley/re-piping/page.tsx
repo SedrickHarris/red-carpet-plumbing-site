@@ -22,10 +22,8 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 // blocks; HowTo for the visible process steps). No AggregateRating schema.
 // Green Valley is a community within the incorporated City of Henderson — never
 // described as a city or unincorporated community.
-// NOTE: /green-valley/slab-leak-detection-repair/ (P33) is now built.
-// The rerouting card in P33 links to /re-piping/ (core fallback) with a
-// TODO-BATCH-6 comment to activate /green-valley/re-piping/ once this page is
-// built. That cross-link activation in P33 requires a separate brief.
+// NOTE: /green-valley/slab-leak-detection-repair/ (P33) is built, and its
+// rerouting and related-services links to /green-valley/re-piping/ are active.
 
 export const metadata: Metadata = {
   title: "Re-Piping Services in Green Valley, Henderson, NV | Red Carpet Plumbing",
