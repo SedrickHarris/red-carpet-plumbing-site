@@ -9,6 +9,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title: "Commercial Plumbing in Las Vegas, NV | Red Carpet Plumbing",
@@ -258,7 +259,7 @@ const serviceSchema = {
   name: "Commercial Plumbing",
   serviceType: "Commercial Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and multi-unit buildings throughout Las Vegas and the Las Vegas Valley. Nevada Contractor License #0048585A (C-1 Plumbing and Heating).",
+    "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and multi-unit buildings throughout the Las Vegas Valley. Nevada Contractor License #0048585A (C-1 Plumbing and Heating).",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -335,7 +336,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Commercial Plumbing in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses and property managers throughout Las Vegas and the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses and property managers throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/commercial-plumbing/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -419,42 +420,10 @@ export default function CommercialPlumbingPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas businesses choose Red Carpet Plumbing"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item, index) => {
-                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
-                return (
-                  <li
-                    key={item}
-                    className={`relative flex items-center gap-2${
-                      isLast
-                        ? ""
-                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
-                    }`}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4 flex-shrink-0 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm font-semibold">{item}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={TRUST_STRIP_ITEMS}
+          ariaLabel="Why Las Vegas businesses choose Red Carpet Plumbing"
+        />
 
         {/* SECTION 3: COMMERCIAL PLUMBING PROBLEMS THAT NEED ATTENTION */}
         <section className="bg-white">
@@ -471,7 +440,7 @@ export default function CommercialPlumbingPage() {
                 Red Carpet Plumbing provides licensed commercial plumbing
                 repair, installation, and maintenance for businesses,
                 restaurants, property managers, and multi-unit buildings
-                throughout Las Vegas and the Las Vegas Valley. Nevada
+                throughout the Las Vegas Valley. Nevada
                 Contractor License #0048585A (C-1 Plumbing and Heating) covers
                 commercial plumbing work.
               </p>

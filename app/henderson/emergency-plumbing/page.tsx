@@ -9,6 +9,7 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — license #0048585A, 24/7 availability,
 // transparent-pricing, and any rating/40-year claims are source-site/project
@@ -329,32 +330,10 @@ export default function HendersonEmergencyPlumbingPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Henderson customers choose Red Carpet Plumbing for emergency service"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
-              {EMERGENCY_TRUST_STRIP.map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <svg
-                    aria-hidden="true"
-                    className="h-4 w-4 flex-shrink-0 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm font-semibold">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={EMERGENCY_TRUST_STRIP}
+          ariaLabel="Why Henderson customers choose Red Carpet Plumbing for emergency service"
+        />
 
         {/* SECTION 3: DIRECT ANSWER */}
         <section className="bg-white">
@@ -652,7 +631,7 @@ export default function HendersonEmergencyPlumbingPage() {
         {/* SECTION 12: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Need an Emergency Plumber in Henderson?"
+          headline={<>Need an Emergency Plumber<br />in Henderson?</>}
           body="Do not wait on a plumbing emergency. Call Red Carpet Plumbing at (702) 567-9172 or request service online. We serve homes and businesses throughout Henderson, including Green Valley, Lake Las Vegas, and surrounding communities."
           primaryCTA={{
             label: "Call (702) 567-9172",

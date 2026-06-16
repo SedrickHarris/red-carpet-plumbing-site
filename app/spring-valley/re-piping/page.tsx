@@ -696,7 +696,7 @@ export default function SpringValleyRePipingPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Schedule Re-Piping Service in Spring Valley Today"
+          headline={<>Schedule Re-Piping Service<br />in Spring Valley Today</>}
           body="Red Carpet Plumbing provides whole-house and partial re-piping throughout Spring Valley, NV, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. Clark County permits pulled and inspections scheduled. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

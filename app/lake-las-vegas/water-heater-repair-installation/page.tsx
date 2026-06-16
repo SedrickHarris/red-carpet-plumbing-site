@@ -621,7 +621,7 @@ export default function LakeLasVegasWaterHeaterPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Need Water Heater Repair or Installation in Lake Las Vegas?"
+          headline={<>Need Water Heater Repair or Installation<br />in Lake Las Vegas?</>}
           body="Red Carpet Plumbing services tank and tankless water heaters throughout Lake Las Vegas and Henderson, NV. Hard water maintenance, Clark County code-compliant installations, and repair or replacement assessments from licensed plumbers. Call us or schedule service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

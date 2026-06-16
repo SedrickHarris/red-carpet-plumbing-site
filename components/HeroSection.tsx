@@ -82,14 +82,14 @@ export function HeroSection({
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-20"
+            className="object-cover opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/40" />
         </div>
       ) : null}
 
       <div
-        className={`relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16 ${
+        className={`relative mx-auto max-w-7xl px-4 py-16 sm:px-4 sm:py-20 lg:px-6 lg:py-24 xl:px-8 2xl:px-10 ${
           hasSplit
             ? "grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(420px,0.75fr)] lg:gap-14 xl:gap-20"
             : ""

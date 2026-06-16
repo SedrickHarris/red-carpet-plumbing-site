@@ -705,7 +705,7 @@ export default function ParadiseDrainCleaningPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Ready to Clear Your Drain in Paradise, NV?"
+          headline={<>Ready to Clear Your Drain<br />in Paradise, NV?</>}
           body="Do not let a slow drain turn into a complete backup. Red Carpet Plumbing provides professional drain cleaning throughout Paradise and the Las Vegas Valley. Call now or request service online."
           primaryCTA={{
             label: "Call Now: (702) 567-9172",

@@ -571,7 +571,7 @@ export default function SummerlinDrainCleaningPage() {
         {/* SECTION 8: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Schedule Drain Cleaning in Summerlin Today"
+          headline={<>Schedule Drain Cleaning<br />in Summerlin Today</>}
           body="Red Carpet Plumbing provides professional drain cleaning throughout Summerlin, NV, including Summerlin North, Summerlin South, The Hills, The Trails, The Arbors, and all Summerlin villages. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

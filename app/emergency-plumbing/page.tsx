@@ -10,6 +10,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title: "Emergency Plumber in Las Vegas, NV | Red Carpet Plumbing",
@@ -33,7 +34,7 @@ const EMERGENCY_FAQS = [
     question:
       "Does Red Carpet Plumbing offer 24/7 emergency plumbing in Las Vegas?",
     answer:
-      "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service for homes and businesses throughout Las Vegas and the Las Vegas Valley. Call (702) 567-9172 any time for emergency plumbing assistance.",
+      "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service for homes and businesses throughout the Las Vegas Valley. Call (702) 567-9172 any time for emergency plumbing assistance.",
   },
   {
     question: "What counts as a plumbing emergency?",
@@ -194,7 +195,7 @@ const EMERGENCY_STEPS = [
   },
   {
     title: "Call Red Carpet Plumbing",
-    body: "Call (702) 567-9172 for 24/7 emergency plumbing service throughout Las Vegas and the Las Vegas Valley. Our licensed plumbers will assess the situation and provide a clear explanation of the repair options before any work begins.",
+    body: "Call (702) 567-9172 for 24/7 emergency plumbing service throughout the Las Vegas Valley. Our licensed plumbers will assess the situation and provide a clear explanation of the repair options before any work begins.",
   },
 ];
 
@@ -258,7 +259,7 @@ const serviceSchema = {
   name: "Emergency Plumbing",
   serviceType: "Emergency Plumbing",
   description:
-    "Red Carpet Plumbing provides 24/7 emergency plumbing service for homes and businesses throughout Las Vegas and the Las Vegas Valley, including burst pipe repair, sewer backup clearing, water heater emergencies, slab leak response, gas line emergencies, and major leak repair.",
+    "Red Carpet Plumbing provides 24/7 emergency plumbing service for homes and businesses throughout the Las Vegas Valley, including burst pipe repair, sewer backup clearing, water heater emergencies, slab leak response, gas line emergencies, and major leak repair.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -335,7 +336,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Emergency Plumber in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides 24/7 emergency plumbing in Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides 24/7 emergency plumbing in the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/emergency-plumbing/",
   isPartOf: {
     "@type": "WebSite",
@@ -385,7 +386,7 @@ export default function EmergencyPlumbingPage() {
               <br className="hidden sm:block" /> in Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides 24/7 emergency plumbing service for homes and businesses throughout Las Vegas and the Las Vegas Valley. If you have a burst pipe, sewer backup, water heater failure, or any urgent plumbing situation, call us now at (702) 567-9172."
+          subheading="Red Carpet Plumbing provides 24/7 emergency plumbing service for homes and businesses throughout the Las Vegas Valley. If you have a burst pipe, sewer backup, water heater failure, or any urgent plumbing situation, call us now at (702) 567-9172."
           trustItems={[
             "4.8 stars, 76 Google reviews",
             "NV Licensed Plumbers, #0048585A",
@@ -406,42 +407,10 @@ export default function EmergencyPlumbingPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for emergency service"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item, index) => {
-                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
-                return (
-                  <li
-                    key={item}
-                    className={`relative flex items-center gap-2${
-                      isLast
-                        ? ""
-                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
-                    }`}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4 flex-shrink-0 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm font-semibold">{item}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={TRUST_STRIP_ITEMS}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for emergency service"
+        />
 
         {/* SECTION 3: WHAT COUNTS AS A PLUMBING EMERGENCY */}
         <section className="bg-white">
@@ -513,7 +482,7 @@ export default function EmergencyPlumbingPage() {
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Red Carpet Plumbing responds to all types of plumbing
-                    emergencies throughout Las Vegas and the Las Vegas Valley.
+                    emergencies throughout the Las Vegas Valley.
                     Our licensed plumbers handle every situation from burst
                     pipes to sewer backups and gas line issues.
                   </p>
@@ -627,7 +596,7 @@ export default function EmergencyPlumbingPage() {
               <br className="hidden sm:block" /> in Las Vegas Now?
             </>
           }
-          body="Call Red Carpet Plumbing for 24/7 emergency plumbing service throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated, over 40 years in the valley."
+          body="Call Red Carpet Plumbing for 24/7 emergency plumbing service throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated, over 40 years in the valley."
           primaryCTA={{
             label: "Call Now: (702) 567-9172",
             href: "tel:+17025679172",
@@ -643,7 +612,7 @@ export default function EmergencyPlumbingPage() {
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
                 Red Carpet Plumbing provides emergency plumbing service
-                throughout Las Vegas and the Las Vegas Valley.
+                throughout the Las Vegas Valley.
               </p>
               <p className="mt-4 text-base leading-7 text-white/80">
                 See our dedicated emergency plumbing pages for{" "}
@@ -765,7 +734,7 @@ export default function EmergencyPlumbingPage() {
               <br className="hidden sm:block" /> in Las Vegas?
             </>
           }
-          body="Red Carpet Plumbing is available 24 hours a day for emergency plumbing throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated, NV #0048585A."
+          body="Red Carpet Plumbing is available 24 hours a day for emergency plumbing throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated, NV #0048585A."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

@@ -697,7 +697,7 @@ export default function EnterpriseSlabLeakPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Suspect a Slab Leak in Enterprise? Call Red Carpet Plumbing."
+          headline={<>Suspect a Slab Leak<br />in Enterprise? Call Red Carpet Plumbing.</>}
           body="Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Enterprise, NV, including Rhodes Ranch, Mountain's Edge, and the Southwest Las Vegas area. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

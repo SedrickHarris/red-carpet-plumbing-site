@@ -768,7 +768,7 @@ export default function ParadiseLeakDetectionPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Ready for Non-Invasive Leak Detection in Paradise, NV?"
+          headline={<>Ready for Non-Invasive Leak Detection<br />in Paradise, NV?</>}
           body="Do not let a hidden leak cause more damage. Red Carpet Plumbing provides professional, non-invasive leak detection and repair throughout Paradise and the Las Vegas Valley. Call now or request service online."
           primaryCTA={{
             label: "Call Now: (702) 567-9172",

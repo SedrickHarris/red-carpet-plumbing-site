@@ -740,7 +740,7 @@ export default function AlianteDrainCleaningPage() {
         {/* SECTION 11: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Need Drain Cleaning in the Aliante Area?"
+          headline={<>Need Drain Cleaning<br />in the Aliante Area?</>}
           body="Red Carpet Plumbing serves the Aliante community and surrounding North Las Vegas neighborhoods. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

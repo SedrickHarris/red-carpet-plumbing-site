@@ -9,6 +9,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title:
@@ -263,7 +264,7 @@ const serviceSchema = {
   name: "Water Meter and Pressure Regulator Services",
   serviceType: "Pressure Regulator and Water Meter Services",
   description:
-    "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement and water meter services for homes and businesses throughout Las Vegas and the Las Vegas Valley. High municipal water pressure in the Las Vegas Valley makes properly functioning pressure reducing valves essential for protecting residential plumbing systems. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement and water meter services for homes and businesses throughout the Las Vegas Valley. High municipal water pressure in the Las Vegas Valley makes properly functioning pressure reducing valves essential for protecting residential plumbing systems. Nevada Contractor License #0048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -340,7 +341,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Water Meter and Pressure Regulator Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement throughout Las Vegas and the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/water-meter-pressure-regulator-services/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -404,7 +405,7 @@ export default function WaterMeterPressureRegulatorServicesPage() {
               <br className="hidden sm:block" /> in Las Vegas, NV
             </>
           }
-          subheading="Pressure regulator inspection, repair, and replacement for homes and businesses throughout Las Vegas and the Las Vegas Valley."
+          subheading="Pressure regulator inspection, repair, and replacement for homes and businesses throughout the Las Vegas Valley."
           trustItems={[
             "Licensed Plumbers, NV #0048585A",
             "4.8 Stars, 76 Google Reviews",
@@ -431,42 +432,10 @@ export default function WaterMeterPressureRegulatorServicesPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for pressure regulator work"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item, index) => {
-                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
-                return (
-                  <li
-                    key={item}
-                    className={`relative flex items-center gap-2${
-                      isLast
-                        ? ""
-                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
-                    }`}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4 flex-shrink-0 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm font-semibold">{item}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={TRUST_STRIP_ITEMS}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for pressure regulator work"
+        />
 
         {/* SECTION 3: SIGNS YOUR PRESSURE REGULATOR NEEDS SERVICE */}
         <section className="bg-white">
@@ -482,7 +451,7 @@ export default function WaterMeterPressureRegulatorServicesPage() {
               <p className="text-base leading-7 text-brand-dark sm:text-lg">
                 Red Carpet Plumbing provides pressure regulator inspection,
                 repair, and replacement and water meter services for homes
-                and businesses throughout Las Vegas and the Las Vegas Valley.
+                and businesses throughout the Las Vegas Valley.
                 A properly functioning pressure reducing valve protects your
                 plumbing system, fixtures, and appliances from damage caused
                 by excessive municipal water pressure.

@@ -634,7 +634,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
         {/* SECTION 8: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Need an Emergency Plumber in Boulder City?"
+          headline={<>Need an Emergency Plumber<br />in Boulder City?</>}
           body="Do not wait on a plumbing emergency. Call Red Carpet Plumbing at (702) 567-9172 or request service online. We serve homes and businesses throughout Boulder City and the Las Vegas Valley."
           primaryCTA={{
             label: "Call (702) 567-9172",

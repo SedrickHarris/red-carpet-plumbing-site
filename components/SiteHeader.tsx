@@ -109,10 +109,10 @@ export function SiteHeader() {
             <Image
               src="/images/brand/logo/red-carpet-plumbing-logo.png"
               alt="Red Carpet Plumbing logo"
-              width={180}
-              height={60}
+              width={220}
+              height={73}
               priority
-              className="h-12 w-auto"
+              className="h-14 w-auto"
             />
           </Link>
 

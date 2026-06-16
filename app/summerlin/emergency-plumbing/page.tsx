@@ -691,7 +691,7 @@ export default function SummerlinEmergencyPlumbingPage() {
         {/* FLAG: 24/7 availability claim in body — source-site — verify before final launch. */}
         <CTASection
           background="red"
-          headline="Ready for Emergency Plumbing Help in Summerlin, NV?"
+          headline={<>Ready for Emergency Plumbing Help<br />in Summerlin, NV?</>}
           body="Red Carpet Plumbing is available 24 hours a day for emergency plumbing throughout Summerlin and the Las Vegas Valley. Call now or request service online."
           primaryCTA={{
             label: "Call Now: (702) 567-9172",

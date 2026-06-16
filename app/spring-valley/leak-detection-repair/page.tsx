@@ -677,7 +677,7 @@ export default function SpringValleyLeakDetectionPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Schedule Non-Invasive Leak Detection in Spring Valley Today"
+          headline={<>Schedule Non-Invasive Leak Detection<br />in Spring Valley Today</>}
           body="Red Carpet Plumbing provides non-invasive leak detection and repair throughout Spring Valley, NV, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

@@ -9,6 +9,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title: "Drain Cleaning in Las Vegas, NV | Red Carpet Plumbing",
@@ -250,7 +251,7 @@ const serviceSchema = {
   name: "Drain Cleaning",
   serviceType: "Drain Cleaning",
   description:
-    "Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout Las Vegas and the Las Vegas Valley, including kitchen drain cleaning, bathroom drain cleaning, main sewer line cleaning, hydro jetting, and video camera drain inspection.",
+    "Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout the Las Vegas Valley, including kitchen drain cleaning, bathroom drain cleaning, main sewer line cleaning, hydro jetting, and video camera drain inspection.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -327,7 +328,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Drain Cleaning in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides professional drain cleaning in Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides professional drain cleaning in the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/drain-cleaning/",
   isPartOf: {
     "@type": "WebSite",
@@ -377,7 +378,7 @@ export default function DrainCleaningPage() {
               <br className="hidden sm:block" /> in Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout Las Vegas and the Las Vegas Valley. From slow kitchen drains and bathroom clogs to main sewer line blockages, our licensed plumbers clear the problem and restore full flow."
+          subheading="Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout the Las Vegas Valley. From slow kitchen drains and bathroom clogs to main sewer line blockages, our licensed plumbers clear the problem and restore full flow."
           trustItems={[
             "4.8 stars, 76 Google reviews",
             "NV Licensed Plumbers, #0048585A",
@@ -398,42 +399,10 @@ export default function DrainCleaningPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for drain cleaning"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item, index) => {
-                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
-                return (
-                  <li
-                    key={item}
-                    className={`relative flex items-center gap-2${
-                      isLast
-                        ? ""
-                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
-                    }`}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4 flex-shrink-0 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm font-semibold">{item}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={TRUST_STRIP_ITEMS}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for drain cleaning"
+        />
 
         {/* SECTION 3: SIGNS YOU NEED DRAIN CLEANING */}
         <section className="bg-white">
@@ -511,8 +480,8 @@ export default function DrainCleaningPage() {
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Red Carpet Plumbing clears all types of residential and
-                    commercial drains throughout Las Vegas and the Las Vegas
-                    Valley. Our licensed plumbers match the clearing method to
+                    commercial drains throughout the Las Vegas Valley.
+                    Our licensed plumbers match the clearing method to
                     the specific clog and pipe type.
                   </p>
                 </div>
@@ -630,7 +599,7 @@ export default function DrainCleaningPage() {
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/80">
                   Red Carpet Plumbing provides professional drain cleaning
-                  throughout Las Vegas and the Las Vegas Valley. Our licensed
+                  throughout the Las Vegas Valley. Our licensed
                   plumbers clear clogs completely and restore full flow.
                   Available for emergency drain service when you need it.
                 </p>
@@ -658,8 +627,7 @@ export default function DrainCleaningPage() {
                 Drain Cleaning Service Areas
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
-                Red Carpet Plumbing provides drain cleaning throughout Las
-                Vegas and the Las Vegas Valley.
+                Red Carpet Plumbing provides drain cleaning throughout the Las Vegas Valley.
               </p>
               <p className="mt-4 text-base leading-7 text-white/80">
                 See our dedicated drain cleaning pages for{" "}
@@ -789,7 +757,7 @@ export default function DrainCleaningPage() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
               Red Carpet Plumbing is available for professional drain cleaning
-              throughout Las Vegas and the Las Vegas Valley. Licensed plumbers,
+              throughout the Las Vegas Valley. Licensed plumbers,
               4.8-star rated, NV #0048585A.
             </p>
             <div className="mt-10">

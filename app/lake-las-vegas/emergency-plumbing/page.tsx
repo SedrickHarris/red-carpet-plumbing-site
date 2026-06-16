@@ -638,7 +638,7 @@ export default function LakeLasVegasEmergencyPlumbingPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Need Emergency Plumbing Help in Lake Las Vegas?"
+          headline={<>Need Emergency Plumbing Help<br />in Lake Las Vegas?</>}
           body="Red Carpet Plumbing serves Lake Las Vegas and Henderson, NV for emergency plumbing calls. Burst pipes, sewer backups, slab leaks, water heater failures, and major leaks handled by licensed plumbers. Call now or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

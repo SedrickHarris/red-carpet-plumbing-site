@@ -9,6 +9,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title:
@@ -57,7 +58,7 @@ const TOILET_FAQS = [
   {
     question: "Does Red Carpet Plumbing install new toilets?",
     answer:
-      "Yes. Red Carpet Plumbing installs replacement toilets and new toilet installations throughout Las Vegas and the Las Vegas Valley. We work with customer-supplied toilets and can advise on suitable options based on your bathroom configuration, including comfort-height models and water-efficient designs.",
+      "Yes. Red Carpet Plumbing installs replacement toilets and new toilet installations throughout the Las Vegas Valley. We work with customer-supplied toilets and can advise on suitable options based on your bathroom configuration, including comfort-height models and water-efficient designs.",
   },
   {
     question: "What should I do if my toilet is overflowing?",
@@ -262,7 +263,7 @@ const serviceSchema = {
   name: "Toilet Repair and Installation",
   serviceType: "Toilet Repair and Installation",
   description:
-    "Red Carpet Plumbing provides toilet repair, replacement, and installation for homes and businesses throughout Las Vegas and the Las Vegas Valley, including running toilet repair, base leak repair, clog clearing, wax ring replacement, and new toilet installation. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides toilet repair, replacement, and installation for homes and businesses throughout the Las Vegas Valley, including running toilet repair, base leak repair, clog clearing, wax ring replacement, and new toilet installation. Nevada Contractor License #0048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -339,7 +340,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout Las Vegas and the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/toilet-repair-installation/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -426,42 +427,10 @@ export default function ToiletRepairInstallationPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for toilet service"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item, index) => {
-                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
-                return (
-                  <li
-                    key={item}
-                    className={`relative flex items-center gap-2${
-                      isLast
-                        ? ""
-                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
-                    }`}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4 flex-shrink-0 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm font-semibold">{item}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={TRUST_STRIP_ITEMS}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for toilet service"
+        />
 
         {/* SECTION 3: SIGNS YOUR TOILET NEEDS A PLUMBER */}
         <section className="bg-white">

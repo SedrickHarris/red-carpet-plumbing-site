@@ -9,6 +9,7 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear as unverified claims in
@@ -457,32 +458,10 @@ export default function LasVegasVideoCameraInspectionPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for camera inspections"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
-              {LV_CAMERA_TRUST_STRIP.map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <svg
-                    aria-hidden="true"
-                    className="h-4 w-4 flex-shrink-0 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm font-semibold">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={LV_CAMERA_TRUST_STRIP}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for camera inspections"
+        />
 
         {/* SECTION 3: WHEN A VIDEO CAMERA INSPECTION MAKES SENSE */}
         <section className="bg-white">
@@ -495,7 +474,7 @@ export default function LasVegasVideoCameraInspectionPage() {
             <div className="mt-8 rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
               <p className="text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing performs video camera plumbing inspections for
-                homes and businesses throughout Las Vegas and the Las Vegas Valley.
+                homes and businesses throughout the Las Vegas Valley.
                 A camera inspection lets a licensed plumber see inside sewer lines,
                 drain pipes, and supply connections to identify blockages, root
                 intrusion, pipe damage, and other issues without excavation.
@@ -755,8 +734,8 @@ export default function LasVegasVideoCameraInspectionPage() {
             source-site claims; confirm all before publishing. */}
         <CTASection
           background="red"
-          headline="Ready to Schedule a Camera Inspection in Las Vegas?"
-          body="Red Carpet Plumbing provides sewer and drain camera inspections throughout Las Vegas and the Las Vegas Valley. Licensed, local, transparent pricing. NV #0048585A."
+          headline={<>Ready to Schedule a Camera Inspection<br />in Las Vegas?</>}
+          body="Red Carpet Plumbing provides sewer and drain camera inspections throughout the Las Vegas Valley. Licensed, local, transparent pricing. NV #0048585A."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

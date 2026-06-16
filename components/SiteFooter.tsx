@@ -75,14 +75,14 @@ export function SiteFooter() {
               <Image
                 src="/images/brand/logo/red-carpet-plumbing-logo.png"
                 alt="Red Carpet Plumbing logo"
-                width={240}
-                height={80}
-                className="h-16 w-auto"
+                width={300}
+                height={100}
+                className="h-20 w-auto"
               />
             </Link>
             <p className="mt-4 text-sm leading-6 text-white/80">
               Red Carpet Plumbing provides residential and commercial plumbing
-              services throughout Las Vegas and the Las Vegas Valley.
+              services throughout the Las Vegas Valley.
             </p>
           </div>
 
@@ -132,8 +132,16 @@ export function SiteFooter() {
               </a>
             </p>
             <address className="mt-4 text-sm not-italic leading-6 text-white/80">
-              <span className="block">3330 W. Hacienda Ave Ste. 405</span>
-              <span className="block">Las Vegas, NV 89118</span>
+              <a
+                href="https://www.google.com/maps/place/3330+W+Hacienda+Ave+%23405,+Las+Vegas,+NV+89118/@36.0943375,-115.1870907,17z/data=!3m1!4b1!4m6!3m5!1s0x80c8c5d697faaaab:0x3db74ab4815ec72a!8m2!3d36.0943375!4d-115.1845158!16s%2Fg%2F11nynzwdy4?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition-colors hover:text-white hover:underline"
+                aria-label="Get directions to Red Carpet Plumbing on Google Maps"
+              >
+                <span className="block">3330 W. Hacienda Ave Ste. 405</span>
+                <span className="block">Las Vegas, NV 89118</span>
+              </a>
             </address>
           </div>
         </div>

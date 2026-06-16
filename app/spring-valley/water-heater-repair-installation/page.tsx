@@ -641,7 +641,7 @@ export default function SpringValleyWaterHeaterPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Schedule Water Heater Service in Spring Valley Today"
+          headline={<>Schedule Water Heater Service<br />in Spring Valley Today</>}
           body="Red Carpet Plumbing provides water heater repair and installation throughout Spring Valley, NV, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

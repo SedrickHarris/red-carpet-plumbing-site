@@ -674,7 +674,7 @@ export default function EnterpriseWaterHeaterPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Schedule Water Heater Service in Enterprise Today"
+          headline={<>Schedule Water Heater Service<br />in Enterprise Today</>}
           body="Red Carpet Plumbing provides water heater repair and installation throughout Enterprise, NV, including Rhodes Ranch, Mountain's Edge, and the Southwest Las Vegas area. Clark County code-compliant installation. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

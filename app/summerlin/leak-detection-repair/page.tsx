@@ -635,7 +635,7 @@ export default function SummerlinLeakDetectionPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Schedule Non-Invasive Leak Detection in Summerlin Today"
+          headline={<>Schedule Non-Invasive Leak Detection<br />in Summerlin Today</>}
           body="Red Carpet Plumbing provides non-invasive leak detection and repair throughout Summerlin, NV, including Summerlin North, Summerlin South, The Hills, The Trails, The Arbors, The Canyons, and all Summerlin villages. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

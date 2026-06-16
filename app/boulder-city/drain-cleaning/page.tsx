@@ -665,7 +665,7 @@ export default function BoulderCityDrainCleaningPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Ready to Schedule Drain Cleaning in Boulder City?"
+          headline={<>Ready to Schedule Drain Cleaning<br />in Boulder City?</>}
           body="Red Carpet Plumbing provides professional drain cleaning throughout Boulder City and the Las Vegas Valley. We diagnose the cause before recommending a solution. Transparent pricing. No hidden fees."
           primaryCTA={{
             label: "Call (702) 567-9172",

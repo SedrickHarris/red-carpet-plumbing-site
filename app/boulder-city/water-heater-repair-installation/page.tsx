@@ -595,9 +595,18 @@ export default function BoulderCityWaterHeaterPage() {
               ))}
             </ul>
             <p className="mt-8 text-base leading-7 text-brand-dark/80">
-              Our office is located at 3330 W. Hacienda Ave Ste. 405, Las Vegas,
-              NV 89118. Office hours are Monday through Friday, 7:30 AM to 4:30
-              PM. For our full range of plumbing services, visit our{" "}
+              Our office is located at{" "}
+              <a
+                href="https://www.google.com/maps/place/3330+W+Hacienda+Ave+%23405,+Las+Vegas,+NV+89118/@36.0943375,-115.1870907,17z/data=!3m1!4b1!4m6!3m5!1s0x80c8c5d697faaaab:0x3db74ab4815ec72a!8m2!3d36.0943375!4d-115.1845158!16s%2Fg%2F11nynzwdy4?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-brand-primary hover:underline"
+                aria-label="Get directions to Red Carpet Plumbing on Google Maps"
+              >
+                3330 W. Hacienda Ave Ste. 405, Las Vegas, NV 89118
+              </a>
+              . Office hours are Monday through Friday, 7:30 AM to 4:30 PM. For
+              our full range of plumbing services, visit our{" "}
               <Link
                 href="/plumbing-services/"
                 className="font-semibold text-brand-primary hover:text-brand-primary-hover"
@@ -665,7 +674,7 @@ export default function BoulderCityWaterHeaterPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Ready to Schedule Water Heater Service in Boulder City?"
+          headline={<>Ready to Schedule Water Heater Service<br />in Boulder City?</>}
           body="Red Carpet Plumbing provides water heater repair and installation throughout Boulder City and the Las Vegas Valley. Boulder City code-compliant installations. Transparent pricing. No hidden fees."
           primaryCTA={{
             label: "Call (702) 567-9172",

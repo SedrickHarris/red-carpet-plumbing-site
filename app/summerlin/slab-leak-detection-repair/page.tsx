@@ -640,7 +640,7 @@ export default function SummerlinSlabLeakPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Suspected Slab Leak in Summerlin? Call Red Carpet Plumbing."
+          headline={<>Suspected Slab Leak<br />in Summerlin? Call Red Carpet Plumbing.</>}
           body="Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Summerlin, NV, including Summerlin North, Summerlin South, The Hills, The Trails, The Arbors, The Canyons, and all Summerlin villages. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

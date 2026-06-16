@@ -695,7 +695,7 @@ export default function EnterpriseEmergencyPlumbingPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Emergency Plumbing in Enterprise, NV? Call Red Carpet Plumbing."
+          headline={<>Emergency Plumbing<br />in Enterprise, NV? Call Red Carpet Plumbing.</>}
           body="Red Carpet Plumbing provides emergency plumbing service throughout Enterprise, NV, including Rhodes Ranch, Mountain's Edge, and the Southwest Las Vegas area. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

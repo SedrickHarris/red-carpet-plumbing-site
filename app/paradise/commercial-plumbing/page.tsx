@@ -666,7 +666,7 @@ export default function ParadiseCommercialPlumbingPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Ready to Schedule Commercial Plumbing Service in Paradise, NV?"
+          headline={<>Ready to Schedule Commercial Plumbing Service<br />in Paradise, NV?</>}
           body="Red Carpet Plumbing provides licensed commercial plumbing throughout Paradise and the Las Vegas Valley. NV Contractor License #0048585A, C-1 Plumbing and Heating. Call now or request service online."
           primaryCTA={{
             label: "Call Now: (702) 567-9172",

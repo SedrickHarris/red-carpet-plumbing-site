@@ -9,6 +9,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title:
@@ -262,7 +263,7 @@ const serviceSchema = {
   name: "Water Heater Repair and Installation",
   serviceType: "Water Heater Repair and Installation",
   description:
-    "Red Carpet Plumbing repairs and installs water heaters for homes and businesses throughout Las Vegas and the Las Vegas Valley, including tank water heater repair and replacement, tankless water heater installation, water heater flush and maintenance, anode rod replacement, and thermal expansion tank installation.",
+    "Red Carpet Plumbing repairs and installs water heaters for homes and businesses throughout the Las Vegas Valley, including tank water heater repair and replacement, tankless water heater installation, water heater flush and maintenance, anode rod replacement, and thermal expansion tank installation.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -339,7 +340,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs and installs water heaters throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs and installs water heaters throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/water-heater-repair-installation/",
   isPartOf: {
     "@type": "WebSite",
@@ -390,7 +391,7 @@ export default function WaterHeaterRepairInstallationPage() {
               <br className="hidden sm:block" /> in Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing repairs and installs water heaters for homes and businesses throughout Las Vegas and the Las Vegas Valley. Whether your water heater has stopped working, is leaking, or is reaching the end of its service life, our licensed plumbers diagnose the problem and provide clear options before any work begins."
+          subheading="Red Carpet Plumbing repairs and installs water heaters for homes and businesses throughout the Las Vegas Valley. Whether your water heater has stopped working, is leaking, or is reaching the end of its service life, our licensed plumbers diagnose the problem and provide clear options before any work begins."
           trustItems={[
             "4.8 stars, 76 Google reviews",
             "NV Licensed Plumbers, #0048585A",
@@ -411,42 +412,10 @@ export default function WaterHeaterRepairInstallationPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for water heater service"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item, index) => {
-                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
-                return (
-                  <li
-                    key={item}
-                    className={`relative flex items-center gap-2${
-                      isLast
-                        ? ""
-                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
-                    }`}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4 flex-shrink-0 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm font-semibold">{item}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={TRUST_STRIP_ITEMS}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for water heater service"
+        />
 
         {/* SECTION 3: SIGNS YOUR WATER HEATER NEEDS SERVICE */}
         <section className="bg-white">
@@ -525,8 +494,7 @@ export default function WaterHeaterRepairInstallationPage() {
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Red Carpet Plumbing handles the full range of water heater
                     repair and installation services for residential and
-                    commercial properties throughout Las Vegas and the Las
-                    Vegas Valley.
+                    commercial properties throughout the Las Vegas Valley.
                   </p>
                 </div>
               </SectionRevealItem>
@@ -644,7 +612,7 @@ export default function WaterHeaterRepairInstallationPage() {
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/80">
                   Red Carpet Plumbing provides water heater repair and
-                  installation throughout Las Vegas and the Las Vegas Valley.
+                  installation throughout the Las Vegas Valley.
                   Our licensed plumbers diagnose the problem honestly and give
                   you clear options before any work begins.
                 </p>
@@ -803,7 +771,7 @@ export default function WaterHeaterRepairInstallationPage() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
               Red Carpet Plumbing is available for water heater repair and
-              installation throughout Las Vegas and the Las Vegas Valley.
+              installation throughout the Las Vegas Valley.
               Licensed plumbers, 4.8-star rated, NV #0048585A.
             </p>
             <div className="mt-10">

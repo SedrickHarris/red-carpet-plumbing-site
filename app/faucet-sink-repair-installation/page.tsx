@@ -9,6 +9,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title:
@@ -57,7 +58,7 @@ const FAUCET_SINK_FAQS = [
     question:
       "Does Red Carpet Plumbing install kitchen and bathroom sinks?",
     answer:
-      "Yes. Red Carpet Plumbing installs kitchen sinks, bathroom sinks, and utility sinks throughout Las Vegas and the Las Vegas Valley. Sink installation includes connecting water supply lines, installing the drain assembly and P-trap, and confirming all connections are leak-free. We work with customer-supplied sinks and can advise on the plumbing requirements for different sink types including undermount, drop-in, vessel, and pedestal styles.",
+      "Yes. Red Carpet Plumbing installs kitchen sinks, bathroom sinks, and utility sinks throughout the Las Vegas Valley. Sink installation includes connecting water supply lines, installing the drain assembly and P-trap, and confirming all connections are leak-free. We work with customer-supplied sinks and can advise on the plumbing requirements for different sink types including undermount, drop-in, vessel, and pedestal styles.",
   },
   {
     question: "What causes leaks under the sink?",
@@ -260,7 +261,7 @@ const serviceSchema = {
   name: "Faucet and Sink Repair and Installation",
   serviceType: "Faucet and Sink Repair and Installation",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks for kitchens, bathrooms, and utility areas throughout Las Vegas and the Las Vegas Valley. Services include dripping faucet repair, faucet replacement, kitchen and bathroom sink installation, aerator and cartridge service, and under-sink leak repair. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks for kitchens, bathrooms, and utility areas throughout the Las Vegas Valley. Services include dripping faucet repair, faucet replacement, kitchen and bathroom sink installation, aerator and cartridge service, and under-sink leak repair. Nevada Contractor License #0048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -337,7 +338,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks throughout Las Vegas and the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/faucet-sink-repair-installation/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -424,42 +425,10 @@ export default function FaucetSinkRepairInstallationPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for faucet and sink service"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item, index) => {
-                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
-                return (
-                  <li
-                    key={item}
-                    className={`relative flex items-center gap-2${
-                      isLast
-                        ? ""
-                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
-                    }`}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4 flex-shrink-0 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm font-semibold">{item}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={TRUST_STRIP_ITEMS}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for faucet and sink service"
+        />
 
         {/* SECTION 3: SIGNS YOUR FAUCET OR SINK NEEDS A PLUMBER */}
         <section className="bg-white">
@@ -475,7 +444,7 @@ export default function FaucetSinkRepairInstallationPage() {
               <p className="text-base leading-7 text-brand-dark sm:text-lg">
                 Red Carpet Plumbing repairs, replaces, and installs faucets
                 and sinks for kitchens, bathrooms, and utility areas
-                throughout Las Vegas and the Las Vegas Valley. Our licensed
+                throughout the Las Vegas Valley. Our licensed
                 plumbers handle everything from a dripping faucet to a full
                 sink installation.
               </p>
@@ -512,8 +481,7 @@ export default function FaucetSinkRepairInstallationPage() {
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Red Carpet Plumbing handles the full range of faucet and
                     sink repair, replacement, and installation services for
-                    residential and commercial properties throughout Las Vegas
-                    and the Las Vegas Valley.
+                    residential and commercial properties throughout the Las Vegas Valley.
                   </p>
                 </div>
               </SectionRevealItem>
