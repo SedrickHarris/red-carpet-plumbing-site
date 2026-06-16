@@ -491,10 +491,10 @@ export default function ServiceAreasPage() {
         {/* SECTION 5: NEIGHBORHOODS AND CORRIDORS (Tier 2 plain text) */}
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tight text-brand-dark text-center sm:text-4xl lg:text-5xl">
               Neighborhoods and Corridors We Serve
             </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-brand-dark/80 text-center">
               In addition to our primary service areas, Red Carpet Plumbing
               serves customers in many Las Vegas Valley neighborhoods and
               corridors.
@@ -553,16 +553,16 @@ export default function ServiceAreasPage() {
         {/* SECTION 6: ALSO SERVING NEARBY AREAS */}
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tight text-brand-dark text-center sm:text-4xl lg:text-5xl">
               Also Serving Nearby Areas
             </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-brand-dark/80 text-center">
               Red Carpet Plumbing also serves customers in nearby communities
               throughout Clark County and the Las Vegas Valley. If your
               neighborhood is not listed above, contact us to confirm your
               service area.
             </p>
-            <p className="mt-4 text-lg leading-8 text-brand-dark/80">
+            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-brand-dark/80 text-center">
               Communities and corridors we have served include Downtown Las
               Vegas, the North Strip area, the South Strip corridor, the
               Fremont Street area, and other Las Vegas Valley communities.
@@ -573,10 +573,10 @@ export default function ServiceAreasPage() {
         {/* SECTION 7: POPULAR SERVICES BY AREA */}
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tight text-brand-dark text-center sm:text-4xl lg:text-5xl">
               Popular Plumbing Services by Area
             </h2>
-            <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-brand-dark/80 text-center">
               No matter which Las Vegas Valley community you live or work in,
               Red Carpet Plumbing provides the same comprehensive plumbing
               services. Frequently requested services across our service areas

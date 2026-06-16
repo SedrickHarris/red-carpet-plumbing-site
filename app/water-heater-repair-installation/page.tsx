@@ -419,7 +419,7 @@ export default function WaterHeaterRepairInstallationPage() {
 
         {/* SECTION 3: SIGNS YOUR WATER HEATER NEEDS SERVICE */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Signs Your Water Heater
