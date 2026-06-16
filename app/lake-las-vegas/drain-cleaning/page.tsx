@@ -541,7 +541,7 @@ export default function LakeLasVegasDrainCleaningPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Ready to Clear Your Drains in Lake Las Vegas?"
+          headline={<>Ready to Clear Your Drains<br />in Lake Las Vegas?</>}
           body="Red Carpet Plumbing provides professional drain cleaning for homes and resort residential properties throughout Lake Las Vegas and Henderson, NV. Call us or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

@@ -9,6 +9,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title:
@@ -145,7 +146,7 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
   {
     title: "Commercial Slab Leak Detection and Repair",
     description:
-      "Slab leaks in commercial buildings, multi-unit residential properties, and HOA communities present unique challenges due to the size and complexity of the plumbing systems involved. Red Carpet Plumbing provides slab leak detection and repair for commercial properties throughout Las Vegas and the Las Vegas Valley.",
+      "Slab leaks in commercial buildings, multi-unit residential properties, and HOA communities present unique challenges due to the size and complexity of the plumbing systems involved. Red Carpet Plumbing provides slab leak detection and repair for commercial properties throughout the Las Vegas Valley.",
     href: "/slab-leak-detection-repair/commercial/",
   },
 ];
@@ -253,7 +254,7 @@ const serviceSchema = {
   name: "Slab Leak Detection and Repair",
   serviceType: "Slab Leak Detection and Repair",
   description:
-    "Red Carpet Plumbing provides professional slab leak detection and repair for homes and businesses throughout Las Vegas and the Las Vegas Valley, including acoustic leak detection, pressure testing, thermal imaging, spot repair, pipe rerouting, and epoxy pipe lining.",
+    "Red Carpet Plumbing provides professional slab leak detection and repair for homes and businesses throughout the Las Vegas Valley, including acoustic leak detection, pressure testing, thermal imaging, spot repair, pipe rerouting, and epoxy pipe lining.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -330,7 +331,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Slab Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides professional slab leak detection and repair throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides professional slab leak detection and repair throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/slab-leak-detection-repair/",
   isPartOf: {
     "@type": "WebSite",
@@ -380,7 +381,7 @@ export default function SlabLeakDetectionAndRepairPage() {
               <br className="hidden sm:block" /> in Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing detects and repairs slab leaks for homes and businesses throughout Las Vegas and the Las Vegas Valley. Slab leaks are one of the most serious plumbing problems a Las Vegas homeowner can face. Our licensed plumbers use professional detection equipment to locate the leak precisely and explain all repair options before any work begins."
+          subheading="Red Carpet Plumbing detects and repairs slab leaks for homes and businesses throughout the Las Vegas Valley. Slab leaks are one of the most serious plumbing problems a Las Vegas homeowner can face. Our licensed plumbers use professional detection equipment to locate the leak precisely and explain all repair options before any work begins."
           trustItems={[
             "4.8 stars, 76 Google reviews",
             "NV Licensed Plumbers, #0048585A",
@@ -401,42 +402,10 @@ export default function SlabLeakDetectionAndRepairPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for slab leak service"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item, index) => {
-                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
-                return (
-                  <li
-                    key={item}
-                    className={`relative flex items-center gap-2${
-                      isLast
-                        ? ""
-                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
-                    }`}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4 flex-shrink-0 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm font-semibold">{item}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={TRUST_STRIP_ITEMS}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for slab leak service"
+        />
 
         {/* SECTION 3: SIGNS OF A SLAB LEAK */}
         <section className="bg-white">
@@ -510,7 +479,7 @@ export default function SlabLeakDetectionAndRepairPage() {
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Red Carpet Plumbing provides professional slab leak
                     detection and repair for residential and commercial
-                    properties throughout Las Vegas and the Las Vegas Valley.
+                    properties throughout the Las Vegas Valley.
                     We locate leaks precisely and present all repair options
                     before any work begins.
                   </p>
@@ -630,7 +599,7 @@ export default function SlabLeakDetectionAndRepairPage() {
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/80">
                   Red Carpet Plumbing provides professional slab leak detection
-                  and repair throughout Las Vegas and the Las Vegas Valley. We
+                  and repair throughout the Las Vegas Valley. We
                   locate leaks precisely before recommending a repair approach
                   and present all options clearly before any work begins.
                 </p>
@@ -783,7 +752,7 @@ export default function SlabLeakDetectionAndRepairPage() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
               Red Carpet Plumbing is available for slab leak detection and
-              repair throughout Las Vegas and the Las Vegas Valley. Licensed
+              repair throughout the Las Vegas Valley. Licensed
               plumbers, 4.8-star rated, NV #0048585A.
             </p>
             <div className="mt-10">

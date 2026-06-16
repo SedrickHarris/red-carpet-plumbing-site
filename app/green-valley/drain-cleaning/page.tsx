@@ -759,7 +759,7 @@ export default function GreenValleyDrainCleaningPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Clogged Drain in Green Valley, Henderson?"
+          headline={<>Clogged Drain<br />in Green Valley, Henderson?</>}
           body="Do not let a slow or blocked drain get worse. Call Red Carpet Plumbing at (702) 567-9172 or request service online. We provide professional drain cleaning throughout Green Valley and Henderson."
           primaryCTA={{
             label: "Call (702) 567-9172",

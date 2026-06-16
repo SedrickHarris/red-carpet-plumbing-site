@@ -623,7 +623,7 @@ export default function SummerlinRePipingPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Schedule Re-Piping Service in Summerlin Today"
+          headline={<>Schedule Re-Piping Service<br />in Summerlin Today</>}
           body="Red Carpet Plumbing provides whole-house and partial re-piping throughout Summerlin, NV, including Summerlin North, Summerlin South, The Hills, The Trails, The Arbors, The Canyons, and all Summerlin villages. Permits pulled and inspections scheduled. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

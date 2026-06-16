@@ -677,7 +677,7 @@ export default function SpringValleySlabLeakPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Suspected Slab Leak in Spring Valley? Call Red Carpet Plumbing."
+          headline={<>Suspected Slab Leak<br />in Spring Valley? Call Red Carpet Plumbing.</>}
           body="Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Spring Valley, NV, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

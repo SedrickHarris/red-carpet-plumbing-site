@@ -838,7 +838,7 @@ export default function GreenValleyWaterHeaterPage() {
         {/* SECTION 11: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Water Heater Problems in Green Valley, Henderson?"
+          headline={<>Water Heater Problems<br />in Green Valley, Henderson?</>}
           body="Do not wait on a failing water heater. Call Red Carpet Plumbing at (702) 567-9172 or request service online. We repair and install water heaters throughout Green Valley and Henderson with all work completed to current Clark County plumbing code."
           primaryCTA={{
             label: "Call (702) 567-9172",

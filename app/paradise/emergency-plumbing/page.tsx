@@ -682,7 +682,7 @@ export default function ParadiseEmergencyPlumbingPage() {
         {/* FLAG: 24/7 availability claim in body — source-site — verify before final launch. */}
         <CTASection
           background="red"
-          headline="Ready for Emergency Plumbing Help in Paradise, NV?"
+          headline={<>Ready for Emergency Plumbing Help<br />in Paradise, NV?</>}
           body="Red Carpet Plumbing is available 24 hours a day for emergency plumbing throughout Paradise and the Las Vegas Valley. Call now or request service online."
           primaryCTA={{
             label: "Call Now: (702) 567-9172",

@@ -477,7 +477,7 @@ export default function ServiceAreasPage() {
         {/* SECTION 4: MID-PAGE CTA STRIP */}
         <CTASection
           background="red"
-          headline="Need a Plumber in the Las Vegas Valley?"
+          headline={<>Need a Plumber<br />in the Las Vegas Valley?</>}
           primaryCTA={{
             label: "Request Plumbing Service",
             href: "/contact/",
@@ -490,7 +490,7 @@ export default function ServiceAreasPage() {
 
         {/* SECTION 5: NEIGHBORHOODS AND CORRIDORS (Tier 2 plain text) */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
               Neighborhoods and Corridors We Serve
             </h2>
@@ -552,7 +552,7 @@ export default function ServiceAreasPage() {
 
         {/* SECTION 6: ALSO SERVING NEARBY AREAS */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
               Also Serving Nearby Areas
             </h2>
@@ -572,7 +572,7 @@ export default function ServiceAreasPage() {
 
         {/* SECTION 7: POPULAR SERVICES BY AREA */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
               Popular Plumbing Services by Area
             </h2>

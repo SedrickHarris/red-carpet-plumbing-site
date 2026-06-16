@@ -45,7 +45,7 @@ export function CTASection({
         }`}
       >
         <div className={hasSplit ? "min-w-0" : "mx-auto max-w-3xl text-center"}>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tight text-pretty sm:text-4xl lg:text-5xl">
             {headline}
           </h2>
           {body ? (

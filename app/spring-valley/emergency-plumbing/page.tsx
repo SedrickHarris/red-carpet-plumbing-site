@@ -663,7 +663,7 @@ export default function SpringValleyEmergencyPlumbingPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Need an Emergency Plumber in Spring Valley? Call Now."
+          headline={<>Need an Emergency Plumber<br />in Spring Valley? Call Now.</>}
           body="Red Carpet Plumbing provides emergency plumbing service throughout Spring Valley, NV, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

@@ -623,7 +623,7 @@ export default function SummerlinWaterHeaterPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Schedule Water Heater Service in Summerlin Today"
+          headline={<>Schedule Water Heater Service<br />in Summerlin Today</>}
           body="Red Carpet Plumbing provides water heater repair and installation throughout Summerlin, NV, including Summerlin North, Summerlin South, The Hills, The Trails, The Arbors, The Canyons, and all Summerlin villages. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

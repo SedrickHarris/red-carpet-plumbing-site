@@ -9,6 +9,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title:
@@ -57,7 +58,7 @@ const DISPOSAL_FAQS = [
   {
     question: "Can a plumber install a garbage disposal?",
     answer:
-      "Yes. Red Carpet Plumbing installs garbage disposals for kitchen sinks throughout Las Vegas and the Las Vegas Valley. Professional installation includes connecting the disposal to the drain assembly, dishwasher inlet if applicable, electrical connection point, and confirming all connections are leak-free before leaving. Licensed installation also protects the manufacturer warranty, which many brands require.",
+      "Yes. Red Carpet Plumbing installs garbage disposals for kitchen sinks throughout the Las Vegas Valley. Professional installation includes connecting the disposal to the drain assembly, dishwasher inlet if applicable, electrical connection point, and confirming all connections are leak-free before leaving. Licensed installation also protects the manufacturer warranty, which many brands require.",
   },
   {
     question: "Why is my garbage disposal leaking?",
@@ -260,7 +261,7 @@ const serviceSchema = {
   name: "Garbage Disposal Repair and Installation",
   serviceType: "Garbage Disposal Repair and Installation",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals for kitchens throughout Las Vegas and the Las Vegas Valley. Services include jam clearing, leak repair, motor diagnosis, full replacement, and new installation. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals for kitchens throughout the Las Vegas Valley. Services include jam clearing, leak repair, motor diagnosis, full replacement, and new installation. Nevada Contractor License #0048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -337,7 +338,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals throughout Las Vegas and the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/garbage-disposal-repair-installation/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -399,7 +400,7 @@ export default function GarbageDisposalRepairInstallationPage() {
               <br className="hidden sm:block" /> in Las Vegas, NV
             </>
           }
-          subheading="Garbage disposal repair, replacement, and installation for kitchens throughout Las Vegas and the Las Vegas Valley."
+          subheading="Garbage disposal repair, replacement, and installation for kitchens throughout the Las Vegas Valley."
           trustItems={[
             "Licensed Plumbers, NV #0048585A",
             "4.8 Stars, 76 Google Reviews",
@@ -424,42 +425,10 @@ export default function GarbageDisposalRepairInstallationPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for garbage disposal service"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item, index) => {
-                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
-                return (
-                  <li
-                    key={item}
-                    className={`relative flex items-center gap-2${
-                      isLast
-                        ? ""
-                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
-                    }`}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4 flex-shrink-0 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm font-semibold">{item}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={TRUST_STRIP_ITEMS}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for garbage disposal service"
+        />
 
         {/* SECTION 3: SIGNS YOUR GARBAGE DISPOSAL NEEDS ATTENTION */}
         <section className="bg-white">
@@ -474,8 +443,8 @@ export default function GarbageDisposalRepairInstallationPage() {
             <div className="mt-8 rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
               <p className="text-base leading-7 text-brand-dark sm:text-lg">
                 Red Carpet Plumbing repairs, replaces, and installs garbage
-                disposals for kitchens throughout Las Vegas and the Las Vegas
-                Valley. Our licensed plumbers diagnose jammed, leaking, and
+                disposals for kitchens throughout the Las Vegas Valley. Our
+                licensed plumbers diagnose jammed, leaking, and
                 non-functioning units and handle full disposal replacements
                 when repair is no longer practical.
               </p>
@@ -512,8 +481,8 @@ export default function GarbageDisposalRepairInstallationPage() {
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Red Carpet Plumbing handles the full range of garbage
                     disposal repair, replacement, and installation services
-                    for residential and commercial kitchens throughout Las
-                    Vegas and the Las Vegas Valley.
+                    for residential and commercial kitchens throughout the
+                    Las Vegas Valley.
                   </p>
                 </div>
               </SectionRevealItem>

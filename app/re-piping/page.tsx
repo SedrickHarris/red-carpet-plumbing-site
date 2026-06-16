@@ -9,6 +9,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title: "Re-Piping Services in Las Vegas, NV | Red Carpet Plumbing",
@@ -144,7 +145,7 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
   {
     title: "Commercial Repiping",
     description:
-      "Red Carpet Plumbing provides repiping services for commercial buildings, multi-unit residential properties, and HOA communities throughout Las Vegas and the Las Vegas Valley. Commercial repiping projects require coordination with building management and code-compliant materials for the occupancy type. We work with commercial property managers and building owners to minimize disruption to occupants during the repiping process.",
+      "Red Carpet Plumbing provides repiping services for commercial buildings, multi-unit residential properties, and HOA communities throughout the Las Vegas Valley. Commercial repiping projects require coordination with building management and code-compliant materials for the occupancy type. We work with commercial property managers and building owners to minimize disruption to occupants during the repiping process.",
     href: "/re-piping/commercial/",
   },
 ];
@@ -252,7 +253,7 @@ const serviceSchema = {
   name: "Re-Piping Services",
   serviceType: "Re-Piping",
   description:
-    "Red Carpet Plumbing provides whole-house and partial repiping services for homes and businesses throughout Las Vegas and the Las Vegas Valley, including polybutylene pipe replacement, Kitec pipe replacement, galvanized steel pipe replacement, PEX repiping, and copper repiping.",
+    "Red Carpet Plumbing provides whole-house and partial repiping services for homes and businesses throughout the Las Vegas Valley, including polybutylene pipe replacement, Kitec pipe replacement, galvanized steel pipe replacement, PEX repiping, and copper repiping.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -329,7 +330,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Re-Piping Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides whole-house and partial repiping throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides whole-house and partial repiping throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/re-piping/",
   isPartOf: {
     "@type": "WebSite",
@@ -379,7 +380,7 @@ export default function RePipingServicesPage() {
               <br className="hidden sm:block" /> in Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides whole-house and partial repiping services for homes and businesses throughout Las Vegas and the Las Vegas Valley. Whether your home has aging galvanized steel, failed polybutylene or Kitec pipes, or copper pipes thinned by decades of hard water exposure, our licensed plumbers assess your plumbing system and explain your options before any work begins."
+          subheading="Red Carpet Plumbing provides whole-house and partial repiping services for homes and businesses throughout the Las Vegas Valley. Whether your home has aging galvanized steel, failed polybutylene or Kitec pipes, or copper pipes thinned by decades of hard water exposure, our licensed plumbers assess your plumbing system and explain your options before any work begins."
           trustItems={[
             "4.8 stars, 76 Google reviews",
             "NV Licensed Plumbers, #0048585A",
@@ -400,42 +401,10 @@ export default function RePipingServicesPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for repiping"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item, index) => {
-                const isLast = index === TRUST_STRIP_ITEMS.length - 1;
-                return (
-                  <li
-                    key={item}
-                    className={`relative flex items-center gap-2${
-                      isLast
-                        ? ""
-                        : " sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:h-4 sm:after:w-px sm:after:bg-white/20"
-                    }`}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4 flex-shrink-0 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm font-semibold">{item}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={TRUST_STRIP_ITEMS}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for repiping"
+        />
 
         {/* SECTION 3: SIGNS YOU MAY NEED REPIPING */}
         <section className="bg-white">
@@ -511,7 +480,7 @@ export default function RePipingServicesPage() {
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Red Carpet Plumbing provides the full range of repiping
                     services for residential and commercial properties
-                    throughout Las Vegas and the Las Vegas Valley. We assess
+                    throughout the Las Vegas Valley. We assess
                     your existing pipe materials and recommend the right
                     solution for your home.
                   </p>
@@ -784,8 +753,8 @@ export default function RePipingServicesPage() {
               <br className="hidden sm:block" /> Re-Piping Service in Las Vegas?
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
-              Red Carpet Plumbing is available for repiping throughout Las
-              Vegas and the Las Vegas Valley. Licensed plumbers, permits
+              Red Carpet Plumbing is available for repiping throughout the
+              Las Vegas Valley. Licensed plumbers, permits
               pulled, 4.8-star rated, NV #0048585A.
             </p>
             <div className="mt-10">

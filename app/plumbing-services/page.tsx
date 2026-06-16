@@ -9,6 +9,7 @@ import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { ServiceImagePlaceholder } from "@/components/ServiceImagePlaceholder";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
@@ -38,7 +39,7 @@ const PLUMBING_SERVICES_FAQS = [
   {
     question: "What plumbing services does Red Carpet Plumbing offer?",
     answer:
-      "Red Carpet Plumbing offers a full range of plumbing services including emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection, sewer line services, re-piping, gas line plumbing, commercial plumbing, and residential plumbing repair and installation. The company serves homes and businesses throughout Las Vegas and the Las Vegas Valley.",
+      "Red Carpet Plumbing offers a full range of plumbing services including emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection, sewer line services, re-piping, gas line plumbing, commercial plumbing, and residential plumbing repair and installation. The company serves homes and businesses throughout the Las Vegas Valley.",
   },
   {
     question: "Does Red Carpet Plumbing handle emergency plumbing in Las Vegas?",
@@ -48,7 +49,7 @@ const PLUMBING_SERVICES_FAQS = [
   {
     question: "Does Red Carpet Plumbing offer commercial plumbing services?",
     answer:
-      "Yes, Red Carpet Plumbing provides commercial plumbing services for businesses, property managers, and commercial operators in Las Vegas and the Las Vegas Valley. Commercial services include plumbing repair, installation, drain service, backflow prevention, gas line support, and inspection services.",
+      "Yes, Red Carpet Plumbing provides commercial plumbing services for businesses, property managers, and commercial operators in the Las Vegas Valley. Commercial services include plumbing repair, installation, drain service, backflow prevention, gas line support, and inspection services.",
   },
   {
     question: "What areas does Red Carpet Plumbing serve?",
@@ -315,7 +316,7 @@ const serviceSchema = {
     ],
   },
   description:
-    "Red Carpet Plumbing provides residential and commercial plumbing services throughout Las Vegas and the Las Vegas Valley.",
+    "Red Carpet Plumbing provides residential and commercial plumbing services throughout the Las Vegas Valley.",
   areaServed: "Las Vegas, NV",
 };
 
@@ -358,7 +359,7 @@ export default function PlumbingServicesPage() {
             <>
               <span className="block">
                 Red Carpet Plumbing provides plumbing services for homes and
-                businesses throughout Las Vegas and the Las Vegas Valley. Our
+                businesses throughout the Las Vegas Valley. Our
                 team handles emergency plumbing, drain cleaning, leak detection
                 and repair, water heater repair and installation, slab leak
                 detection and repair, sewer line services, re-piping, gas line
@@ -396,32 +397,12 @@ export default function PlumbingServicesPage() {
         />
 
         {/* SECTION 3: TRUST STRIP */}
-        <section
-          aria-labelledby="trust-strip-label"
-          className="border-y border-brand-surface-alt bg-brand-surface-alt"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
-            <p
-              id="trust-strip-label"
-              className="text-center text-sm font-semibold uppercase tracking-wider text-brand-muted"
-            >
-              Why Las Vegas Customers Choose Red Carpet Plumbing
-            </p>
-            <ul className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-5">
-              {TRUST_STRIP_ITEMS.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center justify-center gap-2 text-center"
-                >
-                  <CheckIcon className="h-5 w-5 flex-none text-brand-primary" />
-                  <span className="text-sm font-medium text-brand-dark">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          variant="light"
+          items={TRUST_STRIP_ITEMS}
+          heading="Why Las Vegas Customers Choose Red Carpet Plumbing"
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing"
+        />
 
         {/* SECTION 4: EMERGENCY CTA STRIP */}
         <CTASection
@@ -630,7 +611,7 @@ export default function PlumbingServicesPage() {
         {/* SECTION 11: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Ready to Schedule Plumbing Service in Las Vegas?"
+          headline={<>Ready to Schedule Plumbing Service<br />in Las Vegas?</>}
           body="Contact Red Carpet Plumbing today to request service, get a free quote, or ask about plumbing in your area."
           primaryCTA={{
             label: "Request Plumbing Service",

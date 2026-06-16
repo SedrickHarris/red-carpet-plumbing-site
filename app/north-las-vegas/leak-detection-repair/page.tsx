@@ -9,6 +9,7 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
 // "Over 40 years," and "24/7 emergency service" trust claims, plus license
@@ -370,32 +371,10 @@ export default function NorthLasVegasLeakDetectionPage() {
         />
 
         {/* SECTION 1b: TRUST STRIP */}
-        <section
-          aria-label="Why North Las Vegas customers choose Red Carpet Plumbing for leak detection"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
-              {LEAK_TRUST_STRIP.map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <svg
-                    aria-hidden="true"
-                    className="h-4 w-4 flex-shrink-0 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm font-semibold">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={LEAK_TRUST_STRIP}
+          ariaLabel="Why North Las Vegas customers choose Red Carpet Plumbing for leak detection"
+        />
 
         {/* SECTION 2: WARNING SIGNS */}
         <section className="bg-white">
@@ -748,7 +727,7 @@ export default function NorthLasVegasLeakDetectionPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Leak Detection and Repair Throughout North Las Vegas, NV"
+          headline={<>Leak Detection and Repair<br />Throughout North Las Vegas, NV</>}
           body="Red Carpet Plumbing provides professional non-invasive leak detection and repair throughout North Las Vegas, including Aliante, central North Las Vegas, and all NLV communities. We locate hidden water leaks precisely before any repair begins."
           primaryCTA={{
             label: "Call (702) 567-9172",

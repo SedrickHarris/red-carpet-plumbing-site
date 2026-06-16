@@ -72,7 +72,7 @@ const CONTACT_FAQS = [
   {
     question: "Does Red Carpet Plumbing offer plumbing services for businesses?",
     answer:
-      "Yes, Red Carpet Plumbing provides commercial plumbing services for businesses, property managers, and commercial operators throughout Las Vegas and the Las Vegas Valley. Contact us to discuss your commercial plumbing needs.",
+      "Yes, Red Carpet Plumbing provides commercial plumbing services for businesses, property managers, and commercial operators throughout the Las Vegas Valley. Contact us to discuss your commercial plumbing needs.",
   },
 ];
 
@@ -149,7 +149,7 @@ const webPageSchema = {
   name: "Contact a Las Vegas Plumber | Red Carpet Plumbing",
   url: "https://redcarpetplumbing.com/contact/",
   description:
-    "Contact Red Carpet Plumbing to request plumbing service in Las Vegas and the Las Vegas Valley.",
+    "Contact Red Carpet Plumbing to request plumbing service in the Las Vegas Valley.",
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -199,7 +199,7 @@ const plumberSchema = {
   ],
   sameAs: ["https://share.google/oY5LcfC0lhWJXVjJj"],
   description:
-    "Red Carpet Plumbing provides residential and commercial plumbing services throughout Las Vegas and the Las Vegas Valley, including emergency plumbing, drain cleaning, leak detection, water heater repair, slab leak detection, sewer line services, re-piping, and more.",
+    "Red Carpet Plumbing provides residential and commercial plumbing services throughout the Las Vegas Valley, including emergency plumbing, drain cleaning, leak detection, water heater repair, slab leak detection, sewer line services, re-piping, and more.",
   areaServed: [
     "Las Vegas, NV",
     "Henderson, NV",
@@ -260,7 +260,7 @@ export default function ContactPage() {
             <>
               <span className="block">
                 Red Carpet Plumbing is available to help with plumbing service
-                throughout Las Vegas and the Las Vegas Valley. Whether you have
+                throughout the Las Vegas Valley. Whether you have
                 an urgent plumbing situation or want to schedule a service
                 appointment, you can reach us by phone or by submitting a
                 request through the form on this page.
@@ -289,7 +289,7 @@ export default function ContactPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Plumbing Service in Las Vegas and the Las Vegas Valley
+                Plumbing Service in the Las Vegas Valley
               </h2>
             </div>
             <dl className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -357,8 +357,16 @@ export default function ContactPage() {
                   Address
                 </dt>
                 <dd className="mt-3 text-base text-brand-dark/80">
-                  <span className="block">3330 W. Hacienda Ave Ste. 405</span>
-                  <span className="mt-1 block">Las Vegas, NV 89118</span>
+                  <a
+                    href="https://www.google.com/maps/place/3330+W+Hacienda+Ave+%23405,+Las+Vegas,+NV+89118/@36.0943375,-115.1870907,17z/data=!3m1!4b1!4m6!3m5!1s0x80c8c5d697faaaab:0x3db74ab4815ec72a!8m2!3d36.0943375!4d-115.1845158!16s%2Fg%2F11nynzwdy4?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block transition-colors hover:text-brand-primary hover:underline"
+                    aria-label="Get directions to Red Carpet Plumbing on Google Maps"
+                  >
+                    <span className="block">3330 W. Hacienda Ave Ste. 405</span>
+                    <span className="mt-1 block">Las Vegas, NV 89118</span>
+                  </a>
                 </dd>
               </div>
 
@@ -523,7 +531,7 @@ export default function ContactPage() {
         {/* SOURCE-SITE CLAIM: verify 24/7 availability documentation before final launch */}
         <CTASection
           background="red"
-          headline="Plumbing Emergency in Las Vegas?"
+          headline={<>Plumbing Emergency<br />in Las Vegas?</>}
           body="For urgent plumbing situations including burst pipes, severe leaks, sewer backups, and water heater failures, call Red Carpet Plumbing directly for the fastest response."
           primaryCTA={{
             label: "Call (702) 567-9172",

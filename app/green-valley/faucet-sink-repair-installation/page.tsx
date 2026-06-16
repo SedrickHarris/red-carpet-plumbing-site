@@ -9,6 +9,7 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only):
@@ -412,32 +413,10 @@ export default function GreenValleyFaucetSinkPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Green Valley customers choose Red Carpet Plumbing for faucet and sink service"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
-              {GV_FAUCET_SINK_TRUST.map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <svg
-                    aria-hidden="true"
-                    className="h-4 w-4 flex-shrink-0 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm font-semibold">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={GV_FAUCET_SINK_TRUST}
+          ariaLabel="Why Green Valley customers choose Red Carpet Plumbing for faucet and sink service"
+        />
 
         {/* SECTION 3: COMMON PROBLEMS */}
         <section className="bg-white">

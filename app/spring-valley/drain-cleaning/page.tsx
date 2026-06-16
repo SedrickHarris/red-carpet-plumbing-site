@@ -600,7 +600,7 @@ export default function SpringValleyDrainCleaningPage() {
         {/* SECTION 8: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Schedule Drain Cleaning in Spring Valley Today"
+          headline={<>Schedule Drain Cleaning<br />in Spring Valley Today</>}
           body="Red Carpet Plumbing provides professional drain cleaning throughout Spring Valley, NV, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",

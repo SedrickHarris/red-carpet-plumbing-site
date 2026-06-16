@@ -10,6 +10,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
 // "Over 40 years," and "24/7 emergency commercial service" trust claims are
@@ -388,32 +389,10 @@ export default function LasVegasCommercialPlumbingPage() {
         />
 
         {/* SECTION 1b: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas businesses choose Red Carpet Plumbing for commercial plumbing"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
-              {COMMERCIAL_TRUST_STRIP.map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <svg
-                    aria-hidden="true"
-                    className="h-4 w-4 flex-shrink-0 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm font-semibold">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={COMMERCIAL_TRUST_STRIP}
+          ariaLabel="Why Las Vegas businesses choose Red Carpet Plumbing for commercial plumbing"
+        />
 
         {/* SECTION 2: WHO WE SERVE */}
         <section className="bg-white">
@@ -689,7 +668,7 @@ export default function LasVegasCommercialPlumbingPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Licensed Commercial Plumbing Throughout Las Vegas, NV"
+          headline={<>Licensed Commercial Plumbing<br />Throughout Las Vegas, NV</>}
           body="Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and multi-unit buildings throughout Las Vegas. NV Contractor License #0048585A, C-1 Plumbing and Heating."
           primaryCTA={{
             label: "Call (702) 567-9172",

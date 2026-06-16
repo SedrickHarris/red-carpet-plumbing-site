@@ -687,7 +687,7 @@ export default function ParadiseWaterHeaterPage() {
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Ready for Water Heater Service in Paradise, NV?"
+          headline={<>Ready for Water Heater Service<br />in Paradise, NV?</>}
           body="Do not wait on a failing water heater. Red Carpet Plumbing provides water heater repair and installation throughout Paradise and the Las Vegas Valley, with all work completed to current Clark County plumbing code. Call now or request service online."
           primaryCTA={{
             label: "Call Now: (702) 567-9172",

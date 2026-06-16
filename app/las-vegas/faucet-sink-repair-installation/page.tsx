@@ -9,6 +9,7 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear as unverified claims in
@@ -443,32 +444,10 @@ export default function LasVegasFaucetSinkPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for faucet and sink service"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
-              {LV_FAUCET_TRUST_STRIP.map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <svg
-                    aria-hidden="true"
-                    className="h-4 w-4 flex-shrink-0 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm font-semibold">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={LV_FAUCET_TRUST_STRIP}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for faucet and sink service"
+        />
 
         {/* SECTION 3: SIGNS YOUR FAUCET OR SINK NEEDS A PLUMBER */}
         <section className="bg-white">
@@ -481,8 +460,8 @@ export default function LasVegasFaucetSinkPage() {
             <div className="mt-8 rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
               <p className="text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing repairs, replaces, and installs faucets and
-                sinks for kitchens, bathrooms, and utility areas throughout Las
-                Vegas and the Las Vegas Valley. Our licensed plumbers handle
+                sinks for kitchens, bathrooms, and utility areas throughout the
+                Las Vegas Valley. Our licensed plumbers handle
                 everything from a dripping faucet to a full sink installation.
               </p>
             </div>
@@ -622,8 +601,8 @@ export default function LasVegasFaucetSinkPage() {
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/80">
                   Red Carpet Plumbing repairs, replaces, and installs faucets and
-                  sinks for kitchens, bathrooms, and utility areas throughout Las
-                  Vegas and the Las Vegas Valley. Licensed plumbers, transparent
+                  sinks for kitchens, bathrooms, and utility areas throughout the
+                  Las Vegas Valley. Licensed plumbers, transparent
                   pricing. NV #0048585A.
                 </p>
               </div>
@@ -742,8 +721,8 @@ export default function LasVegasFaucetSinkPage() {
             source-site claims; confirm all before publishing. */}
         <CTASection
           background="red"
-          headline="Need Faucet or Sink Repair in Las Vegas?"
-          body="Red Carpet Plumbing provides faucet repair, faucet replacement, sink installation, and under-sink leak repair throughout Las Vegas and the Las Vegas Valley. Licensed, local, transparent pricing. NV #0048585A."
+          headline={<>Need Faucet or Sink Repair<br />in Las Vegas?</>}
+          body="Red Carpet Plumbing provides faucet repair, faucet replacement, sink installation, and under-sink leak repair throughout the Las Vegas Valley. Licensed, local, transparent pricing. NV #0048585A."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

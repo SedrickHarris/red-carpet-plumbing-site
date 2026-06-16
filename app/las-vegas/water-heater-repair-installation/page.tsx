@@ -9,6 +9,7 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — license #0048585A, emergency/24-7
 // availability, transparent-pricing, and any rating/40-year claims are
@@ -342,7 +343,7 @@ export default function LasVegasWaterHeaterPage() {
           trustItems={[
             "NV Licensed Plumbers, #0048585A",
             "Emergency Water Heater Service Available",
-            "Serving Las Vegas and the Las Vegas Valley",
+            "Serving the Las Vegas Valley",
             "Transparent Pricing, No Hidden Fees",
           ]}
           primaryCTA={{
@@ -362,32 +363,10 @@ export default function LasVegasWaterHeaterPage() {
         />
 
         {/* SECTION 2: TRUST STRIP */}
-        <section
-          aria-label="Why Las Vegas customers choose Red Carpet Plumbing for water heater service"
-          className="bg-brand-primary text-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-10 xl:px-12">
-            <ul className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
-              {WH_TRUST_STRIP.map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <svg
-                    aria-hidden="true"
-                    className="h-4 w-4 flex-shrink-0 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm font-semibold">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <TrustStrip
+          items={WH_TRUST_STRIP}
+          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for water heater service"
+        />
 
         {/* SECTION 3: DIRECT ANSWER */}
         <section className="bg-white">
@@ -712,8 +691,8 @@ export default function LasVegasWaterHeaterPage() {
         {/* SECTION 12: FINAL CTA */}
         <CTASection
           background="red"
-          headline="Water Heater Problems in Las Vegas?"
-          body="Do not wait on a failing water heater. Call Red Carpet Plumbing at (702) 567-9172 or request service online. We repair and install water heaters throughout Las Vegas and the Las Vegas Valley, with all work completed to current Clark County plumbing code."
+          headline={<>Water Heater Problems<br />in Las Vegas?</>}
+          body="Do not wait on a failing water heater. Call Red Carpet Plumbing at (702) 567-9172 or request service online. We repair and install water heaters throughout the Las Vegas Valley, with all work completed to current Clark County plumbing code."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

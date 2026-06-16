@@ -50,7 +50,7 @@ const ABOUT_FAQS = [
     question:
       "Does Red Carpet Plumbing offer emergency plumbing service?",
     answer:
-      "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service throughout Las Vegas and the Las Vegas Valley. Emergency services include burst pipes, sewer backups, water heater failures, gas line issues, and other urgent plumbing situations.",
+      "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service throughout the Las Vegas Valley. Emergency services include burst pipes, sewer backups, water heater failures, gas line issues, and other urgent plumbing situations.",
   },
   {
     question: "How do I contact Red Carpet Plumbing?",
@@ -74,7 +74,7 @@ const TRUST_PILLARS = [
   },
   {
     title: "24/7 Emergency Service",
-    body: "Plumbing emergencies happen outside of business hours. Red Carpet Plumbing is available 24 hours a day, 7 days a week for emergency plumbing situations throughout Las Vegas and the Las Vegas Valley.",
+    body: "Plumbing emergencies happen outside of business hours. Red Carpet Plumbing is available 24 hours a day, 7 days a week for emergency plumbing situations throughout the Las Vegas Valley.",
   },
   {
     title: "Transparent Pricing, No Hidden Fees",
@@ -184,7 +184,7 @@ export default function AboutPage() {
               <br className="hidden sm:block" /> Plumbing Company
             </>
           }
-          subheading="Red Carpet Plumbing is a local, family-owned plumbing company that has been serving homes and businesses throughout Las Vegas and the Las Vegas Valley for over 40 years."
+          subheading="Red Carpet Plumbing is a local, family-owned plumbing company that has been serving homes and businesses throughout the Las Vegas Valley for over 40 years."
           trustItems={[
             "Over 40 Years Serving Las Vegas",
             "Local, Family-Owned Business",
@@ -423,10 +423,18 @@ export default function AboutPage() {
                 </a>
               </p>
               <p className="text-base leading-7 text-brand-dark/80 sm:text-lg">
-                Our office is located at 3330 W. Hacienda Ave Ste. 405,
-                Las Vegas, NV 89118. Office hours are Monday through
-                Friday, 7:30 AM to 4:30 PM. Emergency plumbing service is
-                available 24/7.
+                Our office is located at{" "}
+                <a
+                  href="https://www.google.com/maps/place/3330+W+Hacienda+Ave+%23405,+Las+Vegas,+NV+89118/@36.0943375,-115.1870907,17z/data=!3m1!4b1!4m6!3m5!1s0x80c8c5d697faaaab:0x3db74ab4815ec72a!8m2!3d36.0943375!4d-115.1845158!16s%2Fg%2F11nynzwdy4?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-brand-primary hover:underline"
+                  aria-label="Get directions to Red Carpet Plumbing on Google Maps"
+                >
+                  3330 W. Hacienda Ave Ste. 405, Las Vegas, NV 89118
+                </a>
+                . Office hours are Monday through Friday, 7:30 AM to 4:30 PM.
+                Emergency plumbing service is available 24/7.
               </p>
             </div>
           </div>
