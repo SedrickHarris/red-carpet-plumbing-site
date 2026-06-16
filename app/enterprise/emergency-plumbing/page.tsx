@@ -484,7 +484,7 @@ export default function EnterpriseEmergencyPlumbingPage() {
 
         {/* SECTION 4: EMERGENCY SERVICES WE PROVIDE */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Emergency Plumbing Services We Provide in Enterprise
@@ -585,7 +585,7 @@ export default function EnterpriseEmergencyPlumbingPage() {
 
         {/* SECTION 7: WHY CHOOSE */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Enterprise Homeowners and Businesses Choose Red Carpet

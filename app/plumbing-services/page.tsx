@@ -382,6 +382,10 @@ export default function PlumbingServicesPage() {
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",
           }}
+          backgroundImage={{
+            src: "/images/locations/las-vegas/hero.webp",
+            alt: "Plumbing services in Las Vegas, NV",
+          }}
           formSlot={
             <div>
               <QuoteFormPlaceholder

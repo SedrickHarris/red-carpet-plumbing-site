@@ -33,7 +33,8 @@ const DEFAULT_SERVICES = [
 type FormState = "idle" | "submitting" | "success" | "error";
 
 type FieldErrors = {
-  name?: string;
+  firstName?: string;
+  lastName?: string;
   phone?: string;
   email?: string;
   service?: string;
@@ -77,8 +78,11 @@ export function QuoteFormPlaceholder({
   function validate(data: FormData): FieldErrors {
     const next: FieldErrors = {};
 
-    const name = ((data.get("name") as string | null) ?? "").trim();
-    if (name.length < 2) next.name = "Please enter your full name.";
+    const firstName = ((data.get("firstName") as string | null) ?? "").trim();
+    if (firstName.length < 1) next.firstName = "Please enter your first name.";
+
+    const lastName = ((data.get("lastName") as string | null) ?? "").trim();
+    if (lastName.length < 1) next.lastName = "Please enter your last name.";
 
     const phone = ((data.get("phone") as string | null) ?? "").trim();
     if (!/^[\d\s()\-+]{7,}$/.test(phone))
@@ -132,7 +136,9 @@ export function QuoteFormPlaceholder({
 
     const payload = {
       formType: "quote" as const,
-      name: (data.get("name") as string) ?? "",
+      name: `${((data.get("firstName") as string | null) ?? "").trim()} ${
+        ((data.get("lastName") as string | null) ?? "").trim()
+      }`.trim(),
       phone: (data.get("phone") as string) ?? "",
       email: (data.get("email") as string) ?? "",
       service: (data.get("service") as string) ?? "",
@@ -235,27 +241,51 @@ export function QuoteFormPlaceholder({
           />
         </div>
 
-        <div>
-          <label htmlFor="qf-name" className={labelClass}>
-            Full Name
-          </label>
-          <input
-            id="qf-name"
-            name="name"
-            type="text"
-            required
-            aria-required="true"
-            aria-invalid={errors.name ? "true" : "false"}
-            autoComplete="name"
-            placeholder="Your full name"
-            disabled={isSubmitting}
-            className={inputClass(Boolean(errors.name))}
-          />
-          {errors.name ? (
-            <p role="alert" className={errorClass}>
-              {errors.name}
-            </p>
-          ) : null}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div>
+            <label htmlFor="qf-first-name" className={labelClass}>
+              First Name
+            </label>
+            <input
+              id="qf-first-name"
+              name="firstName"
+              type="text"
+              required
+              aria-required="true"
+              aria-invalid={errors.firstName ? "true" : "false"}
+              autoComplete="given-name"
+              placeholder="First name"
+              disabled={isSubmitting}
+              className={inputClass(Boolean(errors.firstName))}
+            />
+            {errors.firstName ? (
+              <p role="alert" className={errorClass}>
+                {errors.firstName}
+              </p>
+            ) : null}
+          </div>
+          <div>
+            <label htmlFor="qf-last-name" className={labelClass}>
+              Last Name
+            </label>
+            <input
+              id="qf-last-name"
+              name="lastName"
+              type="text"
+              required
+              aria-required="true"
+              aria-invalid={errors.lastName ? "true" : "false"}
+              autoComplete="family-name"
+              placeholder="Last name"
+              disabled={isSubmitting}
+              className={inputClass(Boolean(errors.lastName))}
+            />
+            {errors.lastName ? (
+              <p role="alert" className={errorClass}>
+                {errors.lastName}
+              </p>
+            ) : null}
+          </div>
         </div>
 
         <div>

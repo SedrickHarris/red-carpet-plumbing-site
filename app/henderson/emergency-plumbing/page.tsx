@@ -437,7 +437,7 @@ export default function HendersonEmergencyPlumbingPage() {
 
         {/* SECTION 6: SERVICES WE PROVIDE */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Emergency Plumbing Services We Provide in Henderson
@@ -495,7 +495,7 @@ export default function HendersonEmergencyPlumbingPage() {
 
         {/* SECTION 8: WHY CHOOSE */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Henderson Homeowners
@@ -576,7 +576,7 @@ export default function HendersonEmergencyPlumbingPage() {
         {/* (drain-cleaning, leak-detection-repair, water-heater-repair-installation, */}
         {/* slab-leak-detection-repair). */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services

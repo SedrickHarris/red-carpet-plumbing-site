@@ -136,7 +136,7 @@ export default function TrustStrip({
             {heading}
           </p>
         ) : null}
-        <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3 lg:flex-nowrap lg:justify-between lg:gap-y-0">
+        <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 lg:flex-nowrap lg:gap-y-0">
           {items.map((item) => (
             <li
               key={item}
