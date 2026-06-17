@@ -610,3 +610,65 @@ sewer-line-services (P47), gas-line-plumbing (P48), toilet-repair-installation
   as one batch (or per-page per standing workflow), then push to `origin/main`.
   After that, continue with the remaining Henderson service-location pages per the
   build list.
+
+---
+
+## Page 54 — Sewer Line Services in Henderson
+
+- **Route:** `/henderson/sewer-line-services/` · **File created:** `app/henderson/sewer-line-services/page.tsx`. First of the remaining Henderson service-location pages (P54-P59). Built on top of the committed LV cluster (HEAD `f8e7ec8`).
+- **Status:** Created (uncommitted, staged). Self-QA PASS. Awaiting approval — not committed, not pushed.
+- **Schema:** WebPage + BreadcrumbList (3-level) + Service + HowTo + FAQPage (5 separate JsonLd blocks, order verified WebPage → BreadcrumbList → Service → HowTo → FAQPage). areaServed `City` (Henderson) → `State` (Nevada) — NOT Place, NOT AdministrativeArea, NOT Clark County. No AggregateRating, no Review, no sameAs, no hasCredential (Henderson sibling pattern). HowTo from `HENDERSON_SEWER_STEPS`; FAQPage from `HENDERSON_SEWER_FAQS` (6, character-for-character). Verified: 6 Question nodes, 3 breadcrumb ListItems, 0 AggregateRating.
+- **Content:** Henderson-specific (not city-name-swap) — 3 H3 context cards (Green Valley original 1985-1995 clay/cast iron at 30-40 yrs; Green Valley Ranch mid-90s-mid-2000s PVC first cycle; desert/HOA mesquite-olive root intrusion), 6 H3 service cards (camera, cleaning, root removal, repair/CIPP, replacement/pipe-bursting, emergency), 7-item warning-signs list, 4-step process, 6-item why-choose, 6 PAA-aligned FAQs. Henderson City permit coordination + caliche excavation/trenchless context throughout.
+- **Internal links:** `/video-camera-plumbing-inspections/` (cleaning card), `/henderson/emergency-plumbing/` (emergency card), `/henderson-plumbing-services/` (communities intro), `/green-valley-plumbing-services/` + `/lake-las-vegas-plumbing-services/` (community chips), `/contact/` (CTAs). All confirmed present in rendered HTML; all targets built.
+- **Hero image:** NONE — no `/images/services/sewer-line-services/` asset exists (directory absent, same as the core/LV sewer pages). `backgroundImage` omitted; HeroSection renders its gradient. TODO comment in-file.
+- **Trust strip:** hero `trustItems` (`HERO_TRUST_ITEMS`) + separate red brand-primary band (`SEWER_TRUST_STRIP`, distinct content) — the Henderson cluster dual pattern. Mid-page charcoal CTA + final red CTASection; `StickyMobileCTA` present. Inline `details`/`summary` FAQ accordion with a local `FaqChevron`. Communities chips: Green Valley + Lake Las Vegas live `<Link>`, the rest plain `<span>`.
+- **FLAG: VERIFY (source comments only, none in rendered strings/schema — 0 FLAG leaked into HTML):** top-of-file block (telephone, license #0048585A/C-1, "Licensed and Insured", transparent/upfront pricing, emergency availability); hero trust items (license + pricing); SEWER_TRUST_STRIP ("Licensed and Insured" + "Upfront Pricing"); emergency service card; why-choose (license + pricing); serviceSchema telephone; final CTA license.
+- **Deviations from brief:** (1) Context/services rendered as **H3 article cards** (re-piping sibling pattern; the brief specified H3). (2) **Mid-page CTA placed after the process section** (between Process and Why-Choose) rather than the brief's Section 8 slot, to avoid two adjacent charcoal sections (mid-CTA + communities) and match the established LV/Henderson cluster cadence. (3) **Service `provider` omits `PostalAddress`** per the approved P54 Service schema (the Henderson re-piping sibling also omits it; the LV cluster briefs had included it). (4) Service link placement follows the **Approved On-Page Content prose** (video-camera link on the *cleaning* card, not the camera card as the build-prompt const had it; emergency link on the emergency card). (5) Hero `headline` is a plain string.
+- **Hub activation:** NOT performed — Gate 2 prohibited editing the Henderson hub. The `henderson-plumbing-services` hub's sewer-line card (if pointing at core `/sewer-line-services/`) can be repointed to this route in a later activation pass; flagged as a follow-up.
+- **Validation:** `eslint` (clean, after escaping one `Henderson&apos;s` in JSX), `tsc --noEmit` (clean), `next build` (route prerendered static ○). `grep -c "—" out/henderson/sewer-line-services/index.html` = **0**.
+- **Recommended next step:** Page 55 — Henderson Gas Line Plumbing (`/henderson/gas-line-plumbing/`).
+
+---
+
+## Page 55 — Gas Line Plumbing in Henderson
+
+- **Route:** `/henderson/gas-line-plumbing/` · **File created:** `app/henderson/gas-line-plumbing/page.tsx`. Second of the remaining Henderson service-location pages (P54-P59). Built on top of HEAD `f8e7ec8` (working tree also carries staged P54 sewer + log).
+- **Status:** Created (uncommitted, staged). Self-QA PASS. Awaiting approval — not committed, not pushed.
+- **Schema:** WebPage + BreadcrumbList (3-level) + Service + HowTo + FAQPage (5 separate JsonLd blocks, order verified WebPage → BreadcrumbList → Service → HowTo → FAQPage). areaServed `City` (Henderson) → `State` (Nevada) — NOT Place, NOT AdministrativeArea, NOT Clark County. No AggregateRating, no Review, no sameAs, no hasCredential (Henderson sibling pattern). HowTo from `HENDERSON_GAS_STEPS` (4); FAQPage from `HENDERSON_GAS_FAQS` (6, character-for-character). Verified in rendered HTML: 6 Question nodes, 3 breadcrumb ListItems, 4 HowToStep nodes, 0 AggregateRating.
+- **Content:** Henderson-specific (not city-name-swap) — a dedicated **safety callout** ("If You Smell Gas") with the 5-step Southwest Gas emergency protocol, 3 H3 context cards (aging black iron in original Green Valley 1985-early 90s; CSST connector heat stress; outdoor HOA gas extensions), 6 H3 service cards (leak detection/repair, inspection, installation, appliance hookup, outdoor extensions, emergency), 6-item warning-signs list + note, 4-step process, 6-item why-choose, 6 PAA-aligned FAQs. Henderson City permit coordination (vs Clark County) + caliche-soil context throughout. Southwest Gas number `1-800-935-4748` appears in callout, services, process, and FAQ.
+- **Internal links:** `/gas-line-plumbing/` (leak-detection service card), `/water-heater-repair-installation/` (appliance-hookup card), `/henderson/emergency-plumbing/` (emergency card), `/henderson-plumbing-services/` (communities intro), `/green-valley-plumbing-services/` + `/lake-las-vegas-plumbing-services/` (community chips), `/contact/` (CTAs). All confirmed present in rendered HTML; all targets built.
+- **Hero image:** `/images/services/gas-line-plumbing/hero.webp` (358KB; the only asset — no card.webp). Passed via `backgroundImage`.
+- **Safety callout:** rendered as a **distinct bordered alert panel** (`border-2 border-brand-primary` on `bg-brand-surface-alt`, H2 heading, numbered `<ol>`, note paragraph) placed between the hero and the red trust band — NOT the full-width red trust strip, NOT a CTA button, per the brief's safety-block instruction.
+- **Trust strip:** hero `trustItems` (`HERO_TRUST_ITEMS`) + separate red brand-primary band (`GAS_TRUST_STRIP`, distinct content). Mid-page charcoal CTA + final red CTASection; `StickyMobileCTA` present. Inline `details`/`summary` FAQ accordion with a local `FaqChevron`. Communities chips: Green Valley + Lake Las Vegas live `<Link>`, the rest plain `<span>`.
+- **FLAG: VERIFY (source comments only, 0 FLAG leaked into rendered HTML):** top-of-file block (telephone, license #0048585A/C-1, emergency response, transparent/upfront pricing, emergency availability, Southwest Gas number); hero trust items (license + pricing); SAFETY_CALLOUT (Southwest Gas number + telephone); GAS_TRUST_STRIP (emergency response + upfront pricing); emergency service card (availability); HENDERSON_GAS_STEPS step 1 (telephone + Southwest Gas number); WHY_CHOOSE (license + pricing); serviceSchema telephone; final CTA license.
+- **Deviations from brief:** (1) Context/services rendered as **H3 article cards** (Henderson sibling pattern; the brief specified H3). (2) **Mid-page CTA placed after the process section** (Section 9 between Process and Communities) rather than the brief's Section 9 slot after Why-Choose — Why-Choose (white) sits before the charcoal mid-CTA so the charcoal mid-CTA and charcoal communities sections are not adjacent; matches the established cluster cadence. (3) **Service `provider` omits `PostalAddress`** per the approved P55 Service schema (Henderson re-piping/sewer siblings also omit it). (4) Service link sentences follow the **Approved On-Page Content prose** (fuller; carries the gas-line/water-heater/emergency internal links) where it differed from the abbreviated build-prompt const. (5) Hero `headline` is a plain string. No JSX apostrophe escapes needed — safety/warning notes held in consts.
+- **Hub activation:** NOT performed — Gate 2 prohibited editing the Henderson hub. The hub's gas-line card (if pointing at core `/gas-line-plumbing/`) can be repointed to this route in a later activation pass; flagged as a follow-up.
+- **Validation:** `eslint` (clean, exit 0, no escapes needed), `tsc --noEmit` (clean, exit 0), `next build` (112 static pages, route prerendered static ○). `grep -c "—" out/henderson/gas-line-plumbing/index.html` = **0**; 0 prose double-hyphens.
+- **Recommended next step:** Page 56 — Henderson Toilet Repair and Installation (`/henderson/toilet-repair-installation/`).
+
+## About Page — AEO Direct Answer Block and Plumber Schema
+
+- Route: /about/
+- File edited: app/about/page.tsx
+- Build type: AUDIT AND EXTEND (additive-only, Option C Hybrid)
+- Workflow mode: Core Mode
+- AI depth: Level 3 Core SEO/AEO
+
+Changes made:
+- Added direct-answer AEO paragraph immediately below H1
+- Added plumberSchema const with confirmed NAP, email, license #0048585A, openingHoursSpecification, and sameAs (Google, Facebook, Instagram, X)
+- Added <JsonLd data={plumberSchema} /> render after existing schema blocks
+
+Preserved exactly:
+- All existing trust pillars
+- All existing metadata and OG fields
+- All existing FAQ copy
+- All existing hero copy, CTAs, and trustItems
+- Schema @type: AboutPage (not changed)
+
+Schema types in built HTML: AboutPage, BreadcrumbList, FAQPage, Plumber
+FAQ count: 6 visible / 6 in FAQPage schema (match confirmed)
+Internal links: /plumbing-services/, /service-areas/, /contact/ (minimum met)
+em dash count: 0
+Lint: PASS | Type-check: PASS | Build: PASS
+FLAG: VERIFY items: not added to existing content (out of scope for this build)

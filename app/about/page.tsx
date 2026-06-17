@@ -158,12 +158,54 @@ const faqSchema = {
   })),
 };
 
+const plumberSchema = {
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  name: "Red Carpet Plumbing",
+  url: "https://redcarpetplumbing.com",
+  telephone: "+17025679172",
+  email: "info@redcarpetplumbing.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3330 W. Hacienda Ave Ste. 405",
+    addressLocality: "Las Vegas",
+    addressRegion: "NV",
+    postalCode: "89118",
+    addressCountry: "US",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "07:30",
+      closes: "16:30",
+    },
+  ],
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: "license",
+    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    identifier: "0048585A",
+    issuedBy: {
+      "@type": "Organization",
+      name: "State of Nevada Contractors Board",
+    },
+  },
+  sameAs: [
+    "https://share.google/oY5LcfC0lhWJXVjJj",
+    "https://www.facebook.com/redcarpetplumbing/",
+    "https://www.instagram.com/redcarpetplumbing/",
+    "https://x.com/redcarpetplumb",
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
       <JsonLd data={aboutPageSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
+      <JsonLd data={plumberSchema} />
 
       <SiteHeader />
 
@@ -206,6 +248,23 @@ export default function AboutPage() {
             alt: "Red Carpet Plumbing service vehicle in Las Vegas",
           }}
         />
+
+        {/* SECTION 1b: DIRECT ANSWER (AEO: "Who is Red Carpet Plumbing?") */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-4 pt-16 sm:px-6 sm:pt-20 lg:px-10 lg:pt-24">
+            <p className="text-lg leading-8 text-brand-dark/80">
+              Red Carpet Plumbing is a local, family-owned plumbing company
+              serving homes and businesses throughout the Las Vegas Valley. The
+              company holds Nevada Contractor License #0048585A under the C-1
+              Plumbing and Heating classification, covering residential and
+              commercial plumbing and heating work in Nevada. Services include
+              emergency plumbing, drain cleaning, leak detection and repair,
+              water heater repair and installation, slab leak detection and
+              repair, sewer line services, re-piping, gas line plumbing, and
+              commercial plumbing. Call (702) 567-9172 to schedule service.
+            </p>
+          </div>
+        </section>
 
         {/* SECTION 2: WHO WE ARE */}
         <section className="bg-white">
