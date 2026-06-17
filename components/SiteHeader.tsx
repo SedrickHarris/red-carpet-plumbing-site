@@ -8,14 +8,59 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/Button";
 
 type NavLink = { label: string; href: string; built?: boolean };
+type DropdownLink = { label: string; href: string };
 
 const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/", built: true },
-  { label: "Services", href: "/plumbing-services/", built: true },
-  { label: "Service Areas", href: "/service-areas/", built: true },
-  { label: "About", href: "/about/", built: false },
+  { label: "About", href: "/about/", built: true },
   { label: "Contact", href: "/contact/", built: true },
 ];
+
+const SERVICES_DROPDOWN: DropdownLink[] = [
+  { label: "Emergency Plumbing", href: "/emergency-plumbing/" },
+  { label: "Drain Cleaning", href: "/drain-cleaning/" },
+  { label: "Leak Detection and Repair", href: "/leak-detection-repair/" },
+  {
+    label: "Water Heater Repair and Installation",
+    href: "/water-heater-repair-installation/",
+  },
+  {
+    label: "Slab Leak Detection and Repair",
+    href: "/slab-leak-detection-repair/",
+  },
+  { label: "Sewer Line Services", href: "/sewer-line-services/" },
+  { label: "Re-Piping", href: "/re-piping/" },
+  { label: "Commercial Plumbing", href: "/commercial-plumbing/" },
+];
+
+const SERVICE_AREAS_DROPDOWN: DropdownLink[] = [
+  { label: "Las Vegas", href: "/las-vegas-plumbing-services/" },
+  { label: "Henderson", href: "/henderson-plumbing-services/" },
+  { label: "North Las Vegas", href: "/north-las-vegas-plumbing-services/" },
+  { label: "Paradise", href: "/paradise-plumbing-services/" },
+  { label: "Summerlin", href: "/summerlin-plumbing-services/" },
+  { label: "Spring Valley", href: "/spring-valley-plumbing-services/" },
+  { label: "Enterprise", href: "/enterprise-plumbing-services/" },
+  { label: "Boulder City", href: "/boulder-city-plumbing-services/" },
+  { label: "Green Valley", href: "/green-valley-plumbing-services/" },
+  { label: "Lake Las Vegas", href: "/lake-las-vegas-plumbing-services/" },
+  { label: "Aliante Area", href: "/north-las-vegas/aliante-area-plumbing/" },
+];
+
+function Chevron({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className={`h-4 w-4 ${className}`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+    </svg>
+  );
+}
 
 function DesktopNavItem({ link }: { link: NavLink }) {
   const pathname = usePathname();
@@ -48,6 +93,97 @@ function DesktopNavItem({ link }: { link: NavLink }) {
   );
 }
 
+function DesktopDropdown({
+  label,
+  items,
+  viewAllLabel,
+  viewAllHref,
+  isOpen,
+  onOpen,
+  onClose,
+}: {
+  label: string;
+  items: DropdownLink[];
+  viewAllLabel: string;
+  viewAllHref: string;
+  isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+}) {
+  const pathname = usePathname();
+  const shouldReduceMotion = useReducedMotion();
+  const isActive = items.some((item) => pathname.startsWith(item.href));
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={onOpen}
+      onMouseLeave={onClose}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node)) onClose();
+      }}
+    >
+      <button
+        type="button"
+        aria-haspopup="true"
+        aria-expanded={isOpen}
+        onClick={() => (isOpen ? onClose() : onOpen())}
+        className={`flex items-center gap-1 text-base font-medium transition-colors hover:text-brand-primary ${
+          isActive
+            ? "text-brand-primary border-b-2 border-brand-primary pb-0.5"
+            : "text-brand-dark"
+        }`}
+      >
+        {label}
+        <Chevron
+          className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      <AnimatePresence>
+        {isOpen ? (
+          <motion.div
+            role="menu"
+            aria-label={label}
+            initial={
+              shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: -4 }
+            }
+            animate={{ opacity: 1, y: 0 }}
+            exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -4 }}
+            transition={{
+              duration: shouldReduceMotion ? 0 : 0.15,
+              ease: "easeOut",
+            }}
+            className="absolute left-0 top-full z-50 mt-3 min-w-[220px] rounded-xl bg-white p-1.5 shadow-lg ring-1 ring-black/5"
+          >
+            {items.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                role="menuitem"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-2.5 text-sm font-medium text-brand-dark transition-colors hover:bg-brand-surface-alt hover:text-brand-primary"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <div className="mt-1 border-t border-brand-surface-alt pt-1">
+              <Link
+                href={viewAllHref}
+                role="menuitem"
+                onClick={onClose}
+                className="block rounded-lg px-4 py-2.5 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-surface-alt"
+              >
+                {viewAllLabel}
+              </Link>
+            </div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 function MobileNavItem({
   link,
   onNavigate,
@@ -76,9 +212,94 @@ function MobileNavItem({
   );
 }
 
+function MobileAccordion({
+  label,
+  items,
+  viewAllLabel,
+  viewAllHref,
+  isOpen,
+  onToggle,
+  onNavigate,
+}: {
+  label: string;
+  items: DropdownLink[];
+  viewAllLabel: string;
+  viewAllHref: string;
+  isOpen: boolean;
+  onToggle: () => void;
+  onNavigate: () => void;
+}) {
+  const shouldReduceMotion = useReducedMotion();
+
+  return (
+    <div>
+      <button
+        type="button"
+        aria-expanded={isOpen}
+        onClick={onToggle}
+        className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-base font-medium text-brand-dark transition-colors hover:bg-brand-surface-alt hover:text-brand-primary"
+      >
+        {label}
+        <Chevron
+          className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
+        />
+      </button>
+      <AnimatePresence initial={false}>
+        {isOpen ? (
+          <motion.div
+            initial={
+              shouldReduceMotion
+                ? { opacity: 1 }
+                : { height: 0, opacity: 0 }
+            }
+            animate={
+              shouldReduceMotion
+                ? { opacity: 1 }
+                : { height: "auto", opacity: 1 }
+            }
+            exit={
+              shouldReduceMotion ? { opacity: 0 } : { height: 0, opacity: 0 }
+            }
+            transition={{ duration: shouldReduceMotion ? 0 : 0.2 }}
+            className="overflow-hidden"
+          >
+            <ul className="flex flex-col gap-1 pb-1">
+              {items.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    onClick={onNavigate}
+                    className="block rounded-lg px-3 py-2.5 pl-6 text-sm font-medium text-brand-dark transition-colors hover:bg-brand-surface-alt hover:text-brand-primary"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href={viewAllHref}
+                  onClick={onNavigate}
+                  className="block rounded-lg px-3 py-2.5 pl-6 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-surface-alt"
+                >
+                  {viewAllLabel}
+                </Link>
+              </li>
+            </ul>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<
+    "services" | "areas" | null
+  >(null);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [areasOpen, setAreasOpen] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -88,7 +309,21 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const closeMobile = () => setIsMobileOpen(false);
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpenDropdown(null);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
+
+  const closeMobile = () => {
+    setIsMobileOpen(false);
+    setServicesOpen(false);
+    setAreasOpen(false);
+  };
+
+  const [homeLink, aboutLink, contactLink] = NAV_LINKS;
 
   return (
     <>
@@ -129,11 +364,29 @@ export function SiteHeader() {
 
           <nav
             className="hidden items-center gap-8 lg:flex"
-            aria-label="Primary"
+            aria-label="Main navigation"
           >
-            {NAV_LINKS.map((link) => (
-              <DesktopNavItem key={link.href} link={link} />
-            ))}
+            <DesktopNavItem link={homeLink} />
+            <DesktopDropdown
+              label="Services"
+              items={SERVICES_DROPDOWN}
+              viewAllLabel="View All Services"
+              viewAllHref="/plumbing-services/"
+              isOpen={openDropdown === "services"}
+              onOpen={() => setOpenDropdown("services")}
+              onClose={() => setOpenDropdown(null)}
+            />
+            <DesktopDropdown
+              label="Service Areas"
+              items={SERVICE_AREAS_DROPDOWN}
+              viewAllLabel="View All Service Areas"
+              viewAllHref="/service-areas/"
+              isOpen={openDropdown === "areas"}
+              onOpen={() => setOpenDropdown("areas")}
+              onClose={() => setOpenDropdown(null)}
+            />
+            <DesktopNavItem link={aboutLink} />
+            <DesktopNavItem link={contactLink} />
           </nav>
 
           <div className="flex items-center gap-3">
@@ -201,11 +454,40 @@ export function SiteHeader() {
             >
               <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
                 <ul className="flex flex-col gap-1">
-                  {NAV_LINKS.map((link) => (
-                    <li key={link.href}>
-                      <MobileNavItem link={link} onNavigate={closeMobile} />
-                    </li>
-                  ))}
+                  <li>
+                    <MobileNavItem link={homeLink} onNavigate={closeMobile} />
+                  </li>
+                  <li>
+                    <MobileAccordion
+                      label="Services"
+                      items={SERVICES_DROPDOWN}
+                      viewAllLabel="View All Services"
+                      viewAllHref="/plumbing-services/"
+                      isOpen={servicesOpen}
+                      onToggle={() => setServicesOpen((open) => !open)}
+                      onNavigate={closeMobile}
+                    />
+                  </li>
+                  <li>
+                    <MobileAccordion
+                      label="Service Areas"
+                      items={SERVICE_AREAS_DROPDOWN}
+                      viewAllLabel="View All Service Areas"
+                      viewAllHref="/service-areas/"
+                      isOpen={areasOpen}
+                      onToggle={() => setAreasOpen((open) => !open)}
+                      onNavigate={closeMobile}
+                    />
+                  </li>
+                  <li>
+                    <MobileNavItem link={aboutLink} onNavigate={closeMobile} />
+                  </li>
+                  <li>
+                    <MobileNavItem
+                      link={contactLink}
+                      onNavigate={closeMobile}
+                    />
+                  </li>
                 </ul>
                 <div className="mt-3">
                   <Button
