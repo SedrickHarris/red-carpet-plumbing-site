@@ -376,6 +376,7 @@ export default function Home() {
               <QuoteFormPlaceholder />
             </>
           }
+          size="tall"
         />
 
         {/* SECTION 2: TRUST STRIP */}
