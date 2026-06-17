@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/Button";
@@ -17,6 +18,11 @@ const NAV_LINKS: NavLink[] = [
 ];
 
 function DesktopNavItem({ link }: { link: NavLink }) {
+  const pathname = usePathname();
+  const isActive =
+    pathname === link.href ||
+    (link.href !== "/" && pathname.startsWith(link.href));
+
   if (link.built === false) {
     return (
       <span
@@ -30,7 +36,12 @@ function DesktopNavItem({ link }: { link: NavLink }) {
   return (
     <Link
       href={link.href}
-      className="text-base font-medium text-brand-dark transition-colors hover:text-brand-primary"
+      aria-current={isActive ? "page" : undefined}
+      className={`text-base font-medium transition-colors hover:text-brand-primary ${
+        isActive
+          ? "text-brand-primary border-b-2 border-brand-primary pb-0.5"
+          : "text-brand-dark"
+      }`}
     >
       {link.label}
     </Link>
@@ -96,7 +107,7 @@ export function SiteHeader() {
         }`}
         initial={false}
         animate={{
-          backdropFilter: isScrolled ? "blur(14px)" : "blur(6px)",
+          backdropFilter: isScrolled ? "blur(8px)" : "blur(4px)",
         }}
         transition={{ duration: shouldReduceMotion ? 0 : 0.2 }}
       >

@@ -22,6 +22,7 @@ type HeroSectionProps = {
   formSlot?: ReactNode;
   backgroundImage?: { src: string; alt: string };
   accentWidth?: "sm" | "md" | "lg";
+  size?: "default" | "tall";
   className?: string;
 };
 
@@ -36,12 +37,18 @@ export function HeroSection({
   formSlot,
   backgroundImage,
   accentWidth = "md",
+  size = "default",
   className = "",
 }: HeroSectionProps) {
   const Heading = headingLevel;
   const hasSplit = Boolean(formSlot);
   const shouldReduceMotion = useReducedMotion();
   const accentWidthClass = { sm: "w-12", md: "w-20", lg: "w-32" }[accentWidth];
+
+  const paddingY =
+    size === "tall"
+      ? "py-20 sm:py-28 lg:py-32"
+      : "py-16 sm:py-20 lg:py-24";
 
   const containerVariants: Variants = {
     hidden: {},
@@ -79,12 +86,18 @@ export function HeroSection({
             sizes="100vw"
             className="object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal/95 via-brand-charcoal/80 to-brand-charcoal/30" />
+          <div
+            className={`absolute inset-0 ${
+              hasSplit
+                ? "bg-gradient-to-r from-brand-charcoal/95 via-brand-charcoal/80 to-brand-charcoal/30"
+                : "bg-gradient-to-b from-brand-charcoal/90 via-brand-charcoal/70 to-brand-charcoal/50"
+            }`}
+          />
         </div>
       ) : null}
 
       <div
-        className={`relative mx-auto max-w-7xl px-2 py-16 sm:px-2 sm:py-20 lg:px-4 lg:py-24 xl:px-4 2xl:px-6 ${
+        className={`relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-16 ${paddingY} ${
           hasSplit
             ? "grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(420px,0.75fr)] lg:gap-14 xl:gap-20"
             : ""
@@ -92,7 +105,7 @@ export function HeroSection({
       >
         <span
           aria-hidden="true"
-          className={`absolute left-0 top-0 h-1 ${accentWidthClass} rounded-r-full bg-brand-primary`}
+          className={`absolute left-0 top-0 h-[3px] ${accentWidthClass} rounded-r-full bg-brand-primary`}
         />
 
         <motion.div
@@ -119,7 +132,7 @@ export function HeroSection({
           {trustItems && trustItems.length > 0 ? (
             <motion.ul
               variants={itemVariants}
-              className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2"
+              className="mt-8 flex flex-wrap gap-x-6 gap-y-3"
             >
               {trustItems.map((item) => (
                 <li key={item} className="flex items-start gap-3">

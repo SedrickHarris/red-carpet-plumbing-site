@@ -16,12 +16,12 @@ export function ServiceImagePlaceholder({
   return (
     <div
       aria-hidden="true"
-      className={`flex h-full w-full items-center justify-center bg-brand-primary ${className}`}
+      className={`flex h-full w-full items-center justify-center bg-gradient-to-br from-brand-primary to-brand-primary-hover ${className}`}
     >
       <svg
         aria-hidden="true"
         viewBox="0 0 64 64"
-        className="h-16 w-16 text-white"
+        className="h-12 w-12 text-white"
         fill="none"
         stroke="currentColor"
         strokeWidth={3}

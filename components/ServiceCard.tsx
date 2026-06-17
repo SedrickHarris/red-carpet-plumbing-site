@@ -20,7 +20,7 @@ export function ServiceCard({
   built = true,
 }: ServiceCardProps) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-brand-surface-alt border-b-2 border-brand-primary motion-safe:transition-shadow motion-safe:hover:shadow-lg">
+    <article className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5 border-b-2 border-brand-primary motion-safe:transition-[box-shadow,transform] motion-safe:hover:shadow-xl motion-safe:hover:-translate-y-0.5">
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-surface-alt">
         {image ? (
           <Image
@@ -35,7 +35,7 @@ export function ServiceCard({
         )}
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="text-xl font-semibold text-brand-dark">
+        <h3 className="text-xl font-bold text-brand-dark">
           {built ? (
             <Link
               href={href}
