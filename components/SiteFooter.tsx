@@ -23,17 +23,17 @@ const CORE_SERVICES: FooterLink[] = [
 ];
 
 const TIER_1_LOCATIONS: FooterLink[] = [
-  { label: "Las Vegas", href: "/las-vegas-plumbing-services/", built: false },
-  { label: "Henderson", href: "/henderson-plumbing-services/", built: false },
-  { label: "North Las Vegas", href: "/north-las-vegas-plumbing-services/", built: false },
-  { label: "Paradise", href: "/paradise-plumbing-services/", built: false },
-  { label: "Summerlin", href: "/summerlin-plumbing-services/", built: false },
-  { label: "Spring Valley", href: "/spring-valley-plumbing-services/", built: false },
-  { label: "Enterprise", href: "/enterprise-plumbing-services/", built: false },
-  { label: "Boulder City", href: "/boulder-city-plumbing-services/", built: false },
-  { label: "Green Valley", href: "/green-valley-plumbing-services/", built: false },
-  { label: "Lake Las Vegas", href: "/lake-las-vegas-plumbing-services/", built: false },
-  { label: "Aliante Area", href: "/north-las-vegas/aliante-area-plumbing/", built: false },
+  { label: "Las Vegas", href: "/las-vegas-plumbing-services/", built: true },
+  { label: "Henderson", href: "/henderson-plumbing-services/", built: true },
+  { label: "North Las Vegas", href: "/north-las-vegas-plumbing-services/", built: true },
+  { label: "Paradise", href: "/paradise-plumbing-services/", built: true },
+  { label: "Summerlin", href: "/summerlin-plumbing-services/", built: true },
+  { label: "Spring Valley", href: "/spring-valley-plumbing-services/", built: true },
+  { label: "Enterprise", href: "/enterprise-plumbing-services/", built: true },
+  { label: "Boulder City", href: "/boulder-city-plumbing-services/", built: true },
+  { label: "Green Valley", href: "/green-valley-plumbing-services/", built: true },
+  { label: "Lake Las Vegas", href: "/lake-las-vegas-plumbing-services/", built: true },
+  { label: "Aliante Area", href: "/north-las-vegas/aliante-area-plumbing/", built: true },
 ];
 
 const GET_IN_TOUCH: FooterLink[] = [
@@ -76,8 +76,8 @@ export function SiteFooter() {
                 src="/images/brand/logo/red-carpet-plumbing-logo.png"
                 alt="Red Carpet Plumbing logo"
                 width={300}
-                height={100}
-                className="h-20 w-auto"
+                height={85}
+                className="h-16 w-auto"
               />
             </Link>
             <p className="mt-4 text-sm leading-6 text-white/80">

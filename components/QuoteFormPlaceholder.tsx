@@ -215,10 +215,11 @@ export function QuoteFormPlaceholder({
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="relative w-full min-w-0 rounded-2xl bg-white p-6 text-brand-dark shadow-lg ring-1 ring-brand-surface-alt sm:p-8"
+      className="relative w-full min-w-0 rounded-xl bg-white p-6 text-brand-dark shadow-lg ring-1 ring-black/10 sm:rounded-2xl sm:p-8"
       aria-labelledby="quote-form-title"
     >
-      <h3 id="quote-form-title" className="text-2xl font-semibold tracking-tight">
+      <div aria-hidden="true" className="absolute left-0 top-0 h-1 w-16 rounded-r-full bg-brand-primary" />
+      <h3 id="quote-form-title" className="text-2xl font-bold tracking-tight">
         {title}
       </h3>
       {subheading ? (

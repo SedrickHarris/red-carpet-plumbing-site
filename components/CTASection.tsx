@@ -29,7 +29,7 @@ export function CTASection({
   const hasSplit = Boolean(formSlot);
   const bg =
     background === "red"
-      ? "bg-brand-primary text-white"
+      ? "bg-gradient-to-br from-brand-primary to-brand-primary-hover text-white"
       : background === "dark"
       ? "bg-brand-charcoal text-white"
       : "bg-brand-surface-alt text-brand-dark";
@@ -38,7 +38,7 @@ export function CTASection({
   return (
     <section className={`${bg} ${className}`}>
       <div
-        className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16 ${
+        className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28 xl:px-12 2xl:px-16 ${
           hasSplit
             ? "grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(420px,0.75fr)] lg:items-center lg:gap-14 xl:gap-20"
             : ""
