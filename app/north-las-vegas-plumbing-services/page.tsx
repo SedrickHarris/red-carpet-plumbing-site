@@ -119,7 +119,7 @@ const NORTH_LAS_VEGAS_SERVICES: ServiceLink[] = [
   },
   {
     title: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
+    href: "/north-las-vegas/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Slab leak detection and repair in North Las Vegas",
   },
