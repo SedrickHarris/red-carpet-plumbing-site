@@ -91,7 +91,7 @@ type ServiceLink = {
 const GREEN_VALLEY_SERVICES: ServiceLink[] = [
   {
     title: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    href: "/green-valley/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/card.webp",
     imageAlt: "24/7 emergency plumbing service in Green Valley, NV",
   },

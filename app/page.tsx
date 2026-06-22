@@ -13,18 +13,19 @@ import TrustStrip from "@/components/TrustStrip";
 export const metadata: Metadata = {
   title: "Plumbing Company in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Local, family-owned Las Vegas plumbers since 1980+. 24/7 emergency plumbing, drain cleaning, water heater repair, and more. Call (702) 567-9172.",
+    "Local, family-owned Las Vegas plumbing company. Emergency plumbing, drain cleaning, water heater repair, slab leak repair, and more. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/",
   },
   openGraph: {
     title: "Plumbing Company in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Local Las Vegas plumbers available 24/7. Emergency plumbing, drain cleaning, water heater repair, leak detection, slab leak repair, and more. Serving the full Las Vegas Valley. Call (702) 567-9172.",
+      "Local Las Vegas plumbers available for emergency plumbing, drain cleaning, water heater repair, leak detection, slab leak repair, and more. Serving the full Las Vegas Valley. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/",
     siteName: "Red Carpet Plumbing",
     type: "website",
   },
+  robots: { index: true, follow: true },
 };
 
 const HOMEPAGE_FAQS = [
@@ -70,6 +71,26 @@ const HOMEPAGE_FAQS = [
     answer:
       "You can schedule service by calling (702) 567-9172 or by submitting a service request on the contact page. For plumbing emergencies, calling directly is recommended for the fastest response.",
   },
+  {
+    question: "What should I do if I have a plumbing emergency in Las Vegas?",
+    answer:
+      "If you have a plumbing emergency in Las Vegas, shut off the water supply at the main valve near the front of your property to stop active flooding, then call Red Carpet Plumbing at (702) 567-9172 for immediate assistance. Do not attempt to repair burst pipes or sewer backups without professional help. Red Carpet Plumbing provides 24/7 emergency plumbing service throughout the Las Vegas Valley.",
+  },
+  {
+    question: "Is Red Carpet Plumbing licensed in Nevada?",
+    answer:
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A, C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. You can verify contractor license status through the Nevada Contractors Board website.",
+  },
+  {
+    question: "How do I know if my Las Vegas home has a slab leak?",
+    answer:
+      "Common signs of a slab leak in a Las Vegas home include warm spots on the floor, the sound of water running when no fixtures are in use, a sudden increase in the water bill, wet or discolored flooring, and reduced water pressure. Las Vegas homes are at higher risk for slab leaks due to hard water mineral corrosion, shifting caliche soil, and thermal expansion from desert heat. If you notice these signs, contact Red Carpet Plumbing for professional slab leak detection.",
+  },
+  {
+    question: "How much does a plumber cost in Las Vegas?",
+    answer:
+      "Plumbing costs in Las Vegas vary depending on the type and scope of service needed. Red Carpet Plumbing provides upfront pricing before any work begins so you know the cost before the job starts. To get accurate pricing for your specific plumbing situation, call (702) 567-9172 or submit a service request online.",
+  },
 ];
 
 const TRUST_STRIP_ITEMS = [
@@ -88,6 +109,11 @@ type ServiceCardEntry = {
   image?: string;
   imageAlt?: string;
   built: boolean;
+};
+
+type ServiceAreaLink = {
+  label: string;
+  href: string;
 };
 
 const SERVICE_CARDS: ServiceCardEntry[] = [
@@ -189,18 +215,18 @@ const LOCAL_ISSUES = [
   },
 ];
 
-const SERVICE_AREAS = [
-  "Las Vegas",
-  "Henderson",
-  "North Las Vegas",
-  "Paradise",
-  "Summerlin",
-  "Spring Valley",
-  "Enterprise",
-  "Boulder City",
-  "Green Valley",
-  "Lake Las Vegas",
-  "Aliante Area",
+const SERVICE_AREAS: ServiceAreaLink[] = [
+  { label: "Las Vegas",       href: "/las-vegas-plumbing-services/" },
+  { label: "Henderson",       href: "/henderson-plumbing-services/" },
+  { label: "North Las Vegas", href: "/north-las-vegas-plumbing-services/" },
+  { label: "Paradise",        href: "/paradise-plumbing-services/" },
+  { label: "Summerlin",       href: "/summerlin-plumbing-services/" },
+  { label: "Spring Valley",   href: "/spring-valley-plumbing-services/" },
+  { label: "Enterprise",      href: "/enterprise-plumbing-services/" },
+  { label: "Boulder City",    href: "/boulder-city-plumbing-services/" },
+  { label: "Green Valley",    href: "/green-valley-plumbing-services/" },
+  { label: "Lake Las Vegas",  href: "/lake-las-vegas-plumbing-services/" },
+  { label: "Aliante Area",    href: "/north-las-vegas/aliante-area-plumbing/" },
 ];
 
 const WHY_CHOOSE_REASONS = [
@@ -308,7 +334,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Plumbing Company in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Local, family-owned Las Vegas plumbers since 1980+. 24/7 emergency plumbing, drain cleaning, water heater repair, and more. Call (702) 567-9172.",
+    "Local, family-owned Las Vegas plumbing company. Emergency plumbing, drain cleaning, water heater repair, slab leak repair, and more. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/",
   isPartOf: {
     "@type": "WebSite",
@@ -385,6 +411,41 @@ export default function Home() {
           ariaLabel="Why Las Vegas homeowners and businesses choose Red Carpet Plumbing"
         />
 
+        {/* SECTION 2.5: AEO DIRECT-ANSWER BLOCK */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-12 lg:px-10 lg:py-14 xl:px-12">
+            <div className="rounded-r-xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
+              <h2 className="text-xl font-semibold text-brand-dark sm:text-2xl">
+                What Does Red Carpet Plumbing Do?
+              </h2>
+              <p className="mt-3 text-base leading-7 text-brand-dark/80">
+                Red Carpet Plumbing is a licensed Las Vegas plumbing company
+                providing emergency plumbing, drain cleaning, water heater
+                repair and installation, slab leak detection and repair,
+                re-piping, sewer line services, gas line plumbing, and
+                commercial plumbing throughout Las Vegas, Henderson, North
+                Las Vegas, and the Las Vegas Valley. Nevada Contractor License
+                #0048585A, C-1 Plumbing and Heating. To schedule service or
+                request emergency plumbing help, call{" "}
+                <a
+                  href="tel:+17025679172"
+                  className="font-semibold text-brand-primary hover:underline"
+                >
+                  (702) 567-9172
+                </a>{" "}
+                or{" "}
+                <Link
+                  href="/contact/"
+                  className="font-semibold text-brand-primary hover:underline"
+                >
+                  submit a service request online
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* SECTION 3: 24/7 EMERGENCY CTA */}
         <section className="bg-brand-charcoal">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
@@ -400,6 +461,14 @@ export default function Home() {
                   Plumbing provides 24/7 emergency plumbing service throughout
                   the Las Vegas Valley. Call us any time, day or
                   night, and we will get to you.
+                </p>
+                <p className="mt-4">
+                  <Link
+                    href="/emergency-plumbing/"
+                    className="text-sm text-white/70 underline underline-offset-4 hover:text-white"
+                  >
+                    Learn about our emergency plumbing services
+                  </Link>
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">
@@ -489,8 +558,7 @@ export default function Home() {
               <SectionRevealItem>
                 <div className="text-left">
                   <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                    Common Plumbing Problems
-                    <br className="hidden sm:block" /> in Las Vegas
+                    Common Plumbing Problems in Las Vegas Homes
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Las Vegas homes and businesses face specific plumbing
@@ -543,10 +611,13 @@ export default function Home() {
               <SectionRevealItem className="mt-12">
                 <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
                   {SERVICE_AREAS.map((area) => (
-                    <li key={area}>
-                      <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
-                        {area}
-                      </span>
+                    <li key={area.label}>
+                      <Link
+                        href={area.href}
+                        className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80 transition-colors hover:bg-white/10 hover:border-white/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                      >
+                        {area.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
