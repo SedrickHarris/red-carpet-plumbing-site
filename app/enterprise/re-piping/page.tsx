@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
+import { FaqSection } from "@/components/FaqSection";
 import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
@@ -10,6 +11,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing — rating (4.8 stars / 76 Google reviews)
 // and "Over 40 years" trust claims are source-site claims shown on this page.
@@ -53,38 +55,44 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const ENTERPRISE_REPIPE_FAQS = [
+const ENTERPRISE_REPIPE_FAQS: FaqItem[] = [
   {
     question: "What are the signs I need to repipe my Enterprise home?",
     answer:
       "Common signs include recurring leaks in multiple locations, rust-colored or discolored water, consistently low water pressure throughout the home, frequent pinhole leaks in copper pipes, known Kitec plumbing with corroding brass fittings, or polybutylene supply lines installed before 1998. Multiple slab leaks on the same system are also a strong indicator that re-piping is more practical than continued repairs.",
+    category: "causes-signs",
   },
   {
     question:
       "What pipe materials are most common in Enterprise homes that need replacement?",
     answer:
       "Enterprise was developed primarily in the late 1990s and 2000s, so the most common re-piping situations involve first-service-cycle copper supply lines now 20 to 25 years old that have been thinned by Las Vegas Valley hard water, and Kitec plumbing installed from the late 1990s through approximately 2005. Kitec is identifiable by orange or blue flexible pipes with brass fittings. Galvanized steel pipe is uncommon in Enterprise due to the community's newer development timeline.",
+    category: "causes-signs",
   },
   {
     question: "Does re-piping in Enterprise require a permit?",
     answer:
       "Yes. Whole-house repiping in Enterprise requires a Clark County building permit. Enterprise is an unincorporated Clark County community, so the permit jurisdiction is Clark County rather than the City of Las Vegas. Red Carpet Plumbing files the permit before work begins and coordinates the final inspection for sign-off.",
+    category: "timing-process",
   },
   {
     question: "What is the difference between PEX and copper repiping?",
     answer:
       "PEX is a flexible pipe that resists hard water scale buildup, requires fewer fittings, and installs with less drywall disruption than rigid pipe. In Las Vegas, PEX pipe runs through attic spaces require proper insulation because attic temperatures can exceed 150 degrees Fahrenheit. Red Carpet Plumbing installs PEX to current Clark County code including required attic insulation. Copper is a proven, durable material that is naturally resistant to bacteria growth and provides excellent water quality. Red Carpet Plumbing installs Type L copper, the standard for residential plumbing in the Las Vegas Valley.",
+    category: "the-service",
   },
   {
     question: "How long does a whole-house repipe take in Enterprise?",
     answer:
       "Most single-story Enterprise homes are re-piped in one to two days. For multi-day projects, water is restored to the home each evening. The timeline depends on the size of the home, the pipe materials being replaced, and the scope of work involved.",
+    category: "timing-process",
   },
   {
     question:
       "Does Red Carpet Plumbing serve Rhodes Ranch and Mountain's Edge for repiping?",
     answer:
       "Yes. Red Carpet Plumbing provides re-piping services throughout Enterprise including Rhodes Ranch, Mountain's Edge, and the broader Southwest Las Vegas area. Call (702) 567-9172 to schedule an assessment.",
+    category: "the-service",
   },
 ];
 
@@ -278,18 +286,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ENTERPRISE_REPIPE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ENTERPRISE_REPIPE_FAQS);
 
 export default function EnterpriseRePipingPage() {
   return (
@@ -749,31 +746,11 @@ export default function EnterpriseRePipingPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Re-Piping FAQs for Enterprise Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ENTERPRISE_REPIPE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading="Re-Piping FAQs for Enterprise Homeowners"
+          faqs={ENTERPRISE_REPIPE_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -816,21 +793,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

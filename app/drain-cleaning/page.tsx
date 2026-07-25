@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { FaqSection } from "@/components/FaqSection";
 import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
@@ -10,6 +11,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import TrustStrip from "@/components/TrustStrip";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Drain Cleaning in Las Vegas, NV | Red Carpet Plumbing",
@@ -28,48 +30,56 @@ export const metadata: Metadata = {
   },
 };
 
-const DRAIN_CLEANING_FAQS = [
+const DRAIN_CLEANING_FAQS: FaqItem[] = [
   {
     question: "What causes drains to clog in Las Vegas homes?",
     answer:
       "The most common causes of drain clogs in Las Vegas are hair and soap scum in bathroom drains, grease and food particles in kitchen drains, and hard water mineral deposits that narrow pipe walls throughout the home. Las Vegas hard water accelerates clog formation because mineral deposits give grease and debris something to bond to inside the pipe.",
+    category: "causes-signs",
   },
   {
     question: "How do I know if I need professional drain cleaning?",
     answer:
       "Call a plumber when multiple drains are slow at the same time, when you have a complete blockage, when drains produce sewage or sulfur odors, or when you hear gurgling sounds from toilets or other fixtures. A single slow drain may be a minor clog, but multiple affected drains usually indicate a main sewer line problem.",
+    category: "causes-signs",
   },
   {
     question: "Are chemical drain cleaners safe for Las Vegas pipes?",
     answer:
       "Chemical drain cleaners contain harsh acids or alkaline compounds that can damage pipe linings, especially in older galvanized or copper pipes common in Las Vegas homes. They typically only dissolve part of the clog and do not address mineral buildup or root intrusion. Professional drain cleaning removes the entire blockage and is safer for your pipes.",
+    category: "the-service",
   },
   {
     question: "What is hydro jetting and when is it needed?",
     answer:
       "Hydro jetting uses high-pressure water to scour the inside of drain and sewer lines, removing grease, mineral scale, and debris from the pipe walls rather than just clearing a path through the clog. It is recommended for recurring clogs, main sewer line cleaning, and lines with significant hard water mineral buildup.",
+    category: "the-service",
   },
   {
     question: "How often should I have my drains professionally cleaned?",
     answer:
       "Most Las Vegas homeowners benefit from professional drain cleaning every one to two years. Homes with older plumbing, large households, or a history of recurring clogs may benefit from annual cleaning. Commercial properties with heavy drain use should be cleaned more frequently.",
+    category: "the-service",
   },
   {
     question: "Does hard water cause drain problems in Las Vegas?",
     answer:
       "Yes. Las Vegas hard water leaves calcium and magnesium deposits inside pipe walls that narrow the pipe, slow water flow, and create surfaces that trap grease and debris. These mineral deposits are a primary reason Las Vegas drains clog faster and more frequently than drains in cities with softer water.",
+    category: "causes-signs",
   },
   {
     question:
       "What is the difference between drain snaking and hydro jetting?",
     answer:
       "Drain snaking uses a cable machine to break through or pull out a specific clog. It is effective for solid obstructions like hair clogs or localized blockages. Hydro jetting uses high-pressure water to clean the entire interior of the pipe, removing buildup from the walls rather than just clearing the blockage. For recurring clogs or lines with significant mineral or grease buildup, hydro jetting provides a more thorough and longer-lasting result.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing serve Henderson and Summerlin for drain cleaning?",
     answer:
       "Yes. Red Carpet Plumbing provides drain cleaning service throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "the-service",
   },
 ];
 
@@ -337,18 +347,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: DRAIN_CLEANING_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(DRAIN_CLEANING_FAQS);
 
 export default function DrainCleaningPage() {
   return (
@@ -721,32 +720,16 @@ export default function DrainCleaningPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Drain Cleaning in Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {DRAIN_CLEANING_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={
+            <>
+              Frequently Asked Questions
+              <br className="hidden sm:block" /> About Drain Cleaning in Las Vegas
+            </>
+          }
+          faqs={DRAIN_CLEANING_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -787,20 +770,5 @@ export default function DrainCleaningPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }
