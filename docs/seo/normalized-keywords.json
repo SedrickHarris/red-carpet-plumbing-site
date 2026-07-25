@@ -1,0 +1,130 @@
+{
+  "generatedAt": "2026-06-22T21:07:38.797Z",
+  "sourceCsv": "docs/seo/keyword-exports/Keyword Stats 2026-06-22 at 14_02_07.csv",
+  "keywordCount": 10,
+  "keywords": [
+    {
+      "keyword": "slab leak detection repair north las vegas nv",
+      "avgMonthlySearches": null,
+      "avgMonthlySearchesRaw": null,
+      "competition": "Unknown",
+      "competitionIndex": null,
+      "topOfPageBidLow": null,
+      "topOfPageBidHigh": null,
+      "threeMonthChange": "--",
+      "yoyChange": "--",
+      "currency": "USD"
+    },
+    {
+      "keyword": "slab leak repair north las vegas",
+      "avgMonthlySearches": null,
+      "avgMonthlySearchesRaw": null,
+      "competition": "Unknown",
+      "competitionIndex": null,
+      "topOfPageBidLow": null,
+      "topOfPageBidHigh": null,
+      "threeMonthChange": "--",
+      "yoyChange": "--",
+      "currency": "USD"
+    },
+    {
+      "keyword": "slab leak north las vegas plumber",
+      "avgMonthlySearches": null,
+      "avgMonthlySearchesRaw": null,
+      "competition": "Unknown",
+      "competitionIndex": null,
+      "topOfPageBidLow": null,
+      "topOfPageBidHigh": null,
+      "threeMonthChange": "--",
+      "yoyChange": "--",
+      "currency": "USD"
+    },
+    {
+      "keyword": "galvanized pipe slab leak north las vegas",
+      "avgMonthlySearches": null,
+      "avgMonthlySearchesRaw": null,
+      "competition": "Unknown",
+      "competitionIndex": null,
+      "topOfPageBidLow": null,
+      "topOfPageBidHigh": null,
+      "threeMonthChange": "--",
+      "yoyChange": "--",
+      "currency": "USD"
+    },
+    {
+      "keyword": "slab leak detection north las vegas nv",
+      "avgMonthlySearches": null,
+      "avgMonthlySearchesRaw": null,
+      "competition": "Unknown",
+      "competitionIndex": null,
+      "topOfPageBidLow": null,
+      "topOfPageBidHigh": null,
+      "threeMonthChange": "--",
+      "yoyChange": "--",
+      "currency": "USD"
+    },
+    {
+      "keyword": "slab foundation leak repair north las vegas",
+      "avgMonthlySearches": null,
+      "avgMonthlySearchesRaw": null,
+      "competition": "Unknown",
+      "competitionIndex": null,
+      "topOfPageBidLow": null,
+      "topOfPageBidHigh": null,
+      "threeMonthChange": "--",
+      "yoyChange": "--",
+      "currency": "USD"
+    },
+    {
+      "keyword": "slab leak aliante north las vegas",
+      "avgMonthlySearches": null,
+      "avgMonthlySearchesRaw": null,
+      "competition": "Unknown",
+      "competitionIndex": null,
+      "topOfPageBidLow": null,
+      "topOfPageBidHigh": null,
+      "threeMonthChange": "--",
+      "yoyChange": "--",
+      "currency": "USD"
+    },
+    {
+      "keyword": "slab leak repair near me north las vegas",
+      "avgMonthlySearches": null,
+      "avgMonthlySearchesRaw": null,
+      "competition": "Unknown",
+      "competitionIndex": null,
+      "topOfPageBidLow": null,
+      "topOfPageBidHigh": null,
+      "threeMonthChange": "--",
+      "yoyChange": "--",
+      "currency": "USD"
+    },
+    {
+      "keyword": "under slab pipe leak north las vegas nv",
+      "avgMonthlySearches": null,
+      "avgMonthlySearchesRaw": null,
+      "competition": "Unknown",
+      "competitionIndex": null,
+      "topOfPageBidLow": null,
+      "topOfPageBidHigh": null,
+      "threeMonthChange": "--",
+      "yoyChange": "--",
+      "currency": "USD"
+    },
+    {
+      "keyword": "caliche soil pipe damage north las vegas",
+      "avgMonthlySearches": null,
+      "avgMonthlySearchesRaw": null,
+      "competition": "Unknown",
+      "competitionIndex": null,
+      "topOfPageBidLow": null,
+      "topOfPageBidHigh": null,
+      "threeMonthChange": "--",
+      "yoyChange": "--",
+      "currency": "USD"
+    }
+  ],
+  "warnings": [
+    "No clean numeric search volumes were found (values may be ranges like '1K - 10K'). Raw values are preserved in avgMonthlySearchesRaw. Volumes will not be invented."
+  ]
+}

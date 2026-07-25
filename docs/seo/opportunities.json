@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-06-22T21:07:47.780Z",
+  "minScore": 0,
+  "opportunityCount": 2,
+  "filteredCount": 0,
+  "opportunities": [
+    {
+      "opportunityId": "o-001",
+      "clusterId": "c-001",
+      "recommendedPageTitle": "Slab Detection North Las Vegas Nv Plumber Galvanized Pipe Foundation Aliante Under",
+      "recommendedSlug": "slab-leak-repair-north-las-vegas",
+      "primaryKeyword": "slab leak repair north las vegas",
+      "supportingKeywords": [
+        "slab leak detection repair north las vegas nv",
+        "slab leak detection north las vegas nv",
+        "slab leak repair near me north las vegas",
+        "slab leak north las vegas plumber",
+        "galvanized pipe slab leak north las vegas",
+        "slab foundation leak repair north las vegas",
+        "slab leak aliante north las vegas",
+        "under slab pipe leak north las vegas nv"
+      ],
+      "pageType": "service-location",
+      "intent": "local",
+      "existingRouteOverlap": {
+        "route": "/north-las-vegas-plumbing-services",
+        "sourceFile": "app/north-las-vegas-plumbing-services/page.tsx",
+        "matchedTokens": 6,
+        "baseTokenCount": 6,
+        "overlapRatio": 1
+      },
+      "score": 6,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 2,
+        "clusterDepth": 3,
+        "modifierStrength": 2,
+        "existingOverlapPenalty": -4,
+        "dataCompleteness": 0
+      },
+      "rationale": "Priority heuristic 6. Signals: intent=local, pageType=service-location, keywords=9, volumeData=none, existingOverlap=1. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Review the existing overlapping route for expansion instead of creating a duplicate page."
+    },
+    {
+      "opportunityId": "o-002",
+      "clusterId": "c-008",
+      "recommendedPageTitle": "Caliche Soil Pipe Damage North Las Vegas",
+      "recommendedSlug": "caliche-soil-pipe-damage-north-las-vegas",
+      "primaryKeyword": "caliche soil pipe damage north las vegas",
+      "supportingKeywords": [],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": {
+        "route": "/north-las-vegas/aliante-area/emergency-plumbing",
+        "sourceFile": "app/north-las-vegas/aliante-area/emergency-plumbing/page.tsx",
+        "matchedTokens": 6,
+        "baseTokenCount": 7,
+        "overlapRatio": 0.86
+      },
+      "score": 0,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 0,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": -3,
+        "dataCompleteness": 0
+      },
+      "rationale": "Priority heuristic 0. Signals: intent=general, pageType=pillar, keywords=1, volumeData=none, existingOverlap=0.86. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Review the existing overlapping route for expansion instead of creating a duplicate page."
+    }
+  ],
+  "warnings": []
+}
