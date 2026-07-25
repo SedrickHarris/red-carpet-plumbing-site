@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-06-22T21:07:38.871Z",
+  "clusterCount": 2,
+  "clusters": [
+    {
+      "clusterId": "c-001",
+      "clusterName": "Slab Detection North Las Vegas Nv Plumber Galvanized Pipe Foundation Aliante Under",
+      "primaryKeyword": "slab leak repair north las vegas",
+      "keywords": [
+        "slab leak detection repair north las vegas nv",
+        "slab leak detection north las vegas nv",
+        "slab leak repair north las vegas",
+        "slab leak repair near me north las vegas",
+        "slab leak north las vegas plumber",
+        "galvanized pipe slab leak north las vegas",
+        "slab foundation leak repair north las vegas",
+        "slab leak aliante north las vegas",
+        "under slab pipe leak north las vegas nv"
+      ],
+      "modifiers": [
+        "repair",
+        "leak",
+        "near me"
+      ],
+      "intentHints": [
+        "informational",
+        "local"
+      ],
+      "metricsSummary": {
+        "dataAvailable": false,
+        "keywordCount": 9,
+        "keywordsWithVolume": 0,
+        "totalAvgMonthlySearches": null,
+        "maxAvgMonthlySearches": null,
+        "note": "No numeric volume supplied. Volume is not estimated or invented."
+      },
+      "notes": "Grouped on shared base tokens: slab, detection, north, las, vegas, nv, plumber, galvanized, pipe, foundation, aliante, under. Clustering is a deterministic heuristic, not a semantic model. Synonym and stem merge combined related clusters.",
+      "_categories": [
+        "problem",
+        "location"
+      ],
+      "synonymMergeApplied": true,
+      "mergedFrom": [
+        "c-001",
+        "c-002",
+        "c-003",
+        "c-004",
+        "c-005",
+        "c-006",
+        "c-007"
+      ]
+    },
+    {
+      "clusterId": "c-008",
+      "clusterName": "Caliche Soil Pipe Damage North Las Vegas",
+      "primaryKeyword": "caliche soil pipe damage north las vegas",
+      "keywords": [
+        "caliche soil pipe damage north las vegas"
+      ],
+      "modifiers": [],
+      "intentHints": [
+        "general"
+      ],
+      "metricsSummary": {
+        "dataAvailable": false,
+        "keywordCount": 1,
+        "keywordsWithVolume": 0,
+        "totalAvgMonthlySearches": null,
+        "maxAvgMonthlySearches": null,
+        "note": "No numeric volume supplied. Volume is not estimated or invented."
+      },
+      "notes": "Grouped on shared base tokens: caliche, soil, pipe, damage, north, las, vegas. Clustering is a deterministic heuristic, not a semantic model.",
+      "_categories": []
+    }
+  ],
+  "warnings": [
+    "Synonym merge combined clusters: 8 -> 2 (1 merged cluster(s))."
+  ]
+}
