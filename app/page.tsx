@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FaqSection } from "@/components/FaqSection";
 import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
@@ -9,6 +10,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import TrustStrip from "@/components/TrustStrip";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Plumbing Company in Las Vegas, NV | Red Carpet Plumbing",
@@ -28,68 +30,80 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const HOMEPAGE_FAQS = [
+const HOMEPAGE_FAQS: FaqItem[] = [
   {
     question:
       "Does Red Carpet Plumbing offer 24/7 emergency plumbing in Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service throughout the Las Vegas Valley. Emergency services include burst pipes, severe leaks, sewer backups, water heater failures, and other urgent plumbing situations. Call (702) 567-9172 for immediate assistance.",
+    category: "emergency",
   },
   {
     question: "What areas does Red Carpet Plumbing serve?",
     answer:
       "Red Carpet Plumbing serves Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities throughout the Las Vegas Valley.",
+    category: "the-service",
   },
   {
     question: "How long has Red Carpet Plumbing been in business?",
     answer:
       "Red Carpet Plumbing has been serving the Las Vegas Valley for over 40 years. The company is a local, family-owned plumbing business with deep experience in Las Vegas plumbing conditions and service needs.",
+    category: "trust",
   },
   {
     question:
       "Does Red Carpet Plumbing handle both residential and commercial plumbing?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services for both residential and commercial customers throughout the Las Vegas Valley. Commercial services include repair, installation, drain service, backflow prevention, and gas line support.",
+    category: "the-service",
   },
   {
     question: "What plumbing services does Red Carpet Plumbing offer?",
     answer:
       "Red Carpet Plumbing offers a full range of plumbing services including emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection and repair, sewer line services, re-piping, gas line plumbing, commercial plumbing, and more.",
+    category: "the-service",
   },
   {
     question: "Does Red Carpet Plumbing offer transparent pricing?",
     answer:
       "Yes. Red Carpet Plumbing provides upfront pricing with no hidden fees. Customers are informed of the cost before any work begins.",
+    category: "cost",
   },
   {
     question: "Why are slab leaks common in Las Vegas homes?",
     answer:
       "Slab leaks are common in Las Vegas due to the desert climate, soil shifting, hard water mineral buildup in pipes, and aging pipe materials in older neighborhoods. Red Carpet Plumbing provides slab leak detection and repair throughout the Las Vegas Valley.",
+    category: "causes-signs",
   },
   {
     question: "How do I schedule plumbing service with Red Carpet Plumbing?",
     answer:
       "You can schedule service by calling (702) 567-9172 or by submitting a service request on the contact page. For plumbing emergencies, calling directly is recommended for the fastest response.",
+    category: "the-service",
   },
   {
     question: "What should I do if I have a plumbing emergency in Las Vegas?",
     answer:
       "If you have a plumbing emergency in Las Vegas, shut off the water supply at the main valve near the front of your property to stop active flooding, then call Red Carpet Plumbing at (702) 567-9172 for immediate assistance. Do not attempt to repair burst pipes or sewer backups without professional help. Red Carpet Plumbing provides 24/7 emergency plumbing service throughout the Las Vegas Valley.",
+    category: "emergency",
   },
   {
     question: "Is Red Carpet Plumbing licensed in Nevada?",
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A, C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. You can verify contractor license status through the Nevada Contractors Board website.",
+    category: "trust",
   },
   {
     question: "How do I know if my Las Vegas home has a slab leak?",
     answer:
       "Common signs of a slab leak in a Las Vegas home include warm spots on the floor, the sound of water running when no fixtures are in use, a sudden increase in the water bill, wet or discolored flooring, and reduced water pressure. Las Vegas homes are at higher risk for slab leaks due to hard water mineral corrosion, shifting caliche soil, and thermal expansion from desert heat. If you notice these signs, contact Red Carpet Plumbing for professional slab leak detection.",
+    category: "causes-signs",
   },
   {
     question: "How much does a plumber cost in Las Vegas?",
     answer:
       "Plumbing costs in Las Vegas vary depending on the type and scope of service needed. Red Carpet Plumbing provides upfront pricing before any work begins so you know the cost before the job starts. To get accurate pricing for your specific plumbing situation, call (702) 567-9172 or submit a service request online.",
+    category: "cost",
   },
 ];
 
@@ -347,18 +361,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: HOMEPAGE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(HOMEPAGE_FAQS);
 
 export default function Home() {
   return (
@@ -670,31 +673,11 @@ export default function Home() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions About Las Vegas Plumbing
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {HOMEPAGE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading="Frequently Asked Questions About Las Vegas Plumbing"
+          faqs={HOMEPAGE_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA — oversized centered typography (single deliberate centered moment) */}
         <section className="bg-brand-primary text-white">
@@ -736,20 +719,5 @@ export default function Home() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }
