@@ -62,7 +62,7 @@ export function FaqSection({
   return (
     <section id={id} className={sectionBg}>
       <div
-        className={`mx-auto ${container} px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24`}
+        className={`mx-auto ${container} px-4 py-16 sm:py-20 lg:py-24`}
       >
         <div className="text-left">
           <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
@@ -80,7 +80,7 @@ export function FaqSection({
             <div
               role="group"
               aria-label="Filter questions by category"
-              className="mt-8 flex flex-wrap gap-2 sm:gap-3"
+              className="mt-8 flex flex-wrap gap-2 lg:flex-nowrap"
             >
               <PillButton
                 label="All"
@@ -144,7 +144,7 @@ function PillButton({ label, isActive, inactiveClasses, onClick }: PillButtonPro
       type="button"
       aria-pressed={isActive}
       onClick={onClick}
-      className={`rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 ${
+      className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 ${
         isActive ? "bg-brand-primary text-white shadow-sm" : inactiveClasses
       }`}
     >
