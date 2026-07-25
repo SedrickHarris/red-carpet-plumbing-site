@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Aliante, North Las Vegas, NV | Red Carpet Plumbing",
@@ -37,39 +39,45 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const ALIANTE_FAQS = [
+const ALIANTE_FAQS: FaqItem[] = [
   {
     question:
       "Does Red Carpet Plumbing serve the Aliante area of North Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services throughout the Aliante master-planned community and surrounding North Las Vegas neighborhoods. Call (702) 567-9172 to confirm coverage and schedule service.",
+    category: "service-area",
   },
   {
     question: "What is the Aliante area in North Las Vegas?",
     answer:
       "Aliante is a large master-planned community in the northwest portion of North Las Vegas, Nevada. It was developed primarily between the late 1990s and 2010, featuring planned neighborhoods, parks, and the Aliante Nature Discovery Park. Aliante is within North Las Vegas city limits, and Red Carpet Plumbing serves the Aliante area as part of its North Las Vegas service coverage.",
+    category: "service-area",
   },
   {
     question:
       "What plumbing services does Red Carpet Plumbing offer in the Aliante area?",
     answer:
       "Red Carpet Plumbing provides plumbing services in the Aliante area including emergency plumbing, drain cleaning, water heater repair and installation, leak detection, slab leak detection and repair, and more.",
+    category: "the-service",
   },
   {
     question: "Are water heater replacements common in Aliante homes?",
     answer:
       "Yes. Most Aliante homes were built between 2000 and 2008, placing them at 16 to 25 years old. Standard tank water heaters have an expected service life of 8 to 12 years under normal conditions, and Las Vegas Valley hard water shortens this further through accelerated sediment buildup. Many Aliante homeowners are now dealing with aging original water heaters that are at or past their expected service life.",
+    category: "causes-signs",
   },
   {
     question:
       "Is Red Carpet Plumbing licensed to work in the Aliante area of North Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including North Las Vegas and the Aliante area.",
+    category: "trust",
   },
   {
     question: "How do I request plumbing service in the Aliante area?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For emergency plumbing in the Aliante area, calling directly is the fastest option.",
+    category: "timing-process",
   },
 ];
 
@@ -339,18 +347,7 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ALIANTE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ALIANTE_FAQS);
 
 export default function AlianteAreaPlumbingPage() {
   return (
@@ -654,33 +651,13 @@ export default function AlianteAreaPlumbingPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
+        <FaqSection
+          heading={<>Frequently Asked Questions
                 <br className="hidden sm:block" /> About Plumbing in the Aliante
-                Area
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ALIANTE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+                Area</>}
+          faqs={ALIANTE_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
@@ -723,17 +700,3 @@ function CheckMark() {
   );
 }
 
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}

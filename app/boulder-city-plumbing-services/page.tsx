@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Boulder City, NV | Red Carpet Plumbing",
@@ -35,37 +37,43 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const BOULDER_CITY_FAQS = [
+const BOULDER_CITY_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve Boulder City, NV?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services in Boulder City, Nevada. Call (702) 567-9172 to confirm coverage and schedule service.",
+    category: "service-area",
   },
   {
     question:
       "What plumbing services does Red Carpet Plumbing offer in Boulder City?",
     answer:
       "Red Carpet Plumbing provides plumbing services in Boulder City including emergency plumbing, drain cleaning, water heater repair and installation, leak detection, water pipe repair, and re-piping. Call (702) 567-9172 to discuss your plumbing needs.",
+    category: "the-service",
   },
   {
     question: "Why do Boulder City homes have older plumbing systems?",
     answer:
       "Boulder City was built in the early 1930s to house workers on Hoover Dam and has some of the oldest residential housing in the Las Vegas region. Many homes in the historic downtown and surrounding neighborhoods were built between the 1930s and 1960s, giving them plumbing systems that are now 60 to 90 years old. Original galvanized steel and early copper supply lines in these homes are well past typical service life and are common sources of leaks, reduced water pressure, and water quality concerns.",
+    category: "causes-signs",
   },
   {
     question: "Does hard water affect plumbing in Boulder City?",
     answer:
       "Yes. Boulder City receives water from the Lake Mead supply, which is among the hardest municipal water in the United States. Hard water accelerates mineral buildup in water heaters, supply lines, and fixtures, and is a factor in the accelerated wear of older Boulder City plumbing systems. Water heater maintenance and periodic pipe inspection are particularly important in homes with aging infrastructure.",
+    category: "causes-signs",
   },
   {
     question: "Is Red Carpet Plumbing licensed to work in Boulder City, NV?",
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Boulder City.",
+    category: "trust",
   },
   {
     question: "How do I request plumbing service in Boulder City?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For emergency plumbing in Boulder City, calling directly is the fastest option.",
+    category: "timing-process",
   },
 ];
 
@@ -329,18 +337,7 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: BOULDER_CITY_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(BOULDER_CITY_FAQS);
 
 export default function BoulderCityPlumbingServicesPage() {
   return (
@@ -622,32 +619,12 @@ export default function BoulderCityPlumbingServicesPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Plumbing in Boulder City
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {BOULDER_CITY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions
+                <br className="hidden sm:block" /> About Plumbing in Boulder City</>}
+          faqs={BOULDER_CITY_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
@@ -690,17 +667,3 @@ function CheckMark() {
   );
 }
 
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}

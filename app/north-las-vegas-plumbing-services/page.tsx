@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in North Las Vegas, NV | Red Carpet Plumbing",
@@ -42,39 +44,45 @@ export const metadata: Metadata = {
 // in the FAQ schema. Reactivate a dedicated-page mention only after the Aliante
 // sub-hub ships at /north-las-vegas/aliante-area-plumbing/.
 // ---------------------------------------------------------------------------
-const NORTH_LAS_VEGAS_FAQS = [
+const NORTH_LAS_VEGAS_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve North Las Vegas, NV?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services throughout North Las Vegas, Nevada, including the Aliante area and surrounding neighborhoods. Call (702) 567-9172 to confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question:
       "What plumbing services does Red Carpet Plumbing offer in North Las Vegas?",
     answer:
       "Red Carpet Plumbing provides residential and commercial plumbing services throughout North Las Vegas including emergency plumbing, drain cleaning, water heater repair and installation, leak detection and repair, sewer line services, commercial plumbing, re-piping, and more.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing serve the Aliante area of North Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing serves the Aliante master-planned community and surrounding North Las Vegas neighborhoods, providing residential and commercial plumbing throughout the area. Call (702) 567-9172 to confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question:
       "Is North Las Vegas covered by Red Carpet Plumbing's emergency plumbing service?",
     answer:
       "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service throughout North Las Vegas. For plumbing emergencies in North Las Vegas, call (702) 567-9172 directly.",
+    category: "emergency",
   },
   {
     question: "Is Red Carpet Plumbing licensed to work in North Las Vegas, NV?",
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including North Las Vegas.",
+    category: "trust",
   },
   {
     question: "How do I request plumbing service in North Las Vegas?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For emergency plumbing in North Las Vegas, calling directly is the fastest option.",
+    category: "timing-process",
   },
 ];
 
@@ -328,18 +336,7 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: NORTH_LAS_VEGAS_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(NORTH_LAS_VEGAS_FAQS);
 
 export default function NorthLasVegasPlumbingServicesPage() {
   return (
@@ -636,33 +633,13 @@ export default function NorthLasVegasPlumbingServicesPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
+        <FaqSection
+          heading={<>Frequently Asked Questions
                 <br className="hidden sm:block" /> About Plumbing in North Las
-                Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {NORTH_LAS_VEGAS_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+                Vegas</>}
+          faqs={NORTH_LAS_VEGAS_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
@@ -705,17 +682,3 @@ function CheckMark() {
   );
 }
 
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}

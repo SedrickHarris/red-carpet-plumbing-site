@@ -6,6 +6,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
@@ -23,39 +25,45 @@ export const metadata: Metadata = {
   },
 };
 
-const ABOUT_FAQS = [
+const ABOUT_FAQS: FaqItem[] = [
   {
     question: "How long has Red Carpet Plumbing been in business?",
     answer:
       "Red Carpet Plumbing has been serving Las Vegas homes and businesses for over 40 years. The company is a local, family-owned plumbing business with deep experience in the specific plumbing conditions, water quality, and climate challenges that affect properties throughout the Las Vegas Valley.",
+    category: "trust",
   },
   {
     question: "Is Red Carpet Plumbing licensed?",
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, which covers residential and commercial plumbing and heating work in Nevada. Licensed plumbers handle every job.",
+    category: "trust",
   },
   {
     question:
       "Does Red Carpet Plumbing serve residential and commercial customers?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services for both residential homeowners and commercial customers including businesses, restaurants, and property managers throughout the Las Vegas Valley.",
+    category: "the-service",
   },
   {
     question:
       "What makes Red Carpet Plumbing different from a national plumbing franchise?",
     answer:
       "Red Carpet Plumbing is a local, family-owned Las Vegas plumbing company, not a national franchise. When you call Red Carpet Plumbing, you are working with a neighbor who has served the Las Vegas community for over 40 years and has a direct stake in doing the job right for local customers.",
+    category: "trust",
   },
   {
     question:
       "Does Red Carpet Plumbing offer emergency plumbing service?",
     answer:
       "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service throughout the Las Vegas Valley. Emergency services include burst pipes, sewer backups, water heater failures, gas line issues, and other urgent plumbing situations.",
+    category: "emergency",
   },
   {
     question: "How do I contact Red Carpet Plumbing?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request through the contact page at redcarpetplumbing.com/contact/. For plumbing emergencies, calling directly is recommended for the fastest response.",
+    category: "timing-process",
   },
 ];
 
@@ -145,18 +153,7 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ABOUT_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ABOUT_FAQS);
 
 const plumberSchema = {
   "@context": "https://schema.org",
@@ -500,32 +497,12 @@ export default function AboutPage() {
         </section>
 
         {/* SECTION 8: FAQS */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Common Questions About
-                <br className="hidden sm:block" /> Red Carpet Plumbing
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ABOUT_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Common Questions About
+                <br className="hidden sm:block" /> Red Carpet Plumbing</>}
+          faqs={ABOUT_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -568,17 +545,3 @@ export default function AboutPage() {
   );
 }
 
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}

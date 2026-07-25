@@ -2,7 +2,13 @@
 
 import { useMemo, useState } from "react";
 import type { ReactNode } from "react";
-import { FAQ_CATEGORIES, orderFaqs, type FaqCategoryId, type FaqItem } from "@/lib/faq";
+import {
+  FAQ_CATEGORIES,
+  orderFaqs,
+  qualifyingCategories,
+  type FaqCategoryId,
+  type FaqItem,
+} from "@/lib/faq";
 
 type FaqSectionProps = {
   heading: ReactNode;
@@ -25,16 +31,16 @@ export function FaqSection({
 
   const orderedFaqs = useMemo(() => orderFaqs(faqs), [faqs]);
 
-  // Distinct categories in first-appearance order of the ordered list.
+  // Only categories with 2+ questions earn a pill, in first-appearance order. A page with
+  // fewer than 3 such categories renders the plain accordion fallback.
   const presentCategories = useMemo(() => {
-    const seen: FaqCategoryId[] = [];
-    for (const faq of orderedFaqs) {
-      if (!seen.includes(faq.category)) seen.push(faq.category);
-    }
     const labelFor = (categoryId: FaqCategoryId) =>
       FAQ_CATEGORIES.find((cat) => cat.id === categoryId)?.label ?? categoryId;
-    return seen.map((categoryId) => ({ id: categoryId, label: labelFor(categoryId) }));
-  }, [orderedFaqs]);
+    return qualifyingCategories(faqs).map((categoryId) => ({
+      id: categoryId,
+      label: labelFor(categoryId),
+    }));
+  }, [faqs]);
 
   const showPills = presentCategories.length >= 3;
 

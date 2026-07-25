@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Henderson, NV | Red Carpet Plumbing",
@@ -41,37 +43,43 @@ export const metadata: Metadata = {
 // the FAQ schema must not assert it. Reworded to a truthful coverage answer.
 // Reactivate a dedicated-pages mention only after those hubs ship.
 // ---------------------------------------------------------------------------
-const HENDERSON_FAQS = [
+const HENDERSON_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve Henderson, NV?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services throughout Henderson, Nevada, including Green Valley, Lake Las Vegas, Seven Hills, and surrounding communities. Call (702) 567-9172 to confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question:
       "What plumbing services does Red Carpet Plumbing offer in Henderson?",
     answer:
       "Red Carpet Plumbing provides a full range of residential and commercial plumbing services in Henderson including emergency plumbing, drain cleaning, water heater repair and installation, slab leak detection and repair, leak detection, re-piping, sewer line services, gas line plumbing, and commercial plumbing.",
+    category: "the-service",
   },
   {
     question: "Why are slab leaks common in Henderson, NV homes?",
     answer:
       "Henderson shares the same hard water and caliche soil conditions as the broader Las Vegas Valley. Many Green Valley homes built between the mid-1980s and mid-1990s have original copper supply lines that have been thinned by decades of hard water mineral exposure. Caliche and expansive clay soil movement also stresses pipes beneath slab foundations throughout Henderson, making slab leaks a common issue in the area's older neighborhoods.",
+    category: "causes-signs",
   },
   {
     question: "Does Red Carpet Plumbing serve Green Valley and Lake Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing serves both Green Valley and Lake Las Vegas. We have dedicated plumbing service pages for Green Valley and Lake Las Vegas with more information about plumbing services, common issues, and coverage in those communities.",
+    category: "service-area",
   },
   {
     question: "Is Red Carpet Plumbing licensed to work in Henderson, NV?",
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Henderson.",
+    category: "trust",
   },
   {
     question: "How do I request plumbing service in Henderson?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For emergency plumbing in Henderson, calling directly is the fastest option.",
+    category: "timing-process",
   },
 ];
 
@@ -328,18 +336,7 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: HENDERSON_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(HENDERSON_FAQS);
 
 export default function HendersonPlumbingServicesPage() {
   return (
@@ -642,32 +639,12 @@ export default function HendersonPlumbingServicesPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Plumbing in Henderson
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {HENDERSON_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions
+                <br className="hidden sm:block" /> About Plumbing in Henderson</>}
+          faqs={HENDERSON_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
@@ -710,17 +687,3 @@ function CheckMark() {
   );
 }
 
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}
