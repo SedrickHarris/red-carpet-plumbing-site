@@ -9,6 +9,8 @@ import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { ServiceImagePlaceholder } from "@/components/ServiceImagePlaceholder";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
@@ -36,48 +38,56 @@ export const metadata: Metadata = {
 // schema both derive from this list, guaranteeing character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const SERVICE_AREAS_FAQS = [
+const SERVICE_AREAS_FAQS: FaqItem[] = [
   {
     question: "What areas does Red Carpet Plumbing serve?",
     answer:
       "Red Carpet Plumbing serves Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities throughout the Las Vegas Valley. Contact us to confirm service availability in your neighborhood.",
+    category: "service-area",
   },
   {
     question: "Does Red Carpet Plumbing serve Henderson, NV?",
     answer:
       "Yes, Red Carpet Plumbing serves Henderson, Nevada including the Green Valley and Lake Las Vegas areas. Services available in Henderson include emergency plumbing, drain cleaning, leak detection and repair, water heater service, slab leak detection and repair, and re-piping.",
+    category: "service-area",
   },
   {
     question: "Does Red Carpet Plumbing serve Summerlin?",
     answer:
       "Yes, Red Carpet Plumbing provides plumbing services in the Summerlin area of Las Vegas. Available services in Summerlin include emergency plumbing, drain cleaning, water heater repair and installation, leak detection, slab leak repair, and re-piping.",
+    category: "service-area",
   },
   {
     question: "Does Red Carpet Plumbing serve North Las Vegas?",
     answer:
       "Yes, Red Carpet Plumbing serves North Las Vegas including the Aliante area and surrounding neighborhoods. Services available include emergency plumbing, drain cleaning, water heater service, leak detection, and commercial plumbing.",
+    category: "service-area",
   },
   {
     question: "Does Red Carpet Plumbing serve Spring Valley and Enterprise?",
     answer:
       "Yes, Red Carpet Plumbing serves both the Spring Valley and Enterprise areas of the Las Vegas Valley. Available services include emergency plumbing, drain cleaning, leak detection and repair, slab leak detection, water heater service, and re-piping.",
+    category: "service-area",
   },
   {
     question: "Does Red Carpet Plumbing serve Boulder City, NV?",
     answer:
       "Yes, Red Carpet Plumbing provides plumbing services in Boulder City, Nevada. Services available in Boulder City include emergency plumbing, drain cleaning, water heater repair and installation, and leak detection.",
+    category: "service-area",
   },
   {
     question:
       "What plumbing services does Red Carpet Plumbing offer throughout the Las Vegas Valley?",
     answer:
       "Red Carpet Plumbing offers emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection and repair, sewer line services, re-piping, gas line plumbing, commercial plumbing, and a full range of residential and commercial plumbing repair and installation services throughout the Las Vegas Valley.",
+    category: "the-service",
   },
   {
     question:
       "How do I find out if Red Carpet Plumbing serves my neighborhood?",
     answer:
       "If your neighborhood is not listed on this page, contact Red Carpet Plumbing directly by phone or through the online service request form. We can confirm whether your location is within our current service area.",
+    category: "service-area",
   },
 ];
 
@@ -344,18 +354,7 @@ const serviceSchema = {
   areaServed: "Las Vegas Valley, NV",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SERVICE_AREAS_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SERVICE_AREAS_FAQS);
 
 export default function ServiceAreasPage() {
   return (
@@ -689,32 +688,11 @@ export default function ServiceAreasPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Plumbing Service Area FAQs
-              </h2>
-            </div>
-            <dl className="mt-12 space-y-4">
-              {SERVICE_AREAS_FAQS.map((faq) => (
-                <div
-                  key={faq.question}
-                  className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt sm:p-8"
-                >
-                  <dt>
-                    <h3 className="text-lg font-semibold text-brand-dark sm:text-xl">
-                      {faq.question}
-                    </h3>
-                  </dt>
-                  <dd className="mt-3 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </section>
+        <FaqSection
+          heading="Plumbing Service Area FAQs"
+          faqs={SERVICE_AREAS_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection

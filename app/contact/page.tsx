@@ -7,6 +7,8 @@ import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Contact a Las Vegas Plumber | Red Carpet Plumbing",
@@ -32,47 +34,55 @@ export const metadata: Metadata = {
 // schema both derive from this list, guaranteeing character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const CONTACT_FAQS = [
+const CONTACT_FAQS: FaqItem[] = [
   {
     question: "How do I request plumbing service from Red Carpet Plumbing?",
     answer:
       "You can request plumbing service by calling Red Carpet Plumbing directly or by submitting a service request through the online form on this page. For emergency plumbing situations, calling is recommended for the fastest response.",
+    category: "timing-process",
   },
   {
     question: "What areas does Red Carpet Plumbing serve?",
     answer:
       "Red Carpet Plumbing serves Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities throughout the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "What happens after I submit a service request?",
     answer:
       "After you submit a service request, a member of the Red Carpet Plumbing team will contact you to confirm your request, gather details about your plumbing situation, and schedule your service appointment.",
+    category: "timing-process",
   },
   {
     question: "Can I call instead of using the online form?",
     answer:
       "Yes, you can call Red Carpet Plumbing directly to request service, ask about availability, or get answers to your plumbing questions. For emergency plumbing situations, calling directly is the fastest way to reach us.",
+    category: "timing-process",
   },
   {
     question: "Does Red Carpet Plumbing handle emergency plumbing calls?",
     answer:
       "Yes, Red Carpet Plumbing provides emergency plumbing services for urgent situations including burst pipes, severe leaks, sewer backups, and water heater failures. Contact us directly for emergency plumbing assistance.",
+    category: "emergency",
   },
   {
     question:
       "What information should I have ready when I contact Red Carpet Plumbing?",
     answer:
       "When contacting Red Carpet Plumbing, it helps to have your address or ZIP code, a description of the plumbing issue, and any relevant details such as when the problem started or whether it is an emergency. This helps our team prepare for your service appointment.",
+    category: "timing-process",
   },
   {
     question: "Does Red Carpet Plumbing serve my neighborhood?",
     answer:
       "Red Carpet Plumbing serves communities throughout the Las Vegas Valley. If you are not sure whether we serve your area, contact us and we will confirm your service area. You can also visit our Service Areas page for a full list of communities we serve.",
+    category: "service-area",
   },
   {
     question: "Does Red Carpet Plumbing offer plumbing services for businesses?",
     answer:
       "Yes, Red Carpet Plumbing provides commercial plumbing services for businesses, property managers, and commercial operators throughout the Las Vegas Valley. Contact us to discuss your commercial plumbing needs.",
+    category: "the-service",
   },
 ];
 
@@ -221,18 +231,7 @@ const plumberSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: CONTACT_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(CONTACT_FAQS);
 
 export default function ContactPage() {
   return (
@@ -500,32 +499,11 @@ export default function ContactPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Contact FAQs
-              </h2>
-            </div>
-            <dl className="mt-12 space-y-4">
-              {CONTACT_FAQS.map((faq) => (
-                <div
-                  key={faq.question}
-                  className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt sm:p-8"
-                >
-                  <dt>
-                    <h3 className="text-lg font-semibold text-brand-dark sm:text-xl">
-                      {faq.question}
-                    </h3>
-                  </dt>
-                  <dd className="mt-3 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </section>
+        <FaqSection
+          heading="Contact FAQs"
+          faqs={CONTACT_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 9: EMERGENCY CTA STRIP (text + disabled CTA only — no second form) */}
         {/* SOURCE-SITE CLAIM: verify 24/7 availability documentation before final launch */}

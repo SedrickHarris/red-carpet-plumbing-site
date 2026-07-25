@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Spring Valley, NV | Red Carpet Plumbing",
@@ -40,37 +42,43 @@ export const metadata: Metadata = {
 // which the project copy rules prohibit. Reworded to an em-dash-free phrasing;
 // meaning preserved and visible text + schema remain identical (both map here).
 // ---------------------------------------------------------------------------
-const SPRING_VALLEY_FAQS = [
+const SPRING_VALLEY_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve Spring Valley, NV?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services throughout Spring Valley, Nevada, including the Desert Inn / West Sahara corridor and surrounding neighborhoods. Call (702) 567-9172 to confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question: "What is Spring Valley, NV, and is it part of Las Vegas?",
     answer:
       "Spring Valley is an unincorporated community in Clark County, Nevada. It is located west of the Las Vegas Strip and is governed by Clark County rather than the City of Las Vegas, though it is geographically part of the greater Las Vegas metropolitan area. Red Carpet Plumbing serves both the City of Las Vegas and Spring Valley.",
+    category: "service-area",
   },
   {
     question:
       "What plumbing services does Red Carpet Plumbing offer in Spring Valley?",
     answer:
       "Red Carpet Plumbing provides a full range of residential and commercial plumbing services in Spring Valley including emergency plumbing, drain cleaning, water heater repair and installation, leak detection, slab leak detection and repair, re-piping, commercial plumbing, and more.",
+    category: "the-service",
   },
   {
     question: "Why do older Spring Valley homes have plumbing problems?",
     answer:
       "Many Spring Valley homes along the Desert Inn and West Sahara corridors were built in the 1970s through 1990s. These homes often have galvanized steel or original copper supply lines that have been exposed to Las Vegas Valley hard water for 30 to 50 years. Galvanized pipe corrodes from the inside out, reducing water flow and quality over time. Original copper lines in hard water environments thin through mineral corrosion and can develop pinhole leaks. Slab foundations throughout Spring Valley also carry the same caliche soil movement risk as the broader Las Vegas Valley.",
+    category: "causes-signs",
   },
   {
     question: "Is Red Carpet Plumbing licensed to work in Spring Valley, NV?",
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Spring Valley.",
+    category: "trust",
   },
   {
     question: "How do I request plumbing service in Spring Valley?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For emergency plumbing in Spring Valley, calling directly is the fastest option.",
+    category: "timing-process",
   },
 ];
 
@@ -330,18 +338,7 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SPRING_VALLEY_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SPRING_VALLEY_FAQS);
 
 export default function SpringValleyPlumbingServicesPage() {
   return (
@@ -621,33 +618,13 @@ export default function SpringValleyPlumbingServicesPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
+        <FaqSection
+          heading={<>Frequently Asked Questions
                 <br className="hidden sm:block" /> About Plumbing in Spring
-                Valley
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SPRING_VALLEY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+                Valley</>}
+          faqs={SPRING_VALLEY_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
@@ -690,17 +667,3 @@ function CheckMark() {
   );
 }
 
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}

@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Lake Las Vegas, NV | Red Carpet Plumbing",
@@ -40,37 +42,43 @@ export const metadata: Metadata = {
 // the project copy rules prohibit. Reworded to an em-dash-free phrasing; meaning
 // preserved and visible text + schema remain identical (both map from here).
 // ---------------------------------------------------------------------------
-const LAKE_LAS_VEGAS_FAQS = [
+const LAKE_LAS_VEGAS_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve Lake Las Vegas, NV?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services in Lake Las Vegas, Nevada. Lake Las Vegas is part of the City of Henderson, and Red Carpet Plumbing serves both Lake Las Vegas and the broader Henderson area. Call (702) 567-9172 to confirm coverage and schedule service.",
+    category: "service-area",
   },
   {
     question: "What is Lake Las Vegas, and is it part of Henderson?",
     answer:
       "Lake Las Vegas is a resort and residential community built around a man-made lake in the eastern portion of Henderson, Nevada. It is a master-planned luxury community entirely within Henderson city limits. Red Carpet Plumbing serves Lake Las Vegas as part of its Henderson service area.",
+    category: "service-area",
   },
   {
     question: "Does hard water affect luxury homes in Lake Las Vegas?",
     answer:
       "Yes. Lake Las Vegas receives the same Lake Mead water supply as the rest of the Las Vegas Valley, which is among the hardest municipal water in the United States. Hard water is particularly hard on tankless water heater heat exchangers, which are common in Lake Las Vegas luxury homes. Mineral scale builds up inside tankless units and reduces flow and efficiency if the unit is not descaled periodically. Premium fixtures and complex plumbing systems in Lake Las Vegas homes are also affected by hard water and benefit from regular maintenance.",
+    category: "causes-signs",
   },
   {
     question:
       "What plumbing services does Red Carpet Plumbing offer in Lake Las Vegas?",
     answer:
       "Red Carpet Plumbing provides plumbing services in Lake Las Vegas including emergency plumbing, water heater repair and installation, slab leak detection and repair, leak detection, drain cleaning, and more. Call (702) 567-9172 to discuss your specific plumbing needs.",
+    category: "the-service",
   },
   {
     question: "Is Red Carpet Plumbing licensed to work in Lake Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Lake Las Vegas and Henderson.",
+    category: "trust",
   },
   {
     question: "How do I request plumbing service in Lake Las Vegas?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For emergency plumbing in Lake Las Vegas, calling directly is the fastest option.",
+    category: "timing-process",
   },
 ];
 
@@ -342,18 +350,7 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LAKE_LAS_VEGAS_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LAKE_LAS_VEGAS_FAQS);
 
 export default function LakeLasVegasPlumbingServicesPage() {
   return (
@@ -654,33 +651,13 @@ export default function LakeLasVegasPlumbingServicesPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
+        <FaqSection
+          heading={<>Frequently Asked Questions
                 <br className="hidden sm:block" /> About Plumbing in Lake Las
-                Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LAKE_LAS_VEGAS_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+                Vegas</>}
+          faqs={LAKE_LAS_VEGAS_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
@@ -723,17 +700,3 @@ function CheckMark() {
   );
 }
 
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}

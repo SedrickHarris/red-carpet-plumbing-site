@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Enterprise, NV | Red Carpet Plumbing",
@@ -40,38 +42,44 @@ export const metadata: Metadata = {
 // the project copy rules prohibit. Reworded to an em-dash-free phrasing; meaning
 // preserved and visible text + schema remain identical (both map from here).
 // ---------------------------------------------------------------------------
-const ENTERPRISE_FAQS = [
+const ENTERPRISE_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve Enterprise, NV?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services throughout Enterprise, Nevada, including Southwest Las Vegas and surrounding neighborhoods. Call (702) 567-9172 to confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question: "What is Enterprise, NV, and is it part of Las Vegas?",
     answer:
       "Enterprise is an unincorporated community in Clark County, Nevada. It is located in the southwest corner of the Las Vegas Valley and is governed by Clark County rather than the City of Las Vegas. Enterprise is one of the fastest-growing communities in Clark County. Red Carpet Plumbing serves Enterprise and the surrounding Southwest Las Vegas area.",
+    category: "service-area",
   },
   {
     question:
       "What plumbing services does Red Carpet Plumbing offer in Enterprise?",
     answer:
       "Red Carpet Plumbing provides a full range of residential and commercial plumbing services in Enterprise including emergency plumbing, drain cleaning, water heater repair and installation, slab leak detection and repair, leak detection, re-piping, commercial plumbing, and more.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing handle commercial plumbing in the Enterprise area?",
     answer:
       "Yes. Red Carpet Plumbing provides commercial plumbing services for businesses, commercial parks, and industrial properties throughout Enterprise and the Southwest Las Vegas area. Nevada Contractor License #0048585A covers commercial plumbing work throughout Clark County including Enterprise.",
+    category: "the-service",
   },
   {
     question: "Is Red Carpet Plumbing licensed to work in Enterprise, NV?",
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Enterprise.",
+    category: "trust",
   },
   {
     question: "How do I request plumbing service in Enterprise?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For emergency plumbing in Enterprise, calling directly is the fastest option.",
+    category: "timing-process",
   },
 ];
 
@@ -331,18 +339,7 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ENTERPRISE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ENTERPRISE_FAQS);
 
 export default function EnterprisePlumbingServicesPage() {
   return (
@@ -624,33 +621,13 @@ export default function EnterprisePlumbingServicesPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
+        <FaqSection
+          heading={<>Frequently Asked Questions
                 <br className="hidden sm:block" /> About Plumbing in Enterprise,
-                NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ENTERPRISE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+                NV</>}
+          faqs={ENTERPRISE_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
@@ -693,17 +670,3 @@ function CheckMark() {
   );
 }
 
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}

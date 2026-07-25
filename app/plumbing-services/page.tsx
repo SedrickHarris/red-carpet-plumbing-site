@@ -10,6 +10,8 @@ import { ServiceImagePlaceholder } from "@/components/ServiceImagePlaceholder";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import TrustStrip from "@/components/TrustStrip";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
@@ -35,48 +37,56 @@ export const metadata: Metadata = {
 // schema both derive from this list, guaranteeing character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const PLUMBING_SERVICES_FAQS = [
+const PLUMBING_SERVICES_FAQS: FaqItem[] = [
   {
     question: "What plumbing services does Red Carpet Plumbing offer?",
     answer:
       "Red Carpet Plumbing offers a full range of plumbing services including emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection, sewer line services, re-piping, gas line plumbing, commercial plumbing, and residential plumbing repair and installation. The company serves homes and businesses throughout the Las Vegas Valley.",
+    category: "the-service",
   },
   {
     question: "Does Red Carpet Plumbing handle emergency plumbing in Las Vegas?",
     answer:
       "Yes, Red Carpet Plumbing provides emergency plumbing services in Las Vegas and surrounding areas. Emergency services include burst pipes, severe leaks, sewer backups, water heater failures, and other urgent plumbing situations.",
+    category: "emergency",
   },
   {
     question: "Does Red Carpet Plumbing offer commercial plumbing services?",
     answer:
       "Yes, Red Carpet Plumbing provides commercial plumbing services for businesses, property managers, and commercial operators in the Las Vegas Valley. Commercial services include plumbing repair, installation, drain service, backflow prevention, gas line support, and inspection services.",
+    category: "the-service",
   },
   {
     question: "What areas does Red Carpet Plumbing serve?",
     answer:
       "Red Carpet Plumbing serves Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and nearby communities throughout the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "How do I schedule plumbing service with Red Carpet Plumbing?",
     answer:
       "You can contact Red Carpet Plumbing by phone or by submitting a service request online through the website. For emergency plumbing situations, calling directly is recommended for the fastest response.",
+    category: "timing-process",
   },
   {
     question:
       "Does Red Carpet Plumbing handle both repair and installation services?",
     answer:
       "Yes, Red Carpet Plumbing handles both plumbing repair and installation. Services include water heater installation, toilet installation, faucet and sink installation, garbage disposal installation, fixture installation, and re-piping, in addition to a full range of plumbing repair services.",
+    category: "the-service",
   },
   {
     question: "What is slab leak detection and repair?",
     answer:
       "A slab leak is a water leak that occurs in pipes running beneath a home's concrete foundation. Slab leaks can cause water damage, mold growth, and structural problems if not addressed. Red Carpet Plumbing provides slab leak detection and repair services in Las Vegas and the surrounding area.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing offer video camera plumbing inspections?",
     answer:
       "Yes, Red Carpet Plumbing offers video camera plumbing inspections. A camera inspection allows a plumber to see inside pipes to identify blockages, damage, root intrusion, and other issues without unnecessary digging or demolition.",
+    category: "the-service",
   },
 ];
 
@@ -320,18 +330,7 @@ const serviceSchema = {
   areaServed: "Las Vegas, NV",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: PLUMBING_SERVICES_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(PLUMBING_SERVICES_FAQS);
 
 export default function PlumbingServicesPage() {
   return (
@@ -585,32 +584,11 @@ export default function PlumbingServicesPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Plumbing Services FAQs
-              </h2>
-            </div>
-            <dl className="mt-12 space-y-4">
-              {PLUMBING_SERVICES_FAQS.map((faq) => (
-                <div
-                  key={faq.question}
-                  className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt sm:p-8"
-                >
-                  <dt>
-                    <h3 className="text-lg font-semibold text-brand-dark sm:text-xl">
-                      {faq.question}
-                    </h3>
-                  </dt>
-                  <dd className="mt-3 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </section>
+        <FaqSection
+          heading="Plumbing Services FAQs"
+          faqs={PLUMBING_SERVICES_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection

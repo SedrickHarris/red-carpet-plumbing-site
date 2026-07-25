@@ -24,13 +24,30 @@ export const FAQ_CATEGORIES: { id: FaqCategoryId; label: string }[] = [
   { id: "trust", label: "Licensing and Trust" },
 ];
 
+// A category only qualifies toward pill rendering if it holds 2 or more questions. A
+// single-question category never earns its own pill and never counts toward the threshold.
+// Returned in first-appearance order of the authored array. Single source of truth for both
+// orderFaqs (ordering/schema) and FaqSection (pill rendering), so they stay in lockstep.
+export function qualifyingCategories(faqs: FaqItem[]): FaqCategoryId[] {
+  const counts = new Map<FaqCategoryId, number>();
+  for (const faq of faqs) {
+    counts.set(faq.category, (counts.get(faq.category) ?? 0) + 1);
+  }
+  const ordered: FaqCategoryId[] = [];
+  for (const faq of faqs) {
+    if ((counts.get(faq.category) ?? 0) >= 2 && !ordered.includes(faq.category)) {
+      ordered.push(faq.category);
+    }
+  }
+  return ordered;
+}
+
 // Conditional ordering, shared by the visible FAQ section AND the FAQPage schema so DOM
 // order and mainEntity order stay in lockstep in both modes.
-//   3 or more categories present -> group by first appearance, stable within a group.
-//   fewer than 3                 -> return the authored array untouched (no reorder).
+//   3 or more qualifying categories -> group by first appearance, stable within a group.
+//   fewer than 3                    -> return the authored array untouched (no reorder).
 export function orderFaqs(faqs: FaqItem[]): FaqItem[] {
-  const distinct = new Set(faqs.map((faq) => faq.category));
-  if (distinct.size < 3) {
+  if (qualifyingCategories(faqs).length < 3) {
     return faqs;
   }
 

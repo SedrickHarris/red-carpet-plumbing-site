@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
@@ -35,37 +37,43 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const LAS_VEGAS_FAQS = [
+const LAS_VEGAS_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve all of Las Vegas?",
     answer:
       "Red Carpet Plumbing serves homes and businesses throughout Las Vegas, Nevada, including residential neighborhoods, the commercial corridor, and surrounding communities in the Las Vegas Valley. Call (702) 567-9172 to confirm service availability for your specific address.",
+    category: "service-area",
   },
   {
     question: "Is Red Carpet Plumbing licensed to work in Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Las Vegas.",
+    category: "trust",
   },
   {
     question:
       "Does Red Carpet Plumbing offer 24/7 emergency plumbing in Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service for Las Vegas homes and businesses. For emergency situations, call (702) 567-9172 directly.",
+    category: "emergency",
   },
   {
     question: "Why do Las Vegas homes have so many plumbing problems?",
     answer:
       "Las Vegas has some of the hardest water in the country. High mineral content from the Lake Mead municipal supply accelerates buildup inside water heaters, supply lines, and fixtures, shortening equipment life. The desert climate causes repeated pipe expansion and contraction, and many Las Vegas homes built before 2000 have aging galvanized or early plastic piping that is approaching end of service life.",
+    category: "causes-signs",
   },
   {
     question: "What neighborhoods in Las Vegas does Red Carpet Plumbing serve?",
     answer:
       "Red Carpet Plumbing serves neighborhoods throughout Las Vegas including Downtown Las Vegas, Desert Inn/West Sahara, Desert Shores, The Lakes, Sunrise Manor, Whitney, Winchester, Southwest Las Vegas, and surrounding communities, as well as Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, and Enterprise.",
+    category: "service-area",
   },
   {
     question: "How do I request plumbing service in Las Vegas?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For emergency plumbing, calling directly is the fastest option.",
+    category: "timing-process",
   },
 ];
 
@@ -324,18 +332,7 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LAS_VEGAS_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LAS_VEGAS_FAQS);
 
 export default function LasVegasPlumbingServicesPage() {
   return (
@@ -613,32 +610,12 @@ export default function LasVegasPlumbingServicesPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Plumbing in Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LAS_VEGAS_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions
+                <br className="hidden sm:block" /> About Plumbing in Las Vegas</>}
+          faqs={LAS_VEGAS_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
@@ -681,17 +658,3 @@ function CheckMark() {
   );
 }
 
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}

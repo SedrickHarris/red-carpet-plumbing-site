@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Green Valley, NV | Red Carpet Plumbing",
@@ -40,37 +42,43 @@ export const metadata: Metadata = {
 // the project copy rules prohibit. Reworded to an em-dash-free phrasing; meaning
 // preserved and visible text + schema remain identical (both map from here).
 // ---------------------------------------------------------------------------
-const GREEN_VALLEY_FAQS = [
+const GREEN_VALLEY_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve Green Valley, NV?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services throughout Green Valley, Nevada. Green Valley is part of the City of Henderson, and Red Carpet Plumbing serves both Green Valley and the broader Henderson area. Call (702) 567-9172 to confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question: "What is Green Valley, NV, and is it part of Henderson?",
     answer:
       "Green Valley is a master-planned community within the City of Henderson, Nevada. It was one of the first large master-planned communities in the American Southwest, with development beginning in the late 1970s. Many residents identify primarily as Green Valley residents, though the area is officially within Henderson city limits. Red Carpet Plumbing serves Green Valley as part of its Henderson service area.",
+    category: "service-area",
   },
   {
     question: "Are slab leaks common in Green Valley homes?",
     answer:
       "Yes. Green Valley's original neighborhoods, built from the late 1970s through the mid-1990s, have copper supply lines that have been exposed to Las Vegas Valley hard water for 30 to 45 years. This sustained hard water mineral exposure thins copper pipe walls through corrosion, and caliche soil movement beneath slab foundations adds mechanical stress to those pipes. These combined conditions make slab leaks more common in original Green Valley neighborhoods than in newer Henderson communities.",
+    category: "causes-signs",
   },
   {
     question:
       "What plumbing services does Red Carpet Plumbing offer in Green Valley?",
     answer:
       "Red Carpet Plumbing provides a full range of plumbing services in Green Valley including emergency plumbing, drain cleaning, water heater repair and installation, slab leak detection and repair, leak detection, re-piping, and more.",
+    category: "the-service",
   },
   {
     question: "Is Red Carpet Plumbing licensed to work in Green Valley?",
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Green Valley and Henderson.",
+    category: "trust",
   },
   {
     question: "How do I request plumbing service in Green Valley?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For emergency plumbing in Green Valley, calling directly is the fastest option.",
+    category: "timing-process",
   },
 ];
 
@@ -334,18 +342,7 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: GREEN_VALLEY_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(GREEN_VALLEY_FAQS);
 
 export default function GreenValleyPlumbingServicesPage() {
   return (
@@ -646,32 +643,12 @@ export default function GreenValleyPlumbingServicesPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Plumbing in Green Valley
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {GREEN_VALLEY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions
+                <br className="hidden sm:block" /> About Plumbing in Green Valley</>}
+          faqs={GREEN_VALLEY_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
@@ -714,17 +691,3 @@ function CheckMark() {
   );
 }
 
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}
