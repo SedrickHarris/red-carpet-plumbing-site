@@ -137,7 +137,7 @@ type ServicePill = { title: string; href: string };
 const SPRING_VALLEY_PILLS_ROW_ONE: ServicePill[] = [
   {
     title: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    href: "/spring-valley/emergency-plumbing/",
   },
   {
     title: "Drain Cleaning",

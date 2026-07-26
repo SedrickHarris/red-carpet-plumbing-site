@@ -136,15 +136,15 @@ type ServicePill = { title: string; href: string };
 const PARADISE_PILLS_ROW_ONE: ServicePill[] = [
   {
     title: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    href: "/paradise/emergency-plumbing/",
   },
   {
     title: "Drain Cleaning",
-    href: "/drain-cleaning/",
+    href: "/paradise/drain-cleaning/",
   },
   {
     title: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
+    href: "/paradise/leak-detection-repair/",
   },
   {
     title: "Water Pipe Repair and Replacement",
@@ -156,7 +156,7 @@ const PARADISE_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Commercial Plumbing",
-    href: "/commercial-plumbing/",
+    href: "/paradise/commercial-plumbing/",
   },
   {
     title: "Toilet Repair and Installation",

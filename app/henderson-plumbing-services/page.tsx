@@ -136,15 +136,15 @@ type ServicePill = { title: string; href: string };
 const HENDERSON_PILLS_ROW_ONE: ServicePill[] = [
   {
     title: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    href: "/henderson/emergency-plumbing/",
   },
   {
     title: "Drain Cleaning",
-    href: "/drain-cleaning/",
+    href: "/henderson/drain-cleaning/",
   },
   {
     title: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
+    href: "/henderson/leak-detection-repair/",
   },
   {
     title: "Water Pipe Repair and Replacement",
@@ -152,11 +152,11 @@ const HENDERSON_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Gas Line Plumbing",
-    href: "/gas-line-plumbing/",
+    href: "/henderson/gas-line-plumbing/",
   },
   {
     title: "Commercial Plumbing",
-    href: "/commercial-plumbing/",
+    href: "/henderson/commercial-plumbing/",
   },
   {
     title: "Toilet Repair and Installation",

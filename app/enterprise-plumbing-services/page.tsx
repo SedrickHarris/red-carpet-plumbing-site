@@ -158,7 +158,7 @@ const ENTERPRISE_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Commercial Plumbing",
-    href: "/commercial-plumbing/",
+    href: "/enterprise/commercial-plumbing/",
   },
   {
     title: "Toilet Repair and Installation",

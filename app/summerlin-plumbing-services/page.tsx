@@ -130,15 +130,15 @@ type ServicePill = { title: string; href: string };
 const SUMMERLIN_PILLS_ROW_ONE: ServicePill[] = [
   {
     title: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    href: "/summerlin/emergency-plumbing/",
   },
   {
     title: "Drain Cleaning",
-    href: "/drain-cleaning/",
+    href: "/summerlin/drain-cleaning/",
   },
   {
     title: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
+    href: "/summerlin/leak-detection-repair/",
   },
   {
     title: "Water Pipe Repair and Replacement",

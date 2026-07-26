@@ -132,15 +132,15 @@ type ServicePill = { title: string; href: string };
 const LAS_VEGAS_PILLS_ROW_ONE: ServicePill[] = [
   {
     title: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    href: "/las-vegas/emergency-plumbing/",
   },
   {
     title: "Drain Cleaning",
-    href: "/drain-cleaning/",
+    href: "/las-vegas/drain-cleaning/",
   },
   {
     title: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
+    href: "/las-vegas/leak-detection-repair/",
   },
   {
     title: "Water Pipe Repair and Replacement",
@@ -148,34 +148,34 @@ const LAS_VEGAS_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Gas Line Plumbing",
-    href: "/gas-line-plumbing/",
+    href: "/las-vegas/gas-line-plumbing/",
   },
   {
     title: "Commercial Plumbing",
-    href: "/commercial-plumbing/",
+    href: "/las-vegas/commercial-plumbing/",
   },
   {
     title: "Toilet Repair and Installation",
-    href: "/toilet-repair-installation/",
+    href: "/las-vegas/toilet-repair-installation/",
   },
 ];
 
 const LAS_VEGAS_PILLS_ROW_TWO: ServicePill[] = [
   {
     title: "Faucet and Sink Repair and Installation",
-    href: "/faucet-sink-repair-installation/",
+    href: "/las-vegas/faucet-sink-repair-installation/",
   },
   {
     title: "Garbage Disposal Repair and Installation",
-    href: "/garbage-disposal-repair-installation/",
+    href: "/las-vegas/garbage-disposal-repair-installation/",
   },
   {
     title: "Backflow Prevention",
-    href: "/backflow-prevention/",
+    href: "/las-vegas/backflow-prevention/",
   },
   {
     title: "Video Camera Plumbing Inspections",
-    href: "/video-camera-plumbing-inspections/",
+    href: "/las-vegas/video-camera-plumbing-inspections/",
   },
   {
     title: "Plumbing Fixture Repair, Replacement and Installation",
