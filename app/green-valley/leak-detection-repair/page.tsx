@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
 // "Over 40 years," and "24/7 emergency service" trust claims are source-site
@@ -218,18 +217,6 @@ const GV_LEAK_STEPS: { name: string; body: string }[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Trust strip — 4 items matching Henderson sibling pattern.
-// ---------------------------------------------------------------------------
-const LEAK_TRUST_STRIP: string[] = [
-  "Non-Invasive Detection",
-  // FLAG: verify before final launch.
-  "NV Licensed, #0048585A",
-  // FLAG: source-site claim — verify before final launch.
-  "24/7 Emergency Service",
-  "Serving Green Valley and Henderson",
-];
-
-// ---------------------------------------------------------------------------
 // Related services block. All Green Valley sibling routes (drain, water heater,
 // slab leak) are built and linked.
 // ---------------------------------------------------------------------------
@@ -293,6 +280,8 @@ const HERO_TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   // FLAG: source-site claim — verify before final launch.
   "Transparent pricing, no hidden fees",
+  "Non-Invasive Detection",
+  "24/7 Emergency Service",
 ];
 
 // ---------------------------------------------------------------------------
@@ -423,7 +412,12 @@ export default function GreenValleyLeakDetectionPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Leak Detection and Repair in Green Valley, Henderson, NV"
+          headline={
+            <>
+              Leak Detection and Repair
+              <br /> in Green Valley, Henderson, NV
+            </>
+          }
           subheading="Hidden water leaks in Green Valley homes cause serious damage before they become visible. Red Carpet Plumbing locates leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging, without opening up walls or floors. Serving original Green Valley neighborhoods, Green Valley Ranch, and all Henderson communities."
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -441,12 +435,6 @@ export default function GreenValleyLeakDetectionPage() {
             src: "/images/services/leak-detection-repair/hero.webp",
             alt: "Professional leak detection service in Green Valley, Henderson, NV",
           }}
-        />
-
-        {/* SECTION 1b: TRUST STRIP */}
-        <TrustStrip
-          items={LEAK_TRUST_STRIP}
-          ariaLabel="Why Green Valley customers choose Red Carpet Plumbing for leak detection"
         />
 
         {/* SECTION 2: WARNING SIGNS + METER TEST */}
@@ -713,7 +701,7 @@ export default function GreenValleyLeakDetectionPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
@@ -721,7 +709,7 @@ export default function GreenValleyLeakDetectionPage() {
                   Suspected Water Leak in Green Valley?
                 </h2>
                 {/* FLAG: source-site claim — verify emergency availability before final launch */}
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing provides non-invasive leak detection and
                   repair throughout Green Valley, including original Green Valley
                   neighborhoods and Green Valley Ranch. Call or request service
@@ -731,7 +719,7 @@ export default function GreenValleyLeakDetectionPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

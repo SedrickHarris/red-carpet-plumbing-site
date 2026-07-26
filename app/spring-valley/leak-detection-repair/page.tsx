@@ -340,7 +340,12 @@ export default function SpringValleyLeakDetectionPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Leak Detection and Repair in Spring Valley, NV"
+          headline={
+            <>
+              Leak Detection and Repair
+              <br /> in Spring Valley, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

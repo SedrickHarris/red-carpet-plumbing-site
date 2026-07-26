@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — the following are source-site / project
 // claims surfaced in the build brief. They are confirmed elsewhere in the
@@ -155,13 +154,6 @@ const WHY_CHOOSE = [
   "Familiar with Las Vegas plumbing conditions including hard water, slab construction, and aging pipe systems",
 ];
 
-const EMERGENCY_TRUST_STRIP = [
-  "NV Licensed, #0048585A",
-  "Emergency Service Available",
-  "Serving the Las Vegas Valley",
-  "Transparent Pricing, No Hidden Fees",
-];
-
 // Related core service pages (live routes). TODO-BATCH-5: replace with the
 // location-specific /las-vegas/[service]/ children once those pages are built.
 const RELATED_SERVICES = [
@@ -300,7 +292,12 @@ export default function LasVegasEmergencyPlumbingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Emergency Plumbing in Las Vegas, NV"
+          headline={
+            <>
+              Emergency Plumbing
+              <br /> in Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides emergency plumbing service for homes and businesses throughout Las Vegas, NV. Whether you are dealing with a burst pipe, sewer backup, water heater failure, slab leak, or gas line issue, our licensed plumbers are ready to help. Call (702) 567-9172 to reach a plumber now."
           trustItems={[
             "NV Licensed Plumbers, #0048585A",
@@ -322,12 +319,6 @@ export default function LasVegasEmergencyPlumbingPage() {
             src: "/images/services/emergency-plumbing/hero.webp",
             alt: "Emergency plumber responding to a burst pipe in Las Vegas, NV",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={EMERGENCY_TRUST_STRIP}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for emergency service"
         />
 
         {/* SECTION 3: DIRECT ANSWER */}

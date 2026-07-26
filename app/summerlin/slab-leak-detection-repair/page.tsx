@@ -338,7 +338,12 @@ export default function SummerlinSlabLeakPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Slab Leak Detection and Repair in Summerlin, NV"
+          headline={
+            <>
+              Slab Leak Detection and Repair
+              <br /> in Summerlin, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

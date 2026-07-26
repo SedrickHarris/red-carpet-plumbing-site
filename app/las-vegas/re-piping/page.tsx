@@ -10,7 +10,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews)
 // and "Over 40 years" trust claims are source-site claims surfaced in the
@@ -91,15 +90,7 @@ const HERO_TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Permits pulled and inspections scheduled",
   "Transparent pricing, no hidden fees",
-];
-
-// 1b colored strip. Items are factual restatements of brief content (services
-// offered, license, permit handling, materials) — no new business claims —
-// consistent with the derived strips used on siblings P13/P14.
-const REPIPE_TRUST_STRIP = [
   "Whole-House and Partial Repiping",
-  "NV Licensed, #0048585A",
-  "Permits Pulled and Inspections Scheduled",
   "PEX and Copper Repiping",
 ];
 
@@ -355,7 +346,12 @@ export default function LasVegasRePipingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Re-Piping Services in Las Vegas, NV"
+          headline={
+            <>
+              Re-Piping Services
+              <br /> in Las Vegas, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -372,12 +368,6 @@ export default function LasVegasRePipingPage() {
             src: "/images/services/re-piping/hero.webp",
             alt: "re-piping service in Las Vegas, NV",
           }}
-        />
-
-        {/* SECTION 1b: TRUST STRIP */}
-        <TrustStrip
-          items={REPIPE_TRUST_STRIP}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for repiping"
         />
 
         {/* SECTION 2: SIGNS YOU NEED REPIPING */}
@@ -585,14 +575,14 @@ export default function LasVegasRePipingPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Ready to Repipe Your Las Vegas Home?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing provides professional repiping services
                   throughout Las Vegas, including polybutylene replacement,
                   Kitec replacement, galvanized replacement, and whole-house PEX
@@ -610,7 +600,7 @@ export default function LasVegasRePipingPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

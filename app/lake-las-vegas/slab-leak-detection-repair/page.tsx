@@ -364,7 +364,12 @@ export default function LakeLasVegasSlabLeakPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Slab Leak Detection and Repair in Lake Las Vegas, Henderson, NV"
+          headline={
+            <>
+              Slab Leak Detection and Repair
+              <br /> in Lake Las Vegas, Henderson, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Lake Las Vegas and Henderson, NV. Lake Las Vegas homes built between 2000 and 2010 are entering the first major service cycle for their copper plumbing, and hard water mineral corrosion is the primary cause of slab leaks in this community. We use acoustic sensors, pressure testing, and thermal imaging to locate slab leaks precisely before any concrete is cut, and we explain all repair options before work begins. NV Contractor License #0048585A."
           trustItems={LLV_SLAB_TRUST}
           primaryCTA={{

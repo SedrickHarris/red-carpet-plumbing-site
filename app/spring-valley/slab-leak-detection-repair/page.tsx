@@ -342,7 +342,12 @@ export default function SpringValleySlabLeakPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Slab Leak Detection and Repair in Spring Valley, NV"
+          headline={
+            <>
+              Slab Leak Detection and Repair
+              <br /> in Spring Valley, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

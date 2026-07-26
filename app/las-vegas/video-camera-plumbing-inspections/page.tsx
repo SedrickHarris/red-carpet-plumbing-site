@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear as unverified claims in
@@ -436,7 +435,12 @@ export default function LasVegasVideoCameraInspectionPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Video Camera Plumbing Inspections in Las Vegas, NV"
+          headline={
+            <>
+              Video Camera Plumbing Inspections
+              <br /> in Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing performs video camera plumbing inspections for homes and businesses throughout Las Vegas. Whether you have a recurring clog, suspect root intrusion or a pipe belly, want to confirm a drain line is clear after cleaning, or need a pre-purchase sewer inspection before closing, our licensed plumbers provide accurate camera diagnostics with no guesswork."
           trustItems={LV_CAMERA_TRUST_STRIP}
           primaryCTA={{
@@ -455,12 +459,6 @@ export default function LasVegasVideoCameraInspectionPage() {
             src: "/images/services/video-camera-plumbing-inspections/hero.webp",
             alt: "Video camera plumbing inspection service in Las Vegas, NV",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={LV_CAMERA_TRUST_STRIP}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for camera inspections"
         />
 
         {/* SECTION 3: WHEN A VIDEO CAMERA INSPECTION MAKES SENSE */}
@@ -607,14 +605,14 @@ export default function LasVegasVideoCameraInspectionPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Need a Sewer Camera Inspection in Las Vegas?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing performs video camera plumbing inspections
                   for homes and businesses throughout the Las Vegas Valley. NV
                   Contractor License #0048585A.
@@ -623,7 +621,7 @@ export default function LasVegasVideoCameraInspectionPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

@@ -323,7 +323,12 @@ export default function BoulderCityEmergencyPlumbingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Emergency Plumbing in Boulder City, NV"
+          headline={
+            <>
+              Emergency Plumbing
+              <br /> in Boulder City, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{

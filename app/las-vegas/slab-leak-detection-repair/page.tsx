@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
 // "Over 40 years," and "24/7 emergency service" trust claims, plus license
@@ -91,11 +90,7 @@ const HERO_TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "24/7 emergency service",
   "Transparent pricing, no hidden fees",
-];
-
-const SLAB_TRUST_STRIP = [
   "Non-Invasive Detection",
-  "NV Licensed, #0048585A",
   "All Repair Options Explained",
   "Residential and Commercial",
 ];
@@ -320,7 +315,12 @@ export default function LasVegasSlabLeakPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Slab Leak Detection and Repair in Las Vegas, NV"
+          headline={
+            <>
+              Slab Leak Detection and Repair
+              <br /> in Las Vegas, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -339,12 +339,6 @@ export default function LasVegasSlabLeakPage() {
             src: "/images/services/slab-leak-detection-repair/card.webp",
             alt: "Slab leak detection in Las Vegas, NV",
           }}
-        />
-
-        {/* SECTION 1b: TRUST STRIP */}
-        <TrustStrip
-          items={SLAB_TRUST_STRIP}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for slab leak service"
         />
 
         {/* SECTION 2: WARNING SIGNS */}
@@ -589,14 +583,14 @@ export default function LasVegasSlabLeakPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Suspected Slab Leak in Las Vegas?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing provides professional slab leak detection
                   and repair throughout Las Vegas. We locate leaks precisely
                   before recommending a repair approach and present all options
@@ -614,7 +608,7 @@ export default function LasVegasSlabLeakPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

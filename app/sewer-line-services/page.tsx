@@ -9,7 +9,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title: "Sewer Line Services in Las Vegas, NV | Red Carpet Plumbing",
@@ -70,14 +69,6 @@ const SEWER_LINE_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
-];
-
-const TRUST_STRIP_ITEMS = [
-  "4.8 Stars, 76 Google Reviews",
-  "NV Licensed, #0048585A",
-  "Over 40 Years in Las Vegas",
-  "24/7 Emergency Service",
-  "Transparent Pricing, No Hidden Fees",
 ];
 
 const SEWER_WARNING_SIGNS = [
@@ -383,6 +374,7 @@ export default function SewerLineServicesPage() {
             "NV Licensed Plumbers, #0048585A",
             "Over 40 years serving Las Vegas",
             "Transparent pricing, no hidden fees",
+            "24/7 Emergency Service",
           ]}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -395,12 +387,6 @@ export default function SewerLineServicesPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Sewer Line Help" />}
           accentWidth="sm"
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={TRUST_STRIP_ITEMS}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for sewer line service"
         />
 
         {/* SECTION 3: SIGNS OF A SEWER LINE PROBLEM */}
@@ -582,7 +568,7 @@ export default function SewerLineServicesPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -590,7 +576,7 @@ export default function SewerLineServicesPage() {
                   Sewer Line Problem
                   <br className="hidden sm:block" /> in Las Vegas?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing provides sewer line inspection, cleaning,
                   repair, and replacement throughout the Las Vegas Valley. We start with a camera inspection so you know
                   exactly what you are dealing with before any work begins.
@@ -599,7 +585,7 @@ export default function SewerLineServicesPage() {
               <div className="flex flex-col items-start lg:items-end gap-4">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call Now: (702) 567-9172
                 </a>

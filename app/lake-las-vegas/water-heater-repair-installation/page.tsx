@@ -351,7 +351,12 @@ export default function LakeLasVegasWaterHeaterPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Water Heater Repair and Installation in Lake Las Vegas, Henderson, NV"
+          headline={
+            <>
+              Water Heater Repair and Installation
+              <br /> in Lake Las Vegas, Henderson, NV
+            </>
+          }
           subheading="Red Carpet Plumbing repairs and installs water heaters for homes throughout Lake Las Vegas and Henderson, NV. Lake Las Vegas homes built between 2000 and 2010 are now in their first or second water heater replacement cycle, and hard water from Lake Mead accelerates sediment buildup and anode rod depletion. Our licensed plumbers handle all water heater work to current Clark County plumbing code. Call (702) 567-9172 to schedule service."
           trustItems={LLV_WH_TRUST}
           primaryCTA={{

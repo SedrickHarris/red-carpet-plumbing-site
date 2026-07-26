@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear as unverified claims in
@@ -131,14 +130,6 @@ const WHY_CHOOSE = [
   "Residential and commercial sewer line service throughout Las Vegas",
   "Transparent pricing with no hidden fees",
   "24/7 availability for sewer emergencies",
-];
-
-// Red brand-primary trust band (Section 2).
-const LV_SEWER_TRUST_STRIP = [
-  "NV Licensed, #0048585A",
-  "Sewer Line Camera Inspection",
-  "Serving the Las Vegas Valley",
-  "Transparent Pricing, No Hidden Fees",
 ];
 
 const LV_SEWER_NEIGHBORHOODS = [
@@ -388,7 +379,12 @@ export default function LasVegasSewerLinePage() {
             available and pass it via backgroundImage. */}
         <HeroSection
           headingLevel="h1"
-          headline="Sewer Line Services in Las Vegas, NV"
+          headline={
+            <>
+              Sewer Line Services
+              <br /> in Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement for homes and businesses throughout Las Vegas. From recurring backups and slow drains to root intrusion, damaged lines, and complete sewer replacements, our licensed plumbers start with a camera inspection so you know exactly what you are dealing with before any work begins."
           trustItems={[
             // FLAG: VERIFY — license number is a source-site claim.
@@ -407,12 +403,6 @@ export default function LasVegasSewerLinePage() {
           }}
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Sewer Line Help" />}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={LV_SEWER_TRUST_STRIP}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for sewer line services"
         />
 
         {/* SECTION 3: WHY LAS VEGAS HOMES NEED SEWER LINE SERVICE */}
@@ -529,14 +519,14 @@ export default function LasVegasSewerLinePage() {
         </section>
 
         {/* SECTION 6: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Sewer Line Problem in Las Vegas?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing provides sewer line inspection, cleaning,
                   repair, and replacement throughout the Las Vegas
                   Valley. We start with a camera inspection so you know exactly
@@ -546,7 +536,7 @@ export default function LasVegasSewerLinePage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

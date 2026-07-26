@@ -377,7 +377,12 @@ export default function EnterpriseEmergencyPlumbingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Emergency Plumbing in Enterprise, NV"
+          headline={
+            <>
+              Emergency Plumbing
+              <br /> in Enterprise, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

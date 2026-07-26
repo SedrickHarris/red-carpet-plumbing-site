@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear as unverified claims in
@@ -370,7 +369,12 @@ export default function LasVegasGasLinePage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Gas Line Plumbing in Las Vegas, NV"
+          headline={
+            <>
+              Gas Line Plumbing
+              <br /> in Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and emergency service for homes and businesses throughout Las Vegas. Our plumbers hold Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, which authorizes gas line work throughout Clark County and the Las Vegas Valley."
           trustItems={LV_GAS_TRUST_STRIP}
           primaryCTA={{
@@ -388,12 +392,6 @@ export default function LasVegasGasLinePage() {
             src: "/images/services/gas-line-plumbing/hero.webp",
             alt: "Licensed gas line plumbing service in Las Vegas, NV",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={LV_GAS_TRUST_STRIP}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for gas line plumbing"
         />
 
         {/* SECTION 3: WHY LAS VEGAS GAS LINES NEED SPECIALIZED ATTENTION */}
@@ -512,14 +510,14 @@ export default function LasVegasGasLinePage() {
         </section>
 
         {/* SECTION 6: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Gas Line Problem? Call a Licensed Las Vegas Plumber.
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing is licensed for gas line work throughout the
                   Las Vegas Valley. NV Contractor License #0048585A, C-1 Plumbing
                   and Heating.
@@ -532,7 +530,7 @@ export default function LasVegasGasLinePage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

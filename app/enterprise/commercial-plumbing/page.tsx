@@ -348,7 +348,12 @@ export default function EnterpriseCommercialPlumbingPage() {
             and pass it as backgroundImage. Do not invent a path. */}
         <HeroSection
           headingLevel="h1"
-          headline="Commercial Plumbing in Enterprise, NV"
+          headline={
+            <>
+              Commercial Plumbing
+              <br /> in Enterprise, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{

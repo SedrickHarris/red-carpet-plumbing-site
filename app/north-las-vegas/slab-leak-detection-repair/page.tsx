@@ -10,7 +10,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing. "emergency plumbing service available" and
 // "transparent pricing, no hidden fees" are source-site claims. License
@@ -355,7 +354,12 @@ export default function NorthLasVegasSlabLeakPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Slab Leak Detection and Repair in North Las Vegas, NV"
+          headline={
+            <>
+              Slab Leak Detection and Repair
+              <br /> in North Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides non-invasive slab leak detection and repair for homes throughout North Las Vegas, NV. Older central neighborhoods with galvanized steel lines, Aliante-area copper homes, and every vintage in between. Acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172."
           trustItems={NLV_SLAB_TRUST}
           primaryCTA={{ label: "Call (702) 567-9172", href: "tel:+17025679172" }}
@@ -368,13 +372,6 @@ export default function NorthLasVegasSlabLeakPage() {
             src: "/images/services/slab-leak-detection-repair/card.webp",
             alt: "Slab leak detection in North Las Vegas, NV",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          variant="red"
-          items={NLV_SLAB_TRUST}
-          ariaLabel="Why North Las Vegas customers choose Red Carpet Plumbing for slab leak service"
         />
 
         {/* SECTION 3: AEO DIRECT ANSWER */}
@@ -540,14 +537,14 @@ export default function NorthLasVegasSlabLeakPage() {
         </section>
 
         {/* SECTION 8: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Suspected Slab Leak in Your North Las Vegas Home?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing locates slab leaks precisely before
                   recommending a repair approach and presents all options clearly
                   before any work begins. Call (702) 567-9172 to schedule
@@ -557,13 +554,13 @@ export default function NorthLasVegasSlabLeakPage() {
               <div className="flex flex-col gap-4 sm:flex-row lg:flex-col xl:flex-row">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-transform motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-primary shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>
                 <Link
                   href="/contact/"
-                  className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/30 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/60 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   Request Service
                 </Link>

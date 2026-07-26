@@ -340,6 +340,13 @@ const breadcrumbSchema = {
 
 const faqSchema = buildFaqPageSchema(SPRING_VALLEY_FAQS);
 
+const TRUST_STRIP_ITEMS = [
+"4.8 stars, 76 Google reviews",
+"NV Licensed #0048585A",
+"Over 40 years serving Las Vegas Valley",
+"Transparent pricing, no hidden fees",
+];
+
 export default function SpringValleyPlumbingServicesPage() {
   return (
     <>
@@ -362,14 +369,14 @@ export default function SpringValleyPlumbingServicesPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Services in Spring Valley, NV"
+          headline={
+            <>
+              Plumbing Services
+              <br /> in Spring Valley, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides residential and commercial plumbing services throughout Spring Valley, Nevada. Spring Valley is an unincorporated Clark County community west of Las Vegas, home to established neighborhoods along the Desert Inn and West Sahara corridors. Our licensed plumbers serve homes and businesses throughout Spring Valley. NV Contractor License #0048585A."
-          trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed #0048585A",
-            "Over 40 years serving Las Vegas Valley",
-            "Transparent pricing, no hidden fees",
-          ]}
+          trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

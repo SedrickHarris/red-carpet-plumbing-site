@@ -355,7 +355,12 @@ export default function BoulderCityWaterHeaterPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Water Heater Repair and Installation in Boulder City, NV"
+          headline={
+            <>
+              Water Heater Repair and Installation
+              <br /> in Boulder City, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{

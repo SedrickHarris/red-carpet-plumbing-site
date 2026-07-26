@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — license #0048585A, transparent-pricing,
 // gas-line scope, commercial scope, and any rating/24-7/40-year claims are
@@ -190,13 +189,6 @@ const WHY_CHOOSE = [
   "Residential and commercial leak detection throughout Las Vegas",
 ];
 
-const LEAK_TRUST_STRIP = [
-  "NV Licensed, #0048585A",
-  "Non-Invasive Detection",
-  "Serving the Las Vegas Valley",
-  "Transparent Pricing, No Hidden Fees",
-];
-
 const LV_NEIGHBORHOODS = [
   "Desert Inn / West Sahara",
   "Desert Shores",
@@ -347,13 +339,19 @@ export default function LasVegasLeakDetectionPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Leak Detection and Repair in Las Vegas, NV"
+          headline={
+            <>
+              Leak Detection and Repair
+              <br /> in Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides professional leak detection and repair for homes and businesses throughout Las Vegas, NV. Las Vegas hard water is among the most corrosive in the country, and hidden leaks are more common here than in most cities. Our licensed plumbers use acoustic sensors, electronic detection equipment, and thermal imaging to locate hidden leaks precisely, without unnecessary demolition. Call (702) 567-9172 to schedule service."
           trustItems={[
             "NV Licensed Plumbers, #0048585A",
             "Non-Invasive Leak Detection Equipment",
             "Serving the Las Vegas Valley",
             "Transparent Pricing, No Hidden Fees",
+            "Non-Invasive Detection",
           ]}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -369,12 +367,6 @@ export default function LasVegasLeakDetectionPage() {
             src: "/images/services/leak-detection-repair/hero.webp",
             alt: "Professional leak detection service in Las Vegas, NV",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={LEAK_TRUST_STRIP}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for leak detection"
         />
 
         {/* SECTION 3: DIRECT ANSWER */}
@@ -519,14 +511,14 @@ export default function LasVegasLeakDetectionPage() {
         </section>
 
         {/* SECTION 7 (mid-page): CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Think You Have a Hidden Leak in Las Vegas?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   We locate hidden leaks precisely with non-invasive equipment,
                   without unnecessary demolition. Call Red Carpet Plumbing and we
                   will find the source before any repair begins.
@@ -535,7 +527,7 @@ export default function LasVegasLeakDetectionPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

@@ -361,7 +361,12 @@ export default function LakeLasVegasEmergencyPlumbingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Emergency Plumbing in Lake Las Vegas, Henderson, NV"
+          headline={
+            <>
+              Emergency Plumbing
+              <br /> in Lake Las Vegas, Henderson, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides emergency plumbing service for homes and resort residential properties throughout Lake Las Vegas and Henderson, NV. Burst pipes, slab leaks, sewer backups, and water heater failures handled by licensed plumbers. Call (702) 567-9172 now."
           trustItems={LLV_EMERGENCY_TRUST}
           primaryCTA={{

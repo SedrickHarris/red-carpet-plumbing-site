@@ -312,7 +312,12 @@ export default function SummerlinDrainCleaningPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Drain Cleaning in Summerlin, NV"
+          headline={
+            <>
+              Drain Cleaning
+              <br /> in Summerlin, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

@@ -377,7 +377,12 @@ export default function AlianteDrainCleaningPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Drain Cleaning in the Aliante Area of North Las Vegas, NV"
+          headline={
+            <>
+              Drain Cleaning
+              <br /> in the Aliante Area of North Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides professional drain cleaning for homes throughout the Aliante area of North Las Vegas, NV. Whether you have a slow kitchen drain, a clogged bathroom sink, or a main sewer line backup, our licensed plumbers diagnose the problem, select the right clearing method, and restore full flow. Call (702) 567-9172. NV Contractor License #0048585A."
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -608,14 +613,14 @@ export default function AlianteDrainCleaningPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Clogged Drain in the Aliante Area?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Hard water mineral buildup and 16 to 25 years of daily drain
                   use in Aliante homes make recurring clogs a common maintenance
                   issue. Red Carpet Plumbing assesses the line, selects the right
@@ -625,7 +630,7 @@ export default function AlianteDrainCleaningPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

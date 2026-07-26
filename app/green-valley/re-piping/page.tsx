@@ -10,7 +10,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
 // "Over 40 years," and "24/7 emergency service" trust claims are source-site
@@ -192,17 +191,6 @@ const GV_REPIPE_STEPS: { name: string; body: string }[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Trust strip — 4 items matching Henderson re-piping sibling pattern.
-// ---------------------------------------------------------------------------
-const REPIPE_TRUST_STRIP: string[] = [
-  "Whole-House and Partial Repiping",
-  // FLAG: verify before final launch.
-  "NV Licensed, #0048585A",
-  "Permits Pulled and Inspections Scheduled",
-  "PEX and Copper Repiping",
-];
-
-// ---------------------------------------------------------------------------
 // Related services block. All four GV cluster siblings (P30-P33) are built.
 // All render as live links — no TODO-BATCH-6 entries remain.
 // ---------------------------------------------------------------------------
@@ -260,6 +248,8 @@ const HERO_TRUST_ITEMS = [
   "Permits pulled and inspections scheduled",
   // FLAG: source-site claim — verify before final launch.
   "Transparent pricing, no hidden fees",
+  "Whole-House and Partial Repiping",
+  "PEX and Copper Repiping",
 ];
 
 // Pipe guide intro and repair-vs-repipe direct answer — stored as consts to
@@ -404,7 +394,12 @@ export default function GreenValleyRePipingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Re-Piping Services in Green Valley, Henderson, NV"
+          headline={
+            <>
+              Re-Piping Services
+              <br /> in Green Valley, Henderson, NV
+            </>
+          }
           subheading="Green Valley homes have elevated pipe failure rates driven by the original neighborhoods' aging copper and polybutylene supply lines, Kitec pipe in Green Valley Ranch condominiums and HOA communities, and the Las Vegas Valley's hard water conditions. Red Carpet Plumbing provides whole-house and partial repiping using PEX or copper, replaces all failing pipe materials, and pulls all required permits through the City of Henderson as part of the project."
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -422,12 +417,6 @@ export default function GreenValleyRePipingPage() {
             src: "/images/services/re-piping/hero.webp",
             alt: "re-piping service in Green Valley, Henderson, NV",
           }}
-        />
-
-        {/* SECTION 1b: TRUST STRIP */}
-        <TrustStrip
-          items={REPIPE_TRUST_STRIP}
-          ariaLabel="Why Green Valley customers choose Red Carpet Plumbing for re-piping"
         />
 
         {/* SECTION 2: SIGNS YOU NEED REPIPING */}
@@ -644,14 +633,14 @@ export default function GreenValleyRePipingPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Re-Piping in Green Valley?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing provides whole-house and partial repiping
                   for Green Valley and Green Valley Ranch homes using PEX or
                   copper. We pull all required permits through the City of
@@ -662,7 +651,7 @@ export default function GreenValleyRePipingPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

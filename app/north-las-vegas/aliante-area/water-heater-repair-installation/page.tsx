@@ -404,7 +404,12 @@ export default function AlianteWaterHeaterPage() {
             matching the NLV water heater sibling. */}
         <HeroSection
           headingLevel="h1"
-          headline="Water Heater Repair and Installation in the Aliante Area of North Las Vegas, NV"
+          headline={
+            <>
+              Water Heater Repair and Installation
+              <br /> in the Aliante Area of North Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides water heater repair and installation throughout the Aliante area of North Las Vegas, NV. Most Aliante homes were built between 2000 and 2008, placing original water heaters at or past their expected service life under Las Vegas Valley hard water conditions. Our licensed plumbers handle tank water heater repair and replacement, tankless installation, and code-compliant service for Aliante homes. Call (702) 567-9172. NV Contractor License #0048585A."
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -565,14 +570,14 @@ export default function AlianteWaterHeaterPage() {
         </section>
 
         {/* SECTION 6: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Water Heater Issues in the Aliante Area?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Aliante homes with original water heaters from 2000 to 2008 are
                   now well past expected service life under Las Vegas hard water
                   conditions. Red Carpet Plumbing will assess your unit and give
@@ -582,7 +587,7 @@ export default function AlianteWaterHeaterPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

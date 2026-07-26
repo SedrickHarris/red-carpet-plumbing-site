@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — license #0048585A, "over 40 years", the
 // 4.8/76 rating, and the emergency-availability trust-strip item are
@@ -98,13 +97,7 @@ const HERO_TRUST_ITEMS = [
   // FLAG: VERIFY "Over 40 years" before publishing.
   "Over 40 Years Serving the Las Vegas Valley",
   "Transparent Pricing, No Hidden Fees",
-];
-
-// 1b colored strip.
-const LEAK_TRUST_STRIP = [
   "Non-Invasive Detection",
-  "NV Licensed, #0048585A",
-  // FLAG: source-site claim (emergency availability) — verify before final launch.
   "Emergency Leak Service",
   "Residential and Commercial",
 ];
@@ -393,7 +386,12 @@ export default function EnterpriseLeakDetectionPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Leak Detection and Repair in Enterprise, NV"
+          headline={
+            <>
+              Leak Detection and Repair
+              <br /> in Enterprise, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -410,12 +408,6 @@ export default function EnterpriseLeakDetectionPage() {
             src: "/images/services/leak-detection-repair/hero.webp",
             alt: "Leak detection and repair in Enterprise, NV",
           }}
-        />
-
-        {/* SECTION 1b: TRUST STRIP */}
-        <TrustStrip
-          items={LEAK_TRUST_STRIP}
-          ariaLabel="Why Enterprise customers choose Red Carpet Plumbing for leak detection"
         />
 
         {/* SECTION 2: WARNING SIGNS AND WATER METER TEST */}

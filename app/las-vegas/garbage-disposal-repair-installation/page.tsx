@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear as unverified claims in
@@ -433,7 +432,12 @@ export default function LasVegasGarbageDisposalPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Garbage Disposal Repair and Installation in Las Vegas, NV"
+          headline={
+            <>
+              Garbage Disposal Repair and Installation
+              <br /> in Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing repairs, replaces, and installs garbage disposals for kitchens throughout Las Vegas. Whether your disposal is jammed, leaking, not starting, or needs replacing, our licensed plumbers diagnose the problem accurately and complete the repair or installation with transparent pricing and no hidden fees."
           trustItems={LV_DISPOSAL_TRUST_STRIP}
           primaryCTA={{
@@ -450,12 +454,6 @@ export default function LasVegasGarbageDisposalPage() {
             src: "/images/services/garbage-disposal-repair-installation/hero.webp",
             alt: "Garbage disposal repair and installation service in Las Vegas, NV",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={LV_DISPOSAL_TRUST_STRIP}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for garbage disposal service"
         />
 
         {/* SECTION 3: SIGNS YOUR GARBAGE DISPOSAL NEEDS ATTENTION */}
@@ -610,14 +608,14 @@ export default function LasVegasGarbageDisposalPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Garbage Disposal Problem in Las Vegas?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing handles disposal jams, leaks, replacements,
                   and new installations throughout the Las Vegas Valley. Licensed
                   plumbers, transparent pricing. NV Contractor License #0048585A.
@@ -626,7 +624,7 @@ export default function LasVegasGarbageDisposalPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

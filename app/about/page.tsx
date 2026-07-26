@@ -196,6 +196,13 @@ const plumberSchema = {
   ],
 };
 
+const TRUST_STRIP_ITEMS = [
+"Over 40 Years Serving Las Vegas",
+"Local, Family-Owned Business",
+"Licensed Plumbers, NV #0048585A",
+"4.8 Stars, 76 Google Reviews",
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -224,12 +231,7 @@ export default function AboutPage() {
             </>
           }
           subheading="Red Carpet Plumbing is a local, family-owned plumbing company that has been serving homes and businesses throughout the Las Vegas Valley for over 40 years."
-          trustItems={[
-            "Over 40 Years Serving Las Vegas",
-            "Local, Family-Owned Business",
-            "Licensed Plumbers, NV #0048585A",
-            "4.8 Stars, 76 Google Reviews",
-          ]}
+          trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

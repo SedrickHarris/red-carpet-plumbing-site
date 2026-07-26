@@ -372,7 +372,12 @@ export default function EnterpriseSlabLeakPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Slab Leak Detection and Repair in Enterprise, NV"
+          headline={
+            <>
+              Slab Leak Detection and Repair
+              <br /> in Enterprise, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

@@ -341,7 +341,12 @@ export default function SpringValleyRePipingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Re-Piping Services in Spring Valley, NV"
+          headline={
+            <>
+              Re-Piping Services
+              <br /> in Spring Valley, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
