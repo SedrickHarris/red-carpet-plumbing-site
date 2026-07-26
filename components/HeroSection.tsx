@@ -123,7 +123,9 @@ export function HeroSection({
           {subheading ? (
             <motion.p
               variants={itemVariants}
-              className="mt-6 max-w-2xl text-lg leading-8 text-white/90 sm:text-xl"
+              className={`mt-6 max-w-2xl text-lg leading-8 text-white/90 sm:text-xl ${
+                hasSplit ? "" : "mx-auto"
+              }`}
             >
               {subheading}
             </motion.p>
@@ -132,7 +134,9 @@ export function HeroSection({
           {trustItems && trustItems.length > 0 ? (
             <motion.ul
               variants={itemVariants}
-              className="mt-8 flex flex-wrap gap-x-6 gap-y-3"
+              className={`mt-8 flex flex-wrap gap-x-6 gap-y-3 ${
+                hasSplit ? "" : "justify-center"
+              }`}
             >
               {trustItems.map((item) => (
                 <li key={item} className="flex items-start gap-3">
@@ -145,7 +149,11 @@ export function HeroSection({
 
           {primaryCTA || secondaryCTA ? (
             <motion.div variants={itemVariants} className="mt-10">
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div
+                className={`flex flex-col gap-3 sm:flex-row sm:items-center ${
+                  hasSplit ? "" : "sm:justify-center"
+                }`}
+              >
                 {primaryCTA ? (
                   <Button
                     href={primaryCTA.href}

@@ -58,7 +58,11 @@ export function CTASection({
             </p>
           ) : null}
           <div className="mt-10">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div
+              className={`flex flex-col gap-3 sm:flex-row sm:items-center ${
+                hasSplit ? "" : "sm:justify-center"
+              }`}
+            >
               <CtaButton cta={primaryCTA} kind="primary" onColor={onColor} />
               {secondaryCTA ? (
                 <CtaButton
