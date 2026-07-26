@@ -96,24 +96,24 @@ type ServiceLink = {
   imageAlt: string;
 };
 
-const GREEN_VALLEY_SERVICES: ServiceLink[] = [
+// Four featured services rendered as cards. Hrefs keep the established
+// fallback convention: Green Valley route where one is built, core service
+// page otherwise.
+// TODO: /green-valley/sewer-line-services/ is not built. Sewer Line Services
+// falls back to the core page until that route exists.
+const GREEN_VALLEY_FEATURED_SERVICES: ServiceLink[] = [
   {
-    title: "Emergency Plumbing",
-    href: "/green-valley/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
-    imageAlt: "24/7 emergency plumbing service in Green Valley, NV",
+    title: "Sewer Line Services",
+    href: "/sewer-line-services/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp",
+    imageAlt: "Sewer line services in Green Valley, NV",
   },
   {
-    title: "Drain Cleaning",
-    href: "/green-valley/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
-    imageAlt: "Drain cleaning service in Green Valley, NV",
-  },
-  {
-    title: "Leak Detection and Repair",
-    href: "/green-valley/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
-    imageAlt: "Leak detection and repair in Green Valley, NV",
+    title: "Re-Piping",
+    href: "/green-valley/re-piping/",
+    image: "/images/services/re-piping/hero.webp",
+    imageAlt: "Re-piping services in Green Valley, NV",
   },
   {
     title: "Water Heater Repair and Installation",
@@ -127,73 +127,52 @@ const GREEN_VALLEY_SERVICES: ServiceLink[] = [
     image: "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Slab leak detection and repair in Green Valley, NV",
   },
+];
+
+// The remaining 14 services render as pills in two fixed rows of seven.
+type ServicePill = { title: string; href: string };
+
+const GREEN_VALLEY_PILLS_ROW_ONE: ServicePill[] = [
+  { title: "Emergency Plumbing", href: "/green-valley/emergency-plumbing/" },
+  { title: "Drain Cleaning", href: "/green-valley/drain-cleaning/" },
   {
-    title: "Sewer Line Services",
-    href: "/sewer-line-services/",
-    imageAlt: "Sewer line services in Green Valley, NV",
-  },
-  {
-    title: "Re-Piping",
-    href: "/green-valley/re-piping/",
-    imageAlt: "Re-piping services in Green Valley, NV",
+    title: "Leak Detection and Repair",
+    href: "/green-valley/leak-detection-repair/",
   },
   {
     title: "Water Pipe Repair and Replacement",
     href: "/water-pipe-repair-replacement/",
-    imageAlt: "Water pipe repair and replacement in Green Valley, NV",
   },
+  { title: "Gas Line Plumbing", href: "/gas-line-plumbing/" },
+  { title: "Commercial Plumbing", href: "/commercial-plumbing/" },
   {
-    title: "Gas Line Plumbing",
-    href: "/gas-line-plumbing/",
-    imageAlt: "Gas line plumbing service in Green Valley, NV",
-  },
-  {
-    title: "Commercial Plumbing",
-    href: "/commercial-plumbing/",
-    imageAlt: "Commercial plumbing services in Green Valley, NV",
-  },
-  {
-    // ACTIVATED: P45 built and staged
     title: "Toilet Repair and Installation",
     href: "/green-valley/toilet-repair-installation/",
-    imageAlt: "Toilet repair and installation in Green Valley, NV",
   },
+];
+
+const GREEN_VALLEY_PILLS_ROW_TWO: ServicePill[] = [
   {
-    // ACTIVATED: P46 built and staged
     title: "Faucet and Sink Repair and Installation",
     href: "/green-valley/faucet-sink-repair-installation/",
-    imageAlt: "Faucet and sink repair and installation in Green Valley, NV",
   },
   {
     title: "Garbage Disposal Repair and Installation",
     href: "/garbage-disposal-repair-installation/",
-    imageAlt: "Garbage disposal repair and installation in Green Valley, NV",
   },
-  {
-    title: "Backflow Prevention",
-    href: "/backflow-prevention/",
-    imageAlt: "Backflow prevention services in Green Valley, NV",
-  },
+  { title: "Backflow Prevention", href: "/backflow-prevention/" },
   {
     title: "Video Camera Plumbing Inspections",
     href: "/video-camera-plumbing-inspections/",
-    imageAlt: "Video camera plumbing inspections in Green Valley, NV",
   },
   {
     title: "Plumbing Fixture Repair, Replacement and Installation",
     href: "/plumbing-fixture-repair-replacement-installation/",
-    imageAlt:
-      "Plumbing fixture repair replacement and installation in Green Valley, NV",
   },
-  {
-    title: "Trenchless Piping",
-    href: "/trenchless-piping/",
-    imageAlt: "Trenchless piping services in Green Valley, NV",
-  },
+  { title: "Trenchless Piping", href: "/trenchless-piping/" },
   {
     title: "Water Meter and Pressure Regulator Services",
     href: "/water-meter-pressure-regulator-services/",
-    imageAlt: "Water meter and pressure regulator services in Green Valley, NV",
   },
 ];
 
@@ -344,6 +323,13 @@ const breadcrumbSchema = {
 
 const faqSchema = buildFaqPageSchema(GREEN_VALLEY_FAQS);
 
+const TRUST_STRIP_ITEMS = [
+"4.8 stars, 76 Google reviews",
+"NV Licensed #0048585A",
+"Over 40 years serving Las Vegas Valley",
+"Transparent pricing, no hidden fees",
+];
+
 export default function GreenValleyPlumbingServicesPage() {
   return (
     <>
@@ -374,14 +360,14 @@ export default function GreenValleyPlumbingServicesPage() {
             hero renders its gradient background. */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Services in Green Valley, NV"
+          headline={
+            <>
+              Plumbing Services
+              <br /> in Green Valley, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides licensed plumbing services throughout Green Valley, Nevada. Green Valley is a master-planned community within Henderson, with original neighborhoods built from the late 1970s through the 1990s and Green Valley Ranch extending into the 2000s. Our licensed plumbers serve homes throughout Green Valley with experience in the aging plumbing challenges common in this area. NV Contractor License #0048585A."
-          trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed #0048585A",
-            "Over 40 years serving Las Vegas Valley",
-            "Transparent pricing, no hidden fees",
-          ]}
+          trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",
@@ -478,9 +464,9 @@ export default function GreenValleyPlumbingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* ACTIVATED: All five Green Valley service-location pages are built (Batch 6, P30-P34); cards link to GV-specific routes. */}
+                {/* Featured services: single row of four cards. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                  {GREEN_VALLEY_SERVICES.map((service) => (
+                  {GREEN_VALLEY_FEATURED_SERVICES.map((service) => (
                     <ServiceCard
                       key={service.href}
                       title={service.title}
@@ -491,6 +477,36 @@ export default function GreenValleyPlumbingServicesPage() {
                       built
                     />
                   ))}
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-10">
+                {/* Remaining services as pills, kept in two fixed rows of seven. */}
+                <div className="flex flex-col gap-4">
+                  <ul className="flex flex-wrap justify-center gap-x-4 gap-y-6">
+                    {GREEN_VALLEY_PILLS_ROW_ONE.map((pill) => (
+                      <li key={pill.href}>
+                        <Link
+                          href={pill.href}
+                          className="inline-flex min-h-12 items-center justify-center rounded-full border border-brand-primary/20 bg-white px-5 py-3 text-sm font-medium text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors"
+                        >
+                          {pill.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul className="flex flex-wrap justify-center gap-x-4 gap-y-6">
+                    {GREEN_VALLEY_PILLS_ROW_TWO.map((pill) => (
+                      <li key={pill.href}>
+                        <Link
+                          href={pill.href}
+                          className="inline-flex min-h-12 items-center justify-center rounded-full bg-brand-primary px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors"
+                        >
+                          {pill.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </SectionRevealItem>
             </SectionReveal>
