@@ -139,15 +139,15 @@ type ServicePill = { title: string; href: string };
 const NORTH_LAS_VEGAS_PILLS_ROW_ONE: ServicePill[] = [
   {
     title: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
+    href: "/north-las-vegas/emergency-plumbing/",
   },
   {
     title: "Drain Cleaning",
-    href: "/drain-cleaning/",
+    href: "/north-las-vegas/drain-cleaning/",
   },
   {
     title: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
+    href: "/north-las-vegas/leak-detection-repair/",
   },
   {
     title: "Water Pipe Repair and Replacement",
