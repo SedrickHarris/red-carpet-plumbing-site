@@ -9,7 +9,6 @@ import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { ServiceImagePlaceholder } from "@/components/ServiceImagePlaceholder";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import TrustStrip from "@/components/TrustStrip";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
@@ -352,8 +351,14 @@ export default function PlumbingServicesPage() {
 
         {/* SECTION 2: HERO (two-column with form) */}
         <HeroSection
+          trustItems={TRUST_STRIP_ITEMS}
           headingLevel="h1"
-          headline="Plumbing Services in Las Vegas, NV"
+          headline={
+            <>
+              Plumbing Services
+              <br /> in Las Vegas, NV
+            </>
+          }
           subheading={
             <>
               <span className="block">
@@ -399,14 +404,6 @@ export default function PlumbingServicesPage() {
           }
         />
 
-        {/* SECTION 3: TRUST STRIP */}
-        <TrustStrip
-          variant="light"
-          items={TRUST_STRIP_ITEMS}
-          heading="Why Las Vegas Customers Choose Red Carpet Plumbing"
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing"
-        />
-
         {/* SECTION 4: EMERGENCY CTA STRIP */}
         <CTASection
           background="red"
@@ -435,7 +432,7 @@ export default function PlumbingServicesPage() {
                 Enterprise, and the surrounding Las Vegas Valley.
               </p>
             </div>
-            <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {SERVICE_CARDS.map((card) => (
                 <article
                   key={card.href}
