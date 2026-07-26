@@ -23,6 +23,9 @@ type HeroSectionProps = {
   backgroundImage?: { src: string; alt: string };
   accentWidth?: "sm" | "md" | "lg";
   size?: "default" | "tall";
+  // Split-layout column balance. "default" favors the content column
+  // (1.4:1); "even" splits content and form evenly. Ignored without formSlot.
+  splitRatio?: "default" | "even";
   className?: string;
 };
 
@@ -38,6 +41,7 @@ export function HeroSection({
   backgroundImage,
   accentWidth = "md",
   size = "default",
+  splitRatio = "default",
   className = "",
 }: HeroSectionProps) {
   const Heading = headingLevel;
@@ -49,6 +53,12 @@ export function HeroSection({
     size === "tall"
       ? "py-20 sm:py-28 lg:py-32"
       : "py-16 sm:py-20 lg:py-24";
+
+  // Full literal class strings so Tailwind can see the arbitrary grid values.
+  const splitLayout =
+    splitRatio === "even"
+      ? "grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(420px,1fr)] lg:gap-14 xl:gap-20"
+      : "grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(420px,0.75fr)] lg:gap-14 xl:gap-20";
 
   const containerVariants: Variants = {
     hidden: {},
@@ -98,9 +108,7 @@ export function HeroSection({
 
       <div
         className={`relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-16 ${paddingY} ${
-          hasSplit
-            ? "grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(420px,0.75fr)] lg:gap-14 xl:gap-20"
-            : ""
+          hasSplit ? splitLayout : ""
         }`}
       >
         <span
