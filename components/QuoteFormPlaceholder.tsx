@@ -30,13 +30,18 @@ const DEFAULT_SERVICES = [
   "Other",
 ];
 
+const PHONE_TYPES = [
+  { value: "mobile", label: "Mobile" },
+  { value: "landline", label: "Landline" },
+];
+
 type FormState = "idle" | "submitting" | "success" | "error";
 
 type FieldErrors = {
   firstName?: string;
   lastName?: string;
   phone?: string;
-  email?: string;
+  phoneType?: string;
   service?: string;
   message?: string;
 };
@@ -88,9 +93,9 @@ export function QuoteFormPlaceholder({
     if (!/^[\d\s()\-+]{7,}$/.test(phone))
       next.phone = "Please enter a valid phone number.";
 
-    const email = ((data.get("email") as string | null) ?? "").trim();
-    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
-      next.email = "Please enter a valid email address.";
+    const phoneType = (data.get("phoneType") as string | null) ?? "";
+    if (phoneType !== "mobile" && phoneType !== "landline")
+      next.phoneType = "Please select mobile or landline.";
 
     const service = (data.get("service") as string | null) ?? "";
     if (!service || !services.includes(service))
@@ -140,7 +145,7 @@ export function QuoteFormPlaceholder({
         ((data.get("lastName") as string | null) ?? "").trim()
       }`.trim(),
       phone: (data.get("phone") as string) ?? "",
-      email: (data.get("email") as string) ?? "",
+      phoneType: (data.get("phoneType") as string) ?? "",
       service: (data.get("service") as string) ?? "",
       message: (data.get("message") as string) ?? "",
       submittedAt: new Date().toISOString(),
@@ -209,6 +214,12 @@ export function QuoteFormPlaceholder({
 
   function inputClass(hasError: boolean) {
     return `${inputBase} ${hasError ? inputBorderErr : inputBorderOk}`;
+  }
+
+  function radioOptionClass(hasError: boolean) {
+    return `flex min-h-12 items-center gap-2.5 rounded-lg border bg-white px-4 py-3 text-base text-brand-dark transition-colors focus-within:ring-2 focus-within:ring-brand-primary ${
+      hasError ? inputBorderErr : inputBorderOk
+    }`;
   }
 
   return (
@@ -313,27 +324,38 @@ export function QuoteFormPlaceholder({
           ) : null}
         </div>
 
-        <div>
-          <label htmlFor="qf-email" className={labelClass}>
-            Email Address
-          </label>
-          <input
-            id="qf-email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            inputMode="email"
-            placeholder="your@email.com"
-            disabled={isSubmitting}
-            aria-invalid={errors.email ? "true" : "false"}
-            className={inputClass(Boolean(errors.email))}
-          />
-          {errors.email ? (
+        <fieldset
+          role="radiogroup"
+          aria-required="true"
+          aria-invalid={errors.phoneType ? "true" : "false"}
+        >
+          <legend className={labelClass}>Phone Type</legend>
+          <div className="grid grid-cols-2 gap-3">
+            {PHONE_TYPES.map((option) => (
+              <label
+                key={option.value}
+                className={`${radioOptionClass(Boolean(errors.phoneType))} ${
+                  isSubmitting ? "cursor-not-allowed opacity-60" : "cursor-pointer"
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="phoneType"
+                  value={option.value}
+                  required
+                  disabled={isSubmitting}
+                  className="h-4 w-4 accent-brand-primary disabled:cursor-not-allowed"
+                />
+                <span>{option.label}</span>
+              </label>
+            ))}
+          </div>
+          {errors.phoneType ? (
             <p role="alert" className={errorClass}>
-              {errors.email}
+              {errors.phoneType}
             </p>
           ) : null}
-        </div>
+        </fieldset>
 
         <div>
           <label htmlFor="qf-service" className={labelClass}>
