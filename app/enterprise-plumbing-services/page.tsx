@@ -341,6 +341,13 @@ const breadcrumbSchema = {
 
 const faqSchema = buildFaqPageSchema(ENTERPRISE_FAQS);
 
+const TRUST_STRIP_ITEMS = [
+"4.8 stars, 76 Google reviews",
+"NV Licensed #0048585A",
+"Over 40 years serving Las Vegas Valley",
+"Transparent pricing, no hidden fees",
+];
+
 export default function EnterprisePlumbingServicesPage() {
   return (
     <>
@@ -367,14 +374,14 @@ export default function EnterprisePlumbingServicesPage() {
             hero renders its gradient background. */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Services in Enterprise, NV"
+          headline={
+            <>
+              Plumbing Services
+              <br /> in Enterprise, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides residential and commercial plumbing services throughout Enterprise, Nevada and the Southwest Las Vegas area. Enterprise is an unincorporated Clark County community in the southwest corner of the Las Vegas Valley. Our licensed plumbers serve homes, businesses, and commercial properties throughout Enterprise. NV Contractor License #0048585A."
-          trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed #0048585A",
-            "Over 40 years serving Las Vegas Valley",
-            "Transparent pricing, no hidden fees",
-          ]}
+          trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

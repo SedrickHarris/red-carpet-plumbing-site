@@ -9,7 +9,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title:
@@ -71,14 +70,6 @@ const PRESSURE_FAQS = [
     answer:
       "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
-];
-
-const TRUST_STRIP_ITEMS = [
-  "Licensed Plumbers, NV #0048585A",
-  "4.8 Stars, 76 Google Reviews",
-  "Residential and Commercial Service",
-  "Over 40 Years in Las Vegas",
-  "Transparent Pricing, No Hidden Fees",
 ];
 
 const PRESSURE_WARNING_SIGNS = [
@@ -411,6 +402,7 @@ export default function WaterMeterPressureRegulatorServicesPage() {
             "4.8 Stars, 76 Google Reviews",
             "Residential and Commercial Service",
             "Transparent Pricing, No Hidden Fees",
+            "Over 40 Years in Las Vegas",
           ]}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -429,12 +421,6 @@ export default function WaterMeterPressureRegulatorServicesPage() {
             src: "/images/services/water-meter-pressure-regulator-services/hero.webp",
             alt: "Licensed technician servicing a water meter and pressure regulator",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={TRUST_STRIP_ITEMS}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for pressure regulator work"
         />
 
         {/* SECTION 3: SIGNS YOUR PRESSURE REGULATOR NEEDS SERVICE */}
@@ -599,7 +585,7 @@ export default function WaterMeterPressureRegulatorServicesPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -607,7 +593,7 @@ export default function WaterMeterPressureRegulatorServicesPage() {
                   Water Pressure Problem
                   <br className="hidden sm:block" /> in Las Vegas?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing inspects, repairs, and replaces
                   pressure reducing valves throughout the Las Vegas Valley.
                   NV Contractor License #0048585A.
@@ -617,7 +603,7 @@ export default function WaterMeterPressureRegulatorServicesPage() {
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a
                     href="tel:+17025679172"
-                    className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                    className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                   >
                     Call (702) 567-9172
                   </a>

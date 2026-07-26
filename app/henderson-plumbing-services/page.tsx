@@ -338,6 +338,13 @@ const breadcrumbSchema = {
 
 const faqSchema = buildFaqPageSchema(HENDERSON_FAQS);
 
+const TRUST_STRIP_ITEMS = [
+"4.8 stars, 76 Google reviews",
+"NV Licensed #0048585A",
+"Over 40 years serving Las Vegas Valley",
+"Transparent pricing, no hidden fees",
+];
+
 export default function HendersonPlumbingServicesPage() {
   return (
     <>
@@ -360,14 +367,14 @@ export default function HendersonPlumbingServicesPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Services in Henderson, NV"
+          headline={
+            <>
+              Plumbing Services
+              <br /> in Henderson, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides residential and commercial plumbing services throughout Henderson, Nevada, including Green Valley, Lake Las Vegas, and surrounding communities. Our licensed plumbers handle everything from emergency plumbing and drain cleaning to water heater repair, slab leak detection, and re-piping. NV Contractor License #0048585A."
-          trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed #0048585A",
-            "Over 40 years serving Las Vegas Valley",
-            "Transparent pricing, no hidden fees",
-          ]}
+          trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

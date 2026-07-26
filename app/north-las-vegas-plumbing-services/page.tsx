@@ -338,6 +338,13 @@ const breadcrumbSchema = {
 
 const faqSchema = buildFaqPageSchema(NORTH_LAS_VEGAS_FAQS);
 
+const TRUST_STRIP_ITEMS = [
+"4.8 stars, 76 Google reviews",
+"NV Licensed #0048585A",
+"Over 40 years serving Las Vegas Valley",
+"Transparent pricing, no hidden fees",
+];
+
 export default function NorthLasVegasPlumbingServicesPage() {
   return (
     <>
@@ -364,14 +371,14 @@ export default function NorthLasVegasPlumbingServicesPage() {
             hero renders its gradient background. */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Services in North Las Vegas, NV"
+          headline={
+            <>
+              Plumbing Services
+              <br /> in North Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides residential and commercial plumbing services throughout North Las Vegas, Nevada, including the Aliante area and surrounding neighborhoods. From emergency plumbing and drain cleaning to water heater repair, sewer line services, and commercial plumbing, our licensed plumbers serve homes and businesses across North Las Vegas. NV Contractor License #0048585A."
-          trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed #0048585A",
-            "Over 40 years serving Las Vegas Valley",
-            "Transparent pricing, no hidden fees",
-          ]}
+          trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

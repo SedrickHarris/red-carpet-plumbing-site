@@ -10,7 +10,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
 // "Over 40 years," and "24/7 emergency commercial service" trust claims are
@@ -107,15 +106,6 @@ const HERO_TRUST_ITEMS = [
   // FLAG: 24/7 emergency-availability claim — verify before final launch.
   "24/7 Emergency Commercial Service",
   "Transparent Pricing, No Hidden Fees",
-];
-
-// 1b colored strip. Items are factual restatements of brief content (license,
-// commercial focus, property-manager/HOA service, permit handling) — no new
-// business claims.
-const COMMERCIAL_TRUST_STRIP = [
-  "NV Licensed #0048585A, C-1",
-  "Licensed Commercial Plumbers",
-  "Property Manager and HOA Service",
   "Clark County Permits Coordinated",
 ];
 
@@ -392,7 +382,12 @@ export default function SpringValleyCommercialPlumbingPage() {
         {/* public/images/services/commercial-plumbing/hero.webp (none exists yet). */}
         <HeroSection
           headingLevel="h1"
-          headline="Commercial Plumbing in Spring Valley, NV"
+          headline={
+            <>
+              Commercial Plumbing
+              <br /> in Spring Valley, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -406,12 +401,6 @@ export default function SpringValleyCommercialPlumbingPage() {
           ctaNote="NV Licensed #0048585A, C-1 Plumbing and Heating. Clark County permits coordinated."
           formSlot={<QuoteFormPlaceholder title="Get Commercial Plumbing Help" />}
           accentWidth="sm"
-        />
-
-        {/* SECTION 1b: TRUST STRIP */}
-        <TrustStrip
-          items={COMMERCIAL_TRUST_STRIP}
-          ariaLabel="Why Spring Valley businesses choose Red Carpet Plumbing for commercial plumbing"
         />
 
         {/* SECTION 2: WHO WE SERVE */}

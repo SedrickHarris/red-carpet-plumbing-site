@@ -339,6 +339,13 @@ const breadcrumbSchema = {
 
 const faqSchema = buildFaqPageSchema(BOULDER_CITY_FAQS);
 
+const TRUST_STRIP_ITEMS = [
+"4.8 stars, 76 Google reviews",
+"NV Licensed #0048585A",
+"Over 40 years serving Las Vegas Valley",
+"Transparent pricing, no hidden fees",
+];
+
 export default function BoulderCityPlumbingServicesPage() {
   return (
     <>
@@ -365,14 +372,14 @@ export default function BoulderCityPlumbingServicesPage() {
             hero renders its gradient background. */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Services in Boulder City, NV"
+          headline={
+            <>
+              Plumbing Services
+              <br /> in Boulder City, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides licensed plumbing services in Boulder City, Nevada, serving both historic homes and newer residential properties. Boulder City has some of the oldest housing in the Las Vegas region, and our licensed plumbers are experienced with the unique plumbing demands of older infrastructure under Las Vegas Valley hard water conditions. NV Contractor License #0048585A."
-          trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed #0048585A",
-            "Over 40 years serving Las Vegas Valley",
-            "Transparent pricing, no hidden fees",
-          ]}
+          trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

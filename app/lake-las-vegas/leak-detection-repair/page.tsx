@@ -362,7 +362,12 @@ export default function LakeLasVegasLeakDetectionPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Leak Detection and Repair in Lake Las Vegas, Henderson, NV"
+          headline={
+            <>
+              Leak Detection and Repair
+              <br /> in Lake Las Vegas, Henderson, NV
+            </>
+          }
           subheading="Hidden water leaks in Lake Las Vegas homes can cause serious damage before they become visible. Red Carpet Plumbing locates leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging, without opening walls or floors until the exact location is confirmed. Serving Lake Las Vegas as part of Henderson, NV. Call (702) 567-9172."
           trustItems={LLV_LEAK_TRUST}
           primaryCTA={{

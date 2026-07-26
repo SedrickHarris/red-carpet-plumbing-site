@@ -10,7 +10,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title: "Emergency Plumber in Las Vegas, NV | Red Carpet Plumbing",
@@ -72,14 +71,6 @@ const EMERGENCY_FAQS = [
     answer:
       "Red Carpet Plumbing provides emergency plumbing service throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities throughout the Las Vegas Valley.",
   },
-];
-
-const TRUST_STRIP_ITEMS = [
-  "4.8 Stars, 76 Google Reviews",
-  "NV Licensed, #0048585A",
-  "24/7 Emergency Service",
-  "Over 40 Years in Las Vegas",
-  "Transparent Pricing, No Hidden Fees",
 ];
 
 const IMMEDIATE_ATTENTION = [
@@ -392,6 +383,7 @@ export default function EmergencyPlumbingPage() {
             "NV Licensed Plumbers, #0048585A",
             "Available 24/7 for plumbing emergencies",
             "Over 40 years serving Las Vegas",
+            "Transparent Pricing, No Hidden Fees",
           ]}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -404,12 +396,6 @@ export default function EmergencyPlumbingPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Emergency Help" />}
           accentWidth="sm"
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={TRUST_STRIP_ITEMS}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for emergency service"
         />
 
         {/* SECTION 3: WHAT COUNTS AS A PLUMBING EMERGENCY */}

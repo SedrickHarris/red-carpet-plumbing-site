@@ -354,7 +354,12 @@ export default function ParadiseLeakDetectionPage() {
         {/* hero when the client supplies one. */}
         <HeroSection
           headingLevel="h1"
-          headline="Leak Detection and Repair in Paradise, NV"
+          headline={
+            <>
+              Leak Detection and Repair
+              <br /> in Paradise, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -645,14 +650,14 @@ export default function ParadiseLeakDetectionPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA (charcoal band) */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Suspect a Hidden Water Leak in Paradise, NV?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Do not wait on a suspected leak. Water damage from hidden leaks
                   gets worse over time and can cause mold, foundation damage, and
                   flooring loss. Red Carpet Plumbing provides non-invasive leak
@@ -670,7 +675,7 @@ export default function ParadiseLeakDetectionPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call Now: (702) 567-9172
                 </a>

@@ -354,7 +354,12 @@ export default function SpringValleyEmergencyPlumbingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Emergency Plumbing in Spring Valley, NV"
+          headline={
+            <>
+              Emergency Plumbing
+              <br /> in Spring Valley, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

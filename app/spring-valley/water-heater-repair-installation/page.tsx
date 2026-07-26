@@ -331,7 +331,12 @@ export default function SpringValleyWaterHeaterPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Water Heater Repair and Installation in Spring Valley, NV"
+          headline={
+            <>
+              Water Heater Repair and Installation
+              <br /> in Spring Valley, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

@@ -427,7 +427,12 @@ export default function AlianteLeakDetectionRepairPage() {
         {/* SECTION 1: HERO (trust strip rendered inside via trustItems) */}
         <HeroSection
           headingLevel="h1"
-          headline="Leak Detection and Repair in the Aliante Area of North Las Vegas, NV"
+          headline={
+            <>
+              Leak Detection and Repair
+              <br /> in the Aliante Area of North Las Vegas, NV
+            </>
+          }
           subheading="Most homes in the Aliante area were built between 2000 and 2008, placing copper plumbing systems in their first major service cycle. Red Carpet Plumbing uses non-invasive detection to locate hidden leaks in Aliante homes without unnecessary disruption."
           trustItems={ALIANTE_LEAK_TRUST}
           primaryCTA={{
@@ -649,14 +654,14 @@ export default function AlianteLeakDetectionRepairPage() {
         </section>
 
         {/* SECTION: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Suspect a Hidden Leak in Your Aliante Home?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing uses non-invasive detection to pinpoint
                   hidden leaks in Aliante area homes before any surface is opened.
                   Call now and describe what you are seeing, or request service
@@ -666,7 +671,7 @@ export default function AlianteLeakDetectionRepairPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call Now: (702) 567-9172
                 </a>

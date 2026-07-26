@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear as unverified claims in
@@ -412,8 +411,14 @@ export default function GreenValleyToiletPage() {
         {/* TODO: card.webp does not exist for this service; using hero.webp.
             Add a dedicated card/hero asset if a higher-res hero is desired. */}
         <HeroSection
+          trustItems={GV_TOILET_TRUST}
           headingLevel="h1"
-          headline="Toilet Repair and Installation in Green Valley, Henderson, NV"
+          headline={
+            <>
+              Toilet Repair and Installation
+              <br /> in Green Valley, Henderson, NV
+            </>
+          }
           subheading="From running toilets and base leaks to full toilet replacement, Red Carpet Plumbing handles toilet repair and installation for homes throughout Green Valley and Henderson."
           primaryCTA={{
             label: "Call Now: (702) 567-9172",
@@ -430,12 +435,6 @@ export default function GreenValleyToiletPage() {
             src: "/images/services/toilet-repair-installation/hero.webp",
             alt: "Toilet repair and installation in Green Valley, Henderson, NV",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={GV_TOILET_TRUST}
-          ariaLabel="Why Green Valley customers choose Red Carpet Plumbing for toilet service"
         />
 
         {/* SECTION 3: COMMON TOILET PROBLEMS */}
@@ -630,14 +629,14 @@ export default function GreenValleyToiletPage() {
         </section>
 
         {/* SECTION: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Toilet Trouble in Your Green Valley Home?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing handles running toilets, base leaks, clogs,
                   replacements, and new installations throughout Green Valley and
                   Henderson. Call now and describe what your toilet is doing, or
@@ -647,7 +646,7 @@ export default function GreenValleyToiletPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call Now: (702) 567-9172
                 </a>

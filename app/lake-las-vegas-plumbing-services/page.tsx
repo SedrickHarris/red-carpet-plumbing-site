@@ -352,6 +352,13 @@ const breadcrumbSchema = {
 
 const faqSchema = buildFaqPageSchema(LAKE_LAS_VEGAS_FAQS);
 
+const TRUST_STRIP_ITEMS = [
+"4.8 stars, 76 Google reviews",
+"NV Licensed #0048585A",
+"Over 40 years serving Las Vegas Valley",
+"Transparent pricing, no hidden fees",
+];
+
 export default function LakeLasVegasPlumbingServicesPage() {
   return (
     <>
@@ -382,14 +389,14 @@ export default function LakeLasVegasPlumbingServicesPage() {
             hero renders its gradient background. */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Services in Lake Las Vegas, NV"
+          headline={
+            <>
+              Plumbing Services
+              <br /> in Lake Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides licensed plumbing services in Lake Las Vegas, Nevada. Lake Las Vegas is a luxury resort and residential community within Henderson, featuring premium homes and complex plumbing systems that require experienced licensed plumbers. Our licensed plumbers serve Lake Las Vegas homes and properties. NV Contractor License #0048585A."
-          trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed #0048585A",
-            "Over 40 years serving Las Vegas Valley",
-            "Transparent pricing, no hidden fees",
-          ]}
+          trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

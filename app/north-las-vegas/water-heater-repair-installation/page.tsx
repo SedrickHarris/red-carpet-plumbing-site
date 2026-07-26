@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — license #0048585A, emergency/24-7
 // availability, transparent-pricing, commercial water heater scope, gas-line
@@ -200,13 +199,6 @@ const WHY_CHOOSE = [
   "Residential and commercial water heater service throughout North Las Vegas",
 ];
 
-const WH_TRUST_STRIP = [
-  "NV Licensed, #0048585A",
-  "Installed to Clark County Code",
-  "Residential and Commercial",
-  "Transparent Pricing, No Hidden Fees",
-];
-
 const NLV_AREAS = [
   "Aliante Area",
   "Central North Las Vegas",
@@ -357,13 +349,20 @@ export default function NorthLasVegasWaterHeaterPage() {
             low-res 350x350 Batch 3 asset; using the larger card.webp here. */}
         <HeroSection
           headingLevel="h1"
-          headline="Water Heater Repair and Installation in North Las Vegas, NV"
+          headline={
+            <>
+              Water Heater Repair and Installation
+              <br /> in North Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing repairs and installs water heaters for homes and businesses throughout North Las Vegas, NV, including the Aliante area, central North Las Vegas neighborhoods, and commercial facilities along the Craig Road and Cheyenne Avenue corridors. Most Aliante homes built between 2000 and 2008 are at or past their first water heater replacement cycle under Las Vegas Valley hard water conditions. Our licensed plumbers handle all water heater work to current Clark County plumbing code. Call (702) 567-9172 to schedule service."
           trustItems={[
             "NV Licensed Plumbers, #0048585A",
             "Emergency Water Heater Service Available",
             "Serving North Las Vegas and the Las Vegas Valley",
             "Transparent Pricing, No Hidden Fees",
+            "Installed to Clark County Code",
+            "Residential and Commercial",
           ]}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -379,12 +378,6 @@ export default function NorthLasVegasWaterHeaterPage() {
             src: "/images/services/water-heater-repair-installation/card.webp",
             alt: "Water heater repair and installation in North Las Vegas, NV",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={WH_TRUST_STRIP}
-          ariaLabel="Why North Las Vegas customers choose Red Carpet Plumbing for water heater service"
         />
 
         {/* SECTION 3: DIRECT ANSWER */}

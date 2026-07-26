@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — license #0048585A, emergency/24-7
 // availability, transparent-pricing, and any rating/40-year claims are
@@ -192,13 +191,6 @@ const WHY_CHOOSE = [
   "Residential and commercial water heater service throughout Henderson",
 ];
 
-const WH_TRUST_STRIP = [
-  "NV Licensed, #0048585A",
-  "Installed to Clark County Code",
-  "Tank and Tankless Service",
-  "Transparent Pricing, No Hidden Fees",
-];
-
 const HENDERSON_COMMUNITIES = [
   "Green Valley",
   "Green Valley Ranch",
@@ -347,13 +339,20 @@ export default function HendersonWaterHeaterPage() {
             low-res 350x350 Batch 3 asset; using the larger card.webp here. */}
         <HeroSection
           headingLevel="h1"
-          headline="Water Heater Repair and Installation in Henderson, NV"
+          headline={
+            <>
+              Water Heater Repair and Installation
+              <br /> in Henderson, NV
+            </>
+          }
           subheading="Red Carpet Plumbing repairs and installs water heaters for homes and businesses throughout Henderson, NV, including Green Valley, Green Valley Ranch, and Lake Las Vegas. Henderson hard water causes faster sediment buildup and anode rod depletion, and original Green Valley homes with 30 to 40 years of hard water exposure face above-average water heater failure rates. Our licensed plumbers handle all water heater work to current Clark County plumbing code. Call (702) 567-9172 to schedule service."
           trustItems={[
             "NV Licensed Plumbers, #0048585A",
             "Emergency Water Heater Service Available",
             "Serving Henderson and the Las Vegas Valley",
             "Transparent Pricing, No Hidden Fees",
+            "Installed to Clark County Code",
+            "Tank and Tankless Service",
           ]}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -369,12 +368,6 @@ export default function HendersonWaterHeaterPage() {
             src: "/images/services/water-heater-repair-installation/card.webp",
             alt: "Water heater repair and installation in Henderson, NV",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={WH_TRUST_STRIP}
-          ariaLabel="Why Henderson customers choose Red Carpet Plumbing for water heater service"
         />
 
         {/* SECTION 3: DIRECT ANSWER */}

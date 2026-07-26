@@ -296,7 +296,12 @@ export default function ParadiseEmergencyPlumbingPage() {
         {/* Swap to a Paradise-specific hero when the client supplies one. */}
         <HeroSection
           headingLevel="h1"
-          headline="Emergency Plumbing in Paradise, NV"
+          headline={
+            <>
+              Emergency Plumbing
+              <br /> in Paradise, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

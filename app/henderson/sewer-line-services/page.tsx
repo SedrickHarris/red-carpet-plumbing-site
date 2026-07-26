@@ -32,7 +32,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title: "Sewer Line Services in Henderson, NV | Red Carpet Plumbing",
@@ -62,15 +61,7 @@ const HERO_TRUST_ITEMS = [
   "Residential and Commercial Sewer Service",
   // FLAG: VERIFY transparent pricing claim before publishing.
   "Transparent Pricing, No Hidden Fees",
-];
-
-const SEWER_TRUST_STRIP = [
-  // FLAG: VERIFY "Licensed and Insured" claim before publishing.
-  "Licensed and Insured Plumbers",
-  "Serving Henderson, Green Valley, and the Las Vegas Valley",
   "Sewer Camera Inspection Available",
-  // FLAG: VERIFY "Upfront Pricing" claim before publishing.
-  "Upfront Pricing, No Hidden Fees",
 ];
 
 // ---------------------------------------------------------------------------
@@ -389,7 +380,12 @@ export default function HendersonSewerLinePage() {
             available and pass it via backgroundImage. */}
         <HeroSection
           headingLevel="h1"
-          headline="Sewer Line Services in Henderson, NV"
+          headline={
+            <>
+              Sewer Line Services
+              <br /> in Henderson, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement for homes and businesses throughout Henderson, NV. Whether you are dealing with a sewer backup, slow drains, gurgling pipes, or a line that needs inspection before a home purchase, our licensed plumbers diagnose the problem accurately and explain all repair options before any work begins. Call us or request service online."
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -402,12 +398,6 @@ export default function HendersonSewerLinePage() {
           }}
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Sewer Line Help" />}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={SEWER_TRUST_STRIP}
-          ariaLabel="Why Henderson customers choose Red Carpet Plumbing for sewer line services"
         />
 
         {/* SECTION 3: HENDERSON SEWER LINE CONTEXT */}
@@ -550,14 +540,14 @@ export default function HendersonSewerLinePage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Sewer Line Problem in Henderson?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing provides sewer line inspection, cleaning,
                   repair, and replacement throughout Henderson, NV. We start with a
                   camera inspection so you know exactly what you are dealing with
@@ -567,7 +557,7 @@ export default function HendersonSewerLinePage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

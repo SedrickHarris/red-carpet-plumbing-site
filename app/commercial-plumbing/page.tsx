@@ -9,7 +9,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title: "Commercial Plumbing in Las Vegas, NV | Red Carpet Plumbing",
@@ -69,14 +68,6 @@ const COMMERCIAL_FAQS = [
     answer:
       "Red Carpet Plumbing provides commercial plumbing services throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
-];
-
-const TRUST_STRIP_ITEMS = [
-  "Licensed Commercial Plumbers, NV #0048585A",
-  "4.8 Stars, 76 Google Reviews",
-  "Residential and Commercial Service",
-  "Over 40 Years in Las Vegas",
-  "Transparent Pricing, No Hidden Fees",
 ];
 
 const COMMERCIAL_WARNING_SIGNS = [
@@ -405,6 +396,7 @@ export default function CommercialPlumbingPage() {
             "4.8 Stars, 76 Google Reviews",
             "Residential and Commercial Service",
             "Transparent Pricing, No Hidden Fees",
+            "Over 40 Years in Las Vegas",
           ]}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -417,12 +409,6 @@ export default function CommercialPlumbingPage() {
           ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
           formSlot={<QuoteFormPlaceholder title="Get Commercial Plumbing Help" />}
           accentWidth="sm"
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={TRUST_STRIP_ITEMS}
-          ariaLabel="Why Las Vegas businesses choose Red Carpet Plumbing"
         />
 
         {/* SECTION 3: COMMERCIAL PLUMBING PROBLEMS THAT NEED ATTENTION */}
@@ -587,7 +573,7 @@ export default function CommercialPlumbingPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -595,7 +581,7 @@ export default function CommercialPlumbingPage() {
                   Need a Licensed Commercial
                   <br className="hidden sm:block" /> Plumber in Las Vegas?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing serves businesses, restaurants, and
                   property managers throughout the Las Vegas Valley. NV
                   Contractor License #0048585A (C-1 Plumbing and Heating).
@@ -605,7 +591,7 @@ export default function CommercialPlumbingPage() {
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a
                     href="tel:+17025679172"
-                    className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                    className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                   >
                     Call (702) 567-9172
                   </a>

@@ -336,6 +336,13 @@ const breadcrumbSchema = {
 
 const faqSchema = buildFaqPageSchema(SUMMERLIN_FAQS);
 
+const TRUST_STRIP_ITEMS = [
+"4.8 stars, 76 Google reviews",
+"NV Licensed #0048585A",
+"Over 40 years serving Las Vegas Valley",
+"Transparent pricing, no hidden fees",
+];
+
 export default function SummerlinPlumbingServicesPage() {
   return (
     <>
@@ -358,14 +365,14 @@ export default function SummerlinPlumbingServicesPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Services in Summerlin, NV"
+          headline={
+            <>
+              Plumbing Services
+              <br /> in Summerlin, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides plumbing services throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. From emergency plumbing and drain cleaning to water heater repair, slab leak detection, and re-piping, our licensed plumbers serve Summerlin homes and businesses. NV Contractor License #0048585A."
-          trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed #0048585A",
-            "Over 40 years serving Las Vegas Valley",
-            "Transparent pricing, no hidden fees",
-          ]}
+          trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

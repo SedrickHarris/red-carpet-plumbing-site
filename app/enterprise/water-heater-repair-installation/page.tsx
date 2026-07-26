@@ -364,7 +364,12 @@ export default function EnterpriseWaterHeaterPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Water Heater Repair and Installation in Enterprise, NV"
+          headline={
+            <>
+              Water Heater Repair and Installation
+              <br /> in Enterprise, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

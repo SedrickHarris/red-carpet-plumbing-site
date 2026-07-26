@@ -344,7 +344,12 @@ export default function EnterpriseDrainCleaningPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Drain Cleaning in Enterprise, NV"
+          headline={
+            <>
+              Drain Cleaning
+              <br /> in Enterprise, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

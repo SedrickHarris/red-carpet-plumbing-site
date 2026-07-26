@@ -9,7 +9,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title: "Re-Piping Services in Las Vegas, NV | Red Carpet Plumbing",
@@ -71,14 +70,6 @@ const REPIPING_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides repiping services throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
-];
-
-const TRUST_STRIP_ITEMS = [
-  "4.8 Stars, 76 Google Reviews",
-  "NV Licensed, #0048585A",
-  "Over 40 Years in Las Vegas",
-  "Permits Pulled and Inspections Scheduled",
-  "Transparent Pricing, No Hidden Fees",
 ];
 
 const REPIPING_SIGNS = [
@@ -386,6 +377,7 @@ export default function RePipingServicesPage() {
             "NV Licensed Plumbers, #0048585A",
             "Over 40 years serving Las Vegas",
             "Transparent pricing, no hidden fees",
+            "Permits Pulled and Inspections Scheduled",
           ]}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -398,12 +390,6 @@ export default function RePipingServicesPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           accentWidth="sm"
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={TRUST_STRIP_ITEMS}
-          ariaLabel="Why Las Vegas customers choose Red Carpet Plumbing for repiping"
         />
 
         {/* SECTION 3: SIGNS YOU MAY NEED REPIPING */}
@@ -591,7 +577,7 @@ export default function RePipingServicesPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -599,7 +585,7 @@ export default function RePipingServicesPage() {
                   Aging or Failing Pipes
                   <br className="hidden sm:block" /> in Las Vegas?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing assesses your plumbing system, identifies
                   problem pipe materials, and provides honest recommendations
                   about repair versus repiping. We explain all options and
@@ -609,7 +595,7 @@ export default function RePipingServicesPage() {
               <div className="flex flex-col items-start lg:items-end gap-4">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call Now: (702) 567-9172
                 </a>

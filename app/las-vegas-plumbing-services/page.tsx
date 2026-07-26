@@ -334,6 +334,13 @@ const breadcrumbSchema = {
 
 const faqSchema = buildFaqPageSchema(LAS_VEGAS_FAQS);
 
+const TRUST_STRIP_ITEMS = [
+"4.8 stars, 76 Google reviews",
+"NV Licensed #0048585A",
+"Over 40 years serving Las Vegas",
+"Transparent pricing, no hidden fees",
+];
+
 export default function LasVegasPlumbingServicesPage() {
   return (
     <>
@@ -356,14 +363,14 @@ export default function LasVegasPlumbingServicesPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Services in Las Vegas, NV"
+          headline={
+            <>
+              Plumbing Services
+              <br /> in Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides residential and commercial plumbing services throughout Las Vegas, Nevada. From emergency plumbing and drain cleaning to water heater repair, slab leak detection, and re-piping, our licensed plumbers serve homes and businesses across Las Vegas. NV Contractor License #0048585A."
-          trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed #0048585A",
-            "Over 40 years serving Las Vegas",
-            "Transparent pricing, no hidden fees",
-          ]}
+          trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

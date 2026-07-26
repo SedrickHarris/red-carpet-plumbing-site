@@ -35,7 +35,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 export const metadata: Metadata = {
   title: "Gas Line Plumbing in Henderson, NV | Red Carpet Plumbing",
@@ -65,6 +64,7 @@ const HERO_TRUST_ITEMS = [
   "Residential and Commercial Gas Line Service",
   // FLAG: VERIFY transparent pricing claim before publishing.
   "Transparent Pricing, No Hidden Fees",
+  "Emergency Gas Line Response Available",
 ];
 
 // Section 2 safety callout (rendered as a distinct bordered alert panel).
@@ -81,16 +81,6 @@ const SAFETY_CALLOUT = {
   ],
   note: "Southwest Gas is responsible for the gas supply line up to your meter. Red Carpet Plumbing handles licensed gas line repair and installation from the meter into your home or business.",
 };
-
-// Section 3 red trust band (distinct from hero trustItems).
-const GAS_TRUST_STRIP = [
-  "Licensed Gas Line Plumbers, NV #0048585A",
-  "Serving Henderson, Green Valley, and the Las Vegas Valley",
-  // FLAG: VERIFY "Emergency Gas Line Response Available" claim before publishing.
-  "Emergency Gas Line Response Available",
-  // FLAG: VERIFY "Upfront Pricing" claim before publishing.
-  "Upfront Pricing, No Hidden Fees",
-];
 
 // ---------------------------------------------------------------------------
 // Section 4 — Henderson gas line context (H3 article cards).
@@ -412,7 +402,12 @@ export default function HendersonGasLinePage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Gas Line Plumbing in Henderson, NV"
+          headline={
+            <>
+              Gas Line Plumbing
+              <br /> in Henderson, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and appliance hookup for homes and businesses throughout Henderson, NV. From gas line leak detection and emergency repair to new appliance connections and permitted outdoor gas line extensions, our licensed plumbers handle gas line work safely and correctly. Call us or request service online."
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -466,12 +461,6 @@ export default function HendersonGasLinePage() {
             </div>
           </div>
         </section>
-
-        {/* SECTION 3: TRUST STRIP */}
-        <TrustStrip
-          items={GAS_TRUST_STRIP}
-          ariaLabel="Why Henderson customers choose Red Carpet Plumbing for gas line plumbing"
-        />
 
         {/* SECTION 4: HENDERSON GAS LINE CONTEXT */}
         <section className="bg-white">
@@ -608,14 +597,14 @@ export default function HendersonGasLinePage() {
         </section>
 
         {/* SECTION 8: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Need a Licensed Gas Line Plumber in Henderson?
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing provides licensed gas line repair,
                   installation, and inspection throughout Henderson, NV. If you
                   smell gas, follow the Southwest Gas emergency protocol first. For
@@ -625,7 +614,7 @@ export default function HendersonGasLinePage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

@@ -349,6 +349,13 @@ const breadcrumbSchema = {
 
 const faqSchema = buildFaqPageSchema(ALIANTE_FAQS);
 
+const TRUST_STRIP_ITEMS = [
+"4.8 stars, 76 Google reviews",
+"NV Licensed #0048585A",
+"Over 40 years serving Las Vegas Valley",
+"Transparent pricing, no hidden fees",
+];
+
 export default function AlianteAreaPlumbingPage() {
   return (
     <>
@@ -379,14 +386,14 @@ export default function AlianteAreaPlumbingPage() {
             hero renders its gradient background. */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Services in the Aliante Area of North Las Vegas, NV"
+          headline={
+            <>
+              Plumbing Services
+              <br /> in the Aliante Area of North Las Vegas, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides licensed plumbing services throughout the Aliante master-planned community and surrounding North Las Vegas neighborhoods. Most Aliante homes were built between 2000 and 2008 and are entering the first major plumbing service cycle under Las Vegas Valley hard water conditions. NV Contractor License #0048585A."
-          trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed #0048585A",
-            "Over 40 years serving Las Vegas Valley",
-            "Transparent pricing, no hidden fees",
-          ]}
+          trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

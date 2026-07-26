@@ -301,7 +301,12 @@ export default function LakeLasVegasDrainCleaningPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Drain Cleaning in Lake Las Vegas, Henderson, NV"
+          headline={
+            <>
+              Drain Cleaning
+              <br /> in Lake Las Vegas, Henderson, NV
+            </>
+          }
           subheading="Professional drain cleaning for homes and resort residential properties in Lake Las Vegas. Serving Lake Las Vegas as part of Henderson, NV."
           trustItems={LLV_DRAIN_TRUST}
           primaryCTA={{

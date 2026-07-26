@@ -10,7 +10,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing. "emergency plumbing service available" and
 // "transparent pricing, no hidden fees" are source-site claims shown on this
@@ -357,7 +356,12 @@ export default function GreenValleyEmergencyPlumbingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Emergency Plumbing in Green Valley, Henderson, NV"
+          headline={
+            <>
+              Emergency Plumbing
+              <br /> in Green Valley, Henderson, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides emergency plumbing service for homes throughout Green Valley and Henderson, NV. Burst pipes, slab leaks, Kitec pipe failures, sewer backups, and water heater failures handled by licensed plumbers. Call (702) 567-9172 now."
           trustItems={GV_EMERGENCY_TRUST}
           primaryCTA={{
@@ -376,13 +380,6 @@ export default function GreenValleyEmergencyPlumbingPage() {
             src: "/images/services/emergency-plumbing/hero.webp",
             alt: "emergency plumbing service in Green Valley, Henderson, NV",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          variant="red"
-          items={GV_EMERGENCY_TRUST}
-          ariaLabel="Why Green Valley customers choose Red Carpet Plumbing for emergency service"
         />
 
         {/* SECTION 3: AEO DIRECT ANSWER */}

@@ -314,7 +314,12 @@ export default function EnterpriseRePipingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Re-Piping Services in Enterprise, NV"
+          headline={
+            <>
+              Re-Piping Services
+              <br /> in Enterprise, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{

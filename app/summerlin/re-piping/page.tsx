@@ -307,7 +307,12 @@ export default function SummerlinRePipingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Re-Piping Services in Summerlin, NV"
+          headline={
+            <>
+              Re-Piping Services
+              <br /> in Summerlin, NV
+            </>
+          }
           subheading={HERO_SUBHEADING}
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{

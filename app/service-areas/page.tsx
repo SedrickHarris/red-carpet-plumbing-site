@@ -377,7 +377,12 @@ export default function ServiceAreasPage() {
         {/* SECTION 2: HERO (two-column with form) */}
         <HeroSection
           headingLevel="h1"
-          headline="Plumbing Service Areas in the Las Vegas Valley"
+          headline={
+            <>
+              Plumbing Service Areas
+              <br /> in the Las Vegas Valley
+            </>
+          }
           subheading={
             <>
               <span className="block">

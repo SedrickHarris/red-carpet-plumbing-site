@@ -402,7 +402,12 @@ export default function GreenValleyWaterHeaterPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Water Heater Repair and Installation in Green Valley, Henderson, NV"
+          headline={
+            <>
+              Water Heater Repair and Installation
+              <br /> in Green Valley, Henderson, NV
+            </>
+          }
           subheading="Red Carpet Plumbing repairs and installs water heaters for homes and businesses throughout Green Valley, part of Henderson, NV, including original Green Valley neighborhoods and Green Valley Ranch. Green Valley hard water causes faster sediment buildup and anode rod depletion, and original Green Valley homes with 30 to 45 years of hard water exposure have above-average water heater failure rates. Our licensed plumbers handle all water heater work to current Clark County plumbing code. Call (702) 567-9172 to schedule service."
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -703,7 +708,7 @@ export default function GreenValleyWaterHeaterPage() {
         </section>
 
         {/* SECTION 8: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
@@ -711,7 +716,7 @@ export default function GreenValleyWaterHeaterPage() {
                   Water Heater Problems in Green Valley?
                 </h2>
                 {/* FLAG: source-site claim — verify emergency availability before final launch */}
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Hard water mineral buildup and aging copper supply systems in
                   original Green Valley neighborhoods make water heater failures
                   more common here than in most Henderson communities. Red Carpet
@@ -722,7 +727,7 @@ export default function GreenValleyWaterHeaterPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
 // "Over 40 years," and "24/7 emergency service" trust claims are source-site
@@ -206,17 +205,6 @@ const GV_SLAB_STEPS: { name: string; body: string }[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Trust strip — 4 items matching Henderson slab sibling pattern.
-// ---------------------------------------------------------------------------
-const SLAB_TRUST_STRIP: string[] = [
-  "Non-Invasive Detection",
-  // FLAG: verify before final launch.
-  "NV Licensed, #0048585A",
-  "All Repair Options Explained",
-  "Residential and Commercial",
-];
-
-// ---------------------------------------------------------------------------
 // Related services block. All Green Valley sibling routes (P30-P34) are built
 // and linked, including /green-valley/re-piping/.
 // ---------------------------------------------------------------------------
@@ -279,6 +267,9 @@ const HERO_TRUST_ITEMS = [
   "24/7 emergency service",
   // FLAG: source-site claim — verify before final launch.
   "Transparent pricing, no hidden fees",
+  "Non-Invasive Detection",
+  "All Repair Options Explained",
+  "Residential and Commercial",
 ];
 
 // ---------------------------------------------------------------------------
@@ -409,7 +400,12 @@ export default function GreenValleySlabLeakPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Slab Leak Detection and Repair in Green Valley, Henderson, NV"
+          headline={
+            <>
+              Slab Leak Detection and Repair
+              <br /> in Green Valley, Henderson, NV
+            </>
+          }
           subheading="Slab leaks are among the most damaging plumbing problems in Green Valley, particularly in the original neighborhoods where aging copper and polybutylene pipes have been under hard water stress for 30 to 45 years. Red Carpet Plumbing locates slab leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging, and presents all repair options before any work begins."
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
@@ -427,12 +423,6 @@ export default function GreenValleySlabLeakPage() {
             src: "/images/services/slab-leak-detection-repair/card.webp",
             alt: "Slab leak detection and repair in Green Valley, Henderson, NV",
           }}
-        />
-
-        {/* SECTION 1b: TRUST STRIP */}
-        <TrustStrip
-          items={SLAB_TRUST_STRIP}
-          ariaLabel="Why Green Valley customers choose Red Carpet Plumbing for slab leak service"
         />
 
         {/* SECTION 2: WARNING SIGNS */}
@@ -658,7 +648,7 @@ export default function GreenValleySlabLeakPage() {
         </section>
 
         {/* SECTION 7: MID-PAGE CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
@@ -666,7 +656,7 @@ export default function GreenValleySlabLeakPage() {
                   Suspected Slab Leak in Green Valley?
                 </h2>
                 {/* FLAG: source-site claim — verify emergency availability before final launch */}
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Slab leaks cause ongoing water loss beneath your foundation and
                   can lead to structural damage if left undetected. Red Carpet
                   Plumbing provides non-invasive slab leak detection throughout
@@ -676,7 +666,7 @@ export default function GreenValleySlabLeakPage() {
               <div className="flex flex-col items-start gap-4 lg:items-end">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call (702) 567-9172
                 </a>

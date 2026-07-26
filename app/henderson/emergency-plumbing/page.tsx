@@ -9,7 +9,6 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 
 // FLAG: VERIFY before publishing — license #0048585A, 24/7 availability,
 // transparent-pricing, and any rating/40-year claims are source-site/project
@@ -149,13 +148,6 @@ const WHY_CHOOSE = [
   "Transparent pricing with no hidden fees",
   "Familiar with Green Valley's aging pipe systems, caliche soil conditions, and slab construction",
   "Residential and commercial emergency service throughout Henderson",
-];
-
-const EMERGENCY_TRUST_STRIP = [
-  "NV Licensed, #0048585A",
-  "Emergency Service Available",
-  "Serving Henderson and the Valley",
-  "Transparent Pricing, No Hidden Fees",
 ];
 
 // Plain-text Henderson communities (body signal). Green Valley and Lake Las
@@ -305,7 +297,12 @@ export default function HendersonEmergencyPlumbingPage() {
         {/* SECTION 1: HERO */}
         <HeroSection
           headingLevel="h1"
-          headline="Emergency Plumbing in Henderson, NV"
+          headline={
+            <>
+              Emergency Plumbing
+              <br /> in Henderson, NV
+            </>
+          }
           subheading="Red Carpet Plumbing provides emergency plumbing service for homes and businesses throughout Henderson, NV, including Green Valley, Lake Las Vegas, and surrounding communities. Whether you are dealing with a burst pipe, sewer backup, slab leak, water heater failure, or gas line issue, our licensed plumbers are ready to help. Call (702) 567-9172 now."
           trustItems={[
             "NV Licensed Plumbers, #0048585A",
@@ -327,12 +324,6 @@ export default function HendersonEmergencyPlumbingPage() {
             src: "/images/services/emergency-plumbing/hero.webp",
             alt: "Emergency plumber responding to a burst pipe in Henderson, NV",
           }}
-        />
-
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={EMERGENCY_TRUST_STRIP}
-          ariaLabel="Why Henderson customers choose Red Carpet Plumbing for emergency service"
         />
 
         {/* SECTION 3: DIRECT ANSWER */}
