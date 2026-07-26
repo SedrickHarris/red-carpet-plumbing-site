@@ -9,7 +9,6 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import TrustStrip from "@/components/TrustStrip";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
@@ -107,15 +106,6 @@ const HOMEPAGE_FAQS: FaqItem[] = [
   },
 ];
 
-const TRUST_STRIP_ITEMS = [
-  "4.8 Stars, 76 Google Reviews",
-  "Over 40 Years Serving Las Vegas",
-  "Local, Family-Owned Business",
-  "Licensed Plumbers",
-  "24/7 Emergency Service",
-  "Transparent Pricing, No Hidden Fees",
-];
-
 type ServiceCardEntry = {
   title: string;
   description: string;
@@ -132,30 +122,19 @@ type ServiceAreaLink = {
 
 const SERVICE_CARDS: ServiceCardEntry[] = [
   {
-    title: "Emergency Plumbing",
+    title: "Sewer Line Services",
     description:
-      "Fast response to burst pipes, major leaks, and plumbing emergencies throughout Las Vegas.",
-    href: "/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
-    imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
+      "Sewer line inspection, cleaning, repair, and replacement for residential and commercial properties.",
+    href: "/sewer-line-services/",
     built: true,
   },
   {
-    title: "Drain Cleaning",
+    title: "Re-Piping",
     description:
-      "Professional drain cleaning and hydro jetting to clear clogs and restore proper flow.",
-    href: "/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
-    imageAlt: "Hydro jetting equipment clearing a tough drain clog",
-    built: true,
-  },
-  {
-    title: "Leak Detection and Repair",
-    description:
-      "Accurate leak detection using advanced equipment to find hidden leaks before they cause serious damage.",
-    href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
-    imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
+      "Whole-home and commercial re-piping to replace aging, corroded, or failing pipe systems.",
+    href: "/re-piping/",
+    image: "/images/services/re-piping/hero.webp",
+    imageAlt: "Professional re-piping service for a Las Vegas home",
     built: true,
   },
   {
@@ -174,29 +153,6 @@ const SERVICE_CARDS: ServiceCardEntry[] = [
     href: "/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Home foundation showing signs of a slab leak",
-    built: true,
-  },
-  {
-    title: "Sewer Line Services",
-    description:
-      "Sewer line inspection, cleaning, repair, and replacement for residential and commercial properties.",
-    href: "/sewer-line-services/",
-    built: true,
-  },
-  {
-    title: "Re-Piping",
-    description:
-      "Whole-home and commercial re-piping to replace aging, corroded, or failing pipe systems.",
-    href: "/re-piping/",
-    image: "/images/services/re-piping/hero.webp",
-    imageAlt: "Professional re-piping service for a Las Vegas home",
-    built: true,
-  },
-  {
-    title: "Commercial Plumbing",
-    description:
-      "Commercial plumbing services for businesses, property managers, and commercial properties throughout the Las Vegas Valley.",
-    href: "/commercial-plumbing/",
     built: true,
   },
 ];
@@ -409,12 +365,6 @@ export default function Home() {
           size="tall"
         />
 
-        {/* SECTION 2: TRUST STRIP */}
-        <TrustStrip
-          items={TRUST_STRIP_ITEMS}
-          ariaLabel="Why Las Vegas homeowners and businesses choose Red Carpet Plumbing"
-        />
-
         {/* SECTION 2.5: AEO DIRECT-ANSWER BLOCK */}
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-12 lg:px-10 lg:py-14 xl:px-12">
@@ -451,14 +401,14 @@ export default function Home() {
         </section>
 
         {/* SECTION 3: 24/7 EMERGENCY CTA */}
-        <section className="bg-brand-charcoal">
+        <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   24/7 Emergency Plumbing in Las Vegas
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-white/80">
+                <p className="mt-6 text-lg leading-8 text-white/90">
                   Plumbing emergencies do not follow a schedule. Burst pipes,
                   sewer backups, water heater failures, and severe leaks can
                   cause serious damage if not addressed immediately. Red Carpet
@@ -478,7 +428,7 @@ export default function Home() {
               <div className="flex flex-col items-start lg:items-end gap-4">
                 <a
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-brand-primary px-8 text-lg font-semibold text-white hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
                 >
                   Call Now: (702) 567-9172
                 </a>
