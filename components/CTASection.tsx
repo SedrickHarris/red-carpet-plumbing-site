@@ -40,7 +40,7 @@ export function CTASection({
       <div
         className={`mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28 xl:px-12 2xl:px-16 ${
           hasSplit
-            ? "grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(420px,0.75fr)] lg:items-center lg:gap-14 xl:gap-20"
+            ? "grid grid-cols-1 gap-10 lg:grid-cols-[minmax(420px,1fr)_minmax(420px,1fr)] lg:items-center lg:gap-14 xl:gap-20"
             : ""
         }`}
       >
