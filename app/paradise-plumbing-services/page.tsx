@@ -97,102 +97,101 @@ type ServiceLink = {
   imageAlt: string;
 };
 
-const PARADISE_SERVICES: ServiceLink[] = [
-  {
-    title: "Emergency Plumbing",
-    href: "/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
-    imageAlt: "24/7 emergency plumbing service in Paradise, NV",
-  },
-  {
-    title: "Drain Cleaning",
-    href: "/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
-    imageAlt: "Drain cleaning service in Paradise, NV",
-  },
-  {
-    title: "Leak Detection and Repair",
-    href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
-    imageAlt: "Leak detection and repair in Paradise, NV",
-  },
-  {
-    title: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
-    image: "/images/services/water-heater-repair-installation/card.webp",
-    imageAlt: "Water heater repair and installation in Paradise, NV",
-  },
-  {
-    title: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
-    image: "/images/services/slab-leak-detection-repair/card.webp",
-    imageAlt: "Slab leak detection and repair in Paradise, NV",
-  },
+// Four featured services rendered as cards. Hrefs are unchanged: the
+// location route where one is built, the core service page otherwise.
+const PARADISE_FEATURED_SERVICES: ServiceLink[] = [
   {
     title: "Sewer Line Services",
     href: "/sewer-line-services/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp",
     imageAlt: "Sewer line services in Paradise, NV",
   },
   {
     title: "Re-Piping",
     href: "/re-piping/",
+    image:
+      "/images/services/re-piping/hero.webp",
     imageAlt: "Re-piping services in Paradise, NV",
+  },
+  {
+    title: "Water Heater Repair and Installation",
+    href: "/water-heater-repair-installation/",
+    image:
+      "/images/services/water-heater-repair-installation/card.webp",
+    imageAlt: "Water heater repair and installation in Paradise, NV",
+  },
+  {
+    title: "Slab Leak Detection and Repair",
+    href: "/slab-leak-detection-repair/",
+    image:
+      "/images/services/slab-leak-detection-repair/card.webp",
+    imageAlt: "Slab leak detection and repair in Paradise, NV",
+  },
+];
+
+// The remaining 14 services render as pills in two fixed rows of seven.
+type ServicePill = { title: string; href: string };
+
+const PARADISE_PILLS_ROW_ONE: ServicePill[] = [
+  {
+    title: "Emergency Plumbing",
+    href: "/emergency-plumbing/",
+  },
+  {
+    title: "Drain Cleaning",
+    href: "/drain-cleaning/",
+  },
+  {
+    title: "Leak Detection and Repair",
+    href: "/leak-detection-repair/",
   },
   {
     title: "Water Pipe Repair and Replacement",
     href: "/water-pipe-repair-replacement/",
-    imageAlt: "Water pipe repair and replacement in Paradise, NV",
   },
   {
     title: "Gas Line Plumbing",
     href: "/gas-line-plumbing/",
-    imageAlt: "Gas line plumbing service in Paradise, NV",
   },
   {
     title: "Commercial Plumbing",
     href: "/commercial-plumbing/",
-    imageAlt: "Commercial plumbing services in Paradise, NV",
   },
   {
     title: "Toilet Repair and Installation",
     href: "/toilet-repair-installation/",
-    imageAlt: "Toilet repair and installation in Paradise, NV",
   },
+];
+
+const PARADISE_PILLS_ROW_TWO: ServicePill[] = [
   {
     title: "Faucet and Sink Repair and Installation",
     href: "/faucet-sink-repair-installation/",
-    imageAlt: "Faucet and sink repair and installation in Paradise, NV",
   },
   {
     title: "Garbage Disposal Repair and Installation",
     href: "/garbage-disposal-repair-installation/",
-    imageAlt: "Garbage disposal repair and installation in Paradise, NV",
   },
   {
     title: "Backflow Prevention",
     href: "/backflow-prevention/",
-    imageAlt: "Backflow prevention services in Paradise, NV",
   },
   {
     title: "Video Camera Plumbing Inspections",
     href: "/video-camera-plumbing-inspections/",
-    imageAlt: "Video camera plumbing inspections in Paradise, NV",
   },
   {
     title: "Plumbing Fixture Repair, Replacement and Installation",
     href: "/plumbing-fixture-repair-replacement-installation/",
-    imageAlt:
-      "Plumbing fixture repair replacement and installation in Paradise, NV",
   },
   {
     title: "Trenchless Piping",
     href: "/trenchless-piping/",
-    imageAlt: "Trenchless piping services in Paradise, NV",
   },
   {
     title: "Water Meter and Pressure Regulator Services",
     href: "/water-meter-pressure-regulator-services/",
-    imageAlt: "Water meter and pressure regulator services in Paradise, NV",
   },
 ];
 
@@ -474,8 +473,9 @@ export default function ParadisePlumbingServicesPage() {
               <SectionRevealItem className="mt-14">
                 {/* TODO-BATCH-PHASE4: /paradise/[service]/ service-location pages not yet built. */}
                 {/* ServiceCards link to core service pages only. */}
+                {/* Featured services: single row of four cards. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                  {PARADISE_SERVICES.map((service) => (
+                  {PARADISE_FEATURED_SERVICES.map((service) => (
                     <ServiceCard
                       key={service.href}
                       title={service.title}
@@ -486,6 +486,36 @@ export default function ParadisePlumbingServicesPage() {
                       built
                     />
                   ))}
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-10">
+                {/* Remaining services as pills, kept in two fixed rows of seven. */}
+                <div className="flex flex-col gap-4">
+                  <ul className="flex flex-wrap justify-center gap-x-4 gap-y-6">
+                    {PARADISE_PILLS_ROW_ONE.map((pill) => (
+                      <li key={pill.href}>
+                        <Link
+                          href={pill.href}
+                          className="inline-flex min-h-12 items-center justify-center rounded-full border border-brand-primary/20 bg-white px-5 py-3 text-sm font-medium text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors"
+                        >
+                          {pill.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul className="flex flex-wrap justify-center gap-x-4 gap-y-6">
+                    {PARADISE_PILLS_ROW_TWO.map((pill) => (
+                      <li key={pill.href}>
+                        <Link
+                          href={pill.href}
+                          className="inline-flex min-h-12 items-center justify-center rounded-full bg-brand-primary px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors"
+                        >
+                          {pill.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </SectionRevealItem>
             </SectionReveal>

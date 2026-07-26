@@ -99,107 +99,106 @@ type ServiceLink = {
   imageAlt: string;
 };
 
-const ALIANTE_SERVICES: ServiceLink[] = [
+// Four featured services rendered as cards. Hrefs are unchanged: the
+// location route where one is built, the core service page otherwise.
+const ALIANTE_FEATURED_SERVICES: ServiceLink[] = [
   {
-    // ACTIVATED: P40 built and staged.
-    title: "Emergency Plumbing",
-    href: "/north-las-vegas/aliante-area/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
-    imageAlt: "24/7 emergency plumbing service in the Aliante area",
+    title: "Sewer Line Services",
+    href: "/sewer-line-services/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp",
+    imageAlt: "Sewer line services in the Aliante area",
   },
   {
-    // ACTIVATED: P41 built and staged
-    title: "Drain Cleaning",
-    href: "/north-las-vegas/aliante-area/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
-    imageAlt: "Drain cleaning service in the Aliante area",
-  },
-  {
-    // ACTIVATED: P43 built and staged
-    title: "Leak Detection and Repair",
-    href: "/north-las-vegas/aliante-area/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
-    imageAlt: "Leak detection and repair in the Aliante area",
+    title: "Re-Piping",
+    href: "/re-piping/",
+    image:
+      "/images/services/re-piping/hero.webp",
+    imageAlt: "Re-piping services in the Aliante area",
   },
   {
     // ACTIVATED: P42 built and staged
     title: "Water Heater Repair and Installation",
     href: "/north-las-vegas/aliante-area/water-heater-repair-installation/",
-    image: "/images/services/water-heater-repair-installation/card.webp",
+    image:
+      "/images/services/water-heater-repair-installation/card.webp",
     imageAlt: "Water heater repair and installation in the Aliante area",
   },
   {
     // ACTIVATED: P44 built and staged
     title: "Slab Leak Detection and Repair",
     href: "/north-las-vegas/aliante-area/slab-leak-detection-repair/",
-    image: "/images/services/slab-leak-detection-repair/card.webp",
+    image:
+      "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Slab leak detection and repair in the Aliante area",
   },
+];
+
+// The remaining 14 services render as pills in two fixed rows of seven.
+type ServicePill = { title: string; href: string };
+
+const ALIANTE_PILLS_ROW_ONE: ServicePill[] = [
   {
-    title: "Sewer Line Services",
-    href: "/sewer-line-services/",
-    imageAlt: "Sewer line services in the Aliante area",
+    // ACTIVATED: P40 built and staged.
+    title: "Emergency Plumbing",
+    href: "/north-las-vegas/aliante-area/emergency-plumbing/",
   },
   {
-    title: "Re-Piping",
-    href: "/re-piping/",
-    imageAlt: "Re-piping services in the Aliante area",
+    // ACTIVATED: P41 built and staged
+    title: "Drain Cleaning",
+    href: "/north-las-vegas/aliante-area/drain-cleaning/",
+  },
+  {
+    // ACTIVATED: P43 built and staged
+    title: "Leak Detection and Repair",
+    href: "/north-las-vegas/aliante-area/leak-detection-repair/",
   },
   {
     title: "Water Pipe Repair and Replacement",
     href: "/water-pipe-repair-replacement/",
-    imageAlt: "Water pipe repair and replacement in the Aliante area",
   },
   {
     title: "Gas Line Plumbing",
     href: "/gas-line-plumbing/",
-    imageAlt: "Gas line plumbing service in the Aliante area",
   },
   {
     title: "Commercial Plumbing",
     href: "/commercial-plumbing/",
-    imageAlt: "Commercial plumbing services in the Aliante area",
   },
   {
     title: "Toilet Repair and Installation",
     href: "/toilet-repair-installation/",
-    imageAlt: "Toilet repair and installation in the Aliante area",
   },
+];
+
+const ALIANTE_PILLS_ROW_TWO: ServicePill[] = [
   {
     title: "Faucet and Sink Repair and Installation",
     href: "/faucet-sink-repair-installation/",
-    imageAlt: "Faucet and sink repair and installation in the Aliante area",
   },
   {
     title: "Garbage Disposal Repair and Installation",
     href: "/garbage-disposal-repair-installation/",
-    imageAlt: "Garbage disposal repair and installation in the Aliante area",
   },
   {
     title: "Backflow Prevention",
     href: "/backflow-prevention/",
-    imageAlt: "Backflow prevention services in the Aliante area",
   },
   {
     title: "Video Camera Plumbing Inspections",
     href: "/video-camera-plumbing-inspections/",
-    imageAlt: "Video camera plumbing inspections in the Aliante area",
   },
   {
     title: "Plumbing Fixture Repair, Replacement and Installation",
     href: "/plumbing-fixture-repair-replacement-installation/",
-    imageAlt:
-      "Plumbing fixture repair replacement and installation in the Aliante area",
   },
   {
     title: "Trenchless Piping",
     href: "/trenchless-piping/",
-    imageAlt: "Trenchless piping services in the Aliante area",
   },
   {
     title: "Water Meter and Pressure Regulator Services",
     href: "/water-meter-pressure-regulator-services/",
-    imageAlt: "Water meter and pressure regulator services in the Aliante area",
   },
 ];
 
@@ -494,8 +493,9 @@ export default function AlianteAreaPlumbingPage() {
                 {/* ACTIVATED: /north-las-vegas/aliante-area/leak-detection-repair/ built (P43). */}
                 {/* ACTIVATED: /north-las-vegas/aliante-area/slab-leak-detection-repair/ built (P44). */}
                 {/* All Aliante-area service-location ServiceCards now link to built routes. */}
+                {/* Featured services: single row of four cards. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                  {ALIANTE_SERVICES.map((service) => (
+                  {ALIANTE_FEATURED_SERVICES.map((service) => (
                     <ServiceCard
                       key={service.href}
                       title={service.title}
@@ -506,6 +506,36 @@ export default function AlianteAreaPlumbingPage() {
                       built
                     />
                   ))}
+                </div>
+              </SectionRevealItem>
+
+              <SectionRevealItem className="mt-10">
+                {/* Remaining services as pills, kept in two fixed rows of seven. */}
+                <div className="flex flex-col gap-4">
+                  <ul className="flex flex-wrap justify-center gap-x-4 gap-y-6">
+                    {ALIANTE_PILLS_ROW_ONE.map((pill) => (
+                      <li key={pill.href}>
+                        <Link
+                          href={pill.href}
+                          className="inline-flex min-h-12 items-center justify-center rounded-full border border-brand-primary/20 bg-white px-5 py-3 text-sm font-medium text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors"
+                        >
+                          {pill.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul className="flex flex-wrap justify-center gap-x-4 gap-y-6">
+                    {ALIANTE_PILLS_ROW_TWO.map((pill) => (
+                      <li key={pill.href}>
+                        <Link
+                          href={pill.href}
+                          className="inline-flex min-h-12 items-center justify-center rounded-full bg-brand-primary px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors"
+                        >
+                          {pill.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </SectionRevealItem>
             </SectionReveal>
