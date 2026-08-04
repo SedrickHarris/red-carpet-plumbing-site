@@ -191,15 +191,18 @@ const TOILET_STEPS = [
   },
 ];
 
-const SERVICE_AREAS = [
-  "Las Vegas",
-  "Henderson",
-  "North Las Vegas",
-  "Paradise",
-  "Summerlin",
-  "Spring Valley",
-  "Enterprise",
-  "Boulder City",
+const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
+  { name: "Las Vegas", href: "/las-vegas/toilet-repair-installation/" },
+  { name: "Henderson" },
+  { name: "North Las Vegas" },
+  { name: "Aliante Area" },
+  { name: "Summerlin" },
+  { name: "Paradise" },
+  { name: "Spring Valley" },
+  { name: "Enterprise" },
+  { name: "Boulder City" },
+  { name: "Green Valley", href: "/green-valley/toilet-repair-installation/" },
+  { name: "Lake Las Vegas" },
 ];
 
 type RelatedService = {
@@ -630,20 +633,23 @@ export default function ToiletRepairInstallationPage() {
               </p>
             </div>
 
-            {/* TODO-BATCH-PHASE3: /las-vegas/toilet-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /henderson/toilet-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /north-las-vegas/toilet-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /paradise/toilet-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /summerlin/toilet-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /spring-valley/toilet-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /enterprise/toilet-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /boulder-city/toilet-repair-installation/ not yet built */}
+            {/* SERVICE_AREA_LINKS reflects actual built routes as of the last audit. */}
+            {/* Regenerate from docs/seo/route-manifest.json when new location pages ship. */}
             <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {SERVICE_AREAS.map((area) => (
-                <li key={area}>
-                  <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
-                    {area}
-                  </span>
+              {SERVICE_AREA_LINKS.map((area) => (
+                <li key={area.name}>
+                  {area.href ? (
+                    <Link
+                      href={area.href}
+                      className="block rounded-lg bg-white px-5 py-4 font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    >
+                      {area.name}
+                    </Link>
+                  ) : (
+                    <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
+                      {area.name}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
