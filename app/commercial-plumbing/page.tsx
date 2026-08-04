@@ -628,23 +628,36 @@ export default function CommercialPlumbingPage() {
 
             {/* SERVICE_AREA_LINKS reflects actual built routes as of the last audit. */}
             {/* Regenerate from docs/seo/route-manifest.json when new location pages ship. */}
-            <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {SERVICE_AREA_LINKS.map((area) => (
-                <li key={area.name}>
-                  {area.href ? (
-                    <Link
-                      href={area.href}
-                      className="block rounded-lg bg-white px-5 py-4 font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            <ul className="mt-12 grid w-fit grid-cols-3 gap-3">
+              {SERVICE_AREA_LINKS.map((area) => {
+                const label = (
+                  <>
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-4 w-4 shrink-0 text-brand-primary"
                     >
-                      {area.name}
-                    </Link>
-                  ) : (
-                    <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
-                      {area.name}
-                    </span>
-                  )}
-                </li>
-              ))}
+                      <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
+                    </svg>
+                    <span className="min-w-0 break-words">{area.name}</span>
+                  </>
+                );
+                return (
+                  <li key={area.name}>
+                    {area.href ? (
+                      <Link
+                        href={area.href}
+                        className="flex h-full items-center gap-2 break-words rounded-lg bg-white px-4 py-2.5 font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                      >
+                        {label}
+                      </Link>
+                    ) : (
+                      <span className="flex h-full items-center gap-2 break-words rounded-lg bg-white px-4 py-2.5 font-semibold text-brand-charcoal shadow-sm">{label}</span>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
 
             <div className="mt-10 text-left">
