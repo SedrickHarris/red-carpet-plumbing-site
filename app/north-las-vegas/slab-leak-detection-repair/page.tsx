@@ -660,6 +660,17 @@ export default function NorthLasVegasSlabLeakPage() {
                 )
               )}
             </ul>
+
+            <p className="mt-8 text-base leading-7 text-brand-dark/80">
+              For Las Vegas slab leak detection and repair, visit our{" "}
+              <Link
+                href="/las-vegas/slab-leak-detection-repair/"
+                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+              >
+                Las Vegas slab leak detection
+              </Link>{" "}
+              page.
+            </p>
           </div>
         </section>
 
