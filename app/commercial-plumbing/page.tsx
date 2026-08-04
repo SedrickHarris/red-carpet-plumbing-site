@@ -189,15 +189,18 @@ const COMMERCIAL_STEPS = [
   },
 ];
 
-const SERVICE_AREAS = [
-  "Las Vegas",
-  "Henderson",
-  "North Las Vegas",
-  "Paradise",
-  "Summerlin",
-  "Spring Valley",
-  "Enterprise",
-  "Boulder City",
+const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
+  { name: "Las Vegas", href: "/las-vegas/commercial-plumbing/" },
+  { name: "Henderson", href: "/henderson/commercial-plumbing/" },
+  { name: "North Las Vegas" },
+  { name: "Aliante Area" },
+  { name: "Summerlin" },
+  { name: "Paradise", href: "/paradise/commercial-plumbing/" },
+  { name: "Spring Valley", href: "/spring-valley/commercial-plumbing/" },
+  { name: "Enterprise", href: "/enterprise/commercial-plumbing/" },
+  { name: "Boulder City" },
+  { name: "Green Valley" },
+  { name: "Lake Las Vegas" },
 ];
 
 type RelatedService = {
@@ -623,20 +626,23 @@ export default function CommercialPlumbingPage() {
               </p>
             </div>
 
-            {/* TODO-BATCH-PHASE3: /las-vegas/commercial-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /henderson/commercial-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /north-las-vegas/commercial-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /paradise/commercial-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /summerlin/commercial-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /spring-valley/commercial-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /enterprise/commercial-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /boulder-city/commercial-plumbing/ not yet built */}
+            {/* SERVICE_AREA_LINKS reflects actual built routes as of the last audit. */}
+            {/* Regenerate from docs/seo/route-manifest.json when new location pages ship. */}
             <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {SERVICE_AREAS.map((area) => (
-                <li key={area}>
-                  <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
-                    {area}
-                  </span>
+              {SERVICE_AREA_LINKS.map((area) => (
+                <li key={area.name}>
+                  {area.href ? (
+                    <Link
+                      href={area.href}
+                      className="block rounded-lg bg-white px-5 py-4 font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    >
+                      {area.name}
+                    </Link>
+                  ) : (
+                    <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
+                      {area.name}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

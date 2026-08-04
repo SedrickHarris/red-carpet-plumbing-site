@@ -191,15 +191,18 @@ const DRAIN_STEPS = [
   },
 ];
 
-const SERVICE_AREAS = [
-  "Las Vegas",
-  "Henderson",
-  "North Las Vegas",
-  "Summerlin",
-  "Paradise",
-  "Spring Valley",
-  "Enterprise",
-  "Boulder City",
+const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
+  { name: "Las Vegas", href: "/las-vegas/drain-cleaning/" },
+  { name: "Henderson", href: "/henderson/drain-cleaning/" },
+  { name: "North Las Vegas", href: "/north-las-vegas/drain-cleaning/" },
+  { name: "Aliante Area", href: "/north-las-vegas/aliante-area/drain-cleaning/" },
+  { name: "Summerlin", href: "/summerlin/drain-cleaning/" },
+  { name: "Paradise", href: "/paradise/drain-cleaning/" },
+  { name: "Spring Valley", href: "/spring-valley/drain-cleaning/" },
+  { name: "Enterprise", href: "/enterprise/drain-cleaning/" },
+  { name: "Boulder City", href: "/boulder-city/drain-cleaning/" },
+  { name: "Green Valley", href: "/green-valley/drain-cleaning/" },
+  { name: "Lake Las Vegas", href: "/lake-las-vegas/drain-cleaning/" },
 ];
 
 type RelatedService = {
@@ -614,51 +617,25 @@ export default function DrainCleaningPage() {
               <p className="mt-6 text-lg leading-8 text-white/85">
                 Red Carpet Plumbing provides drain cleaning throughout the Las Vegas Valley.
               </p>
-              <p className="mt-4 text-base leading-7 text-white/80">
-                See our dedicated drain cleaning pages for{" "}
-                <Link
-                  href="/las-vegas/drain-cleaning/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  Las Vegas
-                </Link>
-                ,{" "}
-                <Link
-                  href="/henderson/drain-cleaning/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  Henderson
-                </Link>
-                ,{" "}
-                <Link
-                  href="/north-las-vegas/drain-cleaning/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  North Las Vegas
-                </Link>
-                , and{" "}
-                <Link
-                  href="/green-valley/drain-cleaning/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  Green Valley
-                </Link>
-                .
-              </p>
             </div>
 
-            {/* /las-vegas/, /henderson/, and /north-las-vegas/ drain-cleaning are live (Batch 5). */}
-            {/* TODO-BATCH-PHASE3: /summerlin/drain-cleaning/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /paradise/drain-cleaning/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /spring-valley/drain-cleaning/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /enterprise/drain-cleaning/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /boulder-city/drain-cleaning/ not yet built */}
+            {/* SERVICE_AREA_LINKS reflects actual built routes as of the last audit. */}
+            {/* Regenerate from docs/seo/route-manifest.json when new location pages ship. */}
             <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {SERVICE_AREAS.map((area) => (
-                <li key={area}>
-                  <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
-                    {area}
-                  </span>
+              {SERVICE_AREA_LINKS.map((area) => (
+                <li key={area.name}>
+                  {area.href ? (
+                    <Link
+                      href={area.href}
+                      className="block rounded-lg bg-white px-5 py-4 font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    >
+                      {area.name}
+                    </Link>
+                  ) : (
+                    <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
+                      {area.name}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

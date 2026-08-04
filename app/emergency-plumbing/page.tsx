@@ -190,15 +190,18 @@ const EMERGENCY_STEPS = [
   },
 ];
 
-const SERVICE_AREAS = [
-  "Las Vegas",
-  "Henderson",
-  "North Las Vegas",
-  "Summerlin",
-  "Paradise",
-  "Spring Valley",
-  "Enterprise",
-  "Boulder City",
+const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
+  { name: "Las Vegas", href: "/las-vegas/emergency-plumbing/" },
+  { name: "Henderson", href: "/henderson/emergency-plumbing/" },
+  { name: "North Las Vegas", href: "/north-las-vegas/emergency-plumbing/" },
+  { name: "Aliante Area", href: "/north-las-vegas/aliante-area/emergency-plumbing/" },
+  { name: "Summerlin", href: "/summerlin/emergency-plumbing/" },
+  { name: "Paradise", href: "/paradise/emergency-plumbing/" },
+  { name: "Spring Valley", href: "/spring-valley/emergency-plumbing/" },
+  { name: "Enterprise", href: "/enterprise/emergency-plumbing/" },
+  { name: "Boulder City", href: "/boulder-city/emergency-plumbing/" },
+  { name: "Green Valley", href: "/green-valley/emergency-plumbing/" },
+  { name: "Lake Las Vegas", href: "/lake-las-vegas/emergency-plumbing/" },
 ];
 
 type RelatedService = {
@@ -600,44 +603,25 @@ export default function EmergencyPlumbingPage() {
                 Red Carpet Plumbing provides emergency plumbing service
                 throughout the Las Vegas Valley.
               </p>
-              <p className="mt-4 text-base leading-7 text-white/80">
-                See our dedicated emergency plumbing pages for{" "}
-                <Link
-                  href="/las-vegas/emergency-plumbing/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  Las Vegas
-                </Link>
-                ,{" "}
-                <Link
-                  href="/henderson/emergency-plumbing/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  Henderson
-                </Link>
-                , and{" "}
-                <Link
-                  href="/north-las-vegas/emergency-plumbing/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  North Las Vegas
-                </Link>
-                .
-              </p>
             </div>
 
-            {/* /las-vegas/, /henderson/, and /north-las-vegas/ emergency-plumbing are live (Batch 5). */}
-            {/* TODO-BATCH-PHASE3: /summerlin/emergency-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /paradise/emergency-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /spring-valley/emergency-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /enterprise/emergency-plumbing/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /boulder-city/emergency-plumbing/ not yet built */}
+            {/* SERVICE_AREA_LINKS reflects actual built routes as of the last audit. */}
+            {/* Regenerate from docs/seo/route-manifest.json when new location pages ship. */}
             <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {SERVICE_AREAS.map((area) => (
-                <li key={area}>
-                  <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
-                    {area}
-                  </span>
+              {SERVICE_AREA_LINKS.map((area) => (
+                <li key={area.name}>
+                  {area.href ? (
+                    <Link
+                      href={area.href}
+                      className="block rounded-lg bg-white px-5 py-4 font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    >
+                      {area.name}
+                    </Link>
+                  ) : (
+                    <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
+                      {area.name}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

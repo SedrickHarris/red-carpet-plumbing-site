@@ -179,15 +179,18 @@ const REPIPING_STEPS = [
   },
 ];
 
-const SERVICE_AREAS = [
-  "Las Vegas",
-  "Henderson",
-  "North Las Vegas",
-  "Summerlin",
-  "Paradise",
-  "Spring Valley",
-  "Enterprise",
-  "Boulder City",
+const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
+  { name: "Las Vegas", href: "/las-vegas/re-piping/" },
+  { name: "Henderson", href: "/henderson/re-piping/" },
+  { name: "North Las Vegas" },
+  { name: "Aliante Area" },
+  { name: "Summerlin", href: "/summerlin/re-piping/" },
+  { name: "Paradise" },
+  { name: "Spring Valley", href: "/spring-valley/re-piping/" },
+  { name: "Enterprise", href: "/enterprise/re-piping/" },
+  { name: "Boulder City" },
+  { name: "Green Valley", href: "/green-valley/re-piping/" },
+  { name: "Lake Las Vegas" },
 ];
 
 type RelatedService = {
@@ -618,45 +621,25 @@ export default function RePipingServicesPage() {
                 Red Carpet Plumbing provides repiping services throughout the
                 Las Vegas Valley.
               </p>
-              <p className="mt-4 text-base leading-7 text-white/80">
-                See our dedicated re-piping pages for{" "}
-                <Link
-                  href="/las-vegas/re-piping/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  Las Vegas
-                </Link>
-                ,{" "}
-                <Link
-                  href="/henderson/re-piping/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  Henderson
-                </Link>
-                , and{" "}
-                <Link
-                  href="/green-valley/re-piping/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  Green Valley
-                </Link>
-                .
-              </p>
             </div>
 
-            {/* /las-vegas/, /henderson/, and /green-valley/ re-piping are live. */}
-            {/* TODO-BATCH-FUTURE: add /north-las-vegas/re-piping/ once built */}
-            {/* TODO-BATCH-PHASE3: /summerlin/re-piping/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /paradise/re-piping/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /spring-valley/re-piping/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /enterprise/re-piping/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /boulder-city/re-piping/ not yet built */}
+            {/* SERVICE_AREA_LINKS reflects actual built routes as of the last audit. */}
+            {/* Regenerate from docs/seo/route-manifest.json when new location pages ship. */}
             <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {SERVICE_AREAS.map((area) => (
-                <li key={area}>
-                  <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
-                    {area}
-                  </span>
+              {SERVICE_AREA_LINKS.map((area) => (
+                <li key={area.name}>
+                  {area.href ? (
+                    <Link
+                      href={area.href}
+                      className="block rounded-lg bg-white px-5 py-4 font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    >
+                      {area.name}
+                    </Link>
+                  ) : (
+                    <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
+                      {area.name}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

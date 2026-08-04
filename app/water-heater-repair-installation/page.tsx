@@ -189,15 +189,18 @@ const WATER_HEATER_STEPS = [
   },
 ];
 
-const SERVICE_AREAS = [
-  "Las Vegas",
-  "Henderson",
-  "North Las Vegas",
-  "Summerlin",
-  "Paradise",
-  "Spring Valley",
-  "Enterprise",
-  "Boulder City",
+const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
+  { name: "Las Vegas", href: "/las-vegas/water-heater-repair-installation/" },
+  { name: "Henderson", href: "/henderson/water-heater-repair-installation/" },
+  { name: "North Las Vegas", href: "/north-las-vegas/water-heater-repair-installation/" },
+  { name: "Aliante Area", href: "/north-las-vegas/aliante-area/water-heater-repair-installation/" },
+  { name: "Summerlin", href: "/summerlin/water-heater-repair-installation/" },
+  { name: "Paradise", href: "/paradise/water-heater-repair-installation/" },
+  { name: "Spring Valley", href: "/spring-valley/water-heater-repair-installation/" },
+  { name: "Enterprise", href: "/enterprise/water-heater-repair-installation/" },
+  { name: "Boulder City", href: "/boulder-city/water-heater-repair-installation/" },
+  { name: "Green Valley", href: "/green-valley/water-heater-repair-installation/" },
+  { name: "Lake Las Vegas", href: "/lake-las-vegas/water-heater-repair-installation/" },
 ];
 
 type RelatedService = {
@@ -629,51 +632,25 @@ export default function WaterHeaterRepairInstallationPage() {
                 Red Carpet Plumbing provides water heater repair and
                 installation throughout the Las Vegas Valley.
               </p>
-              <p className="mt-4 text-base leading-7 text-white/80">
-                See our dedicated water heater pages for{" "}
-                <Link
-                  href="/las-vegas/water-heater-repair-installation/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  Las Vegas
-                </Link>
-                ,{" "}
-                <Link
-                  href="/henderson/water-heater-repair-installation/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  Henderson
-                </Link>
-                ,{" "}
-                <Link
-                  href="/north-las-vegas/water-heater-repair-installation/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  North Las Vegas
-                </Link>
-                , and{" "}
-                <Link
-                  href="/green-valley/water-heater-repair-installation/"
-                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
-                >
-                  Green Valley
-                </Link>
-                .
-              </p>
             </div>
 
-            {/* /las-vegas/, /henderson/, /north-las-vegas/, and /green-valley/ water-heater-repair-installation are live. */}
-            {/* TODO-BATCH-PHASE3: /summerlin/water-heater-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /paradise/water-heater-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /spring-valley/water-heater-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /enterprise/water-heater-repair-installation/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /boulder-city/water-heater-repair-installation/ not yet built */}
+            {/* SERVICE_AREA_LINKS reflects actual built routes as of the last audit. */}
+            {/* Regenerate from docs/seo/route-manifest.json when new location pages ship. */}
             <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {SERVICE_AREAS.map((area) => (
-                <li key={area}>
-                  <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
-                    {area}
-                  </span>
+              {SERVICE_AREA_LINKS.map((area) => (
+                <li key={area.name}>
+                  {area.href ? (
+                    <Link
+                      href={area.href}
+                      className="block rounded-lg bg-white px-5 py-4 font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    >
+                      {area.name}
+                    </Link>
+                  ) : (
+                    <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
+                      {area.name}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
