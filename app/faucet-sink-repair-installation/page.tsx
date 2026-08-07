@@ -632,7 +632,7 @@ export default function FaucetSinkRepairInstallationPage() {
 
             {/* SERVICE_AREA_LINKS reflects actual built routes as of the last audit. */}
             {/* Regenerate from docs/seo/route-manifest.json when new location pages ship. */}
-            <ul className="mt-12 grid w-fit grid-cols-3 gap-3">
+            <ul className="mt-12 grid w-fit grid-cols-2 gap-3 sm:grid-cols-3">
               {SERVICE_AREA_LINKS.map((area) => {
                 const label = (
                   <>
@@ -654,12 +654,12 @@ export default function FaucetSinkRepairInstallationPage() {
                     {area.href ? (
                       <Link
                         href={area.href}
-                        className="flex h-full items-center gap-2 break-words rounded-lg bg-white px-4 py-2.5 font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                        className="flex h-full items-center gap-2 break-words rounded-lg bg-white px-2.5 py-2.5 text-sm font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-4 sm:text-base"
                       >
                         {label}
                       </Link>
                     ) : (
-                      <span className="flex h-full items-center gap-2 break-words rounded-lg bg-white px-4 py-2.5 font-semibold text-brand-charcoal shadow-sm">{label}</span>
+                      <span className="flex h-full items-center gap-2 break-words rounded-lg bg-white px-2.5 py-2.5 text-sm font-semibold text-brand-charcoal shadow-sm sm:px-4 sm:text-base">{label}</span>
                     )}
                   </li>
                 );

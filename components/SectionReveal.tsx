@@ -26,7 +26,10 @@ export function SectionReveal({ children, className }: SectionRevealProps) {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      // "some" (threshold 0) rather than a fraction: a fractional amount is
+      // unreachable once the container is taller than viewport / amount, which
+      // left tall service-card grids stuck at opacity 0 on mobile.
+      viewport={{ once: true, amount: "some" }}
     >
       {children}
     </motion.div>
