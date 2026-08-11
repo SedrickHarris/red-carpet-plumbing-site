@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PillRow, type ServicePill } from "@/components/Pill";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
@@ -131,7 +132,6 @@ const GREEN_VALLEY_FEATURED_SERVICES: ServiceLink[] = [
 ];
 
 // The remaining 14 services render as pills in two fixed rows of seven.
-type ServicePill = { title: string; href: string };
 
 const GREEN_VALLEY_PILLS_ROW_ONE: ServicePill[] = [
   { title: "Emergency Plumbing", href: "/green-valley/emergency-plumbing/" },
@@ -484,30 +484,8 @@ export default function GreenValleyPlumbingServicesPage() {
               <SectionRevealItem className="mt-10">
                 {/* Remaining services as pills, kept in two fixed rows of seven. */}
                 <div className="flex flex-col gap-4">
-                  <ul className="flex flex-wrap justify-center gap-x-4 gap-y-6">
-                    {GREEN_VALLEY_PILLS_ROW_ONE.map((pill) => (
-                      <li key={pill.href}>
-                        <Link
-                          href={pill.href}
-                          className="inline-flex min-h-12 items-center justify-center rounded-full border border-brand-primary/20 bg-white px-5 py-3 text-sm font-medium text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors"
-                        >
-                          {pill.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                  <ul className="flex flex-wrap justify-center gap-x-4 gap-y-6">
-                    {GREEN_VALLEY_PILLS_ROW_TWO.map((pill) => (
-                      <li key={pill.href}>
-                        <Link
-                          href={pill.href}
-                          className="inline-flex min-h-12 items-center justify-center rounded-full bg-brand-primary px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-colors"
-                        >
-                          {pill.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  <PillRow pills={GREEN_VALLEY_PILLS_ROW_ONE} variant="outline" />
+                  <PillRow pills={GREEN_VALLEY_PILLS_ROW_TWO} variant="solid" />
                 </div>
               </SectionRevealItem>
             </SectionReveal>
