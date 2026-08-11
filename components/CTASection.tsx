@@ -1,5 +1,5 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
+import { Button, type ButtonVariant } from "@/components/Button";
 
 type CTA = {
   label: string;
@@ -94,6 +94,16 @@ export function CTASection({
   );
 }
 
+// `onColor` picks the surface the button has to survive on: the inverse
+// variants for filled (red/charcoal) sections, the standard pair for light.
+const CTA_VARIANTS: Record<
+  "primary" | "secondary",
+  Record<"onColor" | "onLight", ButtonVariant>
+> = {
+  primary: { onColor: "inverse", onLight: "primary" },
+  secondary: { onColor: "inverse-outline", onLight: "secondary" },
+};
+
 function CtaButton({
   cta,
   kind,
@@ -103,41 +113,15 @@ function CtaButton({
   kind: "primary" | "secondary";
   onColor: boolean;
 }) {
-  const base =
-    "inline-flex min-h-12 items-center justify-center rounded-lg px-6 py-3 text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";
-
-  let styles: string;
-  if (kind === "primary") {
-    styles = onColor
-      ? `${base} bg-white text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline-white`
-      : `${base} bg-brand-primary text-white shadow-sm hover:bg-brand-primary-hover focus-visible:outline-brand-primary`;
-  } else {
-    styles = onColor
-      ? `${base} border border-white/60 text-white hover:bg-white/10 focus-visible:outline-white`
-      : `${base} border border-brand-dark/20 text-brand-dark hover:bg-brand-surface-alt focus-visible:outline-brand-dark`;
-  }
-
-  if (cta.disabled) {
-    const disabledBase =
-      "inline-flex min-h-12 items-center justify-center rounded-lg border bg-transparent px-6 py-3 text-base font-semibold cursor-not-allowed";
-    const disabledStyles = onColor
-      ? `${disabledBase} border-white/40 text-white/75`
-      : `${disabledBase} border-brand-dark/25 text-brand-dark/55`;
-    return (
-      <span
-        role="button"
-        aria-disabled="true"
-        title="Phone number pending"
-        className={disabledStyles}
-      >
-        {cta.label}
-      </span>
-    );
-  }
-
   return (
-    <Link href={cta.href} className={styles}>
+    <Button
+      href={cta.href}
+      variant={CTA_VARIANTS[kind][onColor ? "onColor" : "onLight"]}
+      size="lg"
+      disabled={cta.disabled}
+      title={cta.disabled ? "Phone number pending" : undefined}
+    >
       {cta.label}
-    </Link>
+    </Button>
   );
 }
