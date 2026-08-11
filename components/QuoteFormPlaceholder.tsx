@@ -301,62 +301,64 @@ export function QuoteFormPlaceholder({
           </div>
         </div>
 
-        <div>
-          <label htmlFor="qf-phone" className={labelClass}>
-            Phone
-          </label>
-          <input
-            id="qf-phone"
-            name="phone"
-            type="tel"
-            required
-            aria-required="true"
-            aria-invalid={errors.phone ? "true" : "false"}
-            autoComplete="tel"
-            inputMode="tel"
-            placeholder="(702) 000-0000"
-            disabled={isSubmitting}
-            className={inputClass(Boolean(errors.phone))}
-          />
-          {errors.phone ? (
-            <p role="alert" className={errorClass}>
-              {errors.phone}
-            </p>
-          ) : null}
-        </div>
-
-        <fieldset
-          role="radiogroup"
-          aria-required="true"
-          aria-invalid={errors.contactMethod ? "true" : "false"}
-        >
-          <legend className={labelClass}>Preferred contact method</legend>
-          <div className="grid grid-cols-2 gap-3">
-            {CONTACT_METHODS.map((option) => (
-              <label
-                key={option.value}
-                className={`${radioOptionClass(Boolean(errors.contactMethod))} ${
-                  isSubmitting ? "cursor-not-allowed opacity-60" : "cursor-pointer"
-                }`}
-              >
-                <input
-                  type="radio"
-                  name="contactMethod"
-                  value={option.value}
-                  required
-                  disabled={isSubmitting}
-                  className="h-4 w-4 accent-brand-primary disabled:cursor-not-allowed"
-                />
-                <span>{option.label}</span>
-              </label>
-            ))}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div>
+            <label htmlFor="qf-phone" className={labelClass}>
+              Phone
+            </label>
+            <input
+              id="qf-phone"
+              name="phone"
+              type="tel"
+              required
+              aria-required="true"
+              aria-invalid={errors.phone ? "true" : "false"}
+              autoComplete="tel"
+              inputMode="tel"
+              placeholder="(702) 000-0000"
+              disabled={isSubmitting}
+              className={inputClass(Boolean(errors.phone))}
+            />
+            {errors.phone ? (
+              <p role="alert" className={errorClass}>
+                {errors.phone}
+              </p>
+            ) : null}
           </div>
-          {errors.contactMethod ? (
-            <p role="alert" className={errorClass}>
-              {errors.contactMethod}
-            </p>
-          ) : null}
-        </fieldset>
+
+          <fieldset
+            role="radiogroup"
+            aria-required="true"
+            aria-invalid={errors.contactMethod ? "true" : "false"}
+          >
+            <legend className={labelClass}>Preferred contact method</legend>
+            <div className="grid grid-cols-2 gap-3">
+              {CONTACT_METHODS.map((option) => (
+                <label
+                  key={option.value}
+                  className={`${radioOptionClass(Boolean(errors.contactMethod))} ${
+                    isSubmitting ? "cursor-not-allowed opacity-60" : "cursor-pointer"
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="contactMethod"
+                    value={option.value}
+                    required
+                    disabled={isSubmitting}
+                    className="h-4 w-4 accent-brand-primary disabled:cursor-not-allowed"
+                  />
+                  <span>{option.label}</span>
+                </label>
+              ))}
+            </div>
+            {errors.contactMethod ? (
+              <p role="alert" className={errorClass}>
+                {errors.contactMethod}
+              </p>
+            ) : null}
+          </fieldset>
+        </div>
 
         <div>
           <label htmlFor="qf-service" className={labelClass}>
