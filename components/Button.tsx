@@ -40,6 +40,13 @@ type ButtonAsButtonProps = ButtonBaseProps & {
   // onClick is only callable when this Button is rendered from a Client
   // Component parent. RSC will throw if a Server Component passes one.
   onClick?: () => void;
+  // `busy` is work in progress, which is not the same as `disabled`. Disabled
+  // means unavailable and reads as the muted outline treatment; busy keeps the
+  // variant's own colors and only dims them, so a submitting form still looks
+  // like the button you just pressed. It blocks input the same way. Only the
+  // button form accepts it: a link cannot be mid-submit.
+  busy?: boolean;
+  busyLabel?: ReactNode;
 };
 
 type ButtonProps = ButtonAsLinkProps | ButtonAsButtonProps;
@@ -101,18 +108,51 @@ const disabledStyles: Record<ButtonVariant, string> = {
   "inverse-outline": disabledOnFilled,
 };
 
+// Busy layers over the variant instead of replacing it, so the button keeps the
+// colors it had a moment ago and only dims. `gap-2` is applied here rather than
+// in baseStyles so it only exists when there is a spinner to separate.
+const busyStyles = "gap-2 opacity-80 cursor-not-allowed";
+
 function composeClass(
   variant: ButtonVariant,
   size: ButtonSize,
   isDisabled: boolean,
+  isBusy: boolean,
   fullWidth: boolean,
   extra?: string,
 ) {
   const widthCls = fullWidth ? "w-full" : "";
-  const stateCls = isDisabled ? disabledStyles[variant] : variantStyles[variant];
+  // Busy is checked first: it also sets the disabled attribute, and without
+  // this ordering that would drag in the muted outline treatment and make a
+  // submitting form look broken.
+  const stateCls = isBusy
+    ? `${variantStyles[variant]} ${busyStyles}`
+    : isDisabled
+      ? disabledStyles[variant]
+      : variantStyles[variant];
   return [baseStyles, sizeStyles[size], stateCls, widthCls, extra ?? ""]
     .filter(Boolean)
     .join(" ");
+}
+
+function Spinner() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="h-5 w-5 motion-safe:animate-spin"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <circle cx="12" cy="12" r="9" className="opacity-25" />
+      <path
+        d="M21 12a9 9 0 0 1-9 9"
+        strokeLinecap="round"
+        className="opacity-75"
+      />
+    </svg>
+  );
 }
 
 export function Button(props: ButtonProps) {
@@ -127,7 +167,16 @@ export function Button(props: ButtonProps) {
     "aria-label": ariaLabel,
   } = props;
 
-  const classes = composeClass(variant, size, disabled, fullWidth, className);
+  // Links never carry busy; the prop only exists on the button form.
+  const isBusy = "href" in props && props.href !== undefined ? false : Boolean(props.busy);
+  const classes = composeClass(
+    variant,
+    size,
+    disabled,
+    isBusy,
+    fullWidth,
+    className,
+  );
 
   if ("href" in props && props.href !== undefined) {
     if (disabled) {
@@ -177,12 +226,21 @@ export function Button(props: ButtonProps) {
     <button
       type={props.type ?? "button"}
       onClick={props.onClick}
-      disabled={disabled}
+      // Busy blocks input too, so the form cannot be submitted twice.
+      disabled={disabled || isBusy}
+      aria-busy={isBusy ? "true" : "false"}
       className={classes}
       title={title}
       aria-label={ariaLabel}
     >
-      {children}
+      {isBusy ? (
+        <>
+          <Spinner />
+          <span>{props.busyLabel ?? children}</span>
+        </>
+      ) : (
+        children
+      )}
     </button>
   );
 }

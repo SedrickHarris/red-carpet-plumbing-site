@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { Button } from "@/components/Button";
 
 // TODO: Replace with confirmed GHL webhook URL before launch.
 // Architecture decision (confirmed): Native Next.js form POST to GHL webhook.
@@ -408,21 +409,17 @@ export function QuoteFormPlaceholder({
           ) : null}
         </div>
 
-        <button
+        <Button
           type="submit"
-          disabled={isSubmitting}
-          aria-busy={isSubmitting ? "true" : "false"}
-          className="mt-2 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-brand-primary px-4 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary disabled:cursor-not-allowed disabled:opacity-80"
+          variant="primary"
+          size="lg"
+          fullWidth
+          busy={isSubmitting}
+          busyLabel="Sending..."
+          className="mt-2"
         >
-          {isSubmitting ? (
-            <>
-              <Spinner />
-              <span>Sending...</span>
-            </>
-          ) : (
-            submitLabel
-          )}
-        </button>
+          {submitLabel}
+        </Button>
 
         {state === "error" ? (
           <p role="alert" className="mt-3 text-sm text-red-600">
@@ -431,25 +428,5 @@ export function QuoteFormPlaceholder({
         ) : null}
       </div>
     </form>
-  );
-}
-
-function Spinner() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 motion-safe:animate-spin"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <circle cx="12" cy="12" r="9" className="opacity-25" />
-      <path
-        d="M21 12a9 9 0 0 1-9 9"
-        strokeLinecap="round"
-        className="opacity-75"
-      />
-    </svg>
   );
 }
