@@ -44,8 +44,16 @@ type ButtonAsButtonProps = ButtonBaseProps & {
 
 type ButtonProps = ButtonAsLinkProps | ButtonAsButtonProps;
 
+// transition-property is a single property, so `transition-colors` followed by
+// `motion-safe:transition-transform` does not compose: the motion-safe rule
+// replaces the list outright and hover colors stop transitioning for everyone
+// who has not asked for reduced motion. The motion-safe list below is the union
+// of both, so colors fade AND the press animates. Note `scale` has to be listed
+// explicitly: active:scale-[0.97] sets the `scale` property, not `transform`.
+// The plain transition-colors is the reduced-motion fallback, where colors
+// should still fade but nothing should move.
 const baseStyles =
-  "inline-flex items-center justify-center rounded-lg font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed motion-safe:transition-transform motion-safe:active:scale-[0.97]";
+  "inline-flex items-center justify-center rounded-lg font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed motion-safe:transition-[color,background-color,border-color,outline-color,transform,translate,scale,rotate] motion-safe:active:scale-[0.97]";
 
 // Heights are the enforced floor, not the rendered height: min-h- lets a
 // wrapped label grow the button instead of clipping it. Values track
