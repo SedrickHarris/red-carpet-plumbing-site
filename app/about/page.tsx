@@ -441,7 +441,7 @@ export default function AboutPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-10 text-left">
+            <div className="mt-10 text-center">
               <Button href="/service-areas/" variant="inverse-outline" size="lg">
                 See All Service Areas
               </Button>
