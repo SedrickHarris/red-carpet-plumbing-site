@@ -370,8 +370,13 @@ export default function LakeLasVegasPlumbingServicesPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: Add client-supplied Lake Las Vegas hero image at
+            /images/locations/lake-las-vegas/hero.webp, then pass it via the
+            HeroSection backgroundImage prop. Omitted for now (image missing);
+            hero renders its gradient background. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             { label: "Service Areas", href: "/service-areas/" },
             {
@@ -379,15 +384,7 @@ export default function LakeLasVegasPlumbingServicesPage() {
               href: "/henderson-plumbing-services/",
             },
             { label: "Lake Las Vegas Plumbing Services" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: Add client-supplied Lake Las Vegas hero image at
-            /images/locations/lake-las-vegas/hero.webp, then pass it via the
-            HeroSection backgroundImage prop. Omitted for now (image missing);
-            hero renders its gradient background. */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

@@ -245,15 +245,12 @@ export default function ContactPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: BREADCRUMBS */}
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Contact" },
-          ]}
-        />
-
         {/* SECTION 2: HERO (two-column with form) */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Contact" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline="Contact a Las Vegas Plumber"
           subheading={

@@ -359,20 +359,17 @@ export default function EnterprisePlumbingServicesPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Service Areas", href: "/service-areas/" },
-            { label: "Enterprise Plumbing Services" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         {/* TODO: Add client-supplied Enterprise hero image at
             /images/locations/enterprise/hero.webp, then pass it via the
             HeroSection backgroundImage prop. Omitted for now (image missing);
             hero renders its gradient background. */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Service Areas", href: "/service-areas/" },
+            { label: "Enterprise Plumbing Services" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

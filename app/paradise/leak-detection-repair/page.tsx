@@ -337,23 +337,20 @@ export default function ParadiseLeakDetectionPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            {
-              label: "Paradise Plumbing Services",
-              href: "/paradise-plumbing-services/",
-            },
-            { label: "Leak Detection and Repair in Paradise, NV" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         {/* TODO: no /images/locations/paradise/ assets exist yet — using the */}
         {/* leak-detection-repair service hero as the fallback per the image plan */}
         {/* (matches the sibling Henderson leak page). Swap to a Paradise-specific */}
         {/* hero when the client supplies one. */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            {
+              label: "Paradise Plumbing Services",
+              href: "/paradise-plumbing-services/",
+            },
+            { label: "Leak Detection and Repair in Paradise, NV" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

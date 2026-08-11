@@ -356,15 +356,12 @@ export default function SewerLineServicesPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Sewer Line Services" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Sewer Line Services" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

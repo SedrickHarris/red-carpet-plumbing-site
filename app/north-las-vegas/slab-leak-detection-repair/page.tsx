@@ -344,16 +344,13 @@ export default function NorthLasVegasSlabLeakPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             { label: "North Las Vegas Plumbing Services", href: "/north-las-vegas-plumbing-services/" },
             { label: "Slab Leak Detection and Repair in North Las Vegas" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

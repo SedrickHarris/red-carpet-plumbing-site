@@ -364,22 +364,19 @@ export default function HendersonSewerLinePage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: no /images/services/sewer-line-services/ hero asset exists;
+            hero renders its gradient background. Add a dedicated hero image when
+            available and pass it via backgroundImage. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Henderson Plumbing Services",
               href: "/henderson-plumbing-services/",
             },
             { label: "Sewer Line Services in Henderson, NV" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: no /images/services/sewer-line-services/ hero asset exists;
-            hero renders its gradient background. Add a dedicated hero image when
-            available and pass it via backgroundImage. */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

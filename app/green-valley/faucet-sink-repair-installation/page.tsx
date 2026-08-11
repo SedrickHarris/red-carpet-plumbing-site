@@ -375,8 +375,11 @@ export default function GreenValleyFaucetSinkPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: card.webp does not exist for this service; using hero.webp.
+            Add a dedicated card asset if a separate one is desired. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Green Valley Plumbing Services",
@@ -385,13 +388,7 @@ export default function GreenValleyFaucetSinkPage() {
             {
               label: "Faucet and Sink Repair and Installation in Green Valley",
             },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: card.webp does not exist for this service; using hero.webp.
-            Add a dedicated card asset if a separate one is desired. */}
-        <HeroSection
+          ]} variant="dark" />}
           trustItems={GV_FAUCET_SINK_TRUST}
           headingLevel="h1"
           headline={

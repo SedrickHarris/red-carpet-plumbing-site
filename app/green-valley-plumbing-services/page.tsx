@@ -342,8 +342,13 @@ export default function GreenValleyPlumbingServicesPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: Add client-supplied Green Valley hero image at
+            /images/locations/green-valley/hero.webp, then pass it via the
+            HeroSection backgroundImage prop. Omitted for now (image missing);
+            hero renders its gradient background. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             { label: "Service Areas", href: "/service-areas/" },
             {
@@ -351,15 +356,7 @@ export default function GreenValleyPlumbingServicesPage() {
               href: "/henderson-plumbing-services/",
             },
             { label: "Green Valley Plumbing Services" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: Add client-supplied Green Valley hero image at
-            /images/locations/green-valley/hero.webp, then pass it via the
-            HeroSection backgroundImage prop. Omitted for now (image missing);
-            hero renders its gradient background. */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

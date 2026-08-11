@@ -407,8 +407,9 @@ export default function AlianteLeakDetectionRepairPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO (trust strip rendered inside via trustItems) */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "North Las Vegas Plumbing Services",
@@ -422,11 +423,7 @@ export default function AlianteLeakDetectionRepairPage() {
               label:
                 "Leak Detection and Repair in the Aliante Area of North Las Vegas, NV",
             },
-          ]}
-        />
-
-        {/* SECTION 1: HERO (trust strip rendered inside via trustItems) */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

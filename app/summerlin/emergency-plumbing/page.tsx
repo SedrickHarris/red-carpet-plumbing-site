@@ -295,19 +295,16 @@ export default function SummerlinEmergencyPlumbingPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Summerlin Plumbing Services",
               href: "/summerlin-plumbing-services/",
             },
             { label: "Emergency Plumbing in Summerlin, NV" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

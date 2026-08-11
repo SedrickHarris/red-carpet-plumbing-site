@@ -369,15 +369,12 @@ export default function WaterHeaterRepairInstallationPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Water Heater Repair and Installation" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Water Heater Repair and Installation" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

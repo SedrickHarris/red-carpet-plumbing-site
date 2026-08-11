@@ -347,19 +347,16 @@ export default function LakeLasVegasEmergencyPlumbingPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Lake Las Vegas Plumbing Services",
               href: "/lake-las-vegas-plumbing-services/",
             },
             { label: "Emergency Plumbing in Lake Las Vegas" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

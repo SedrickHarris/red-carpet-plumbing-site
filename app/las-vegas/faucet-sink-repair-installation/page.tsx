@@ -407,8 +407,9 @@ export default function LasVegasFaucetSinkPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Las Vegas Plumbing Services",
@@ -418,11 +419,7 @@ export default function LasVegasFaucetSinkPage() {
               label:
                 "Faucet and Sink Repair and Installation in Las Vegas, NV",
             },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

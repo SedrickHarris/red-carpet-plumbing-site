@@ -387,19 +387,16 @@ export default function GreenValleySlabLeakPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Green Valley Plumbing Services",
               href: "/green-valley-plumbing-services/",
             },
             { label: "Slab Leak Detection and Repair in Green Valley" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

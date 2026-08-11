@@ -365,22 +365,19 @@ export default function SpringValleyCommercialPlumbingPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: Replace the accent hero with an approved commercial plumbing */}
+        {/* hero image when the client supplies one at */}
+        {/* public/images/services/commercial-plumbing/hero.webp (none exists yet). */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Spring Valley Plumbing Services",
               href: "/spring-valley-plumbing-services/",
             },
             { label: "Commercial Plumbing in Spring Valley" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: Replace the accent hero with an approved commercial plumbing */}
-        {/* hero image when the client supplies one at */}
-        {/* public/images/services/commercial-plumbing/hero.webp (none exists yet). */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

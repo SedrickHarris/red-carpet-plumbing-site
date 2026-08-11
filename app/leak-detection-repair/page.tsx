@@ -359,15 +359,12 @@ export default function LeakDetectionAndRepairPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Leak Detection and Repair" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Leak Detection and Repair" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

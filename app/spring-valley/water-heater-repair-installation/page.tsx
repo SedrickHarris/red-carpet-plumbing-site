@@ -315,8 +315,9 @@ export default function SpringValleyWaterHeaterPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Spring Valley Plumbing Services",
@@ -325,11 +326,7 @@ export default function SpringValleyWaterHeaterPage() {
             {
               label: "Water Heater Repair and Installation in Spring Valley",
             },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

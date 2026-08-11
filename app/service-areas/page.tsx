@@ -368,15 +368,12 @@ export default function ServiceAreasPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: BREADCRUMBS */}
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Service Areas" },
-          ]}
-        />
-
         {/* SECTION 2: HERO (two-column with form) */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Service Areas" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

@@ -375,15 +375,12 @@ export default function BackflowPreventionPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Backflow Prevention" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Backflow Prevention" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

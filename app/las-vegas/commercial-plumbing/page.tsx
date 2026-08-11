@@ -345,22 +345,19 @@ export default function LasVegasCommercialPlumbingPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: Replace ServiceImagePlaceholder/accent hero with an approved commercial */}
+        {/* plumbing hero image when the client supplies one at */}
+        {/* public/images/services/commercial-plumbing/hero.webp (none exists yet). */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Las Vegas Plumbing",
               href: "/las-vegas-plumbing-services/",
             },
             { label: "Commercial Plumbing" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: Replace ServiceImagePlaceholder/accent hero with an approved commercial */}
-        {/* plumbing hero image when the client supplies one at */}
-        {/* public/images/services/commercial-plumbing/hero.webp (none exists yet). */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

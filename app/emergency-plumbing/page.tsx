@@ -365,15 +365,12 @@ export default function EmergencyPlumbingPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Emergency Plumbing" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Emergency Plumbing" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>
