@@ -495,7 +495,7 @@ export default function Home() {
                 </div>
               </SectionRevealItem>
 
-              <SectionRevealItem className="mt-12 text-left">
+              <SectionRevealItem className="mt-12 text-center">
                 <Button href="/plumbing-services/" variant="primary" size="lg">
                   See All Plumbing Services
                 </Button>
@@ -511,7 +511,8 @@ export default function Home() {
               <SectionRevealItem>
                 <div className="text-left">
                   <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                    Common Plumbing Problems in Las Vegas Homes
+                    Common Plumbing Problems
+                    <br className="hidden sm:block" /> in Las Vegas Homes
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Las Vegas homes and businesses face specific plumbing
@@ -576,7 +577,7 @@ export default function Home() {
                 </ul>
               </SectionRevealItem>
 
-              <SectionRevealItem className="mt-10 text-left">
+              <SectionRevealItem className="mt-10 text-center">
                 <Button
                   href="/service-areas/"
                   variant="inverse-charcoal"
