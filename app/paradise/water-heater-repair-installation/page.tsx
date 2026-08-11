@@ -309,22 +309,19 @@ export default function ParadiseWaterHeaterPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: no /images/locations/paradise/ assets exist yet — using the */}
+        {/* water-heater service card as the fallback per the image plan. */}
+        {/* Swap to a Paradise-specific hero when the client supplies one. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Paradise Plumbing Services",
               href: "/paradise-plumbing-services/",
             },
             { label: "Water Heater Repair and Installation in Paradise, NV" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: no /images/locations/paradise/ assets exist yet — using the */}
-        {/* water-heater service card as the fallback per the image plan. */}
-        {/* Swap to a Paradise-specific hero when the client supplies one. */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

@@ -360,15 +360,12 @@ export default function SlabLeakDetectionAndRepairPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Slab Leak Detection and Repair" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Slab Leak Detection and Repair" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

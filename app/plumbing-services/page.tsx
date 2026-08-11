@@ -343,15 +343,12 @@ export default function PlumbingServicesPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: BREADCRUMBS */}
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Plumbing Services" },
-          ]}
-        />
-
         {/* SECTION 2: HERO (two-column with form) */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Plumbing Services" },
+          ]} variant="dark" />}
           trustItems={TRUST_STRIP_ITEMS}
           headingLevel="h1"
           headline={

@@ -381,8 +381,12 @@ export default function AlianteWaterHeaterPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: dedicated higher-resolution hero asset. hero.webp is the
+            low-res 350x350 Batch 3 asset; using the larger card.webp here,
+            matching the NLV water heater sibling. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "North Las Vegas Plumbing Services",
@@ -396,14 +400,7 @@ export default function AlianteWaterHeaterPage() {
               label:
                 "Water Heater Repair and Installation in the Aliante Area",
             },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: dedicated higher-resolution hero asset. hero.webp is the
-            low-res 350x350 Batch 3 asset; using the larger card.webp here,
-            matching the NLV water heater sibling. */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

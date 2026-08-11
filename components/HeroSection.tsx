@@ -14,6 +14,9 @@ type CTA = {
 type HeroSectionProps = {
   headline: ReactNode;
   headingLevel?: "h1" | "h2";
+  // Rendered at the top of the hero, on the charcoal background, instead of as
+  // a separate white bar above it. Pass the dark Breadcrumbs variant.
+  breadcrumbs?: ReactNode;
   subheading?: ReactNode;
   trustItems?: string[];
   primaryCTA?: CTA;
@@ -31,6 +34,7 @@ type HeroSectionProps = {
 export function HeroSection({
   headline,
   headingLevel = "h1",
+  breadcrumbs,
   subheading,
   trustItems,
   primaryCTA,
@@ -102,6 +106,11 @@ export function HeroSection({
           />
         </div>
       ) : null}
+
+      {/* Sits above the padded hero container, so it reads as a trail at the
+          top of the hero rather than as its own bar. `relative` keeps it above
+          the -z-10 background image. */}
+      {breadcrumbs ? <div className="relative">{breadcrumbs}</div> : null}
 
       <div
         className={`relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-16 ${paddingY} ${

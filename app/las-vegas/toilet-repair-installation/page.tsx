@@ -392,19 +392,16 @@ export default function LasVegasToiletPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Las Vegas Plumbing Services",
               href: "/las-vegas-plumbing-services/",
             },
             { label: "Toilet Repair and Installation in Las Vegas, NV" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

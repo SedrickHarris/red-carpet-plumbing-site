@@ -357,20 +357,17 @@ export default function BoulderCityPlumbingServicesPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Service Areas", href: "/service-areas/" },
-            { label: "Boulder City Plumbing Services" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         {/* TODO: Add client-supplied Boulder City hero image at
             /images/locations/boulder-city/hero.webp, then pass it via the
             HeroSection backgroundImage prop. Omitted for now (image missing);
             hero renders its gradient background. */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Service Areas", href: "/service-areas/" },
+            { label: "Boulder City Plumbing Services" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

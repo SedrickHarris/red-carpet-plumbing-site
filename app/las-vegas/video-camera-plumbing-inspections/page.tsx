@@ -420,8 +420,9 @@ export default function LasVegasVideoCameraInspectionPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Las Vegas Plumbing Services",
@@ -430,11 +431,7 @@ export default function LasVegasVideoCameraInspectionPage() {
             {
               label: "Video Camera Plumbing Inspections in Las Vegas, NV",
             },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

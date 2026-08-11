@@ -420,8 +420,12 @@ export default function AlianteSlabLeakPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO (trust strip rendered inside via trustItems) */}
+        {/* TODO: Replace with a dedicated high-resolution hero asset when
+            available. hero.webp for this service is the low-res 18KB asset per
+            the implementation log; using card.webp here. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "North Las Vegas Plumbing Services",
@@ -435,14 +439,7 @@ export default function AlianteSlabLeakPage() {
               label:
                 "Slab Leak Detection and Repair in the Aliante Area of North Las Vegas, NV",
             },
-          ]}
-        />
-
-        {/* SECTION 1: HERO (trust strip rendered inside via trustItems) */}
-        {/* TODO: Replace with a dedicated high-resolution hero asset when
-            available. hero.webp for this service is the low-res 18KB asset per
-            the implementation log; using card.webp here. */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

@@ -375,17 +375,14 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Plumbing Fixture Repair, Replacement and Installation",
             },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

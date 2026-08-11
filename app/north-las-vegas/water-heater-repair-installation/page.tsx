@@ -332,8 +332,11 @@ export default function NorthLasVegasWaterHeaterPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: dedicated higher-resolution hero asset. hero.webp is the
+            low-res 350x350 Batch 3 asset; using the larger card.webp here. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "North Las Vegas Plumbing Services",
@@ -342,13 +345,7 @@ export default function NorthLasVegasWaterHeaterPage() {
             {
               label: "Water Heater Repair and Installation in North Las Vegas",
             },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: dedicated higher-resolution hero asset. hero.webp is the
-            low-res 350x350 Batch 3 asset; using the larger card.webp here. */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

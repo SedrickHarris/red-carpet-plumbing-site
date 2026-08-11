@@ -355,16 +355,13 @@ export default function SummerlinPlumbingServicesPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             { label: "Service Areas", href: "/service-areas/" },
             { label: "Summerlin Plumbing Services" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

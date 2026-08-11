@@ -9,11 +9,37 @@ export type BreadcrumbItem = {
 type BreadcrumbsProps = {
   trail: BreadcrumbItem[];
   className?: string;
+  variant?: "light" | "dark";
 };
+
+// The dark variant is for crumbs sitting on bg-brand-charcoal, where the light
+// palette fails WCAG AA: brand-primary measures 2.13:1 against #111827 and
+// brand-muted 3.67:1, both under the 4.5:1 floor. It therefore separates the
+// current page by weight and brightness rather than hue. Measured against
+// #111827: white/70 composites to #b8babe at 9.13:1, white is 17.74:1.
+const styles = {
+  light: {
+    link: "text-brand-muted transition-colors hover:text-brand-primary",
+    current: "font-medium text-brand-primary",
+    muted: "text-brand-muted",
+    chevron: "text-brand-muted/60",
+  },
+  dark: {
+    link: "text-white/70 transition-colors hover:text-white",
+    current: "font-medium text-white",
+    muted: "text-white/70",
+    chevron: "text-white/40",
+  },
+} as const;
 
 // Trail values must mirror the page's BreadcrumbList JSON-LD schema exactly
 // when the page also injects BreadcrumbList structured data.
-export function Breadcrumbs({ trail, className = "" }: BreadcrumbsProps) {
+export function Breadcrumbs({
+  trail,
+  className = "",
+  variant = "light",
+}: BreadcrumbsProps) {
+  const s = styles[variant];
   return (
     <nav aria-label="Breadcrumb" className={className}>
       <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-10 xl:px-12">
@@ -26,25 +52,18 @@ export function Breadcrumbs({ trail, className = "" }: BreadcrumbsProps) {
                 className="flex items-center gap-2"
               >
                 {item.href && !isLast ? (
-                  <Link
-                    href={item.href}
-                    className="text-brand-muted transition-colors hover:text-brand-primary"
-                  >
+                  <Link href={item.href} className={s.link}>
                     {item.label}
                   </Link>
                 ) : (
                   <span
                     aria-current={isLast ? "page" : undefined}
-                    className={
-                      isLast
-                        ? "font-medium text-brand-primary"
-                        : "text-brand-muted"
-                    }
+                    className={isLast ? s.current : s.muted}
                   >
                     {item.label}
                   </span>
                 )}
-                {!isLast ? <ChevronSeparator /> : null}
+                {!isLast ? <ChevronSeparator className={s.chevron} /> : null}
               </li>
             );
           })}
@@ -54,12 +73,12 @@ export function Breadcrumbs({ trail, className = "" }: BreadcrumbsProps) {
   );
 }
 
-function ChevronSeparator() {
+function ChevronSeparator({ className }: { className: string }) {
   return (
     <svg
       aria-hidden="true"
       viewBox="0 0 16 16"
-      className="h-3.5 w-3.5 flex-none text-brand-muted/60"
+      className={`h-3.5 w-3.5 flex-none ${className}`}
       fill="none"
       stroke="currentColor"
       strokeWidth={1.75}

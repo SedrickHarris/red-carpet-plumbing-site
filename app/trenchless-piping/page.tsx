@@ -371,15 +371,12 @@ export default function TrenchlessPipingPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Trenchless Piping" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Trenchless Piping" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

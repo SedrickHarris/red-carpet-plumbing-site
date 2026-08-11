@@ -397,21 +397,18 @@ export default function GreenValleyToiletPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: card.webp does not exist for this service; using hero.webp.
+            Add a dedicated card/hero asset if a higher-res hero is desired. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Green Valley Plumbing Services",
               href: "/green-valley-plumbing-services/",
             },
             { label: "Toilet Repair and Installation in Green Valley" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: card.webp does not exist for this service; using hero.webp.
-            Add a dedicated card/hero asset if a higher-res hero is desired. */}
-        <HeroSection
+          ]} variant="dark" />}
           trustItems={GV_TOILET_TRUST}
           headingLevel="h1"
           headline={

@@ -328,19 +328,16 @@ export default function SpringValleySlabLeakPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Spring Valley Plumbing Services",
               href: "/spring-valley-plumbing-services/",
             },
             { label: "Slab Leak Detection and Repair in Spring Valley" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

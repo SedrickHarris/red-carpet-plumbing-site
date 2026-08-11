@@ -324,21 +324,18 @@ export default function HendersonWaterHeaterPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: dedicated higher-resolution hero asset. hero.webp is the
+            low-res 350x350 Batch 3 asset; using the larger card.webp here. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Henderson Plumbing Services",
               href: "/henderson-plumbing-services/",
             },
             { label: "Water Heater Repair and Installation in Henderson" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: dedicated higher-resolution hero asset. hero.webp is the
-            low-res 350x350 Batch 3 asset; using the larger card.webp here. */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

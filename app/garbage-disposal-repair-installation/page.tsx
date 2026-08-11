@@ -375,15 +375,12 @@ export default function GarbageDisposalRepairInstallationPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Garbage Disposal Repair and Installation" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Garbage Disposal Repair and Installation" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

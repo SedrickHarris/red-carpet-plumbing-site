@@ -367,8 +367,13 @@ export default function AlianteAreaPlumbingPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: Add client-supplied Aliante area hero image at
+            /images/locations/aliante/hero.webp, then pass it via the
+            HeroSection backgroundImage prop. Omitted for now (image missing);
+            hero renders its gradient background. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             { label: "Service Areas", href: "/service-areas/" },
             {
@@ -376,15 +381,7 @@ export default function AlianteAreaPlumbingPage() {
               href: "/north-las-vegas-plumbing-services/",
             },
             { label: "Aliante Area Plumbing Services" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: Add client-supplied Aliante area hero image at
-            /images/locations/aliante/hero.webp, then pass it via the
-            HeroSection backgroundImage prop. Omitted for now (image missing);
-            hero renders its gradient background. */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

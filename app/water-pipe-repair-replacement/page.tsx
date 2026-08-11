@@ -378,17 +378,14 @@ export default function WaterPipeRepairReplacementPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Water Pipe Repair and Replacement" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         {/* TODO: Verify hero image resolution at display size. */}
         {/* Client may need to supply higher-resolution asset. */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Water Pipe Repair and Replacement" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

@@ -331,22 +331,19 @@ export default function EnterpriseCommercialPlumbingPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
+        {/* SECTION 1: HERO */}
+        {/* TODO: No commercial-plumbing hero/card image exists under
+            public/images/services/commercial-plumbing/. Add an approved asset
+            and pass it as backgroundImage. Do not invent a path. */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
               label: "Enterprise Plumbing Services",
               href: "/enterprise-plumbing-services/",
             },
             { label: "Commercial Plumbing in Enterprise" },
-          ]}
-        />
-
-        {/* SECTION 1: HERO */}
-        {/* TODO: No commercial-plumbing hero/card image exists under
-            public/images/services/commercial-plumbing/. Add an approved asset
-            and pass it as backgroundImage. Do not invent a path. */}
-        <HeroSection
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

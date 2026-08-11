@@ -377,16 +377,13 @@ export default function CommercialPlumbingPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Commercial Plumbing" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         {/* TODO: Replace ServiceImagePlaceholder with approved commercial plumbing hero image when client supplies asset at: public/images/services/commercial-plumbing/hero.webp */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Commercial Plumbing" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

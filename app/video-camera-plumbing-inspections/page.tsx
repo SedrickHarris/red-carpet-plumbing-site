@@ -375,15 +375,12 @@ export default function VideoCameraPlumbingInspectionsPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Video Camera Plumbing Inspections" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Video Camera Plumbing Inspections" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

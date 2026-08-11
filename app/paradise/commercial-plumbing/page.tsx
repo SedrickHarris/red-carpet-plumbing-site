@@ -367,17 +367,6 @@ export default function ParadiseCommercialPlumbingPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            {
-              label: "Paradise Plumbing Services",
-              href: "/paradise-plumbing-services/",
-            },
-            { label: "Commercial Plumbing in Paradise, NV" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         {/* TODO: no commercial-plumbing image assets exist yet (no */}
         {/* public/images/services/commercial-plumbing/ and no */}
@@ -385,6 +374,14 @@ export default function ParadiseCommercialPlumbingPage() {
         {/* pattern from the sibling commercial pages. Swap to an approved hero */}
         {/* image when the client supplies one. */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            {
+              label: "Paradise Plumbing Services",
+              href: "/paradise-plumbing-services/",
+            },
+            { label: "Commercial Plumbing in Paradise, NV" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>

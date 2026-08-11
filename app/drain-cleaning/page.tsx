@@ -356,15 +356,12 @@ export default function DrainCleaningPage() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <Breadcrumbs
-          trail={[
-            { label: "Home", href: "/" },
-            { label: "Drain Cleaning" },
-          ]}
-        />
-
         {/* SECTION 1: HERO */}
         <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            { label: "Drain Cleaning" },
+          ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>
