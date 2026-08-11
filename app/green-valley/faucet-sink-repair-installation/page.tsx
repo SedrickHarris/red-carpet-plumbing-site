@@ -667,7 +667,8 @@ export default function GreenValleyFaucetSinkPage() {
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions About Faucet and Sink Repair and
+                Frequently Asked Questions
+                <br className="hidden sm:block" /> About Faucet and Sink Repair and
                 Installation in Green Valley
               </h2>
             </div>
