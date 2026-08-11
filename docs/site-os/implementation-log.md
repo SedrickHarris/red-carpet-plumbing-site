@@ -834,6 +834,7 @@ FLAG: VERIFY items: not added to existing content (out of scope for this build)
 
 - **Commits pushed to `origin/main` this session:** `b408ea7`, `201e81c`, `1f294e8`, `f7655bc`, `8ec8622`, `d77c50b`, `73cbeed`, `fab038d`, `8e1dd15`, `fd3b243`, `94fae91`
 - **LAUNCH BLOCKER (unchanged):** Both form webhook URLs are empty strings, so every contact and quote submission hits the error path and shows the call-us fallback. When wired, the GHL mapping must expect `phoneType` and must not expect `email`.
+- **[CORRECTED 2026-08-11]:** Field is now `contactMethod` (values `call`/`text`), not `phoneType`/`mobile`/`landline`. See the 2026-08-11 "Section CTA Alignment by Container, and Contact Method Field" entry. Both webhooks are still empty; this only matters once one is wired.
 - **LAUNCH BLOCKER (unchanged):** SiriusSys form endpoint on the homepage hero form unconfirmed.
 - **LAUNCH BLOCKER (unchanged):** `/privacy-policy/` is linked from both forms but has no route.
 - **Open decision:** H1 break convention. 88 pages use an unconditional `<br />`; 20 use `<br className="hidden sm:block" />`.
