@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
@@ -515,12 +516,9 @@ export default function PlumbingServicesPage() {
               prevention, gas line support, and inspection services.
             </p>
             <div className="mt-8">
-              <Link
-                href="/commercial-plumbing/"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
-              >
+              <Button href="/commercial-plumbing/" variant="primary" size="lg">
                 Learn About Commercial Plumbing
-              </Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -538,12 +536,9 @@ export default function PlumbingServicesPage() {
               City, Green Valley, Lake Las Vegas, and surrounding communities.
             </p>
             <div className="mt-8">
-              <Link
-                href="/service-areas/"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-charcoal shadow-sm transition hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
+              <Button href="/service-areas/" variant="inverse-charcoal" size="lg">
                 See All Service Areas
-              </Link>
+              </Button>
             </div>
           </div>
         </section>
