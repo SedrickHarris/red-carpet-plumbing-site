@@ -672,3 +672,204 @@ Internal links: /plumbing-services/, /service-areas/, /contact/ (minimum met)
 em dash count: 0
 Lint: PASS | Type-check: PASS | Build: PASS
 FLAG: VERIFY items: not added to existing content (out of scope for this build)
+
+---
+
+## Homepage Audit and Extend — 2026-06-22
+
+- **Page:** `/` (`app/page.tsx`)
+- **Build type:** Audit and Extend — additive only
+- **Mode:** Beyond-Elite
+- **AI depth:** Level 5
+- **Workflow:** SEO automation pipeline (scan-routes -> keyword seeds -> Keyword Planner CSV -> parse -> cluster -> score -> selection -> brief)
+
+**Gaps addressed:**
+1. meta description: removed unverified "since 1980+"; added service specificity.
+2. robots field: added `{ index: true, follow: true }` explicitly to metadata export.
+3. webpageSchema.description: synced to the new meta description (matches word for word).
+4. HOMEPAGE_FAQS expanded 8 -> 12 (emergency response, NV license, slab leak signs, pricing). faqSchema auto-regenerates from the array.
+5. AEO direct-answer block added (Section 2.5) between Trust Strip and Section 3; citation target for LLM and voice search; includes tel and /contact/ links.
+6. Emergency plumbing internal link added in Section 3 (`/emergency-plumbing/`).
+7. SERVICE_AREAS converted from `string[]` to `ServiceAreaLink[]`; all 11 area chips now live `<Link>` to confirmed hub pages.
+8. Section 5 H2 updated to "Common Plumbing Problems in Las Vegas Homes" for PAA specificity (removed the `<br />`).
+
+**Internal links added:** 13 (11 hub chips + emergency-plumbing in Section 3 + contact in AEO block).
+
+**Validation:** Lint: PASS (0 errors; 2 warnings in copied seo-automation/scripts, not in app/). Build: PASS (compiled successfully, 112 static pages, exit 0). Rendered HTML verified: AEO H2, new FAQs, updated Section 5 H2, hub links, emergency link, FAQPage schema all present.
+
+**Deviations from brief:**
+1. openGraph.description also updated (per page plan Section 5) to remove the unverified "24/7" claim. This is not one of the 7 numbered changes in the build prompt but matches the page plan and the no-unverified-claims posture.
+2. AEO block phone link rendered as a proper `<a href="tel:+17025679172">` (the brief snippet dropped the opening `<a` tag in copy-paste).
+
+**Remaining TODOs:**
+- LAUNCH BLOCKER: SiriusSys form endpoint not wired.
+- LAUNCH BLOCKER: metadataBase update from .pages.dev to production domain.
+- VERIFY: 4.8 stars / 76 reviews against current GBP.
+- VERIFY: 24/7 emergency availability (operator confirmation).
+- VERIFY: "Over 40 years" founding period.
+
+---
+
+## 2026-06-22 — Green Valley Emergency Plumbing Page
+
+- Built: app/green-valley/emergency-plumbing/page.tsx (new file)
+- Route: /green-valley/emergency-plumbing/
+- Build type: New file (Site OS Prompt 01 + 02, Level 5 Beyond-Elite). Sibling pattern: app/lake-las-vegas/emergency-plumbing/page.tsx
+- Schema: WebPage, BreadcrumbList, Service, HowTo, FAQPage (5 JsonLd blocks)
+- AggregateRating: omitted (service-location page) — confirmed 0 in rendered HTML
+- areaServed: Place (Green Valley, Nevada) -> containedInPlace City (Henderson) -> containedInPlace State (Nevada). Not AdministrativeArea, not Clark County.
+- HowTo: included (Section 7 renders matching visible numbered steps from GV_EMERGENCY_STEPS)
+- FAQPage: 8 Q/A from GV_EMERGENCY_FAQS, character-for-character with visible accordion
+- Internal links: /emergency-plumbing/, /green-valley/slab-leak-detection-repair/, /green-valley/re-piping/, /green-valley/water-heater-repair-installation/, /green-valley-plumbing-services/, /henderson-plumbing-services/, /lake-las-vegas-plumbing-services/, /contact/
+- ServiceCards: slab-leak-detection-repair, leak-detection-repair, water-heater-repair-installation, drain-cleaning (all Green Valley routes, all built)
+- Validation: lint PASS (0 errors; 2 warnings in seo-automation scripts only). build PASS (compiled successfully, 113 static pages, exit 0). Single H1; 9 H2 / 12 H3; no em dashes; double hyphens only in code comments.
+- Deviations from build prompt (both flagged at Gate 1, corrected at Gate 3):
+  1. Restored dropped opening <a tag in Section 5 mid-page CTA (paste artifact in brief).
+  2. Em dash -> period in line-15 FLAG comment (zero em dashes; matches sibling).
+  Note: trust items render in both hero (trustItems) and a standalone red TrustStrip (Section 2) per the brief; the Lake Las Vegas sibling renders them in the hero only. Built as specified; flagged for review.
+- FLAGS requiring operator action before launch: telephone verify; 24/7 availability verify (FAQ Q4); "emergency plumbing service available" + "transparent pricing, no hidden fees" source-site claims verify; gas line scope verify.
+- Post-build action required: repoint /green-valley-plumbing-services/ Emergency Plumbing ServiceCard from /emergency-plumbing/ to /green-valley/emergency-plumbing/ (separate surgical prompt).
+- Commit: NOT committed. Awaiting operator approval.
+
+## 2026-07-25 - Contact and Quote Forms: Email Removed, Phone Type Added
+
+- **Files:** `components/ContactFormPlaceholder.tsx`, `components/QuoteFormPlaceholder.tsx`
+- **Build type:** Shared component edit (both forms, identical change)
+- **Change:** Removed the Email Address field entirely (input, label, `FieldErrors` entry, email regex validation block, and the `email` key in the webhook payload). Added a required Phone Type field directly below Phone Number: a two-option radio group (`name="phoneType"`, values `mobile` / `landline`) inside a `fieldset` with `role="radiogroup"` and `aria-required`. Each radio and its text share a label wrapper so the whole option is tappable. Option boxes reuse the existing input border, radius and error styling via a new `radioOptionClass` helper.
+- **Validation:** Lint PASS. Build PASS (114 static pages). Zero remaining `email` references in `components/`.
+- **Downstream risk (open):** The payload no longer carries `email`. Any GHL field mapping, thank-you page logic or analytics event expecting it will receive nothing. Both webhook URLs are still empty strings, so no live integration is affected yet, but the mapping must be configured for `phoneType` and not `email`.
+- **Commit:** `201e81c`
+
+---
+
+## 2026-07-25 - Hero and CTA Layout: Centering Fix, Even Split, Icon Trust List
+
+- **Files:** `components/HeroSection.tsx`, `components/CTASection.tsx`
+- **Build type:** Shared component edits, applied across every page using these components
+- **Changes:**
+  1. Centered (no form slot) variant: button row, subheading and trust list now center as blocks. `text-center` on the ancestor only centers inline content, so these flex and block containers were rendering flush left under a centered headline. Fixed with `sm:justify-center` on the button rows, `mx-auto` on the subheading and `items-center` on the trust list, all conditional on `!hasSplit` so split layouts stay left-aligned beside the form.
+  2. Split grid changed from `minmax(0,1.05fr)_minmax(420px,0.75fr)` (about 58/42) to `minmax(420px,1fr)_minmax(420px,1fr)` (even 50/50). Both components now share one identical track definition. `HeroSection` gained `lg:items-center` to match `CTASection`.
+  3. `splitRatio` prop is now accepted but ignored, following the `includeZip` precedent in `QuoteFormPlaceholder`. An interim commit (`1f294e8`) had used it to make only the homepage 50/50; that was superseded when the split became site-wide.
+  4. Hero trust list stacks vertically (`flex-col`) instead of wrapping horizontally, and each item gets a keyword-matched icon (star, shield, clock, tag, phone) drawn as stroke SVGs in the existing `CheckMark` style. `CheckMark` remains the fallback.
+- **Icon keyword map:** star/review -> Star; licens/insured/bonded/certif -> Shield; year/decade/since/experience/established -> Clock; pricing/fee/quote/estimate/upfront/transparent -> Tag; emergenc/24-7/24 hour -> Phone; no match -> CheckMark.
+- **Deviation:** Matched on `emergenc` rather than `emergency` as specified. Four trust strings say "emergencies", which `emergency` does not match as a substring and which would have fallen back to the checkmark.
+- **Coverage audit:** 168 trust item usages site-wide. Shield 42, Tag 39, Star 31, Clock 20, Phone 15, CheckMark fallback 21 (8 distinct strings, all genuine coverage or scope statements such as "Residential and Commercial Service" and "Serving the Las Vegas Valley").
+- **Validation:** Lint PASS. Build PASS. Verified in rendered HTML and in a live browser at multiple widths: tracks exactly equal (476/476 at 1103px, 556/556 at 1264px, 536/536 at 1920px), column midpoints identical, no horizontal overflow. The 420px floor never binds: at the narrowest `lg` viewport the container is 944px and the tracks need 896px.
+- **Affected routes:** every page. One centered hero exists site-wide (`/about/`); all other heroes pass a form slot. `CTASection` has no split usage today, so its grid change is inert until one exists.
+- **Commits:** `b408ea7`, `1f294e8` (superseded), `f7655bc`
+
+---
+
+## 2026-07-25 - Homepage: Four Service Cards and Red Emergency Band
+
+- **Route:** `/` (`app/page.tsx`)
+- **Changes:** `SERVICE_CARDS` reduced from eight to four in the requested order (Sewer Line Services, Re-Piping, Water Heater Repair and Installation, Slab Leak Detection and Repair). The grid was already `lg:grid-cols-4`, so it now renders as a single row of four. Mid-page 24/7 emergency CTA band converted from charcoal to red with a white button. TrustStrip band removed.
+- **Deviation (resolved ambiguity):** The brief named three cards for removal (Emergency Plumbing, Drain Cleaning, Commercial Plumbing) but asked for exactly four to remain. Eight minus three is five. **Leak Detection and Repair** was also removed, since "exactly these 4 cards", the single-row layout and the validation step all point that way. Flagged to the operator.
+- **Judgment call:** The homepage mid-page band is titled "24/7 EMERGENCY CTA" and its headline is a statement, not a pain-point question, so it is arguably outside the "problem callout" scope. Converted anyway because the brief said site-wide and the band was not in the exclusion list. One-line revert if unwanted.
+- **Preserved:** All four removed services remain reachable from the nav dropdown, the section copy, the footer and `/plumbing-services/`. The section intro paragraph still names emergency plumbing, drain cleaning and commercial plumbing; left untouched per the no-copy-changes rule.
+- **Validation:** Lint PASS. Build PASS. Rendered HTML verified: 4 cards, 1 row, correct order.
+- **Commit:** `8ec8622`
+
+---
+
+## 2026-07-25 - Services Hub: Three-Column Card Grid
+
+- **Route:** `/plumbing-services/` (`app/plumbing-services/page.tsx`)
+- **Change:** `SERVICE_CARDS` grid set to `sm:grid-cols-2 lg:grid-cols-3` with the `xl` override dropped, so 18 cards render as an even six rows of three at every desktop width. An interim five-column version (`lg:grid-cols-4 xl:grid-cols-5`, 5/5/5/3) was applied first and then superseded by operator decision on readability and grid evenness.
+- **Also:** The page had a TrustStrip but no hero trust list, so removing the band would have dropped its trust content. Its existing `TRUST_STRIP_ITEMS` array now feeds `HeroSection`'s `trustItems` verbatim. H1 gained a forced break before "in Las Vegas, NV".
+- **Validation:** Lint PASS. Build PASS. Rendered layout verified: 18 cards, row counts 3/3/3/3/3/3, cards about 378px wide, longest title ("Plumbing Fixture Repair, Replacement and Installation") wraps to two lines.
+- **Commit:** `d77c50b`
+
+---
+
+## 2026-07-25 - Location Hubs: Featured Cards Plus Service Pills
+
+- **Routes:** all 11 location hubs. Green Valley first as an approved test, then the remaining ten.
+- **Files:** `app/green-valley-plumbing-services/page.tsx`, plus `boulder-city-`, `enterprise-`, `henderson-`, `lake-las-vegas-`, `las-vegas-`, `north-las-vegas-`, `paradise-`, `spring-valley-`, `summerlin-plumbing-services/page.tsx` and `app/north-las-vegas/aliante-area-plumbing/page.tsx`
+- **Change:** Each hub's 18-item services array became three arrays: four featured services rendered as `ServiceCard`s in a single row (Sewer Line Services, Re-Piping, Water Heater Repair and Installation, Slab Leak Detection and Repair) and the remaining 14 as `rounded-full` pills in two fixed rows of seven. Row one is white with red text and a `border-brand-primary/20`; row two is red with white text. Both rows are `min-h-12`, centered, `gap-x-4 gap-y-6`.
+- **Linking:** All hrefs preserved verbatim at rollout, keeping each hub's existing location-route-or-core-fallback targets. Per-item code comments recording activated routes were carried onto the corresponding featured and pill entries rather than dropped.
+- **Images:** Sewer Line Services and Re-Piping carry no image in any hub's data, so both use shared assets (`/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp` and `/images/services/re-piping/hero.webp`). Water Heater and Slab Leak keep each hub's existing image; every hub keeps its own `imageAlt` strings. The sewer asset was previously untracked and is now committed, since the page references it and it would otherwise 404 in production.
+- **Known limitation:** "Two rows of seven" cannot render as two visual lines. Measured natural widths are 1479px (row one) and 2042px (row two) against a 1280px container, so each row wraps internally. Row grouping and the alternating colours are preserved, which was the stated priority. Making them true single lines would require shortening service names (copy change) or shrinking the pills.
+- **TODO:** `/green-valley/sewer-line-services/` is not built; that featured card falls back to the core page. Noted in-file.
+- **Validation:** Lint PASS. Build PASS. Built-HTML check across all 11 hubs: four featured cards in the expected order, each with a real image, and two pill rows of seven on every hub.
+- **Note:** Green Valley was built as a single-page test and is now indistinguishable from the other ten. Future changes to this pattern are an 11-page change.
+- **Commits:** `73cbeed` (Green Valley), `fd3b243` (remaining ten)
+
+---
+
+## 2026-07-25 - Site-Wide Sweep: Red Mid-Page CTAs, Forced H1 Breaks, TrustStrip Removal
+
+- **Scope:** 105 page files. Three mechanical sweeps, combined in one commit because they touch the same files and cannot be separated by path.
+- **1. Mid-page problem CTAs converted charcoal to red (58 sections).** Section background to `bg-brand-primary text-white`; body paragraph `text-white/80` to `/90`; the filled button from red-on-charcoal to `bg-white` with `text-brand-primary` and `hover:bg-brand-surface-alt`. `shadow-sm` added to the 18 buttons lacking it; one `border-white/30` secondary normalised to `/60`. Classification was structural, not by copy: of 123 charcoal sections, only the 58 that are two-column and `items-center` were converted (every one commented MID-PAGE CTA). The 65 "Service Areas" and "Communities" bands were left charcoal, as were final CTAs, heroes, FAQs and service lists. Copy, headlines and hrefs untouched.
+- **2. Forced line break before the location in 88 H1 headlines.** 11 location hubs, 75 service-location pages, 2 citywide. Plain-string headlines became JSX with an unconditional `<br />` before "in ...". No text changed. `/contact/` has no "in [Location]" clause and was skipped.
+  - **Open inconsistency:** 20 pages already used `<br className="hidden sm:block" />` and were left as-is, since converting them would change mobile rendering on live pages. The site now has both an unconditional and a `sm`-and-up convention. Needs a decision on which wins.
+- **3. TrustStrip band removed from every page (107) and the component retired.** Trust content consolidated into the hero's vertical icon list. Where the band showed a fact the hero did not state, that item was merged in verbatim (40 pages, mostly service-specific capabilities such as "Non-Invasive Detection", "PEX and Copper Repiping", "Permits Coordinated", "Tank and Tankless Service"). 59 items were skipped as the same fact in different wording. Three pages had no hero trust list at all, so their existing arrays now feed `trustItems`. 45 orphaned constants removed. No trust wording was invented or changed.
+  - **Dedupe rule:** hero coverage is the union of all facts its items state, so a compound line like "Licensed plumbers, transparent pricing" covers both license and pricing; a strip item counts as already-present when its primary fact is covered. Two earlier rules were wrong and caught by inspecting output: single-label classification duplicated the local and pricing facts on the homepage, and requiring every category to match merged "Over 40 Years Serving Las Vegas" as new because its trailing "Serving" read as an uncovered area claim.
+- **Validation:** Lint PASS. Build PASS (114 static pages). Full sweep across all 107 pages that previously rendered the band: every fact it displayed is present in that page's hero trust list; zero pages left without a trust list. Grep confirms zero `TrustStrip` references anywhere.
+- **Process note:** The removal was first attempted with whole-file index arithmetic, which corrupted files three times. Root cause: `indexOf("[")` after `const NAME` matched the `[]` in a `: string[] =` type annotation rather than the array literal, so deletions sliced into unrelated string literals; a second bug cached match offsets while mutating the source. Each round was caught by running lint immediately after applying, and full recovery was possible because `app/` and `components/` were backed up before the first mass edit. The final implementation operates on arrays of lines, where an edit cannot land mid-literal, and passed lint on the first run. Nothing was pushed while broken.
+- **Commits:** `fab038d`, `8e1dd15`
+
+---
+
+## 2026-07-25 - Standing Rule Recorded: No Scrollbars
+
+- **Rule:** No scrollbars anywhere in this project. Content that does not fit its container must make the container expand (wrap to more rows, grow in height), never scroll horizontally or vertically, and never be clipped or hidden.
+- **Origin:** A TrustStrip build forced the band onto one line with `flex-nowrap` plus `overflow-x-auto` plus a hidden scrollbar. Because `justify-center` centres overflow, real trust content sat cut off past both edges at scroll position 0 with no visible affordance. An interim fix (flush-left start, thin visible scrollbar, right-edge fade) was then superseded by this rule, and the band reverted to wrapping before the component was retired entirely.
+- **Applied:** `app/globals.css` scrollbar utilities added during those attempts were removed; the file is back to its pre-session state. Project-wide audit found no remaining `overflow-x-auto`, `overflow-y-auto`, `overflow-scroll`, `scrollbar-*`, `max-h-*` or `overscroll-*` in `app/` or `components/`. The only `overflow-hidden` uses are image and animation frames (`ServiceCard`, hub card grids, `HeroSection` background, `SiteHeader` menu animation) and the form honeypots, none of which hide readable content.
+- **Recorded in:** project memory (`no-scrollbars-rule`), so it carries into future sessions.
+
+---
+
+## 2026-07-25 - Internal Linking Correction: 27 Hub Pills Repointed
+
+- **Routes:** 7 location hubs
+- **Change:** 27 pill hrefs moved from the core service page to the built location-specific page, correcting drift from the established fallback convention (location route where one is built, core page otherwise). Las Vegas 10 (emergency, drain cleaning, leak detection, gas line, commercial, toilet, faucet and sink, garbage disposal, backflow, video camera inspections); Henderson 5 (emergency, drain cleaning, leak detection, gas line, commercial); Paradise 4 (emergency, drain cleaning, leak detection, commercial); North Las Vegas 3 (emergency, drain cleaning, leak detection); Summerlin 3 (emergency, drain cleaning, leak detection); Enterprise 1 (commercial); Spring Valley 1 (emergency).
+- **Method:** Each target was re-confirmed against the exported route tree before rewriting rather than trusted from the audit, so a wrong entry would have been skipped instead of becoming a broken link. Green Valley, Boulder City, Lake Las Vegas and Aliante were checked and already correct. Edits were confined to the two pill arrays, so featured cards, titles, styling and the 7/7 split could not be affected.
+- **Validation:** Lint PASS. Build PASS. Independent 404 sweep of the rebuilt export: all 154 pill links across all 11 hubs resolve, zero broken. Location-specific links rose from 20 to 47; the remaining 107 core fallbacks are correct because no location page exists for those services. Re-running the rewire tool reports zero remaining candidates.
+- **Commit:** `94fae91`
+
+---
+
+## 2026-07-25 - Session Summary and Open Items
+
+- **Commits pushed to `origin/main` this session:** `b408ea7`, `201e81c`, `1f294e8`, `f7655bc`, `8ec8622`, `d77c50b`, `73cbeed`, `fab038d`, `8e1dd15`, `fd3b243`, `94fae91`
+- **LAUNCH BLOCKER (unchanged):** Both form webhook URLs are empty strings, so every contact and quote submission hits the error path and shows the call-us fallback. When wired, the GHL mapping must expect `phoneType` and must not expect `email`.
+- **LAUNCH BLOCKER (unchanged):** SiriusSys form endpoint on the homepage hero form unconfirmed.
+- **LAUNCH BLOCKER (unchanged):** `/privacy-policy/` is linked from both forms but has no route.
+- **Open decision:** H1 break convention. 88 pages use an unconditional `<br />`; 20 use `<br className="hidden sm:block" />`.
+- **Open decision:** Homepage mid-page emergency band converted to red (see homepage entry).
+- **Open decision:** Homepage Leak Detection and Repair card removed (see homepage entry).
+- **Open item:** `public/images/services/commercial-plumbing/` remains untracked and unreferenced. The sewer-line-services folder was committed with three assets, of which one is referenced.
+- **Open item:** Pills cannot render as two single lines at the current container width (see hubs entry).
+- **VERIFY items carried forward:** 4.8 stars / 76 reviews against current GBP; 24/7 emergency availability; "Over 40 years" founding period; NV license `#0048585A`.
+
+---
+
+## 2026-08-11 - Button System: Sitewide CTA Consolidation, Pill Extraction, Busy State
+
+- **Scope:** 91 files, +830 / -1529. Every button-shaped element on the site now renders through `Button` or `Pill`. No customer-facing copy changed anywhere in this work.
+- **Origin:** An audit of `app/page.tsx`, `CTASection`, `StickyMobileCTA` and `Button` found the homepage CTAs were hand-rolled class strings that reimplemented the component's size and variant system rather than using it. A sitewide grep then found 245 such strings across 88 files, collapsing into only 17 distinct patterns.
+
+**1. Button extended, homepage converted (`b578f79`).** Sizes `xl` (56px) and `2xl` (56px, wider gutters, larger label) added, so `min-h-14` became a named token instead of an inline string. Variants `inverse`, `inverse-charcoal` and `inverse-outline` added for CTAs sitting on filled sections; these invert the surface, not the palette, so no colour outside the existing brand tokens is introduced (design rule 4 holds). Disabled styling became variant aware: the single light treatment was unreadable on `brand-primary` and `brand-charcoal`. `aria-label` passthrough added. Eight hand-rolled buttons converted across the four audited files. `CTASection`'s parallel style system was deleted, which reaches all 93 of its usages.
+
+**2. Sitewide sweep (`02a438e`).** 223 remaining CTAs across 84 page files. The 15 convertible patterns all mapped onto the size and variant scale built in step 1, with no new variant or size required, which is reasonable evidence the scale was cut at the right joints. Seven now-unused `next/link` imports removed.
+
+**3. `transition-property` fix (`a9169e9`).** `transition-property` is a single CSS property, so the base `transition-colors` and `motion-safe:transition-transform` never composed: the motion-safe rule replaced the list outright, dropping every colour. Hover colours snapped rather than fading for everyone who had not requested reduced motion. The motion-safe list is now the union of both. `scale` is listed explicitly, because `active:scale-[0.97]` compiles to the `scale` property rather than `transform`; listing only `transform` would have left the press animation dead while appearing correct. Plain `transition-colors` remains as the reduced-motion fallback, where colours fade and nothing moves.
+
+**4. `Pill` and `PillRow` (`14bdc4d`).** The 11 city hubs each hand-rolled two rows of service chips: the same two class strings 22 times, the same `ul` wrapper 22 times, and `type ServicePill` declared in all 11 files. These are deliberately not Buttons. A Button is a call to action; a pill is a navigation target, and it is styled to read that way so it never competes with the CTA beside it. Routing them through Button would have meant overriding radius, font weight, size and colour at every call site, which is the signal that the abstraction does not fit. `PillRow` owns the `ul`, `li` and map; how many rows a page renders and which variant each uses stays with the page, since that is layout.
+
+**5. Busy state (`cf389d5`).** Busy is work in progress, which is not the same as disabled. Disabled means unavailable and reads as the muted outline treatment; busy keeps the variant's colours and only dims them. `composeClass` checks busy before disabled, because busy also sets the `disabled` attribute and without that ordering the attribute would drag in the disabled styling and make a submitting form look broken. This is precisely why the two form submit buttons were excluded from the earlier sweep. Button also absorbed the spinner SVG, duplicated byte-for-byte in both form files.
+
+- **Verification method.** Because this touched 114 pages, correctness was established by diffing rendered output rather than by reading diffs. Before each step, visible text, the full `href` list in document order, and heading structure were snapshotted from all 112 prerendered pages; after each step the build was re-run and compared. Every step returned zero changes to visible text and zero to heading structure. The only `href` differences across the whole session were stylesheet chunk hashes, which move whenever a Tailwind class changes. A static audit of the built HTML confirmed 847 button instances across 12 variant and size combinations, all matching exact Button-composed class strings. Pills were checked on token sets rather than strings, since composing base plus variant reorders the attribute: 77 outline and 77 solid, all exact-set matches against the originals. Computed styles were sampled in-browser at 1920px, 768px and 375px; no button fell below the 44px minimum or the 48px primary-action floor, and at 375px none were clipped, off-canvas, or causing horizontal overflow (no-scrollbars rule holds).
+- **Homepage content flag, resolved by owner decision.** The Sewer Line Services card was the only `ServiceImagePlaceholder` in an otherwise fully photographed 4-up grid. This was reported rather than fixed, because the asset existed but was unreferenced, so the choice was a content decision. Owner directed wiring it. `image` and `imageAlt` keys were added to that one `SERVICE_CARDS` entry; its `title`, `description`, `href` and `built` are untouched, as is every other card.
+  - **FLAG: new customer-facing copy.** `imageAlt` "Sewer camera inspection at an outdoor cleanout on a Las Vegas property" was authored during this build, describing what is actually in the frame. It follows the existing alt convention but has not been owner-approved.
+- **Intended visual changes.** Three one-off buttons had drifted border opacities (`border-white/30` on green-valley emergency, `border-white/40` on service-areas, against the `border-white/60` used by the other 63) and now render at `/60`. Four buttons that used a bare `transition` gained the standard press animation. Both form submit buttons went from `px-4` to `px-6`, invisible because they are full width with centred content. `StickyMobileCTA` gained a `focus-visible` ring it previously lacked entirely, and a `shadow-sm` that casts off-screen on a bottom-pinned bar. Sitewide, hover colours now ease over 150ms rather than snapping (step 3).
+- **Deliberately not converted.** 216 radio field wrappers in the two form placeholders match a `min-h-1` grep but are form inputs, not buttons, and were left alone. This corrected the original audit premise, which had assumed every grep hit was a button.
+- **Process note.** The sweep was applied by codemod matching exact normalised class strings, so any string that had drifted would fail to match and be reported rather than coerced into a variant it did not match. Two occurrences were correctly refused because a `//` comment sat inside the JSX opening tag; both were converted by hand. Two codemod defects were caught and fixed before committing: the import-removal regex assumed LF endings and silently left seven unused `Link` imports (caught by lint), and the block regex consumed leading indentation so 22 `PillRow` call sites landed at column zero (caught by inspecting output). The busy state is unreachable in production, so it was verified through a temporary probe route rendering all three states side by side; the route was removed, and removing it left a stale generated type in `.next/types` that failed the next type check, requiring a `.next` clear.
+- **Validation:** Lint PASS. `tsc --noEmit` PASS. Build PASS (114 static pages) at every step.
+- **Status change to a prior open item:** the homepage Sewer Line Services card now references `public/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp`, previously committed but unreferenced.
+- **Open item (unchanged):** `public/images/services/commercial-plumbing/` remains untracked and unreferenced.
+- **Open item (unchanged):** pills still cannot render as two single lines at the current container width. Rendering was preserved exactly, so this behaviour is neither improved nor worsened.
+- **Open decision:** `Pill` uses `motion-safe:transition-colors`, so reduced-motion users get no colour fade, while `Button` gives them one. Now that pill styles live in one file this is a one-word change, but it is a behaviour change and has not been made.
+- **LAUNCH BLOCKER (unchanged):** both form webhook URLs are still empty, so the new busy state is correct but dormant; it cannot be exercised until the endpoints are wired.
+- **Commits:** `b578f79`, `02a438e`, `a9169e9`, `14bdc4d`, `cf389d5`. None pushed.
