@@ -680,7 +680,8 @@ export default function HendersonSlabLeakPage() {
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions About Slab Leaks in Henderson
+                Frequently Asked Questions
+                <br className="hidden sm:block" /> About Slab Leaks in Henderson
               </h2>
             </div>
             <div className="mt-12 space-y-4">
