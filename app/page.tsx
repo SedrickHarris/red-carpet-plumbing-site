@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Button } from "@/components/Button";
 import { FaqSection } from "@/components/FaqSection";
 import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
@@ -126,6 +127,10 @@ const SERVICE_CARDS: ServiceCardEntry[] = [
     description:
       "Sewer line inspection, cleaning, repair, and replacement for residential and commercial properties.",
     href: "/sewer-line-services/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp",
+    imageAlt:
+      "Sewer camera inspection at an outdoor cleanout on a Las Vegas property",
     built: true,
   },
   {
@@ -426,12 +431,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">
-                <a
-                  href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
-                >
+                <Button href="tel:+17025679172" variant="inverse" size="2xl">
                   Call Now: (702) 567-9172
-                </a>
+                </Button>
                 <p className="text-sm text-white/60">
                   Available 24 hours a day, 7 days a week
                 </p>
@@ -494,12 +496,9 @@ export default function Home() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-12 text-left">
-                <Link
-                  href="/plumbing-services/"
-                  className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary motion-safe:transition-transform motion-safe:active:scale-[0.97]"
-                >
+                <Button href="/plumbing-services/" variant="primary" size="lg">
                   See All Plumbing Services
-                </Link>
+                </Button>
               </SectionRevealItem>
             </SectionReveal>
           </div>
@@ -578,12 +577,13 @@ export default function Home() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-10 text-left">
-                <Link
+                <Button
                   href="/service-areas/"
-                  className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:active:scale-[0.97]"
+                  variant="inverse-charcoal"
+                  size="lg"
                 >
                   View All Service Areas
-                </Link>
+                </Button>
               </SectionRevealItem>
             </SectionReveal>
           </div>
@@ -645,18 +645,16 @@ export default function Home() {
             </p>
             <div className="mt-10">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
-                <Link
-                  href="/contact/"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
-                >
+                <Button href="/contact/" variant="inverse" size="xl">
                   Request Plumbing Service
-                </Link>
-                <a
+                </Button>
+                <Button
                   href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/60 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
+                  variant="inverse-outline"
+                  size="xl"
                 >
                   Call (702) 567-9172
-                </a>
+                </Button>
               </div>
             </div>
           </div>

@@ -1,9 +1,22 @@
+import { Button } from "@/components/Button";
+
 export function StickyMobileCTA() {
   return (
-    <a
+    // Size and color come from the Button scale (xl = the 56px bar height).
+    // The className carries only what is specific to a viewport-pinned bar:
+    // placement, squared corners, the top hairline, and a white focus ring
+    // that is actually visible against brand-primary.
+    //
+    // The two `!` overrides beat Button's base utilities regardless of how
+    // Tailwind orders them in the stylesheet. The press scale stays at 0.99
+    // rather than the base 0.97 because this bar spans the full viewport
+    // width, where a 3% squeeze moves the edges noticeably.
+    <Button
       href="tel:+17025679172"
+      variant="primary"
+      size="xl"
       aria-label="Call Red Carpet Plumbing at 702 567 9172"
-      className="fixed inset-x-0 bottom-0 z-50 flex min-h-14 items-center justify-center border-t border-brand-dark/10 bg-brand-primary text-base font-semibold text-white motion-safe:transition-transform motion-safe:active:scale-[0.99] lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-50 rounded-none! border-t border-brand-dark/10 focus-visible:outline-white motion-safe:active:scale-[0.99]! lg:hidden"
     >
       <span className="flex items-center justify-center gap-2">
         <svg
@@ -23,6 +36,6 @@ export function StickyMobileCTA() {
         </svg>
         <span>Call (702) 567-9172</span>
       </span>
-    </a>
+    </Button>
   );
 }
