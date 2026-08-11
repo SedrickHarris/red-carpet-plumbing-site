@@ -535,7 +535,7 @@ export default function PlumbingServicesPage() {
               Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder
               City, Green Valley, Lake Las Vegas, and surrounding communities.
             </p>
-            <div className="mt-8 text-center">
+            <div className="mt-8">
               <Button href="/service-areas/" variant="inverse-charcoal" size="lg">
                 See All Service Areas
               </Button>

@@ -664,7 +664,7 @@ export default function ToiletRepairInstallationPage() {
               })}
             </ul>
 
-            <div className="mt-10 text-center">
+            <div className="mt-10 text-left">
               <Button href="/service-areas/" variant="inverse-charcoal" size="lg">
                 View All Service Areas
               </Button>
