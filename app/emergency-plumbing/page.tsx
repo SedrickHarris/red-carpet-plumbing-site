@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
@@ -642,12 +643,9 @@ export default function EmergencyPlumbingPage() {
             </ul>
 
             <div className="mt-10 text-left">
-              <Link
-                href="/service-areas/"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:active:scale-[0.97]"
-              >
+              <Button href="/service-areas/" variant="inverse-charcoal" size="lg">
                 View All Service Areas
-              </Link>
+              </Button>
             </div>
           </div>
         </section>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Button } from "@/components/Button";
 import { CTASection } from "@/components/CTASection";
 import { ContactFormPlaceholder } from "@/components/ContactFormPlaceholder";
 import { HeroSection } from "@/components/HeroSection";
@@ -430,13 +431,14 @@ export default function ContactPage() {
               and surrounding communities.
             </p>
             <div className="mt-8">
-              <Link
+              <Button
                 // /service-areas/ is built and live on main
                 href="/service-areas/"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
+                variant="primary"
+                size="lg"
               >
                 See Full Service Area List
-              </Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -487,13 +489,14 @@ export default function ContactPage() {
               ))}
             </ul>
             <div className="mt-10 text-center">
-              <Link
+              <Button
                 // /plumbing-services/ is built and live on main
                 href="/plumbing-services/"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
+                variant="primary"
+                size="lg"
               >
                 See All Plumbing Services
-              </Link>
+              </Button>
             </div>
           </div>
         </section>

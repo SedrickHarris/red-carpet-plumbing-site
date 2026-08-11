@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
@@ -605,12 +606,9 @@ export default function ServiceAreasPage() {
               ))}
             </ul>
             <div className="mt-10 text-center">
-              <Link
-                href="/plumbing-services/"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-brand-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
-              >
+              <Button href="/plumbing-services/" variant="primary" size="lg">
                 See All Plumbing Services
-              </Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -636,18 +634,12 @@ export default function ServiceAreasPage() {
               </p>
               <div className="mt-10">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
-                  <Link
-                    href="/emergency-plumbing/"
-                    className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-primary shadow-sm transition hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                  >
+                  <Button href="/emergency-plumbing/" variant="inverse" size="lg">
                     Get Emergency Plumbing Help
-                  </Link>
-                  <a
-                    href="tel:+17025679172"
-                    className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/40 bg-transparent px-6 py-3 text-base font-semibold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                  >
+                  </Button>
+                  <Button href="tel:+17025679172" variant="inverse-outline" size="lg">
                     Call (702) 567-9172
-                  </a>
+                  </Button>
                 </div>
                 <p className="mt-3 text-center text-xs text-white/70">
                   Phone number pending

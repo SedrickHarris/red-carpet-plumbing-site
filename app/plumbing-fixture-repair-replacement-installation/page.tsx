@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
@@ -595,18 +595,12 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">
                 <div className="flex flex-col gap-3 sm:flex-row">
-                  <a
-                    href="tel:+17025679172"
-                    className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-8 text-lg font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
-                  >
+                  <Button href="tel:+17025679172" variant="inverse" size="2xl">
                     Call (702) 567-9172
-                  </a>
-                  <Link
-                    href="/contact/"
-                    className="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/60 px-8 text-lg font-semibold text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
-                  >
+                  </Button>
+                  <Button href="/contact/" variant="inverse-outline" size="2xl">
                     Request a Quote
-                  </Link>
+                  </Button>
                 </div>
                 <p className="text-sm text-white/60">
                   Serving residential and commercial properties throughout
@@ -650,12 +644,9 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
             </ul>
 
             <div className="mt-10 text-left">
-              <Link
-                href="/service-areas/"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:active:scale-[0.97]"
-              >
+              <Button href="/service-areas/" variant="inverse-charcoal" size="lg">
                 View All Service Areas
-              </Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -732,18 +723,12 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
             </p>
             <div className="mt-10">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
-                <a
-                  href="tel:+17025679172"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-primary shadow-sm hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
-                >
+                <Button href="tel:+17025679172" variant="inverse" size="xl">
                   Call (702) 567-9172
-                </a>
-                <Link
-                  href="/contact/"
-                  className="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/60 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-colors motion-safe:active:scale-[0.97]"
-                >
+                </Button>
+                <Button href="/contact/" variant="inverse-outline" size="xl">
                   Request a Quote
-                </Link>
+                </Button>
               </div>
             </div>
           </div>

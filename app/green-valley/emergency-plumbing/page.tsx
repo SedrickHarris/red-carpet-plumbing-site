@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
@@ -475,18 +476,12 @@ export default function GreenValleyEmergencyPlumbingPage() {
                 </p>
               </div>
               <div className="flex flex-col gap-4 sm:flex-row lg:flex-col xl:flex-row">
-                <a
-                  href="tel:+17025679172"
-                  className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-primary shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:active:scale-[0.97]"
-                >
+                <Button href="tel:+17025679172" variant="inverse" size="lg">
                   Call (702) 567-9172
-                </a>
-                <Link
-                  href="/contact/"
-                  className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/30 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                >
+                </Button>
+                <Button href="/contact/" variant="inverse-outline" size="lg">
                   Request Service
-                </Link>
+                </Button>
               </div>
             </div>
           </div>
