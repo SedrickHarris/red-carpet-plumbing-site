@@ -31,9 +31,9 @@ const DEFAULT_SERVICES = [
   "Other",
 ];
 
-const PHONE_TYPES = [
-  { value: "mobile", label: "Mobile" },
-  { value: "landline", label: "Landline" },
+const CONTACT_METHODS = [
+  { value: "call", label: "Call" },
+  { value: "text", label: "Text" },
 ];
 
 type FormState = "idle" | "submitting" | "success" | "error";
@@ -42,7 +42,7 @@ type FieldErrors = {
   firstName?: string;
   lastName?: string;
   phone?: string;
-  phoneType?: string;
+  contactMethod?: string;
   service?: string;
   message?: string;
 };
@@ -94,9 +94,9 @@ export function QuoteFormPlaceholder({
     if (!/^[\d\s()\-+]{7,}$/.test(phone))
       next.phone = "Please enter a valid phone number.";
 
-    const phoneType = (data.get("phoneType") as string | null) ?? "";
-    if (phoneType !== "mobile" && phoneType !== "landline")
-      next.phoneType = "Please select mobile or landline.";
+    const contactMethod = (data.get("contactMethod") as string | null) ?? "";
+    if (contactMethod !== "call" && contactMethod !== "text")
+      next.contactMethod = "Please select call or text.";
 
     const service = (data.get("service") as string | null) ?? "";
     if (!service || !services.includes(service))
@@ -146,7 +146,7 @@ export function QuoteFormPlaceholder({
         ((data.get("lastName") as string | null) ?? "").trim()
       }`.trim(),
       phone: (data.get("phone") as string) ?? "",
-      phoneType: (data.get("phoneType") as string) ?? "",
+      contactMethod: (data.get("contactMethod") as string) ?? "",
       service: (data.get("service") as string) ?? "",
       message: (data.get("message") as string) ?? "",
       submittedAt: new Date().toISOString(),
@@ -303,7 +303,7 @@ export function QuoteFormPlaceholder({
 
         <div>
           <label htmlFor="qf-phone" className={labelClass}>
-            Phone Number
+            Phone
           </label>
           <input
             id="qf-phone"
@@ -328,20 +328,20 @@ export function QuoteFormPlaceholder({
         <fieldset
           role="radiogroup"
           aria-required="true"
-          aria-invalid={errors.phoneType ? "true" : "false"}
+          aria-invalid={errors.contactMethod ? "true" : "false"}
         >
-          <legend className={labelClass}>Phone Type</legend>
+          <legend className={labelClass}>Preferred contact method</legend>
           <div className="grid grid-cols-2 gap-3">
-            {PHONE_TYPES.map((option) => (
+            {CONTACT_METHODS.map((option) => (
               <label
                 key={option.value}
-                className={`${radioOptionClass(Boolean(errors.phoneType))} ${
+                className={`${radioOptionClass(Boolean(errors.contactMethod))} ${
                   isSubmitting ? "cursor-not-allowed opacity-60" : "cursor-pointer"
                 }`}
               >
                 <input
                   type="radio"
-                  name="phoneType"
+                  name="contactMethod"
                   value={option.value}
                   required
                   disabled={isSubmitting}
@@ -351,9 +351,9 @@ export function QuoteFormPlaceholder({
               </label>
             ))}
           </div>
-          {errors.phoneType ? (
+          {errors.contactMethod ? (
             <p role="alert" className={errorClass}>
-              {errors.phoneType}
+              {errors.contactMethod}
             </p>
           ) : null}
         </fieldset>

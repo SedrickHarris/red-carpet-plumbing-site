@@ -32,9 +32,9 @@ const DEFAULT_SERVICES = [
   "Other",
 ];
 
-const PHONE_TYPES = [
-  { value: "mobile", label: "Mobile" },
-  { value: "landline", label: "Landline" },
+const CONTACT_METHODS = [
+  { value: "call", label: "Call" },
+  { value: "text", label: "Text" },
 ];
 
 type FormState = "idle" | "submitting" | "success" | "error";
@@ -42,7 +42,7 @@ type FormState = "idle" | "submitting" | "success" | "error";
 type FieldErrors = {
   name?: string;
   phone?: string;
-  phoneType?: string;
+  contactMethod?: string;
   address?: string;
   message?: string;
 };
@@ -89,9 +89,9 @@ export function ContactFormPlaceholder({
     if (!/^[\d\s()\-+]{7,}$/.test(phone))
       next.phone = "Please enter a valid phone number.";
 
-    const phoneType = (data.get("phoneType") as string | null) ?? "";
-    if (phoneType !== "mobile" && phoneType !== "landline")
-      next.phoneType = "Please select mobile or landline.";
+    const contactMethod = (data.get("contactMethod") as string | null) ?? "";
+    if (contactMethod !== "call" && contactMethod !== "text")
+      next.contactMethod = "Please select call or text.";
 
     const address = (data.get("address") as string | null) ?? "";
     if (address.length > 200)
@@ -139,7 +139,7 @@ export function ContactFormPlaceholder({
       formType: "contact" as const,
       name: (data.get("name") as string) ?? "",
       phone: (data.get("phone") as string) ?? "",
-      phoneType: (data.get("phoneType") as string) ?? "",
+      contactMethod: (data.get("contactMethod") as string) ?? "",
       service: (data.get("service") as string) ?? "",
       address: (data.get("address") as string) ?? "",
       message: (data.get("message") as string) ?? "",
@@ -275,7 +275,7 @@ export function ContactFormPlaceholder({
 
         <div>
           <label htmlFor="cf-phone" className={labelClass}>
-            Phone Number
+            Phone
           </label>
           <input
             id="cf-phone"
@@ -300,20 +300,20 @@ export function ContactFormPlaceholder({
         <fieldset
           role="radiogroup"
           aria-required="true"
-          aria-invalid={errors.phoneType ? "true" : "false"}
+          aria-invalid={errors.contactMethod ? "true" : "false"}
         >
-          <legend className={labelClass}>Phone Type</legend>
+          <legend className={labelClass}>Preferred contact method</legend>
           <div className="grid grid-cols-2 gap-3">
-            {PHONE_TYPES.map((option) => (
+            {CONTACT_METHODS.map((option) => (
               <label
                 key={option.value}
-                className={`${radioOptionClass(Boolean(errors.phoneType))} ${
+                className={`${radioOptionClass(Boolean(errors.contactMethod))} ${
                   isSubmitting ? "cursor-not-allowed opacity-60" : "cursor-pointer"
                 }`}
               >
                 <input
                   type="radio"
-                  name="phoneType"
+                  name="contactMethod"
                   value={option.value}
                   required
                   disabled={isSubmitting}
@@ -323,9 +323,9 @@ export function ContactFormPlaceholder({
               </label>
             ))}
           </div>
-          {errors.phoneType ? (
+          {errors.contactMethod ? (
             <p role="alert" className={errorClass}>
-              {errors.phoneType}
+              {errors.contactMethod}
             </p>
           ) : null}
         </fieldset>
