@@ -95,15 +95,15 @@ export function HeroSection({
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-60"
+            className="object-cover"
           />
-          <div
-            className={`absolute inset-0 ${
-              hasSplit
-                ? "bg-gradient-to-r from-brand-charcoal/95 via-brand-charcoal/80 to-brand-charcoal/30"
-                : "bg-gradient-to-b from-brand-charcoal/90 via-brand-charcoal/70 to-brand-charcoal/50"
-            }`}
-          />
+          {/* One flat scrim rather than a gradient. The previous version ran
+              charcoal/95 to /30 across split heroes and /90 to /50 down
+              stacked ones, so how dark a photo read depended on where you
+              looked and which layout the page used. A single value keeps
+              every hero consistent and makes text contrast predictable
+              rather than position-dependent. */}
+          <div className="absolute inset-0 bg-brand-charcoal/70" />
         </div>
       ) : null}
 
