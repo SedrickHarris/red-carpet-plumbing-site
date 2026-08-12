@@ -335,10 +335,10 @@ export default function HendersonLeakDetectionPage() {
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
-              label: "Henderson Plumbing",
+              label: "Henderson Plumbing Services",
               href: "/henderson-plumbing-services/",
             },
-            { label: "Leak Detection and Repair" },
+            { label: "Leak Detection and Repair in Henderson" },
           ]} variant="dark" />}
           headingLevel="h1"
           headline={

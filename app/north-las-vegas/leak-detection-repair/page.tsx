@@ -338,10 +338,10 @@ export default function NorthLasVegasLeakDetectionPage() {
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
             {
-              label: "North Las Vegas Plumbing",
+              label: "North Las Vegas Plumbing Services",
               href: "/north-las-vegas-plumbing-services/",
             },
-            { label: "Leak Detection and Repair" },
+            { label: "Leak Detection and Repair in North Las Vegas" },
           ]} variant="dark" />}
           headingLevel="h1"
           headline={
