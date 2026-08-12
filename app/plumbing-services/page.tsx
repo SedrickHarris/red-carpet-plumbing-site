@@ -165,7 +165,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Re-Piping",
-    // TODO: Replace placeholder with owner-supplied image when available
+    image: "/images/services/re-piping/hero.webp",
     alt: "Re-piping services for Las Vegas homes",
     description:
       "Full and partial re-piping services for homes and businesses with aging, corroded, or failing pipe systems.",
@@ -173,7 +173,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Water Pipe Repair and Replacement",
-    // TODO: Replace placeholder with owner-supplied image when available
+    image: "/images/services/water-pipe-repair-replacement/hero.webp",
     alt: "Water pipe repair and replacement in Las Vegas",
     description:
       "Repair and replacement of damaged, corroded, or leaking water supply pipes throughout your property.",
@@ -181,7 +181,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Gas Line Plumbing",
-    // TODO: Replace placeholder with owner-supplied image when available
+    image: "/images/services/gas-line-plumbing/hero.webp",
     alt: "Gas line plumbing service in Las Vegas",
     description:
       "Gas line inspection, repair, and installation for homes and businesses by trained plumbing professionals.",
@@ -197,7 +197,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Toilet Repair and Installation",
-    // TODO: Replace placeholder with owner-supplied image when available
+    image: "/images/services/toilet-repair-installation/hero.webp",
     alt: "Toilet repair and installation service in Las Vegas",
     description:
       "Toilet repair, replacement, and installation for all makes and models in residential and commercial settings.",
@@ -205,7 +205,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Faucet and Sink Repair and Installation",
-    // TODO: Replace placeholder with owner-supplied image when available
+    image: "/images/services/faucet-sink-repair-installation/hero.webp",
     alt: "Faucet and sink repair and installation in Las Vegas",
     description:
       "Faucet and sink repair, replacement, and installation for kitchens, bathrooms, and utility areas.",
@@ -213,7 +213,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Garbage Disposal Repair and Installation",
-    // TODO: Replace placeholder with owner-supplied image when available
+    image: "/images/services/garbage-disposal-repair-installation/hero.webp",
     alt: "Garbage disposal repair and installation in Las Vegas",
     description:
       "Garbage disposal repair, replacement, and installation for kitchen sinks throughout the Las Vegas Valley.",
@@ -221,7 +221,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Backflow Prevention",
-    // TODO: Replace placeholder with owner-supplied image when available
+    image: "/images/services/backflow-prevention/hero.webp",
     alt: "Backflow prevention services in Las Vegas",
     description:
       "Backflow prevention device installation, testing, and repair to protect your water supply from contamination.",
@@ -229,7 +229,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Video Camera Plumbing Inspections",
-    // TODO: Replace placeholder with owner-supplied image when available
+    image: "/images/services/video-camera-plumbing-inspections/hero.webp",
     alt: "Video camera plumbing inspection in Las Vegas",
     description:
       "Camera inspection inside pipes to identify blockages, damage, root intrusion, and hidden plumbing problems.",
@@ -237,7 +237,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Plumbing Fixture Repair, Replacement and Installation",
-    // TODO: Replace placeholder with owner-supplied image when available
+    image: "/images/services/plumbing-fixture-repair-replacement-installation/hero.webp",
     alt: "Plumbing fixture repair replacement and installation in Las Vegas",
     description:
       "Repair, replacement, and installation of plumbing fixtures including faucets, toilets, showers, tubs, and sinks.",
@@ -245,7 +245,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Trenchless Piping",
-    // TODO: Replace placeholder with owner-supplied image when available
+    image: "/images/services/trenchless-piping/hero.webp",
     alt: "Trenchless piping service in Las Vegas",
     description:
       "Trenchless pipe repair and replacement methods that minimize excavation and disruption to your property.",
@@ -253,7 +253,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Water Meter and Pressure Regulator Services",
-    // TODO: Replace placeholder with owner-supplied image when available
+    image: "/images/services/water-meter-pressure-regulator-services/hero.webp",
     alt: "Water meter and pressure regulator service in Las Vegas",
     description:
       "Water meter inspection and pressure regulator service to maintain safe, consistent water pressure in your plumbing system.",
