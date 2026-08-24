@@ -180,23 +180,23 @@ const SERVICE_AREAS = [
 // ---------------------------------------------------------------------------
 const RELATED_SERVICES = [
   {
-    label: "Drain Cleaning in Summerlin",
+    label: "Drain Cleaning",
     href: "/summerlin/drain-cleaning/",
   },
   {
-    label: "Leak Detection and Repair in Summerlin",
+    label: "Leak Detection and Repair",
     href: "/summerlin/leak-detection-repair/",
   },
   {
-    label: "Slab Leak Detection and Repair in Summerlin",
+    label: "Slab Leak Detection and Repair",
     href: "/summerlin/slab-leak-detection-repair/",
   },
   {
-    label: "Water Heater Repair and Installation in Summerlin",
+    label: "Water Heater Repair and Installation",
     href: "/summerlin/water-heater-repair-installation/",
   },
   {
-    label: "Re-Piping in Summerlin",
+    label: "Re-Piping",
     href: "/summerlin/re-piping/",
   },
   {

@@ -165,19 +165,19 @@ const SERVICE_AREAS = [
 // ---------------------------------------------------------------------------
 const RELATED_SERVICES = [
   {
-    label: "Drain Cleaning in Paradise",
+    label: "Drain Cleaning",
     href: "/paradise/drain-cleaning/",
   },
   {
-    label: "Leak Detection and Repair in Paradise",
+    label: "Leak Detection and Repair",
     href: "/paradise/leak-detection-repair/",
   },
   {
-    label: "Water Heater Repair and Installation in Paradise",
+    label: "Water Heater Repair and Installation",
     href: "/paradise/water-heater-repair-installation/",
   },
   {
-    label: "Commercial Plumbing in Paradise",
+    label: "Commercial Plumbing",
     href: "/paradise/commercial-plumbing/",
   },
   {
