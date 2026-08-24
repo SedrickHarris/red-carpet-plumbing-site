@@ -466,7 +466,7 @@ export default function SummerlinEmergencyPlumbingPage() {
                       older Summerlin properties than in newer construction. Learn
                       more about{" "}
                       <Link
-                        href="/slab-leak-detection-repair/"
+                        href="/summerlin/slab-leak-detection-repair/"
                         className="font-semibold text-brand-primary hover:text-brand-primary-hover"
                       >
                         slab leak detection and repair
@@ -493,7 +493,7 @@ export default function SummerlinEmergencyPlumbingPage() {
                       common emergency in newer Summerlin properties. Learn more
                       about{" "}
                       <Link
-                        href="/water-heater-repair-installation/"
+                        href="/summerlin/water-heater-repair-installation/"
                         className="font-semibold text-brand-primary hover:text-brand-primary-hover"
                       >
                         water heater repair and installation
@@ -571,7 +571,7 @@ export default function SummerlinEmergencyPlumbingPage() {
             <p className="mt-8 text-base leading-7 text-brand-dark/80">
               For{" "}
               <Link
-                href="/leak-detection-repair/"
+                href="/summerlin/leak-detection-repair/"
                 className="font-semibold text-brand-primary hover:text-brand-primary-hover"
               >
                 leak detection and repair
