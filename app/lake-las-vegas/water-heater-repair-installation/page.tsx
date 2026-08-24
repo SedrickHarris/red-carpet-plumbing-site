@@ -220,6 +220,12 @@ const LLV_WH_REROUTING = [
     linkHref: "/lake-las-vegas/drain-cleaning/",
     linkText: "Lake Las Vegas drain cleaning",
   },
+  {
+    title: "Water Heater Repair and Installation in Henderson",
+    body: "If you also manage a property elsewhere in Henderson, Red Carpet Plumbing provides the same water heater repair and installation service across the wider Henderson area.",
+    linkHref: "/henderson/water-heater-repair-installation/",
+    linkText: "Henderson water heater repair and installation",
+  },
 ];
 
 // ---------------------------------------------------------------------------

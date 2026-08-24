@@ -172,6 +172,12 @@ const LLV_DRAIN_REROUTING = [
     linkHref: "/lake-las-vegas/emergency-plumbing/",
     linkText: "Emergency plumbing services",
   },
+  {
+    title: "Drain Cleaning in Henderson",
+    body: "If you also manage a property elsewhere in Henderson, Red Carpet Plumbing provides the same drain cleaning service across the wider Henderson area.",
+    linkHref: "/henderson/drain-cleaning/",
+    linkText: "Henderson drain cleaning",
+  },
 ];
 
 // ---------------------------------------------------------------------------

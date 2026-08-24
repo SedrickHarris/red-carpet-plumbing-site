@@ -223,6 +223,17 @@ const ENTERPRISE_COMMERCIAL_AREAS = [
 // County) -> State (Nevada) because Enterprise is unincorporated. Do NOT use
 // "@type": "City".
 // ---------------------------------------------------------------------------
+const RELATED_SERVICES = [
+  { href: "/enterprise/emergency-plumbing/", text: "Enterprise emergency plumbing" },
+  { href: "/enterprise/drain-cleaning/", text: "Enterprise drain cleaning" },
+  { href: "/enterprise/leak-detection-repair/", text: "Enterprise leak detection and repair" },
+  { href: "/enterprise/slab-leak-detection-repair/", text: "Enterprise slab leak detection and repair" },
+  { href: "/enterprise/water-heater-repair-installation/", text: "Enterprise water heater repair and installation" },
+  { href: "/enterprise/re-piping/", text: "Enterprise re-piping" },
+  { href: "/las-vegas/commercial-plumbing/", text: "Las Vegas commercial plumbing" },
+];
+
+// ---------------------------------------------------------------------------
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -559,6 +570,25 @@ export default function EnterpriseCommercialPlumbingPage() {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-10">
+              <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
+                Related Services
+              </h3>
+              <ul className="mt-4 flex flex-wrap gap-3">
+                {RELATED_SERVICES.map((r) => (
+                  <li key={r.href}>
+                    <Link
+                      href={r.href}
+                      className="inline-flex rounded-lg bg-brand-surface-alt px-4 py-2 text-sm font-semibold text-brand-primary shadow-sm ring-1 ring-brand-surface-alt hover:text-brand-primary-hover"
+                    >
+                      {r.text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             <p className="mt-8 text-base leading-7 text-brand-dark/80">
               Our office is located at{" "}
               <a
