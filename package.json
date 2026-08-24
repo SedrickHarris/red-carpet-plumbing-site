@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node seo-automation/scripts/scan-routes.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

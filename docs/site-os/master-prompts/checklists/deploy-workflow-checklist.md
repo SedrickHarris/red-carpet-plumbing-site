@@ -25,7 +25,7 @@ These apply regardless of stack (Next.js, plain React, static site, etc.):
 - [ ] Build before deploy
 - [ ] Deploy artifacts must be regenerated from current source
 - [ ] Source must be at the intended commit, HEAD verified
-- [ ] Working tree must be clean before deploy unless dirty state is intentional and documented
+- [ ] Working tree must be clean before deploy unless dirty state is intentional and documented (see the `route-manifest.json` exception in section 9)
 - [ ] Local main must be synchronized with origin/main if production tracks origin/main
 - [ ] Run all deploy commands from the correct client repo, never from Site OS Master
 - [ ] Verify production content after deploy, not just deploy CLI success
@@ -128,6 +128,11 @@ Two repos are involved in every Site OS Master client build:
 Stop and do not deploy if any of these are true:
 
 - [ ] Working tree is not clean and the dirty state is not intentional and approved
+  - Exception: `docs/seo/route-manifest.json` is rewritten by the `prebuild` npm
+    lifecycle script on every `npm run build`, because `scan-routes.mjs` stamps a
+    fresh `generatedAt` on every run. It is therefore expected to show as modified
+    after any build, including a build that changed nothing else. A tree dirty in
+    that file alone does not block a deploy. Any other modified path still does.
 - [ ] HEAD does not match the intended source commit
 - [ ] `cf:build` or equivalent build command failed
 - [ ] Build artifact freshness check failed (artifacts older than HEAD commit)
