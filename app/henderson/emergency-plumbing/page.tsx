@@ -169,14 +169,14 @@ const HENDERSON_COMMUNITIES = [
 // (drain-cleaning, leak-detection-repair, water-heater-repair-installation,
 // slab-leak-detection-repair).
 const RELATED_SERVICES = [
-  { label: "Drain Cleaning", href: "/drain-cleaning/" },
-  { label: "Leak Detection and Repair", href: "/leak-detection-repair/" },
+  { label: "Drain Cleaning", href: "/henderson/drain-cleaning/" },
+  { label: "Leak Detection and Repair", href: "/henderson/leak-detection-repair/" },
   {
     label: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/henderson/water-heater-repair-installation/",
   },
-  { label: "Slab Leak Detection and Repair", href: "/slab-leak-detection-repair/" },
-  { label: "Sewer Line Services", href: "/sewer-line-services/" },
+  { label: "Slab Leak Detection and Repair", href: "/henderson/slab-leak-detection-repair/" },
+  { label: "Sewer Line Services", href: "/henderson/sewer-line-services/" },
   { label: "Emergency Plumbing in Las Vegas", href: "/las-vegas/emergency-plumbing/" },
 ];
 

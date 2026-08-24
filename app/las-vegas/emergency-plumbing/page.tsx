@@ -158,14 +158,14 @@ const WHY_CHOOSE = [
 // Related core service pages (live routes). TODO-BATCH-5: replace with the
 // location-specific /las-vegas/[service]/ children once those pages are built.
 const RELATED_SERVICES = [
-  { label: "Drain Cleaning", href: "/drain-cleaning/" },
-  { label: "Leak Detection and Repair", href: "/leak-detection-repair/" },
+  { label: "Drain Cleaning", href: "/las-vegas/drain-cleaning/" },
+  { label: "Leak Detection and Repair", href: "/las-vegas/leak-detection-repair/" },
   {
     label: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/las-vegas/water-heater-repair-installation/",
   },
-  { label: "Slab Leak Detection and Repair", href: "/slab-leak-detection-repair/" },
-  { label: "Sewer Line Services", href: "/sewer-line-services/" },
+  { label: "Slab Leak Detection and Repair", href: "/las-vegas/slab-leak-detection-repair/" },
+  { label: "Sewer Line Services", href: "/las-vegas/sewer-line-services/" },
   { label: "Emergency Plumbing in Henderson", href: "/henderson/emergency-plumbing/" },
 ];
 
