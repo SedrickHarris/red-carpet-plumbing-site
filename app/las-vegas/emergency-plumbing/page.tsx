@@ -166,6 +166,7 @@ const RELATED_SERVICES = [
   },
   { label: "Slab Leak Detection and Repair", href: "/slab-leak-detection-repair/" },
   { label: "Sewer Line Services", href: "/sewer-line-services/" },
+  { label: "Emergency Plumbing in Henderson", href: "/henderson/emergency-plumbing/" },
 ];
 
 // ---------------------------------------------------------------------------

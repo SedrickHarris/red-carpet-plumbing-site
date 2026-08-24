@@ -219,6 +219,7 @@ const RELATED_SERVICES = [
     label: "Video Camera Plumbing Inspections",
     href: "/video-camera-plumbing-inspections/",
   },
+  { label: "Leak Detection and Repair in Henderson", href: "/henderson/leak-detection-repair/" },
 ];
 
 // ---------------------------------------------------------------------------

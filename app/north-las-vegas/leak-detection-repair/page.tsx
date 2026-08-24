@@ -226,6 +226,7 @@ const RELATED_SERVICES = [
     href: "/north-las-vegas/water-heater-repair-installation/",
   },
   { label: "Slab Leak Detection and Repair", href: "/slab-leak-detection-repair/" },
+  { label: "Leak Detection and Repair in Las Vegas", href: "/las-vegas/leak-detection-repair/" },
 ];
 
 // ---------------------------------------------------------------------------

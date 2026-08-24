@@ -233,6 +233,7 @@ const RELATED_SERVICES = [
     href: "/video-camera-plumbing-inspections/",
   },
   { label: "Trenchless Piping Services", href: "/trenchless-piping/" },
+  { label: "Sewer Line Services in Henderson", href: "/henderson/sewer-line-services/" },
 ];
 
 // ---------------------------------------------------------------------------

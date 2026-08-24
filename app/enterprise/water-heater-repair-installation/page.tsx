@@ -220,6 +220,7 @@ const RELATED_SERVICES = [
     href: "/slab-leak-detection-repair/",
     text: "Slab leak detection and repair",
   },
+  { href: "/las-vegas/water-heater-repair-installation/", text: "Las Vegas water heater repair and installation" },
 ];
 
 // Section 8 — coverage area chips (plain text only; no Enterprise sub-area routes

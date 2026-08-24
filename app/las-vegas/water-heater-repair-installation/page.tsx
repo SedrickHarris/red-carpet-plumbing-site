@@ -208,6 +208,7 @@ const RELATED_SERVICES = [
   { label: "Leak Detection and Repair", href: "/leak-detection-repair/" },
   { label: "Slab Leak Detection and Repair", href: "/slab-leak-detection-repair/" },
   { label: "Re-Piping", href: "/re-piping/" },
+  { label: "Water Heater Repair and Installation in Henderson", href: "/henderson/water-heater-repair-installation/" },
 ];
 
 // ---------------------------------------------------------------------------

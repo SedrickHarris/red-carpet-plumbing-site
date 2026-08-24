@@ -202,6 +202,7 @@ const RELATED_SERVICES = [
   },
   { href: "/leak-detection-repair/", text: "Leak detection and repair" },
   { href: "/enterprise/emergency-plumbing/", text: "Enterprise emergency plumbing" },
+  { href: "/las-vegas/drain-cleaning/", text: "Las Vegas drain cleaning" },
 ];
 
 // Section 7 — coverage area chips (plain text only; no Enterprise sub-area routes

@@ -217,6 +217,7 @@ const RELATED_SERVICES = [
   { label: "Leak Detection and Repair", href: "/leak-detection-repair/" },
   { label: "Slab Leak Detection and Repair", href: "/slab-leak-detection-repair/" },
   { label: "Re-Piping", href: "/re-piping/" },
+  { label: "Water Heater Repair and Installation in Las Vegas", href: "/las-vegas/water-heater-repair-installation/" },
 ];
 
 // ---------------------------------------------------------------------------
