@@ -205,6 +205,25 @@ const BOULDER_CITY_AREAS = [
 // JSON-LD payloads. Boulder City IS incorporated, so Service.areaServed uses
 // City + containedInPlace State (Nevada). Do NOT use Place/AdministrativeArea.
 // ---------------------------------------------------------------------------
+const RELATED_SERVICES = [
+  {
+    label: "Emergency Plumbing in Boulder City",
+    href: "/boulder-city/emergency-plumbing/",
+  },
+  {
+    label: "Leak Detection and Repair in Boulder City",
+    href: "/boulder-city/leak-detection-repair/",
+  },
+  {
+    label: "Water Heater Repair and Installation in Boulder City",
+    href: "/boulder-city/water-heater-repair-installation/",
+  },
+  {
+    label: "Drain Cleaning in Henderson",
+    href: "/henderson/drain-cleaning/",
+  },
+];
+
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -659,7 +678,33 @@ export default function BoulderCityDrainCleaningPage() {
           </div>
         </section>
 
-        {/* SECTION 10: FINAL CTA */}
+        {/* SECTION 10: RELATED SERVICES */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <div className="text-left">
+              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                Related Plumbing Services
+              </h2>
+            </div>
+            <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {RELATED_SERVICES.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark ring-1 ring-brand-surface-alt transition hover:text-brand-primary hover:shadow-md"
+                  >
+                    <span aria-hidden="true" className="text-brand-primary">
+                      &rarr;
+                    </span>
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* SECTION 11: FINAL CTA */}
         <CTASection
           background="red"
           headline={<>Ready to Schedule Drain Cleaning<br />in Boulder City?</>}
