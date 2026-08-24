@@ -215,6 +215,33 @@ const WHY_CHOOSE = [
 // JSON-LD payloads. Service schema uses the site-wide service-location pattern
 // (areaServed City -> State "Nevada"), overriding the brief's Block 3 variant.
 // ---------------------------------------------------------------------------
+const RELATED_SERVICES = [
+  {
+    label: "Emergency Plumbing",
+    href: "/summerlin/emergency-plumbing/",
+  },
+  {
+    label: "Drain Cleaning",
+    href: "/summerlin/drain-cleaning/",
+  },
+  {
+    label: "Leak Detection and Repair",
+    href: "/summerlin/leak-detection-repair/",
+  },
+  {
+    label: "Slab Leak Detection and Repair",
+    href: "/summerlin/slab-leak-detection-repair/",
+  },
+  {
+    label: "Re-Piping",
+    href: "/summerlin/re-piping/",
+  },
+  {
+    label: "Water Heater Repair and Installation in Las Vegas",
+    href: "/las-vegas/water-heater-repair-installation/",
+  },
+];
+
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -623,7 +650,33 @@ export default function SummerlinWaterHeaterPage() {
           </div>
         </section>
 
-        {/* SECTION 9: FINAL CTA */}
+        {/* SECTION 9: RELATED SERVICES */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <div className="text-left">
+              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                Related Plumbing Services
+              </h2>
+            </div>
+            <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {RELATED_SERVICES.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark ring-1 ring-brand-surface-alt transition hover:text-brand-primary hover:shadow-md"
+                  >
+                    <span aria-hidden="true" className="text-brand-primary">
+                      &rarr;
+                    </span>
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
           headline={<>Schedule Water Heater Service<br />in Summerlin Today</>}

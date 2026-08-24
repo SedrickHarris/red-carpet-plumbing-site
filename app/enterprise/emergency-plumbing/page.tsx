@@ -256,6 +256,37 @@ const ENTERPRISE_AREAS = [
 // County) -> State (Nevada) because Enterprise is unincorporated. Do NOT use
 // "@type": "City".
 // ---------------------------------------------------------------------------
+const RELATED_SERVICES = [
+  {
+    label: "Drain Cleaning",
+    href: "/enterprise/drain-cleaning/",
+  },
+  {
+    label: "Leak Detection and Repair",
+    href: "/enterprise/leak-detection-repair/",
+  },
+  {
+    label: "Water Heater Repair and Installation",
+    href: "/enterprise/water-heater-repair-installation/",
+  },
+  {
+    label: "Slab Leak Detection and Repair",
+    href: "/enterprise/slab-leak-detection-repair/",
+  },
+  {
+    label: "Re-Piping",
+    href: "/enterprise/re-piping/",
+  },
+  {
+    label: "Commercial Plumbing",
+    href: "/enterprise/commercial-plumbing/",
+  },
+  {
+    label: "Emergency Plumbing in Las Vegas",
+    href: "/las-vegas/emergency-plumbing/",
+  },
+];
+
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -692,7 +723,33 @@ export default function EnterpriseEmergencyPlumbingPage() {
           </div>
         </section>
 
-        {/* SECTION 10: FINAL CTA */}
+        {/* SECTION 10: RELATED SERVICES */}
+        <section className="bg-brand-surface-alt">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <div className="text-left">
+              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                Related Plumbing Services
+              </h2>
+            </div>
+            <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {RELATED_SERVICES.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark ring-1 ring-brand-surface-alt transition hover:text-brand-primary hover:shadow-md"
+                  >
+                    <span aria-hidden="true" className="text-brand-primary">
+                      &rarr;
+                    </span>
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* SECTION 11: FINAL CTA */}
         <CTASection
           background="red"
           headline={<>Emergency Plumbing<br />in Enterprise, NV? Call Red Carpet Plumbing.</>}

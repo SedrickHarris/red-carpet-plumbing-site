@@ -270,6 +270,37 @@ const HENDERSON_GAS_FAQS = [
 // JSON-LD payloads. areaServed City (Henderson) -> State (Nevada). No
 // AggregateRating, no sameAs, no hasCredential.
 // ---------------------------------------------------------------------------
+const RELATED_SERVICES = [
+  {
+    label: "Emergency Plumbing",
+    href: "/henderson/emergency-plumbing/",
+  },
+  {
+    label: "Drain Cleaning",
+    href: "/henderson/drain-cleaning/",
+  },
+  {
+    label: "Leak Detection and Repair",
+    href: "/henderson/leak-detection-repair/",
+  },
+  {
+    label: "Water Heater Repair and Installation",
+    href: "/henderson/water-heater-repair-installation/",
+  },
+  {
+    label: "Slab Leak Detection and Repair",
+    href: "/henderson/slab-leak-detection-repair/",
+  },
+  {
+    label: "Sewer Line Services",
+    href: "/henderson/sewer-line-services/",
+  },
+  {
+    label: "Gas Line Plumbing in Las Vegas",
+    href: "/las-vegas/gas-line-plumbing/",
+  },
+];
+
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -683,7 +714,33 @@ export default function HendersonGasLinePage() {
           </div>
         </section>
 
-        {/* SECTION 11: FAQ */}
+        {/* SECTION 11: RELATED SERVICES */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <div className="text-left">
+              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                Related Plumbing Services
+              </h2>
+            </div>
+            <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {RELATED_SERVICES.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark ring-1 ring-brand-surface-alt transition hover:text-brand-primary hover:shadow-md"
+                  >
+                    <span aria-hidden="true" className="text-brand-primary">
+                      &rarr;
+                    </span>
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* SECTION 12: FAQ */}
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
@@ -711,7 +768,7 @@ export default function HendersonGasLinePage() {
           </div>
         </section>
 
-        {/* SECTION 12: FINAL CTA */}
+        {/* SECTION 13: FINAL CTA */}
         {/* FLAG: VERIFY — license number in the body is a source-site claim. */}
         <CTASection
           background="red"
