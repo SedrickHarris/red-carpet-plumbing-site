@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
@@ -192,15 +193,18 @@ const PRESSURE_STEPS = [
   },
 ];
 
-const SERVICE_AREAS = [
-  "Las Vegas",
-  "Henderson",
-  "North Las Vegas",
-  "Paradise",
-  "Summerlin",
-  "Spring Valley",
-  "Enterprise",
-  "Boulder City",
+const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
+  { name: "Las Vegas" },
+  { name: "Henderson" },
+  { name: "North Las Vegas" },
+  { name: "Aliante Area" },
+  { name: "Summerlin" },
+  { name: "Paradise" },
+  { name: "Spring Valley" },
+  { name: "Enterprise" },
+  { name: "Boulder City" },
+  { name: "Green Valley" },
+  { name: "Lake Las Vegas" },
 ];
 
 type RelatedService = {
@@ -627,25 +631,43 @@ export default function WaterMeterPressureRegulatorServicesPage() {
               </p>
             </div>
 
-            {/* TODO-BATCH-PHASE3: /las-vegas/water-meter-pressure-regulator-services/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /henderson/water-meter-pressure-regulator-services/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /north-las-vegas/water-meter-pressure-regulator-services/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /paradise/water-meter-pressure-regulator-services/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /summerlin/water-meter-pressure-regulator-services/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /spring-valley/water-meter-pressure-regulator-services/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /enterprise/water-meter-pressure-regulator-services/ not yet built */}
-            {/* TODO-BATCH-PHASE3: /boulder-city/water-meter-pressure-regulator-services/ not yet built */}
-            <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {SERVICE_AREAS.map((area) => (
-                <li key={area}>
-                  <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
-                    {area}
-                  </span>
-                </li>
-              ))}
+            {/* SERVICE_AREA_LINKS reflects actual built routes as of the last audit. */}
+            {/* Regenerate from docs/seo/route-manifest.json when new location pages ship. */}
+            <ul className="mt-12 grid w-fit grid-cols-2 gap-3 sm:grid-cols-3">
+              {SERVICE_AREA_LINKS.map((area) => {
+                const label = (
+                  <>
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className={`h-4 w-4 shrink-0 ${
+                        area.href ? "text-brand-secondary" : "text-brand-muted"
+                      }`}
+                    >
+                      <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
+                    </svg>
+                    <span className="min-w-0 break-words">{area.name}</span>
+                  </>
+                );
+                return (
+                  <li key={area.name}>
+                    {area.href ? (
+                      <Link
+                        href={area.href}
+                        className="flex h-full items-center gap-2 break-words rounded-lg bg-white px-2.5 py-2.5 text-sm font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-4 sm:text-base"
+                      >
+                        {label}
+                      </Link>
+                    ) : (
+                      <span className="flex h-full items-center gap-2 break-words rounded-lg bg-white px-2.5 py-2.5 text-sm font-semibold text-brand-charcoal shadow-sm sm:px-4 sm:text-base">{label}</span>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
 
-            <div className="mt-10 text-center">
+            <div className="mt-10 text-left">
               <Button href="/service-areas/" variant="inverse-charcoal" size="lg">
                 View All Service Areas
               </Button>

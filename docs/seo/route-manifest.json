@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T17:15:10.450Z",
+  "generatedAt": "2026-08-24T17:47:25.218Z",
   "routeCount": 110,
   "routes": [
     {
@@ -135,7 +135,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 426
+      "wordEstimate": 414
     },
     {
       "route": "/boulder-city-plumbing-services",
@@ -984,7 +984,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 382
+      "wordEstimate": 370
     },
     {
       "route": "/gas-line-plumbing",
@@ -3973,7 +3973,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 397
+      "wordEstimate": 385
     },
     {
       "route": "/plumbing-services",
@@ -5010,7 +5010,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 404
+      "wordEstimate": 392
     },
     {
       "route": "/video-camera-plumbing-inspections",
@@ -5060,7 +5060,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 404
+      "wordEstimate": 392
     },
     {
       "route": "/water-heater-repair-installation",
@@ -5160,7 +5160,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 404
+      "wordEstimate": 392
     },
     {
       "route": "/water-pipe-repair-replacement",
@@ -5210,7 +5210,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 409
+      "wordEstimate": 397
     }
   ],
   "warnings": []
