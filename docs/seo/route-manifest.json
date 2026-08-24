@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T18:45:16.953Z",
+  "generatedAt": "2026-08-24T17:15:10.450Z",
   "routeCount": 110,
   "routes": [
     {
@@ -86,7 +86,7 @@
         "Organization",
         "Service"
       ],
-      "wordEstimate": 751
+      "wordEstimate": 747
     },
     {
       "route": "/backflow-prevention",
@@ -135,7 +135,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 431
+      "wordEstimate": 426
     },
     {
       "route": "/boulder-city-plumbing-services",
@@ -182,7 +182,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 719
+      "wordEstimate": 713
     },
     {
       "route": "/boulder-city/drain-cleaning",
@@ -225,7 +225,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1084
+      "wordEstimate": 1080
     },
     {
       "route": "/boulder-city/emergency-plumbing",
@@ -265,7 +265,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1088
+      "wordEstimate": 1084
     },
     {
       "route": "/boulder-city/leak-detection-repair",
@@ -309,7 +309,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1095
+      "wordEstimate": 1089
     },
     {
       "route": "/boulder-city/water-heater-repair-installation",
@@ -351,7 +351,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 993
+      "wordEstimate": 986
     },
     {
       "route": "/commercial-plumbing",
@@ -401,7 +401,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 380
+      "wordEstimate": 377
     },
     {
       "route": "/contact",
@@ -432,7 +432,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 379
+      "wordEstimate": 317
     },
     {
       "route": "/drain-cleaning",
@@ -478,7 +478,7 @@
         "WebPage",
         "WebSite"
       ],
-      "wordEstimate": 524
+      "wordEstimate": 521
     },
     {
       "route": "/emergency-plumbing",
@@ -525,7 +525,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 477
+      "wordEstimate": 474
     },
     {
       "route": "/enterprise-plumbing-services",
@@ -573,7 +573,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 750
+      "wordEstimate": 745
     },
     {
       "route": "/enterprise/commercial-plumbing",
@@ -616,7 +616,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 844
+      "wordEstimate": 841
     },
     {
       "route": "/enterprise/drain-cleaning",
@@ -660,7 +660,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 829
+      "wordEstimate": 826
     },
     {
       "route": "/enterprise/emergency-plumbing",
@@ -705,7 +705,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 914
+      "wordEstimate": 911
     },
     {
       "route": "/enterprise/leak-detection-repair",
@@ -751,7 +751,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 919
+      "wordEstimate": 914
     },
     {
       "route": "/enterprise/re-piping",
@@ -794,7 +794,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1648
+      "wordEstimate": 1645
     },
     {
       "route": "/enterprise/slab-leak-detection-repair",
@@ -839,7 +839,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 875
+      "wordEstimate": 869
     },
     {
       "route": "/enterprise/water-heater-repair-installation",
@@ -884,7 +884,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 909
+      "wordEstimate": 903
     },
     {
       "route": "/faucet-sink-repair-installation",
@@ -934,7 +934,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 402
+      "wordEstimate": 395
     },
     {
       "route": "/garbage-disposal-repair-installation",
@@ -984,7 +984,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 389
+      "wordEstimate": 382
     },
     {
       "route": "/gas-line-plumbing",
@@ -1034,7 +1034,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 365
+      "wordEstimate": 361
     },
     {
       "route": "/green-valley-plumbing-services",
@@ -1083,7 +1083,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 778
+      "wordEstimate": 772
     },
     {
       "route": "/green-valley/drain-cleaning",
@@ -1126,7 +1126,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 1123
+      "wordEstimate": 1118
     },
     {
       "route": "/green-valley/emergency-plumbing",
@@ -1173,7 +1173,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 649
+      "wordEstimate": 644
     },
     {
       "route": "/green-valley/faucet-sink-repair-installation",
@@ -1222,7 +1222,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 949
+      "wordEstimate": 941
     },
     {
       "route": "/green-valley/leak-detection-repair",
@@ -1271,7 +1271,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 1154
+      "wordEstimate": 1147
     },
     {
       "route": "/green-valley/re-piping",
@@ -1326,7 +1326,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 1212
+      "wordEstimate": 1207
     },
     {
       "route": "/green-valley/slab-leak-detection-repair",
@@ -1377,7 +1377,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 1018
+      "wordEstimate": 1010
     },
     {
       "route": "/green-valley/toilet-repair-installation",
@@ -1428,7 +1428,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 963
+      "wordEstimate": 957
     },
     {
       "route": "/green-valley/water-heater-repair-installation",
@@ -1472,7 +1472,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 1324
+      "wordEstimate": 1316
     },
     {
       "route": "/henderson-plumbing-services",
@@ -1521,7 +1521,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 739
+      "wordEstimate": 734
     },
     {
       "route": "/henderson/commercial-plumbing",
@@ -1573,7 +1573,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 691
+      "wordEstimate": 688
     },
     {
       "route": "/henderson/drain-cleaning",
@@ -1616,7 +1616,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 716
+      "wordEstimate": 713
     },
     {
       "route": "/henderson/emergency-plumbing",
@@ -1659,7 +1659,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 701
+      "wordEstimate": 698
     },
     {
       "route": "/henderson/gas-line-plumbing",
@@ -1709,7 +1709,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1001
+      "wordEstimate": 997
     },
     {
       "route": "/henderson/leak-detection-repair",
@@ -1759,7 +1759,7 @@
         "Answer",
         "LocalBusiness"
       ],
-      "wordEstimate": 761
+      "wordEstimate": 756
     },
     {
       "route": "/henderson/re-piping",
@@ -1816,7 +1816,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 1122
+      "wordEstimate": 1119
     },
     {
       "route": "/henderson/sewer-line-services",
@@ -1865,7 +1865,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 986
+      "wordEstimate": 982
     },
     {
       "route": "/henderson/slab-leak-detection-repair",
@@ -1918,7 +1918,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 1071
+      "wordEstimate": 1065
     },
     {
       "route": "/henderson/water-heater-repair-installation",
@@ -1961,7 +1961,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 834
+      "wordEstimate": 828
     },
     {
       "route": "/lake-las-vegas-plumbing-services",
@@ -2010,7 +2010,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 765
+      "wordEstimate": 758
     },
     {
       "route": "/lake-las-vegas/drain-cleaning",
@@ -2058,7 +2058,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 657
+      "wordEstimate": 651
     },
     {
       "route": "/lake-las-vegas/emergency-plumbing",
@@ -2103,7 +2103,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 747
+      "wordEstimate": 741
     },
     {
       "route": "/lake-las-vegas/leak-detection-repair",
@@ -2154,7 +2154,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 816
+      "wordEstimate": 808
     },
     {
       "route": "/lake-las-vegas/slab-leak-detection-repair",
@@ -2205,7 +2205,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 828
+      "wordEstimate": 819
     },
     {
       "route": "/lake-las-vegas/water-heater-repair-installation",
@@ -2250,7 +2250,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 817
+      "wordEstimate": 808
     },
     {
       "route": "/las-vegas-plumbing-services",
@@ -2297,7 +2297,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 651
+      "wordEstimate": 645
     },
     {
       "route": "/las-vegas/backflow-prevention",
@@ -2349,7 +2349,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1050
+      "wordEstimate": 1045
     },
     {
       "route": "/las-vegas/commercial-plumbing",
@@ -2402,7 +2402,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 712
+      "wordEstimate": 708
     },
     {
       "route": "/las-vegas/drain-cleaning",
@@ -2443,7 +2443,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 697
+      "wordEstimate": 693
     },
     {
       "route": "/las-vegas/emergency-plumbing",
@@ -2485,7 +2485,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 658
+      "wordEstimate": 654
     },
     {
       "route": "/las-vegas/faucet-sink-repair-installation",
@@ -2537,7 +2537,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 891
+      "wordEstimate": 883
     },
     {
       "route": "/las-vegas/garbage-disposal-repair-installation",
@@ -2590,7 +2590,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 917
+      "wordEstimate": 910
     },
     {
       "route": "/las-vegas/gas-line-plumbing",
@@ -2641,7 +2641,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 856
+      "wordEstimate": 851
     },
     {
       "route": "/las-vegas/leak-detection-repair",
@@ -2683,7 +2683,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 858
+      "wordEstimate": 852
     },
     {
       "route": "/las-vegas/re-piping",
@@ -2740,7 +2740,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 1131
+      "wordEstimate": 1127
     },
     {
       "route": "/las-vegas/sewer-line-services",
@@ -2783,7 +2783,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 853
+      "wordEstimate": 848
     },
     {
       "route": "/las-vegas/slab-leak-detection-repair",
@@ -2837,7 +2837,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 1126
+      "wordEstimate": 1119
     },
     {
       "route": "/las-vegas/toilet-repair-installation",
@@ -2889,7 +2889,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 836
+      "wordEstimate": 830
     },
     {
       "route": "/las-vegas/video-camera-plumbing-inspections",
@@ -2941,7 +2941,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 882
+      "wordEstimate": 876
     },
     {
       "route": "/las-vegas/water-heater-repair-installation",
@@ -2982,7 +2982,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 824
+      "wordEstimate": 817
     },
     {
       "route": "/leak-detection-repair",
@@ -3032,7 +3032,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 543
+      "wordEstimate": 538
     },
     {
       "route": "/north-las-vegas-plumbing-services",
@@ -3080,7 +3080,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 751
+      "wordEstimate": 744
     },
     {
       "route": "/north-las-vegas/aliante-area-plumbing",
@@ -3129,7 +3129,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 718
+      "wordEstimate": 707
     },
     {
       "route": "/north-las-vegas/aliante-area/drain-cleaning",
@@ -3182,7 +3182,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 846
+      "wordEstimate": 837
     },
     {
       "route": "/north-las-vegas/aliante-area/emergency-plumbing",
@@ -3234,7 +3234,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 696
+      "wordEstimate": 687
     },
     {
       "route": "/north-las-vegas/aliante-area/leak-detection-repair",
@@ -3290,7 +3290,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 1160
+      "wordEstimate": 1149
     },
     {
       "route": "/north-las-vegas/aliante-area/slab-leak-detection-repair",
@@ -3346,7 +3346,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 1220
+      "wordEstimate": 1208
     },
     {
       "route": "/north-las-vegas/aliante-area/water-heater-repair-installation",
@@ -3399,7 +3399,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 880
+      "wordEstimate": 868
     },
     {
       "route": "/north-las-vegas/drain-cleaning",
@@ -3441,7 +3441,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 771
+      "wordEstimate": 766
     },
     {
       "route": "/north-las-vegas/emergency-plumbing",
@@ -3483,7 +3483,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 753
+      "wordEstimate": 748
     },
     {
       "route": "/north-las-vegas/leak-detection-repair",
@@ -3533,7 +3533,7 @@
         "Answer",
         "LocalBusiness"
       ],
-      "wordEstimate": 771
+      "wordEstimate": 764
     },
     {
       "route": "/north-las-vegas/slab-leak-detection-repair",
@@ -3586,7 +3586,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 539
+      "wordEstimate": 531
     },
     {
       "route": "/north-las-vegas/water-heater-repair-installation",
@@ -3628,7 +3628,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 925
+      "wordEstimate": 917
     },
     {
       "route": "/paradise-plumbing-services",
@@ -3676,7 +3676,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 724
+      "wordEstimate": 719
     },
     {
       "route": "/paradise/commercial-plumbing",
@@ -3730,7 +3730,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 537
+      "wordEstimate": 534
     },
     {
       "route": "/paradise/drain-cleaning",
@@ -3776,7 +3776,7 @@
         "LocalBusiness",
         "AggregateRating"
       ],
-      "wordEstimate": 1167
+      "wordEstimate": 1164
     },
     {
       "route": "/paradise/emergency-plumbing",
@@ -3824,7 +3824,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 1287
+      "wordEstimate": 1284
     },
     {
       "route": "/paradise/leak-detection-repair",
@@ -3874,7 +3874,7 @@
         "LocalBusiness",
         "AggregateRating"
       ],
-      "wordEstimate": 1306
+      "wordEstimate": 1301
     },
     {
       "route": "/paradise/water-heater-repair-installation",
@@ -3923,7 +3923,7 @@
         "LocalBusiness",
         "AggregateRating"
       ],
-      "wordEstimate": 1107
+      "wordEstimate": 1101
     },
     {
       "route": "/plumbing-fixture-repair-replacement-installation",
@@ -3973,7 +3973,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 405
+      "wordEstimate": 397
     },
     {
       "route": "/plumbing-services",
@@ -4011,7 +4011,7 @@
         "Plumber",
         "FAQPage"
       ],
-      "wordEstimate": 511
+      "wordEstimate": 508
     },
     {
       "route": "/re-piping",
@@ -4061,7 +4061,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 617
+      "wordEstimate": 614
     },
     {
       "route": "/service-areas",
@@ -4093,7 +4093,7 @@
         "State",
         "FAQPage"
       ],
-      "wordEstimate": 633
+      "wordEstimate": 627
     },
     {
       "route": "/sewer-line-services",
@@ -4143,7 +4143,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 597
+      "wordEstimate": 593
     },
     {
       "route": "/slab-leak-detection-repair",
@@ -4193,7 +4193,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 606
+      "wordEstimate": 600
     },
     {
       "route": "/spring-valley-plumbing-services",
@@ -4241,7 +4241,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 768
+      "wordEstimate": 762
     },
     {
       "route": "/spring-valley/commercial-plumbing",
@@ -4293,7 +4293,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 760
+      "wordEstimate": 756
     },
     {
       "route": "/spring-valley/drain-cleaning",
@@ -4309,7 +4309,7 @@
         "Drain Cleaning Services We Provide in Spring Valley",
         "Our Drain Cleaning Process in Spring Valley",
         "Why Spring Valley Homeowners Choose Red Carpet Plumbing",
-        "Drain Cleaning in Spring Valley &mdash; Frequently Asked Questions"
+        "Frequently Asked Questions About Drain Cleaning in Spring Valley"
       ],
       "internalHrefs": [
         "/spring-valley-plumbing-services/",
@@ -4339,7 +4339,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 743
+      "wordEstimate": 739
     },
     {
       "route": "/spring-valley/emergency-plumbing",
@@ -4356,7 +4356,7 @@
         "What to Do During a Plumbing Emergency",
         "How We Handle Emergency Plumbing Calls in Spring Valley",
         "Why Spring Valley Homeowners and Businesses Choose Red Carpet Plumbing",
-        "Emergency Plumbing in Spring Valley &mdash; Frequently Asked Questions"
+        "Frequently Asked Questions About Emergency Plumbing in Spring Valley"
       ],
       "internalHrefs": [
         "/spring-valley-plumbing-services/",
@@ -4385,7 +4385,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 573
+      "wordEstimate": 569
     },
     {
       "route": "/spring-valley/leak-detection-repair",
@@ -4402,7 +4402,7 @@
         "Leak Detection and Repair Services in Spring Valley",
         "Our Leak Detection Process in Spring Valley",
         "Why Spring Valley Homeowners Choose Red Carpet Plumbing for Leak Detection",
-        "Leak Detection and Repair in Spring Valley &mdash; Frequently Asked Questions"
+        "Frequently Asked Questions About Leak Detection and Repair in Spring Valley"
       ],
       "internalHrefs": [
         "/contact/",
@@ -4434,7 +4434,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1005
+      "wordEstimate": 999
     },
     {
       "route": "/spring-valley/re-piping",
@@ -4483,7 +4483,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1116
+      "wordEstimate": 1112
     },
     {
       "route": "/spring-valley/slab-leak-detection-repair",
@@ -4500,7 +4500,7 @@
         "Slab Leak Repair Options in Spring Valley",
         "How Red Carpet Plumbing Handles Slab Leaks in Spring Valley",
         "Why Spring Valley Homeowners Choose Red Carpet Plumbing for Slab Leak Service",
-        "Slab Leak Detection and Repair in Spring Valley &mdash; Frequently Asked Questions"
+        "Frequently Asked Questions About Slab Leak Detection and Repair in Spring Valley"
       ],
       "internalHrefs": [
         "/contact/",
@@ -4532,7 +4532,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 870
+      "wordEstimate": 863
     },
     {
       "route": "/spring-valley/water-heater-repair-installation",
@@ -4549,7 +4549,7 @@
         "Water Heater Services We Provide in Spring Valley",
         "Our Water Heater Service Process in Spring Valley",
         "Why Spring Valley Homeowners Choose Red Carpet Plumbing",
-        "Water Heater Repair and Installation in Spring Valley &mdash; Frequently Asked Questions"
+        "Frequently Asked Questions About Water Heater Repair and Installation in Spring Valley"
       ],
       "internalHrefs": [
         "/spring-valley-plumbing-services/",
@@ -4579,7 +4579,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 825
+      "wordEstimate": 818
     },
     {
       "route": "/summerlin-plumbing-services",
@@ -4627,7 +4627,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 664
+      "wordEstimate": 659
     },
     {
       "route": "/summerlin/drain-cleaning",
@@ -4643,7 +4643,7 @@
         "Drain Cleaning Services We Provide in Summerlin",
         "Our Drain Cleaning Process in Summerlin",
         "Why Summerlin Homeowners Choose Red Carpet Plumbing",
-        "Drain Cleaning in Summerlin &mdash; Frequently Asked Questions"
+        "Frequently Asked Questions About Drain Cleaning in Summerlin"
       ],
       "internalHrefs": [
         "/summerlin-plumbing-services/",
@@ -4669,7 +4669,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 667
+      "wordEstimate": 664
     },
     {
       "route": "/summerlin/emergency-plumbing",
@@ -4717,7 +4717,7 @@
         "LocalBusiness",
         "AggregateRating"
       ],
-      "wordEstimate": 1427
+      "wordEstimate": 1424
     },
     {
       "route": "/summerlin/leak-detection-repair",
@@ -4734,7 +4734,7 @@
         "Leak Detection and Repair Services in Summerlin",
         "Our Leak Detection Process in Summerlin",
         "Why Summerlin Homeowners Choose Red Carpet Plumbing for Leak Detection",
-        "Leak Detection and Repair in Summerlin &mdash; Frequently Asked Questions"
+        "Frequently Asked Questions About Leak Detection and Repair in Summerlin"
       ],
       "internalHrefs": [
         "/contact/",
@@ -4761,7 +4761,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 895
+      "wordEstimate": 890
     },
     {
       "route": "/summerlin/re-piping",
@@ -4778,7 +4778,7 @@
         "When Repair Is Right and When Repiping Makes More Sense",
         "Our Re-Piping Process in Summerlin",
         "Why Summerlin Homeowners Choose Red Carpet Plumbing for Re-Piping",
-        "Re-Piping in Summerlin &mdash; Frequently Asked Questions"
+        "Frequently Asked Questions About Re-Piping in Summerlin"
       ],
       "internalHrefs": [
         "/summerlin-plumbing-services/",
@@ -4807,7 +4807,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 924
+      "wordEstimate": 921
     },
     {
       "route": "/summerlin/slab-leak-detection-repair",
@@ -4824,7 +4824,7 @@
         "Slab Leak Repair Options in Summerlin",
         "How Red Carpet Plumbing Handles Slab Leaks in Summerlin",
         "Why Summerlin Homeowners Choose Red Carpet Plumbing for Slab Leak Service",
-        "Slab Leak Detection and Repair in Summerlin &mdash; Frequently Asked Questions"
+        "Frequently Asked Questions About Slab Leak Detection and Repair in Summerlin"
       ],
       "internalHrefs": [
         "/contact/",
@@ -4851,7 +4851,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 816
+      "wordEstimate": 810
     },
     {
       "route": "/summerlin/water-heater-repair-installation",
@@ -4868,7 +4868,7 @@
         "Water Heater Services We Provide in Summerlin",
         "Our Water Heater Service Process in Summerlin",
         "Why Summerlin Homeowners Choose Red Carpet Plumbing",
-        "Water Heater Repair and Installation in Summerlin &mdash; Frequently Asked Questions"
+        "Frequently Asked Questions About Water Heater Repair and Installation in Summerlin"
       ],
       "internalHrefs": [
         "/summerlin-plumbing-services/",
@@ -4894,7 +4894,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 592
+      "wordEstimate": 586
     },
     {
       "route": "/thank-you",
@@ -4961,7 +4961,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 398
+      "wordEstimate": 393
     },
     {
       "route": "/trenchless-piping",
@@ -5010,7 +5010,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 409
+      "wordEstimate": 404
     },
     {
       "route": "/video-camera-plumbing-inspections",
@@ -5060,7 +5060,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 410
+      "wordEstimate": 404
     },
     {
       "route": "/water-heater-repair-installation",
@@ -5110,7 +5110,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 588
+      "wordEstimate": 582
     },
     {
       "route": "/water-meter-pressure-regulator-services",
@@ -5160,7 +5160,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 412
+      "wordEstimate": 404
     },
     {
       "route": "/water-pipe-repair-replacement",
@@ -5210,7 +5210,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 416
+      "wordEstimate": 409
     }
   ],
   "warnings": []
