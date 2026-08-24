@@ -232,6 +232,12 @@ const LLV_EMERGENCY_REROUTING = [
     linkHref: "/lake-las-vegas/water-heater-repair-installation/",
     linkText: "Water heater repair and installation",
   },
+  {
+    title: "Emergency Plumbing in Henderson",
+    body: "If you also manage a property elsewhere in Henderson, Red Carpet Plumbing provides the same emergency plumbing response across the wider Henderson area.",
+    linkHref: "/henderson/emergency-plumbing/",
+    linkText: "Henderson emergency plumbing",
+  },
 ];
 
 // ---------------------------------------------------------------------------

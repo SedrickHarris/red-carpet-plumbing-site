@@ -235,6 +235,12 @@ const LLV_SLAB_REROUTING = [
     linkHref: "/lake-las-vegas/drain-cleaning/",
     linkText: "Lake Las Vegas drain cleaning",
   },
+  {
+    title: "Slab Leak Detection and Repair in Henderson",
+    body: "If you also manage a property elsewhere in Henderson, Red Carpet Plumbing provides the same slab leak detection and repair service across the wider Henderson area.",
+    linkHref: "/henderson/slab-leak-detection-repair/",
+    linkText: "Henderson slab leak detection and repair",
+  },
 ];
 
 // ---------------------------------------------------------------------------

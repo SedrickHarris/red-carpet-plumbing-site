@@ -254,6 +254,14 @@ const ALIANTE_SLAB_RELATED = [
     image: "/images/services/leak-detection-repair/card.webp",
     imageAlt: "Leak detection and repair in the Aliante area",
   },
+  {
+    title: "Slab Leak Detection and Repair in North Las Vegas",
+    description:
+      "Non-invasive slab leak detection and repair for North Las Vegas homes beyond the Aliante area.",
+    href: "/north-las-vegas/slab-leak-detection-repair/",
+    image: "/images/services/slab-leak-detection-repair/card.webp",
+    imageAlt: "Slab leak detection and repair in North Las Vegas",
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -741,7 +749,6 @@ export default function AlianteSlabLeakPage() {
                 </Link>{" "}
                 hub.
               </p>
-              {/* TODO: When /north-las-vegas/slab-leak-detection-repair/ is confirmed built, update this link. */}
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 We also serve the broader North Las Vegas community. For our full
                 North Las Vegas service coverage, see{" "}

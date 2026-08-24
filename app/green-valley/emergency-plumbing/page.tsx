@@ -190,6 +190,14 @@ const GV_EMERGENCY_RELATED = [
     image: "/images/services/drain-cleaning/card.webp",
     imageAlt: "Drain cleaning in Green Valley, NV",
   },
+  {
+    title: "Emergency Plumbing in Henderson",
+    description:
+      "Emergency plumbing response across the wider Henderson area, including Green Valley and Green Valley Ranch. Burst pipes, active leaks, and water heater failures.",
+    href: "/henderson/emergency-plumbing/",
+    image: "/images/services/emergency-plumbing/card.webp",
+    imageAlt: "Emergency plumbing in Henderson, NV",
+  },
 ];
 
 // FAQs -- FAQPage schema source of truth
