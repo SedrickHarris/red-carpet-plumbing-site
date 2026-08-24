@@ -207,15 +207,15 @@ const BOULDER_CITY_AREAS = [
 // ---------------------------------------------------------------------------
 const RELATED_SERVICES = [
   {
-    label: "Emergency Plumbing in Boulder City",
+    label: "Emergency Plumbing",
     href: "/boulder-city/emergency-plumbing/",
   },
   {
-    label: "Leak Detection and Repair in Boulder City",
+    label: "Leak Detection and Repair",
     href: "/boulder-city/leak-detection-repair/",
   },
   {
-    label: "Water Heater Repair and Installation in Boulder City",
+    label: "Water Heater Repair and Installation",
     href: "/boulder-city/water-heater-repair-installation/",
   },
   {
