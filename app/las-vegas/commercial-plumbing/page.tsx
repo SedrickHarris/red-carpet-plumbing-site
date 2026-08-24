@@ -148,7 +148,7 @@ const COMMERCIAL_SERVICES: {
     title: "Commercial Water Heater Repair and Installation",
     description:
       "High-capacity water heater systems in commercial properties operate under continuous demand. Mineral buildup from Las Vegas hard water accelerates scale accumulation in commercial water heaters at high usage volumes. Red Carpet Plumbing provides repair, maintenance, and replacement of commercial water heater systems.",
-    href: "/water-heater-repair-installation/",
+    href: "/las-vegas/water-heater-repair-installation/",
   },
   {
     title: "Commercial Leak Detection and Repair",
@@ -160,13 +160,13 @@ const COMMERCIAL_SERVICES: {
     title: "Commercial Sewer Line Services",
     description:
       "Commercial properties generate higher sewer line demand than residential systems, and blockages or failures disrupt operations. Red Carpet Plumbing provides commercial sewer line inspection, cleaning, repair, and replacement for businesses throughout Las Vegas.",
-    href: "/sewer-line-services/",
+    href: "/las-vegas/sewer-line-services/",
   },
   {
     title: "Backflow Prevention and Testing",
     description:
       "Commercial properties with irrigation systems, fire suppression connections, and specialized equipment require backflow prevention devices. Clark County requires backflow preventer installation and periodic testing for qualifying commercial properties. Red Carpet Plumbing installs, tests, and repairs backflow prevention devices for commercial clients.",
-    href: "/backflow-prevention/",
+    href: "/las-vegas/backflow-prevention/",
   },
   {
     title: "Commercial Pipe Repair and Re-Piping",

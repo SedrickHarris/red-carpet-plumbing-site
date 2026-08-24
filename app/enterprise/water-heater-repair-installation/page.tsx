@@ -215,9 +215,9 @@ const RELATED_SERVICES = [
     href: "/enterprise/emergency-plumbing/",
     text: "Enterprise emergency plumbing",
   },
-  { href: "/leak-detection-repair/", text: "Leak detection and repair" },
+  { href: "/enterprise/leak-detection-repair/", text: "Leak detection and repair" },
   {
-    href: "/slab-leak-detection-repair/",
+    href: "/enterprise/slab-leak-detection-repair/",
     text: "Slab leak detection and repair",
   },
   { href: "/las-vegas/water-heater-repair-installation/", text: "Las Vegas water heater repair and installation" },

@@ -145,7 +145,7 @@ const GV_TOILET_SERVICES: { label: string; body: string; tail?: LinkSeg[] }[] = 
         text: "Green Valley drain cleaning",
       },
       " and ",
-      { href: "/drain-cleaning/", text: "drain cleaning services" },
+      { href: "/green-valley/drain-cleaning/", text: "drain cleaning services" },
       " pages.",
     ],
   },

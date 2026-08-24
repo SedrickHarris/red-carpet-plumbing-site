@@ -197,10 +197,10 @@ const WHY_CHOOSE = [
 // Section 6 — related services (built core/sibling routes).
 const RELATED_SERVICES = [
   {
-    href: "/water-heater-repair-installation/",
+    href: "/enterprise/water-heater-repair-installation/",
     text: "Water heater repair and installation",
   },
-  { href: "/leak-detection-repair/", text: "Leak detection and repair" },
+  { href: "/enterprise/leak-detection-repair/", text: "Leak detection and repair" },
   { href: "/enterprise/emergency-plumbing/", text: "Enterprise emergency plumbing" },
   { href: "/las-vegas/drain-cleaning/", text: "Las Vegas drain cleaning" },
 ];

@@ -223,8 +223,8 @@ const RELATED_SERVICES = [
     href: "/north-las-vegas/drain-cleaning/",
   },
   { label: "Aliante Area Plumbing", href: "/north-las-vegas/aliante-area-plumbing/" },
-  { label: "Leak Detection and Repair", href: "/leak-detection-repair/" },
-  { label: "Slab Leak Detection and Repair", href: "/slab-leak-detection-repair/" },
+  { label: "Leak Detection and Repair", href: "/north-las-vegas/leak-detection-repair/" },
+  { label: "Slab Leak Detection and Repair", href: "/north-las-vegas/slab-leak-detection-repair/" },
   { label: "Water Heater Repair and Installation in Las Vegas", href: "/las-vegas/water-heater-repair-installation/" },
 ];
 

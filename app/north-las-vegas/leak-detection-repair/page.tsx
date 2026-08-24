@@ -170,7 +170,7 @@ const LEAK_SERVICES: {
     label: "Slab Leak Detection",
     body: "Slab leaks are a risk throughout North Las Vegas, particularly in older central neighborhoods and Aliante homes where pipe aging and caliche soil movement combine. Red Carpet Plumbing provides slab leak detection using acoustic sensors, thermal imaging, and pressure testing.",
     link: {
-      href: "/slab-leak-detection-repair/",
+      href: "/north-las-vegas/slab-leak-detection-repair/",
       text: "slab leak detection and repair",
     },
   },
@@ -225,7 +225,7 @@ const RELATED_SERVICES = [
     label: "Water Heater Repair and Installation in North Las Vegas",
     href: "/north-las-vegas/water-heater-repair-installation/",
   },
-  { label: "Slab Leak Detection and Repair", href: "/slab-leak-detection-repair/" },
+  { label: "Slab Leak Detection and Repair", href: "/north-las-vegas/slab-leak-detection-repair/" },
   { label: "Leak Detection and Repair in Las Vegas", href: "/las-vegas/leak-detection-repair/" },
 ];
 

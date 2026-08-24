@@ -177,7 +177,7 @@ const LEAK_SERVICES: {
     body: "Slab leaks are a meaningful risk for Enterprise homes now 20 to 25 years old with copper supply lines beneath slab foundations subject to caliche soil movement. Red Carpet Plumbing provides slab leak detection using acoustic sensors, thermal imaging, and pressure testing.",
     link: {
       pre: " See our ",
-      href: "/slab-leak-detection-repair/",
+      href: "/enterprise/slab-leak-detection-repair/",
       text: "slab leak detection and repair",
       post: " page for repair options.",
     },

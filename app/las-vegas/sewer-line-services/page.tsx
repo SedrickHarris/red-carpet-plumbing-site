@@ -179,7 +179,7 @@ const LV_SEWER_SERVICES: { label: string; body: string; tail?: LinkSeg[] }[] = [
     tail: [
       " See our ",
       {
-        href: "/video-camera-plumbing-inspections/",
+        href: "/las-vegas/video-camera-plumbing-inspections/",
         text: "video camera plumbing inspections",
       },
       " page for more detail.",
@@ -230,7 +230,7 @@ const RELATED_SERVICES = [
   { label: "Re-Piping in Las Vegas", href: "/las-vegas/re-piping/" },
   {
     label: "Video Camera Plumbing Inspections",
-    href: "/video-camera-plumbing-inspections/",
+    href: "/las-vegas/video-camera-plumbing-inspections/",
   },
   { label: "Trenchless Piping Services", href: "/trenchless-piping/" },
   { label: "Sewer Line Services in Henderson", href: "/henderson/sewer-line-services/" },

@@ -171,7 +171,7 @@ const REPAIR_OPTIONS: {
     body: "Pipe rerouting abandons the damaged pipe beneath the slab entirely and installs a new supply line through walls, ceilings, or above-slab pathways to bypass the foundation. Rerouting eliminates the source of future slab leaks on the affected line and avoids ongoing foundation disruption. For Enterprise homes where the assessment reveals that the surrounding pipe condition warrants concern, or where a second leak on the same line is likely, rerouting is typically the more durable long-term solution.",
     link: {
       pre: " See our ",
-      href: "/re-piping/",
+      href: "/enterprise/re-piping/",
       text: "re-piping services",
       post: " page for information on full and partial pipe replacement options.",
     },

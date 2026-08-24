@@ -143,7 +143,7 @@ const DRAIN_SERVICES: {
     // when that page is built. For now this links to the live core page.
     label: "Restaurant and Commercial Grease Drain Service",
     body: "High-volume grease drain lines in restaurants and commercial kitchens near the Las Vegas Strip require specialized clearing. We provide grease line service for commercial properties throughout Paradise. For commercial plumbing, see our",
-    link: { href: "/commercial-plumbing/", text: "commercial plumbing" },
+    link: { href: "/paradise/commercial-plumbing/", text: "commercial plumbing" },
   },
   {
     label: "Floor Drain Clearing",

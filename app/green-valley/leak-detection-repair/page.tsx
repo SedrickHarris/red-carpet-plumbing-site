@@ -172,7 +172,7 @@ const GV_LEAK_SERVICES: {
     label: "Slab leak detection",
     body: "Slab leaks are a significant risk in original Green Valley neighborhoods, where aging copper lines and caliche soil movement combine beneath slab foundations. Red Carpet Plumbing provides slab leak detection using acoustic sensors, thermal imaging, and pressure testing.",
     link: {
-      href: "/slab-leak-detection-repair/",
+      href: "/green-valley/slab-leak-detection-repair/",
       text: "slab leak detection and repair",
     },
     // ACTIVATED: P33 built and staged
@@ -248,7 +248,7 @@ const RELATED_SERVICES: { label: string; href?: string }[] = [
   },
   {
     label: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
+    href: "/green-valley/slab-leak-detection-repair/",
   },
   {
     // ACTIVATED: P33 built and staged

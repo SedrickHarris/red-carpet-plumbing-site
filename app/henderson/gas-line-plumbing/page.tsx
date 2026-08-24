@@ -133,7 +133,7 @@ const HENDERSON_GAS_SERVICES: {
     tail: [
       " For gas water heater service, see our ",
       {
-        href: "/water-heater-repair-installation/",
+        href: "/henderson/water-heater-repair-installation/",
         text: "water heater repair and installation",
       },
       " page.",

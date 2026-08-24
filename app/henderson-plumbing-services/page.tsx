@@ -104,28 +104,28 @@ type ServiceLink = {
 const HENDERSON_FEATURED_SERVICES: ServiceLink[] = [
   {
     title: "Sewer Line Services",
-    href: "/sewer-line-services/",
+    href: "/henderson/sewer-line-services/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp",
     imageAlt: "Sewer line services in Henderson",
   },
   {
     title: "Re-Piping",
-    href: "/re-piping/",
+    href: "/henderson/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
     imageAlt: "Re-piping services in Henderson",
   },
   {
     title: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/henderson/water-heater-repair-installation/",
     image:
       "/images/services/water-heater-repair-installation/card.webp",
     imageAlt: "Water heater repair and installation in Henderson",
   },
   {
     title: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
+    href: "/henderson/slab-leak-detection-repair/",
     image:
       "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Slab leak detection and repair in Henderson",
@@ -564,7 +564,7 @@ export default function HendersonPlumbingServicesPage() {
                 <Button href="tel:+17025679172" variant="inverse" size="2xl">
                   Call (702) 567-9172
                 </Button>
-                <Button href="/emergency-plumbing/" variant="inverse-outline" size="lg">
+                <Button href="/henderson/emergency-plumbing/" variant="inverse-outline" size="lg">
                   View Emergency Plumbing Service
                 </Button>
               </div>

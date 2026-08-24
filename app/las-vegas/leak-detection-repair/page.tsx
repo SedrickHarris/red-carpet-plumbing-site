@@ -139,7 +139,7 @@ const LV_LEAK_SERVICES: {
     label: "Underground line leak detection",
     body: "We locate buried water supply, irrigation, and sewer line leaks using electronic detection equipment and pressure testing. For sewer lines, we can confirm the condition of the line with a camera inspection.",
     link: {
-      href: "/video-camera-plumbing-inspections/",
+      href: "/las-vegas/video-camera-plumbing-inspections/",
       text: "video camera plumbing inspections",
     },
   },
@@ -217,7 +217,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Video Camera Plumbing Inspections",
-    href: "/video-camera-plumbing-inspections/",
+    href: "/las-vegas/video-camera-plumbing-inspections/",
   },
   { label: "Leak Detection and Repair in Henderson", href: "/henderson/leak-detection-repair/" },
 ];

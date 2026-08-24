@@ -157,7 +157,7 @@ const COMMERCIAL_SERVICES: {
     title: "Commercial Water Heater Repair and Installation",
     description:
       "High-capacity water heater systems in Spring Valley commercial properties face continuous demand and accelerated mineral scale buildup from Las Vegas hard water. Red Carpet Plumbing provides repair, maintenance, and replacement of commercial water heater systems throughout Spring Valley.",
-    href: "/water-heater-repair-installation/",
+    href: "/spring-valley/water-heater-repair-installation/",
   },
   {
     title: "Commercial Leak Detection and Repair",
@@ -182,7 +182,7 @@ const COMMERCIAL_SERVICES: {
     title: "Commercial Pipe Repair and Re-Piping",
     description:
       "Repair and replacement of aging or failing supply lines, drain lines, and commercial pipe systems in Spring Valley businesses and multi-unit buildings. Older commercial buildings in the Desert Inn and West Sahara corridors may have original galvanized supply lines that require full replacement rather than spot repair.",
-    href: "/re-piping/",
+    href: "/spring-valley/re-piping/",
   },
   // FLAG: 24/7 emergency-availability claim implied by this card — verify before final launch.
   {

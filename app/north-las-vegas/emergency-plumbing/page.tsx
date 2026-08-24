@@ -170,13 +170,13 @@ const NLV_AREAS = [
 // built (drain-cleaning, leak-detection-repair, water-heater-repair-installation,
 // slab-leak-detection-repair).
 const RELATED_SERVICES = [
-  { label: "Drain Cleaning", href: "/drain-cleaning/" },
-  { label: "Leak Detection and Repair", href: "/leak-detection-repair/" },
+  { label: "Drain Cleaning", href: "/north-las-vegas/drain-cleaning/" },
+  { label: "Leak Detection and Repair", href: "/north-las-vegas/leak-detection-repair/" },
   {
     label: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/north-las-vegas/water-heater-repair-installation/",
   },
-  { label: "Slab Leak Detection and Repair", href: "/slab-leak-detection-repair/" },
+  { label: "Slab Leak Detection and Repair", href: "/north-las-vegas/slab-leak-detection-repair/" },
   { label: "Commercial Plumbing", href: "/commercial-plumbing/" },
   { label: "Emergency Plumbing in Las Vegas", href: "/las-vegas/emergency-plumbing/" },
 ];
