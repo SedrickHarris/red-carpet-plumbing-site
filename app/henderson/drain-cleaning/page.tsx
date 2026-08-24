@@ -207,6 +207,7 @@ const RELATED_SERVICES = [
     label: "Video Camera Plumbing Inspections",
     href: "/video-camera-plumbing-inspections/",
   },
+  { label: "Drain Cleaning in Las Vegas", href: "/las-vegas/drain-cleaning/" },
 ];
 
 // ---------------------------------------------------------------------------

@@ -196,6 +196,7 @@ const RELATED_SERVICES = [
     label: "Video Camera Plumbing Inspections",
     href: "/video-camera-plumbing-inspections/",
   },
+  { label: "Drain Cleaning in Henderson", href: "/henderson/drain-cleaning/" },
 ];
 
 // ---------------------------------------------------------------------------

@@ -202,6 +202,7 @@ const RELATED_SERVICES = [
   },
   { label: "Leak Detection and Repair", href: "/leak-detection-repair/" },
   { label: "Sewer Line Services", href: "/sewer-line-services/" },
+  { label: "Drain Cleaning in Las Vegas", href: "/las-vegas/drain-cleaning/" },
 ];
 
 // ---------------------------------------------------------------------------

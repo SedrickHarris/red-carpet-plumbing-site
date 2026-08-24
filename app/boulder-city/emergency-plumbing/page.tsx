@@ -199,6 +199,11 @@ const RELATED_SERVICES = [
     href: "/emergency-plumbing/",
     built: true,
   },
+  {
+    label: "Emergency Plumbing in Henderson",
+    href: "/henderson/emergency-plumbing/",
+    built: true,
+  },
 ];
 
 // ---------------------------------------------------------------------------
