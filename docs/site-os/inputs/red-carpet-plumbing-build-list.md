@@ -1332,6 +1332,7 @@ Each service-location page should link to:
 3. Related service-location pages in the same area
 4. Nearby location hubs
 5. Contact page
+6. The same service in the adjacent location (cross-city same-service link)
 
 Example: `/summerlin/drain-cleaning/` links to:
 
@@ -1343,7 +1344,37 @@ Example: `/summerlin/drain-cleaning/` links to:
 - `/summerlin/sewer-line-services/`
 - `/las-vegas-plumbing-services/`
 - `/spring-valley-plumbing-services/`
+- `/las-vegas/drain-cleaning/`
 - `/contact/`
+
+### Cross-City Same-Service Adjacency Map
+
+Link type 6 points at the same service in one adjacent location, never at a
+list of them. Exactly one cross-city target per page, chosen by this map:
+
+| From location | Cross-city target |
+| --- | --- |
+| Las Vegas | Henderson |
+| Henderson | Las Vegas |
+| Boulder City | Henderson |
+| Green Valley | Henderson |
+| Lake Las Vegas | Henderson |
+| Enterprise | Las Vegas |
+| North Las Vegas | Las Vegas |
+| Paradise | Las Vegas |
+| Spring Valley | Las Vegas |
+| Summerlin | Las Vegas |
+
+Rules:
+
+- Las Vegas and Henderson are the two hubs and pair with each other.
+- Every other location points to its nearest hub.
+- A Tier 2 neighborhood page points to the same service on its parent Tier 1
+  location instead, so `/north-las-vegas/aliante-area/slab-leak-detection-repair/`
+  targets `/north-las-vegas/slab-leak-detection-repair/`.
+- The link is added only where the target page is actually built. If it does
+  not exist yet, omit the link rather than pointing at the core service page,
+  which link type 2 already covers.
 
 ---
 
