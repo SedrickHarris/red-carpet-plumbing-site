@@ -188,33 +188,33 @@ const WHY_CHOOSE = [
 ];
 
 // ---------------------------------------------------------------------------
-// JSON-LD payloads. Service.areaServed uses Place -> AdministrativeArea (Clark
-// County) -> State (Nevada) because Spring Valley is unincorporated. Do NOT use
-// "@type": "City".
+// Related-services links. Six point to built Spring Valley siblings; the last
+// points to the Las Vegas cross-city sibling per build list 8.6, which is why
+// it is the only label carrying a place name.
 // ---------------------------------------------------------------------------
 const RELATED_SERVICES = [
   {
-    label: "Emergency Plumbing in Spring Valley",
+    label: "Emergency Plumbing",
     href: "/spring-valley/emergency-plumbing/",
   },
   {
-    label: "Leak Detection and Repair in Spring Valley",
+    label: "Leak Detection and Repair",
     href: "/spring-valley/leak-detection-repair/",
   },
   {
-    label: "Slab Leak Detection and Repair in Spring Valley",
+    label: "Slab Leak Detection and Repair",
     href: "/spring-valley/slab-leak-detection-repair/",
   },
   {
-    label: "Water Heater Repair and Installation in Spring Valley",
+    label: "Water Heater Repair and Installation",
     href: "/spring-valley/water-heater-repair-installation/",
   },
   {
-    label: "Re-Piping in Spring Valley",
+    label: "Re-Piping",
     href: "/spring-valley/re-piping/",
   },
   {
-    label: "Commercial Plumbing in Spring Valley",
+    label: "Commercial Plumbing",
     href: "/spring-valley/commercial-plumbing/",
   },
   {
@@ -223,6 +223,11 @@ const RELATED_SERVICES = [
   },
 ];
 
+// ---------------------------------------------------------------------------
+// JSON-LD payloads. Service.areaServed uses Place -> AdministrativeArea (Clark
+// County) -> State (Nevada) because Spring Valley is unincorporated. Do NOT use
+// "@type": "City".
+// ---------------------------------------------------------------------------
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",

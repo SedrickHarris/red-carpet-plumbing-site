@@ -207,8 +207,9 @@ const LLV_EMERGENCY_FAQS = [
 ];
 
 // ---------------------------------------------------------------------------
-// Related-services rerouting cards. All link to built Lake Las Vegas routes
-// (drain cleaning, slab leak detection, water heater) — fully activated.
+// Related-services rerouting cards. Three link to built Lake Las Vegas routes
+// (drain cleaning, slab leak detection, water heater), all fully activated.
+// The fourth links to the Henderson cross-city sibling per build list 8.6.
 // ---------------------------------------------------------------------------
 const LLV_EMERGENCY_REROUTING = [
   {
@@ -234,7 +235,7 @@ const LLV_EMERGENCY_REROUTING = [
   },
   {
     title: "Emergency Plumbing in Henderson",
-    body: "If you also manage a property elsewhere in Henderson, Red Carpet Plumbing provides the same emergency plumbing response across the wider Henderson area.",
+    body: "If your emergency plumbing issue is affecting a second property in Henderson, Red Carpet Plumbing provides the same emergency response across the wider Henderson area.",
     linkHref: "/henderson/emergency-plumbing/",
     linkText: "Henderson emergency plumbing",
   },
