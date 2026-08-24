@@ -121,7 +121,7 @@ const NORTH_LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
   },
   {
     title: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/north-las-vegas/water-heater-repair-installation/",
     image:
       "/images/services/water-heater-repair-installation/card.webp",
     imageAlt: "Water heater repair and installation in North Las Vegas",
@@ -560,7 +560,7 @@ export default function NorthLasVegasPlumbingServicesPage() {
                 <Button href="tel:+17025679172" variant="inverse" size="2xl">
                   Call (702) 567-9172
                 </Button>
-                <Button href="/emergency-plumbing/" variant="inverse-outline" size="lg">
+                <Button href="/north-las-vegas/emergency-plumbing/" variant="inverse-outline" size="lg">
                   View Emergency Plumbing Service
                 </Button>
               </div>

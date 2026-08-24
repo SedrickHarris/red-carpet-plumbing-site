@@ -147,7 +147,7 @@ const GV_FAUCET_SINK_SERVICES: {
         text: "Green Valley drain cleaning",
       },
       " and ",
-      { href: "/drain-cleaning/", text: "drain cleaning services" },
+      { href: "/green-valley/drain-cleaning/", text: "drain cleaning services" },
       " pages.",
     ],
   },

@@ -148,7 +148,7 @@ const COMMERCIAL_SERVICES: {
     title: "Commercial Water Heater Repair and Installation",
     description:
       "High-capacity water heater systems in Henderson commercial properties operate under continuous demand. Hard water mineral scale accelerates sediment buildup in commercial water heaters at high usage volumes. Red Carpet Plumbing provides repair, maintenance, and replacement of commercial water heater systems throughout Henderson.",
-    href: "/water-heater-repair-installation/",
+    href: "/henderson/water-heater-repair-installation/",
   },
   {
     title: "Commercial Leak Detection and Repair",
@@ -160,7 +160,7 @@ const COMMERCIAL_SERVICES: {
     title: "Commercial Sewer Line Services",
     description:
       "Commercial properties in Henderson generate higher sewer line demand than residential systems, and blockages or failures disrupt operations. Red Carpet Plumbing provides commercial sewer line inspection, cleaning, repair, and replacement throughout Henderson.",
-    href: "/sewer-line-services/",
+    href: "/henderson/sewer-line-services/",
   },
   {
     title: "Backflow Prevention and Testing",

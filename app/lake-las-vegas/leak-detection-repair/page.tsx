@@ -135,7 +135,7 @@ const LLV_LEAK_SERVICES: {
     label: "Slab Leak Detection",
     body: "Slab leaks occur when supply or drain lines running beneath the concrete foundation develop failures. In Lake Las Vegas, hard water mineral corrosion and caliche soil movement are the most common contributing factors. We provide slab leak detection using acoustic sensors, thermal imaging, and pressure testing.",
     link: {
-      href: "/slab-leak-detection-repair/",
+      href: "/lake-las-vegas/slab-leak-detection-repair/",
       text: "slab leak detection and repair",
     },
   },

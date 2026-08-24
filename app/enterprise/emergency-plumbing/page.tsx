@@ -118,7 +118,7 @@ const COMMON_PROBLEMS: {
     body: "Enterprise is built predominantly on concrete slab foundations, and the caliche and expansive clay soils beneath those slabs shift with temperature changes and seasonal rainfall throughout Clark County. This soil movement stresses copper supply pipes embedded in and running beneath the slab over time. Combined with Las Vegas hard water mineral corrosion thinning copper pipe walls in homes now 20 to 25 years old, slab leaks are a meaningful emergency risk for Enterprise homeowners. Signs of a slab leak include warm spots on floors, unexplained increases in water bills, and the sound of running water when all fixtures are off.",
     link: {
       pre: " For more information, see our ",
-      href: "/slab-leak-detection-repair/",
+      href: "/enterprise/slab-leak-detection-repair/",
       text: "slab leak detection and repair",
       post: " page.",
     },
@@ -154,7 +154,7 @@ const EMERGENCY_SERVICES: {
   {
     before: "Water heater emergency repair and replacement. See our ",
     link: {
-      href: "/water-heater-repair-installation/",
+      href: "/enterprise/water-heater-repair-installation/",
       text: "water heater repair and installation",
     },
     after: " page.",
@@ -170,7 +170,7 @@ const EMERGENCY_SERVICES: {
     link: { href: "/sewer-line-services/", text: "sewer line services" },
   },
   {
-    link: { href: "/drain-cleaning/", text: "Drain cleaning" },
+    link: { href: "/enterprise/drain-cleaning/", text: "Drain cleaning" },
     after: " for blocked or slow drain emergencies",
   },
   { before: "Main water line repair" },

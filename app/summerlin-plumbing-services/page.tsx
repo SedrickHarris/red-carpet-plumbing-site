@@ -105,21 +105,21 @@ const SUMMERLIN_FEATURED_SERVICES: ServiceLink[] = [
   },
   {
     title: "Re-Piping",
-    href: "/re-piping/",
+    href: "/summerlin/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
     imageAlt: "Re-piping services in Summerlin",
   },
   {
     title: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/summerlin/water-heater-repair-installation/",
     image:
       "/images/services/water-heater-repair-installation/card.webp",
     imageAlt: "Water heater repair and installation in Summerlin",
   },
   {
     title: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
+    href: "/summerlin/slab-leak-detection-repair/",
     image:
       "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Slab leak detection and repair in Summerlin",
@@ -543,7 +543,7 @@ export default function SummerlinPlumbingServicesPage() {
                 <Button href="tel:+17025679172" variant="inverse" size="2xl">
                   Call (702) 567-9172
                 </Button>
-                <Button href="/emergency-plumbing/" variant="inverse-outline" size="lg">
+                <Button href="/summerlin/emergency-plumbing/" variant="inverse-outline" size="lg">
                   View Emergency Plumbing Service
                 </Button>
               </div>

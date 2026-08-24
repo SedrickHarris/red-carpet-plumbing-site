@@ -124,7 +124,7 @@ const COMMON_PROBLEMS: {
     body: "Spring Valley is built predominantly on concrete slab foundations, and the caliche and expansive clay soils beneath those slabs shift with temperature changes and seasonal rainfall. This soil movement stresses pipes embedded in and running beneath the slab over time. Combined with Las Vegas hard water mineral corrosion in older Spring Valley pipes, slab leaks are a recurring emergency in this community. Signs of a slab leak include warm spots on floors, unexplained water bill increases, and the sound of running water when all fixtures are off.",
     link: {
       pre: " For more information, see our ",
-      href: "/slab-leak-detection-repair/",
+      href: "/spring-valley/slab-leak-detection-repair/",
       text: "slab leak detection and repair",
       post: " page.",
     },

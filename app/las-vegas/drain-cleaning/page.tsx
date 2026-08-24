@@ -121,7 +121,7 @@ const LV_DRAIN_SERVICES: {
   {
     label: "Main sewer line cleaning",
     body: "When multiple drains are slow or backing up at the same time, the blockage is usually in the main sewer line. We clear main sewer lines using cable machines and hydro jetting matched to the type and location of the blockage.",
-    link: { href: "/sewer-line-services/", text: "sewer line services" },
+    link: { href: "/las-vegas/sewer-line-services/", text: "sewer line services" },
   },
   {
     label: "Hydro jetting",
@@ -131,7 +131,7 @@ const LV_DRAIN_SERVICES: {
     label: "Video camera drain inspection",
     body: "A video camera inspection lets us see exactly what is inside your drain or sewer line. We use camera inspections to identify the type and location of a blockage, confirm the line is fully clear after cleaning, and check for pipe damage, root intrusion, or structural issues.",
     link: {
-      href: "/video-camera-plumbing-inspections/",
+      href: "/las-vegas/video-camera-plumbing-inspections/",
       text: "video camera plumbing inspections",
     },
   },
@@ -188,13 +188,13 @@ const RELATED_SERVICES = [
   { label: "Emergency Plumbing in Las Vegas", href: "/las-vegas/emergency-plumbing/" },
   {
     label: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/las-vegas/water-heater-repair-installation/",
   },
-  { label: "Leak Detection and Repair", href: "/leak-detection-repair/" },
-  { label: "Sewer Line Services", href: "/sewer-line-services/" },
+  { label: "Leak Detection and Repair", href: "/las-vegas/leak-detection-repair/" },
+  { label: "Sewer Line Services", href: "/las-vegas/sewer-line-services/" },
   {
     label: "Video Camera Plumbing Inspections",
-    href: "/video-camera-plumbing-inspections/",
+    href: "/las-vegas/video-camera-plumbing-inspections/",
   },
   { label: "Drain Cleaning in Henderson", href: "/henderson/drain-cleaning/" },
 ];

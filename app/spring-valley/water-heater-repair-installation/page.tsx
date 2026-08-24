@@ -165,7 +165,7 @@ const WH_SERVICES: {
   {
     label: "Tankless water heater installation",
     body: "For homeowners considering a tankless water heater upgrade, we install tankless units to current Clark County code including proper venting on gas units. Tankless water heaters can last 15 to 20 years with proper maintenance. For homes that may need broader pipe assessment alongside water heater work, see our",
-    link: { href: "/re-piping/", text: "re-piping" },
+    link: { href: "/spring-valley/re-piping/", text: "re-piping" },
   },
 ];
 

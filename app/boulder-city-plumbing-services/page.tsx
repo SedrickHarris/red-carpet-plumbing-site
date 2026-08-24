@@ -550,7 +550,7 @@ export default function BoulderCityPlumbingServicesPage() {
                 <Button href="tel:+17025679172" variant="inverse" size="2xl">
                   Call (702) 567-9172
                 </Button>
-                <Button href="/emergency-plumbing/" variant="inverse-outline" size="lg">
+                <Button href="/boulder-city/emergency-plumbing/" variant="inverse-outline" size="lg">
                   View Emergency Plumbing Service
                 </Button>
               </div>

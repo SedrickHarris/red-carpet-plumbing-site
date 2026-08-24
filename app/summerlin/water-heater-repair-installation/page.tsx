@@ -172,7 +172,7 @@ const WH_SERVICES: {
   {
     label: "Gas and electric water heater service",
     body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under NV License #0048585A. For homes that may need broader pipe assessment alongside water heater service, see our",
-    link: { href: "/re-piping/", text: "re-piping" },
+    link: { href: "/summerlin/re-piping/", text: "re-piping" },
   },
 ];
 

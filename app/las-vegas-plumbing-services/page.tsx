@@ -100,28 +100,28 @@ type ServiceLink = {
 const LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
   {
     title: "Sewer Line Services",
-    href: "/sewer-line-services/",
+    href: "/las-vegas/sewer-line-services/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp",
     imageAlt: "Sewer line services in Las Vegas",
   },
   {
     title: "Re-Piping",
-    href: "/re-piping/",
+    href: "/las-vegas/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
     imageAlt: "Re-piping services in Las Vegas",
   },
   {
     title: "Water Heater Repair and Installation",
-    href: "/water-heater-repair-installation/",
+    href: "/las-vegas/water-heater-repair-installation/",
     image:
       "/images/services/water-heater-repair-installation/card.webp",
     imageAlt: "Water heater repair and installation in Las Vegas",
   },
   {
     title: "Slab Leak Detection and Repair",
-    href: "/slab-leak-detection-repair/",
+    href: "/las-vegas/slab-leak-detection-repair/",
     image:
       "/images/services/slab-leak-detection-repair/card.webp",
     imageAlt: "Slab leak detection and repair in Las Vegas",
@@ -541,7 +541,7 @@ export default function LasVegasPlumbingServicesPage() {
                 <Button href="tel:+17025679172" variant="inverse" size="2xl">
                   Call (702) 567-9172
                 </Button>
-                <Button href="/emergency-plumbing/" variant="inverse-outline" size="lg">
+                <Button href="/las-vegas/emergency-plumbing/" variant="inverse-outline" size="lg">
                   View Emergency Plumbing Service
                 </Button>
               </div>

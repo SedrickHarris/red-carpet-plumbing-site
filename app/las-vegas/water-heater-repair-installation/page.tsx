@@ -112,7 +112,7 @@ const LV_WH_CAUSES: {
   {
     label: "Aging units in older Las Vegas neighborhoods",
     body: "Homes in established Las Vegas neighborhoods including the Desert Inn and West Sahara corridors, Desert Shores, Sunrise Manor, Whitney, and Winchester that were built from the 1970s through the 1990s often have original or early-replacement water heaters that have been operating under Las Vegas hard water conditions for 15 or more years. These units are strong replacement candidates, and homes on original pipe may also be candidates for",
-    link: { href: "/re-piping/", text: "re-piping" },
+    link: { href: "/las-vegas/re-piping/", text: "re-piping" },
   },
 ];
 
@@ -205,9 +205,9 @@ const LV_NEIGHBORHOODS = [
 const RELATED_SERVICES = [
   { label: "Emergency Plumbing in Las Vegas", href: "/las-vegas/emergency-plumbing/" },
   { label: "Drain Cleaning in Las Vegas", href: "/las-vegas/drain-cleaning/" },
-  { label: "Leak Detection and Repair", href: "/leak-detection-repair/" },
-  { label: "Slab Leak Detection and Repair", href: "/slab-leak-detection-repair/" },
-  { label: "Re-Piping", href: "/re-piping/" },
+  { label: "Leak Detection and Repair", href: "/las-vegas/leak-detection-repair/" },
+  { label: "Slab Leak Detection and Repair", href: "/las-vegas/slab-leak-detection-repair/" },
+  { label: "Re-Piping", href: "/las-vegas/re-piping/" },
   { label: "Water Heater Repair and Installation in Henderson", href: "/henderson/water-heater-repair-installation/" },
 ];
 

@@ -77,7 +77,7 @@ const LLV_EMERGENCY_SCENARIOS: {
     body: "Slab leaks occur when supply or drain lines running beneath a concrete slab foundation begin to fail. In Lake Las Vegas, hard water mineral corrosion and caliche soil movement beneath the slab are the most common contributing factors. Signs include warm spots on the floor, the sound of running water when all fixtures are off, or an unexplained increase in your water bill.",
     link: {
       pre: " See our ",
-      href: "/slab-leak-detection-repair/",
+      href: "/lake-las-vegas/slab-leak-detection-repair/",
       text: "slab leak detection and repair",
       post: " page for details.",
     },
@@ -91,7 +91,7 @@ const LLV_EMERGENCY_SCENARIOS: {
     body: "An actively leaking water heater, loss of hot water combined with visible damage, or unusual pressure sounds from the tank require prompt attention. Hard water sediment from the Las Vegas Valley supply accelerates tank wear. Lake Las Vegas homes built 2000-2010 may be on their first or second water heater unit.",
     link: {
       pre: " See our ",
-      href: "/water-heater-repair-installation/",
+      href: "/lake-las-vegas/water-heater-repair-installation/",
       text: "water heater repair and installation",
       post: " page.",
     },

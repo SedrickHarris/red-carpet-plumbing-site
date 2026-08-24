@@ -154,7 +154,7 @@ const LEAK_SERVICES: {
     body: "Slab leaks occur when water or sewer pipes running beneath a home's concrete foundation develop cracks or holes. We locate slab leaks using acoustic sensors, thermal imaging, and pressure testing before any repair begins.",
     link: {
       pre: " For full slab leak repair options, see our ",
-      href: "/slab-leak-detection-repair/",
+      href: "/spring-valley/slab-leak-detection-repair/",
       text: "slab leak detection and repair",
       post: " page.",
     },
