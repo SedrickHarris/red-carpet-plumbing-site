@@ -412,7 +412,7 @@ export default function ParadiseLeakDetectionPage() {
                 of the following, contact a licensed plumber for a leak
                 inspection. For active or emergency leaks, see{" "}
                 <Link
-                  href="/emergency-plumbing/"
+                  href="/paradise/emergency-plumbing/"
                   className="font-semibold text-brand-primary hover:text-brand-primary-hover"
                 >
                   emergency plumbing

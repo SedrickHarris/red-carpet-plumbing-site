@@ -383,7 +383,7 @@ export default function ParadiseWaterHeaterPage() {
                 following, contact a licensed plumber for an inspection. For
                 urgent situations, see{" "}
                 <Link
-                  href="/emergency-plumbing/"
+                  href="/paradise/emergency-plumbing/"
                   className="font-semibold text-brand-primary hover:text-brand-primary-hover"
                 >
                   emergency plumbing

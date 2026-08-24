@@ -501,7 +501,7 @@ export default function ParadiseEmergencyPlumbingPage() {
                       breakdowns and pipe joint failures in Paradise are
                       frequently linked to scale buildup. Learn more about{" "}
                       <Link
-                        href="/water-heater-repair-installation/"
+                        href="/paradise/water-heater-repair-installation/"
                         className="font-semibold text-brand-primary hover:text-brand-primary-hover"
                       >
                         water heater repair and installation
@@ -558,7 +558,7 @@ export default function ParadiseEmergencyPlumbingPage() {
             <p className="mt-8 text-base leading-7 text-brand-dark/80">
               For{" "}
               <Link
-                href="/leak-detection-repair/"
+                href="/paradise/leak-detection-repair/"
                 className="font-semibold text-brand-primary hover:text-brand-primary-hover"
               >
                 leak detection and repair
