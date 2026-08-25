@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T17:47:25.218Z",
+  "generatedAt": "2026-08-25T20:59:02.473Z",
   "routeCount": 110,
   "routes": [
     {
@@ -164,7 +164,7 @@
       ],
       "internalHrefs": [
         "/service-areas/",
-        "/emergency-plumbing/",
+        "/boulder-city/emergency-plumbing/",
         "/about/"
       ],
       "schemaTypeHints": [
@@ -200,7 +200,8 @@
         "Why Historic Boulder City Homes Need More Frequent Drain Cleaning",
         "How Red Carpet Plumbing Cleans Drains in Boulder City",
         "Boulder City Neighborhoods We Serve",
-        "Drain Cleaning FAQs for Boulder City Homeowners"
+        "Drain Cleaning FAQs for Boulder City Homeowners",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/boulder-city-plumbing-services/",
@@ -225,7 +226,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1080
+      "wordEstimate": 1085
     },
     {
       "route": "/boulder-city/emergency-plumbing",
@@ -284,7 +285,8 @@
         "How Red Carpet Plumbing Detects and Repairs Leaks in Boulder City",
         "Why Boulder City Homeowners Choose Red Carpet Plumbing for Leak Detection",
         "Boulder City Neighborhoods We Serve",
-        "Leak Detection FAQs for Boulder City Homeowners"
+        "Leak Detection FAQs for Boulder City Homeowners",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/boulder-city-plumbing-services/",
@@ -309,7 +311,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1089
+      "wordEstimate": 1094
     },
     {
       "route": "/boulder-city/water-heater-repair-installation",
@@ -327,7 +329,8 @@
         "Our Water Heater Process in Boulder City",
         "Why Boulder City Homeowners Choose Red Carpet Plumbing",
         "Boulder City Neighborhoods We Serve",
-        "Water Heater FAQs for Boulder City Homeowners"
+        "Water Heater FAQs for Boulder City Homeowners",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/boulder-city-plumbing-services/",
@@ -351,7 +354,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 986
+      "wordEstimate": 991
     },
     {
       "route": "/commercial-plumbing",
@@ -554,7 +557,7 @@
       ],
       "internalHrefs": [
         "/service-areas/",
-        "/emergency-plumbing/",
+        "/enterprise/emergency-plumbing/",
         "/about/"
       ],
       "schemaTypeHints": [
@@ -616,7 +619,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 841
+      "wordEstimate": 845
     },
     {
       "route": "/enterprise/drain-cleaning",
@@ -678,7 +681,8 @@
         "Our Emergency Plumbing Process in Enterprise",
         "Why Enterprise Homeowners and Businesses Choose Red Carpet Plumbing",
         "Enterprise Emergency Plumbing Coverage Areas",
-        "Emergency Plumbing FAQs for Enterprise Homeowners"
+        "Emergency Plumbing FAQs for Enterprise Homeowners",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/emergency-plumbing/",
@@ -705,7 +709,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 911
+      "wordEstimate": 916
     },
     {
       "route": "/enterprise/leak-detection-repair",
@@ -769,7 +773,8 @@
         "Re-Piping Services for Enterprise Homes",
         "Our Re-Piping Process in Enterprise",
         "Why Enterprise Homeowners Choose Red Carpet Plumbing",
-        "Enterprise Neighborhoods and Communities We Serve"
+        "Enterprise Neighborhoods and Communities We Serve",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/enterprise-plumbing-services/",
@@ -794,7 +799,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1645
+      "wordEstimate": 1650
     },
     {
       "route": "/enterprise/slab-leak-detection-repair",
@@ -1064,7 +1069,7 @@
       "internalHrefs": [
         "/henderson-plumbing-services/",
         "/service-areas/",
-        "/emergency-plumbing/",
+        "/green-valley/emergency-plumbing/",
         "/about/"
       ],
       "schemaTypeHints": [
@@ -1137,7 +1142,8 @@
         "Slab Leak Detection and Repair in Green Valley",
         "Leak Detection and Repair in Green Valley",
         "Water Heater Repair and Installation in Green Valley",
-        "Drain Cleaning in Green Valley"
+        "Drain Cleaning in Green Valley",
+        "Emergency Plumbing in Henderson"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -1503,7 +1509,7 @@
         "/green-valley-plumbing-services/",
         "/lake-las-vegas-plumbing-services/",
         "/service-areas/",
-        "/emergency-plumbing/",
+        "/henderson/emergency-plumbing/",
         "/about/"
       ],
       "schemaTypeHints": [
@@ -1686,6 +1692,7 @@
         "Need a Licensed Gas Line Plumber in Henderson?",
         "Why Henderson Homeowners Choose Red Carpet Plumbing for Gas Line Work",
         "Henderson Communities We Serve for Gas Line Services",
+        "Related Plumbing Services",
         "Frequently Asked Questions About Gas Line Plumbing in Henderson, NV"
       ],
       "internalHrefs": [
@@ -1709,7 +1716,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 997
+      "wordEstimate": 1002
     },
     {
       "route": "/henderson/leak-detection-repair",
@@ -1843,6 +1850,7 @@
         "Sewer Line Problem in Henderson?",
         "Why Henderson Homeowners Choose Red Carpet Plumbing for Sewer Service",
         "Henderson Communities We Serve for Sewer Line Services",
+        "Related Plumbing Services",
         "Frequently Asked Questions About Sewer Line Services in Henderson, NV"
       ],
       "internalHrefs": [
@@ -1865,7 +1873,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 982
+      "wordEstimate": 987
     },
     {
       "route": "/henderson/slab-leak-detection-repair",
@@ -1991,7 +1999,7 @@
       "internalHrefs": [
         "/henderson-plumbing-services/",
         "/service-areas/",
-        "/emergency-plumbing/",
+        "/lake-las-vegas/emergency-plumbing/",
         "/about/"
       ],
       "schemaTypeHints": [
@@ -2024,7 +2032,8 @@
         "Main Sewer Line Roots and Sediment",
         "Sewer Line Services",
         "Video Camera Plumbing Inspections",
-        "Emergency Plumbing"
+        "Emergency Plumbing",
+        "Drain Cleaning in Henderson"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -2068,7 +2077,8 @@
         "Emergency Plumbing in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
         "Drain Cleaning",
         "Slab Leak Detection and Repair",
-        "Water Heater Repair and Installation"
+        "Water Heater Repair and Installation",
+        "Emergency Plumbing in Henderson"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -2103,7 +2113,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 741
+      "wordEstimate": 753
     },
     {
       "route": "/lake-las-vegas/leak-detection-repair",
@@ -2215,7 +2225,8 @@
         "Water Heater Repair and Installation in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
         "Emergency Plumbing",
         "Slab Leak Detection and Repair",
-        "Drain Cleaning"
+        "Drain Cleaning",
+        "Water Heater Repair and Installation in Henderson"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -2279,7 +2290,7 @@
       ],
       "internalHrefs": [
         "/service-areas/",
-        "/emergency-plumbing/",
+        "/las-vegas/emergency-plumbing/",
         "/about/"
       ],
       "schemaTypeHints": [
@@ -2616,6 +2627,7 @@
         "Gas Line Problem? Call a Licensed Las Vegas Plumber.",
         "Why Choose Red Carpet Plumbing for Gas Line Services",
         "Gas Line Service Areas in Las Vegas",
+        "Related Plumbing Services",
         "Frequently Asked Questions About Gas Line Plumbing in Las Vegas"
       ],
       "internalHrefs": [
@@ -2641,7 +2653,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 851
+      "wordEstimate": 856
     },
     {
       "route": "/las-vegas/leak-detection-repair",
@@ -3062,7 +3074,7 @@
       "internalHrefs": [
         "/north-las-vegas/aliante-area-plumbing/",
         "/service-areas/",
-        "/emergency-plumbing/",
+        "/north-las-vegas/emergency-plumbing/",
         "/about/"
       ],
       "schemaTypeHints": [
@@ -3110,7 +3122,7 @@
       "internalHrefs": [
         "/north-las-vegas-plumbing-services/",
         "/service-areas/",
-        "/emergency-plumbing/",
+        "/north-las-vegas/aliante-area/emergency-plumbing/",
         "/about/"
       ],
       "schemaTypeHints": [
@@ -3657,7 +3669,7 @@
       ],
       "internalHrefs": [
         "/service-areas/",
-        "/emergency-plumbing/",
+        "/paradise/emergency-plumbing/",
         "/about/"
       ],
       "schemaTypeHints": [
@@ -3702,6 +3714,7 @@
         "How We Handle Commercial Plumbing in Paradise, NV",
         "Need a Licensed Commercial Plumber in Paradise, NV?",
         "Commercial Plumbing Service Areas in Paradise, NV",
+        "Related Plumbing Services",
         "Frequently Asked Questions About Commercial Plumbing in Paradise, NV"
       ],
       "internalHrefs": [
@@ -3730,7 +3743,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 534
+      "wordEstimate": 539
     },
     {
       "route": "/paradise/drain-cleaning",
@@ -3747,6 +3760,7 @@
         "How We Clear Drains in Paradise, NV",
         "Slow Drain or Recurring Backup in Paradise, NV?",
         "Drain Cleaning Service Areas in Paradise, NV",
+        "Related Plumbing Services",
         "Frequently Asked Questions About Drain Cleaning in Paradise, NV"
       ],
       "internalHrefs": [
@@ -3776,7 +3790,7 @@
         "LocalBusiness",
         "AggregateRating"
       ],
-      "wordEstimate": 1164
+      "wordEstimate": 1169
     },
     {
       "route": "/paradise/emergency-plumbing",
@@ -3794,6 +3808,7 @@
         "How We Handle an Emergency Plumbing Call in Paradise, NV",
         "Need an Emergency Plumber in Paradise, NV?",
         "Neighborhoods and Areas We Serve in Paradise, NV",
+        "Related Plumbing Services",
         "Frequently Asked Questions About Emergency Plumbing in Paradise, NV"
       ],
       "internalHrefs": [
@@ -3801,8 +3816,8 @@
         "/paradise-plumbing-services/",
         "/slab-leak-detection-repair/",
         "/commercial-plumbing/",
-        "/water-heater-repair-installation/",
-        "/leak-detection-repair/",
+        "/paradise/water-heater-repair-installation/",
+        "/paradise/leak-detection-repair/",
         "/las-vegas-plumbing-services/"
       ],
       "schemaTypeHints": [
@@ -3824,7 +3839,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 1284
+      "wordEstimate": 1289
     },
     {
       "route": "/paradise/leak-detection-repair",
@@ -3842,13 +3857,13 @@
         "How We Detect and Repair Leaks in Paradise, NV",
         "Suspect a Hidden Water Leak in Paradise, NV?",
         "Leak Detection Service Areas in Paradise, NV",
+        "Related Plumbing Services",
         "Frequently Asked Questions About Leak Detection in Paradise, NV"
       ],
       "internalHrefs": [
-        "/emergency-plumbing/",
+        "/paradise/emergency-plumbing/",
         "/leak-detection-repair/",
         "/water-pipe-repair-replacement/",
-        "/paradise/emergency-plumbing/",
         "/paradise/drain-cleaning/",
         "/paradise/water-heater-repair-installation/",
         "/las-vegas-plumbing-services/",
@@ -3874,7 +3889,7 @@
         "LocalBusiness",
         "AggregateRating"
       ],
-      "wordEstimate": 1301
+      "wordEstimate": 1306
     },
     {
       "route": "/paradise/water-heater-repair-installation",
@@ -3891,14 +3906,14 @@
         "How We Handle a Water Heater Call in Paradise, NV",
         "Water Heater Problem in Paradise, NV?",
         "Water Heater Service Areas in Paradise, NV",
+        "Related Plumbing Services",
         "Water Heater FAQs for Paradise, NV Homeowners"
       ],
       "internalHrefs": [
-        "/emergency-plumbing/",
+        "/paradise/emergency-plumbing/",
         "/water-heater-repair-installation/",
         "/re-piping/",
         "/slab-leak-detection-repair/",
-        "/paradise/emergency-plumbing/",
         "/las-vegas-plumbing-services/",
         "/paradise-plumbing-services/",
         "/paradise/drain-cleaning/"
@@ -3923,7 +3938,7 @@
         "LocalBusiness",
         "AggregateRating"
       ],
-      "wordEstimate": 1101
+      "wordEstimate": 1106
     },
     {
       "route": "/plumbing-fixture-repair-replacement-installation",
@@ -4222,7 +4237,7 @@
       ],
       "internalHrefs": [
         "/service-areas/",
-        "/emergency-plumbing/",
+        "/spring-valley/emergency-plumbing/",
         "/about/"
       ],
       "schemaTypeHints": [
@@ -4309,7 +4324,8 @@
         "Drain Cleaning Services We Provide in Spring Valley",
         "Our Drain Cleaning Process in Spring Valley",
         "Why Spring Valley Homeowners Choose Red Carpet Plumbing",
-        "Frequently Asked Questions About Drain Cleaning in Spring Valley"
+        "Frequently Asked Questions About Drain Cleaning in Spring Valley",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/spring-valley-plumbing-services/",
@@ -4339,7 +4355,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 739
+      "wordEstimate": 777
     },
     {
       "route": "/spring-valley/emergency-plumbing",
@@ -4356,7 +4372,8 @@
         "What to Do During a Plumbing Emergency",
         "How We Handle Emergency Plumbing Calls in Spring Valley",
         "Why Spring Valley Homeowners and Businesses Choose Red Carpet Plumbing",
-        "Frequently Asked Questions About Emergency Plumbing in Spring Valley"
+        "Frequently Asked Questions About Emergency Plumbing in Spring Valley",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/spring-valley-plumbing-services/",
@@ -4385,7 +4402,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 569
+      "wordEstimate": 574
     },
     {
       "route": "/spring-valley/leak-detection-repair",
@@ -4402,7 +4419,8 @@
         "Leak Detection and Repair Services in Spring Valley",
         "Our Leak Detection Process in Spring Valley",
         "Why Spring Valley Homeowners Choose Red Carpet Plumbing for Leak Detection",
-        "Frequently Asked Questions About Leak Detection and Repair in Spring Valley"
+        "Frequently Asked Questions About Leak Detection and Repair in Spring Valley",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/contact/",
@@ -4434,7 +4452,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 999
+      "wordEstimate": 1004
     },
     {
       "route": "/spring-valley/re-piping",
@@ -4500,7 +4518,8 @@
         "Slab Leak Repair Options in Spring Valley",
         "How Red Carpet Plumbing Handles Slab Leaks in Spring Valley",
         "Why Spring Valley Homeowners Choose Red Carpet Plumbing for Slab Leak Service",
-        "Frequently Asked Questions About Slab Leak Detection and Repair in Spring Valley"
+        "Frequently Asked Questions About Slab Leak Detection and Repair in Spring Valley",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/contact/",
@@ -4532,7 +4551,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 863
+      "wordEstimate": 868
     },
     {
       "route": "/spring-valley/water-heater-repair-installation",
@@ -4549,7 +4568,8 @@
         "Water Heater Services We Provide in Spring Valley",
         "Our Water Heater Service Process in Spring Valley",
         "Why Spring Valley Homeowners Choose Red Carpet Plumbing",
-        "Frequently Asked Questions About Water Heater Repair and Installation in Spring Valley"
+        "Frequently Asked Questions About Water Heater Repair and Installation in Spring Valley",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/spring-valley-plumbing-services/",
@@ -4579,7 +4599,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 818
+      "wordEstimate": 823
     },
     {
       "route": "/summerlin-plumbing-services",
@@ -4608,7 +4628,7 @@
       ],
       "internalHrefs": [
         "/service-areas/",
-        "/emergency-plumbing/",
+        "/summerlin/emergency-plumbing/",
         "/about/"
       ],
       "schemaTypeHints": [
@@ -4643,7 +4663,8 @@
         "Drain Cleaning Services We Provide in Summerlin",
         "Our Drain Cleaning Process in Summerlin",
         "Why Summerlin Homeowners Choose Red Carpet Plumbing",
-        "Frequently Asked Questions About Drain Cleaning in Summerlin"
+        "Frequently Asked Questions About Drain Cleaning in Summerlin",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/summerlin-plumbing-services/",
@@ -4669,7 +4690,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 664
+      "wordEstimate": 669
     },
     {
       "route": "/summerlin/emergency-plumbing",
@@ -4687,14 +4708,15 @@
         "How We Handle an Emergency Plumbing Call in Summerlin, NV",
         "Need an Emergency Plumber in Summerlin, NV?",
         "Neighborhoods and Areas We Serve in Summerlin, NV",
+        "Related Plumbing Services",
         "Frequently Asked Questions About Emergency Plumbing in Summerlin, NV"
       ],
       "internalHrefs": [
         "/summerlin-plumbing-services/",
-        "/slab-leak-detection-repair/",
-        "/water-heater-repair-installation/",
+        "/summerlin/slab-leak-detection-repair/",
+        "/summerlin/water-heater-repair-installation/",
         "/emergency-plumbing/",
-        "/leak-detection-repair/",
+        "/summerlin/leak-detection-repair/",
         "/las-vegas-plumbing-services/"
       ],
       "schemaTypeHints": [
@@ -4717,7 +4739,7 @@
         "LocalBusiness",
         "AggregateRating"
       ],
-      "wordEstimate": 1424
+      "wordEstimate": 1429
     },
     {
       "route": "/summerlin/leak-detection-repair",
@@ -4734,7 +4756,8 @@
         "Leak Detection and Repair Services in Summerlin",
         "Our Leak Detection Process in Summerlin",
         "Why Summerlin Homeowners Choose Red Carpet Plumbing for Leak Detection",
-        "Frequently Asked Questions About Leak Detection and Repair in Summerlin"
+        "Frequently Asked Questions About Leak Detection and Repair in Summerlin",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/contact/",
@@ -4761,7 +4784,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 890
+      "wordEstimate": 895
     },
     {
       "route": "/summerlin/re-piping",
@@ -4778,7 +4801,8 @@
         "When Repair Is Right and When Repiping Makes More Sense",
         "Our Re-Piping Process in Summerlin",
         "Why Summerlin Homeowners Choose Red Carpet Plumbing for Re-Piping",
-        "Frequently Asked Questions About Re-Piping in Summerlin"
+        "Frequently Asked Questions About Re-Piping in Summerlin",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/summerlin-plumbing-services/",
@@ -4807,7 +4831,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 921
+      "wordEstimate": 926
     },
     {
       "route": "/summerlin/slab-leak-detection-repair",
@@ -4824,7 +4848,8 @@
         "Slab Leak Repair Options in Summerlin",
         "How Red Carpet Plumbing Handles Slab Leaks in Summerlin",
         "Why Summerlin Homeowners Choose Red Carpet Plumbing for Slab Leak Service",
-        "Frequently Asked Questions About Slab Leak Detection and Repair in Summerlin"
+        "Frequently Asked Questions About Slab Leak Detection and Repair in Summerlin",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/contact/",
@@ -4851,7 +4876,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 810
+      "wordEstimate": 815
     },
     {
       "route": "/summerlin/water-heater-repair-installation",
@@ -4868,7 +4893,8 @@
         "Water Heater Services We Provide in Summerlin",
         "Our Water Heater Service Process in Summerlin",
         "Why Summerlin Homeowners Choose Red Carpet Plumbing",
-        "Frequently Asked Questions About Water Heater Repair and Installation in Summerlin"
+        "Frequently Asked Questions About Water Heater Repair and Installation in Summerlin",
+        "Related Plumbing Services"
       ],
       "internalHrefs": [
         "/summerlin-plumbing-services/",
@@ -4894,7 +4920,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 586
+      "wordEstimate": 591
     },
     {
       "route": "/thank-you",
