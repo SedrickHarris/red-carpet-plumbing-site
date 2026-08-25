@@ -571,7 +571,7 @@ export default function LasVegasPlumbingServicesPage() {
                           href="https://share.google/oY5LcfC0lhWJXVjJj"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           Read our Google reviews
                         </a>
@@ -602,7 +602,7 @@ export default function LasVegasPlumbingServicesPage() {
             <div className="mt-6">
               <Link
                 href="/about/"
-                className="inline-flex items-center text-base font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="inline-flex items-center text-base font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Learn more about our company
                 <span aria-hidden="true" className="ml-1">

@@ -355,7 +355,7 @@ function renderTail(tail: LinkSeg[]) {
       <Link
         key={i}
         href={seg.href}
-        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
       >
         {seg.text}
       </Link>
@@ -460,7 +460,7 @@ export default function GreenValleyFaucetSinkPage() {
                 our{" "}
                 <Link
                   href="/faucet-sink-repair-installation/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   faucet and sink repair and installation services
                 </Link>{" "}
@@ -621,7 +621,7 @@ export default function GreenValleyFaucetSinkPage() {
                 Valley, visit our{" "}
                 <Link
                   href="/green-valley-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Green Valley plumbing services
                 </Link>{" "}
@@ -632,14 +632,14 @@ export default function GreenValleyFaucetSinkPage() {
                 Valley. For full Henderson coverage, see{" "}
                 <Link
                   href="/henderson-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Henderson plumbing services
                 </Link>
                 . For other fixture services in Green Valley, see our{" "}
                 <Link
                   href="/green-valley/toilet-repair-installation/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   toilet repair and installation in Green Valley
                 </Link>{" "}

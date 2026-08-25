@@ -435,7 +435,7 @@ export default function SpringValleyEmergencyPlumbingPage() {
                 For full-service plumbing in Spring Valley, visit our{" "}
                 <Link
                   href="/spring-valley-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Spring Valley plumbing services
                 </Link>{" "}
@@ -443,7 +443,7 @@ export default function SpringValleyEmergencyPlumbingPage() {
                 Valley, visit our{" "}
                 <Link
                   href="/emergency-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   emergency plumbing services
                 </Link>{" "}
@@ -482,7 +482,7 @@ export default function SpringValleyEmergencyPlumbingPage() {
                             {c.link.pre}
                             <Link
                               href={c.link.href}
-                              className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                              className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                             >
                               {c.link.text}
                             </Link>
@@ -515,7 +515,7 @@ export default function SpringValleyEmergencyPlumbingPage() {
                     {s.link ? (
                       <Link
                         href={s.link.href}
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         {s.link.text}
                       </Link>
@@ -618,28 +618,28 @@ export default function SpringValleyEmergencyPlumbingPage() {
               Red Carpet Plumbing provides full{" "}
               <Link
                 href="/spring-valley-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Spring Valley plumbing services
               </Link>{" "}
               including{" "}
               <Link
                 href="/spring-valley/drain-cleaning/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 drain cleaning
               </Link>
               ,{" "}
               <Link
                 href="/spring-valley/water-heater-repair-installation/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 water heater repair
               </Link>
               ,{" "}
               <Link
                 href="/spring-valley/slab-leak-detection-repair/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 slab leak detection
               </Link>
@@ -647,14 +647,14 @@ export default function SpringValleyEmergencyPlumbingPage() {
               including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas plumbing services
               </Link>{" "}
               and{" "}
               <Link
                 href="/summerlin-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Summerlin plumbing services
               </Link>

@@ -414,7 +414,7 @@ export default function ParadiseDrainCleaningPage() {
                 of{" "}
                 <Link
                   href="/drain-cleaning/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   drain cleaning services
                 </Link>
@@ -439,7 +439,7 @@ export default function ParadiseDrainCleaningPage() {
                             {" "}
                             <Link
                               href={s.link.href}
-                              className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                              className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                             >
                               {s.link.text}
                             </Link>{" "}
@@ -451,7 +451,7 @@ export default function ParadiseDrainCleaningPage() {
                             Learn more about{" "}
                             <Link
                               href={s.link.href}
-                              className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                              className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                             >
                               {s.link.text}
                             </Link>
@@ -551,7 +551,7 @@ export default function ParadiseDrainCleaningPage() {
                       For emergency drain situations, see{" "}
                       <Link
                         href="/paradise/emergency-plumbing/"
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         emergency plumbing in Paradise
                       </Link>
@@ -735,7 +735,7 @@ export default function ParadiseDrainCleaningPage() {
                       cleanout. Red Carpet Plumbing provides{" "}
                       <Link
                         href="/sewer-line-services/"
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         sewer line services
                       </Link>{" "}

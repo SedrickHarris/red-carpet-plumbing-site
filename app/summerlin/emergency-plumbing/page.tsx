@@ -420,7 +420,7 @@ export default function SummerlinEmergencyPlumbingPage() {
                 that require specific service knowledge. For our full range of{" "}
                 <Link
                   href="/summerlin-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Summerlin plumbing services
                 </Link>
@@ -467,7 +467,7 @@ export default function SummerlinEmergencyPlumbingPage() {
                       more about{" "}
                       <Link
                         href="/summerlin/slab-leak-detection-repair/"
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         slab leak detection and repair
                       </Link>
@@ -494,7 +494,7 @@ export default function SummerlinEmergencyPlumbingPage() {
                       about{" "}
                       <Link
                         href="/summerlin/water-heater-repair-installation/"
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         water heater repair and installation
                       </Link>
@@ -549,7 +549,7 @@ export default function SummerlinEmergencyPlumbingPage() {
                 situations in Summerlin. Our{" "}
                 <Link
                   href="/emergency-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   emergency plumbing services
                 </Link>{" "}
@@ -572,7 +572,7 @@ export default function SummerlinEmergencyPlumbingPage() {
               For{" "}
               <Link
                 href="/summerlin/leak-detection-repair/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 leak detection and repair
               </Link>{" "}

@@ -458,7 +458,7 @@ export default function PlumbingServicesPage() {
                     </p>
                     <Link
                       href={card.href}
-                      className="mt-4 inline-flex items-center text-sm font-semibold text-brand-primary hover:text-brand-primary-hover"
+                      className="mt-4 inline-flex items-center text-sm font-semibold text-brand-dark underline hover:text-brand-dark/70"
                     >
                       Learn More
                       <span aria-hidden="true" className="ml-1">

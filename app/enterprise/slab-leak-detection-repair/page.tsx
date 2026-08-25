@@ -409,7 +409,7 @@ export default function EnterpriseSlabLeakPage() {
                 overview, see our{" "}
                 <Link
                   href="/slab-leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   slab leak detection and repair
                 </Link>{" "}
@@ -527,7 +527,7 @@ export default function EnterpriseSlabLeakPage() {
                         {o.link.pre}
                         <Link
                           href={o.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {o.link.text}
                         </Link>
@@ -620,7 +620,7 @@ export default function EnterpriseSlabLeakPage() {
               Red Carpet Plumbing provides full{" "}
               <Link
                 href="/enterprise-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Enterprise plumbing services
               </Link>{" "}
@@ -629,14 +629,14 @@ export default function EnterpriseSlabLeakPage() {
               including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas plumbing services
               </Link>{" "}
               and{" "}
               <Link
                 href="/henderson-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Henderson plumbing services
               </Link>

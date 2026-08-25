@@ -413,7 +413,7 @@ export default function EnterpriseWaterHeaterPage() {
                 overview, see our{" "}
                 <Link
                   href="/water-heater-repair-installation/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   water heater repair and installation
                 </Link>{" "}
@@ -587,7 +587,7 @@ export default function EnterpriseWaterHeaterPage() {
               Red Carpet Plumbing provides full{" "}
               <Link
                 href="/enterprise-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Enterprise plumbing services
               </Link>{" "}
@@ -596,14 +596,14 @@ export default function EnterpriseWaterHeaterPage() {
               including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas plumbing services
               </Link>{" "}
               and{" "}
               <Link
                 href="/henderson-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Henderson plumbing services
               </Link>
@@ -638,7 +638,7 @@ export default function EnterpriseWaterHeaterPage() {
               For water heater services across the Las Vegas Valley, see our{" "}
               <Link
                 href="/water-heater-repair-installation/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 water heater repair and installation
               </Link>{" "}

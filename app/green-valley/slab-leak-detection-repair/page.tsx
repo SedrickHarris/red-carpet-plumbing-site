@@ -463,7 +463,7 @@ export default function GreenValleySlabLeakPage() {
               conditions, see our{" "}
               <Link
                 href="/green-valley-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Green Valley plumbing services
               </Link>{" "}
@@ -487,14 +487,14 @@ export default function GreenValleySlabLeakPage() {
                 our{" "}
                 <Link
                   href="/slab-leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   slab leak detection and repair
                 </Link>{" "}
                 services and our{" "}
                 <Link
                   href="/green-valley/leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Green Valley leak detection and repair
                 </Link>{" "}
@@ -588,7 +588,7 @@ export default function GreenValleySlabLeakPage() {
                         {o.linkPre}
                         <Link
                           href={o.linkHref}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {o.linkText}
                         </Link>
@@ -685,7 +685,7 @@ export default function GreenValleySlabLeakPage() {
                 For full Henderson plumbing service details, see our{" "}
                 <Link
                   href="/henderson-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Henderson plumbing services
                 </Link>{" "}
@@ -716,7 +716,7 @@ export default function GreenValleySlabLeakPage() {
               For Henderson-wide slab leak detection and repair, see our{" "}
               <Link
                 href="/henderson/slab-leak-detection-repair/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Henderson slab leak detection
               </Link>{" "}

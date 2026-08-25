@@ -395,7 +395,7 @@ export default function ParadiseEmergencyPlumbingPage() {
                 Paradise and all unincorporated Clark County communities. Our{" "}
                 <Link
                   href="/emergency-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   emergency plumbing services
                 </Link>{" "}
@@ -406,7 +406,7 @@ export default function ParadiseEmergencyPlumbingPage() {
                 of plumbing services in Paradise, see our{" "}
                 <Link
                   href="/paradise-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Paradise plumbing services
                 </Link>{" "}
@@ -454,7 +454,7 @@ export default function ParadiseEmergencyPlumbingPage() {
                       slab, contact a licensed plumber. Learn more about{" "}
                       <Link
                         href="/slab-leak-detection-repair/"
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         slab leak detection and repair
                       </Link>
@@ -479,7 +479,7 @@ export default function ParadiseEmergencyPlumbingPage() {
                       Red Carpet Plumbing is licensed for{" "}
                       <Link
                         href="/commercial-plumbing/"
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         commercial plumbing
                       </Link>{" "}
@@ -502,7 +502,7 @@ export default function ParadiseEmergencyPlumbingPage() {
                       frequently linked to scale buildup. Learn more about{" "}
                       <Link
                         href="/paradise/water-heater-repair-installation/"
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         water heater repair and installation
                       </Link>
@@ -559,7 +559,7 @@ export default function ParadiseEmergencyPlumbingPage() {
               For{" "}
               <Link
                 href="/paradise/leak-detection-repair/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 leak detection and repair
               </Link>{" "}

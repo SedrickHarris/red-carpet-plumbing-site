@@ -377,7 +377,7 @@ function renderTail(tail: LinkSeg[]) {
       <Link
         key={i}
         href={seg.href}
-        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
       >
         {seg.text}
       </Link>
@@ -479,7 +479,7 @@ export default function GreenValleyToiletPage() {
                 services across the Las Vegas Valley, visit our{" "}
                 <Link
                   href="/toilet-repair-installation/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   toilet repair and installation services
                 </Link>{" "}
@@ -666,7 +666,7 @@ export default function GreenValleyToiletPage() {
                 full list of plumbing services available in Green Valley, visit our{" "}
                 <Link
                   href="/green-valley-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Green Valley plumbing services
                 </Link>{" "}
@@ -677,7 +677,7 @@ export default function GreenValleyToiletPage() {
                 Valley. For full Henderson coverage, see{" "}
                 <Link
                   href="/henderson-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Henderson plumbing services
                 </Link>

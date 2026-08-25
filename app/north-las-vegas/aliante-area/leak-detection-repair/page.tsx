@@ -469,7 +469,7 @@ export default function AlianteLeakDetectionRepairPage() {
                 leak detection and repair services, visit our{" "}
                 <Link
                   href="/leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   leak detection and repair services
                 </Link>{" "}
@@ -524,7 +524,7 @@ export default function AlianteLeakDetectionRepairPage() {
                         {s.link.pre}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>
@@ -540,7 +540,7 @@ export default function AlianteLeakDetectionRepairPage() {
               about our{" "}
               <Link
                 href="/video-camera-plumbing-inspections/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 video camera plumbing inspections
               </Link>
@@ -605,7 +605,7 @@ export default function AlianteLeakDetectionRepairPage() {
                 active water loss, see our{" "}
                 <Link
                   href="/north-las-vegas/aliante-area/emergency-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   emergency plumbing in the Aliante area
                 </Link>{" "}
@@ -691,7 +691,7 @@ export default function AlianteLeakDetectionRepairPage() {
                 plumbing services we offer in the Aliante community, visit our{" "}
                 <Link
                   href="/north-las-vegas/aliante-area-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Aliante area plumbing services
                 </Link>{" "}
@@ -702,14 +702,14 @@ export default function AlianteLeakDetectionRepairPage() {
                 North Las Vegas service coverage, see{" "}
                 <Link
                   href="/north-las-vegas-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   North Las Vegas plumbing services
                 </Link>{" "}
                 or visit our dedicated{" "}
                 <Link
                   href="/north-las-vegas/leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Leak Detection and Repair in North Las Vegas
                 </Link>{" "}

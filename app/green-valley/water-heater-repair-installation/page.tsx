@@ -441,7 +441,7 @@ export default function GreenValleyWaterHeaterPage() {
                   and Henderson. For a broader overview of our services, see our{" "}
                   <Link
                     href="/water-heater-repair-installation/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     water heater repair and installation
                   </Link>{" "}
@@ -463,7 +463,7 @@ export default function GreenValleyWaterHeaterPage() {
                   Valley, visit our{" "}
                   <Link
                     href="/green-valley-plumbing-services/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Green Valley plumbing services
                   </Link>{" "}
@@ -512,7 +512,7 @@ export default function GreenValleyWaterHeaterPage() {
                             slab leak risk; see our{" "}
                             <Link
                               href={c.link.href}
-                              className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                              className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                             >
                               {c.link.text}
                             </Link>{" "}
@@ -532,7 +532,7 @@ export default function GreenValleyWaterHeaterPage() {
                   a water heater service visit. See our{" "}
                   <Link
                     href="/green-valley/slab-leak-detection-repair/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Green Valley slab leak detection
                   </Link>{" "}
@@ -599,7 +599,7 @@ export default function GreenValleyWaterHeaterPage() {
                         Learn more about our{" "}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>
@@ -746,7 +746,7 @@ export default function GreenValleyWaterHeaterPage() {
                 For full Henderson plumbing service details, see our{" "}
                 <Link
                   href="/henderson-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Henderson plumbing services
                 </Link>{" "}

@@ -396,7 +396,7 @@ export default function EnterpriseDrainCleaningPage() {
                 see our{" "}
                 <Link
                   href="/drain-cleaning/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   drain cleaning services
                 </Link>{" "}
@@ -463,7 +463,7 @@ export default function EnterpriseDrainCleaningPage() {
                         {" "}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>
@@ -557,7 +557,7 @@ export default function EnterpriseDrainCleaningPage() {
               Red Carpet Plumbing provides full{" "}
               <Link
                 href="/enterprise-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Enterprise plumbing services
               </Link>{" "}
@@ -566,14 +566,14 @@ export default function EnterpriseDrainCleaningPage() {
               including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas plumbing services
               </Link>{" "}
               and{" "}
               <Link
                 href="/henderson-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Henderson plumbing services
               </Link>
@@ -608,7 +608,7 @@ export default function EnterpriseDrainCleaningPage() {
               For drain cleaning services across the Las Vegas Valley, see our{" "}
               <Link
                 href="/drain-cleaning/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 drain cleaning services
               </Link>{" "}

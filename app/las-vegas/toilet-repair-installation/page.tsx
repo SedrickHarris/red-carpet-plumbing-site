@@ -372,7 +372,7 @@ function renderTail(tail: LinkSeg[]) {
       <Link
         key={i}
         href={seg.href}
-        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
       >
         {seg.text}
       </Link>
@@ -503,7 +503,7 @@ export default function LasVegasToiletPage() {
                 details, see our{" "}
                 <Link
                   href="/toilet-repair-installation/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   core toilet repair and installation page
                 </Link>

@@ -411,7 +411,7 @@ export default function LasVegasRePipingPage() {
                 {PIPE_GUIDE_INTRO} For a broader overview, see our{" "}
                 <Link
                   href="/re-piping/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   re-piping services
                 </Link>
@@ -513,14 +513,14 @@ export default function LasVegasRePipingPage() {
                   about our{" "}
                   <Link
                     href="/las-vegas/slab-leak-detection-repair/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Las Vegas slab leak detection
                   </Link>{" "}
                   and{" "}
                   <Link
                     href="/water-pipe-repair-replacement/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     water pipe repair and replacement
                   </Link>{" "}

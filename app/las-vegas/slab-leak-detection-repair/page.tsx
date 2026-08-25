@@ -390,14 +390,14 @@ export default function LasVegasSlabLeakPage() {
                 overview, see our{" "}
                 <Link
                   href="/slab-leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   slab leak detection and repair
                 </Link>{" "}
                 services and our{" "}
                 <Link
                   href="/las-vegas/leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Las Vegas leak detection
                 </Link>{" "}
@@ -485,7 +485,7 @@ export default function LasVegasSlabLeakPage() {
                   aging line. Learn more about our{" "}
                   <Link
                     href="/water-pipe-repair-replacement/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     water pipe repair and replacement
                   </Link>{" "}
@@ -511,7 +511,7 @@ export default function LasVegasSlabLeakPage() {
                   line. Learn more about our{" "}
                   <Link
                     href="/las-vegas/re-piping/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     re-piping
                   </Link>{" "}

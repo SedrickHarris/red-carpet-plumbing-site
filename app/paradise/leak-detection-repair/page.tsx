@@ -413,7 +413,7 @@ export default function ParadiseLeakDetectionPage() {
                 inspection. For active or emergency leaks, see{" "}
                 <Link
                   href="/paradise/emergency-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   emergency plumbing
                 </Link>
@@ -453,7 +453,7 @@ export default function ParadiseLeakDetectionPage() {
                 of our services, see our{" "}
                 <Link
                   href="/leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   leak detection and repair
                 </Link>{" "}
@@ -477,7 +477,7 @@ export default function ParadiseLeakDetectionPage() {
                         Learn more about{" "}
                         <Link
                           href={m.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {m.link.text}
                         </Link>
@@ -562,7 +562,7 @@ export default function ParadiseLeakDetectionPage() {
                       lines, see our{" "}
                       <Link
                         href="/water-pipe-repair-replacement/"
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         water pipe repair and replacement
                       </Link>{" "}
@@ -615,7 +615,7 @@ export default function ParadiseLeakDetectionPage() {
                         See our{" "}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>{" "}

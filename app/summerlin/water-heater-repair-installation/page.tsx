@@ -412,7 +412,7 @@ export default function SummerlinWaterHeaterPage() {
                 For full-service plumbing in Summerlin, visit our{" "}
                 <Link
                   href="/summerlin-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Summerlin plumbing services
                 </Link>{" "}
@@ -420,7 +420,7 @@ export default function SummerlinWaterHeaterPage() {
                 Valley, visit our{" "}
                 <Link
                   href="/water-heater-repair-installation/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   water heater repair and installation
                 </Link>{" "}
@@ -524,7 +524,7 @@ export default function SummerlinWaterHeaterPage() {
                         {" "}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>{" "}
@@ -597,7 +597,7 @@ export default function SummerlinWaterHeaterPage() {
               Red Carpet Plumbing provides full{" "}
               <Link
                 href="/summerlin-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Summerlin plumbing services
               </Link>{" "}
@@ -605,14 +605,14 @@ export default function SummerlinWaterHeaterPage() {
               and re-piping. We also serve communities near Summerlin including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas plumbing services
               </Link>{" "}
               and{" "}
               <Link
                 href="/spring-valley-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Spring Valley plumbing services
               </Link>

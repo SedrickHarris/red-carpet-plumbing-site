@@ -376,7 +376,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
                   our full range of plumbing services in Boulder City, visit our{" "}
                   <Link
                     href="/boulder-city-plumbing-services/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Boulder City plumbing services
                   </Link>{" "}
@@ -384,7 +384,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
                   coverage, see our{" "}
                   <Link
                     href="/emergency-plumbing/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     emergency plumbing services
                   </Link>{" "}
@@ -431,7 +431,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
                             {p.link.pre}
                             <Link
                               href={p.link.href}
-                              className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                              className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                             >
                               {p.link.text}
                             </Link>
@@ -523,7 +523,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
                   older properties. See our{" "}
                   <Link
                     href="/water-pipe-repair-replacement/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     water pipe repair and replacement
                   </Link>{" "}

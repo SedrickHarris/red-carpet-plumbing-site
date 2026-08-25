@@ -403,7 +403,7 @@ export default function HendersonRePipingPage() {
                 {PIPE_GUIDE_INTRO} For a broader overview, see our{" "}
                 <Link
                   href="/re-piping/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   re-piping services
                 </Link>
@@ -445,7 +445,7 @@ export default function HendersonRePipingPage() {
                     For help locating hidden water leaks first, see our{" "}
                     <Link
                       href="/henderson/leak-detection-repair/"
-                      className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                      className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                     >
                       Henderson leak detection
                     </Link>{" "}
@@ -513,14 +513,14 @@ export default function HendersonRePipingPage() {
                   right next step. Learn more about our{" "}
                   <Link
                     href="/henderson/slab-leak-detection-repair/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Henderson slab leak detection
                   </Link>{" "}
                   and{" "}
                   <Link
                     href="/water-pipe-repair-replacement/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     water pipe repair and replacement
                   </Link>{" "}

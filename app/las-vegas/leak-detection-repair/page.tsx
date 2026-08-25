@@ -391,7 +391,7 @@ export default function LasVegasLeakDetectionPage() {
                 broader overview, see our{" "}
                 <Link
                   href="/leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   leak detection and repair services
                 </Link>{" "}
@@ -495,7 +495,7 @@ export default function LasVegasLeakDetectionPage() {
                         Learn more about our{" "}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>

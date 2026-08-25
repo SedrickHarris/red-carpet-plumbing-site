@@ -461,7 +461,7 @@ export default function EnterpriseEmergencyPlumbingPage() {
                 across the Las Vegas Valley, see our{" "}
                 <Link
                   href="/emergency-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   emergency plumbing services
                 </Link>{" "}
@@ -500,7 +500,7 @@ export default function EnterpriseEmergencyPlumbingPage() {
                             {c.link.pre}
                             <Link
                               href={c.link.href}
-                              className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                              className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                             >
                               {c.link.text}
                             </Link>
@@ -533,7 +533,7 @@ export default function EnterpriseEmergencyPlumbingPage() {
                     {s.link ? (
                       <Link
                         href={s.link.href}
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         {s.link.text}
                       </Link>
@@ -637,7 +637,7 @@ export default function EnterpriseEmergencyPlumbingPage() {
               Red Carpet Plumbing provides full{" "}
               <Link
                 href="/enterprise-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Enterprise plumbing services
               </Link>{" "}
@@ -645,14 +645,14 @@ export default function EnterpriseEmergencyPlumbingPage() {
               and re-piping. We also serve communities near Enterprise including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas plumbing services
               </Link>{" "}
               and{" "}
               <Link
                 href="/henderson-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Henderson plumbing services
               </Link>
@@ -687,7 +687,7 @@ export default function EnterpriseEmergencyPlumbingPage() {
               For emergency plumbing service across the Las Vegas Valley, see our{" "}
               <Link
                 href="/emergency-plumbing/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 emergency plumbing services
               </Link>{" "}

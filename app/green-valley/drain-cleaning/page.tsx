@@ -418,7 +418,7 @@ export default function GreenValleyDrainCleaningPage() {
                     Valley plumbing conditions, see our{" "}
                     <Link
                       href="/green-valley-plumbing-services/"
-                      className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                      className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                     >
                       Green Valley plumbing services
                     </Link>{" "}
@@ -480,7 +480,7 @@ export default function GreenValleyDrainCleaningPage() {
                   of plumbing services throughout Henderson, visit our{" "}
                   <Link
                     href="/henderson-plumbing-services/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Henderson plumbing services
                   </Link>{" "}
@@ -492,7 +492,7 @@ export default function GreenValleyDrainCleaningPage() {
                   soil conditions, a topic covered in detail on our{" "}
                   <Link
                     href="/green-valley/slab-leak-detection-repair/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Green Valley slab leak detection
                   </Link>{" "}
@@ -515,7 +515,7 @@ export default function GreenValleyDrainCleaningPage() {
                   Red Carpet Plumbing provides professional{" "}
                   <Link
                     href="/drain-cleaning/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     drain cleaning services
                   </Link>{" "}
@@ -563,7 +563,7 @@ export default function GreenValleyDrainCleaningPage() {
                         Learn more about our{" "}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>
@@ -667,7 +667,7 @@ export default function GreenValleyDrainCleaningPage() {
                 plumbing service details, see our{" "}
                 <Link
                   href="/henderson-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Henderson plumbing services
                 </Link>{" "}
