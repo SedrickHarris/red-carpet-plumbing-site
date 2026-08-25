@@ -46,10 +46,15 @@ Emergency services, trust-first conversion path, mobile-first audience.
 
 ## Font Direction
 
-Current: Geist Sans (functional, not distinctive).
-Recommended next step: evaluate a brand-appropriate font pairing using
-UI/UX Pro Max typography database. Must pass WCAG AA contrast.
-Do not implement new fonts without explicit approval.
+Current: DM Serif Display (display, H1 and H2 only) paired with Inter (body,
+nav, labels, buttons). Both are loaded via next/font/google in app/layout.tsx
+and bound in app/globals.css: DM Serif Display to --font-display, Inter to
+--font-body and --font-sans.
+
+DM Serif Display ships weight 400 only. Do not apply font-bold or
+font-semibold to H1 or H2: there is no bold cut to resolve to, and the
+browser renders synthetic bold instead. Headings use the native 400 weight
+and earn hierarchy from size and letter-spacing.
 
 ## UX Priority for This Project
 
