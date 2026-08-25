@@ -551,7 +551,7 @@ export default function AlianteWaterHeaterPage() {
                   {ALIANTE_WH_CAUSES.map((cause) => (
                     <article
                       key={cause.title}
-                      className="relative bg-white rounded-2xl p-6 pl-7 ring-1 ring-brand-surface-alt before:absolute before:bottom-6 before:left-0 before:top-6 before:w-1 before:rounded-full before:bg-brand-primary sm:p-8 sm:pl-9"
+                      className="relative bg-white rounded-2xl p-6 pl-7 ring-1 ring-brand-surface-alt before:absolute before:bottom-6 before:left-0 before:top-6 before:w-1 before:rounded-full before:bg-brand-dark sm:p-8 sm:pl-9"
                     >
                       <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                         {cause.title}

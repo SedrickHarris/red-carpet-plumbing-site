@@ -512,7 +512,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
                     >
                       <span
                         aria-hidden="true"
-                        className="mt-0.5 h-2 w-2 flex-none rounded-full bg-brand-primary"
+                        className="mt-0.5 h-2 w-2 flex-none rounded-full bg-brand-dark"
                       />
                       {service}
                     </li>

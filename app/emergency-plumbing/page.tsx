@@ -416,7 +416,7 @@ export default function EmergencyPlumbingPage() {
             </div>
 
             <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2">
-              <article className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary">
+              <article className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark">
                 <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                   Situations That Require Immediate Attention
                 </h3>
@@ -425,7 +425,7 @@ export default function EmergencyPlumbingPage() {
                     <li key={item} className="flex items-start gap-3">
                       <span
                         aria-hidden="true"
-                        className="mt-2 inline-block h-2 w-2 flex-none rounded-full bg-brand-primary"
+                        className="mt-2 inline-block h-2 w-2 flex-none rounded-full bg-brand-dark"
                       />
                       <span className="text-base leading-7 text-brand-dark/80">
                         {item}
@@ -517,7 +517,7 @@ export default function EmergencyPlumbingPage() {
                 {LV_RISK_FACTORS.map((factor) => (
                   <article
                     key={factor.title}
-                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark"
                   >
                     <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                       {factor.title}

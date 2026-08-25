@@ -382,7 +382,7 @@ export default function AboutPage() {
               </h2>
             </div>
             <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2">
-              <article className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary">
+              <article className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark">
                 <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                   Hard Water and Desert Conditions
                 </h3>
@@ -397,7 +397,7 @@ export default function AboutPage() {
                   local experience valuable.
                 </p>
               </article>
-              <article className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary">
+              <article className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark">
                 <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                   Aging Homes and Desert Soil
                 </h3>

@@ -405,7 +405,7 @@ export default function SewerLineServicesPage() {
               </p>
             </div>
 
-            <article className="mt-12 relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary">
+            <article className="mt-12 relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark">
               <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                 Signs to Call a Plumber
               </h3>
@@ -414,7 +414,7 @@ export default function SewerLineServicesPage() {
                   <li key={item} className="flex items-start gap-3">
                     <span
                       aria-hidden="true"
-                      className="mt-2 inline-block h-2 w-2 flex-none rounded-full bg-brand-primary"
+                      className="mt-2 inline-block h-2 w-2 flex-none rounded-full bg-brand-dark"
                     />
                     <span className="text-base leading-7 text-brand-dark/80">
                       {item}
@@ -508,7 +508,7 @@ export default function SewerLineServicesPage() {
                 {LV_SEWER_FACTORS.map((factor) => (
                   <article
                     key={factor.title}
-                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark"
                   >
                     <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                       {factor.title}

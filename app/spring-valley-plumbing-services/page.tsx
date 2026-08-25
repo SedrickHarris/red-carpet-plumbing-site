@@ -436,7 +436,7 @@ export default function SpringValleyPlumbingServicesPage() {
                 {SPRING_VALLEY_CONTEXT.map((item) => (
                   <article
                     key={item.title}
-                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark"
                   >
                     <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                       {item.title}
