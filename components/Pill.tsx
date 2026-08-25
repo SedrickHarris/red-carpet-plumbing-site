@@ -17,7 +17,7 @@ const baseStyles =
 
 const variantStyles: Record<PillVariant, string> = {
   outline:
-    "border border-brand-primary/20 bg-white text-brand-primary hover:bg-brand-surface-alt",
+    "border border-brand-dark/15 bg-white text-brand-dark hover:bg-brand-surface-alt",
   solid: "bg-brand-primary text-white hover:bg-brand-primary-hover",
 };
 
