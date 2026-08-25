@@ -576,7 +576,7 @@ export default function EmergencyPlumbingPage() {
 
         {/* SECTION 7: MID-PAGE EMERGENCY CTA */}
         <CTASection
-          background="red"
+          background="dark"
           headline={
             <>
               Need an Emergency Plumber

@@ -454,7 +454,7 @@ export default function LasVegasDrainCleaningPage() {
         </section>
 
         {/* SECTION 6 (mid-page): CTA */}
-        <section className="bg-brand-primary text-white">
+        <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
