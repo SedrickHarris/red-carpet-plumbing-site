@@ -432,7 +432,7 @@ export default function GreenValleyDrainCleaningPage() {
                   {GV_DRAIN_FACTORS.map((factor) => (
                     <article
                       key={factor.label}
-                      className="relative pl-6 before:absolute before:bottom-0 before:left-0 before:top-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                      className="relative pl-6 before:absolute before:bottom-0 before:left-0 before:top-0 before:w-1 before:rounded-full before:bg-brand-dark"
                     >
                       <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                         {factor.label}

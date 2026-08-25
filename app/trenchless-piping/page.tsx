@@ -440,7 +440,7 @@ export default function TrenchlessPipingPage() {
               {TRENCHLESS_USE_CASES.map((useCase) => (
                 <article
                   key={useCase.title}
-                  className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                  className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark"
                 >
                   <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                     {useCase.title}
@@ -515,7 +515,7 @@ export default function TrenchlessPipingPage() {
                 {LV_TRENCHLESS_FACTORS.map((factor) => (
                   <article
                     key={factor.title}
-                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark"
                   >
                     <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                       {factor.title}

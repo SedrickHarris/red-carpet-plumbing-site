@@ -528,7 +528,7 @@ export default function Home() {
                 {LOCAL_ISSUES.map((issue) => (
                   <article
                     key={issue.question}
-                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark"
                   >
                     <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                       {issue.question}
@@ -608,7 +608,7 @@ export default function Home() {
                   {WHY_CHOOSE_REASONS.map((reason) => (
                     <article
                       key={reason.title}
-                      className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                      className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark"
                     >
                       <h3 className="text-lg font-semibold text-brand-dark">
                         {reason.title}

@@ -444,7 +444,7 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
               {FIXTURE_WARNING_SIGNS.map((sign) => (
                 <article
                   key={sign.title}
-                  className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                  className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark"
                 >
                   <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                     {sign.title}
@@ -519,7 +519,7 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
                 {LV_FIXTURE_FACTORS.map((factor) => (
                   <article
                     key={factor.title}
-                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-primary"
+                    className="relative pl-6 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:rounded-full before:bg-brand-dark"
                   >
                     <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                       {factor.title}
