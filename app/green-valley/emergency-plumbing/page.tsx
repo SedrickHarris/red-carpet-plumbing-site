@@ -392,7 +392,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 What Is a Plumbing Emergency in Green Valley?
               </h2>
               <div className="mt-6 rounded-r-xl border-l-4 border-brand-primary bg-brand-surface-alt p-6">
@@ -427,7 +427,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Common Plumbing Emergencies in Green Valley Homes
                   </h2>
                 </div>
@@ -470,7 +470,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Need an Emergency Plumber in Green Valley Right Now?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -498,7 +498,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Emergency Plumbing Services We Provide in Green Valley
                   </h2>
                 </div>
@@ -529,7 +529,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing Responds to a Plumbing Emergency in
                     Green Valley
                   </h2>
@@ -565,7 +565,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Serving Green Valley as Part of Henderson, NV
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -626,7 +626,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Related Plumbing Services in Green Valley
                   </h2>
                 </div>
@@ -654,7 +654,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Emergency Plumbing Questions for Green Valley Homeowners
               </h2>
             </div>

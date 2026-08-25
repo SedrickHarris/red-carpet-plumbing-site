@@ -370,7 +370,7 @@ export default function EnterpriseRePipingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Re-Piping Services in Enterprise: What Homeowners Need to Know
               </h2>
               <div className="mt-6 space-y-6 text-lg leading-8 text-brand-dark/80">
@@ -417,7 +417,7 @@ export default function EnterpriseRePipingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Pipe Materials in Enterprise Homes: What to Know
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -525,7 +525,7 @@ export default function EnterpriseRePipingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Signs Your Enterprise Home May Need Re-Piping
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -556,7 +556,7 @@ export default function EnterpriseRePipingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 When to Repair vs. When to Repipe Your Enterprise Home
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -625,7 +625,7 @@ export default function EnterpriseRePipingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="max-w-4xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Re-Piping Services for Enterprise Homes
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -653,7 +653,7 @@ export default function EnterpriseRePipingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Our Re-Piping Process in Enterprise
                   </h2>
                 </div>
@@ -704,7 +704,7 @@ export default function EnterpriseRePipingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Enterprise Homeowners Choose Red Carpet Plumbing
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -756,7 +756,7 @@ export default function EnterpriseRePipingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Enterprise Neighborhoods and Communities We Serve
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -789,7 +789,7 @@ export default function EnterpriseRePipingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services
               </h2>
             </div>

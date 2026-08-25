@@ -462,7 +462,7 @@ export default function HendersonGasLinePage() {
         >
           <div className="mx-auto max-w-4xl px-4 pt-12 sm:px-6 sm:pt-16 lg:px-10">
             <div className="rounded-2xl border-2 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
-              <h2 className="text-2xl font-bold tracking-tight text-brand-dark sm:text-3xl">
+              <h2 className="text-2xl tracking-tight text-brand-dark sm:text-3xl">
                 {SAFETY_CALLOUT.heading}
               </h2>
               <p className="mt-4 text-base font-medium leading-7 text-brand-dark/80">
@@ -495,7 +495,7 @@ export default function HendersonGasLinePage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Gas Line Risks in Henderson Homes and Businesses
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -528,7 +528,7 @@ export default function HendersonGasLinePage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Gas Line Services for Henderson Homes and Businesses
               </h2>
             </div>
@@ -555,7 +555,7 @@ export default function HendersonGasLinePage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Signs of a Gas Line Problem in Your Henderson Home
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -589,7 +589,7 @@ export default function HendersonGasLinePage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing Handles Gas Line Work in Henderson
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -630,7 +630,7 @@ export default function HendersonGasLinePage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Need a Licensed Gas Line Plumber in Henderson?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -656,7 +656,7 @@ export default function HendersonGasLinePage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Henderson Homeowners Choose Red Carpet Plumbing for Gas Line
                 Work
               </h2>
@@ -678,7 +678,7 @@ export default function HendersonGasLinePage() {
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Henderson Communities We Serve for Gas Line Services
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
@@ -718,7 +718,7 @@ export default function HendersonGasLinePage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services
               </h2>
             </div>
@@ -744,7 +744,7 @@ export default function HendersonGasLinePage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Frequently Asked Questions
                 <br className="hidden sm:block" /> About Gas Line Plumbing in Henderson, NV
               </h2>

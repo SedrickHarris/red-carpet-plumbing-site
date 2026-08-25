@@ -37,7 +37,7 @@ export default function ThankYou() {
                 </svg>
               </div>
 
-              <h1 className="mt-8 text-4xl font-bold tracking-tight text-brand-dark sm:text-5xl">
+              <h1 className="mt-8 text-4xl tracking-tight text-brand-dark sm:text-5xl">
                 Thank You for Contacting Red Carpet Plumbing
               </h1>
 

@@ -398,7 +398,7 @@ export default function EnterpriseSlabLeakPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Warning Signs of a Slab Leak in Enterprise
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -438,7 +438,7 @@ export default function EnterpriseSlabLeakPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Non-Invasive Slab Leak Detection Methods
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -471,7 +471,7 @@ export default function EnterpriseSlabLeakPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     What Causes Slab Leaks in Enterprise, NV Homes
                   </h2>
                 </div>
@@ -502,7 +502,7 @@ export default function EnterpriseSlabLeakPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Slab Leak Repair Options for Enterprise Homes
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -547,7 +547,7 @@ export default function EnterpriseSlabLeakPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Our Slab Leak Process in Enterprise
                   </h2>
                 </div>
@@ -582,7 +582,7 @@ export default function EnterpriseSlabLeakPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Enterprise Homeowners Choose Red Carpet Plumbing for Slab Leak
                 Service
               </h2>
@@ -649,7 +649,7 @@ export default function EnterpriseSlabLeakPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Enterprise Slab Leak Coverage Areas
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -674,7 +674,7 @@ export default function EnterpriseSlabLeakPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Slab Leak FAQs for Enterprise Homeowners
               </h2>
             </div>

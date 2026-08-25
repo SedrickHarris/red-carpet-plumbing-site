@@ -393,7 +393,7 @@ export default function LakeLasVegasLeakDetectionPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 How Do You Know If You Have a Hidden Leak in Lake Las Vegas?
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -458,7 +458,7 @@ export default function LakeLasVegasLeakDetectionPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Non-Invasive Leak Detection Methods Used in Lake Las Vegas Homes
               </h2>
             </div>
@@ -486,7 +486,7 @@ export default function LakeLasVegasLeakDetectionPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     What Causes Hidden Pipe Leaks in Lake Las Vegas Homes?
                   </h2>
                 </div>
@@ -516,7 +516,7 @@ export default function LakeLasVegasLeakDetectionPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Leak Detection and Repair Services for Lake Las Vegas and
                 Henderson Homes
               </h2>
@@ -558,7 +558,7 @@ export default function LakeLasVegasLeakDetectionPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing Handles a Leak Detection Call in Lake
                     Las Vegas
                   </h2>
@@ -594,7 +594,7 @@ export default function LakeLasVegasLeakDetectionPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Serving Lake Las Vegas as Part of Henderson, NV
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -627,7 +627,7 @@ export default function LakeLasVegasLeakDetectionPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Leak Detection Questions for Lake Las Vegas Homeowners
               </h2>
             </div>
@@ -654,7 +654,7 @@ export default function LakeLasVegasLeakDetectionPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="max-w-4xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services in Lake Las Vegas
               </h2>
             </div>

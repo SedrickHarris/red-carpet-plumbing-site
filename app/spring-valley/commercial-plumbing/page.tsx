@@ -404,7 +404,7 @@ export default function SpringValleyCommercialPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Commercial Plumbing for Spring Valley Businesses and Properties
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -435,7 +435,7 @@ export default function SpringValleyCommercialPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Commercial Plumbing Services We Provide in Spring Valley
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -475,7 +475,7 @@ export default function SpringValleyCommercialPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Spring Valley Commercial Plumbing Conditions
                   </h2>
                 </div>
@@ -507,7 +507,7 @@ export default function SpringValleyCommercialPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Our Commercial Plumbing Process in Spring Valley
                   </h2>
                 </div>
@@ -562,7 +562,7 @@ export default function SpringValleyCommercialPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Spring Valley Commercial Plumbing Coverage Areas
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -604,7 +604,7 @@ export default function SpringValleyCommercialPlumbingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Commercial Plumbing FAQs for Spring Valley
               </h2>
             </div>

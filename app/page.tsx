@@ -410,7 +410,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   24/7 Emergency Plumbing in Las Vegas
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -448,7 +448,7 @@ export default function Home() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Plumbing Services in Las Vegas, NV
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -510,7 +510,7 @@ export default function Home() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Common Plumbing Problems
                     <br className="hidden sm:block" /> in Las Vegas Homes
                   </h2>
@@ -549,7 +549,7 @@ export default function Home() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                     Plumbing Services Across
                     <br className="hidden sm:block" /> the Las Vegas Valley
                   </h2>
@@ -596,7 +596,7 @@ export default function Home() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Why Las Vegas Homeowners and Businesses Choose Red Carpet
                     Plumbing
                   </h2>
@@ -634,7 +634,7 @@ export default function Home() {
         {/* SECTION 9: FINAL CTA — oversized centered typography (single deliberate centered moment) */}
         <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h2 className="text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
               Ready to Schedule Plumbing Service
               <br className="hidden sm:block" /> in Las Vegas?
             </h2>

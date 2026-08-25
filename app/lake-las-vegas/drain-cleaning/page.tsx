@@ -333,7 +333,7 @@ export default function LakeLasVegasDrainCleaningPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 What Drain Cleaning Services Are Available in Lake Las Vegas?
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -364,7 +364,7 @@ export default function LakeLasVegasDrainCleaningPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Why Lake Las Vegas Drains Clog
                   </h2>
                 </div>
@@ -394,7 +394,7 @@ export default function LakeLasVegasDrainCleaningPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Drain Cleaning Services for Lake Las Vegas and Henderson Homes
               </h2>
             </div>
@@ -417,7 +417,7 @@ export default function LakeLasVegasDrainCleaningPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing Handles Drain Cleaning in Lake Las
                     Vegas
                   </h2>
@@ -453,7 +453,7 @@ export default function LakeLasVegasDrainCleaningPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Serving Lake Las Vegas as Part of Henderson, NV
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -488,7 +488,7 @@ export default function LakeLasVegasDrainCleaningPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Drain Cleaning Questions for Lake Las Vegas Homeowners
               </h2>
             </div>
@@ -515,7 +515,7 @@ export default function LakeLasVegasDrainCleaningPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="max-w-4xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services in Lake Las Vegas
               </h2>
             </div>

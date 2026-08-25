@@ -329,7 +329,7 @@ export default function HendersonEmergencyPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
-              <h2 className="text-2xl font-bold tracking-tight text-brand-dark sm:text-3xl">
+              <h2 className="text-2xl tracking-tight text-brand-dark sm:text-3xl">
                 What Counts as a Plumbing Emergency in Henderson?
               </h2>
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
@@ -361,7 +361,7 @@ export default function HendersonEmergencyPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Common Emergency Plumbing Problems in Henderson, NV
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -398,7 +398,7 @@ export default function HendersonEmergencyPlumbingPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Have a Plumbing Emergency in Henderson Right Now?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -423,7 +423,7 @@ export default function HendersonEmergencyPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Emergency Plumbing Services We Provide in Henderson
               </h2>
             </div>
@@ -446,7 +446,7 @@ export default function HendersonEmergencyPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How We Handle an Emergency Plumbing Call in Henderson
                   </h2>
                 </div>
@@ -481,7 +481,7 @@ export default function HendersonEmergencyPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Henderson Homeowners
                 <br className="hidden sm:block" /> Choose Red Carpet Plumbing
               </h2>
@@ -503,7 +503,7 @@ export default function HendersonEmergencyPlumbingPage() {
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Henderson Communities We Serve
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
@@ -556,7 +556,7 @@ export default function HendersonEmergencyPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services
               </h2>
             </div>
@@ -582,7 +582,7 @@ export default function HendersonEmergencyPlumbingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Emergency Plumbing FAQs
                 <br className="hidden sm:block" /> for Henderson Homeowners
               </h2>

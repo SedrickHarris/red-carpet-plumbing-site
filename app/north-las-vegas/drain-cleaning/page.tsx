@@ -356,7 +356,7 @@ export default function NorthLasVegasDrainCleaningPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
-              <h2 className="text-2xl font-bold tracking-tight text-brand-dark sm:text-3xl">
+              <h2 className="text-2xl tracking-tight text-brand-dark sm:text-3xl">
                 Professional Drain Cleaning in North Las Vegas
               </h2>
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
@@ -390,7 +390,7 @@ export default function NorthLasVegasDrainCleaningPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Why North Las Vegas Drains Clog
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -427,7 +427,7 @@ export default function NorthLasVegasDrainCleaningPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Drain Cleaning Services We Provide in North Las Vegas
               </h2>
             </div>
@@ -467,7 +467,7 @@ export default function NorthLasVegasDrainCleaningPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Recurring Drain Clog or Commercial Backup in North Las Vegas?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -495,7 +495,7 @@ export default function NorthLasVegasDrainCleaningPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How We Clean Drains in North Las Vegas
                   </h2>
                 </div>
@@ -530,7 +530,7 @@ export default function NorthLasVegasDrainCleaningPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why North Las Vegas Homeowners and
                 <br className="hidden sm:block" /> Businesses Choose Red Carpet
                 Plumbing
@@ -553,7 +553,7 @@ export default function NorthLasVegasDrainCleaningPage() {
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 North Las Vegas Areas We Serve for Drain Cleaning
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
@@ -602,7 +602,7 @@ export default function NorthLasVegasDrainCleaningPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services
               </h2>
             </div>
@@ -628,7 +628,7 @@ export default function NorthLasVegasDrainCleaningPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Drain Cleaning FAQs for North Las
                 <br className="hidden sm:block" /> Vegas Homeowners and Businesses
               </h2>

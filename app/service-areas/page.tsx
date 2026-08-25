@@ -424,7 +424,7 @@ export default function ServiceAreasPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Primary Plumbing Service Areas
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -493,7 +493,7 @@ export default function ServiceAreasPage() {
         {/* SECTION 5: NEIGHBORHOODS AND CORRIDORS (Tier 2 plain text) */}
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark text-center sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl tracking-tight text-brand-dark text-center sm:text-4xl lg:text-5xl">
               Neighborhoods and Corridors We Serve
             </h2>
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-brand-dark/80 text-center">
@@ -555,7 +555,7 @@ export default function ServiceAreasPage() {
         {/* SECTION 6: ALSO SERVING NEARBY AREAS */}
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark text-center sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl tracking-tight text-brand-dark text-center sm:text-4xl lg:text-5xl">
               Also Serving Nearby Areas
             </h2>
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-brand-dark/80 text-center">
@@ -575,7 +575,7 @@ export default function ServiceAreasPage() {
         {/* SECTION 7: POPULAR SERVICES BY AREA */}
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark text-center sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl tracking-tight text-brand-dark text-center sm:text-4xl lg:text-5xl">
               Popular Plumbing Services by Area
             </h2>
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-brand-dark/80 text-center">
@@ -614,7 +614,7 @@ export default function ServiceAreasPage() {
         <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Emergency Plumbing Across the Las Vegas Valley
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/90 sm:text-xl">
@@ -650,7 +650,7 @@ export default function ServiceAreasPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Red Carpet Plumbing Serves the Las Vegas Valley
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">

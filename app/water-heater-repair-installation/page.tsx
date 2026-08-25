@@ -408,7 +408,7 @@ export default function WaterHeaterRepairInstallationPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Signs Your Water Heater
                 <br className="hidden sm:block" /> Needs Service
               </h2>
@@ -474,7 +474,7 @@ export default function WaterHeaterRepairInstallationPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Water Heater Services
                     <br className="hidden sm:block" /> in Las Vegas
                   </h2>
@@ -510,7 +510,7 @@ export default function WaterHeaterRepairInstallationPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Why Las Vegas Is Hard
                     <br className="hidden sm:block" /> on Water Heaters
                   </h2>
@@ -549,7 +549,7 @@ export default function WaterHeaterRepairInstallationPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing
                     <br className="hidden sm:block" /> Handles Water Heater Service
                   </h2>
@@ -593,7 +593,7 @@ export default function WaterHeaterRepairInstallationPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Water Heater Problem
                   <br className="hidden sm:block" /> in Las Vegas?
                 </h2>
@@ -620,7 +620,7 @@ export default function WaterHeaterRepairInstallationPage() {
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Water Heater Service Areas
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
@@ -679,7 +679,7 @@ export default function WaterHeaterRepairInstallationPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Related Plumbing Services
                   </h2>
                 </div>
@@ -708,7 +708,7 @@ export default function WaterHeaterRepairInstallationPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Frequently Asked Questions
                 <br className="hidden sm:block" /> About Water Heater Service in Las Vegas
               </h2>
@@ -735,7 +735,7 @@ export default function WaterHeaterRepairInstallationPage() {
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h2 className="text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
               Ready to Schedule Water Heater Service
               <br className="hidden sm:block" /> in Las Vegas?
             </h2>

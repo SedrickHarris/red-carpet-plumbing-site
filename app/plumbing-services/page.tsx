@@ -420,7 +420,7 @@ export default function PlumbingServicesPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Our Full Range of Plumbing Services
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -475,7 +475,7 @@ export default function PlumbingServicesPage() {
         {/* SECTION 6: RESIDENTIAL PLUMBING */}
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
               Residential Plumbing Services in Las Vegas
             </h2>
             <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -500,7 +500,7 @@ export default function PlumbingServicesPage() {
         {/* SECTION 7: COMMERCIAL PLUMBING */}
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
               Commercial Plumbing Services
             </h2>
             <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -523,7 +523,7 @@ export default function PlumbingServicesPage() {
         {/* SECTION 8: SERVICE AREAS PREVIEW */}
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
               Plumbing Services Across the Las Vegas Valley
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/85">
@@ -544,7 +544,7 @@ export default function PlumbingServicesPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Choose Red Carpet Plumbing
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
