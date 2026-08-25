@@ -368,7 +368,7 @@ export default function SpringValleyRePipingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Re-Piping in Spring Valley, NV
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -414,7 +414,7 @@ export default function SpringValleyRePipingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 What Pipe Materials Are in Spring Valley Homes?
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -457,7 +457,7 @@ export default function SpringValleyRePipingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Re-Piping Services We Provide in Spring Valley
               </h2>
             </div>
@@ -485,7 +485,7 @@ export default function SpringValleyRePipingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 When Repair Is Right and When Repiping Makes More Sense
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -544,7 +544,7 @@ export default function SpringValleyRePipingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Our Re-Piping Process in Spring Valley
                   </h2>
                 </div>
@@ -579,7 +579,7 @@ export default function SpringValleyRePipingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Spring Valley Homeowners Choose Red Carpet Plumbing for
                 Re-Piping
               </h2>
@@ -637,7 +637,7 @@ export default function SpringValleyRePipingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Spring Valley Re-Piping Coverage Areas
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -672,7 +672,7 @@ export default function SpringValleyRePipingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Re-Piping FAQs for Spring Valley Homeowners
               </h2>
             </div>

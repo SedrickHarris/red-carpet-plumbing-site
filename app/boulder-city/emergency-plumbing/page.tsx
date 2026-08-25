@@ -353,7 +353,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Emergency Plumbing Service in Boulder City
               </h2>
               <div className="mt-6 space-y-6 text-lg leading-8 text-brand-dark/80">
@@ -401,7 +401,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Common Emergency Plumbing Problems in Boulder City
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -453,7 +453,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     What to Do When a Plumbing Emergency Occurs in Boulder City
                   </h2>
                 </div>
@@ -488,7 +488,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Boulder City&apos;s Historic Homes Face Higher Plumbing
                 Emergency Risk
               </h2>
@@ -573,7 +573,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services in Boulder City
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -615,7 +615,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Emergency Plumbing FAQs for Boulder City Homeowners
               </h2>
             </div>

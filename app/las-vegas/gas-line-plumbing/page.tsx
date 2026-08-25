@@ -427,7 +427,7 @@ export default function LasVegasGasLinePage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Las Vegas Gas Lines Need Specialized Attention
               </h2>
             </div>
@@ -461,7 +461,7 @@ export default function LasVegasGasLinePage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Gas Line Services in Las Vegas
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -503,7 +503,7 @@ export default function LasVegasGasLinePage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Our Gas Line Service Process
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -543,7 +543,7 @@ export default function LasVegasGasLinePage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Gas Line Problem? Call a Licensed Las Vegas Plumber.
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -572,7 +572,7 @@ export default function LasVegasGasLinePage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Choose Red Carpet Plumbing for Gas Line Services
               </h2>
             </div>
@@ -593,7 +593,7 @@ export default function LasVegasGasLinePage() {
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Gas Line Service Areas in Las Vegas
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
@@ -634,7 +634,7 @@ export default function LasVegasGasLinePage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services
               </h2>
             </div>
@@ -660,7 +660,7 @@ export default function LasVegasGasLinePage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Frequently Asked Questions
                 <br className="hidden sm:block" /> About Gas Line Plumbing in Las Vegas
               </h2>

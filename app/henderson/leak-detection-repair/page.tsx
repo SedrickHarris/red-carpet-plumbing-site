@@ -370,7 +370,7 @@ export default function HendersonLeakDetectionPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Signs of a Hidden Water Leak in Your Henderson Home
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -408,7 +408,7 @@ export default function HendersonLeakDetectionPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 How Non-Invasive Leak Detection Works
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -450,7 +450,7 @@ export default function HendersonLeakDetectionPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Why Pipe Leaks Are Common in Henderson, NV
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -483,7 +483,7 @@ export default function HendersonLeakDetectionPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Henderson Leak Detection and Repair Services
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -531,7 +531,7 @@ export default function HendersonLeakDetectionPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing Handles Leak Detection in Henderson
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -571,7 +571,7 @@ export default function HendersonLeakDetectionPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Suspected Water Leak in Henderson?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -596,7 +596,7 @@ export default function HendersonLeakDetectionPage() {
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-10 lg:pb-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Henderson Communities We Serve
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
@@ -654,7 +654,7 @@ export default function HendersonLeakDetectionPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services
               </h2>
             </div>
@@ -680,7 +680,7 @@ export default function HendersonLeakDetectionPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Frequently Asked Questions
                 <br className="hidden sm:block" /> About Leak Detection in Henderson
               </h2>

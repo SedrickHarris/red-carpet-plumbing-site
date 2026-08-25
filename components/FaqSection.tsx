@@ -71,7 +71,7 @@ export function FaqSection({
         className={`mx-auto ${container} px-4 py-16 sm:py-20 lg:py-24`}
       >
         <div className="text-left">
-          <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
             {heading}
           </h2>
           {intro ? (

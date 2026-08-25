@@ -416,7 +416,7 @@ export default function BoulderCityLeakDetectionPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Signs of a Hidden Water Leak in Your Boulder City Home
               </h2>
               <div className="mt-6 space-y-6 text-lg leading-8 text-brand-dark/80">
@@ -485,7 +485,7 @@ export default function BoulderCityLeakDetectionPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 How Non-Invasive Leak Detection Works in Boulder City
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -518,7 +518,7 @@ export default function BoulderCityLeakDetectionPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Suspect a Leak in Your Boulder City Home?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -545,7 +545,7 @@ export default function BoulderCityLeakDetectionPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     What Causes Hidden Leaks in Boulder City Homes
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -582,7 +582,7 @@ export default function BoulderCityLeakDetectionPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Leak Detection and Repair Services for Boulder City Homes
               </h2>
             </div>
@@ -621,7 +621,7 @@ export default function BoulderCityLeakDetectionPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing Detects and Repairs Leaks in Boulder
                     City
                   </h2>
@@ -657,7 +657,7 @@ export default function BoulderCityLeakDetectionPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Boulder City Homeowners Choose Red Carpet Plumbing for Leak
                 Detection
               </h2>
@@ -709,7 +709,7 @@ export default function BoulderCityLeakDetectionPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Boulder City Neighborhoods We Serve
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -735,7 +735,7 @@ export default function BoulderCityLeakDetectionPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Leak Detection FAQs for Boulder City Homeowners
               </h2>
             </div>
@@ -762,7 +762,7 @@ export default function BoulderCityLeakDetectionPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services
               </h2>
             </div>

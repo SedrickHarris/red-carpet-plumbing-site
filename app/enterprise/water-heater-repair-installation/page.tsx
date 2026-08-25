@@ -390,7 +390,7 @@ export default function EnterpriseWaterHeaterPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
-              <h2 className="text-2xl font-bold tracking-tight text-brand-dark sm:text-3xl">
+              <h2 className="text-2xl tracking-tight text-brand-dark sm:text-3xl">
                 Water Heater Services in Enterprise, NV
               </h2>
               {/* FLAG: "over 40 years" claim below — verify before publishing. */}
@@ -429,7 +429,7 @@ export default function EnterpriseWaterHeaterPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Why Enterprise Water Heaters Fail Faster
                   </h2>
                 </div>
@@ -460,7 +460,7 @@ export default function EnterpriseWaterHeaterPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Signs Your Water Heater Needs Service in Enterprise
               </h2>
             </div>
@@ -486,7 +486,7 @@ export default function EnterpriseWaterHeaterPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Water Heater Services We Provide in Enterprise
               </h2>
             </div>
@@ -514,7 +514,7 @@ export default function EnterpriseWaterHeaterPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Our Water Heater Process in Enterprise
                   </h2>
                 </div>
@@ -549,7 +549,7 @@ export default function EnterpriseWaterHeaterPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Enterprise Homeowners Choose Red Carpet Plumbing for Water
                 Heater Service
               </h2>
@@ -616,7 +616,7 @@ export default function EnterpriseWaterHeaterPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Enterprise Water Heater Coverage Areas
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -651,7 +651,7 @@ export default function EnterpriseWaterHeaterPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Water Heater FAQs for Enterprise Homeowners
               </h2>
             </div>

@@ -391,7 +391,7 @@ export default function SummerlinPlumbingServicesPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
-              <h2 className="text-2xl font-bold tracking-tight text-brand-dark sm:text-3xl">
+              <h2 className="text-2xl tracking-tight text-brand-dark sm:text-3xl">
                 Licensed Plumbing Services in Summerlin
               </h2>
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
@@ -414,7 +414,7 @@ export default function SummerlinPlumbingServicesPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Plumbing in Summerlin:
                     <br className="hidden sm:block" /> What Homeowners Should Know
                   </h2>
@@ -452,7 +452,7 @@ export default function SummerlinPlumbingServicesPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Plumbing Services We Provide in Summerlin
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -496,7 +496,7 @@ export default function SummerlinPlumbingServicesPage() {
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Summerlin Communities We Serve
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
@@ -530,7 +530,7 @@ export default function SummerlinPlumbingServicesPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Need an Emergency Plumber in Summerlin?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -555,7 +555,7 @@ export default function SummerlinPlumbingServicesPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Summerlin Homeowners
                 <br className="hidden sm:block" /> Choose Red Carpet Plumbing
               </h2>

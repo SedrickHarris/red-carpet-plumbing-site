@@ -129,7 +129,7 @@ export function HeroSection({
           animate="visible"
         >
           <motion.div variants={itemVariants}>
-            <Heading className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <Heading className="text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
               {headline}
             </Heading>
           </motion.div>

@@ -35,7 +35,7 @@ export function ServiceCard({
         )}
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="text-xl font-bold text-brand-dark">
+        <h3 className="text-xl font-semibold text-brand-dark">
           {built ? (
             <Link
               href={href}

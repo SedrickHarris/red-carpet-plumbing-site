@@ -419,7 +419,7 @@ export default function GreenValleyFaucetSinkPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Common Faucet and Sink Problems in Green Valley Homes
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -450,7 +450,7 @@ export default function GreenValleyFaucetSinkPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Green Valley Homes Have Faucet and Sink Problems
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -489,7 +489,7 @@ export default function GreenValleyFaucetSinkPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Faucet and Sink Repair and Installation Services in Green Valley
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -522,7 +522,7 @@ export default function GreenValleyFaucetSinkPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How We Handle Faucet and Sink Service in Green Valley
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -561,7 +561,7 @@ export default function GreenValleyFaucetSinkPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Green Valley Homeowners Choose Red Carpet Plumbing for Faucet
                 and Sink Service
               </h2>
@@ -584,7 +584,7 @@ export default function GreenValleyFaucetSinkPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Faucet or Sink Trouble in Your Green Valley Home?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -610,7 +610,7 @@ export default function GreenValleyFaucetSinkPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Faucet and Sink Repair and Installation Across Green Valley and
                 Henderson
               </h2>
@@ -663,7 +663,7 @@ export default function GreenValleyFaucetSinkPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Frequently Asked Questions
                 <br className="hidden sm:block" /> About Faucet and Sink Repair and
                 Installation in Green Valley

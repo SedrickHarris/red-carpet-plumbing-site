@@ -345,7 +345,7 @@ export default function ParadiseEmergencyPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 What Counts as a Plumbing Emergency in Paradise, NV?
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -378,7 +378,7 @@ export default function ParadiseEmergencyPlumbingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Plumbing Service in Paradise, NV
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -422,7 +422,7 @@ export default function ParadiseEmergencyPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Common Emergency Plumbing Problems in Paradise, NV
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -534,7 +534,7 @@ export default function ParadiseEmergencyPlumbingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Emergency Plumbing Services We Provide in Paradise, NV
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -575,7 +575,7 @@ export default function ParadiseEmergencyPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How We Handle an Emergency Plumbing Call in Paradise, NV
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -615,7 +615,7 @@ export default function ParadiseEmergencyPlumbingPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Need an Emergency Plumber in Paradise, NV?
                 </h2>
                 {/* FLAG: 24/7 availability claim — source-site — verify before final launch. */}
@@ -639,7 +639,7 @@ export default function ParadiseEmergencyPlumbingPage() {
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Neighborhoods and Areas We Serve in Paradise, NV
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
@@ -677,7 +677,7 @@ export default function ParadiseEmergencyPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services
               </h2>
             </div>
@@ -703,7 +703,7 @@ export default function ParadiseEmergencyPlumbingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Frequently Asked Questions
                 <br className="hidden sm:block" /> About Emergency Plumbing in Paradise,
                 NV

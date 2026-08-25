@@ -376,7 +376,7 @@ export default function NorthLasVegasSlabLeakPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 What Is a Slab Leak?
               </h2>
               <div className="mt-6 rounded-r-xl border-l-4 border-brand-primary bg-brand-surface-alt p-6">
@@ -409,7 +409,7 @@ export default function NorthLasVegasSlabLeakPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionReveal>
               <SectionRevealItem>
-                <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                   Signs of a Slab Leak in Your North Las Vegas Home
                 </h2>
               </SectionRevealItem>
@@ -439,7 +439,7 @@ export default function NorthLasVegasSlabLeakPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionReveal>
               <SectionRevealItem>
-                <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                   What Causes Slab Leaks in North Las Vegas Homes
                 </h2>
               </SectionRevealItem>
@@ -467,7 +467,7 @@ export default function NorthLasVegasSlabLeakPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionReveal>
               <SectionRevealItem>
-                <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                   Slab Leak Detection Methods We Use
                 </h2>
               </SectionRevealItem>
@@ -497,7 +497,7 @@ export default function NorthLasVegasSlabLeakPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionReveal>
               <SectionRevealItem>
-                <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                   Slab Leak Repair Options for North Las Vegas Homes
                 </h2>
               </SectionRevealItem>
@@ -539,7 +539,7 @@ export default function NorthLasVegasSlabLeakPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Suspected Slab Leak in Your North Las Vegas Home?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -566,7 +566,7 @@ export default function NorthLasVegasSlabLeakPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionReveal>
               <SectionRevealItem>
-                <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                   How Red Carpet Plumbing Handles a Slab Leak Call in North Las
                   Vegas
                 </h2>
@@ -601,7 +601,7 @@ export default function NorthLasVegasSlabLeakPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Serving North Las Vegas for Slab Leak Detection and Repair
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -672,7 +672,7 @@ export default function NorthLasVegasSlabLeakPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Related Plumbing Services in North Las Vegas
                   </h2>
                 </div>
@@ -700,7 +700,7 @@ export default function NorthLasVegasSlabLeakPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Slab Leak Questions for North Las Vegas Homeowners
               </h2>
             </div>

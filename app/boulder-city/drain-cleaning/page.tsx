@@ -367,7 +367,7 @@ export default function BoulderCityDrainCleaningPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Professional Drain Cleaning for Boulder City Homes
               </h2>
               <div className="mt-6 space-y-6 text-lg leading-8 text-brand-dark/80">
@@ -412,7 +412,7 @@ export default function BoulderCityDrainCleaningPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Why Drains Clog in Boulder City Homes
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -449,7 +449,7 @@ export default function BoulderCityDrainCleaningPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Drain Cleaning Services for Boulder City Homes
               </h2>
             </div>
@@ -489,7 +489,7 @@ export default function BoulderCityDrainCleaningPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Recurring Drain Clogs in Boulder City?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
@@ -516,7 +516,7 @@ export default function BoulderCityDrainCleaningPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Historic Boulder City Homes Need More Frequent Drain Cleaning
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -584,7 +584,7 @@ export default function BoulderCityDrainCleaningPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing Cleans Drains in Boulder City
                   </h2>
                 </div>
@@ -619,7 +619,7 @@ export default function BoulderCityDrainCleaningPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Boulder City Neighborhoods We Serve
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -655,7 +655,7 @@ export default function BoulderCityDrainCleaningPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Drain Cleaning FAQs for Boulder City Homeowners
               </h2>
             </div>
@@ -682,7 +682,7 @@ export default function BoulderCityDrainCleaningPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services
               </h2>
             </div>

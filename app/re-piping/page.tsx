@@ -397,7 +397,7 @@ export default function RePipingServicesPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Signs You May Need
                 <br className="hidden sm:block" /> Repiping
               </h2>
@@ -460,7 +460,7 @@ export default function RePipingServicesPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Re-Piping Services
                     <br className="hidden sm:block" /> in Las Vegas
                   </h2>
@@ -498,7 +498,7 @@ export default function RePipingServicesPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Las Vegas Pipe Materials
                     <br className="hidden sm:block" /> and Why They Fail
                   </h2>
@@ -538,7 +538,7 @@ export default function RePipingServicesPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing
                     <br className="hidden sm:block" /> Handles Repiping
                   </h2>
@@ -582,7 +582,7 @@ export default function RePipingServicesPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Aging or Failing Pipes
                   <br className="hidden sm:block" /> in Las Vegas?
                 </h2>
@@ -609,7 +609,7 @@ export default function RePipingServicesPage() {
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Re-Piping Service Areas
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
@@ -668,7 +668,7 @@ export default function RePipingServicesPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Related Plumbing Services
                   </h2>
                 </div>
@@ -697,7 +697,7 @@ export default function RePipingServicesPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Frequently Asked Questions
                 <br className="hidden sm:block" /> About Re-Piping in Las Vegas
               </h2>
@@ -724,7 +724,7 @@ export default function RePipingServicesPage() {
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h2 className="text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
               Ready to Schedule Re-Piping Service
               <br className="hidden sm:block" /> in Las Vegas?
             </h2>

@@ -267,7 +267,7 @@ export default function AboutPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 A Las Vegas Plumbing Company
                 <br className="hidden sm:block" /> You Can Count On
               </h2>
@@ -302,7 +302,7 @@ export default function AboutPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 What Red Carpet Plumbing
                 <br className="hidden sm:block" /> Stands For
               </h2>
@@ -329,7 +329,7 @@ export default function AboutPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Plumbing Services for
                 <br className="hidden sm:block" /> Las Vegas Homes and Businesses
               </h2>
@@ -376,7 +376,7 @@ export default function AboutPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Local Expertise
                 <br className="hidden sm:block" /> Matters in Las Vegas
               </h2>
@@ -421,7 +421,7 @@ export default function AboutPage() {
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Serving the Las Vegas Valley
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
@@ -450,7 +450,7 @@ export default function AboutPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Licensed, Local, and Accountable
               </h2>
             </div>
@@ -504,7 +504,7 @@ export default function AboutPage() {
         {/* SECTION 9: FINAL CTA */}
         <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h2 className="text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
               Ready to Work With
               <br className="hidden sm:block" /> a Local Las Vegas Plumber?
             </h2>

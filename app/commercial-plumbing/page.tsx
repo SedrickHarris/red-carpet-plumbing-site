@@ -416,7 +416,7 @@ export default function CommercialPlumbingPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Commercial Plumbing Problems
                 <br className="hidden sm:block" /> That Need Attention
               </h2>
@@ -457,7 +457,7 @@ export default function CommercialPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Commercial Plumbing Services
                     <br className="hidden sm:block" /> in Las Vegas
                   </h2>
@@ -494,7 +494,7 @@ export default function CommercialPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Commercial Plumbing
                     <br className="hidden sm:block" /> in the Las Vegas Market
                   </h2>
@@ -534,7 +534,7 @@ export default function CommercialPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing
                     <br className="hidden sm:block" /> Serves Commercial Clients
                   </h2>
@@ -578,7 +578,7 @@ export default function CommercialPlumbingPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Need a Licensed Commercial
                   <br className="hidden sm:block" /> Plumber in Las Vegas?
                 </h2>
@@ -609,7 +609,7 @@ export default function CommercialPlumbingPage() {
         <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Commercial Plumbing Service Areas
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
@@ -668,7 +668,7 @@ export default function CommercialPlumbingPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Related Plumbing Services
                   </h2>
                 </div>
@@ -697,7 +697,7 @@ export default function CommercialPlumbingPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Commercial Plumbing Questions Answered
               </h2>
             </div>
@@ -723,7 +723,7 @@ export default function CommercialPlumbingPage() {
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h2 className="text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
               Ready to Work With a Licensed
               <br className="hidden sm:block" /> Las Vegas Commercial Plumber?
             </h2>

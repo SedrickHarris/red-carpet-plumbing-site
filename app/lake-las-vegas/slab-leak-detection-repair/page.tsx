@@ -395,7 +395,7 @@ export default function LakeLasVegasSlabLeakPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Signs of a Slab Leak in Your Lake Las Vegas Home
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -446,7 +446,7 @@ export default function LakeLasVegasSlabLeakPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Non-Invasive Slab Leak Detection Methods Used in Lake Las Vegas
               </h2>
             </div>
@@ -474,7 +474,7 @@ export default function LakeLasVegasSlabLeakPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     What Causes Slab Leaks in Lake Las Vegas Homes?
                   </h2>
                 </div>
@@ -504,7 +504,7 @@ export default function LakeLasVegasSlabLeakPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Slab Leak Repair Options for Lake Las Vegas Homes
               </h2>
             </div>
@@ -544,7 +544,7 @@ export default function LakeLasVegasSlabLeakPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing Handles a Slab Leak in Lake Las Vegas
                   </h2>
                 </div>
@@ -579,7 +579,7 @@ export default function LakeLasVegasSlabLeakPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Serving Lake Las Vegas as Part of Henderson, NV
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -613,7 +613,7 @@ export default function LakeLasVegasSlabLeakPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Slab Leak Questions for Lake Las Vegas Homeowners
               </h2>
             </div>
@@ -640,7 +640,7 @@ export default function LakeLasVegasSlabLeakPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="max-w-4xl text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Related Plumbing Services in Lake Las Vegas
               </h2>
             </div>

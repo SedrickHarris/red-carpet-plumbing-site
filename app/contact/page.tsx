@@ -285,7 +285,7 @@ export default function ContactPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Plumbing Service in the Las Vegas Valley
               </h2>
             </div>
@@ -386,7 +386,7 @@ export default function ContactPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 What Happens After You Contact Us
               </h2>
             </div>
@@ -417,7 +417,7 @@ export default function ContactPage() {
         {/* SECTION 5: SERVICE AREA SUMMARY */}
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
               Areas We Serve
             </h2>
             <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -462,7 +462,7 @@ export default function ContactPage() {
         {/* SECTION 7: SERVICES QUICK LINKS */}
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
               Plumbing Services Available in Las Vegas
             </h2>
             <p className="mt-6 text-lg leading-8 text-brand-dark/80">

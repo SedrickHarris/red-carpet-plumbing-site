@@ -429,7 +429,7 @@ export default function GreenValleyWaterHeaterPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Water Heater Service for Green Valley Homes
               </h2>
               <div className="mt-6 space-y-6 text-lg leading-8 text-brand-dark/80">
@@ -480,7 +480,7 @@ export default function GreenValleyWaterHeaterPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     Why Green Valley Water Heaters Need Service
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -547,7 +547,7 @@ export default function GreenValleyWaterHeaterPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Signs Your Green Valley Water Heater Needs Repair or Replacement
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -578,7 +578,7 @@ export default function GreenValleyWaterHeaterPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Water Heater Services We Provide in Green Valley
               </h2>
             </div>
@@ -617,7 +617,7 @@ export default function GreenValleyWaterHeaterPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Should You Repair or Replace Your Green Valley Water Heater?
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -667,7 +667,7 @@ export default function GreenValleyWaterHeaterPage() {
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                     How Red Carpet Plumbing Handles a Water Heater Call in Green
                     Valley
                   </h2>
@@ -710,7 +710,7 @@ export default function GreenValleyWaterHeaterPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
                   Water Heater Problems in Green Valley?
                 </h2>
                 {/* FLAG: source-site claim — verify emergency availability before final launch */}
@@ -735,7 +735,7 @@ export default function GreenValleyWaterHeaterPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Green Valley and Nearby Henderson Communities We Serve
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -812,7 +812,7 @@ export default function GreenValleyWaterHeaterPage() {
         <section className="bg-brand-surface-alt">
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Water Heater FAQs for Green Valley Homeowners
               </h2>
             </div>
