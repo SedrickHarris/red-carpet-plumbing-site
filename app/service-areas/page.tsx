@@ -462,7 +462,7 @@ export default function ServiceAreasPage() {
                     <Link
                       // TODO-BATCH-NEXT: card.href location route not yet built
                       href={card.href}
-                      className="mt-4 inline-flex items-center text-sm font-semibold text-brand-primary hover:text-brand-primary-hover"
+                      className="mt-4 inline-flex items-center text-sm font-semibold text-brand-dark underline hover:text-brand-dark/70"
                     >
                       See Plumbing Services
                       <span aria-hidden="true" className="ml-1">
@@ -478,7 +478,7 @@ export default function ServiceAreasPage() {
 
         {/* SECTION 4: MID-PAGE CTA STRIP */}
         <CTASection
-          background="red"
+          background="dark"
           headline={<>Need a Plumber<br />in the Las Vegas Valley?</>}
           primaryCTA={{
             label: "Request Plumbing Service",
@@ -611,7 +611,7 @@ export default function ServiceAreasPage() {
         </section>
 
         {/* SECTION 8: EMERGENCY PLUMBING CTA (custom inline JSX) */}
-        <section className="bg-brand-primary text-white">
+        <section className="bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
