@@ -388,14 +388,14 @@ export default function Home() {
                 request emergency plumbing help, call{" "}
                 <a
                   href="tel:+17025679172"
-                  className="font-semibold text-brand-primary hover:underline"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   (702) 567-9172
                 </a>{" "}
                 or{" "}
                 <Link
                   href="/contact/"
-                  className="font-semibold text-brand-primary hover:underline"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   submit a service request online
                 </Link>
