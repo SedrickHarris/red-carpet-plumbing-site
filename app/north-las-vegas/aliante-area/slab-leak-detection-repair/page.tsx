@@ -521,14 +521,14 @@ export default function AlianteSlabLeakPage() {
                 hidden leak detection or leaks not related to the slab, see our{" "}
                 <Link
                   href="/north-las-vegas/aliante-area/leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Leak Detection and Repair in the Aliante Area
                 </Link>{" "}
                 page. For an overview of our broader slab leak services, visit our{" "}
                 <Link
                   href="/slab-leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   slab leak detection and repair
                 </Link>{" "}
@@ -623,7 +623,7 @@ export default function AlianteSlabLeakPage() {
                         {o.linkPre}
                         <Link
                           href={o.linkHref}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {o.linkText}
                         </Link>
@@ -743,7 +743,7 @@ export default function AlianteSlabLeakPage() {
                 our{" "}
                 <Link
                   href="/north-las-vegas/aliante-area-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Aliante area plumbing services
                 </Link>{" "}
@@ -754,14 +754,14 @@ export default function AlianteSlabLeakPage() {
                 North Las Vegas service coverage, see{" "}
                 <Link
                   href="/north-las-vegas-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   North Las Vegas plumbing services
                 </Link>{" "}
                 or visit our{" "}
                 <Link
                   href="/slab-leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   slab leak detection and repair
                 </Link>{" "}

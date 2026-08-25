@@ -367,7 +367,7 @@ function renderTail(tail: LinkSeg[]) {
       <Link
         key={i}
         href={seg.href}
-        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
       >
         {seg.text}
       </Link>
@@ -471,7 +471,7 @@ export default function LasVegasGasLinePage() {
                 service details, see our{" "}
                 <Link
                   href="/gas-line-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   core gas line plumbing page
                 </Link>

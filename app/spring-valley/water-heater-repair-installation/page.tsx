@@ -410,7 +410,7 @@ export default function SpringValleyWaterHeaterPage() {
                 For full-service plumbing in Spring Valley, visit our{" "}
                 <Link
                   href="/spring-valley-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Spring Valley plumbing services
                 </Link>{" "}
@@ -418,7 +418,7 @@ export default function SpringValleyWaterHeaterPage() {
                 Valley, visit our{" "}
                 <Link
                   href="/water-heater-repair-installation/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   water heater repair and installation
                 </Link>{" "}
@@ -522,7 +522,7 @@ export default function SpringValleyWaterHeaterPage() {
                         {" "}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>{" "}
@@ -598,28 +598,28 @@ export default function SpringValleyWaterHeaterPage() {
               Red Carpet Plumbing provides full{" "}
               <Link
                 href="/spring-valley-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Spring Valley plumbing services
               </Link>{" "}
               including{" "}
               <Link
                 href="/spring-valley/emergency-plumbing/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 emergency plumbing in Spring Valley
               </Link>
               ,{" "}
               <Link
                 href="/spring-valley/drain-cleaning/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 drain cleaning in Spring Valley
               </Link>
               ,{" "}
               <Link
                 href="/spring-valley/leak-detection-repair/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 leak detection in Spring Valley
               </Link>
@@ -627,14 +627,14 @@ export default function SpringValleyWaterHeaterPage() {
               Spring Valley including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas plumbing services
               </Link>{" "}
               and{" "}
               <Link
                 href="/summerlin-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Summerlin plumbing services
               </Link>

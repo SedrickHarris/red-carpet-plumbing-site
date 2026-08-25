@@ -381,14 +381,14 @@ export default function HendersonSlabLeakPage() {
                 overview, see our{" "}
                 <Link
                   href="/slab-leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   slab leak detection and repair
                 </Link>{" "}
                 services and our{" "}
                 <Link
                   href="/henderson/leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Henderson leak detection
                 </Link>{" "}
@@ -476,7 +476,7 @@ export default function HendersonSlabLeakPage() {
                   line. Learn more about our{" "}
                   <Link
                     href="/water-pipe-repair-replacement/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     water pipe repair and replacement
                   </Link>{" "}
@@ -502,7 +502,7 @@ export default function HendersonSlabLeakPage() {
                   Learn more about our{" "}
                   <Link
                     href="/henderson/re-piping/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Henderson re-piping
                   </Link>{" "}

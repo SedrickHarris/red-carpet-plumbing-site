@@ -420,7 +420,7 @@ export default function EnterpriseLeakDetectionPage() {
                 leak in an Enterprise home. See our{" "}
                 <Link
                   href="/leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   leak detection and repair services
                 </Link>{" "}
@@ -449,7 +449,7 @@ export default function EnterpriseLeakDetectionPage() {
               or{" "}
               <Link
                 href="/contact/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 request service online
               </Link>
@@ -556,7 +556,7 @@ export default function EnterpriseLeakDetectionPage() {
                         {s.link.pre}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>
@@ -649,7 +649,7 @@ export default function EnterpriseLeakDetectionPage() {
               Red Carpet Plumbing provides full{" "}
               <Link
                 href="/enterprise-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Enterprise plumbing services
               </Link>{" "}
@@ -658,14 +658,14 @@ export default function EnterpriseLeakDetectionPage() {
               including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas plumbing services
               </Link>{" "}
               and{" "}
               <Link
                 href="/henderson-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Henderson plumbing services
               </Link>

@@ -366,7 +366,7 @@ export default function LasVegasDrainCleaningPage() {
                 broader overview, see our{" "}
                 <Link
                   href="/drain-cleaning/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   drain cleaning services
                 </Link>{" "}
@@ -439,7 +439,7 @@ export default function LasVegasDrainCleaningPage() {
                         Learn more about our{" "}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>

@@ -340,7 +340,7 @@ export default function LakeLasVegasDrainCleaningPage() {
                 Red Carpet Plumbing provides{" "}
                 <Link
                   href="/drain-cleaning/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   drain cleaning
                 </Link>{" "}
@@ -467,14 +467,14 @@ export default function LakeLasVegasDrainCleaningPage() {
                 available in this area, visit our{" "}
                 <Link
                   href="/lake-las-vegas-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Lake Las Vegas plumbing services
                 </Link>{" "}
                 page or our{" "}
                 <Link
                   href="/henderson-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Henderson plumbing services
                 </Link>{" "}
@@ -533,7 +533,7 @@ export default function LakeLasVegasDrainCleaningPage() {
                   </p>
                   <Link
                     href={card.linkHref}
-                    className="mt-4 inline-flex items-center font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="mt-4 inline-flex items-center font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     {card.linkText}
                     <span aria-hidden="true" className="ml-1">

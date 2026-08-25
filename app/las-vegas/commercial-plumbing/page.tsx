@@ -422,7 +422,7 @@ export default function LasVegasCommercialPlumbingPage() {
                     Red Carpet Plumbing provides the full range of{" "}
                     <Link
                       href="/commercial-plumbing/"
-                      className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                      className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                     >
                       commercial plumbing services
                     </Link>{" "}

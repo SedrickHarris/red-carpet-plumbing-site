@@ -410,7 +410,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
                   information, see our{" "}
                   <Link
                     href="/emergency-plumbing/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     emergency plumbing services
                   </Link>{" "}
@@ -449,7 +449,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
                             {s.link.pre}
                             <Link
                               href={s.link.href}
-                              className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                              className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                             >
                               {s.link.text}
                             </Link>
@@ -583,14 +583,14 @@ export default function GreenValleyEmergencyPlumbingPage() {
                 visit our{" "}
                 <Link
                   href="/green-valley-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Green Valley plumbing services
                 </Link>{" "}
                 hub. For full Henderson coverage, see{" "}
                 <Link
                   href="/henderson-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Henderson plumbing services
                 </Link>

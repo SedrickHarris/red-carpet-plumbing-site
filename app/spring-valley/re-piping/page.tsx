@@ -400,7 +400,7 @@ export default function SpringValleyRePipingPage() {
                 before committing to a repipe decision, see our{" "}
                 <Link
                   href="/spring-valley/leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   leak detection in Spring Valley
                 </Link>{" "}
@@ -439,7 +439,7 @@ export default function SpringValleyRePipingPage() {
                         {m.link.pre}
                         <Link
                           href={m.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {m.link.text}
                         </Link>
@@ -495,7 +495,7 @@ export default function SpringValleyRePipingPage() {
                 pipe repair options, see our{" "}
                 <Link
                   href="/water-pipe-repair-replacement/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   water pipe repair and replacement
                 </Link>{" "}
@@ -528,7 +528,7 @@ export default function SpringValleyRePipingPage() {
               See our{" "}
               <Link
                 href="/spring-valley/slab-leak-detection-repair/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 slab leak detection and repair in Spring Valley
               </Link>{" "}
@@ -598,7 +598,7 @@ export default function SpringValleyRePipingPage() {
               Red Carpet Plumbing provides full{" "}
               <Link
                 href="/spring-valley-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Spring Valley plumbing services
               </Link>{" "}
@@ -607,14 +607,14 @@ export default function SpringValleyRePipingPage() {
               Valley including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas plumbing services
               </Link>{" "}
               and{" "}
               <Link
                 href="/summerlin-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Summerlin plumbing services
               </Link>
@@ -624,7 +624,7 @@ export default function SpringValleyRePipingPage() {
               For emergency pipe failures in Spring Valley, see our{" "}
               <Link
                 href="/spring-valley/emergency-plumbing/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Spring Valley emergency plumbing
               </Link>{" "}
@@ -659,7 +659,7 @@ export default function SpringValleyRePipingPage() {
               For re-piping services across the Las Vegas Valley, see our{" "}
               <Link
                 href="/las-vegas/re-piping/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas re-piping
               </Link>{" "}

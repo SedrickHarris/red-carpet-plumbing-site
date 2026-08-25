@@ -443,7 +443,7 @@ export default function SpringValleyCommercialPlumbingPage() {
                     see our{" "}
                     <Link
                       href="/commercial-plumbing/"
-                      className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                      className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                     >
                       commercial plumbing services
                     </Link>{" "}
@@ -538,7 +538,7 @@ export default function SpringValleyCommercialPlumbingPage() {
                             emergencies, see our{" "}
                             <Link
                               href="/spring-valley/emergency-plumbing/"
-                              className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                              className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                             >
                               Spring Valley emergency plumbing
                             </Link>{" "}
@@ -583,7 +583,7 @@ export default function SpringValleyCommercialPlumbingPage() {
               Red Carpet Plumbing also provides{" "}
               <Link
                 href="/spring-valley-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Spring Valley plumbing services
               </Link>{" "}
@@ -591,7 +591,7 @@ export default function SpringValleyCommercialPlumbingPage() {
               plumbing across the Las Vegas Valley, see our{" "}
               <Link
                 href="/las-vegas/commercial-plumbing/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas commercial plumbing
               </Link>{" "}

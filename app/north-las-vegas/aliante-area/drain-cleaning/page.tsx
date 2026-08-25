@@ -503,7 +503,7 @@ export default function AlianteDrainCleaningPage() {
                 For our full{" "}
                 <Link
                   href="/drain-cleaning/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   drain cleaning services
                 </Link>{" "}
@@ -527,7 +527,7 @@ export default function AlianteDrainCleaningPage() {
                         Learn more about our{" "}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>
@@ -653,21 +653,21 @@ export default function AlianteDrainCleaningPage() {
                 neighborhoods. For{" "}
                 <Link
                   href="/north-las-vegas/aliante-area-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Aliante area plumbing services
                 </Link>{" "}
                 or our full{" "}
                 <Link
                   href="/north-las-vegas-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   North Las Vegas plumbing services
                 </Link>
                 , see the area hub pages. We also provide{" "}
                 <Link
                   href="/north-las-vegas/drain-cleaning/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   drain cleaning throughout North Las Vegas
                 </Link>

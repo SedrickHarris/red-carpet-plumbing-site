@@ -427,7 +427,7 @@ export default function BoulderCityWaterHeaterPage() {
                   plumbing services in Boulder City, visit our{" "}
                   <Link
                     href="/boulder-city-plumbing-services/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Boulder City plumbing services
                   </Link>{" "}
@@ -435,7 +435,7 @@ export default function BoulderCityWaterHeaterPage() {
                   Las Vegas Valley, see our{" "}
                   <Link
                     href="/water-heater-repair-installation/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     water heater repair and installation services
                   </Link>{" "}
@@ -539,7 +539,7 @@ export default function BoulderCityWaterHeaterPage() {
                       <>
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>
@@ -630,7 +630,7 @@ export default function BoulderCityWaterHeaterPage() {
               our full range of plumbing services, visit our{" "}
               <Link
                 href="/plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 plumbing services
               </Link>{" "}

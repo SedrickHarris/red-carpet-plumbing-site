@@ -445,7 +445,7 @@ export default function AlianteEmergencyPlumbingPage() {
                 services for Aliante area homeowners. For our full range of{" "}
                 <Link
                   href="/emergency-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   emergency plumbing services
                 </Link>
@@ -568,21 +568,21 @@ export default function AlianteEmergencyPlumbingPage() {
                 neighborhoods. For{" "}
                 <Link
                   href="/north-las-vegas/aliante-area-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Aliante area plumbing services
                 </Link>{" "}
                 or our full{" "}
                 <Link
                   href="/north-las-vegas-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   North Las Vegas plumbing services
                 </Link>
                 , see the area hub pages. We also provide{" "}
                 <Link
                   href="/north-las-vegas/emergency-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   emergency plumbing throughout North Las Vegas
                 </Link>

@@ -434,14 +434,14 @@ export default function BoulderCityLeakDetectionPage() {
                   services, visit our{" "}
                   <Link
                     href="/boulder-city-plumbing-services/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Boulder City plumbing services page
                   </Link>{" "}
                   and our{" "}
                   <Link
                     href="/leak-detection-repair/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     leak detection and repair services page
                   </Link>
@@ -601,7 +601,7 @@ export default function BoulderCityLeakDetectionPage() {
                       <>
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>
@@ -696,7 +696,7 @@ export default function BoulderCityLeakDetectionPage() {
               our full range of plumbing services, visit our{" "}
               <Link
                 href="/plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 plumbing services
               </Link>{" "}

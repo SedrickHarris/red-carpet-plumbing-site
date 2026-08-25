@@ -463,14 +463,14 @@ export default function GreenValleyRePipingPage() {
                 For a broader overview, see our{" "}
                 <Link
                   href="/re-piping/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   re-piping services
                 </Link>{" "}
                 page and our{" "}
                 <Link
                   href="/green-valley-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Green Valley plumbing services
                 </Link>{" "}
@@ -541,7 +541,7 @@ export default function GreenValleyRePipingPage() {
                   has otherwise performed well, targeted repair through our{" "}
                   <Link
                     href="/water-pipe-repair-replacement/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     water pipe repair and replacement
                   </Link>{" "}
@@ -561,7 +561,7 @@ export default function GreenValleyRePipingPage() {
                   leaks have already been detected, see our{" "}
                   <Link
                     href="/green-valley/slab-leak-detection-repair/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Green Valley slab leak detection and repair
                   </Link>{" "}
@@ -578,7 +578,7 @@ export default function GreenValleyRePipingPage() {
               occurred on the same system. Red Carpet Plumbing also provides{" "}
               <Link
                 href="/green-valley/leak-detection-repair/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Green Valley leak detection and repair
               </Link>{" "}
@@ -670,7 +670,7 @@ export default function GreenValleyRePipingPage() {
                 service details, see our{" "}
                 <Link
                   href="/henderson-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Henderson plumbing services
                 </Link>{" "}
@@ -701,7 +701,7 @@ export default function GreenValleyRePipingPage() {
               For Henderson-wide re-piping services, see our{" "}
               <Link
                 href="/henderson/re-piping/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Henderson re-piping
               </Link>{" "}

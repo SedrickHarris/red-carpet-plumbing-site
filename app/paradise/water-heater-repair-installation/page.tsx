@@ -384,7 +384,7 @@ export default function ParadiseWaterHeaterPage() {
                 urgent situations, see{" "}
                 <Link
                   href="/paradise/emergency-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   emergency plumbing
                 </Link>
@@ -422,7 +422,7 @@ export default function ParadiseWaterHeaterPage() {
                 Paradise. For a complete overview, see our{" "}
                 <Link
                   href="/water-heater-repair-installation/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   water heater repair and installation
                 </Link>{" "}
@@ -533,14 +533,14 @@ export default function ParadiseWaterHeaterPage() {
                       Paradise homes with aging copper supply lines, see our{" "}
                       <Link
                         href="/re-piping/"
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         re-piping
                       </Link>{" "}
                       and{" "}
                       <Link
                         href="/slab-leak-detection-repair/"
-                        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         slab leak detection
                       </Link>{" "}

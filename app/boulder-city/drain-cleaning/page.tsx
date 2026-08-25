@@ -387,7 +387,7 @@ export default function BoulderCityDrainCleaningPage() {
                   plumbing services in Boulder City, visit our{" "}
                   <Link
                     href="/boulder-city-plumbing-services/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Boulder City plumbing services
                   </Link>{" "}
@@ -395,7 +395,7 @@ export default function BoulderCityDrainCleaningPage() {
                   across the Las Vegas Valley, see our{" "}
                   <Link
                     href="/drain-cleaning/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     drain cleaning services
                   </Link>{" "}
@@ -470,7 +470,7 @@ export default function BoulderCityDrainCleaningPage() {
                         Learn more about our{" "}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>
@@ -642,7 +642,7 @@ export default function BoulderCityDrainCleaningPage() {
               For our full range of plumbing services, visit our{" "}
               <Link
                 href="/plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 plumbing services
               </Link>{" "}

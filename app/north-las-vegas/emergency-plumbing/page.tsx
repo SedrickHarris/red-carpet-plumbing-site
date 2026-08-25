@@ -346,7 +346,7 @@ export default function NorthLasVegasEmergencyPlumbingPage() {
                 For a broader overview, see our{" "}
                 <Link
                   href="/emergency-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   emergency plumbing services
                 </Link>{" "}

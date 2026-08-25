@@ -406,7 +406,7 @@ export default function EnterpriseCommercialPlumbingPage() {
                   visit our{" "}
                   <Link
                     href="/commercial-plumbing/"
-                    className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     commercial plumbing services
                   </Link>{" "}
@@ -478,7 +478,7 @@ export default function EnterpriseCommercialPlumbingPage() {
                         {s.link.pre}
                         <Link
                           href={s.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {s.link.text}
                         </Link>
@@ -535,7 +535,7 @@ export default function EnterpriseCommercialPlumbingPage() {
                 , call Red Carpet Plumbing at{" "}
                 <a
                   href="tel:+17025679172"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   (702) 567-9172
                 </a>
@@ -604,7 +604,7 @@ export default function EnterpriseCommercialPlumbingPage() {
               full range of our plumbing services, visit our{" "}
               <Link
                 href="/enterprise-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Enterprise plumbing services
               </Link>{" "}
@@ -614,7 +614,7 @@ export default function EnterpriseCommercialPlumbingPage() {
               For our full list of plumbing services, visit our{" "}
               <Link
                 href="/plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 plumbing services
               </Link>{" "}

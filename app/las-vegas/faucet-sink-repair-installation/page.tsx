@@ -387,7 +387,7 @@ function renderTail(tail: LinkSeg[]) {
       <Link
         key={i}
         href={seg.href}
-        className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
       >
         {seg.text}
       </Link>
@@ -520,7 +520,7 @@ export default function LasVegasFaucetSinkPage() {
                 details, see our{" "}
                 <Link
                   href="/faucet-sink-repair-installation/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   core faucet and sink repair page
                 </Link>

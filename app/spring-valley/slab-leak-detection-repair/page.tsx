@@ -429,7 +429,7 @@ export default function SpringValleySlabLeakPage() {
               Red Carpet Plumbing at (702) 567-9172 or{" "}
               <Link
                 href="/contact/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 request service online
               </Link>
@@ -455,14 +455,14 @@ export default function SpringValleySlabLeakPage() {
                 overview of our detection services, see our{" "}
                 <Link
                   href="/slab-leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   slab leak detection and repair
                 </Link>{" "}
                 page and our{" "}
                 <Link
                   href="/spring-valley/leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   leak detection in Spring Valley
                 </Link>{" "}
@@ -551,7 +551,7 @@ export default function SpringValleySlabLeakPage() {
                         {o.link.pre}
                         <Link
                           href={o.link.href}
-                          className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                          className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                         >
                           {o.link.text}
                         </Link>
@@ -628,49 +628,49 @@ export default function SpringValleySlabLeakPage() {
               Red Carpet Plumbing provides full{" "}
               <Link
                 href="/spring-valley-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Spring Valley plumbing services
               </Link>{" "}
               including{" "}
               <Link
                 href="/spring-valley/emergency-plumbing/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 emergency plumbing in Spring Valley
               </Link>
               ,{" "}
               <Link
                 href="/spring-valley/drain-cleaning/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 drain cleaning in Spring Valley
               </Link>
               ,{" "}
               <Link
                 href="/spring-valley/water-heater-repair-installation/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 water heater repair in Spring Valley
               </Link>
               , and{" "}
               <Link
                 href="/spring-valley/leak-detection-repair/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 leak detection in Spring Valley
               </Link>
               . We also serve communities near Spring Valley including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas plumbing services
               </Link>{" "}
               and{" "}
               <Link
                 href="/summerlin-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Summerlin plumbing services
               </Link>

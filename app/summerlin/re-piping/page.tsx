@@ -380,7 +380,7 @@ export default function SummerlinRePipingPage() {
                 For full-service plumbing in Summerlin, visit our{" "}
                 <Link
                   href="/summerlin-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Summerlin plumbing services
                 </Link>{" "}
@@ -388,7 +388,7 @@ export default function SummerlinRePipingPage() {
                 our{" "}
                 <Link
                   href="/re-piping/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   re-piping services
                 </Link>{" "}
@@ -420,7 +420,7 @@ export default function SummerlinRePipingPage() {
                 home, call Red Carpet Plumbing at (702) 567-9172 or{" "}
                 <Link
                   href="/contact/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   request service online
                 </Link>
@@ -501,7 +501,7 @@ export default function SummerlinRePipingPage() {
                 known to be defective. See our{" "}
                 <Link
                   href="/water-pipe-repair-replacement/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   water pipe repair and replacement
                 </Link>{" "}
@@ -520,7 +520,7 @@ export default function SummerlinRePipingPage() {
                 already been detected, see our{" "}
                 <Link
                   href="/summerlin/slab-leak-detection-repair/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   slab leak detection and repair
                 </Link>{" "}
@@ -597,7 +597,7 @@ export default function SummerlinRePipingPage() {
               Red Carpet Plumbing provides full{" "}
               <Link
                 href="/summerlin-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Summerlin plumbing services
               </Link>{" "}
@@ -606,14 +606,14 @@ export default function SummerlinRePipingPage() {
               near Summerlin including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas plumbing services
               </Link>{" "}
               and{" "}
               <Link
                 href="/spring-valley-plumbing-services/"
-                className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Spring Valley plumbing services
               </Link>

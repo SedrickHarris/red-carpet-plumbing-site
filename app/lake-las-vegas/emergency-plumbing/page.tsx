@@ -410,7 +410,7 @@ export default function LakeLasVegasEmergencyPlumbingPage() {
                 information, see our{" "}
                 <Link
                   href="/emergency-plumbing/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   emergency plumbing services
                 </Link>{" "}
@@ -448,7 +448,7 @@ export default function LakeLasVegasEmergencyPlumbingPage() {
                             {s.link.pre}
                             <Link
                               href={s.link.href}
-                              className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                              className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                             >
                               {s.link.text}
                             </Link>
@@ -565,14 +565,14 @@ export default function LakeLasVegasEmergencyPlumbingPage() {
                 list of plumbing services available in this area, visit our{" "}
                 <Link
                   href="/lake-las-vegas-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Lake Las Vegas plumbing services
                 </Link>{" "}
                 page or our{" "}
                 <Link
                   href="/henderson-plumbing-services/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Henderson plumbing services
                 </Link>{" "}
@@ -631,7 +631,7 @@ export default function LakeLasVegasEmergencyPlumbingPage() {
                   </p>
                   <Link
                     href={card.linkHref}
-                    className="mt-4 inline-flex items-center font-semibold text-brand-primary hover:text-brand-primary-hover"
+                    className="mt-4 inline-flex items-center font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     {card.linkText}
                     <span aria-hidden="true" className="ml-1">

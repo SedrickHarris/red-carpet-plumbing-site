@@ -393,7 +393,7 @@ export default function HendersonWaterHeaterPage() {
                 a broader overview, see our{" "}
                 <Link
                   href="/water-heater-repair-installation/"
-                  className="font-semibold text-brand-primary hover:text-brand-primary-hover"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   water heater repair and installation
                 </Link>{" "}
