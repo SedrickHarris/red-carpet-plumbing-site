@@ -812,7 +812,7 @@ function CheckMark() {
     <svg
       aria-hidden="true"
       viewBox="0 0 24 24"
-      className="mt-1 h-5 w-5 flex-none text-brand-primary"
+      className="mt-1 h-5 w-5 flex-none text-brand-dark"
       fill="none"
       stroke="currentColor"
       strokeWidth={2}
