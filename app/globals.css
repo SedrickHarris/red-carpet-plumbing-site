@@ -15,9 +15,15 @@
   --color-brand-charcoal: #111827;
   --color-brand-surface: #FFFFFF;
   --color-brand-surface-alt: #F3F4F6;
+  --color-brand-surface-warm: #FAF8F5;
   --color-brand-muted: #6B7280;
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
+
+  /* Extends the existing spacing scale upward. Does not redefine any
+     existing value: the sitewide py-16/20/24 default is untouched. */
+  --spacing-section: 5rem;
+  --spacing-section-loose: 7rem;
 }
 
 @media (prefers-color-scheme: dark) {
