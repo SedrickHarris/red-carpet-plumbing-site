@@ -82,9 +82,9 @@ function DesktopNavItem({ link }: { link: NavLink }) {
     <Link
       href={link.href}
       aria-current={isActive ? "page" : undefined}
-      className={`text-base font-medium transition-colors hover:text-brand-primary ${
+      className={`text-base font-medium transition-colors hover:text-brand-dark/70 ${
         isActive
-          ? "text-brand-primary border-b-2 border-brand-primary pb-0.5"
+          ? "text-brand-dark border-b-2 border-brand-dark pb-0.5"
           : "text-brand-dark"
       }`}
     >
@@ -128,9 +128,9 @@ function DesktopDropdown({
         aria-haspopup="true"
         aria-expanded={isOpen}
         onClick={() => (isOpen ? onClose() : onOpen())}
-        className={`flex items-center gap-1 text-base font-medium transition-colors hover:text-brand-primary ${
+        className={`flex items-center gap-1 text-base font-medium transition-colors hover:text-brand-dark/70 ${
           isActive
-            ? "text-brand-primary border-b-2 border-brand-primary pb-0.5"
+            ? "text-brand-dark border-b-2 border-brand-dark pb-0.5"
             : "text-brand-dark"
         }`}
       >
@@ -162,7 +162,7 @@ function DesktopDropdown({
                 href={item.href}
                 role="menuitem"
                 onClick={onClose}
-                className="block rounded-lg px-4 py-2.5 text-sm font-medium text-brand-dark transition-colors hover:bg-brand-surface-alt hover:text-brand-primary"
+                className="block rounded-lg px-4 py-2.5 text-sm font-medium text-brand-dark transition-colors hover:bg-brand-surface-alt"
               >
                 {item.label}
               </Link>
@@ -172,7 +172,7 @@ function DesktopDropdown({
                 href={viewAllHref}
                 role="menuitem"
                 onClick={onClose}
-                className="block rounded-lg px-4 py-2.5 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-surface-alt"
+                className="block rounded-lg px-4 py-2.5 text-sm font-semibold text-brand-dark transition-colors hover:bg-brand-surface-alt"
               >
                 {viewAllLabel}
               </Link>
@@ -205,7 +205,7 @@ function MobileNavItem({
     <Link
       href={link.href}
       onClick={onNavigate}
-      className="block rounded-lg px-3 py-2.5 text-base font-medium text-brand-dark transition-colors hover:bg-brand-surface-alt hover:text-brand-primary"
+      className="block rounded-lg px-3 py-2.5 text-base font-medium text-brand-dark transition-colors hover:bg-brand-surface-alt"
     >
       {link.label}
     </Link>
@@ -237,7 +237,7 @@ function MobileAccordion({
         type="button"
         aria-expanded={isOpen}
         onClick={onToggle}
-        className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-base font-medium text-brand-dark transition-colors hover:bg-brand-surface-alt hover:text-brand-primary"
+        className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-base font-medium text-brand-dark transition-colors hover:bg-brand-surface-alt"
       >
         {label}
         <Chevron
@@ -269,7 +269,7 @@ function MobileAccordion({
                   <Link
                     href={item.href}
                     onClick={onNavigate}
-                    className="block rounded-lg px-3 py-2.5 pl-6 text-sm font-medium text-brand-dark transition-colors hover:bg-brand-surface-alt hover:text-brand-primary"
+                    className="block rounded-lg px-3 py-2.5 pl-6 text-sm font-medium text-brand-dark transition-colors hover:bg-brand-surface-alt"
                   >
                     {item.label}
                   </Link>
@@ -279,7 +279,7 @@ function MobileAccordion({
                 <Link
                   href={viewAllHref}
                   onClick={onNavigate}
-                  className="block rounded-lg px-3 py-2.5 pl-6 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-surface-alt"
+                  className="block rounded-lg px-3 py-2.5 pl-6 text-sm font-semibold text-brand-dark transition-colors hover:bg-brand-surface-alt"
                 >
                   {viewAllLabel}
                 </Link>

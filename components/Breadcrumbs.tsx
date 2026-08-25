@@ -13,14 +13,14 @@ type BreadcrumbsProps = {
 };
 
 // The dark variant is for crumbs sitting on bg-brand-charcoal, where the light
-// palette fails WCAG AA: brand-primary measures 2.13:1 against #111827 and
+// palette is unreadable: brand-dark measures 1.09:1 against #111827 and
 // brand-muted 3.67:1, both under the 4.5:1 floor. It therefore separates the
 // current page by weight and brightness rather than hue. Measured against
 // #111827: white/70 composites to #b8babe at 9.13:1, white is 17.74:1.
 const styles = {
   light: {
-    link: "text-brand-muted transition-colors hover:text-brand-primary",
-    current: "font-medium text-brand-primary",
+    link: "text-brand-muted transition-colors hover:text-brand-dark",
+    current: "font-medium text-brand-dark",
     muted: "text-brand-muted",
     chevron: "text-brand-muted/60",
   },

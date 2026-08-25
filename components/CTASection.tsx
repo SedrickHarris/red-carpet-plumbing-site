@@ -29,7 +29,7 @@ export function CTASection({
   const hasSplit = Boolean(formSlot);
   const bg =
     background === "red"
-      ? "bg-gradient-to-br from-brand-primary to-brand-primary-hover text-white"
+      ? "bg-brand-primary text-white"
       : background === "dark"
       ? "bg-brand-charcoal text-white"
       : "bg-brand-surface-alt text-brand-dark";

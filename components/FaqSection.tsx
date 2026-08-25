@@ -62,8 +62,8 @@ export function FaqSection({
   const container = showPills ? "max-w-4xl" : "max-w-3xl";
   const inactivePill =
     surface === "light"
-      ? "bg-brand-surface-alt text-brand-dark/80 ring-1 ring-brand-surface-alt hover:text-brand-primary hover:ring-brand-primary/30"
-      : "bg-white text-brand-dark/80 ring-1 ring-brand-surface-alt hover:text-brand-primary hover:ring-brand-primary/30";
+      ? "bg-brand-surface-alt text-brand-dark/80 ring-1 ring-brand-surface-alt hover:text-brand-dark hover:ring-brand-dark/20"
+      : "bg-white text-brand-dark/80 ring-1 ring-brand-surface-alt hover:text-brand-dark hover:ring-brand-dark/20";
 
   return (
     <section id={id} className={sectionBg}>
