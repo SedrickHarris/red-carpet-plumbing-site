@@ -346,7 +346,7 @@ export default function AboutPage() {
                 at{" "}
                 <Link
                   href="/plumbing-services/"
-                  className="font-medium text-brand-primary hover:underline"
+                  className="font-medium text-brand-dark underline hover:text-brand-dark/70"
                 >
                   plumbing services
                 </Link>
@@ -362,7 +362,7 @@ export default function AboutPage() {
                 567-9172 or{" "}
                 <Link
                   href="/contact/"
-                  className="font-medium text-brand-primary hover:underline"
+                  className="font-medium text-brand-dark underline hover:text-brand-dark/70"
                 >
                   contact us online
                 </Link>{" "}
@@ -470,7 +470,7 @@ export default function AboutPage() {
                   href="https://share.google/oY5LcfC0lhWJXVjJj"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium text-brand-primary hover:underline"
+                  className="font-medium text-brand-dark underline hover:text-brand-dark/70"
                 >
                   Read our Google reviews.
                 </a>
@@ -481,7 +481,7 @@ export default function AboutPage() {
                   href="https://www.google.com/maps/place/3330+W+Hacienda+Ave+%23405,+Las+Vegas,+NV+89118/@36.0943375,-115.1870907,17z/data=!3m1!4b1!4m6!3m5!1s0x80c8c5d697faaaab:0x3db74ab4815ec72a!8m2!3d36.0943375!4d-115.1845158!16s%2Fg%2F11nynzwdy4?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium text-brand-primary hover:underline"
+                  className="font-medium text-brand-dark underline hover:text-brand-dark/70"
                   aria-label="Get directions to Red Carpet Plumbing on Google Maps"
                 >
                   3330 W. Hacienda Ave Ste. 405, Las Vegas, NV 89118
