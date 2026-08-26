@@ -593,7 +593,7 @@ export default function HendersonLeakDetectionPage() {
         </section>
 
         {/* SECTION 8: COMMUNITIES SERVED */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="border-t border-white/10 bg-brand-charcoal text-white">
           <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-10 lg:pb-24 xl:px-12">
             <div className="max-w-3xl text-left">
               <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
