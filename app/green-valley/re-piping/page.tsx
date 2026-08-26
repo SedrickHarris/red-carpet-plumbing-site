@@ -684,7 +684,7 @@ export default function GreenValleyRePipingPage() {
                   {c.href ? (
                     <Link
                       href={c.href}
-                      className="block rounded-lg bg-brand-surface-alt px-5 py-3 font-semibold text-brand-primary shadow-sm ring-1 ring-brand-surface-alt transition-colors hover:text-brand-primary-hover hover:shadow-md"
+                      className="block rounded-lg bg-brand-surface-alt px-5 py-3 font-semibold text-brand-dark shadow-sm ring-1 ring-brand-surface-alt transition-colors hover:text-brand-dark/70 hover:shadow-md"
                     >
                       {c.name}
                     </Link>
@@ -717,9 +717,9 @@ export default function GreenValleyRePipingPage() {
                   <li key={s.label}>
                     <Link
                       href={s.href}
-                      className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark ring-1 ring-brand-surface-alt transition hover:text-brand-primary hover:shadow-md"
+                      className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark ring-1 ring-brand-surface-alt transition hover:text-brand-dark/70 hover:shadow-md"
                     >
-                      <span aria-hidden="true" className="text-brand-primary">
+                      <span aria-hidden="true" className="text-brand-dark">
                         &rarr;
                       </span>
                       {s.label}

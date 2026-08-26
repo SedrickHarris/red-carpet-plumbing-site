@@ -603,7 +603,7 @@ export default function GreenValleyEmergencyPlumbingPage() {
                   <li key={area.name}>
                     <Link
                       href={area.href}
-                      className="block rounded-lg bg-brand-surface-alt px-5 py-3 text-sm font-medium text-brand-primary ring-1 ring-brand-surface-alt hover:bg-brand-surface-alt/80"
+                      className="block rounded-lg bg-brand-surface-alt px-5 py-3 text-sm font-medium text-brand-dark ring-1 ring-brand-surface-alt hover:bg-brand-surface-alt/80"
                     >
                       {area.name}
                     </Link>
