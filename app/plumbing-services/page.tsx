@@ -405,6 +405,7 @@ export default function PlumbingServicesPage() {
         {/* SECTION 4: EMERGENCY CTA STRIP */}
         <CTASection
           background="dark"
+          className="border-t border-white/10"
           headline="Plumbing Emergency? Get Fast Help."
           primaryCTA={{
             label: "Get Emergency Plumbing Help",
