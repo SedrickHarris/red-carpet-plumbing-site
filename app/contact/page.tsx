@@ -398,7 +398,7 @@ export default function ContactPage() {
                 >
                   <span
                     aria-hidden="true"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-base font-semibold text-white"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-dark text-base font-semibold text-white"
                   >
                     {index + 1}
                   </span>
