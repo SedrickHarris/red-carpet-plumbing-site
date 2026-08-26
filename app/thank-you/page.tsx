@@ -57,7 +57,7 @@ export default function ThankYou() {
 
                 <Link
                   href="/"
-                  className="text-sm font-medium text-brand-muted underline-offset-4 transition-colors hover:text-brand-primary hover:underline"
+                  className="text-sm font-medium text-brand-muted underline-offset-4 transition-colors hover:text-brand-dark hover:underline"
                 >
                   Return to Home
                 </Link>
