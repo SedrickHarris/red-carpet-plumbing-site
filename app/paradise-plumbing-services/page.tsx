@@ -89,7 +89,6 @@ const PARADISE_FAQS: FaqItem[] = [
 // All 18 core service pages. Each links to a live route (built=true).
 // card.webp assets exist for the first five services; the rest use the
 // ServiceCard ServiceImagePlaceholder fallback (no image prop passed).
-// TODO-BATCH-PHASE4: /paradise/[service]/ service-location pages not yet built.
 // ServiceCards link to core service pages only.
 // ---------------------------------------------------------------------------
 type ServiceLink = {
@@ -469,7 +468,6 @@ export default function ParadisePlumbingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO-BATCH-PHASE4: /paradise/[service]/ service-location pages not yet built. */}
                 {/* ServiceCards link to core service pages only. */}
                 {/* Featured services: single row of four cards. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

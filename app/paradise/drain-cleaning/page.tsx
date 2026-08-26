@@ -110,8 +110,7 @@ const DRAIN_CLOG_CAUSES = [
 
 // Section 3 — drain services rendered as labeled card blocks (bold label +
 // description), same pattern as the established sibling drain pages. The grease
-// card carries a TODO-BATCH-6 note for the future /paradise/commercial-plumbing/
-// link; it links to the live core /commercial-plumbing/ page for now.
+// card links to the live core /commercial-plumbing/ page.
 const DRAIN_SERVICES: {
   label: string;
   body: string;
@@ -139,8 +138,6 @@ const DRAIN_SERVICES: {
     },
   },
   {
-    // TODO-BATCH-6: link "commercial plumbing" to /paradise/commercial-plumbing/
-    // when that page is built. For now this links to the live core page.
     label: "Restaurant and Commercial Grease Drain Service",
     body: "High-volume grease drain lines in restaurants and commercial kitchens near the Las Vegas Strip require specialized clearing. We provide grease line service for commercial properties throughout Paradise. For commercial plumbing, see our",
     link: { href: "/paradise/commercial-plumbing/", text: "commercial plumbing" },
@@ -487,8 +484,6 @@ export default function ParadiseDrainCleaningPage() {
 
               <SectionRevealItem className="mt-10">
                 <div className="space-y-6">
-                  {/* TODO-BATCH-6: link "commercial drain clearing" to */}
-                  {/* /paradise/commercial-plumbing/ when that page is built. */}
                   <article className="rounded-2xl bg-brand-surface-alt p-6 ring-1 ring-brand-surface-alt sm:p-8">
                     <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                       Strip Corridor Restaurant and Commercial Drains

@@ -92,8 +92,7 @@ const NORTH_LAS_VEGAS_FAQS: FaqItem[] = [
 // All 18 core service pages. Each links to a live route (built=true).
 // card.webp assets exist for the first five services; the rest use the
 // ServiceCard ServiceImagePlaceholder fallback (no image prop passed).
-// TODO-BATCH-PHASE4: /north-las-vegas/[service]/ service-location pages not
-// yet built. ServiceCards link to core service pages only.
+// ServiceCards link to core service pages only.
 // ---------------------------------------------------------------------------
 type ServiceLink = {
   title: string;
@@ -199,10 +198,6 @@ const NORTH_LAS_VEGAS_PILLS_ROW_TWO: ServicePill[] = [
   },
 ];
 
-// Plain-text area signals. "Aliante Area" renders as text only for now; its
-// dedicated hub page is not built yet.
-// TODO-BATCH: when /north-las-vegas/aliante-area-plumbing/ ships, promote
-// "Aliante Area" to a live <Link> pointing at that hub. Plain text until then.
 const NORTH_LAS_VEGAS_AREAS = [
   "Aliante Area",
   "Central North Las Vegas",
@@ -467,7 +462,6 @@ export default function NorthLasVegasPlumbingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO-BATCH-PHASE4: /north-las-vegas/[service]/ service-location pages not yet built. */}
                 {/* ServiceCards link to core service pages only. */}
                 {/* Featured services: single row of four cards. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

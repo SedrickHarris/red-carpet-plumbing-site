@@ -106,8 +106,8 @@ const HERO_TRUST_ITEMS = [
 ];
 
 // Section 3 — common emergency problems (bold label + body). The slab item links
-// the built core /slab-leak-detection-repair/ page; the Spring Valley slab page
-// is not built yet (TODO-BATCH-6). The gas item carries a scope FLAG.
+// the built core /slab-leak-detection-repair/ page. The gas item carries a
+// scope FLAG.
 const COMMON_PROBLEMS: {
   label: string;
   body: string;
@@ -118,8 +118,6 @@ const COMMON_PROBLEMS: {
     body: "Northern Spring Valley's Desert Inn and West Sahara corridor contains some of the most established residential neighborhoods in the Las Vegas Valley. Homes built along these corridors primarily in the 1970s through 1990s have plumbing systems that are now 30 to 50 years old. Many of these homes were built with galvanized steel supply lines that corrode from the inside out under Las Vegas Valley hard water conditions. As corrosion advances, galvanized pipe walls thin, water pressure drops, and eventually the pipe fails, sometimes suddenly. Homes in this corridor with original galvanized supply lines are at meaningful risk of pipe failure. Aging copper lines from the same era have also been thinned by decades of hard water mineral exposure and can develop pinhole leaks that escalate quickly.",
   },
   {
-    // TODO-BATCH-6: /spring-valley/slab-leak-detection-repair/ not yet built — do
-    // not link it. The live link below targets the built core service page.
     label: "Slab leaks in Spring Valley slab-foundation homes",
     body: "Spring Valley is built predominantly on concrete slab foundations, and the caliche and expansive clay soils beneath those slabs shift with temperature changes and seasonal rainfall. This soil movement stresses pipes embedded in and running beneath the slab over time. Combined with Las Vegas hard water mineral corrosion in older Spring Valley pipes, slab leaks are a recurring emergency in this community. Signs of a slab leak include warm spots on floors, unexplained water bill increases, and the sound of running water when all fixtures are off.",
     link: {

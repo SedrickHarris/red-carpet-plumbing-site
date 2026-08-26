@@ -92,10 +92,6 @@ const SERVICE_AREAS_FAQS: FaqItem[] = [
   },
 ];
 
-// ---------------------------------------------------------------------------
-// Tier 1 location cards. Every link is a forward route that does not yet
-// exist on disk; each <Link> ships with a TODO-BATCH-NEXT comment.
-// ---------------------------------------------------------------------------
 type LocationCardData = {
   name: string;
   image?: string;
@@ -460,7 +456,6 @@ export default function ServiceAreasPage() {
                       {card.description}
                     </p>
                     <Link
-                      // TODO-BATCH-NEXT: card.href location route not yet built
                       href={card.href}
                       className="mt-4 inline-flex items-center text-sm font-semibold text-brand-dark underline hover:text-brand-dark/70"
                     >

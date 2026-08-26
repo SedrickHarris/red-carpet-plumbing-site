@@ -95,9 +95,7 @@ const HERO_TRUST_ITEMS = [
 ];
 
 // Section 3 — why Spring Valley water heaters fail faster (bold label + body).
-// Hard water leads per the established pattern. The galvanized supply line item
-// references a TODO-BATCH-6 route (/spring-valley/re-piping/) as PLAIN TEXT
-// only — no anchor until that page is built.
+// Hard water leads per the established pattern.
 const WH_CAUSES = [
   {
     label: "Hard water mineral buildup",
@@ -116,8 +114,6 @@ const WH_CAUSES = [
     body: "Clark County plumbing code requires all water heater installations to include seismic bracing, with two heavy-gauge steel straps secured at code-specified heights. Red Carpet Plumbing installs all water heaters to current Clark County code including seismic bracing.",
   },
   {
-    // TODO-BATCH-6: /spring-valley/re-piping/ not yet built — the re-piping
-    // reference below renders as plain text only until the page exists.
     label: "Galvanized supply lines affecting water heater performance",
     body: "Older homes in the Desert Inn and West Sahara corridors built in the 1970s through 1990s may have original galvanized steel supply lines feeding the water heater. As galvanized pipe corrodes from the inside out, rust particles and sediment enter the water heater tank, accelerating internal corrosion and contaminating the anode rod. Rust-colored hot water, faster-than-normal sediment accumulation, and recurring heating element failures can all be signs of galvanized supply line deterioration affecting the water heater. Homes experiencing these symptoms may also be candidates for re-piping in Spring Valley alongside water heater replacement.",
   },
@@ -591,9 +587,6 @@ export default function SpringValleyWaterHeaterPage() {
                 </li>
               ))}
             </ul>
-            {/* TODO-BATCH-6: re-piping in Spring Valley renders as PLAIN TEXT */}
-            {/* until that route exists. Emergency plumbing, drain cleaning, and */}
-            {/* leak detection in Spring Valley are built anchors. */}
             <p className="mt-8 text-base leading-7 text-brand-dark/80">
               Red Carpet Plumbing provides full{" "}
               <Link

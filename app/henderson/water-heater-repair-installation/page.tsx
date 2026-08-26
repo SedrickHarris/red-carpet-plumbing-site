@@ -205,9 +205,7 @@ const HENDERSON_COMMUNITIES = [
 ];
 
 // Related services. /henderson/emergency-plumbing/ (Page 2) and
-// /henderson/drain-cleaning/ (Page 5) are live. TODO-BATCH-5: replace the
-// core-route links with the location-specific /henderson/[service]/ children
-// once built (leak-detection-repair, slab-leak-detection-repair, re-piping).
+// /henderson/drain-cleaning/ (Page 5) are live.
 const RELATED_SERVICES = [
   {
     label: "Emergency Plumbing in Henderson",
@@ -625,9 +623,6 @@ export default function HendersonWaterHeaterPage() {
         </section>
 
         {/* SECTION 10: RELATED SERVICES */}
-        {/* TODO-BATCH-5: replace core-route links with location-specific */}
-        {/* /henderson/[service]/ children once built (leak-detection-repair, */}
-        {/* slab-leak-detection-repair, re-piping). */}
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">

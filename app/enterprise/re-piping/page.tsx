@@ -604,7 +604,7 @@ export default function EnterpriseRePipingPage() {
                     Enterprise home has experienced multiple slab leaks on the
                     same aging copper line. For homes where slab leaks have
                     already been detected, see our slab leak detection and repair
-                    {/* TODO-BATCH-6: activate to /enterprise/slab-leak-detection-repair/ once confirmed built and QA-passed */}{" "}
+                    {" "}
                     page.
                   </p>
                   <p>
@@ -685,9 +685,8 @@ export default function EnterpriseRePipingPage() {
             {/* Mid-section emergency CTA */}
             <div className="mt-12 rounded-2xl border-l-4 border-brand-primary bg-white p-6 sm:p-8">
               <p className="text-base leading-7 text-brand-dark/80">
-                For emergency plumbing in Enterprise
-                {/* TODO-BATCH-6: activate to /enterprise/emergency-plumbing/ once confirmed built and QA-passed */}
-                , call Red Carpet Plumbing at{" "}
+                For emergency plumbing in Enterprise, call Red Carpet Plumbing
+                at{" "}
                 <a
                   href="tel:+17025679172"
                   className="font-semibold text-brand-dark underline hover:text-brand-dark/70"

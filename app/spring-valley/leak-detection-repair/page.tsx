@@ -107,12 +107,9 @@ const WARNING_SIGNS = [
 ];
 
 // Section 4 — what causes hidden leaks (bold label + body). Factor 1 (galvanized)
-// carries the plain-text "re-piping in Spring Valley" phrase (TODO-BATCH-6, not
-// yet linkable).
+// carries the plain-text "re-piping in Spring Valley" phrase.
 const LEAK_CAUSES = [
   {
-    // TODO-BATCH-6: /spring-valley/re-piping/ not yet built — the "re-piping in
-    // Spring Valley" phrase below is rendered as plain text (no anchor).
     label: "Galvanized steel pipe corrosion and failure",
     body: "Homes built along the Desert Inn and West Sahara corridors primarily in the 1970s through 1990s were often constructed with galvanized steel supply lines. Galvanized pipe corrodes from the inside out under Las Vegas Valley hard water conditions. As decades of corrosion build up on the pipe interior, the pipe wall thins progressively. Unlike copper pinhole leaks that often develop slowly and visibly, galvanized pipe failures can occur with relatively little warning once the pipe wall has been sufficiently thinned by internal corrosion. A leak from a galvanized supply line in an older Spring Valley home can release significant water inside a wall or beneath a slab before it becomes apparent. Homes with original galvanized supply lines that have experienced a first leak are strong candidates for re-piping in Spring Valley rather than continued spot repairs on a line that is corroded throughout.",
   },
@@ -131,9 +128,8 @@ const LEAK_CAUSES = [
 ];
 
 // Section 5 — leak detection and repair services (label + body, optional inline
-// link). The slab item links the built core /slab-leak-detection-repair/ page
-// (the Spring Valley-specific slab page is not built yet — TODO-BATCH-6, do not
-// link it). The camera item links the built core video inspection page.
+// link). The slab item links the built core /slab-leak-detection-repair/
+// page. The camera item links the built core video inspection page.
 const LEAK_SERVICES: {
   label: string;
   body: string;
@@ -148,8 +144,6 @@ const LEAK_SERVICES: {
     body: "When a galvanized supply line in an older Spring Valley home has developed a failure point, we locate the active leak using acoustic and pressure testing equipment, then advise on whether targeted repair or broader pipe replacement makes more sense given the overall condition of the galvanized system.",
   },
   {
-    // TODO-BATCH-6: /spring-valley/slab-leak-detection-repair/ not yet built — do
-    // not link it. The live link below targets the built core service page.
     label: "Slab leak detection",
     body: "Slab leaks occur when water or sewer pipes running beneath a home's concrete foundation develop cracks or holes. We locate slab leaks using acoustic sensors, thermal imaging, and pressure testing before any repair begins.",
     link: {

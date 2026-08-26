@@ -89,8 +89,7 @@ const HENDERSON_FAQS: FaqItem[] = [
 // All 18 core service pages. Each links to a live route (built=true).
 // card.webp assets exist for the first five services; the rest use the
 // ServiceCard ServiceImagePlaceholder fallback (no image prop passed).
-// TODO-BATCH-PHASE4: /henderson/[service]/ service-location pages not yet
-// built. ServiceCards link to core service pages only.
+// ServiceCards link to core service pages only.
 // ---------------------------------------------------------------------------
 type ServiceLink = {
   title: string;
@@ -196,11 +195,6 @@ const HENDERSON_PILLS_ROW_TWO: ServicePill[] = [
   },
 ];
 
-// Plain-text community signals. Green Valley and Lake Las Vegas render as text
-// only for now; their dedicated hub pages are not built yet.
-// TODO-BATCH: when /green-valley-plumbing-services/ and
-// /lake-las-vegas-plumbing-services/ ship, promote Green Valley and Lake Las
-// Vegas to live <Link> items pointing at those hubs.
 // TODO-BATCH-TIER2: /henderson/seven-hills-plumbing/ not yet built.
 const HENDERSON_COMMUNITIES = [
   "Green Valley",
@@ -467,7 +461,6 @@ export default function HendersonPlumbingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO-BATCH-PHASE4: /henderson/[service]/ service-location pages not yet built. */}
                 {/* ServiceCards link to core service pages only. */}
                 {/* Featured services: single row of four cards. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

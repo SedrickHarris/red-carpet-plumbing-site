@@ -83,12 +83,6 @@ const BOULDER_CITY_FAQS: FaqItem[] = [
 // All 18 core service pages. Each links to a live route (built=true).
 // card.webp assets exist for the first five services; the rest use the
 // ServiceCard ServiceImagePlaceholder fallback (no image prop passed).
-// TODO-BATCH-PHASE4: only three Boulder City service-location pages are
-// documented in the build list:
-//   /boulder-city/emergency-plumbing/ BUILT and ACTIVATED (links to location page)
-//   /boulder-city/drain-cleaning/ BUILT and ACTIVATED (links to location page)
-//   /boulder-city/water-heater-repair-installation/ BUILT and ACTIVATED (links to location page)
-//   /boulder-city/leak-detection-repair/ BUILT and ACTIVATED (links to location page)
 // Remaining ServiceCards link to core service pages only.
 // ---------------------------------------------------------------------------
 type ServiceLink = {
@@ -116,8 +110,6 @@ const BOULDER_CITY_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Re-piping services in Boulder City, NV",
   },
   {
-    // TODO-BATCH-PHASE4 ACTIVATED: /boulder-city/water-heater-repair-installation/
-    // is built and QA-passed; this card now links to the Boulder City location page.
     title: "Water Heater Repair and Installation",
     href: "/boulder-city/water-heater-repair-installation/",
     image:
@@ -137,20 +129,14 @@ const BOULDER_CITY_FEATURED_SERVICES: ServiceLink[] = [
 
 const BOULDER_CITY_PILLS_ROW_ONE: ServicePill[] = [
   {
-    // TODO-BATCH-PHASE4 ACTIVATED: /boulder-city/emergency-plumbing/ is built
-    // and QA-passed; this card now links to the Boulder City location page.
     title: "Emergency Plumbing",
     href: "/boulder-city/emergency-plumbing/",
   },
   {
-    // TODO-BATCH-PHASE4 ACTIVATED: /boulder-city/drain-cleaning/ is built and
-    // QA-passed; this card now links to the Boulder City location page.
     title: "Drain Cleaning",
     href: "/boulder-city/drain-cleaning/",
   },
   {
-    // TODO-BATCH-PHASE4 ACTIVATED: /boulder-city/leak-detection-repair/ is built
-    // and QA-passed; this card now links to the Boulder City location page.
     title: "Leak Detection and Repair",
     href: "/boulder-city/leak-detection-repair/",
   },
@@ -467,10 +453,6 @@ export default function BoulderCityPlumbingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO-BATCH-PHASE4: /boulder-city/emergency-plumbing/ BUILT and ACTIVATED */}
-                {/* TODO-BATCH-PHASE4: /boulder-city/drain-cleaning/ BUILT and ACTIVATED */}
-                {/* TODO-BATCH-PHASE4: /boulder-city/water-heater-repair-installation/ BUILT and ACTIVATED */}
-                {/* TODO-BATCH-PHASE4: /boulder-city/leak-detection-repair/ BUILT and ACTIVATED */}
                 {/* Remaining ServiceCards link to core service pages only. */}
                 {/* Featured services: single row of four cards. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
