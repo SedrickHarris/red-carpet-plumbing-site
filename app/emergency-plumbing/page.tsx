@@ -554,7 +554,7 @@ export default function EmergencyPlumbingPage() {
                     <li key={step.title} className="flex items-start gap-4">
                       <span
                         aria-hidden="true"
-                        className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full bg-brand-primary text-lg font-semibold text-white"
+                        className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full bg-brand-dark text-lg font-semibold text-white"
                       >
                         {index + 1}
                       </span>
