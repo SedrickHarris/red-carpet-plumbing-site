@@ -560,7 +560,7 @@ export default function PlumbingServicesPage() {
                   key={label}
                   className="flex flex-col items-center gap-3 rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-brand-surface-alt"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-primary/10 text-brand-primary">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-dark/10 text-brand-dark">
                     <CheckIcon className="h-6 w-6" />
                   </div>
                   <span className="text-base font-semibold text-brand-dark">

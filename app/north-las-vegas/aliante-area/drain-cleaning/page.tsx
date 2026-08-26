@@ -458,7 +458,7 @@ export default function AlianteDrainCleaningPage() {
                     <li key={item} className="flex items-start gap-3">
                       <span
                         aria-hidden="true"
-                        className="mt-1 text-brand-primary"
+                        className="mt-1 text-brand-dark"
                       >
                         &rarr;
                       </span>
@@ -479,7 +479,7 @@ export default function AlianteDrainCleaningPage() {
                     <li key={item} className="flex items-start gap-3">
                       <span
                         aria-hidden="true"
-                        className="mt-1 text-brand-primary"
+                        className="mt-1 text-brand-dark"
                       >
                         &rarr;
                       </span>
