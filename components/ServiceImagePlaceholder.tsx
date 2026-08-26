@@ -3,11 +3,16 @@ type ServiceImagePlaceholderProps = {
 };
 
 /**
- * Decorative branded placeholder used inside service-card image slots when
- * a real image asset is not available yet. Renders as a neutral surface
- * with a low-contrast wrench glyph and a single brand hairline at the
- * bottom edge, so a grid of placeholders reads as quiet structure rather
- * than a wall of red.
+ * Decorative placeholder used inside service-card image slots when a real
+ * image asset is not available yet. Renders as a neutral surface with a
+ * low-contrast wrench glyph and a single hairline at the bottom edge, so a
+ * grid of placeholders reads as quiet structure rather than a repeated
+ * accent.
+ *
+ * The hairline was brand red at 40% until the accent-reduction pass. The
+ * replacement opacity was picked to hold the same visual weight, 2.13:1
+ * against the surface it sits on versus 2.11:1 before, so the tile looks
+ * unchanged and only the color is gone.
  *
  * Always rendered with `aria-hidden="true"` — the card heading and the
  * card description are the accessible name for screen-reader users.
@@ -18,7 +23,7 @@ export function ServiceImagePlaceholder({
   return (
     <div
       aria-hidden="true"
-      className={`flex h-full w-full items-center justify-center border-b border-brand-primary/40 bg-brand-surface-alt ${className}`}
+      className={`flex h-full w-full items-center justify-center border-b border-brand-dark/35 bg-brand-surface-alt ${className}`}
     >
       <svg
         aria-hidden="true"
