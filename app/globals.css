@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+/* Tailwind v4 auto-detects sources from the project root, excluding only what
+   .gitignore covers. Both of these are documentation trees, not templates, and
+   they quote class names while describing UI work: the Site OS batch reports
+   under docs/site-os/reports/ record before-and-after class strings, and the
+   design skills under .claude/skills/ quote examples. Without these two lines
+   every class name ever mentioned in prose is emitted as real CSS, including
+   utilities no component uses any more.
+
+   Paths resolve relative to this stylesheet rather than the project root, so
+   both need the ../ prefix to escape app/. */
+@source not "../docs";
+@source not "../.claude";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
