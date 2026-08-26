@@ -406,10 +406,6 @@ export default function SummerlinDrainCleaningPage() {
         </section>
 
         {/* SECTION 3: WHY DRAINS CLOG FASTER IN SUMMERLIN */}
-        {/* TODO-BATCH-6: when built, link the tankless callout to */}
-        {/* /summerlin/water-heater-repair-installation/, and the aging-copper */}
-        {/* callout to /summerlin/slab-leak-detection-repair/ and */}
-        {/* /summerlin/re-piping/. Rendered as plain text only until then. */}
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-10 lg:pb-24">
             <SectionReveal>

@@ -84,8 +84,7 @@ const LAS_VEGAS_FAQS: FaqItem[] = [
 // Image card.webp assets exist for the first five services; the remaining
 // services render the ServiceImagePlaceholder via ServiceCard's built-in
 // fallback (no image prop passed).
-// TODO-BATCH-PHASE4: /las-vegas/[service]/ service-location pages not yet
-// built. ServiceCards link to core service pages only. Do not add
+// ServiceCards link to core service pages only. Do not add
 // /las-vegas/ prefixed hrefs here.
 // ---------------------------------------------------------------------------
 type ServiceLink = {
@@ -461,7 +460,6 @@ export default function LasVegasPlumbingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO-BATCH-PHASE4: /las-vegas/[service]/ service-location pages not yet built. */}
                 {/* ServiceCards link to core service pages only. Do not add /las-vegas/ prefixed hrefs. */}
                 {/* Featured services: single row of four cards. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

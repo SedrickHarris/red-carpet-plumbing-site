@@ -168,7 +168,7 @@ const EMERGENCY_STEPS = [
 ];
 
 // Section 6 — related services. Built items render as <Link>; built:false items
-// render as plain text with the TODO-BATCH-6 comment inline (no anchor tag).
+// render as plain text (no anchor tag).
 const RELATED_SERVICES = [
   {
     label: "Boulder City Plumbing Services",
@@ -176,15 +176,11 @@ const RELATED_SERVICES = [
     built: true,
   },
   {
-    // TODO-BATCH-6 ACTIVATED: /boulder-city/drain-cleaning/ is built and
-    // QA-passed; this item now renders as a live link.
     label: "Drain Cleaning in Boulder City",
     href: "/boulder-city/drain-cleaning/",
     built: true,
   },
   {
-    // TODO-BATCH-6 ACTIVATED: /boulder-city/water-heater-repair-installation/ is
-    // built and QA-passed; this item now renders as a live link.
     label: "Water Heater Repair in Boulder City",
     href: "/boulder-city/water-heater-repair-installation/",
     built: true,
@@ -596,7 +592,6 @@ export default function BoulderCityEmergencyPlumbingPage() {
                     </Link>
                   </li>
                 ) : (
-                  // TODO-BATCH-6: activate to {s.href} once confirmed built and QA-passed
                   <li key={s.label}>
                     <span className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark/70 ring-1 ring-brand-surface-alt">
                       <span aria-hidden="true" className="text-brand-dark">

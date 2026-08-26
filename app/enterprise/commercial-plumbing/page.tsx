@@ -530,9 +530,8 @@ export default function EnterpriseCommercialPlumbingPage() {
             {/* Mid-section emergency CTA */}
             <div className="mt-12 rounded-2xl border-l-4 border-brand-primary bg-white p-6 sm:p-8">
               <p className="text-base leading-7 text-brand-dark/80">
-                For commercial plumbing emergencies in Enterprise
-                {/* TODO-BATCH-6: activate to /enterprise/emergency-plumbing/ once confirmed built and QA-passed */}
-                , call Red Carpet Plumbing at{" "}
+                For commercial plumbing emergencies in Enterprise, call Red Carpet
+                Plumbing at{" "}
                 <a
                   href="tel:+17025679172"
                   className="font-semibold text-brand-dark underline hover:text-brand-dark/70"

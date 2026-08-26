@@ -187,9 +187,7 @@ const NLV_AREAS = [
 ];
 
 // Related services. /north-las-vegas/emergency-plumbing/ is live (Batch 5, Page
-// 3). TODO-BATCH-5: replace the core-route links with the location-specific
-// /north-las-vegas/[service]/ children once those pages are built
-// (water-heater-repair-installation, leak-detection-repair).
+// 3).
 const RELATED_SERVICES = [
   {
     label: "Emergency Plumbing in North Las Vegas",
@@ -596,9 +594,6 @@ export default function NorthLasVegasDrainCleaningPage() {
         </section>
 
         {/* SECTION 10: RELATED SERVICES */}
-        {/* TODO-BATCH-5: replace core-route links with location-specific */}
-        {/* /north-las-vegas/[service]/ children once built */}
-        {/* (water-heater-repair-installation, leak-detection-repair). */}
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">

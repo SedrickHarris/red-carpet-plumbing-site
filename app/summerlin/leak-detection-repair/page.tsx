@@ -102,7 +102,7 @@ const WARNING_SIGNS = [
 ];
 
 // Section 4 — what causes hidden leaks (bold label + body). Factor 4 carries the
-// plain-text "re-piping in Summerlin" phrase (TODO-BATCH-6, not yet linkable).
+// plain-text "re-piping in Summerlin" phrase.
 const LEAK_CAUSES = [
   {
     label: "Hard water mineral corrosion",
@@ -117,17 +117,14 @@ const LEAK_CAUSES = [
     body: "Most Summerlin homes operate on a closed-loop plumbing system due to backflow preventers at the street meter. Thermal expansion from water heating and pressure spikes in closed systems create repeated stress on pipe joints and connections over years of cycling. Homes without properly sized thermal expansion tanks are particularly vulnerable to this type of fatigue failure.",
   },
   {
-    // TODO-BATCH-6: /summerlin/re-piping/ not yet built — the "re-piping in
-    // Summerlin" phrase below is rendered as plain text (no anchor).
     label: "Aging pre-2000 plumbing in original villages",
     body: "Homes built in the original Summerlin western villages during the 1990s have plumbing systems that are now 25 to 35 years old. Copper supply lines in this age range, combined with Las Vegas hard water and caliche soil conditions, are at a stage where leak risk is meaningful. Homeowners in these original communities should be aware of the warning signs listed above. Homes that have already had one or more leak events may also be candidates for re-piping in Summerlin.",
   },
 ];
 
 // Section 5 — leak detection and repair services (label + body, optional inline
-// link). The slab item links the built core /slab-leak-detection-repair/ page;
-// the Summerlin-specific slab page is not built yet (TODO-BATCH-6). The gas line
-// item carries a scope FLAG.
+// link). The slab item links the built core /slab-leak-detection-repair/
+// page. The gas line item carries a scope FLAG.
 const LEAK_SERVICES: {
   label: string;
   body: string;
@@ -138,8 +135,6 @@ const LEAK_SERVICES: {
     body: "We use professional electronic detection equipment with acoustic sensors to identify the sound of pressurized water escaping from pipes through walls, floors, and underground. This allows us to pinpoint leak locations precisely without opening up your Summerlin home.",
   },
   {
-    // TODO-BATCH-6: /summerlin/slab-leak-detection-repair/ not yet built — do not
-    // link it. The live link below targets the built core service page.
     label: "Slab leak detection",
     body: "Slab leaks occur when water or sewer pipes running beneath a home's concrete foundation develop cracks or holes. They are among the most serious plumbing problems in Las Vegas due to hard water corrosion and desert soil movement. We locate slab leaks using acoustic sensors, thermal imaging, and pressure testing before any repair begins.",
     link: {

@@ -181,9 +181,6 @@ const LV_NEIGHBORHOODS = [
 ];
 
 // Related services. /las-vegas/emergency-plumbing/ is live (Batch 5, Page 1).
-// TODO-BATCH-5: replace the core-route links with the location-specific
-// /las-vegas/[service]/ children once those pages are built
-// (water-heater-repair-installation, leak-detection-repair, sewer-line-services).
 const RELATED_SERVICES = [
   { label: "Emergency Plumbing in Las Vegas", href: "/las-vegas/emergency-plumbing/" },
   {
@@ -583,9 +580,6 @@ export default function LasVegasDrainCleaningPage() {
         </section>
 
         {/* SECTION 10: RELATED SERVICES */}
-        {/* TODO-BATCH-5: replace core-route links with location-specific */}
-        {/* /las-vegas/[service]/ children once built (water-heater-repair-installation, */}
-        {/* leak-detection-repair, sewer-line-services). */}
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">

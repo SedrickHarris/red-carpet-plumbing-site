@@ -146,8 +146,6 @@ const NLV_LEAK_CAUSES = [
 ];
 
 // Service items. Card 4 (slab) links to the built core slab page.
-// TODO-BATCH-5: when /north-las-vegas/slab-leak-detection-repair/ is built,
-// switch the slab card link to that location-specific child.
 const LEAK_SERVICES: {
   label: string;
   body: string;
@@ -496,8 +494,6 @@ export default function NorthLasVegasLeakDetectionPage() {
                 repair approach.
               </p>
             </div>
-            {/* TODO-BATCH-5: when /north-las-vegas/slab-leak-detection-repair/ is */}
-            {/* built, switch the Slab Leak Detection card link to that child route. */}
             <ul className="mt-10 space-y-5">
               {LEAK_SERVICES.map((s) => (
                 <li

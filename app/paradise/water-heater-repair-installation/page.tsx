@@ -650,8 +650,6 @@ export default function ParadiseWaterHeaterPage() {
               ))}
             </ul>
 
-            {/* TODO-BATCH-6: add a "leak detection in Paradise" link to */}
-            {/* /paradise/leak-detection-repair/ in this closing paragraph when built. */}
             <p className="mt-8 text-base leading-7 text-white/80">
               If your neighborhood is not listed, call (702) 567-9172 to confirm
               coverage. For broader Las Vegas Valley water heater service, see{" "}

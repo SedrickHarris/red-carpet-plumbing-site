@@ -118,9 +118,6 @@ const WH_CAUSES = [
     body: "Nevada is one of the most seismically active states in the country. Clark County plumbing code requires all water heater installations to include seismic bracing, with two heavy-gauge steel straps secured at code-specified heights. Red Carpet Plumbing installs all water heaters to current Clark County code including seismic bracing.",
   },
   {
-    // TODO-BATCH-6: when built, link the original-village callout to
-    // /summerlin/slab-leak-detection-repair/ and /summerlin/re-piping/.
-    // Rendered as plain text only until then.
     label: "Two-vintage service cycles in Summerlin",
     body: "Original Summerlin village homes built in the 1990s in areas including The Hills, The Trails, The Arbors, and The Canyons now have water heaters that are at or past their typical service life. Tank water heaters in Las Vegas typically last 8 to 12 years under hard water conditions, meaning many original or first-replacement units in these neighborhoods are strong replacement candidates. In newer Summerlin South homes and premium village communities built from the mid-2000s onward, tankless water heaters are common. These units require annual descaling to remove hard water mineral deposits from the heat exchanger, and homes that have not had regular descaling service may already have reduced efficiency or restricted flow.",
   },

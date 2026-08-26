@@ -165,10 +165,7 @@ const NLV_AREAS = [
   "Losee Road Area",
 ];
 
-// Related core service pages (live routes). TODO-BATCH-5: replace with the
-// location-specific /north-las-vegas/[service]/ children once those pages are
-// built (drain-cleaning, leak-detection-repair, water-heater-repair-installation,
-// slab-leak-detection-repair).
+// Related core service pages (live routes).
 const RELATED_SERVICES = [
   { label: "Drain Cleaning", href: "/north-las-vegas/drain-cleaning/" },
   { label: "Leak Detection and Repair", href: "/north-las-vegas/leak-detection-repair/" },
@@ -549,10 +546,6 @@ export default function NorthLasVegasEmergencyPlumbingPage() {
         </section>
 
         {/* SECTION 10: RELATED SERVICES */}
-        {/* TODO-BATCH-5: replace these core-service links with the */}
-        {/* location-specific /north-las-vegas/[service]/ children once built */}
-        {/* (drain-cleaning, leak-detection-repair, water-heater-repair-installation, */}
-        {/* slab-leak-detection-repair). */}
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">

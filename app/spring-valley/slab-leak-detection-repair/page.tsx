@@ -144,9 +144,8 @@ const SLAB_CAUSES = [
 
 // Section 5 — repair options (H3 + body, optional inline link). Rendered as three
 // visible H3 sections per guardrail 11. Galvanized context adjusts the spot
-// repair and rerouting guidance. Both inline links target built CORE service
-// pages; the Spring Valley-specific re-piping page is not built yet (TODO-BATCH-6,
-// do not link it).
+// repair and rerouting guidance. Both inline links target built CORE
+// service pages.
 const REPAIR_OPTIONS: {
   heading: string;
   body: string;

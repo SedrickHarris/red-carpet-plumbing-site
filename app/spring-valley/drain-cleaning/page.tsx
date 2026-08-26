@@ -91,10 +91,7 @@ const HERO_TRUST_ITEMS = [
 ];
 
 // Section 3 — why Spring Valley drains clog (bold label + description). Hard
-// water leads per the established pattern. The galvanized and caliche items
-// reference TODO-BATCH-6 routes (/spring-valley/re-piping/,
-// /spring-valley/slab-leak-detection-repair/) as PLAIN TEXT only — no anchors
-// until those pages are built.
+// water leads per the established pattern.
 const SV_DRAIN_CAUSES = [
   {
     label: "Hard water mineral bonding",
@@ -418,10 +415,6 @@ export default function SpringValleyDrainCleaningPage() {
         </section>
 
         {/* SECTION 3: WHY DRAINS CLOG FASTER IN SPRING VALLEY */}
-        {/* TODO-BATCH-6: when built, link the galvanized callout to */}
-        {/* /spring-valley/re-piping/ and the caliche callout to */}
-        {/* /spring-valley/slab-leak-detection-repair/. Rendered as plain text */}
-        {/* only until then. */}
         <section className="bg-white">
           <div className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-10 lg:pb-24">
             <SectionReveal>
@@ -555,9 +548,6 @@ export default function SpringValleyDrainCleaningPage() {
                 </li>
               ))}
             </ul>
-            {/* TODO-BATCH-6: re-piping in Spring Valley renders as PLAIN TEXT */}
-            {/* until that route exists. Emergency plumbing, water heater repair, */}
-            {/* and leak detection in Spring Valley are built anchors. */}
             <p className="mt-8 text-base leading-7 text-brand-dark/80">
               Red Carpet Plumbing provides full{" "}
               <Link

@@ -164,10 +164,7 @@ const HENDERSON_COMMUNITIES = [
   "Whitney Ranch",
 ];
 
-// Related core service pages (live routes). TODO-BATCH-5: replace with the
-// location-specific /henderson/[service]/ children once those pages are built
-// (drain-cleaning, leak-detection-repair, water-heater-repair-installation,
-// slab-leak-detection-repair).
+// Related core service pages (live routes).
 const RELATED_SERVICES = [
   { label: "Drain Cleaning", href: "/henderson/drain-cleaning/" },
   { label: "Leak Detection and Repair", href: "/henderson/leak-detection-repair/" },
@@ -549,10 +546,6 @@ export default function HendersonEmergencyPlumbingPage() {
         </section>
 
         {/* SECTION 10: RELATED SERVICES */}
-        {/* TODO-BATCH-5: replace these core-service links with the */}
-        {/* location-specific /henderson/[service]/ children once built */}
-        {/* (drain-cleaning, leak-detection-repair, water-heater-repair-installation, */}
-        {/* slab-leak-detection-repair). */}
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">

@@ -462,7 +462,6 @@ export default function ParadiseEmergencyPlumbingPage() {
                     </p>
                   </article>
 
-                  {/* TODO-BATCH-6: link "commercial plumbing" to /paradise/commercial-plumbing/ when that page is built. */}
                   <article className="rounded-2xl bg-brand-surface-alt p-6 ring-1 ring-brand-surface-alt sm:p-8">
                     <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                       Strip Corridor and Commercial Properties
@@ -553,8 +552,6 @@ export default function ParadiseEmergencyPlumbingPage() {
                 </li>
               ))}
             </ul>
-            {/* TODO-BATCH-6: add a "drain cleaning in Paradise" link to */}
-            {/* /paradise/drain-cleaning/ here (or in the FAQ) when that page is built. */}
             <p className="mt-8 text-base leading-7 text-brand-dark/80">
               For{" "}
               <Link

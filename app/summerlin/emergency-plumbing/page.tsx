@@ -475,8 +475,6 @@ export default function SummerlinEmergencyPlumbingPage() {
                     </p>
                   </article>
 
-                  {/* TODO-BATCH-6: link "water heater repair in Summerlin" to */}
-                  {/* /summerlin/water-heater-repair-installation/ when that page is built. */}
                   <article className="rounded-2xl bg-brand-surface-alt p-6 ring-1 ring-brand-surface-alt sm:p-8">
                     <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                       Tankless Water Heater Failures in Newer Summerlin South
@@ -566,8 +564,6 @@ export default function SummerlinEmergencyPlumbingPage() {
                 </li>
               ))}
             </ul>
-            {/* TODO-BATCH-6: add a "drain cleaning in Summerlin" link to */}
-            {/* /summerlin/drain-cleaning/ here (or in the FAQ) when that page is built. */}
             <p className="mt-8 text-base leading-7 text-brand-dark/80">
               For{" "}
               <Link
