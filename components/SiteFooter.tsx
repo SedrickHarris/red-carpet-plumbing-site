@@ -63,7 +63,7 @@ function FooterItem({ link }: { link: FooterLink }) {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-brand-charcoal text-white">
+    <footer className="border-t border-white/30 bg-brand-charcoal text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10 xl:px-12">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
