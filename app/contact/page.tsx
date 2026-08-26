@@ -299,7 +299,7 @@ export default function ContactPage() {
                 <dd className="mt-3 text-base text-brand-dark/80">
                   <a
                     href="tel:+17025679172"
-                    className="font-medium text-brand-dark hover:text-brand-primary"
+                    className="font-medium text-brand-dark hover:text-brand-dark/70"
                   >
                     (702) 567-9172
                   </a>
@@ -315,7 +315,7 @@ export default function ContactPage() {
                 <dd className="mt-3 text-base text-brand-dark/80">
                   <a
                     href="mailto:info@redcarpetplumbing.com"
-                    className="font-medium text-brand-dark hover:text-brand-primary"
+                    className="font-medium text-brand-dark hover:text-brand-dark/70"
                   >
                     info@redcarpetplumbing.com
                   </a>
@@ -339,7 +339,7 @@ export default function ContactPage() {
                     24/7 emergency service available, call{" "}
                     <a
                       href="tel:+17025679172"
-                      className="font-medium text-brand-dark hover:text-brand-primary"
+                      className="font-medium text-brand-dark hover:text-brand-dark/70"
                     >
                       (702) 567-9172
                     </a>
@@ -358,7 +358,7 @@ export default function ContactPage() {
                     href="https://www.google.com/maps/place/3330+W+Hacienda+Ave+%23405,+Las+Vegas,+NV+89118/@36.0943375,-115.1870907,17z/data=!3m1!4b1!4m6!3m5!1s0x80c8c5d697faaaab:0x3db74ab4815ec72a!8m2!3d36.0943375!4d-115.1845158!16s%2Fg%2F11nynzwdy4?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block transition-colors hover:text-brand-primary hover:underline"
+                    className="block transition-colors hover:text-brand-dark hover:underline"
                     aria-label="Get directions to Red Carpet Plumbing on Google Maps"
                   >
                     <span className="block">3330 W. Hacienda Ave Ste. 405</span>

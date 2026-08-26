@@ -39,7 +39,7 @@ export function ServiceCard({
           {built ? (
             <Link
               href={href}
-              className="transition-colors hover:text-brand-primary"
+              className="transition-colors hover:text-brand-dark/70"
             >
               {title}
             </Link>
@@ -53,7 +53,7 @@ export function ServiceCard({
         {built ? (
           <Link
             href={href}
-            className="mt-4 inline-flex items-center text-sm font-semibold text-brand-primary transition-colors hover:text-brand-primary-hover"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-brand-dark transition-colors hover:text-brand-dark/70"
           >
             Learn More
             <span aria-hidden="true" className="ml-1">
