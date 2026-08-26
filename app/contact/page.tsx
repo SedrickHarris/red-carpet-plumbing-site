@@ -475,9 +475,9 @@ export default function ContactPage() {
                 <li key={service.href}>
                   <Link
                     href={service.href}
-                    className="flex items-center gap-2 rounded-lg bg-white px-4 py-3 text-base font-medium text-brand-dark shadow-sm ring-1 ring-brand-surface-alt transition hover:text-brand-primary hover:shadow-md"
+                    className="flex items-center gap-2 rounded-lg bg-white px-4 py-3 text-base font-medium text-brand-dark shadow-sm ring-1 ring-brand-surface-alt transition hover:text-brand-dark/70 hover:shadow-md"
                   >
-                    <span aria-hidden="true" className="text-brand-primary">
+                    <span aria-hidden="true" className="text-brand-dark">
                       →
                     </span>
                     {service.label}

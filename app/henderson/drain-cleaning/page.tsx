@@ -617,9 +617,9 @@ export default function HendersonDrainCleaningPage() {
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark ring-1 ring-brand-surface-alt transition hover:text-brand-primary hover:shadow-md"
+                    className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark ring-1 ring-brand-surface-alt transition hover:text-brand-dark/70 hover:shadow-md"
                   >
-                    <span aria-hidden="true" className="text-brand-primary">
+                    <span aria-hidden="true" className="text-brand-dark">
                       &rarr;
                     </span>
                     {s.label}

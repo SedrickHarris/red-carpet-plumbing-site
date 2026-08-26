@@ -574,7 +574,7 @@ export default function EnterpriseWaterHeaterPage() {
                   <li key={r.href}>
                     <Link
                       href={r.href}
-                      className="inline-flex rounded-lg bg-brand-surface-alt px-4 py-2 text-sm font-semibold text-brand-primary shadow-sm ring-1 ring-brand-surface-alt hover:text-brand-primary-hover"
+                      className="inline-flex rounded-lg bg-brand-surface-alt px-4 py-2 text-sm font-semibold text-brand-dark shadow-sm ring-1 ring-brand-surface-alt hover:text-brand-dark/70"
                     >
                       {r.text}
                     </Link>
