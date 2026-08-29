@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-29T00:15:13.432Z",
-  "routeCount": 110,
+  "generatedAt": "2026-08-29T02:58:45.591Z",
+  "routeCount": 111,
   "routes": [
     {
       "route": "/",
@@ -3546,6 +3546,52 @@
         "LocalBusiness"
       ],
       "wordEstimate": 750
+    },
+    {
+      "route": "/north-las-vegas/sewer-line-services",
+      "sourceFile": "app/north-las-vegas/sewer-line-services/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Sewer Line Services in North Las Vegas, NV | Red Carpet Plumbing"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Dealing with a Sewer Line Problem in North Las Vegas?",
+        "Sewer Line Issues Common to North Las Vegas Homes",
+        "What to Expect: Sewer Line Repair, Replacement, and Trenchless Options",
+        "Sewer Line Services We Provide in North Las Vegas",
+        "How We Diagnose and Fix Sewer Line Problems",
+        "Sewer Line Problem in North Las Vegas?",
+        "Why North Las Vegas Homeowners Choose Red Carpet Plumbing",
+        "Serving North Las Vegas and the Surrounding Area",
+        "Sewer Line Service FAQs North Las Vegas"
+      ],
+      "internalHrefs": [
+        "/north-las-vegas/emergency-plumbing/",
+        "/trenchless-piping/",
+        "/sewer-line-services/",
+        "/commercial-plumbing/",
+        "/contact/",
+        "/north-las-vegas/aliante-area-plumbing/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "PostalCodeSpecification",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "AggregateRating"
+      ],
+      "wordEstimate": 853
     },
     {
       "route": "/north-las-vegas/slab-leak-detection-repair",
