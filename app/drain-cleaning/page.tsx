@@ -580,8 +580,8 @@ export default function DrainCleaningPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
-                  Slow Drain or Clogged Pipe
-                  <br className="hidden sm:block" /> in Las Vegas?
+                  Slow Drain
+                  <br className="hidden sm:block" /> or Clogged Pipe in Las Vegas?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing provides professional drain cleaning
@@ -705,7 +705,8 @@ export default function DrainCleaningPage() {
         <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
             <h2 className="text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Ready to Schedule Drain Cleaning
+              Ready to Schedule
+              <br className="hidden sm:block" /> Drain Cleaning
               <br className="hidden sm:block" /> in Las Vegas?
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">

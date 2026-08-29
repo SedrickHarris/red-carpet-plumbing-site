@@ -724,8 +724,9 @@ export default function CommercialPlumbingPage() {
         <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
             <h2 className="text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Ready to Work With a Licensed
-              <br className="hidden sm:block" /> Las Vegas Commercial Plumber?
+              Ready to Work
+              <br className="hidden sm:block" /> With a Licensed Las Vegas
+              <br className="hidden sm:block" /> Commercial Plumber?
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
               Call Red Carpet Plumbing. Licensed, local, and available for

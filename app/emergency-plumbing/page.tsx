@@ -710,7 +710,8 @@ export default function EmergencyPlumbingPage() {
           background="red"
           headline={
             <>
-              Ready for Emergency Plumbing Help
+              Ready for
+              <br className="hidden sm:block" /> Emergency Plumbing Help
               <br className="hidden sm:block" /> in Las Vegas?
             </>
           }

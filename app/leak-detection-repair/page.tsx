@@ -368,7 +368,8 @@ export default function LeakDetectionAndRepairPage() {
           headingLevel="h1"
           headline={
             <>
-              Leak Detection and Repair
+              Leak Detection
+              <br className="hidden sm:block" /> and Repair
               <br className="hidden sm:block" /> in Las Vegas, NV
             </>
           }
@@ -487,8 +488,8 @@ export default function LeakDetectionAndRepairPage() {
               <SectionRevealItem>
                 <div className="text-left">
                   <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                    Why Las Vegas Homes Are Prone
-                    <br className="hidden sm:block" /> to Hidden Leaks
+                    Why Las Vegas Homes
+                    <br className="hidden sm:block" /> Are Prone to Hidden Leaks
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                     Las Vegas plumbing faces conditions that produce hidden
@@ -711,7 +712,8 @@ export default function LeakDetectionAndRepairPage() {
         <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
             <h2 className="text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Ready to Schedule Leak Detection
+              Ready to Schedule
+              <br className="hidden sm:block" /> Leak Detection
               <br className="hidden sm:block" /> in Las Vegas?
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">

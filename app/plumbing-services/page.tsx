@@ -583,7 +583,7 @@ export default function PlumbingServicesPage() {
         {/* SECTION 11: FINAL CTA */}
         <CTASection
           background="red"
-          headline={<>Ready to Schedule Plumbing Service<br />in Las Vegas?</>}
+          headline={<>Ready to Schedule<br />Plumbing Service<br />in Las Vegas?</>}
           body="Contact Red Carpet Plumbing today to request service, get a free quote, or ask about plumbing in your area."
           primaryCTA={{
             label: "Request Plumbing Service",
