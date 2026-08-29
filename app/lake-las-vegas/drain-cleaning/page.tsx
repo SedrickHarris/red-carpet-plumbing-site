@@ -146,6 +146,10 @@ const LLV_DRAIN_FAQS = [
     q: "Who handles plumbing permits in Lake Las Vegas?",
     a: "Plumbing permits in Lake Las Vegas are issued by the City of Henderson, which is the governing jurisdiction for the Lake Las Vegas community. Red Carpet Plumbing holds Nevada Contractor License #0048585A and works within all applicable City of Henderson permit and inspection requirements.",
   },
+  {
+    q: "Do you offer same-day drain cleaning service in Lake Las Vegas?",
+    a: "Same-day drain cleaning service is available in Lake Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
