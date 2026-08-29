@@ -71,6 +71,11 @@ const REPIPING_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides repiping services throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
+  {
+    question: "Do you offer same-day repiping service in Las Vegas?",
+    answer:
+      "Same-day repiping service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const REPIPING_SIGNS = [

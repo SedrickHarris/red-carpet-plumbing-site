@@ -71,6 +71,11 @@ const PRESSURE_FAQS = [
     answer:
       "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
+  {
+    question: "Do you offer same-day pressure regulator service in Las Vegas?",
+    answer:
+      "Same-day pressure regulator service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const PRESSURE_WARNING_SIGNS = [

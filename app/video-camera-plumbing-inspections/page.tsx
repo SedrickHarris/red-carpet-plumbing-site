@@ -71,6 +71,11 @@ const CAMERA_FAQS = [
     answer:
       "Red Carpet Plumbing provides video camera plumbing inspections throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
+  {
+    question: "Do you offer same-day camera inspection service in Las Vegas?",
+    answer:
+      "Same-day camera inspection service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const CAMERA_USE_CASES = [
