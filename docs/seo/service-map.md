@@ -8,7 +8,7 @@ Leak Detection and Repair | Las Vegas, Henderson, North Las Vegas, Paradise, Sum
 Water Heater Repair and Installation | Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, Aliante | —
 Slab Leak Detection and Repair | Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, Aliante | —
 Sewer Line Services | Las Vegas, Henderson | North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, Aliante
-Re-Piping | Las Vegas | Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, Aliante
+Repiping | Las Vegas | Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, Aliante
 Gas Line Plumbing | Las Vegas, Henderson, Paradise | North Las Vegas, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, Aliante
 Commercial Plumbing | Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise | Boulder City, Green Valley, Lake Las Vegas, Aliante
 Toilet Repair and Installation | Las Vegas | Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, Aliante

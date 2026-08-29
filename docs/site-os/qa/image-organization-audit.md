@@ -57,7 +57,7 @@
 | services/Garbage Disposal/ | 6 | garbage-disposal-repair-installation | mapped |
 | services/Natural Gas/ | 5 | gas-line-plumbing | mapped |
 | services/Plumbing Fixtures/ | 6 | plumbing-fixture-repair-replacement-installation | mapped (NEW — added by override) |
-| services/Re-Piping/ | 6 | re-piping | mapped |
+| services/Re-Piping/ | 6 | repiping | mapped |
 | services/Sink Repair Services/ | 6 | faucet-sink-repair-installation | mapped |
 | services/Slab Leak/ | 6 | slab-leak-detection-repair | mapped |
 | services/Toilet Repair/ | 6 | toilet-repair-installation | mapped |
