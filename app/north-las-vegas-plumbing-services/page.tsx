@@ -106,7 +106,7 @@ type ServiceLink = {
 const NORTH_LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
   {
     title: "Sewer Line Services",
-    href: "/sewer-line-services/",
+    href: "/north-las-vegas/sewer-line-services/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp",
     imageAlt: "Sewer line services in North Las Vegas",
