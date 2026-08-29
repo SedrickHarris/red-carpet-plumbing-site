@@ -112,7 +112,7 @@ const PARADISE_FEATURED_SERVICES: ServiceLink[] = [
     title: "Repiping",
     href: "/repiping/",
     image:
-      "/images/services/re-piping/hero.webp",
+      "/images/services/repiping/hero.webp",
     imageAlt: "Repiping services in Paradise, NV",
   },
   {

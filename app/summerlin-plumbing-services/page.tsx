@@ -106,7 +106,7 @@ const SUMMERLIN_FEATURED_SERVICES: ServiceLink[] = [
     title: "Repiping",
     href: "/summerlin/repiping/",
     image:
-      "/images/services/re-piping/hero.webp",
+      "/images/services/repiping/hero.webp",
     imageAlt: "Repiping services in Summerlin",
   },
   {

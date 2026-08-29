@@ -115,7 +115,7 @@ const ENTERPRISE_FEATURED_SERVICES: ServiceLink[] = [
     title: "Repiping",
     href: "/enterprise/repiping/",
     image:
-      "/images/services/re-piping/hero.webp",
+      "/images/services/repiping/hero.webp",
     imageAlt: "Repiping services in Enterprise, NV",
   },
   {

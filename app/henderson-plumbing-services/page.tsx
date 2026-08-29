@@ -112,7 +112,7 @@ const HENDERSON_FEATURED_SERVICES: ServiceLink[] = [
     title: "Repiping",
     href: "/henderson/repiping/",
     image:
-      "/images/services/re-piping/hero.webp",
+      "/images/services/repiping/hero.webp",
     imageAlt: "Repiping services in Henderson",
   },
   {

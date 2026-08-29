@@ -144,7 +144,7 @@
   },
   {
     "source": "services/repiping/repiping-services.webp",
-    "dest": "public/images/services/re-piping/hero.webp",
+    "dest": "public/images/services/repiping/hero.webp",
     "originalType": "webp",
     "finalType": "webp",
     "sourceSize": 347204,

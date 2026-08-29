@@ -120,7 +120,7 @@ One primary image per service page (16 services with source images; 2 service sl
 | Water Heater Repair and Installation | `Images/services/water-heater-repair-installation/Expert Water Heater Installation  Red Carpet Plumbing Las Vegas, NV.webp` | `public/images/services/water-heater-repair-installation/hero.webp` | Expert water heater installation in a Las Vegas home | Required |
 | Slab Leak Detection and Repair | `Images/services/slab-leak-detection-repair/shharris0117_Editorial-style_close-up_image_of_advanced_leak_de_7b32d18f-500f-42aa-afe5-59dcfb3f9ba5.webp` | `public/images/services/slab-leak-detection-repair/hero.webp` | Close up of advanced slab leak detection equipment | Required |
 | Sewer Line Services | (no source) | (none) | n/a | **GAP** |
-| Repiping | `Images/services/repiping/repiping-services.webp` | `public/images/services/re-piping/hero.webp` | Whole home repiping service in Las Vegas | Required |
+| Repiping | `Images/services/repiping/repiping-services.webp` | `public/images/services/repiping/hero.webp` | Whole home repiping service in Las Vegas | Required |
 | Water Pipe Repair and Replacement | `Images/services/water-pipe-repair-replacement/shharris0117_Editorial-style_high-resolution_image_of_a_profess_10a3ec07-eabb-4093-b5f6-e012e40e5f3b (1) (1).webp` | `public/images/services/water-pipe-repair-replacement/hero.webp` | Professional water pipe repair work in progress | Required |
 | Gas Line Plumbing | `Images/services/gas-line-plumbing/Professional Gas Line Installation in Progress  Red Carpet Plumbing Las Vegas.webp` | `public/images/services/gas-line-plumbing/hero.webp` | Professional gas line installation in progress in Las Vegas | Required |
 | Commercial Plumbing | (no source) | (none) | n/a | **GAP** |

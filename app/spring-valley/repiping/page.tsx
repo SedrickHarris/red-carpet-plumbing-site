@@ -357,7 +357,7 @@ export default function SpringValleyRePipingPage() {
           ctaNote="Licensed plumbers. Clark County permits pulled. Transparent pricing."
           formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           backgroundImage={{
-            src: "/images/services/re-piping/hero.webp",
+            src: "/images/services/repiping/hero.webp",
             alt: "Repiping services in Spring Valley, NV",
           }}
         />

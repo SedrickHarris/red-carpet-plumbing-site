@@ -114,7 +114,7 @@ const GREEN_VALLEY_FEATURED_SERVICES: ServiceLink[] = [
   {
     title: "Repiping",
     href: "/green-valley/repiping/",
-    image: "/images/services/re-piping/hero.webp",
+    image: "/images/services/repiping/hero.webp",
     imageAlt: "Repiping services in Green Valley, NV",
   },
   {

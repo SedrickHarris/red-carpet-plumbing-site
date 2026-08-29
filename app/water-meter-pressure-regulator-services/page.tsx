@@ -247,7 +247,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Full and partial repiping for homes with aging supply pipe systems that have been damaged by years of excessive water pressure.",
     href: "/repiping/",
-    image: "/images/services/re-piping/hero.webp",
+    image: "/images/services/repiping/hero.webp",
     imageAlt: "Whole home repiping service in Las Vegas",
     built: true,
   },

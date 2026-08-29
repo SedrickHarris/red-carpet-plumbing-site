@@ -79,7 +79,7 @@ Append-only build log for Site OS implementation work. One entry per build.
   3. Connective sentences added to host required links in Sections 3, 7, and 8 (repiping services; Las Vegas emergency plumbing; Las Vegas plumbing services). Brief section paragraphs did not include these link sentences but the brief's internal-link table marks them Required; resolved per sibling precedent.
   4. 1b colored trust strip (4 items) is a factual restatement of brief content (services, license, permits, materials) — no new business claims — matching the derived strips on P13/P14. The 5 brief-listed Section-1 trust items render as the hero `trustItems`.
 - **Trust claims:** shows 4.8/76, "Over 40 years," and permit/inspection handling (per brief) with FLAG: VERIFY comments — consistent with Pages 11–14.
-- **Hero image:** `/images/services/re-piping/hero.webp` used as hero background (alt "repiping service in Las Vegas, NV"); no `card.webp` exists for this service.
+- **Hero image:** `/images/services/repiping/hero.webp` used as hero background (alt "repiping service in Las Vegas, NV"); no `card.webp` exists for this service.
 - **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (route prerendered as static ○). All pass.
 
 ---
@@ -97,7 +97,7 @@ Append-only build log for Site OS implementation work. One entry per build.
   2. 1b colored trust strip (4 items) is a factual restatement of brief content (services, license, permits, materials) — no new business claims — matching P13/P14/P15. The 5 brief-listed Section-1 trust items render as the hero `trustItems`.
 - **Carry-forward (not actioned — outside this brief's allowed-files scope):** P16 is now built, so the TODO-BATCH-5 fallback links on **P14** (`/henderson/slab-leak-detection-repair/` pipe-rerouting card, currently → `/water-pipe-repair-replacement/`, target anchor "Henderson repiping") and **P15** (`/las-vegas/repiping/` Section 8 closing, currently → `/repiping/`) can now be activated to point at `/henderson/repiping/`. Recommended follow-up edit when those files are in scope.
 - **Trust claims:** shows 4.8/76, "Over 40 years," and permit/inspection handling (per brief) with FLAG: VERIFY comments — consistent with Pages 11–15.
-- **Hero image:** `/images/services/re-piping/hero.webp` (alt "repiping service in Henderson, NV"); no `card.webp` exists for this service.
+- **Hero image:** `/images/services/repiping/hero.webp` (alt "repiping service in Henderson, NV"); no `card.webp` exists for this service.
 - **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (route prerendered as static ○). All pass.
 
 ---
@@ -253,7 +253,7 @@ Append-only build log for Site OS implementation work. One entry per build.
   2. **GV hub repoints** — point the `/green-valley-plumbing-services/` hub's service cards to the built GV service-location pages (P30–P34); applies cluster-wide, deferred on every GV page in this batch.
   3. **Core `/drain-cleaning/` cross-link** — add `/green-valley/drain-cleaning/` to its service-area link list (and analogous core-page back-links for the other services).
 - **Trust claims:** shows 4.8/76, "Over 40 years," permits/inspections, transparent pricing (per brief) with FLAG: VERIFY comments at each instance plus the top-of-file block. No FLAG text in any visible string or schema.
-- **Hero image:** `/images/services/re-piping/hero.webp` (alt "repiping service in Green Valley, Henderson, NV"); no `card.webp` exists for the repiping service (per log).
+- **Hero image:** `/images/services/repiping/hero.webp` (alt "repiping service in Green Valley, Henderson, NV"); no `card.webp` exists for the repiping service (per log).
 - **Validation:** `eslint` (clean), `tsc --noEmit` (clean), `next build` (`/green-valley/repiping` prerendered static ○). All pass.
 
 ---
@@ -788,7 +788,7 @@ FLAG: VERIFY items: not added to existing content (out of scope for this build)
 - **Files:** `app/green-valley-plumbing-services/page.tsx`, plus `boulder-city-`, `enterprise-`, `henderson-`, `lake-las-vegas-`, `las-vegas-`, `north-las-vegas-`, `paradise-`, `spring-valley-`, `summerlin-plumbing-services/page.tsx` and `app/north-las-vegas/aliante-area-plumbing/page.tsx`
 - **Change:** Each hub's 18-item services array became three arrays: four featured services rendered as `ServiceCard`s in a single row (Sewer Line Services, Repiping, Water Heater Repair and Installation, Slab Leak Detection and Repair) and the remaining 14 as `rounded-full` pills in two fixed rows of seven. Row one is white with red text and a `border-brand-primary/20`; row two is red with white text. Both rows are `min-h-12`, centered, `gap-x-4 gap-y-6`.
 - **Linking:** All hrefs preserved verbatim at rollout, keeping each hub's existing location-route-or-core-fallback targets. Per-item code comments recording activated routes were carried onto the corresponding featured and pill entries rather than dropped.
-- **Images:** Sewer Line Services and Repiping carry no image in any hub's data, so both use shared assets (`/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp` and `/images/services/re-piping/hero.webp`). Water Heater and Slab Leak keep each hub's existing image; every hub keeps its own `imageAlt` strings. The sewer asset was previously untracked and is now committed, since the page references it and it would otherwise 404 in production.
+- **Images:** Sewer Line Services and Repiping carry no image in any hub's data, so both use shared assets (`/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp` and `/images/services/repiping/hero.webp`). Water Heater and Slab Leak keep each hub's existing image; every hub keeps its own `imageAlt` strings. The sewer asset was previously untracked and is now committed, since the page references it and it would otherwise 404 in production.
 - **Known limitation:** "Two rows of seven" cannot render as two visual lines. Measured natural widths are 1479px (row one) and 2042px (row two) against a 1280px container, so each row wraps internally. Row grouping and the alternating colours are preserved, which was the stated priority. Making them true single lines would require shortening service names (copy change) or shrinking the pills.
 - **TODO:** `/green-valley/sewer-line-services/` is not built; that featured card falls back to the core page. Noted in-file.
 - **Validation:** Lint PASS. Build PASS. Built-HTML check across all 11 hubs: four featured cards in the expected order, each with a real image, and two pill rows of seven on every hub.

@@ -165,7 +165,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Repiping",
-    image: "/images/services/re-piping/hero.webp",
+    image: "/images/services/repiping/hero.webp",
     alt: "Repiping services for Las Vegas homes",
     description:
       "Full and partial repiping services for homes and businesses with aging, corroded, or failing pipe systems.",
