@@ -81,6 +81,20 @@ Create a high-performing plumbing website optimized for local SEO, GEO targeting
 - Lake Las Vegas
 - North Las Vegas Aliante Area
 
+## Confirmed Service-Area ZIP Codes
+
+Client-confirmed. Safe for display copy and schema `areaServed` use.
+
+**North Las Vegas, NV:** 89030, 89031, 89032, 89033, 89036, 89081, 89084, 89085, 89086, 89087
+
+## Confirmed Availability Claims
+
+Client-confirmed. Safe for display copy use with the stated qualifier — do not drop the qualifier.
+
+**All services, all service areas (company-wide):** Same-day service is available, subject to scheduling. This applies to every plumbing service and every Tier 1/Tier 2 service area on this site, not only North Las Vegas or sewer line services. Use hedged phrasing ("subject to availability" / "subject to scheduling") on every page — never an unqualified same-day guarantee, and never "emergency" or "24/7" language unless that is separately confirmed for that specific service/page.
+
+Confirmation history: first confirmed for North Las Vegas Sewer Line Services (this session), then confirmed as a company-wide, all-services claim (this session). Apply to all existing and future service and service-location pages using the FAQ template in `docs/site-os/master-prompts/prompts/` content-update guidance — see the same-day rollout build prompt.
+
 ## Tier 2 Neighborhood Targets
 
 - Whitney
