@@ -81,6 +81,12 @@ const ALIANTE_FAQS: FaqItem[] = [
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For emergency plumbing in the Aliante area, calling directly is the fastest option.",
     category: "timing-process",
   },
+  {
+    question: "Do you offer same-day plumbing service in the Aliante Area of North Las Vegas?",
+    answer:
+      "Same-day plumbing service is available in the Aliante Area of North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
+  },
 ];
 
 // ---------------------------------------------------------------------------

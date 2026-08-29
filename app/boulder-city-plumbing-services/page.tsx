@@ -77,6 +77,12 @@ const BOULDER_CITY_FAQS: FaqItem[] = [
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For emergency plumbing in Boulder City, calling directly is the fastest option.",
     category: "timing-process",
   },
+  {
+    question: "Do you offer same-day plumbing service in Boulder City?",
+    answer:
+      "Same-day plumbing service is available in Boulder City, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
+  },
 ];
 
 // ---------------------------------------------------------------------------
