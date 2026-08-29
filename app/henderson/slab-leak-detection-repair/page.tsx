@@ -504,7 +504,7 @@ export default function HendersonSlabLeakPage() {
                     href="/henderson/re-piping/"
                     className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
-                    Henderson re-piping
+                    Henderson repiping
                   </Link>{" "}
                   services.
                 </p>

@@ -138,8 +138,8 @@ const WH_SIGNS = [
 ];
 
 // Section 5 — water heater services (bold label + body). The gas/electric block
-// carries an inline link to the built core re-piping page; its body is split so
-// the rendered sentence reads exactly as approved, with "re-piping services
+// carries an inline link to the built core repiping page; its body is split so
+// the rendered sentence reads exactly as approved, with "repiping services
 // page" as the anchor.
 const BC_WH_SERVICES: {
   label: string;
@@ -178,10 +178,10 @@ const BC_WH_SERVICES: {
   },
   {
     // Body split at the anchor: rendered output reads
-    // "...see our re-piping services page." exactly as approved.
+    // "...see our repiping services page." exactly as approved.
     label: "Gas and electric water heater service",
     body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under NV License #0048585A. For Boulder City homes that may need broader pipe assessment alongside water heater service, see our ",
-    link: { href: "/re-piping/", text: "re-piping services page" },
+    link: { href: "/re-piping/", text: "repiping services page" },
   },
 ];
 

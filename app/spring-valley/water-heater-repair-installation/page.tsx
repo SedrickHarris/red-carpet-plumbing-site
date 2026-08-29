@@ -115,7 +115,7 @@ const WH_CAUSES = [
   },
   {
     label: "Galvanized supply lines affecting water heater performance",
-    body: "Older homes in the Desert Inn and West Sahara corridors built in the 1970s through 1990s may have original galvanized steel supply lines feeding the water heater. As galvanized pipe corrodes from the inside out, rust particles and sediment enter the water heater tank, accelerating internal corrosion and contaminating the anode rod. Rust-colored hot water, faster-than-normal sediment accumulation, and recurring heating element failures can all be signs of galvanized supply line deterioration affecting the water heater. Homes experiencing these symptoms may also be candidates for re-piping in Spring Valley alongside water heater replacement.",
+    body: "Older homes in the Desert Inn and West Sahara corridors built in the 1970s through 1990s may have original galvanized steel supply lines feeding the water heater. As galvanized pipe corrodes from the inside out, rust particles and sediment enter the water heater tank, accelerating internal corrosion and contaminating the anode rod. Rust-colored hot water, faster-than-normal sediment accumulation, and recurring heating element failures can all be signs of galvanized supply line deterioration affecting the water heater. Homes experiencing these symptoms may also be candidates for repiping in Spring Valley alongside water heater replacement.",
   },
 ];
 
@@ -161,7 +161,7 @@ const WH_SERVICES: {
   {
     label: "Tankless water heater installation",
     body: "For homeowners considering a tankless water heater upgrade, we install tankless units to current Clark County code including proper venting on gas units. Tankless water heaters can last 15 to 20 years with proper maintenance. For homes that may need broader pipe assessment alongside water heater work, see our",
-    link: { href: "/spring-valley/re-piping/", text: "re-piping" },
+    link: { href: "/spring-valley/re-piping/", text: "repiping" },
   },
 ];
 
@@ -221,7 +221,7 @@ const RELATED_SERVICES = [
     href: "/spring-valley/slab-leak-detection-repair/",
   },
   {
-    label: "Re-Piping",
+    label: "Repiping",
     href: "/spring-valley/re-piping/",
   },
   {
@@ -616,7 +616,7 @@ export default function SpringValleyWaterHeaterPage() {
               >
                 leak detection in Spring Valley
               </Link>
-              , and re-piping in Spring Valley. We also serve communities near
+              , and repiping in Spring Valley. We also serve communities near
               Spring Valley including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"

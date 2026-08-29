@@ -26,20 +26,20 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // url, telephone). 5 separate JsonLd blocks. HowTo included because Section 7
 // renders the matching visible numbered process steps.
 //
-// CONTENT NOTE: The Enterprise re-piping story is first-service-cycle copper
+// CONTENT NOTE: The Enterprise repiping story is first-service-cycle copper
 // (20-to-25-year-old Rhodes Ranch / Mountain's Edge homes) and Kitec, NOT
 // galvanized steel. Galvanized is intentionally framed as uncommon in
 // Enterprise due to the community's newer development timeline.
 
 export const metadata: Metadata = {
-  title: "Re-Piping Services in Enterprise, NV | Red Carpet Plumbing",
+  title: "Repiping Services in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides whole-house and partial re-piping in Enterprise, NV. Copper, Kitec, and polybutylene replacement for Rhodes Ranch and Mountain's Edge homes. Clark County permits pulled. Licensed plumbers. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides whole-house and partial repiping in Enterprise, NV. Copper, Kitec, and polybutylene replacement for Rhodes Ranch and Mountain's Edge homes. Clark County permits pulled. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/enterprise/re-piping/",
   },
   openGraph: {
-    title: "Re-Piping Services in Enterprise, NV | Red Carpet Plumbing",
+    title: "Repiping Services in Enterprise, NV | Red Carpet Plumbing",
     description:
       "Whole-house and partial repiping throughout Enterprise, NV. First-service-cycle copper replacement, Kitec replacement, and polybutylene replacement for Southwest Las Vegas homes. Clark County permits pulled. Licensed plumbers.",
     url: "https://redcarpetplumbing.com/enterprise/re-piping/",
@@ -59,18 +59,18 @@ const ENTERPRISE_REPIPE_FAQS: FaqItem[] = [
   {
     question: "What are the signs I need to repipe my Enterprise home?",
     answer:
-      "Common signs include recurring leaks in multiple locations, rust-colored or discolored water, consistently low water pressure throughout the home, frequent pinhole leaks in copper pipes, known Kitec plumbing with corroding brass fittings, or polybutylene supply lines installed before 1998. Multiple slab leaks on the same system are also a strong indicator that re-piping is more practical than continued repairs.",
+      "Common signs include recurring leaks in multiple locations, rust-colored or discolored water, consistently low water pressure throughout the home, frequent pinhole leaks in copper pipes, known Kitec plumbing with corroding brass fittings, or polybutylene supply lines installed before 1998. Multiple slab leaks on the same system are also a strong indicator that repiping is more practical than continued repairs.",
     category: "causes-signs",
   },
   {
     question:
       "What pipe materials are most common in Enterprise homes that need replacement?",
     answer:
-      "Enterprise was developed primarily in the late 1990s and 2000s, so the most common re-piping situations involve first-service-cycle copper supply lines now 20 to 25 years old that have been thinned by Las Vegas Valley hard water, and Kitec plumbing installed from the late 1990s through approximately 2005. Kitec is identifiable by orange or blue flexible pipes with brass fittings. Galvanized steel pipe is uncommon in Enterprise due to the community's newer development timeline.",
+      "Enterprise was developed primarily in the late 1990s and 2000s, so the most common repiping situations involve first-service-cycle copper supply lines now 20 to 25 years old that have been thinned by Las Vegas Valley hard water, and Kitec plumbing installed from the late 1990s through approximately 2005. Kitec is identifiable by orange or blue flexible pipes with brass fittings. Galvanized steel pipe is uncommon in Enterprise due to the community's newer development timeline.",
     category: "causes-signs",
   },
   {
-    question: "Does re-piping in Enterprise require a permit?",
+    question: "Does repiping in Enterprise require a permit?",
     answer:
       "Yes. Whole-house repiping in Enterprise requires a Clark County building permit. Enterprise is an unincorporated Clark County community, so the permit jurisdiction is Clark County rather than the City of Las Vegas. Red Carpet Plumbing files the permit before work begins and coordinates the final inspection for sign-off.",
     category: "timing-process",
@@ -91,13 +91,13 @@ const ENTERPRISE_REPIPE_FAQS: FaqItem[] = [
     question:
       "Does Red Carpet Plumbing serve Rhodes Ranch and Mountain's Edge for repiping?",
     answer:
-      "Yes. Red Carpet Plumbing provides re-piping services throughout Enterprise including Rhodes Ranch, Mountain's Edge, and the broader Southwest Las Vegas area. Call (702) 567-9172 to schedule an assessment.",
+      "Yes. Red Carpet Plumbing provides repiping services throughout Enterprise including Rhodes Ranch, Mountain's Edge, and the broader Southwest Las Vegas area. Call (702) 567-9172 to schedule an assessment.",
     category: "the-service",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides whole-house and partial re-piping services throughout Enterprise, Nevada and the Southwest Las Vegas area. Whether your home has first-service-cycle copper supply lines showing signs of hard water wear, Kitec plumbing with failing brass fittings, or polybutylene pipe that has degraded over time, our licensed plumbers evaluate the full system and recommend the right solution. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides whole-house and partial repiping services throughout Enterprise, Nevada and the Southwest Las Vegas area. Whether your home has first-service-cycle copper supply lines showing signs of hard water wear, Kitec plumbing with failing brass fittings, or polybutylene pipe that has degraded over time, our licensed plumbers evaluate the full system and recommend the right solution. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.";
 
 const TRUST_STRIP_ITEMS = [
   "Licensed Plumbers, NV #0048585A",
@@ -121,7 +121,7 @@ const REPIPE_SIGNS = [
   "Reduced water quality affecting taste, odor, or appearance",
 ];
 
-// Section 6 — re-piping service cards (non-linked, descriptive). Rendered with
+// Section 6 — repiping service cards (non-linked, descriptive). Rendered with
 // ServiceCard built={false} so titles render as plain text with no link and the
 // ServiceImagePlaceholder fallback is used (no image prop).
 const REPIPE_SERVICES = [
@@ -155,19 +155,19 @@ const REPIPE_STEPS = [
   },
   {
     name: "Review Scope and Approve the Work",
-    body: "We explain what we found, what the re-piping project involves, and what pipe material options are available. You approve the full scope before any work begins. No surprises and no hidden fees.",
+    body: "We explain what we found, what the repiping project involves, and what pipe material options are available. You approve the full scope before any work begins. No surprises and no hidden fees.",
   },
   {
     name: "Clark County Permit Filing",
     body: "Whole-house repiping in Enterprise requires a Clark County building permit. Red Carpet Plumbing files the permit before work begins, ensuring the project is performed to code and documented correctly. Permit jurisdiction for Enterprise is Clark County, not the City of Las Vegas.",
   },
   {
-    name: "Re-Piping with Minimal Disruption",
-    body: "Our licensed plumbers complete the re-piping project with care to limit disruption to finished walls and ceilings wherever possible. Most single-story Enterprise homes are re-piped in one to two days. For multi-day projects, water is restored to the home each evening.",
+    name: "Repiping with Minimal Disruption",
+    body: "Our licensed plumbers complete the repiping project with care to limit disruption to finished walls and ceilings wherever possible. Most single-story Enterprise homes are re-piped in one to two days. For multi-day projects, water is restored to the home each evening.",
   },
   {
     name: "Final Inspection and Sign-Off",
-    body: "After re-piping is complete, we coordinate the Clark County inspection for final sign-off. A completed re-pipe with closed permits provides documentation of the work for homeowners and future buyers.",
+    body: "After repiping is complete, we coordinate the Clark County inspection for final sign-off. A completed re-pipe with closed permits provides documentation of the work for homeowners and future buyers.",
   },
 ];
 
@@ -229,7 +229,7 @@ const RELATED_SERVICES = [
     href: "/enterprise/commercial-plumbing/",
   },
   {
-    label: "Re-Piping in Las Vegas",
+    label: "Repiping in Las Vegas",
     href: "/las-vegas/re-piping/",
   },
 ];
@@ -237,9 +237,9 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Re-Piping Services in Enterprise, NV | Red Carpet Plumbing",
+  name: "Repiping Services in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides whole-house and partial re-piping in Enterprise, NV. Copper, Kitec, and polybutylene replacement for Southwest Las Vegas homes. Clark County permits pulled.",
+    "Red Carpet Plumbing provides whole-house and partial repiping in Enterprise, NV. Copper, Kitec, and polybutylene replacement for Southwest Las Vegas homes. Clark County permits pulled.",
   url: "https://redcarpetplumbing.com/enterprise/re-piping/",
   isPartOf: {
     "@type": "WebSite",
@@ -267,7 +267,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Re-Piping Services in Enterprise",
+      name: "Repiping Services in Enterprise",
       item: "https://redcarpetplumbing.com/enterprise/re-piping/",
     },
   ],
@@ -276,10 +276,10 @@ const breadcrumbSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Re-Piping Services in Enterprise, NV",
-  serviceType: "Re-Piping",
+  name: "Repiping Services in Enterprise, NV",
+  serviceType: "Repiping",
   description:
-    "Red Carpet Plumbing provides whole-house and partial re-piping for Enterprise homes, including copper, Kitec, polybutylene, PEX, and copper repiping with Clark County permits pulled and inspections scheduled.",
+    "Red Carpet Plumbing provides whole-house and partial repiping for Enterprise homes, including copper, Kitec, polybutylene, PEX, and copper repiping with Clark County permits pulled and inspections scheduled.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -306,9 +306,9 @@ const serviceSchema = {
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How Red Carpet Plumbing Handles Re-Piping in Enterprise",
+  name: "How Red Carpet Plumbing Handles Repiping in Enterprise",
   description:
-    "The process Red Carpet Plumbing follows for re-piping projects in Enterprise, NV.",
+    "The process Red Carpet Plumbing follows for repiping projects in Enterprise, NV.",
   step: REPIPE_STEPS.map((s, i) => ({
     "@type": "HowToStep",
     position: i + 1,
@@ -339,12 +339,12 @@ export default function EnterpriseRePipingPage() {
               label: "Enterprise Plumbing Services",
               href: "/enterprise-plumbing-services/",
             },
-            { label: "Re-Piping Services in Enterprise" },
+            { label: "Repiping Services in Enterprise" },
           ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>
-              Re-Piping Services
+              Repiping Services
               <br /> in Enterprise, NV
             </>
           }
@@ -359,10 +359,10 @@ export default function EnterpriseRePipingPage() {
             href: "/contact/",
           }}
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
-          formSlot={<QuoteFormPlaceholder title="Get a Re-Piping Assessment" />}
+          formSlot={<QuoteFormPlaceholder title="Get a Repiping Assessment" />}
           backgroundImage={{
             src: "/images/services/re-piping/hero.webp",
-            alt: "re-piping services in Enterprise, NV",
+            alt: "repiping services in Enterprise, NV",
           }}
         />
 
@@ -371,7 +371,7 @@ export default function EnterpriseRePipingPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Re-Piping Services in Enterprise: What Homeowners Need to Know
+                Repiping Services in Enterprise: What Homeowners Need to Know
               </h2>
               <div className="mt-6 space-y-6 text-lg leading-8 text-brand-dark/80">
                 <p>
@@ -380,10 +380,10 @@ export default function EnterpriseRePipingPage() {
                   Most Enterprise residential development began in the late 1990s
                   and continued through the 2000s and 2010s, meaning the oldest
                   homes here are now 20 to 25 years old rather than 40 to 50.
-                  That changes the re-piping conversation.
+                  That changes the repiping conversation.
                 </p>
                 <p>
-                  The primary re-piping concern in Enterprise is not galvanized
+                  The primary repiping concern in Enterprise is not galvanized
                   steel pipe from the 1960s or 1970s. It is first-service-cycle
                   copper supply lines installed during the Rhodes Ranch and
                   Mountain&apos;s Edge build-outs, now showing the effects of 20
@@ -424,7 +424,7 @@ export default function EnterpriseRePipingPage() {
                 Enterprise&apos;s development history creates a clear picture of
                 which pipe materials are present by neighborhood era.
                 Understanding what is in your home&apos;s walls is the first step
-                in evaluating whether re-piping is the right decision.
+                in evaluating whether repiping is the right decision.
               </p>
             </div>
 
@@ -449,18 +449,18 @@ export default function EnterpriseRePipingPage() {
                     walls thin sufficiently, pinhole leaks develop. Multiple
                     pinhole leaks appearing in different locations of a home
                     indicate that the pipe walls have thinned throughout the
-                    system rather than at isolated points, making re-piping a
+                    system rather than at isolated points, making repiping a
                     more practical long-term solution than continued spot
                     repairs.
                   </p>
                   <p>
-                    For re-piping information across the Las Vegas Valley, visit
+                    For repiping information across the Las Vegas Valley, visit
                     our{" "}
                     <Link
                       href="/re-piping/"
                       className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                     >
-                      re-piping services
+                      repiping services
                     </Link>{" "}
                     page.
                   </p>
@@ -514,7 +514,7 @@ export default function EnterpriseRePipingPage() {
                   closed-loop system pressure cycling creates ongoing pipe stress
                   throughout Enterprise. Homes where a professional assessment
                   identifies system-wide pipe thinning, regardless of pipe
-                  vintage, are re-piping candidates.
+                  vintage, are repiping candidates.
                 </p>
               </article>
             </div>
@@ -526,7 +526,7 @@ export default function EnterpriseRePipingPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Signs Your Enterprise Home May Need Re-Piping
+                Signs Your Enterprise Home May Need Repiping
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 If you are seeing one or more of these signs in your Enterprise
@@ -562,7 +562,7 @@ export default function EnterpriseRePipingPage() {
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 Spot pipe repair is the right call when the damage is isolated,
                 the pipe material is otherwise in good condition, and no broader
-                system deterioration has been identified. Re-piping is the right
+                system deterioration has been identified. Repiping is the right
                 call when the damage is recurring, the pipe material is known to
                 fail throughout, or a professional assessment identifies
                 system-wide pipe wall thinning.
@@ -593,11 +593,11 @@ export default function EnterpriseRePipingPage() {
 
               <article className="rounded-2xl bg-white p-6 ring-1 ring-brand-surface-alt sm:p-8">
                 <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
-                  When Re-Piping Is the Right Call
+                  When Repiping Is the Right Call
                 </h3>
                 <div className="mt-3 space-y-4 text-base leading-7 text-brand-dark/80">
                   <p>
-                    Re-piping is appropriate when multiple leaks have appeared in
+                    Repiping is appropriate when multiple leaks have appeared in
                     different locations, the pipe material is known to fail
                     (Kitec, polybutylene), a professional assessment finds that
                     pipe walls have thinned throughout the system, or an
@@ -610,7 +610,7 @@ export default function EnterpriseRePipingPage() {
                   <p>
                     For Enterprise homes in Rhodes Ranch and Mountain&apos;s Edge
                     where copper supply lines are now 20 to 25 years old and hard
-                    water corrosion has been ongoing throughout, re-piping
+                    water corrosion has been ongoing throughout, repiping
                     typically makes more long-term financial sense than continued
                     spot repairs, particularly when a second or third slab leak
                     has already occurred on the same system.
@@ -626,10 +626,10 @@ export default function EnterpriseRePipingPage() {
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="max-w-4xl text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Re-Piping Services for Enterprise Homes
+                Repiping Services for Enterprise Homes
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-                Red Carpet Plumbing provides the following re-piping services for
+                Red Carpet Plumbing provides the following repiping services for
                 Enterprise homeowners and property managers.
               </p>
             </div>
@@ -654,7 +654,7 @@ export default function EnterpriseRePipingPage() {
               <SectionRevealItem>
                 <div className="text-left">
                   <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                    Our Re-Piping Process in Enterprise
+                    Our Repiping Process in Enterprise
                   </h2>
                 </div>
               </SectionRevealItem>
@@ -779,7 +779,7 @@ export default function EnterpriseRePipingPage() {
 
         {/* SECTION 10: FAQ */}
         <FaqSection
-          heading="Re-Piping FAQs for Enterprise Homeowners"
+          heading="Repiping FAQs for Enterprise Homeowners"
           faqs={ENTERPRISE_REPIPE_FAQS}
           surface="light"
         />
@@ -813,8 +813,8 @@ export default function EnterpriseRePipingPage() {
         {/* SECTION 12: FINAL CTA */}
         <CTASection
           background="red"
-          headline={<>Ready to Schedule Re-Piping<br />in Enterprise?</>}
-          body="Red Carpet Plumbing provides licensed re-piping services throughout Enterprise and the Southwest Las Vegas area. Clark County permits pulled. Transparent pricing. No hidden fees."
+          headline={<>Ready to Schedule Repiping<br />in Enterprise?</>}
+          body="Red Carpet Plumbing provides licensed repiping services throughout Enterprise and the Southwest Las Vegas area. Clark County permits pulled. Transparent pricing. No hidden fees."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

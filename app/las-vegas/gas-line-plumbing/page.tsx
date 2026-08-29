@@ -30,7 +30,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 // AdministrativeArea. BreadcrumbList = 3 items. No AggregateRating / Review.
 // HowTo + FAQPage both derive from a single const (visible = schema). Hero
 // carries trustItems AND a separate red trust band (Section 2). Causes and
-// services render as H3 article cards (re-piping sibling pattern).
+// services render as H3 article cards (repiping sibling pattern).
 //
 // Hero uses gas-line-plumbing/hero.webp (358KB; the only asset present — no
 // card.webp). Service provider includes a PostalAddress per the approved P48
@@ -157,7 +157,7 @@ const LV_GAS_NEIGHBORHOODS = [
 
 // ---------------------------------------------------------------------------
 // Why Las Vegas gas lines need specialized attention (Section 3) — H3 article
-// cards (re-piping sibling pattern).
+// cards (repiping sibling pattern).
 // ---------------------------------------------------------------------------
 const LV_GAS_CAUSES = [
   {

@@ -80,7 +80,7 @@ const NLV_SLAB_SIGNS: { label: string; body: string }[] = [
 const NLV_SLAB_CAUSES: { title: string; body: string }[] = [
   {
     title: "Galvanized Steel Pipe in Older Central North Las Vegas",
-    body: "Homes in the central and southern portions of North Las Vegas, built from the 1960s through the 1980s, often still have original galvanized steel supply lines. Galvanized steel corrodes from the inside out under Las Vegas Valley hard water conditions. As decades of corrosion build up, the pipe wall thins and develops leak points at joints, fittings, and straight runs beneath the slab. Unlike copper pinhole leaks that often develop slowly, galvanized pipe failures beneath the slab can release significant water before any surface sign appears. Homes with original galvanized lines that have experienced a first slab area leak are strong candidates for full re-piping rather than repeated spot repairs on a line that is corroded throughout.",
+    body: "Homes in the central and southern portions of North Las Vegas, built from the 1960s through the 1980s, often still have original galvanized steel supply lines. Galvanized steel corrodes from the inside out under Las Vegas Valley hard water conditions. As decades of corrosion build up, the pipe wall thins and develops leak points at joints, fittings, and straight runs beneath the slab. Unlike copper pinhole leaks that often develop slowly, galvanized pipe failures beneath the slab can release significant water before any surface sign appears. Homes with original galvanized lines that have experienced a first slab area leak are strong candidates for full repiping rather than repeated spot repairs on a line that is corroded throughout.",
   },
   {
     title: "Aliante and Mid-2000s Homes Entering Their First Service Cycle",
@@ -136,7 +136,7 @@ const NLV_SLAB_REPAIR_OPTIONS: {
     body: "Pipe rerouting bypasses the damaged section entirely by running a new supply line through walls, ceilings, or accessible above-slab pathways, removing the aging pipe from beneath the foundation. For older North Las Vegas homes where galvanized lines are corroded throughout, or where the pipe condition assessment shows thinning consistent with decades of hard water exposure, rerouting is often the more durable long-term solution.",
     linkPre: " See our ",
     linkHref: "/re-piping/",
-    linkText: "re-piping services",
+    linkText: "repiping services",
     linkPost: " for homes where the full supply system may be approaching similar condition.",
   },
   {

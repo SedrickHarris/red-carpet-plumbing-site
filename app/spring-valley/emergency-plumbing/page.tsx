@@ -249,7 +249,7 @@ const RELATED_SERVICES = [
     href: "/spring-valley/slab-leak-detection-repair/",
   },
   {
-    label: "Re-Piping",
+    label: "Repiping",
     href: "/spring-valley/re-piping/",
   },
   {
@@ -641,7 +641,7 @@ export default function SpringValleyEmergencyPlumbingPage() {
               >
                 slab leak detection
               </Link>
-              , and re-piping. We also serve communities near Spring Valley
+              , and repiping. We also serve communities near Spring Valley
               including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"

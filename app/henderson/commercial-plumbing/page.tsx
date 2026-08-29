@@ -55,7 +55,7 @@ const HENDERSON_COMMERCIAL_FAQS = [
   {
     question: "What commercial plumbing services are available in Henderson, NV?",
     answer:
-      "Red Carpet Plumbing provides commercial plumbing repair, installation, and maintenance throughout Henderson including commercial drain cleaning and hydro jetting, grease trap and floor drain service, commercial water heater repair and installation, commercial leak detection, commercial sewer line services, backflow prevention installation and testing, and commercial pipe repair and re-piping. All work is performed under Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+      "Red Carpet Plumbing provides commercial plumbing repair, installation, and maintenance throughout Henderson including commercial drain cleaning and hydro jetting, grease trap and floor drain service, commercial water heater repair and installation, commercial leak detection, commercial sewer line services, backflow prevention installation and testing, and commercial pipe repair and repiping. All work is performed under Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
   },
   {
     question:
@@ -169,9 +169,9 @@ const COMMERCIAL_SERVICES: {
     href: "/backflow-prevention/",
   },
   {
-    title: "Commercial Pipe Repair and Re-Piping",
+    title: "Commercial Pipe Repair and Repiping",
     description:
-      "Aging supply lines, corroded drain lines, and failing pipe systems in Henderson commercial buildings and HOA communities require assessment and repair by a licensed contractor. Red Carpet Plumbing provides commercial pipe repair and re-piping for businesses, multi-unit properties, and HOA communities throughout Henderson.",
+      "Aging supply lines, corroded drain lines, and failing pipe systems in Henderson commercial buildings and HOA communities require assessment and repair by a licensed contractor. Red Carpet Plumbing provides commercial pipe repair and repiping for businesses, multi-unit properties, and HOA communities throughout Henderson.",
     href: "/commercial-plumbing/",
   },
   // FLAG: 24/7 emergency-availability claim implied by this card — verify before final launch.

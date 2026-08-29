@@ -133,7 +133,7 @@ const COMMERCIAL_SERVICES: ServiceTypeCard[] = [
     href: "/backflow-prevention/",
   },
   {
-    title: "Commercial Pipe Repair and Re-Piping",
+    title: "Commercial Pipe Repair and Repiping",
     description:
       "Repair and replacement of aging or failing supply lines, drain lines, and commercial pipe systems in businesses and multi-unit buildings.",
     href: "/re-piping/",

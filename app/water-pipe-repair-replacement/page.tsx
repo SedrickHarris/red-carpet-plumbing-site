@@ -60,9 +60,9 @@ const WATER_PIPE_FAQS = [
       "Yes. Red Carpet Plumbing handles emergency burst pipe repairs throughout the Las Vegas Valley. If a pipe has burst, shut off the main water supply to the home as quickly as possible and call Red Carpet Plumbing at (702) 567-9172. Burst pipe repair typically involves replacing the damaged section and inspecting adjacent pipe for signs of stress or corrosion that could cause additional failures.",
   },
   {
-    question: "What is the difference between pipe repair and re-piping?",
+    question: "What is the difference between pipe repair and repiping?",
     answer:
-      "Pipe repair addresses a specific section of damaged, cracked, or leaking pipe. Re-piping replaces the entire supply pipe system in a home or building, typically because the existing pipe material is failing throughout or has reached end of life. Re-piping is appropriate when a property has widespread polybutylene pipe, severely corroded galvanized pipe throughout, or recurring pinhole leaks in multiple areas. Red Carpet Plumbing provides both spot pipe repair and full re-piping services throughout the Las Vegas Valley.",
+      "Pipe repair addresses a specific section of damaged, cracked, or leaking pipe. Repiping replaces the entire supply pipe system in a home or building, typically because the existing pipe material is failing throughout or has reached end of life. Repiping is appropriate when a property has widespread polybutylene pipe, severely corroded galvanized pipe throughout, or recurring pinhole leaks in multiple areas. Red Carpet Plumbing provides both spot pipe repair and full repiping services throughout the Las Vegas Valley.",
   },
   {
     question:
@@ -91,7 +91,7 @@ const WATER_PIPE_WARNING_SIGNS = [
   },
   {
     title: "Recurring Pinhole Leaks in Multiple Locations",
-    body: "A single pinhole leak in a copper pipe can often be spot-repaired. Multiple pinhole leaks appearing in different locations indicate that the pipe system as a whole is experiencing corrosion, and re-piping is typically the more practical long-term solution.",
+    body: "A single pinhole leak in a copper pipe can often be spot-repaired. Multiple pinhole leaks appearing in different locations indicate that the pipe system as a whole is experiencing corrosion, and repiping is typically the more practical long-term solution.",
   },
 ];
 
@@ -112,7 +112,7 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
   {
     title: "Pinhole Leak Repair",
     description:
-      "Spot repair of pinhole leaks in copper supply pipe. Multiple pinhole leaks may indicate a need for section replacement or re-piping.",
+      "Spot repair of pinhole leaks in copper supply pipe. Multiple pinhole leaks may indicate a need for section replacement or repiping.",
     href: "/water-pipe-repair-replacement/",
   },
   {
@@ -146,7 +146,7 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     href: "/water-pipe-repair-replacement/",
   },
   {
-    title: "Full Re-Piping",
+    title: "Full Repiping",
     description:
       "Full replacement of the home or building's water supply pipe system for properties with widespread pipe failure or aging materials.",
     href: "/re-piping/",
@@ -164,7 +164,7 @@ const LV_WATER_PIPE_FACTORS = [
   },
   {
     title: "Galvanized Pipe and Internal Mineral Buildup",
-    body: "Older Las Vegas homes built before the mid-1970s may still have original galvanized steel supply pipe. Las Vegas hard water deposits mineral scale on the interior walls of galvanized pipe over decades, progressively narrowing the pipe's internal diameter and reducing water pressure throughout the home. Unlike copper pipe failures that often appear as leaks first, galvanized pipe failure typically presents as steadily declining pressure and discolored water before a section actually fails. At that stage, section replacement or full re-piping is the practical solution.",
+    body: "Older Las Vegas homes built before the mid-1970s may still have original galvanized steel supply pipe. Las Vegas hard water deposits mineral scale on the interior walls of galvanized pipe over decades, progressively narrowing the pipe's internal diameter and reducing water pressure throughout the home. Unlike copper pipe failures that often appear as leaks first, galvanized pipe failure typically presents as steadily declining pressure and discolored water before a section actually fails. At that stage, section replacement or full repiping is the practical solution.",
   },
   {
     title: "Desert Soil Movement and Underground Line Stress",
@@ -179,11 +179,11 @@ const WATER_PIPE_STEPS = [
   },
   {
     name: "Inspection and Pipe Assessment",
-    body: "A licensed plumber inspects the pipe system, checks accessible supply lines, performs a water meter test to confirm active water loss if needed, and assesses the type, age, and condition of the pipe material. We identify whether spot repair or section replacement is appropriate, or whether the pipe system as a whole warrants re-piping.",
+    body: "A licensed plumber inspects the pipe system, checks accessible supply lines, performs a water meter test to confirm active water loss if needed, and assesses the type, age, and condition of the pipe material. We identify whether spot repair or section replacement is appropriate, or whether the pipe system as a whole warrants repiping.",
   },
   {
     name: "Review Options and Approve",
-    body: "We explain the condition of the pipe, what repair or replacement options apply, and what the work involves. For homes with polybutylene or widespread galvanized pipe, we discuss the re-piping option alongside spot repair. You approve the scope before any work begins.",
+    body: "We explain the condition of the pipe, what repair or replacement options apply, and what the work involves. For homes with polybutylene or widespread galvanized pipe, we discuss the repiping option alongside spot repair. You approve the scope before any work begins.",
   },
   {
     name: "Repair or Replacement with Pressure Test",
@@ -216,12 +216,12 @@ type RelatedService = {
 
 const RELATED_SERVICES: RelatedService[] = [
   {
-    title: "Re-Piping",
+    title: "Repiping",
     description:
-      "Full and partial re-piping for homes and businesses with aging, corroded, or widespread pipe failures.",
+      "Full and partial repiping for homes and businesses with aging, corroded, or widespread pipe failures.",
     href: "/re-piping/",
     image: "/images/services/re-piping/hero.webp",
-    imageAlt: "Whole home re-piping service in Las Vegas",
+    imageAlt: "Whole home repiping service in Las Vegas",
     built: true,
   },
   {
@@ -259,7 +259,7 @@ const serviceSchema = {
   name: "Water Pipe Repair and Replacement",
   serviceType: "Water Pipe Repair and Replacement",
   description:
-    "Red Carpet Plumbing repairs and replaces water supply pipes for homes and businesses throughout the Las Vegas Valley, including burst pipe repair, pinhole leak repair, galvanized pipe replacement, polybutylene pipe replacement, main water line repair, and full re-piping. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing repairs and replaces water supply pipes for homes and businesses throughout the Las Vegas Valley, including burst pipe repair, pinhole leak repair, galvanized pipe replacement, polybutylene pipe replacement, main water line repair, and full repiping. Nevada Contractor License #0048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -438,7 +438,7 @@ export default function WaterPipeRepairReplacementPage() {
               <p className="text-base leading-7 text-brand-dark sm:text-lg">
                 Red Carpet Plumbing repairs and replaces water supply pipes
                 for homes and businesses throughout the Las Vegas Valley. Services include spot pipe repairs, section
-                replacements, main line repairs, and full re-piping for
+                replacements, main line repairs, and full repiping for
                 properties with failing or aging pipe systems.
               </p>
             </div>

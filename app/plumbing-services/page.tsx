@@ -16,7 +16,7 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing offers emergency plumbing, drain cleaning, leak detection, water heater repair, slab leak service, re-piping, and more in Las Vegas, NV.",
+    "Red Carpet Plumbing offers emergency plumbing, drain cleaning, leak detection, water heater repair, slab leak service, repiping, and more in Las Vegas, NV.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/plumbing-services/",
   },
@@ -41,7 +41,7 @@ const PLUMBING_SERVICES_FAQS: FaqItem[] = [
   {
     question: "What plumbing services does Red Carpet Plumbing offer?",
     answer:
-      "Red Carpet Plumbing offers a full range of plumbing services including emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection, sewer line services, re-piping, gas line plumbing, commercial plumbing, and residential plumbing repair and installation. The company serves homes and businesses throughout the Las Vegas Valley.",
+      "Red Carpet Plumbing offers a full range of plumbing services including emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection, sewer line services, repiping, gas line plumbing, commercial plumbing, and residential plumbing repair and installation. The company serves homes and businesses throughout the Las Vegas Valley.",
     category: "the-service",
   },
   {
@@ -72,7 +72,7 @@ const PLUMBING_SERVICES_FAQS: FaqItem[] = [
     question:
       "Does Red Carpet Plumbing handle both repair and installation services?",
     answer:
-      "Yes, Red Carpet Plumbing handles both plumbing repair and installation. Services include water heater installation, toilet installation, faucet and sink installation, garbage disposal installation, fixture installation, and re-piping, in addition to a full range of plumbing repair services.",
+      "Yes, Red Carpet Plumbing handles both plumbing repair and installation. Services include water heater installation, toilet installation, faucet and sink installation, garbage disposal installation, fixture installation, and repiping, in addition to a full range of plumbing repair services.",
     category: "the-service",
   },
   {
@@ -164,11 +164,11 @@ const SERVICE_CARDS: ServiceCardData[] = [
     href: "/sewer-line-services/",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     image: "/images/services/re-piping/hero.webp",
-    alt: "Re-piping services for Las Vegas homes",
+    alt: "Repiping services for Las Vegas homes",
     description:
-      "Full and partial re-piping services for homes and businesses with aging, corroded, or failing pipe systems.",
+      "Full and partial repiping services for homes and businesses with aging, corroded, or failing pipe systems.",
     href: "/re-piping/",
   },
   {
@@ -282,7 +282,7 @@ const webPageSchema = {
   name: "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
   url: "https://redcarpetplumbing.com/plumbing-services/",
   description:
-    "Red Carpet Plumbing offers emergency plumbing, drain cleaning, leak detection, water heater repair, slab leak service, re-piping, and more in Las Vegas, NV.",
+    "Red Carpet Plumbing offers emergency plumbing, drain cleaning, leak detection, water heater repair, slab leak service, repiping, and more in Las Vegas, NV.",
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -364,7 +364,7 @@ export default function PlumbingServicesPage() {
                 businesses throughout the Las Vegas Valley. Our
                 team handles emergency plumbing, drain cleaning, leak detection
                 and repair, water heater repair and installation, slab leak
-                detection and repair, sewer line services, re-piping, gas line
+                detection and repair, sewer line services, repiping, gas line
                 plumbing, commercial plumbing, and a full range of residential
                 plumbing repair and installation services.
               </span>
@@ -481,7 +481,7 @@ export default function PlumbingServicesPage() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-brand-dark/80">
               Red Carpet Plumbing works with Las Vegas homeowners on everything
-              from routine plumbing repairs to full re-piping projects. Common
+              from routine plumbing repairs to full repiping projects. Common
               residential services include drain cleaning, leak detection,
               faucet and sink repair, toilet repair and installation, garbage
               disposal service, water heater repair and installation, and slab

@@ -274,7 +274,7 @@ const RELATED_SERVICES = [
     href: "/enterprise/slab-leak-detection-repair/",
   },
   {
-    label: "Re-Piping",
+    label: "Repiping",
     href: "/enterprise/re-piping/",
   },
   {
@@ -642,7 +642,7 @@ export default function EnterpriseEmergencyPlumbingPage() {
                 Enterprise plumbing services
               </Link>{" "}
               including drain cleaning, water heater repair, slab leak detection,
-              and re-piping. We also serve communities near Enterprise including{" "}
+              and repiping. We also serve communities near Enterprise including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
                 className="font-semibold text-brand-dark underline hover:text-brand-dark/70"

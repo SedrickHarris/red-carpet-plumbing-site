@@ -18,7 +18,7 @@ const DEFAULT_SERVICES = [
   "Water Heater Repair or Installation",
   "Slab Leak Detection and Repair",
   "Sewer Line Services",
-  "Re-Piping",
+  "Repiping",
   "Gas Line Plumbing",
   "Commercial Plumbing",
   "Toilet Repair or Installation",

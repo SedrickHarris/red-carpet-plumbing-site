@@ -18,7 +18,7 @@ const CORE_SERVICES: FooterLink[] = [
     built: true,
   },
   { label: "Sewer Line Services", href: "/sewer-line-services/", built: true },
-  { label: "Re-Piping", href: "/re-piping/", built: true },
+  { label: "Repiping", href: "/re-piping/", built: true },
   { label: "Commercial Plumbing", href: "/commercial-plumbing/", built: true },
 ];
 

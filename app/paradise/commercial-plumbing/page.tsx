@@ -171,7 +171,7 @@ const COMMERCIAL_SERVICES: {
     link: { href: "/backflow-prevention/", text: "backflow prevention" },
   },
   {
-    title: "Commercial Pipe Repair and Re-Piping",
+    title: "Commercial Pipe Repair and Repiping",
     body: "Aging supply lines, corroded drain lines, and failing pipe systems in commercial buildings require assessment and repair by a licensed contractor. Red Carpet Plumbing provides commercial pipe repair for businesses and multi-unit properties throughout Paradise.",
   },
   {

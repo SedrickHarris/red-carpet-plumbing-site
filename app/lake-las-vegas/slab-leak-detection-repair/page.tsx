@@ -115,7 +115,7 @@ const LLV_SLAB_CAUSES = [
 
 // ---------------------------------------------------------------------------
 // Repair options (Section 5). Spot repair links to water-pipe-repair-replacement;
-// pipe rerouting links to re-piping (core route -- no Lake Las Vegas re-piping
+// pipe rerouting links to repiping (core route -- no Lake Las Vegas repiping
 // page exists). Epoxy has no link.
 // ---------------------------------------------------------------------------
 const LLV_SLAB_REPAIR_OPTIONS: {
@@ -139,7 +139,7 @@ const LLV_SLAB_REPAIR_OPTIONS: {
     body: "Pipe rerouting bypasses the damaged section entirely by running a new supply line through walls, ceilings, or accessible above-slab pathways, removing the aging copper from beneath the foundation. For Lake Las Vegas homes where the pipe condition assessment shows thinning consistent with 15 to 25 years of hard water exposure, or where the first slab leak suggests other failure points may develop on the same line, rerouting is often the more durable long-term solution.",
     linkPre: " See our ",
     linkHref: "/re-piping/",
-    linkText: "re-piping services",
+    linkText: "repiping services",
     linkPost:
       " for homes where the full supply system may be approaching similar condition.",
   },

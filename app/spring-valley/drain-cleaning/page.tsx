@@ -99,7 +99,7 @@ const SV_DRAIN_CAUSES = [
   },
   {
     label: "Galvanized steel pipe corrosion in older homes",
-    body: "Homes built along the Desert Inn and West Sahara corridors primarily in the 1970s through 1990s were often constructed with galvanized steel drain and supply lines. Unlike copper, galvanized steel corrodes from the inside out. As corrosion builds up on the pipe's interior walls over decades under Las Vegas hard water conditions, the pipe's interior diameter narrows significantly. A galvanized drain line that started at a standard diameter may now have an interior passage half that size or less, clogging with debris that would flow freely through a newer pipe. Spring Valley homes in this corridor with original galvanized drain lines are dealing with a combination of corroded pipe walls and hard water mineral buildup that produces faster, more stubborn clogs than in any other housing vintage in the Las Vegas Valley. Homes experiencing recurring drain problems in the Desert Inn and West Sahara corridor may also benefit from re-piping in Spring Valley.",
+    body: "Homes built along the Desert Inn and West Sahara corridors primarily in the 1970s through 1990s were often constructed with galvanized steel drain and supply lines. Unlike copper, galvanized steel corrodes from the inside out. As corrosion builds up on the pipe's interior walls over decades under Las Vegas hard water conditions, the pipe's interior diameter narrows significantly. A galvanized drain line that started at a standard diameter may now have an interior passage half that size or less, clogging with debris that would flow freely through a newer pipe. Spring Valley homes in this corridor with original galvanized drain lines are dealing with a combination of corroded pipe walls and hard water mineral buildup that produces faster, more stubborn clogs than in any other housing vintage in the Las Vegas Valley. Homes experiencing recurring drain problems in the Desert Inn and West Sahara corridor may also benefit from repiping in Spring Valley.",
   },
   {
     label: "Grease and soap bonding with mineral scale",
@@ -207,7 +207,7 @@ const RELATED_SERVICES = [
     href: "/spring-valley/water-heater-repair-installation/",
   },
   {
-    label: "Re-Piping",
+    label: "Repiping",
     href: "/spring-valley/re-piping/",
   },
   {
@@ -577,7 +577,7 @@ export default function SpringValleyDrainCleaningPage() {
               >
                 leak detection in Spring Valley
               </Link>
-              , and re-piping in Spring Valley. We also serve communities near
+              , and repiping in Spring Valley. We also serve communities near
               Spring Valley including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"

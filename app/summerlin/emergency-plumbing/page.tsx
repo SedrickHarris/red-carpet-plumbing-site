@@ -196,7 +196,7 @@ const RELATED_SERVICES = [
     href: "/summerlin/water-heater-repair-installation/",
   },
   {
-    label: "Re-Piping",
+    label: "Repiping",
     href: "/summerlin/re-piping/",
   },
   {

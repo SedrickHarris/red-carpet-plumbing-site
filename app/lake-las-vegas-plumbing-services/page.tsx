@@ -115,11 +115,11 @@ const LAKE_LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Sewer line services in Lake Las Vegas, NV",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     href: "/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
-    imageAlt: "Re-piping services in Lake Las Vegas, NV",
+    imageAlt: "Repiping services in Lake Las Vegas, NV",
   },
   {
     // ACTIVATED: P35 built and staged

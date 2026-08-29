@@ -81,7 +81,7 @@ const GV_EMERGENCY_SCENARIOS: {
     link: {
       pre: " See our ",
       href: "/green-valley/re-piping/",
-      text: "re-piping in Green Valley",
+      text: "repiping in Green Valley",
       post: " page for assessment options.",
     },
   },
@@ -110,7 +110,7 @@ const GV_EMERGENCY_SCENARIOS: {
 const GV_EMERGENCY_SERVICES = [
   "Burst pipe detection and repair",
   "Copper supply line repair and replacement",
-  "Kitec pipe emergency repair and re-piping assessment",
+  "Kitec pipe emergency repair and repiping assessment",
   "Slab leak detection and emergency repair",
   "Sewer backup clearing and sewer line inspection",
   "Water heater emergency repair and replacement",
@@ -139,7 +139,7 @@ const GV_EMERGENCY_STEPS = [
   },
   {
     name: "Follow-up assessment",
-    body: "After the repair, we advise you on whether the emergency was an isolated event or a sign of a broader system issue. For original Green Valley homes now 30 to 45 years old, a first supply line failure or slab leak can indicate that other original copper pipes are approaching end of service life. For Green Valley Ranch homes with Kitec pipe, a single failure warrants a full re-piping assessment. If a permit is required for the work performed, we handle filing with the City of Henderson.",
+    body: "After the repair, we advise you on whether the emergency was an isolated event or a sign of a broader system issue. For original Green Valley homes now 30 to 45 years old, a first supply line failure or slab leak can indicate that other original copper pipes are approaching end of service life. For Green Valley Ranch homes with Kitec pipe, a single failure warrants a full repiping assessment. If a permit is required for the work performed, we handle filing with the City of Henderson.",
   },
 ];
 

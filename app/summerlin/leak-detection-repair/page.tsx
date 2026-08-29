@@ -102,7 +102,7 @@ const WARNING_SIGNS = [
 ];
 
 // Section 4 — what causes hidden leaks (bold label + body). Factor 4 carries the
-// plain-text "re-piping in Summerlin" phrase.
+// plain-text "repiping in Summerlin" phrase.
 const LEAK_CAUSES = [
   {
     label: "Hard water mineral corrosion",
@@ -118,7 +118,7 @@ const LEAK_CAUSES = [
   },
   {
     label: "Aging pre-2000 plumbing in original villages",
-    body: "Homes built in the original Summerlin western villages during the 1990s have plumbing systems that are now 25 to 35 years old. Copper supply lines in this age range, combined with Las Vegas hard water and caliche soil conditions, are at a stage where leak risk is meaningful. Homeowners in these original communities should be aware of the warning signs listed above. Homes that have already had one or more leak events may also be candidates for re-piping in Summerlin.",
+    body: "Homes built in the original Summerlin western villages during the 1990s have plumbing systems that are now 25 to 35 years old. Copper supply lines in this age range, combined with Las Vegas hard water and caliche soil conditions, are at a stage where leak risk is meaningful. Homeowners in these original communities should be aware of the warning signs listed above. Homes that have already had one or more leak events may also be candidates for repiping in Summerlin.",
   },
 ];
 
@@ -225,7 +225,7 @@ const RELATED_SERVICES = [
     href: "/summerlin/slab-leak-detection-repair/",
   },
   {
-    label: "Re-Piping",
+    label: "Repiping",
     href: "/summerlin/re-piping/",
   },
   {
@@ -608,7 +608,7 @@ export default function SummerlinLeakDetectionPage() {
                 Summerlin plumbing services
               </Link>{" "}
               including emergency plumbing, water heater repair, slab leak
-              detection, and re-piping. We also serve communities near Summerlin
+              detection, and repiping. We also serve communities near Summerlin
               including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"

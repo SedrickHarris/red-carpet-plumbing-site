@@ -220,14 +220,14 @@ const LV_SEWER_SERVICES: { label: string; body: string; tail?: LinkSeg[] }[] = [
 ];
 
 // Related services — all five targets are built (LV drain, LV emergency, LV
-// re-piping, core video-camera, core trenchless).
+// repiping, core video-camera, core trenchless).
 const RELATED_SERVICES = [
   { label: "Drain Cleaning in Las Vegas", href: "/las-vegas/drain-cleaning/" },
   {
     label: "Emergency Plumbing in Las Vegas",
     href: "/las-vegas/emergency-plumbing/",
   },
-  { label: "Re-Piping in Las Vegas", href: "/las-vegas/re-piping/" },
+  { label: "Repiping in Las Vegas", href: "/las-vegas/re-piping/" },
   {
     label: "Video Camera Plumbing Inspections",
     href: "/las-vegas/video-camera-plumbing-inspections/",

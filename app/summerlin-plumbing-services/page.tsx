@@ -18,14 +18,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Plumbing services in Summerlin, NV. Emergency plumbing, water heater repair, slab leak detection, re-piping for Summerlin homes. NV #0048585A. (702) 567-9172.",
+    "Plumbing services in Summerlin, NV. Emergency plumbing, water heater repair, slab leak detection, repiping for Summerlin homes. NV #0048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Plumbing services in Summerlin, NV. Emergency plumbing, water heater repair, slab leak detection, re-piping for Summerlin homes. NV #0048585A. (702) 567-9172.",
+      "Plumbing services in Summerlin, NV. Emergency plumbing, water heater repair, slab leak detection, repiping for Summerlin homes. NV #0048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -50,7 +50,7 @@ const SUMMERLIN_FAQS: FaqItem[] = [
     question:
       "What plumbing services does Red Carpet Plumbing offer in Summerlin?",
     answer:
-      "Red Carpet Plumbing provides a full range of plumbing services in Summerlin including emergency plumbing, drain cleaning, water heater repair and installation, slab leak detection and repair, leak detection, re-piping, sewer line services, and more.",
+      "Red Carpet Plumbing provides a full range of plumbing services in Summerlin including emergency plumbing, drain cleaning, water heater repair and installation, slab leak detection and repair, leak detection, repiping, sewer line services, and more.",
     category: "the-service",
   },
   {
@@ -103,11 +103,11 @@ const SUMMERLIN_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Sewer line services in Summerlin",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     href: "/summerlin/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
-    imageAlt: "Re-piping services in Summerlin",
+    imageAlt: "Repiping services in Summerlin",
   },
   {
     title: "Water Heater Repair and Installation",
@@ -221,7 +221,7 @@ const TRUST_ITEMS = [
 const SUMMERLIN_CONTEXT = [
   {
     title: "Older Summerlin Villages and Aging Plumbing Systems",
-    body: "Summerlin's development began in the late 1980s, and the community's oldest villages, including The Hills, The Trails, and The Arbors, have homes that are now 25 to 35 years old. Homes built during Summerlin's first decade of development were constructed with copper supply lines that have been exposed to Las Vegas Valley hard water throughout their service life. Hard water mineral corrosion thins copper pipe walls over time, and in homes approaching or past 30 years, this process has been ongoing long enough to create slab leak risk and re-piping candidacy. Caliche and expansive clay soil movement beneath Summerlin's slab foundations adds additional pipe stress, particularly in the older western villages. For homeowners in these original Summerlin communities, a plumbing inspection is a practical step in understanding the current condition of supply lines and water heaters.",
+    body: "Summerlin's development began in the late 1980s, and the community's oldest villages, including The Hills, The Trails, and The Arbors, have homes that are now 25 to 35 years old. Homes built during Summerlin's first decade of development were constructed with copper supply lines that have been exposed to Las Vegas Valley hard water throughout their service life. Hard water mineral corrosion thins copper pipe walls over time, and in homes approaching or past 30 years, this process has been ongoing long enough to create slab leak risk and repiping candidacy. Caliche and expansive clay soil movement beneath Summerlin's slab foundations adds additional pipe stress, particularly in the older western villages. For homeowners in these original Summerlin communities, a plumbing inspection is a practical step in understanding the current condition of supply lines and water heaters.",
   },
   {
     title: "Hard Water Impact on Summerlin Homes",
@@ -368,7 +368,7 @@ export default function SummerlinPlumbingServicesPage() {
               <br /> in Summerlin, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides plumbing services throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. From emergency plumbing and drain cleaning to water heater repair, slab leak detection, and re-piping, our licensed plumbers serve Summerlin homes and businesses. NV Contractor License #0048585A."
+          subheading="Red Carpet Plumbing provides plumbing services throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. From emergency plumbing and drain cleaning to water heater repair, slab leak detection, and repiping, our licensed plumbers serve Summerlin homes and businesses. NV Contractor License #0048585A."
           trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",

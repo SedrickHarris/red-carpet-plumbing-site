@@ -109,11 +109,11 @@ const PARADISE_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Sewer line services in Paradise, NV",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     href: "/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
-    imageAlt: "Re-piping services in Paradise, NV",
+    imageAlt: "Repiping services in Paradise, NV",
   },
   {
     title: "Water Heater Repair and Installation",

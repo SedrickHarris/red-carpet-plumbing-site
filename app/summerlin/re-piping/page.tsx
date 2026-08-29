@@ -23,16 +23,16 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 // Provider Plumber (name, url, telephone). No AggregateRating/Review. No sameAs.
 
 export const metadata: Metadata = {
-  title: "Re-Piping Services in Summerlin, NV | Red Carpet Plumbing",
+  title: "Repiping Services in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Professional re-piping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled. NV #0048585A. (702) 567-9172.",
+    "Professional repiping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled. NV #0048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin/re-piping/",
   },
   openGraph: {
-    title: "Re-Piping Services in Summerlin, NV | Red Carpet Plumbing",
+    title: "Repiping Services in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Professional re-piping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled. NV #0048585A. (702) 567-9172.",
+      "Professional repiping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled. NV #0048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/re-piping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -81,7 +81,7 @@ const SUMMERLIN_REPIPE_FAQS = [
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides whole-house and partial re-piping throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. From aging copper supply lines in original 1990s village homes to polybutylene and Kitec replacement, our licensed plumbers repipe Summerlin homes with permits pulled and inspections scheduled. NV Contractor License #0048585A.";
+  "Red Carpet Plumbing provides whole-house and partial repiping throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. From aging copper supply lines in original 1990s village homes to polybutylene and Kitec replacement, our licensed plumbers repipe Summerlin homes with permits pulled and inspections scheduled. NV Contractor License #0048585A.";
 
 const HERO_TRUST_ITEMS = [
   "NV Licensed, #0048585A",
@@ -119,11 +119,11 @@ const PIPE_MATERIALS = [
   },
   {
     heading: "Hard Water Mineral Corrosion Across All Summerlin Eras",
-    body: "Regardless of build era, all Summerlin homes receive the same Las Vegas Valley hard water supply. The combination of mineral corrosion, caliche soil movement beneath slab foundations, and closed-loop system pressure cycling creates ongoing pipe stress throughout Summerlin. Homes where a professional assessment identifies system-wide pipe thinning, regardless of pipe vintage, are re-piping candidates.",
+    body: "Regardless of build era, all Summerlin homes receive the same Las Vegas Valley hard water supply. The combination of mineral corrosion, caliche soil movement beneath slab foundations, and closed-loop system pressure cycling creates ongoing pipe stress throughout Summerlin. Homes where a professional assessment identifies system-wide pipe thinning, regardless of pipe vintage, are repiping candidates.",
   },
 ];
 
-// Section 4 — re-piping services (bold label + body).
+// Section 4 — repiping services (bold label + body).
 const REPIPE_SERVICES = [
   {
     label: "Whole-house repiping",
@@ -207,7 +207,7 @@ const RELATED_SERVICES = [
     href: "/summerlin/slab-leak-detection-repair/",
   },
   {
-    label: "Re-Piping in Las Vegas",
+    label: "Repiping in Las Vegas",
     href: "/las-vegas/re-piping/",
   },
 ];
@@ -215,9 +215,9 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Re-Piping Services in Summerlin, NV | Red Carpet Plumbing",
+  name: "Repiping Services in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides whole-house and partial re-piping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled.",
+    "Red Carpet Plumbing provides whole-house and partial repiping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled.",
   url: "https://redcarpetplumbing.com/summerlin/re-piping/",
   isPartOf: {
     "@type": "WebSite",
@@ -245,7 +245,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Re-Piping Services in Summerlin",
+      name: "Repiping Services in Summerlin",
       item: "https://redcarpetplumbing.com/summerlin/re-piping/",
     },
   ],
@@ -254,10 +254,10 @@ const breadcrumbSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Re-Piping Services in Summerlin, NV",
-  serviceType: "Re-Piping",
+  name: "Repiping Services in Summerlin, NV",
+  serviceType: "Repiping",
   description:
-    "Red Carpet Plumbing provides whole-house and partial re-piping for Summerlin homes, including copper, polybutylene, Kitec, galvanized, PEX, and copper repiping with permits pulled and inspections scheduled.",
+    "Red Carpet Plumbing provides whole-house and partial repiping for Summerlin homes, including copper, polybutylene, Kitec, galvanized, PEX, and copper repiping with permits pulled and inspections scheduled.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -284,9 +284,9 @@ const serviceSchema = {
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How Red Carpet Plumbing Handles Re-Piping in Summerlin",
+  name: "How Red Carpet Plumbing Handles Repiping in Summerlin",
   description:
-    "The process Red Carpet Plumbing follows for re-piping projects in Summerlin, NV.",
+    "The process Red Carpet Plumbing follows for repiping projects in Summerlin, NV.",
   step: REPIPE_STEPS.map((s, i) => ({
     "@type": "HowToStep",
     position: i + 1,
@@ -328,12 +328,12 @@ export default function SummerlinRePipingPage() {
               label: "Summerlin Plumbing Services",
               href: "/summerlin-plumbing-services/",
             },
-            { label: "Re-Piping Services in Summerlin" },
+            { label: "Repiping Services in Summerlin" },
           ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>
-              Re-Piping Services
+              Repiping Services
               <br /> in Summerlin, NV
             </>
           }
@@ -348,10 +348,10 @@ export default function SummerlinRePipingPage() {
             href: "/contact/",
           }}
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
-          formSlot={<QuoteFormPlaceholder title="Get Re-Piping Help" />}
+          formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           backgroundImage={{
             src: "/images/services/re-piping/hero.webp",
-            alt: "Re-piping services in Summerlin, NV",
+            alt: "Repiping services in Summerlin, NV",
           }}
         />
 
@@ -360,7 +360,7 @@ export default function SummerlinRePipingPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
               <h2 className="text-2xl tracking-tight text-brand-dark sm:text-3xl">
-                Re-Piping Services in Summerlin
+                Repiping Services in Summerlin
               </h2>
               {/* FLAG: "over 40 years" claim below — verify before publishing. */}
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
@@ -371,7 +371,7 @@ export default function SummerlinRePipingPage() {
                 40 years.
               </p>
               <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                We provide whole-house and partial re-piping throughout Summerlin,
+                We provide whole-house and partial repiping throughout Summerlin,
                 replacing aging copper, polybutylene, Kitec, and galvanized pipe
                 with PEX or copper installed to current code. Permits are pulled
                 and inspections scheduled as part of every whole-house repipe.
@@ -384,13 +384,13 @@ export default function SummerlinRePipingPage() {
                 >
                   Summerlin plumbing services
                 </Link>{" "}
-                page. For re-piping information across the Las Vegas Valley, visit
+                page. For repiping information across the Las Vegas Valley, visit
                 our{" "}
                 <Link
                   href="/re-piping/"
                   className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
-                  re-piping services
+                  repiping services
                 </Link>{" "}
                 page.
               </p>
@@ -398,7 +398,7 @@ export default function SummerlinRePipingPage() {
 
             <div className="mt-12">
               <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
-                Signs Your Summerlin Home May Need Re-Piping
+                Signs Your Summerlin Home May Need Repiping
               </h3>
               <div className="mt-6 rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
                 <ul className="space-y-3">
@@ -441,7 +441,7 @@ export default function SummerlinRePipingPage() {
                 Summerlin&apos;s development history creates a clear picture of
                 which pipe materials are present by neighborhood era. Understanding
                 what is in your home&apos;s walls is the first step in evaluating
-                whether re-piping is the right decision.
+                whether repiping is the right decision.
               </p>
             </div>
             <div className="mt-10 space-y-6">
@@ -467,7 +467,7 @@ export default function SummerlinRePipingPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Re-Piping Services We Provide in Summerlin
+                Repiping Services We Provide in Summerlin
               </h2>
             </div>
             <ul className="mt-10 space-y-5">
@@ -545,7 +545,7 @@ export default function SummerlinRePipingPage() {
               <SectionRevealItem>
                 <div className="text-left">
                   <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                    Our Re-Piping Process in Summerlin
+                    Our Repiping Process in Summerlin
                   </h2>
                 </div>
               </SectionRevealItem>
@@ -580,7 +580,7 @@ export default function SummerlinRePipingPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Why Summerlin Homeowners Choose Red Carpet Plumbing for Re-Piping
+                Why Summerlin Homeowners Choose Red Carpet Plumbing for Repiping
               </h2>
             </div>
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -628,7 +628,7 @@ export default function SummerlinRePipingPage() {
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Frequently Asked Questions
-                <br className="hidden sm:block" /> About Re-Piping in Summerlin
+                <br className="hidden sm:block" /> About Repiping in Summerlin
               </h2>
             </div>
             <div className="mt-12 space-y-4">
@@ -679,8 +679,8 @@ export default function SummerlinRePipingPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline={<>Schedule Re-Piping Service<br />in Summerlin Today</>}
-          body="Red Carpet Plumbing provides whole-house and partial re-piping throughout Summerlin, NV, including Summerlin North, Summerlin South, The Hills, The Trails, The Arbors, The Canyons, and all Summerlin villages. Permits pulled and inspections scheduled. Call (702) 567-9172 or request service online."
+          headline={<>Schedule Repiping Service<br />in Summerlin Today</>}
+          body="Red Carpet Plumbing provides whole-house and partial repiping throughout Summerlin, NV, including Summerlin North, Summerlin South, The Hills, The Trails, The Arbors, The Canyons, and all Summerlin villages. Permits pulled and inspections scheduled. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

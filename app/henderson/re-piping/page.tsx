@@ -24,14 +24,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 // AggregateRating (Guardrail 4) and hasCredential.
 
 export const metadata: Metadata = {
-  title: "Re-Piping Services in Henderson, NV | Red Carpet Plumbing",
+  title: "Repiping Services in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Professional re-piping services in Henderson, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe throughout Henderson. Serving Green Valley, Lake Las Vegas, and all Henderson communities. Permits pulled.",
+    "Professional repiping services in Henderson, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe throughout Henderson. Serving Green Valley, Lake Las Vegas, and all Henderson communities. Permits pulled.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/re-piping/",
   },
   openGraph: {
-    title: "Re-Piping Services in Henderson, NV | Red Carpet Plumbing",
+    title: "Repiping Services in Henderson, NV | Red Carpet Plumbing",
     description:
       "Whole-house and partial repiping throughout Henderson, NV. Green Valley polybutylene and copper replacement. Green Valley Ranch Kitec replacement. Permits pulled. Licensed plumbers.",
     url: "https://redcarpetplumbing.com/henderson/re-piping/",
@@ -226,9 +226,9 @@ const COMMUNITIES: { name: string; href?: string }[] = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Re-Piping Services in Henderson, NV | Red Carpet Plumbing",
+  name: "Repiping Services in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Professional re-piping services in Henderson, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe. Serving Green Valley, Lake Las Vegas, and all Henderson communities. Permits pulled.",
+    "Professional repiping services in Henderson, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe. Serving Green Valley, Lake Las Vegas, and all Henderson communities. Permits pulled.",
   url: "https://redcarpetplumbing.com/henderson/re-piping/",
   isPartOf: {
     "@type": "WebSite",
@@ -256,7 +256,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Re-Piping",
+      name: "Repiping",
       item: "https://redcarpetplumbing.com/henderson/re-piping/",
     },
   ],
@@ -265,10 +265,10 @@ const breadcrumbSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Re-Piping Services",
-  serviceType: "Re-Piping",
+  name: "Repiping Services",
+  serviceType: "Repiping",
   description:
-    "Professional re-piping services in Henderson, NV. Red Carpet Plumbing provides whole-house and partial repiping, polybutylene replacement, Kitec replacement, galvanized replacement, and PEX or copper installation throughout Henderson.",
+    "Professional repiping services in Henderson, NV. Red Carpet Plumbing provides whole-house and partial repiping, polybutylene replacement, Kitec replacement, galvanized replacement, and PEX or copper installation throughout Henderson.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -333,12 +333,12 @@ export default function HendersonRePipingPage() {
               label: "Henderson Plumbing",
               href: "/henderson-plumbing-services/",
             },
-            { label: "Re-Piping" },
+            { label: "Repiping" },
           ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>
-              Re-Piping Services
+              Repiping Services
               <br /> in Henderson, NV
             </>
           }
@@ -356,7 +356,7 @@ export default function HendersonRePipingPage() {
           formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           backgroundImage={{
             src: "/images/services/re-piping/hero.webp",
-            alt: "re-piping service in Henderson, NV",
+            alt: "repiping service in Henderson, NV",
           }}
         />
 
@@ -405,7 +405,7 @@ export default function HendersonRePipingPage() {
                   href="/re-piping/"
                   className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
-                  re-piping services
+                  repiping services
                 </Link>
                 .
               </p>
@@ -653,7 +653,7 @@ export default function HendersonRePipingPage() {
                 href="/las-vegas/re-piping/"
                 className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
               >
-                Las Vegas re-piping
+                Las Vegas repiping
               </Link>{" "}
               page.
             </p>
@@ -703,7 +703,7 @@ export default function HendersonRePipingPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline={<>Re-Piping Services<br />Throughout Henderson, NV</>}
+          headline={<>Repiping Services<br />Throughout Henderson, NV</>}
           body="Red Carpet Plumbing provides professional repiping services throughout Henderson, including whole-house and partial repipes, polybutylene replacement, Kitec replacement, and PEX or copper installation for Green Valley, Green Valley Ranch, Lake Las Vegas, and all Henderson communities. Permits pulled and inspections scheduled as part of every whole-house project."
           primaryCTA={{
             label: "Call (702) 567-9172",

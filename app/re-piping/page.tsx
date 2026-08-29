@@ -12,14 +12,14 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Re-Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
     "Red Carpet Plumbing provides whole-house and partial repiping in Las Vegas and the Las Vegas Valley. PEX and copper repiping, polybutylene and Kitec replacement. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/re-piping/",
   },
   openGraph: {
-    title: "Re-Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+    title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
       "Red Carpet Plumbing provides whole-house and partial repiping in Las Vegas and the Las Vegas Valley. PEX and copper repiping, polybutylene and Kitec replacement. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/re-piping/",
@@ -245,8 +245,8 @@ const RELATED_SERVICES: RelatedService[] = [
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Re-Piping Services",
-  serviceType: "Re-Piping",
+  name: "Repiping Services",
+  serviceType: "Repiping",
   description:
     "Red Carpet Plumbing provides whole-house and partial repiping services for homes and businesses throughout the Las Vegas Valley, including polybutylene pipe replacement, Kitec pipe replacement, galvanized steel pipe replacement, PEX repiping, and copper repiping.",
   provider: {
@@ -300,7 +300,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Re-Piping",
+      name: "Repiping",
       item: "https://redcarpetplumbing.com/re-piping/",
     },
   ],
@@ -323,7 +323,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Re-Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
     "Red Carpet Plumbing provides whole-house and partial repiping throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/re-piping/",
@@ -363,12 +363,12 @@ export default function RePipingServicesPage() {
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
-            { label: "Re-Piping" },
+            { label: "Repiping" },
           ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>
-              Re-Piping Services
+              Repiping Services
               <br className="hidden sm:block" /> in Las Vegas, NV
             </>
           }
@@ -461,7 +461,7 @@ export default function RePipingServicesPage() {
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
                   <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                    Re-Piping Services
+                    Repiping Services
                     <br className="hidden sm:block" /> in Las Vegas
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-brand-dark/80">
@@ -610,7 +610,7 @@ export default function RePipingServicesPage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
               <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
-                Re-Piping Service Areas
+                Repiping Service Areas
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/85">
                 Red Carpet Plumbing provides repiping services throughout the
@@ -699,7 +699,7 @@ export default function RePipingServicesPage() {
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Frequently Asked Questions
-                <br className="hidden sm:block" /> About Re-Piping in Las Vegas
+                <br className="hidden sm:block" /> About Repiping in Las Vegas
               </h2>
             </div>
             <div className="mt-12 space-y-4">

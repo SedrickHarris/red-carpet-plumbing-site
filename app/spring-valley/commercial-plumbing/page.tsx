@@ -59,7 +59,7 @@ const SV_COMMERCIAL_FAQS = [
     question:
       "What commercial plumbing services are available in Spring Valley, NV?",
     answer:
-      "Red Carpet Plumbing provides commercial plumbing repair, installation, and maintenance throughout Spring Valley including commercial drain cleaning and hydro jetting, grease trap and floor drain service, commercial water heater repair and installation, commercial leak detection and repair, commercial sewer line services, backflow prevention installation and testing, commercial pipe repair and re-piping, and emergency commercial plumbing response. All work is performed under Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+      "Red Carpet Plumbing provides commercial plumbing repair, installation, and maintenance throughout Spring Valley including commercial drain cleaning and hydro jetting, grease trap and floor drain service, commercial water heater repair and installation, commercial leak detection and repair, commercial sewer line services, backflow prevention installation and testing, commercial pipe repair and repiping, and emergency commercial plumbing response. All work is performed under Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
   },
   {
     question:
@@ -179,7 +179,7 @@ const COMMERCIAL_SERVICES: {
     href: "/backflow-prevention/",
   },
   {
-    title: "Commercial Pipe Repair and Re-Piping",
+    title: "Commercial Pipe Repair and Repiping",
     description:
       "Repair and replacement of aging or failing supply lines, drain lines, and commercial pipe systems in Spring Valley businesses and multi-unit buildings. Older commercial buildings in the Desert Inn and West Sahara corridors may have original galvanized supply lines that require full replacement rather than spot repair.",
     href: "/spring-valley/re-piping/",

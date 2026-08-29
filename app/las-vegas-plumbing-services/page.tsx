@@ -105,11 +105,11 @@ const LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Sewer line services in Las Vegas",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     href: "/las-vegas/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
-    imageAlt: "Re-piping services in Las Vegas",
+    imageAlt: "Repiping services in Las Vegas",
   },
   {
     title: "Water Heater Repair and Installation",
@@ -365,7 +365,7 @@ export default function LasVegasPlumbingServicesPage() {
               <br /> in Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides residential and commercial plumbing services throughout Las Vegas, Nevada. From emergency plumbing and drain cleaning to water heater repair, slab leak detection, and re-piping, our licensed plumbers serve homes and businesses across Las Vegas. NV Contractor License #0048585A."
+          subheading="Red Carpet Plumbing provides residential and commercial plumbing services throughout Las Vegas, Nevada. From emergency plumbing and drain cleaning to water heater repair, slab leak detection, and repiping, our licensed plumbers serve homes and businesses across Las Vegas. NV Contractor License #0048585A."
           trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
