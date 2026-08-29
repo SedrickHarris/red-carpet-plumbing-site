@@ -239,6 +239,11 @@ const HENDERSON_SEWER_FAQS = [
     answer:
       "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement throughout Henderson, NV, including Green Valley, Green Valley Ranch, Seven Hills, MacDonald Ranch, Anthem, Tuscany Village, Inspirada, Whitney Ranch, Lake Las Vegas, and Downtown Henderson. We also serve all neighboring Las Vegas Valley communities. Contact us to confirm coverage for your location.",
   },
+  {
+    question: "Do you offer same-day sewer line service in Henderson?",
+    answer:
+      "Same-day sewer line service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

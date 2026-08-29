@@ -258,6 +258,11 @@ const NLV_SLAB_FAQS = [
     answer:
       "Slab leak repair costs vary based on the location of the leak, the pipe material, the repair method selected, and the extent of concrete work required. Red Carpet Plumbing provides transparent pricing after detection and before any repair work begins. Call (702) 567-9172 for more information.",
   },
+  {
+    question: "Do you offer same-day slab leak repair service in North Las Vegas?",
+    answer:
+      "Same-day slab leak repair service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const webpageSchema = {

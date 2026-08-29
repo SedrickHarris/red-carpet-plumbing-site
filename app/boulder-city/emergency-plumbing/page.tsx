@@ -88,6 +88,11 @@ const BC_EMERGENCY_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service throughout Boulder City including historic downtown, the King Street and Nevada Way corridors, and newer Boulder City neighborhoods. Call (702) 567-9172 to confirm coverage for your address.",
   },
+  {
+    question: "Do you offer same-day emergency plumbing service in Boulder City?",
+    answer:
+      "Same-day emergency plumbing service is available in Boulder City, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

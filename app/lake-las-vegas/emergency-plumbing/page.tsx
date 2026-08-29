@@ -204,6 +204,11 @@ const LLV_EMERGENCY_FAQS = [
     answer:
       "Plumbing permits for Lake Las Vegas properties are issued by the City of Henderson, which is the governing jurisdiction for the Lake Las Vegas community. Red Carpet Plumbing holds Nevada Contractor License #0048585A and works within City of Henderson permit and inspection requirements.",
   },
+  {
+    question: "Do you offer same-day emergency plumbing service in Lake Las Vegas?",
+    answer:
+      "Same-day emergency plumbing service is available in Lake Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

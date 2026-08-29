@@ -94,6 +94,11 @@ const SUMMERLIN_EMERGENCY_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides slab leak detection and emergency repair throughout Summerlin. Slab leaks are a particular concern in older Summerlin villages where 1990s copper supply lines have experienced decades of hard water mineral corrosion and caliche soil movement. We use non-invasive detection equipment to locate slab leaks before any opening of floors or walls. For full information, see our slab leak detection and repair page.",
   },
+  {
+    question: "Do you offer same-day emergency plumbing service in Summerlin?",
+    answer:
+      "Same-day emergency plumbing service is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

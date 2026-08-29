@@ -97,6 +97,11 @@ const LV_CAMERA_FAQS = [
     answer:
       "A pipe belly is a section of sewer line that has sagged below the surrounding grade, creating a low point where waste and water collect instead of flowing through. In Las Vegas, caliche soil and uneven desert ground conditions contribute to pipe belly formation, particularly in older sewer lines. A camera inspection shows these low spots in real time, and the sonde locator can mark the surface position of the sag for targeted repair.",
   },
+  {
+    question: "Do you offer same-day camera inspection service in Las Vegas?",
+    answer:
+      "Same-day camera inspection service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

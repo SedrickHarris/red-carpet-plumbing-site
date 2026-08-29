@@ -97,6 +97,11 @@ const LV_GAS_LINE_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides emergency gas line service throughout Las Vegas. If you smell gas or suspect an active leak, leave the building immediately and call Southwest Gas first. Once the utility clears the area, call us at (702) 567-9172 and we will dispatch a licensed plumber for the inspection, repair, and safety verification. We are licensed for gas line work under NV C-1 License #0048585A and serve Las Vegas, Henderson, Summerlin, Paradise, and surrounding communities.",
   },
+  {
+    question: "Do you offer same-day gas line service in Las Vegas?",
+    answer:
+      "Same-day gas line service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

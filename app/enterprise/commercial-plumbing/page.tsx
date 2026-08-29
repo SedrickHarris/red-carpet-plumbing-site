@@ -88,6 +88,11 @@ const ENTERPRISE_COMMERCIAL_FAQS = [
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For commercial plumbing emergencies in Enterprise, calling directly is the fastest option.",
   },
+  {
+    question: "Do you offer same-day commercial plumbing service in Enterprise?",
+    answer:
+      "Same-day commercial plumbing service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

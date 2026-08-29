@@ -96,6 +96,11 @@ const LV_SEWER_FAQS = [
     answer:
       "Ignoring a sewer backup allows sewage to back up into the home or business, which creates a health hazard, damages flooring and walls, and can require extensive cleanup and remediation. A recurring sewer backup that is only partially cleared by cable cleaning will worsen over time, especially if the underlying cause is root intrusion, pipe damage, or a collapsed section. Addressing a sewer problem early, before a full backup occurs, is significantly less costly than emergency cleanup and repair after a sewage overflow.",
   },
+  {
+    question: "Do you offer same-day sewer line service in Las Vegas?",
+    answer:
+      "Same-day sewer line service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

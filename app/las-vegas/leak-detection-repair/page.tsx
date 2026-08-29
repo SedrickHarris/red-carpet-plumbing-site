@@ -76,6 +76,11 @@ const LV_LEAK_FAQS = [
     answer:
       "A slab leak is a leak in water or sewer pipes running beneath the concrete foundation of a home. Signs include warm spots on floors, running water sounds when fixtures are off, and unexplained water bill increases. A wall leak is a leak inside the wall cavity from supply lines, drain lines, or connections behind finished surfaces. Signs include damp spots, discoloration, bubbling paint, and musty odors. Both require professional detection equipment to locate precisely.",
   },
+  {
+    question: "Do you offer same-day leak detection service in Las Vegas?",
+    answer:
+      "Same-day leak detection service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // Warning signs (visible list).

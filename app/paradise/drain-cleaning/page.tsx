@@ -80,6 +80,11 @@ const PARADISE_DRAIN_FAQS = [
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online at our contact page. For emergency drain backups in Paradise, calling directly is the fastest option.",
   },
+  {
+    question: "Do you offer same-day drain cleaning service in Paradise?",
+    answer:
+      "Same-day drain cleaning service is available in Paradise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

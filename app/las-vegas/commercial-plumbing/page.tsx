@@ -85,6 +85,11 @@ const LV_COMMERCIAL_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services for property managers overseeing multi-unit residential buildings, mixed-use properties, and commercial facilities throughout Las Vegas. We handle everything from individual unit repairs to shared sewer line maintenance, riser pipe inspection, and water heater replacement. Our licensed status under NV #0048585A supports permit compliance requirements for managed properties.",
   },
+  {
+    question: "Do you offer same-day commercial plumbing service in Las Vegas?",
+    answer:
+      "Same-day commercial plumbing service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

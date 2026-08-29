@@ -77,6 +77,11 @@ const HENDERSON_EMERGENCY_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service for both residential and commercial properties throughout Henderson.",
   },
+  {
+    question: "Do you offer same-day emergency plumbing service in Henderson?",
+    answer:
+      "Same-day emergency plumbing service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // Common emergency problems (bold label + description). Slab leaks lead because

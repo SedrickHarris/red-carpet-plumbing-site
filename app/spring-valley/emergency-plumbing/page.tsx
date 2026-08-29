@@ -92,6 +92,11 @@ const SV_EMERGENCY_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service for both residential and commercial properties throughout Spring Valley. Call (702) 567-9172 for commercial emergency response.",
   },
+  {
+    question: "Do you offer same-day emergency plumbing service in Spring Valley?",
+    answer:
+      "Same-day emergency plumbing service is available in Spring Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

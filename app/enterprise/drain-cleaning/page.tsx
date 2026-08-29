@@ -83,6 +83,11 @@ const ENT_DRAIN_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. Enterprise is an unincorporated Clark County community, and our license covers plumbing work throughout Clark County including Enterprise.",
   },
+  {
+    question: "Do you offer same-day drain cleaning service in Enterprise?",
+    answer:
+      "Same-day drain cleaning service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

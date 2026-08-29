@@ -77,6 +77,11 @@ const NLV_DRAIN_FAQS = [
     answer:
       "Drain cleaning costs vary based on the type of drain, severity of the clog, and the method required. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
   },
+  {
+    question: "Do you offer same-day drain cleaning service in North Las Vegas?",
+    answer:
+      "Same-day drain cleaning service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // Why North Las Vegas drains clog (bold label + description). Galvanized pipe

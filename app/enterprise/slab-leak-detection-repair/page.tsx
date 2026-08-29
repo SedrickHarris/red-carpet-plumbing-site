@@ -86,6 +86,11 @@ const ENT_SLAB_FAQS = [
     answer:
       "Detection typically takes a few hours. Spot repair through concrete usually takes one to two days including concrete patching. Pipe rerouting typically takes one to three days depending on the complexity of the plumbing layout. Epoxy lining timelines vary based on pipe length and configuration. Red Carpet Plumbing will give you a timeline estimate before work begins.",
   },
+  {
+    question: "Do you offer same-day slab leak repair service in Enterprise?",
+    answer:
+      "Same-day slab leak repair service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

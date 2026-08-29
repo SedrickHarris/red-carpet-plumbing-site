@@ -97,6 +97,11 @@ const LV_TOILET_FAQS = [
     answer:
       "If your toilet is overflowing and will not stop, locate the shutoff valve at the base of the toilet and turn it clockwise to stop the water supply. If the valve is inaccessible or not working, turn off the main water supply to the home. Do not continue to flush. Call Red Carpet Plumbing at (702) 567-9172. A toilet overflow that cannot be controlled with the shutoff valve may indicate a blockage in the main sewer line. See our Las Vegas emergency plumbing page for more information.",
   },
+  {
+    question: "Do you offer same-day toilet repair service in Las Vegas?",
+    answer:
+      "Same-day toilet repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

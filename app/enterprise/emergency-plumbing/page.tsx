@@ -87,6 +87,11 @@ const ENT_EMERGENCY_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service for both residential and commercial properties throughout Enterprise and the Southwest Las Vegas area, including commercial parks and industrial properties along the 215 Beltway corridor. Call (702) 567-9172 for commercial emergency response.",
   },
+  {
+    question: "Do you offer same-day emergency plumbing service in Enterprise?",
+    answer:
+      "Same-day emergency plumbing service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

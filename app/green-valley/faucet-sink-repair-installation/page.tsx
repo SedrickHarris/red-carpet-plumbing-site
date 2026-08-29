@@ -239,6 +239,11 @@ const GV_FAUCET_SINK_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides faucet and sink repair and installation throughout Green Valley and the Henderson area. Green Valley is a community within the incorporated City of Henderson, and our Nevada Contractor License #0048585A covers plumbing work throughout Henderson including Green Valley and surrounding neighborhoods. Call (702) 567-9172 to request service or confirm coverage for your address.",
   },
+  {
+    question: "Do you offer same-day faucet and sink repair service in Green Valley?",
+    answer:
+      "Same-day faucet and sink repair service is available in Green Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

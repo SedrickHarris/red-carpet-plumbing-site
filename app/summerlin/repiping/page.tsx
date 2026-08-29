@@ -78,6 +78,11 @@ const SUMMERLIN_REPIPE_FAQS = [
     answer:
       "A documented whole-house repipe with closed permits and final inspection sign-off removes a significant concern for home buyers and inspectors. Summerlin original village homes with known defective materials such as polybutylene or Kitec, or with aging copper pipe systems that have produced multiple leaks, can face challenges during the sale process. A completed repipe with proper permits and documentation provides buyers with confidence in the plumbing system and can support the home's value in the transaction.",
   },
+  {
+    question: "Do you offer same-day repiping service in Summerlin?",
+    answer:
+      "Same-day repiping service is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

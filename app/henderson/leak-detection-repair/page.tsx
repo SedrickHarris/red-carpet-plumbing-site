@@ -81,6 +81,11 @@ const HENDERSON_LEAK_FAQS = [
     answer:
       "Yes. A small hidden leak inside a wall can promote mold growth within 24 to 48 hours and can damage wood framing, drywall, insulation, and flooring over weeks and months without any visible sign above the surface. An underground supply line leak can waste hundreds of gallons per month and create soil saturation conditions near the foundation. Early detection and repair limits damage and reduces total repair cost.",
   },
+  {
+    question: "Do you offer same-day leak detection service in Henderson?",
+    answer:
+      "Same-day leak detection service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

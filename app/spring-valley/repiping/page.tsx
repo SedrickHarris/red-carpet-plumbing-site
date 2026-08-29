@@ -79,6 +79,11 @@ const SV_REPIPE_FAQS = [
     answer:
       "Red Carpet Plumbing primarily uses PEX and Type L copper for residential repiping in Spring Valley. PEX is flexible, scale-resistant, and well-suited to Las Vegas hard water conditions, and is the most common replacement material for whole-house repipes. Copper is a proven, durable material that provides excellent water quality. The right choice for your Spring Valley home depends on your existing plumbing layout, household needs, and budget. We explain the options for each project before any work begins.",
   },
+  {
+    question: "Do you offer same-day repiping service in Spring Valley?",
+    answer:
+      "Same-day repiping service is available in Spring Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

@@ -98,6 +98,11 @@ const LV_FAUCET_SINK_FAQS = [
     answer:
       "Leaks under a sink are most commonly caused by a loose or corroded drain connection, a failing P-trap seal, a worn supply line, or a deteriorated shut-off valve. In older Las Vegas homes, original supply lines and shut-off valves may be corroded from years of hard water exposure and can fail when disturbed during a faucet repair or replacement. A plumber should inspect under-sink connections as part of any faucet or sink service.",
   },
+  {
+    question: "Do you offer same-day faucet and sink repair service in Las Vegas?",
+    answer:
+      "Same-day faucet and sink repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

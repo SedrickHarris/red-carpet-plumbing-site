@@ -281,6 +281,11 @@ const ALIANTE_LEAK_FAQS = [
     answer:
       "Most leak detection visits for a single suspected leak in a residential home take between one and two hours depending on the type of leak, how accessible the plumbing is, and how clearly the symptoms point to a specific area. Underground supply line leaks and slab leak detection may take longer depending on the size of the property and the number of zones that need to be tested.",
   },
+  {
+    question: "Do you offer same-day leak detection service in the Aliante Area of North Las Vegas?",
+    answer:
+      "Same-day leak detection service is available in the Aliante Area of North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

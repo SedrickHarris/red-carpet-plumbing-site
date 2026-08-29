@@ -192,6 +192,11 @@ const LLV_WH_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides water heater repair, replacement, and installation for homes throughout Lake Las Vegas as part of its Henderson, NV service area. Call (702) 567-9172 to schedule service.",
   },
+  {
+    question: "Do you offer same-day water heater repair service in Lake Las Vegas?",
+    answer:
+      "Same-day water heater repair service is available in Lake Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

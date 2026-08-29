@@ -93,6 +93,11 @@ const ALIANTE_DRAIN_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides professional drain cleaning for homes throughout the Aliante area of North Las Vegas, including the Aliante Parkway area, Ann Road Corridor, Deer Springs Way area, Elkhorn Road area, and surrounding northwest North Las Vegas neighborhoods. Call (702) 567-9172 to schedule service.",
   },
+  {
+    question: "Do you offer same-day drain cleaning service in the Aliante Area of North Las Vegas?",
+    answer:
+      "Same-day drain cleaning service is available in the Aliante Area of North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

@@ -238,6 +238,11 @@ const ALIANTE_EMERGENCY_FAQS = [
     answer:
       "The time required depends on the type and severity of the problem. A burst pipe repair or shutoff valve replacement may be completed in a single visit. A slab leak may require additional time for detection, diagnosis, and a decision about repair options. Red Carpet Plumbing will explain the process and timeline before any work begins.",
   },
+  {
+    question: "Do you offer same-day emergency plumbing service in the Aliante Area of North Las Vegas?",
+    answer:
+      "Same-day emergency plumbing service is available in the Aliante Area of North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

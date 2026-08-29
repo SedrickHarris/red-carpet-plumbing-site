@@ -82,6 +82,11 @@ const HENDERSON_WH_FAQS = [
     answer:
       "A thermal expansion tank absorbs the pressure created when a water heater heats water in a closed-loop plumbing system. Most Henderson homes operate on a closed-loop system due to backflow preventers at the street meter. Clark County plumbing code and most manufacturer warranties require a thermal expansion tank on closed-loop installations. If your water heater was installed without one, Red Carpet Plumbing can add it.",
   },
+  {
+    question: "Do you offer same-day water heater repair service in Henderson?",
+    answer:
+      "Same-day water heater repair service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // Why Henderson water heaters need service (bold label + description). The

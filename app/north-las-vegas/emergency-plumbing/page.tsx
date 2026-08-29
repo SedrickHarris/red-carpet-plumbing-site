@@ -80,6 +80,11 @@ const NLV_EMERGENCY_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service for residential and commercial properties throughout North Las Vegas, including businesses and facilities along Craig Road, Cheyenne Avenue, and the Losee Road industrial corridor.",
   },
+  {
+    question: "Do you offer same-day emergency plumbing service in North Las Vegas?",
+    answer:
+      "Same-day emergency plumbing service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // Common emergency problems (bold label + description). The two-vintage housing

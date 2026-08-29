@@ -243,6 +243,11 @@ const GV_EMERGENCY_FAQS = [
     answer:
       "Red Carpet Plumbing serves Green Valley as part of its Henderson, NV service area, which also includes Lake Las Vegas and the broader Henderson community. We also serve Las Vegas, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, and Boulder City throughout the Las Vegas Valley.",
   },
+  {
+    question: "Do you offer same-day emergency plumbing service in Green Valley?",
+    answer:
+      "Same-day emergency plumbing service is available in Green Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const webpageSchema = {

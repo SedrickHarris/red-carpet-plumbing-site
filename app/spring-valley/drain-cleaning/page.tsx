@@ -78,6 +78,11 @@ const SV_DRAIN_FAQS = [
     answer:
       "Spring Valley is an unincorporated community in Clark County, Nevada. Plumbing permits and inspections in Spring Valley are handled through Clark County, not the City of Las Vegas. Red Carpet Plumbing holds NV License #0048585A and works within the applicable Clark County permit process for your address.",
   },
+  {
+    question: "Do you offer same-day drain cleaning service in Spring Valley?",
+    answer:
+      "Same-day drain cleaning service is available in Spring Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =
