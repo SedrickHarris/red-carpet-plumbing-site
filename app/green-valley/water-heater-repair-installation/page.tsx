@@ -182,7 +182,7 @@ const GV_WH_SERVICES: {
   {
     label: "Repiping support",
     body: "For original Green Valley homes where aging copper supply lines are contributing to water quality or pressure problems at the water heater, our licensed plumbers can assess whether repiping is needed alongside the water heater replacement.",
-    link: { href: "/green-valley/re-piping/", text: "repiping services" },
+    link: { href: "/green-valley/repiping/", text: "repiping services" },
   },
 ];
 

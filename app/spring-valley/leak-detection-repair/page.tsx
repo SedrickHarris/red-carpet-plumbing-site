@@ -231,7 +231,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Repiping",
-    href: "/spring-valley/re-piping/",
+    href: "/spring-valley/repiping/",
   },
   {
     label: "Commercial Plumbing",

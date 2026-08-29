@@ -197,7 +197,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Repiping",
-    href: "/summerlin/re-piping/",
+    href: "/summerlin/repiping/",
   },
   {
     label: "Emergency Plumbing in Las Vegas",

@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   description:
     "Red Carpet Plumbing provides whole-house and partial repiping in Las Vegas and the Las Vegas Valley. PEX and copper repiping, polybutylene and Kitec replacement. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   alternates: {
-    canonical: "https://redcarpetplumbing.com/re-piping/",
+    canonical: "https://redcarpetplumbing.com/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
       "Red Carpet Plumbing provides whole-house and partial repiping in Las Vegas and the Las Vegas Valley. PEX and copper repiping, polybutylene and Kitec replacement. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
-    url: "https://redcarpetplumbing.com/re-piping/",
+    url: "https://redcarpetplumbing.com/repiping/",
     siteName: "Red Carpet Plumbing",
     type: "website",
   },
@@ -96,49 +96,49 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
     title: "Whole-House Repiping",
     description:
       "Whole-house repiping replaces all supply lines throughout the home from the main water line through to each fixture connection. This is the most comprehensive solution for homes with aging, failing, or defective pipe materials. Red Carpet Plumbing performs whole-house repipes using PEX or copper depending on the home's specific conditions and the homeowner's preferences.",
-    href: "/re-piping/whole-house/",
+    href: "/repiping/whole-house/",
   },
   {
     title: "Partial Repiping",
     description:
       "When only a section of the plumbing system is failing or has been identified as a problem material, partial repiping replaces the affected lines without repiping the entire home. Partial repipes are common when a specific area of the home, such as the kitchen supply lines or the hot water distribution system, has developed recurring problems.",
-    href: "/re-piping/partial/",
+    href: "/repiping/partial/",
   },
   {
     title: "Polybutylene Pipe Replacement",
     description:
       "Polybutylene pipe was widely used in homes built from the mid-1970s through the mid-1990s. It is known to degrade over time, particularly in the presence of chlorinated water, and can fail without warning causing sudden flooding. If your home has polybutylene pipes, replacement is strongly recommended. Red Carpet Plumbing replaces polybutylene with PEX or copper to eliminate the risk of sudden failure.",
-    href: "/re-piping/polybutylene-replacement/",
+    href: "/repiping/polybutylene-replacement/",
   },
   {
     title: "Kitec Pipe Replacement",
     description:
       "Kitec plumbing was installed in Las Vegas area homes primarily between the late 1990s and mid-2000s. It was recalled and banned due to brass fittings that corrode in the presence of minerals in water, causing leaks at the fitting connections. Many Las Vegas homes still have Kitec plumbing. Kitec pipe replacement eliminates the risk of fitting failures and the water damage that follows.",
-    href: "/re-piping/kitec-replacement/",
+    href: "/repiping/kitec-replacement/",
   },
   {
     title: "Galvanized Steel Pipe Replacement",
     description:
       "Homes built before 1975 often have galvanized steel supply lines. Galvanized pipes corrode from the inside out, narrowing the pipe interior, reducing water pressure and water quality, and eventually failing. In Las Vegas, the hard water accelerates galvanized pipe corrosion significantly. Red Carpet Plumbing replaces galvanized steel with PEX or copper to restore full flow, water quality, and pressure.",
-    href: "/re-piping/galvanized-replacement/",
+    href: "/repiping/galvanized-replacement/",
   },
   {
     title: "PEX Repiping",
     description:
       "PEX is a flexible, cross-linked polyethylene pipe that is a common choice for whole-house repipes. It resists scale buildup from hard water, handles temperature changes well, requires fewer fittings than rigid pipe, and is faster to install with less drywall disruption. In Las Vegas, PEX pipe runs through attic spaces require proper insulation because attic temperatures can exceed 150 degrees Fahrenheit. Red Carpet Plumbing installs PEX to current Clark County code including required insulation.",
-    href: "/re-piping/pex/",
+    href: "/repiping/pex/",
   },
   {
     title: "Copper Repiping",
     description:
       "Copper has been a trusted plumbing material for generations. It is durable, long-lasting, naturally resistant to bacteria growth, and provides excellent water quality. For Las Vegas homeowners who prefer a proven material, copper repiping is a long-term investment in the plumbing system. Red Carpet Plumbing installs Type L copper, the standard for residential plumbing in the Las Vegas Valley.",
-    href: "/re-piping/copper/",
+    href: "/repiping/copper/",
   },
   {
     title: "Commercial Repiping",
     description:
       "Red Carpet Plumbing provides repiping services for commercial buildings, multi-unit residential properties, and HOA communities throughout the Las Vegas Valley. Commercial repiping projects require coordination with building management and code-compliant materials for the occupancy type. We work with commercial property managers and building owners to minimize disruption to occupants during the repiping process.",
-    href: "/re-piping/commercial/",
+    href: "/repiping/commercial/",
   },
 ];
 
@@ -181,16 +181,16 @@ const REPIPING_STEPS = [
 ];
 
 const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
-  { name: "Las Vegas", href: "/las-vegas/re-piping/" },
-  { name: "Henderson", href: "/henderson/re-piping/" },
+  { name: "Las Vegas", href: "/las-vegas/repiping/" },
+  { name: "Henderson", href: "/henderson/repiping/" },
   { name: "North Las Vegas" },
   { name: "Aliante Area" },
-  { name: "Summerlin", href: "/summerlin/re-piping/" },
+  { name: "Summerlin", href: "/summerlin/repiping/" },
   { name: "Paradise" },
-  { name: "Spring Valley", href: "/spring-valley/re-piping/" },
-  { name: "Enterprise", href: "/enterprise/re-piping/" },
+  { name: "Spring Valley", href: "/spring-valley/repiping/" },
+  { name: "Enterprise", href: "/enterprise/repiping/" },
   { name: "Boulder City" },
-  { name: "Green Valley", href: "/green-valley/re-piping/" },
+  { name: "Green Valley", href: "/green-valley/repiping/" },
   { name: "Lake Las Vegas" },
 ];
 
@@ -301,7 +301,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Repiping",
-      item: "https://redcarpetplumbing.com/re-piping/",
+      item: "https://redcarpetplumbing.com/repiping/",
     },
   ],
 };
@@ -326,7 +326,7 @@ const webpageSchema = {
   name: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
     "Red Carpet Plumbing provides whole-house and partial repiping throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
-  url: "https://redcarpetplumbing.com/re-piping/",
+  url: "https://redcarpetplumbing.com/repiping/",
   isPartOf: {
     "@type": "WebSite",
     name: "Red Carpet Plumbing",

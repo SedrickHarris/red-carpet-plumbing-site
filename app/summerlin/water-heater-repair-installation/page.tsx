@@ -136,7 +136,7 @@ const WH_SIGNS = [
 ];
 
 // Section 5 — water heater services (bold label + body). The gas/electric item
-// carries an inline link to the built /re-piping/ core page.
+// carries an inline link to the built /repiping/ core page.
 const WH_SERVICES: {
   label: string;
   body: string;
@@ -169,7 +169,7 @@ const WH_SERVICES: {
   {
     label: "Gas and electric water heater service",
     body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under NV License #0048585A. For homes that may need broader pipe assessment alongside water heater service, see our",
-    link: { href: "/summerlin/re-piping/", text: "repiping" },
+    link: { href: "/summerlin/repiping/", text: "repiping" },
   },
 ];
 
@@ -231,7 +231,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Repiping",
-    href: "/summerlin/re-piping/",
+    href: "/summerlin/repiping/",
   },
   {
     label: "Water Heater Repair and Installation in Las Vegas",

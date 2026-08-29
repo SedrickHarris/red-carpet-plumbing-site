@@ -485,7 +485,7 @@ export default function HendersonSlabLeakPage() {
               </article>
 
               {/* Pipe rerouting card */}
-              {/* ACTIVATED: /henderson/re-piping/ built (P16) */}
+              {/* ACTIVATED: /henderson/repiping/ built (P16) */}
               <article className="rounded-2xl bg-white p-6 ring-1 ring-brand-surface-alt sm:p-8">
                 <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                   Pipe Rerouting
@@ -501,7 +501,7 @@ export default function HendersonSlabLeakPage() {
                   removes the source of future slab leaks on the affected line.
                   Learn more about our{" "}
                   <Link
-                    href="/henderson/re-piping/"
+                    href="/henderson/repiping/"
                     className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     Henderson repiping

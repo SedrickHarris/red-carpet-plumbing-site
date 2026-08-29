@@ -36,13 +36,13 @@ export const metadata: Metadata = {
   description:
     "Red Carpet Plumbing provides whole-house and partial repiping in Enterprise, NV. Copper, Kitec, and polybutylene replacement for Rhodes Ranch and Mountain's Edge homes. Clark County permits pulled. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
-    canonical: "https://redcarpetplumbing.com/enterprise/re-piping/",
+    canonical: "https://redcarpetplumbing.com/enterprise/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Enterprise, NV | Red Carpet Plumbing",
     description:
       "Whole-house and partial repiping throughout Enterprise, NV. First-service-cycle copper replacement, Kitec replacement, and polybutylene replacement for Southwest Las Vegas homes. Clark County permits pulled. Licensed plumbers.",
-    url: "https://redcarpetplumbing.com/enterprise/re-piping/",
+    url: "https://redcarpetplumbing.com/enterprise/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
     type: "website",
@@ -230,7 +230,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Repiping in Las Vegas",
-    href: "/las-vegas/re-piping/",
+    href: "/las-vegas/repiping/",
   },
 ];
 
@@ -240,7 +240,7 @@ const webpageSchema = {
   name: "Repiping Services in Enterprise, NV | Red Carpet Plumbing",
   description:
     "Red Carpet Plumbing provides whole-house and partial repiping in Enterprise, NV. Copper, Kitec, and polybutylene replacement for Southwest Las Vegas homes. Clark County permits pulled.",
-  url: "https://redcarpetplumbing.com/enterprise/re-piping/",
+  url: "https://redcarpetplumbing.com/enterprise/repiping/",
   isPartOf: {
     "@type": "WebSite",
     name: "Red Carpet Plumbing",
@@ -268,7 +268,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 3,
       name: "Repiping Services in Enterprise",
-      item: "https://redcarpetplumbing.com/enterprise/re-piping/",
+      item: "https://redcarpetplumbing.com/enterprise/repiping/",
     },
   ],
 };
@@ -457,7 +457,7 @@ export default function EnterpriseRePipingPage() {
                     For repiping information across the Las Vegas Valley, visit
                     our{" "}
                     <Link
-                      href="/re-piping/"
+                      href="/repiping/"
                       className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                     >
                       repiping services

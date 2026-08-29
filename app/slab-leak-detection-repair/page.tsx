@@ -227,7 +227,7 @@ const RELATED_SERVICES: RelatedService[] = [
     title: "Repiping",
     description:
       "Whole-home and commercial repiping to replace aging, corroded, or failing pipe systems.",
-    href: "/re-piping/",
+    href: "/repiping/",
     image: "/images/services/re-piping/hero.webp",
     imageAlt: "Professional repiping service for a Las Vegas home",
     built: true,

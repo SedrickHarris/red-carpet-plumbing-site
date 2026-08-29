@@ -121,7 +121,7 @@ Images/
 | Images/services/gas-line-plumbing/ | 5 |
 | Images/services/leak-detection-repair/ | 5 |
 | Images/services/plumbing-fixture-repair-replacement-installation/ (NEW) | 6 |
-| Images/services/re-piping/ | 6 |
+| Images/services/repiping/ | 6 |
 | Images/services/slab-leak-detection-repair/ | 6 |
 | Images/services/toilet-repair-installation/ | 5 |
 | Images/services/trenchless-piping/ (NEW) | 5 |
@@ -149,7 +149,7 @@ Images/
 | `Images/services/Garbage Disposal/` | `Images/services/garbage-disposal-repair-installation/` | Match approved-list slug |
 | `Images/services/Natural Gas/` | `Images/services/gas-line-plumbing/` | Match approved-list slug |
 | `Images/services/Plumbing Fixtures/` | `Images/services/plumbing-fixture-repair-replacement-installation/` | **NEW** — added as approved service per override |
-| `Images/services/Re-Piping/` | `Images/services/re-piping/` | Lowercase |
+| `Images/services/Re-Piping/` | `Images/services/repiping/` | Lowercase |
 | `Images/services/Sink Repair Services/` | `Images/services/faucet-sink-repair-installation/` | Match approved-list slug |
 | `Images/services/Slab Leak/` | `Images/services/slab-leak-detection-repair/` | Match approved-list slug |
 | `Images/services/Toilet Repair/` | `Images/services/toilet-repair-installation/` | Match approved-list slug |
@@ -391,7 +391,7 @@ Files grouped by proposed target folder. All paths shown relative to `Images/`.
 - `services\Plumbing Fixtures\shharris0117_Editorial-style_image_of_a_professional_plumber_in_9c33a9be-245e-4706-b586-8ce401581b49.webp`
 - `services\Plumbing Fixtures\shharris0117_High-resolution_editorial-style_image_of_a_stylish_da714c6c-1948-48a5-a202-2be349a48659.webp`
 
-### Images/services/re-piping/ (6 files)
+### Images/services/repiping/ (6 files)
 
 - `services\re-piping-services.webp`
 - `services\Re-Piping\shharris0117_Editorial-style_close-up_image_of_corroded_or_rust_3fe4d2bc-4140-4198-84c8-8f73d53a418b.webp`

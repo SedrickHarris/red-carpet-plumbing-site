@@ -226,7 +226,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Repiping",
-    href: "/summerlin/re-piping/",
+    href: "/summerlin/repiping/",
   },
   {
     label: "Leak Detection and Repair in Las Vegas",

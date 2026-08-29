@@ -147,7 +147,7 @@ const GV_SLAB_CAUSES: { title: string; body: string }[] = [
 // ---------------------------------------------------------------------------
 // Repair options — Section 5. Three H3 article cards.
 // Spot repair links to /water-pipe-repair-replacement/.
-// Rerouting links to the built /green-valley/re-piping/ route.
+// Rerouting links to the built /green-valley/repiping/ route.
 // Epoxy has no link.
 // ---------------------------------------------------------------------------
 const REPAIR_OPTIONS: {
@@ -171,8 +171,8 @@ const REPAIR_OPTIONS: {
     heading: "Pipe rerouting",
     body: "Pipe rerouting bypasses the damaged section entirely by running a new supply line through walls, ceilings, or accessible above-slab pathways, removing the aging pipe from beneath the foundation. For original Green Valley homes where copper or polybutylene supply lines have been thinned by 30 to 45 years of hard water exposure, rerouting is often the more durable long-term solution because it eliminates the source of future slab leaks on that line.",
     linkPre: " See our ",
-    // ACTIVATED: /green-valley/re-piping/ (P34) built and committed.
-    linkHref: "/green-valley/re-piping/",
+    // ACTIVATED: /green-valley/repiping/ (P34) built and committed.
+    linkHref: "/green-valley/repiping/",
     linkText: "Green Valley repiping services",
     linkPost:
       " for homes where the full supply system may be approaching similar age and condition.",
@@ -207,7 +207,7 @@ const GV_SLAB_STEPS: { name: string; body: string }[] = [
 
 // ---------------------------------------------------------------------------
 // Related services block. All Green Valley sibling routes (P30-P34) are built
-// and linked, including /green-valley/re-piping/.
+// and linked, including /green-valley/repiping/.
 // ---------------------------------------------------------------------------
 const RELATED_SERVICES: { label: string; href?: string }[] = [
   {
@@ -238,8 +238,8 @@ const RELATED_SERVICES: { label: string; href?: string }[] = [
     label: "Green Valley Water Heater Repair",
     href: "/green-valley/water-heater-repair-installation/",
   },
-  // ACTIVATED: /green-valley/re-piping/ (P34) built and committed.
-  { label: "Green Valley Repiping", href: "/green-valley/re-piping/" },
+  // ACTIVATED: /green-valley/repiping/ (P34) built and committed.
+  { label: "Green Valley Repiping", href: "/green-valley/repiping/" },
 ];
 
 // ---------------------------------------------------------------------------

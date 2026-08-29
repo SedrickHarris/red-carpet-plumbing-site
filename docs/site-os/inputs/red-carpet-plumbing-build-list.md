@@ -492,7 +492,7 @@ Recommended internal links:
 
 URL:
 
-`/re-piping/`
+`/repiping/`
 
 H1:
 
@@ -500,11 +500,11 @@ H1:
 
 Recommended internal links:
 
-- `/las-vegas/re-piping/`
-- `/henderson/re-piping/`
-- `/summerlin/re-piping/`
-- `/green-valley/re-piping/`
-- `/enterprise/re-piping/`
+- `/las-vegas/repiping/`
+- `/henderson/repiping/`
+- `/summerlin/repiping/`
+- `/green-valley/repiping/`
+- `/enterprise/repiping/`
 - `/contact/`
 
 ---
@@ -698,7 +698,7 @@ Links to:
 - `/las-vegas/leak-detection-repair/`
 - `/las-vegas/slab-leak-detection-repair/`
 - `/las-vegas/sewer-line-services/`
-- `/las-vegas/re-piping/`
+- `/las-vegas/repiping/`
 - `/las-vegas/commercial-plumbing/`
 - Tier 2 Las Vegas neighborhood pages
 - `/contact/`
@@ -722,7 +722,7 @@ Links to:
 - `/henderson/water-heater-repair-installation/`
 - `/henderson/leak-detection-repair/`
 - `/henderson/slab-leak-detection-repair/`
-- `/henderson/re-piping/`
+- `/henderson/repiping/`
 - `/green-valley-plumbing-services/`
 - `/lake-las-vegas-plumbing-services/`
 - `/henderson/seven-hills-plumbing/`
@@ -793,7 +793,7 @@ Links to:
 - `/summerlin/water-heater-repair-installation/`
 - `/summerlin/leak-detection-repair/`
 - `/summerlin/slab-leak-detection-repair/`
-- `/summerlin/re-piping/`
+- `/summerlin/repiping/`
 - `/summerlin/summerlin-north-plumbing/`
 - `/summerlin/summerlin-south-plumbing/`
 - `/contact/`
@@ -838,7 +838,7 @@ Links to:
 - `/enterprise/drain-cleaning/`
 - `/enterprise/water-heater-repair-installation/`
 - `/enterprise/leak-detection-repair/`
-- `/enterprise/re-piping/`
+- `/enterprise/repiping/`
 - `/enterprise/southwest-las-vegas-plumbing/`
 - `/enterprise/commercial-parks-plumbing/`
 - `/contact/`
@@ -880,7 +880,7 @@ Links to:
 - `/green-valley/water-heater-repair-installation/`
 - `/green-valley/leak-detection-repair/`
 - `/green-valley/slab-leak-detection-repair/`
-- `/green-valley/re-piping/`
+- `/green-valley/repiping/`
 - `/henderson-plumbing-services/`
 - `/contact/`
 
@@ -938,7 +938,7 @@ Build these pages after the core service pages and Tier 1 location hubs are in p
 - `/las-vegas/leak-detection-repair/`
 - `/las-vegas/slab-leak-detection-repair/`
 - `/las-vegas/sewer-line-services/`
-- `/las-vegas/re-piping/`
+- `/las-vegas/repiping/`
 - `/las-vegas/water-pipe-repair-replacement/`
 - `/las-vegas/gas-line-plumbing/`
 - `/las-vegas/commercial-plumbing/`
@@ -956,7 +956,7 @@ Build these pages after the core service pages and Tier 1 location hubs are in p
 - `/henderson/leak-detection-repair/`
 - `/henderson/slab-leak-detection-repair/`
 - `/henderson/sewer-line-services/`
-- `/henderson/re-piping/`
+- `/henderson/repiping/`
 - `/henderson/water-pipe-repair-replacement/`
 - `/henderson/gas-line-plumbing/`
 - `/henderson/commercial-plumbing/`
@@ -973,7 +973,7 @@ Build these pages after the core service pages and Tier 1 location hubs are in p
 - `/north-las-vegas/leak-detection-repair/`
 - `/north-las-vegas/slab-leak-detection-repair/`
 - `/north-las-vegas/sewer-line-services/`
-- `/north-las-vegas/re-piping/`
+- `/north-las-vegas/repiping/`
 - `/north-las-vegas/water-pipe-repair-replacement/`
 - `/north-las-vegas/commercial-plumbing/`
 - `/north-las-vegas/toilet-repair-installation/`
@@ -998,7 +998,7 @@ Build these pages after the core service pages and Tier 1 location hubs are in p
 - `/summerlin/leak-detection-repair/`
 - `/summerlin/slab-leak-detection-repair/`
 - `/summerlin/sewer-line-services/`
-- `/summerlin/re-piping/`
+- `/summerlin/repiping/`
 - `/summerlin/water-pipe-repair-replacement/`
 - `/summerlin/gas-line-plumbing/`
 - `/summerlin/toilet-repair-installation/`
@@ -1013,7 +1013,7 @@ Build these pages after the core service pages and Tier 1 location hubs are in p
 - `/spring-valley/leak-detection-repair/`
 - `/spring-valley/slab-leak-detection-repair/`
 - `/spring-valley/sewer-line-services/`
-- `/spring-valley/re-piping/`
+- `/spring-valley/repiping/`
 - `/spring-valley/commercial-plumbing/`
 
 ## 5.7 Enterprise Service-Location Pages
@@ -1024,7 +1024,7 @@ Build these pages after the core service pages and Tier 1 location hubs are in p
 - `/enterprise/leak-detection-repair/`
 - `/enterprise/slab-leak-detection-repair/`
 - `/enterprise/sewer-line-services/`
-- `/enterprise/re-piping/`
+- `/enterprise/repiping/`
 - `/enterprise/commercial-plumbing/`
 
 ## 5.8 Boulder City Service-Location Pages
@@ -1040,7 +1040,7 @@ Build these pages after the core service pages and Tier 1 location hubs are in p
 - `/green-valley/water-heater-repair-installation/`
 - `/green-valley/leak-detection-repair/`
 - `/green-valley/slab-leak-detection-repair/`
-- `/green-valley/re-piping/`
+- `/green-valley/repiping/`
 - `/green-valley/toilet-repair-installation/`
 - `/green-valley/faucet-sink-repair-installation/`
 
@@ -1212,7 +1212,7 @@ The homepage should link to:
 - `/leak-detection-repair/`
 - `/slab-leak-detection-repair/`
 - `/sewer-line-services/`
-- `/re-piping/`
+- `/repiping/`
 - `/commercial-plumbing/`
 
 ### Tier 1 Location Hubs
@@ -1314,7 +1314,7 @@ Example: Summerlin hub links to:
 - `/summerlin/water-heater-repair-installation/`
 - `/summerlin/leak-detection-repair/`
 - `/summerlin/slab-leak-detection-repair/`
-- `/summerlin/re-piping/`
+- `/summerlin/repiping/`
 - `/summerlin/summerlin-north-plumbing/`
 - `/summerlin/summerlin-south-plumbing/`
 - `/las-vegas-plumbing-services/`
@@ -1573,7 +1573,7 @@ This helps users, crawlers, and long-tail index discovery.
 - `/water-heater-repair-installation/`
 - `/slab-leak-detection-repair/`
 - `/sewer-line-services/`
-- `/re-piping/`
+- `/repiping/`
 - `/water-pipe-repair-replacement/`
 - `/gas-line-plumbing/`
 - `/commercial-plumbing/`

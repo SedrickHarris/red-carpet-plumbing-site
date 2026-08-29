@@ -136,7 +136,7 @@ const COMMERCIAL_SERVICES: ServiceTypeCard[] = [
     title: "Commercial Pipe Repair and Repiping",
     description:
       "Repair and replacement of aging or failing supply lines, drain lines, and commercial pipe systems in businesses and multi-unit buildings.",
-    href: "/re-piping/",
+    href: "/repiping/",
   },
   {
     title: "Grease Trap and Floor Drain Service",

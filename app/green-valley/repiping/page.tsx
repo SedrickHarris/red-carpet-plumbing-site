@@ -24,7 +24,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 // Green Valley is a community within the incorporated City of Henderson — never
 // described as a city or unincorporated community.
 // NOTE: /green-valley/slab-leak-detection-repair/ (P33) is built, and its
-// rerouting and related-services links to /green-valley/re-piping/ are active.
+// rerouting and related-services links to /green-valley/repiping/ are active.
 
 export const metadata: Metadata = {
   title: "Repiping Services in Green Valley, Henderson, NV | Red Carpet Plumbing",
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
   description:
     "Whole-house and partial repiping in Green Valley, Henderson, NV. Polybutylene, Kitec, and aging copper pipe replacement. PEX and copper. Permits pulled. Call (702) 567-9172.",
   alternates: {
-    canonical: "https://redcarpetplumbing.com/green-valley/re-piping/",
+    canonical: "https://redcarpetplumbing.com/green-valley/repiping/",
   },
   openGraph: {
     title:
       "Repiping Services in Green Valley, Henderson, NV | Red Carpet Plumbing",
     description:
       "Licensed repiping for original Green Valley and Green Valley Ranch homes. Polybutylene, Kitec, aging copper replacement. PEX and copper installations. Permits pulled. Call (702) 567-9172.",
-    url: "https://redcarpetplumbing.com/green-valley/re-piping/",
+    url: "https://redcarpetplumbing.com/green-valley/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
     type: "website",
@@ -128,7 +128,7 @@ const GV_PIPE_MATERIALS: { title: string; body: string }[] = [
 
 // ---------------------------------------------------------------------------
 // Service cards — Section 4. Non-linked descriptive cards (built={false})
-// matching the established pattern on core /re-piping/ and all sibling pages.
+// matching the established pattern on core /repiping/ and all sibling pages.
 // No route assignments for these cards — they are descriptive only.
 // ---------------------------------------------------------------------------
 const GV_REPIPE_SERVICES = [
@@ -204,8 +204,8 @@ const RELATED_SERVICES: { label: string; href: string }[] = [
     label: "Henderson Plumbing Services",
     href: "/henderson-plumbing-services/",
   },
-  { label: "Repiping Services", href: "/re-piping/" },
-  { label: "Henderson Repiping", href: "/henderson/re-piping/" },
+  { label: "Repiping Services", href: "/repiping/" },
+  { label: "Henderson Repiping", href: "/henderson/repiping/" },
   {
     label: "Green Valley Slab Leak Detection and Repair",
     href: "/green-valley/slab-leak-detection-repair/",
@@ -279,7 +279,7 @@ const webpageSchema = {
   name: "Repiping Services in Green Valley, Henderson, NV | Red Carpet Plumbing",
   description:
     "Red Carpet Plumbing provides whole-house and partial repiping services for homes in Green Valley, Henderson, NV. Polybutylene, Kitec, galvanized, and aging copper pipe replacement. PEX and copper installations. Permits pulled.",
-  url: "https://redcarpetplumbing.com/green-valley/re-piping/",
+  url: "https://redcarpetplumbing.com/green-valley/repiping/",
   isPartOf: {
     "@type": "WebSite",
     name: "Red Carpet Plumbing",
@@ -307,7 +307,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 3,
       name: "Repiping in Green Valley",
-      item: "https://redcarpetplumbing.com/green-valley/re-piping/",
+      item: "https://redcarpetplumbing.com/green-valley/repiping/",
     },
   ],
 };
@@ -462,7 +462,7 @@ export default function GreenValleyRePipingPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 For a broader overview, see our{" "}
                 <Link
-                  href="/re-piping/"
+                  href="/repiping/"
                   className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   repiping services
@@ -700,7 +700,7 @@ export default function GreenValleyRePipingPage() {
             <p className="mt-8 text-base leading-7 text-brand-dark/80">
               For Henderson-wide repiping services, see our{" "}
               <Link
-                href="/henderson/re-piping/"
+                href="/henderson/repiping/"
                 className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Henderson repiping

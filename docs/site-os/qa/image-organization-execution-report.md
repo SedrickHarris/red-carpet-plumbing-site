@@ -88,7 +88,7 @@ All 19 below were flagged in the v2 audit's "Files Flagged For duplicates-review
 | `Images/services/gas-line-plumbing/` | 5 |
 | `Images/services/leak-detection-repair/` | 5 |
 | `Images/services/plumbing-fixture-repair-replacement-installation/` | 6 |
-| `Images/services/re-piping/` | 6 |
+| `Images/services/repiping/` | 6 |
 | `Images/services/slab-leak-detection-repair/` | 6 |
 | `Images/services/toilet-repair-installation/` | 5 |
 | `Images/services/trenchless-piping/` | 5 |

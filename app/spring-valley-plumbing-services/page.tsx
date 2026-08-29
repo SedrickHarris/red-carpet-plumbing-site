@@ -112,7 +112,7 @@ const SPRING_VALLEY_FEATURED_SERVICES: ServiceLink[] = [
   },
   {
     title: "Repiping",
-    href: "/spring-valley/re-piping/",
+    href: "/spring-valley/repiping/",
     image:
       "/images/services/re-piping/hero.webp",
     imageAlt: "Repiping services in Spring Valley",

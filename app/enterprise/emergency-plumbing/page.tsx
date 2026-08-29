@@ -275,7 +275,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Repiping",
-    href: "/enterprise/re-piping/",
+    href: "/enterprise/repiping/",
   },
   {
     label: "Commercial Plumbing",

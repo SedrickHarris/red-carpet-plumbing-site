@@ -65,7 +65,7 @@
 | 35 | `Images/professional-gas-line-installation-in-progress-red-carpet-plumbing-las-vegas.webp` | `Images/services\Natural Gas\Professional Gas Line Installation in Progress  Red Carpet Plumbing Las Vegas.webp` | 358.3 KB | Root-level duplicate of organized subfolder file. Subfolder copy preferred per rule. |
 | 36 | `Images/professional-plumbing-team-certified-plumbers-red-carpet-plumbing-las-vegas.webp` | `Images/services\Drain Cleaning Services\Professional Plumbing Team  Certified Plumbers  Red Carpet Plumbing Las Vegas.webp` | 318.9 KB | Root-level duplicate of organized subfolder file. Subfolder copy preferred per rule. |
 | 37 | `Images/range-of-backflow-preventer-devices-rpz-double-check-valves-red-carpet-plumbing.webp` | `Images/services\Backflow Prevention Services\Range of Backflow Preventer Devices  RPZ, Double Check Valves  Red Carpet Plumbing Las Vegas.webp` | 363.9 KB | Root-level duplicate of organized subfolder file. Subfolder copy preferred per rule. |
-| 38 | `Images/re-piping-services.webp` | `Images/services\re-piping-services.webp` | 339.1 KB | Root-level duplicate of organized subfolder file. Subfolder copy preferred per rule. |
+| 38 | `Images/repiping-services.webp` | `Images/services\re-piping-services.webp` | 339.1 KB | Root-level duplicate of organized subfolder file. Subfolder copy preferred per rule. |
 | 39 | `Images/safe-gas-line-installation-with-safety-gear-red-carpet-plumbing-las-vegas.webp` | `Images/services\Natural Gas\Safe Gas Line Installation with Safety Gear  Red Carpet Plumbing Las Vegas.webp` | 50.9 KB | Root-level duplicate of organized subfolder file. Subfolder copy preferred per rule. |
 | 40 | `Images/shharris0117close-upeditorial-styleimageofaprofessionalp692ed471-1d95-47b2-9a58.webp` | `Images/services\Water Meter\shharris0117_Close-up_editorial-style_image_of_a_professional_p_692ed471-1d95-47b2-9a58-a6919894ac18.webp` | 20.8 KB | Root-level duplicate of organized subfolder file. Subfolder copy preferred per rule. |
 | 41 | `Images/shharris0117editorial-styleactionshotofthepipeburstingm7d06f03d-2eb3-4fb9-9eab-e.webp` | `Images/services\Trenchless Piping\shharris0117_Editorial-style_action_shot_of_the_pipe_bursting_m_7d06f03d-2eb3-4fb9-9eab-ebdccad5fe1d.webp` | 22 KB | Root-level duplicate of organized subfolder file. Subfolder copy preferred per rule. |
@@ -235,7 +235,7 @@
 - **Hash:** `84D732E662F837D6B1368A310FCA851DD59DFBD716D0F0A963DE52A39202D221`
 - **Kept:** `Images/services\re-piping-services.webp`
 - **All copies:**
-  - `Images/re-piping-services.webp`
+  - `Images/repiping-services.webp`
   - `Images/services\re-piping-services.webp` (keep)
   - `Images/services\Re-Piping\shharris0117_Editorial-style_photo_of_a_licensed_plumber_in_nav_cc67b215-6cbb-4eb8-8a74-81d82dcac4b3.webp`
   - `Images/shharris0117editorial-stylephotoofalicensedplumberinnavcc67b215-6cbb-4eb8-8a74-8.webp`
@@ -1006,7 +1006,7 @@
 - `Images/professional-gas-line-installation-in-progress-red-carpet-plumbing-las-vegas.webp` (kept: `Images/services\Natural Gas\Professional Gas Line Installation in Progress  Red Carpet Plumbing Las Vegas.webp`)
 - `Images/professional-plumbing-team-certified-plumbers-red-carpet-plumbing-las-vegas.webp` (kept: `Images/services\Drain Cleaning Services\Professional Plumbing Team  Certified Plumbers  Red Carpet Plumbing Las Vegas.webp`)
 - `Images/range-of-backflow-preventer-devices-rpz-double-check-valves-red-carpet-plumbing.webp` (kept: `Images/services\Backflow Prevention Services\Range of Backflow Preventer Devices  RPZ, Double Check Valves  Red Carpet Plumbing Las Vegas.webp`)
-- `Images/re-piping-services.webp` (kept: `Images/services\re-piping-services.webp`)
+- `Images/repiping-services.webp` (kept: `Images/services\re-piping-services.webp`)
 - `Images/safe-gas-line-installation-with-safety-gear-red-carpet-plumbing-las-vegas.webp` (kept: `Images/services\Natural Gas\Safe Gas Line Installation with Safety Gear  Red Carpet Plumbing Las Vegas.webp`)
 - `Images/shharris0117close-upeditorial-styleimageofaprofessionalp692ed471-1d95-47b2-9a58.webp` (kept: `Images/services\Water Meter\shharris0117_Close-up_editorial-style_image_of_a_professional_p_692ed471-1d95-47b2-9a58-a6919894ac18.webp`)
 - `Images/shharris0117editorial-styleactionshotofthepipeburstingm7d06f03d-2eb3-4fb9-9eab-e.webp` (kept: `Images/services\Trenchless Piping\shharris0117_Editorial-style_action_shot_of_the_pipe_bursting_m_7d06f03d-2eb3-4fb9-9eab-ebdccad5fe1d.webp`)

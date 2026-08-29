@@ -132,7 +132,7 @@ const WH_SIGNS = [
 ];
 
 // Section 5 — water heater services (bold label + body). The tankless item
-// carries an inline link to the built /re-piping/ core page.
+// carries an inline link to the built /repiping/ core page.
 const WH_SERVICES: {
   label: string;
   body: string;
@@ -161,7 +161,7 @@ const WH_SERVICES: {
   {
     label: "Tankless water heater installation",
     body: "For homeowners considering a tankless water heater upgrade, we install tankless units to current Clark County code including proper venting on gas units. Tankless water heaters can last 15 to 20 years with proper maintenance. For homes that may need broader pipe assessment alongside water heater work, see our",
-    link: { href: "/spring-valley/re-piping/", text: "repiping" },
+    link: { href: "/spring-valley/repiping/", text: "repiping" },
   },
 ];
 
@@ -222,7 +222,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Repiping",
-    href: "/spring-valley/re-piping/",
+    href: "/spring-valley/repiping/",
   },
   {
     label: "Commercial Plumbing",

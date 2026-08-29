@@ -84,7 +84,7 @@ class string with 7 of these 8. A global substitution would have hit all 50.
 | `app/drain-cleaning/page.tsx` | 419 | bar article | Signs to Call a Plumber Now |
 | `app/emergency-plumbing/page.tsx` | 428 | bar article | Situations That Require Immediate Attention |
 | `app/leak-detection-repair/page.tsx` | 421 | bar article | Warning Signs to Call a Plumber |
-| `app/re-piping/page.tsx` | 422 | bar article | Signs Your Plumbing May Need to Be Replaced |
+| `app/repiping/page.tsx` | 422 | bar article | Signs Your Plumbing May Need to Be Replaced |
 | `app/sewer-line-services/page.tsx` | 417 | bar article | Signs to Call a Plumber |
 | `app/slab-leak-detection-repair/page.tsx` | 423 | bar article | Warning Signs of a Slab Leak |
 | `app/water-heater-repair-installation/page.tsx` | 432 | bar article | Signs You May Need Repair |

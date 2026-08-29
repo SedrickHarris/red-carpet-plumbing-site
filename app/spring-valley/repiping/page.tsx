@@ -27,13 +27,13 @@ export const metadata: Metadata = {
   description:
     "Professional repiping services in Spring Valley, NV. Red Carpet Plumbing replaces galvanized, polybutylene, Kitec, and aging copper pipe throughout Spring Valley. PEX and copper repiping. Permits pulled through Clark County. Licensed plumbers.",
   alternates: {
-    canonical: "https://redcarpetplumbing.com/spring-valley/re-piping/",
+    canonical: "https://redcarpetplumbing.com/spring-valley/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Spring Valley, NV | Red Carpet Plumbing",
     description:
       "Whole-house and partial repiping throughout Spring Valley, NV. Galvanized, polybutylene, Kitec, and copper pipe replacement. Clark County permits pulled. Licensed plumbers.",
-    url: "https://redcarpetplumbing.com/spring-valley/re-piping/",
+    url: "https://redcarpetplumbing.com/spring-valley/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
     type: "website",
@@ -94,7 +94,7 @@ const HERO_TRUST_ITEMS = [
 ];
 
 // Section 3 — pipe material guide (four visible H3 blocks). The galvanized card
-// closes with an inline link to the built core /re-piping/ page.
+// closes with an inline link to the built core /repiping/ page.
 const PIPE_MATERIALS: {
   heading: string;
   body: string;
@@ -106,7 +106,7 @@ const PIPE_MATERIALS: {
     body: "Galvanized steel supply lines were the standard material in Las Vegas Valley homes built before approximately 1975, and they remained in use in some construction through the late 1980s. Northern Spring Valley neighborhoods along the Desert Inn and West Sahara corridors have a high concentration of these older homes. Over decades of exposure to Las Vegas hard water, the zinc coating on galvanized steel pipes wears away and the pipe corrodes from the inside out. As corrosion advances, the pipe interior develops a rough, narrowing surface that reduces water pressure and water quality. Reduced water pressure throughout the home, discolored water, and a metallic taste are the most common indicators. Unlike copper pipe failures, galvanized pipe failures can occur suddenly without prior visible external signs. For Spring Valley homes with original galvanized supply lines, a full system evaluation is warranted.",
     link: {
       pre: " For our full repiping service overview, see our ",
-      href: "/re-piping/",
+      href: "/repiping/",
       text: "repiping services",
       post: " page.",
     },
@@ -225,7 +225,7 @@ const webpageSchema = {
   name: "Repiping Services in Spring Valley, NV | Red Carpet Plumbing",
   description:
     "Red Carpet Plumbing provides repiping services in Spring Valley, NV. Galvanized, polybutylene, Kitec, and copper pipe replacement. Clark County permits pulled. Licensed plumbers.",
-  url: "https://redcarpetplumbing.com/spring-valley/re-piping/",
+  url: "https://redcarpetplumbing.com/spring-valley/repiping/",
   isPartOf: {
     "@type": "WebSite",
     name: "Red Carpet Plumbing",
@@ -253,7 +253,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 3,
       name: "Repiping Services in Spring Valley",
-      item: "https://redcarpetplumbing.com/spring-valley/re-piping/",
+      item: "https://redcarpetplumbing.com/spring-valley/repiping/",
     },
   ],
 };
@@ -658,7 +658,7 @@ export default function SpringValleyRePipingPage() {
             <p className="mt-8 text-base leading-7 text-brand-dark/80">
               For repiping services across the Las Vegas Valley, see our{" "}
               <Link
-                href="/las-vegas/re-piping/"
+                href="/las-vegas/repiping/"
                 className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
                 Las Vegas repiping

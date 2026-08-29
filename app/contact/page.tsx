@@ -119,7 +119,7 @@ const SERVICE_QUICK_LINKS = [
     href: "/slab-leak-detection-repair/",
   },
   { label: "Sewer Line Services", href: "/sewer-line-services/" },
-  { label: "Repiping", href: "/re-piping/" },
+  { label: "Repiping", href: "/repiping/" },
   {
     label: "Water Pipe Repair and Replacement",
     href: "/water-pipe-repair-replacement/",

@@ -181,7 +181,7 @@ const BC_WH_SERVICES: {
     // "...see our repiping services page." exactly as approved.
     label: "Gas and electric water heater service",
     body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under NV License #0048585A. For Boulder City homes that may need broader pipe assessment alongside water heater service, see our ",
-    link: { href: "/re-piping/", text: "repiping services page" },
+    link: { href: "/repiping/", text: "repiping services page" },
   },
 ];
 

@@ -157,7 +157,7 @@ others, plus the untracked `docs/site-os/reports/` directory.
 | `app/boulder-city/water-heater-repair-installation/page.tsx` | 1 |
 | `app/enterprise-plumbing-services/page.tsx` | 1 |
 | `app/enterprise/commercial-plumbing/page.tsx` | 1 |
-| `app/enterprise/re-piping/page.tsx` | 1 |
+| `app/enterprise/repiping/page.tsx` | 1 |
 | `app/green-valley-plumbing-services/page.tsx` | 1 |
 | `app/henderson-plumbing-services/page.tsx` | 1 |
 | `app/lake-las-vegas-plumbing-services/page.tsx` | 1 |

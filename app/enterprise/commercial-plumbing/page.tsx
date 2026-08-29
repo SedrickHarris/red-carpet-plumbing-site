@@ -229,7 +229,7 @@ const RELATED_SERVICES = [
   { href: "/enterprise/leak-detection-repair/", text: "Enterprise leak detection and repair" },
   { href: "/enterprise/slab-leak-detection-repair/", text: "Enterprise slab leak detection and repair" },
   { href: "/enterprise/water-heater-repair-installation/", text: "Enterprise water heater repair and installation" },
-  { href: "/enterprise/re-piping/", text: "Enterprise repiping" },
+  { href: "/enterprise/repiping/", text: "Enterprise repiping" },
   { href: "/las-vegas/commercial-plumbing/", text: "Las Vegas commercial plumbing" },
 ];
 

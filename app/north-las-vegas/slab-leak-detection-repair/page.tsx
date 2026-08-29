@@ -135,7 +135,7 @@ const NLV_SLAB_REPAIR_OPTIONS: {
     heading: "Pipe Rerouting",
     body: "Pipe rerouting bypasses the damaged section entirely by running a new supply line through walls, ceilings, or accessible above-slab pathways, removing the aging pipe from beneath the foundation. For older North Las Vegas homes where galvanized lines are corroded throughout, or where the pipe condition assessment shows thinning consistent with decades of hard water exposure, rerouting is often the more durable long-term solution.",
     linkPre: " See our ",
-    linkHref: "/re-piping/",
+    linkHref: "/repiping/",
     linkText: "repiping services",
     linkPost: " for homes where the full supply system may be approaching similar condition.",
   },
