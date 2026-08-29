@@ -103,7 +103,7 @@ export function HeroSection({
               looked and which layout the page used. A single value keeps
               every hero consistent and makes text contrast predictable
               rather than position-dependent. */}
-          <div className="absolute inset-0 bg-brand-charcoal/70" />
+          <div className="absolute inset-0 bg-brand-charcoal/80" />
         </div>
       ) : null}
 
