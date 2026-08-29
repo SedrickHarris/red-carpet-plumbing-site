@@ -676,6 +676,70 @@ Recommended internal links:
 
 ---
 
+## 3.16 Trenchless Piping
+
+URL:
+
+`/trenchless-piping/`
+
+H1:
+
+`Trenchless Piping Services in Las Vegas, NV`
+
+Recommended internal links:
+
+- `/water-pipe-repair-replacement/`
+- `/repiping/`
+- `/sewer-line-services/`
+- `/slab-leak-detection-repair/`
+- `/contact/`
+
+Status: built and live. Added to this list to reconcile with the approved core service pages list; the page was already approved and built, this entry was missing from the document.
+
+---
+
+## 3.17 Water Meter and Pressure Regulator Services
+
+URL:
+
+`/water-meter-pressure-regulator-services/`
+
+H1:
+
+`Water Meter and Pressure Regulator Services in Las Vegas, NV`
+
+Recommended internal links:
+
+- `/water-pipe-repair-replacement/`
+- `/leak-detection-repair/`
+- `/commercial-plumbing/`
+- `/contact/`
+
+Status: built and live. Added to this list to reconcile with the approved core service pages list; the page was already approved and built, this entry was missing from the document.
+
+---
+
+## 3.18 Plumbing Fixture Repair, Replacement and Installation
+
+URL:
+
+`/plumbing-fixture-repair-replacement-installation/`
+
+H1:
+
+`Plumbing Fixture Repair, Replacement and Installation in Las Vegas, NV`
+
+Recommended internal links:
+
+- `/faucet-sink-repair-installation/`
+- `/toilet-repair-installation/`
+- `/garbage-disposal-repair-installation/`
+- `/contact/`
+
+Status: built and live. Added to this list to reconcile with the approved core service pages list; the page was already approved and built, this entry was missing from the document.
+
+---
+
 # 4. Phase 3: Tier 1 Location Hub Pages
 
 Build these as full local authority hub pages.
@@ -876,6 +940,7 @@ H1:
 
 Links to:
 
+- `/green-valley/emergency-plumbing/`
 - `/green-valley/drain-cleaning/`
 - `/green-valley/water-heater-repair-installation/`
 - `/green-valley/leak-detection-repair/`
@@ -1036,6 +1101,7 @@ Build these pages after the core service pages and Tier 1 location hubs are in p
 
 ## 5.9 Green Valley Service-Location Pages
 
+- `/green-valley/emergency-plumbing/`
 - `/green-valley/drain-cleaning/`
 - `/green-valley/water-heater-repair-installation/`
 - `/green-valley/leak-detection-repair/`
@@ -1582,6 +1648,9 @@ This helps users, crawlers, and long-tail index discovery.
 - `/garbage-disposal-repair-installation/`
 - `/backflow-prevention/`
 - `/video-camera-plumbing-inspections/`
+- `/trenchless-piping/`
+- `/water-meter-pressure-regulator-services/`
+- `/plumbing-fixture-repair-replacement-installation/`
 
 ## Phase 3: Tier 1 Location Hubs
 
