@@ -227,7 +227,7 @@ const RELATED_SERVICES = [
     label: "Emergency Plumbing in Las Vegas",
     href: "/las-vegas/emergency-plumbing/",
   },
-  { label: "Repiping in Las Vegas", href: "/las-vegas/re-piping/" },
+  { label: "Repiping in Las Vegas", href: "/las-vegas/repiping/" },
   {
     label: "Video Camera Plumbing Inspections",
     href: "/las-vegas/video-camera-plumbing-inspections/",

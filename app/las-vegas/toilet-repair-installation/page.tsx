@@ -23,7 +23,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 //     VERIFY current program before publishing.
 //   - License #0048585A is a verified business claim.
 //
-// Las Vegas cluster pattern (matches app/las-vegas/re-piping/page.tsx):
+// Las Vegas cluster pattern (matches app/las-vegas/repiping/page.tsx):
 // 5 separate JsonLd blocks WebPage -> BreadcrumbList -> Service -> HowTo ->
 // FAQPage. areaServed `City` (Las Vegas) -> `State` (Nevada) — NOT Place, NOT
 // AdministrativeArea. BreadcrumbList = 3 items. No AggregateRating / Review.

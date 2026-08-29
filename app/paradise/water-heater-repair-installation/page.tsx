@@ -532,7 +532,7 @@ export default function ParadiseWaterHeaterPage() {
                       installs all units to current Clark County code. For older
                       Paradise homes with aging copper supply lines, see our{" "}
                       <Link
-                        href="/re-piping/"
+                        href="/repiping/"
                         className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         repiping

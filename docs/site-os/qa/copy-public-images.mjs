@@ -56,7 +56,7 @@ const items = [
   { source: 'services/slab-leak-detection-repair/shharris0117_Editorial-style_close-up_image_of_advanced_leak_de_7b32d18f-500f-42aa-afe5-59dcfb3f9ba5.webp', dest: 'services/slab-leak-detection-repair/hero.webp',
     usage: 'Slab Leak Detection and Repair service page hero',
     alt: 'Close up of advanced slab leak detection equipment', convert: false },
-  { source: 'services/re-piping/re-piping-services.webp', dest: 'services/re-piping/hero.webp',
+  { source: 'services/repiping/repiping-services.webp', dest: 'services/repiping/hero.webp',
     usage: 'Repiping service page hero',
     alt: 'Whole home repiping service in Las Vegas', convert: false },
   { source: 'services/water-pipe-repair-replacement/shharris0117_Editorial-style_high-resolution_image_of_a_profess_10a3ec07-eabb-4093-b5f6-e012e40e5f3b (1) (1).webp', dest: 'services/water-pipe-repair-replacement/hero.webp',

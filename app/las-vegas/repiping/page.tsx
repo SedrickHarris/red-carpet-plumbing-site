@@ -20,7 +20,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 // provider; areaServed City Las Vegas + containedInPlace State Nevada, no
 // sameAs; WebPage isPartOf WebSite; separate JsonLd blocks; HowTo for the
 // visible process steps), per the standing guardrail. Unlike the core
-// /re-piping/ page, this service-location page intentionally omits
+// /repiping/ page, this service-location page intentionally omits
 // AggregateRating (Guardrail 4) and hasCredential, matching siblings P13/P14.
 
 export const metadata: Metadata = {
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
   description:
     "Professional repiping services in Las Vegas, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe throughout Las Vegas. PEX and copper repiping. Permits pulled and inspections scheduled.",
   alternates: {
-    canonical: "https://redcarpetplumbing.com/las-vegas/re-piping/",
+    canonical: "https://redcarpetplumbing.com/las-vegas/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
       "Whole-house and partial repiping throughout Las Vegas, NV. Polybutylene, Kitec, galvanized, and copper pipe replacement. Permits pulled. Licensed plumbers.",
-    url: "https://redcarpetplumbing.com/las-vegas/re-piping/",
+    url: "https://redcarpetplumbing.com/las-vegas/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
     type: "website",
@@ -136,7 +136,7 @@ const PIPE_MATERIALS = [
 
 // Section 4 service cards. Rendered as non-linked descriptive cards
 // (built={false}) — the brief assigns no destination routes to these cards and
-// the internal-link table includes none — matching the core /re-piping/ page
+// the internal-link table includes none — matching the core /repiping/ page
 // treatment. href is required by the component type but is not rendered when
 // built is false.
 const REPIPE_SERVICES = [
@@ -237,7 +237,7 @@ const webpageSchema = {
   name: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
     "Professional repiping services in Las Vegas, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe. PEX and copper repiping. Permits pulled and inspections scheduled.",
-  url: "https://redcarpetplumbing.com/las-vegas/re-piping/",
+  url: "https://redcarpetplumbing.com/las-vegas/repiping/",
   isPartOf: {
     "@type": "WebSite",
     name: "Red Carpet Plumbing",
@@ -265,7 +265,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 3,
       name: "Repiping",
-      item: "https://redcarpetplumbing.com/las-vegas/re-piping/",
+      item: "https://redcarpetplumbing.com/las-vegas/repiping/",
     },
   ],
 };
@@ -410,7 +410,7 @@ export default function LasVegasRePipingPage() {
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 {PIPE_GUIDE_INTRO} For a broader overview, see our{" "}
                 <Link
-                  href="/re-piping/"
+                  href="/repiping/"
                   className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   repiping services
@@ -461,7 +461,7 @@ export default function LasVegasRePipingPage() {
                       key={card.title}
                       title={card.title}
                       description={card.description}
-                      href="/las-vegas/re-piping/"
+                      href="/las-vegas/repiping/"
                       built={false}
                     />
                   ))}
@@ -636,11 +636,11 @@ export default function LasVegasRePipingPage() {
               ))}
             </ul>
 
-            {/* ACTIVATED: /henderson/re-piping/ built (P16) */}
+            {/* ACTIVATED: /henderson/repiping/ built (P16) */}
             <p className="mt-8 text-base leading-7 text-white/80">
               For Henderson repiping service, visit our{" "}
               <Link
-                href="/henderson/re-piping/"
+                href="/henderson/repiping/"
                 className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
               >
                 Henderson repiping page

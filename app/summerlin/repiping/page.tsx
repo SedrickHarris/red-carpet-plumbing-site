@@ -27,13 +27,13 @@ export const metadata: Metadata = {
   description:
     "Professional repiping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled. NV #0048585A. (702) 567-9172.",
   alternates: {
-    canonical: "https://redcarpetplumbing.com/summerlin/re-piping/",
+    canonical: "https://redcarpetplumbing.com/summerlin/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Summerlin, NV | Red Carpet Plumbing",
     description:
       "Professional repiping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled. NV #0048585A. (702) 567-9172.",
-    url: "https://redcarpetplumbing.com/summerlin/re-piping/",
+    url: "https://redcarpetplumbing.com/summerlin/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
     type: "website",
@@ -208,7 +208,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Repiping in Las Vegas",
-    href: "/las-vegas/re-piping/",
+    href: "/las-vegas/repiping/",
   },
 ];
 
@@ -218,7 +218,7 @@ const webpageSchema = {
   name: "Repiping Services in Summerlin, NV | Red Carpet Plumbing",
   description:
     "Red Carpet Plumbing provides whole-house and partial repiping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled.",
-  url: "https://redcarpetplumbing.com/summerlin/re-piping/",
+  url: "https://redcarpetplumbing.com/summerlin/repiping/",
   isPartOf: {
     "@type": "WebSite",
     name: "Red Carpet Plumbing",
@@ -246,7 +246,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 3,
       name: "Repiping Services in Summerlin",
-      item: "https://redcarpetplumbing.com/summerlin/re-piping/",
+      item: "https://redcarpetplumbing.com/summerlin/repiping/",
     },
   ],
 };
@@ -387,7 +387,7 @@ export default function SummerlinRePipingPage() {
                 page. For repiping information across the Las Vegas Valley, visit
                 our{" "}
                 <Link
-                  href="/re-piping/"
+                  href="/repiping/"
                   className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   repiping services

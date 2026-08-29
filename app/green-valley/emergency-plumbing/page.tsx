@@ -80,7 +80,7 @@ const GV_EMERGENCY_SCENARIOS: {
     body: "Homes and condos built in Green Valley Ranch between the mid-1990s and mid-2000s may contain Kitec piping, a flexible orange or blue pipe that was recalled due to premature failure. Kitec can fail without warning, causing sudden leaks inside walls or beneath the slab. If your Green Valley Ranch home has not been re-piped and was built during this period, a pipe failure is an emergency requiring immediate response.",
     link: {
       pre: " See our ",
-      href: "/green-valley/re-piping/",
+      href: "/green-valley/repiping/",
       text: "repiping in Green Valley",
       post: " page for assessment options.",
     },

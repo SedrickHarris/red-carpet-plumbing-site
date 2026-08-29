@@ -143,7 +143,7 @@
     "note": "Copied as-is (already WebP or extension-preserved)."
   },
   {
-    "source": "services/re-piping/re-piping-services.webp",
+    "source": "services/repiping/repiping-services.webp",
     "dest": "public/images/services/re-piping/hero.webp",
     "originalType": "webp",
     "finalType": "webp",

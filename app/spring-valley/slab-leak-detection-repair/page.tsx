@@ -162,14 +162,14 @@ const REPAIR_OPTIONS: {
     },
   },
   {
-    // /spring-valley/re-piping/ (Page 17) is now built and committed, so per the
+    // /spring-valley/repiping/ (Page 17) is now built and committed, so per the
     // Page 17 brief this rerouting link is activated to the Spring Valley-specific
     // repiping page. The visible anchor text is unchanged.
     heading: "Pipe rerouting",
     body: "Pipe rerouting bypasses the failed section entirely by running a new supply line through walls or above-slab pathways, removing the aging pipe from beneath the foundation. For older Spring Valley homes where galvanized supply lines have been corroding beneath the slab for 30 to 50 years, pipe rerouting is the more durable long-term solution. It eliminates the corroded galvanized line as a source of future slab leaks and avoids leaving a system of compromised pipe in place underground.",
     link: {
       pre: " See our ",
-      href: "/spring-valley/re-piping/",
+      href: "/spring-valley/repiping/",
       text: "repiping",
       post: " page for homes where the full supply system is ready for replacement.",
     },
@@ -238,7 +238,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Repiping",
-    href: "/spring-valley/re-piping/",
+    href: "/spring-valley/repiping/",
   },
   {
     label: "Commercial Plumbing",

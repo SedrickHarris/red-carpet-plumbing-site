@@ -24,7 +24,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 //   - Outdoor extension permit-pulling / inspection claim (Section 4 card 4) —
 //     VERIFY against current business operations.
 //
-// Las Vegas cluster pattern (matches app/las-vegas/re-piping/page.tsx):
+// Las Vegas cluster pattern (matches app/las-vegas/repiping/page.tsx):
 // 5 separate JsonLd blocks WebPage -> BreadcrumbList -> Service -> HowTo ->
 // FAQPage. areaServed `City` (Las Vegas) -> `State` (Nevada) — NOT Place, NOT
 // AdministrativeArea. BreadcrumbList = 3 items. No AggregateRating / Review.

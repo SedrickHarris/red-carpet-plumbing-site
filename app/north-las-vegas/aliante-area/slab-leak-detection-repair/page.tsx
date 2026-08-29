@@ -135,7 +135,7 @@ const ALIANTE_SLAB_CAUSES: { title: string; body: string }[] = [
 // ---------------------------------------------------------------------------
 // Section 6 -- repair options. REPAIR_OPTIONS array shape follows the Green
 // Valley slab sibling exactly. Spot repair links to water-pipe-repair; rerouting
-// links to core /re-piping/ (no Aliante-specific repiping page exists); epoxy
+// links to core /repiping/ (no Aliante-specific repiping page exists); epoxy
 // has no link.
 // ---------------------------------------------------------------------------
 const REPAIR_OPTIONS: {
@@ -158,8 +158,8 @@ const REPAIR_OPTIONS: {
     heading: "Pipe rerouting",
     body: "Pipe rerouting bypasses the damaged section entirely by running a new supply line through walls, ceilings, or accessible above-slab pathways, removing the aging copper pipe from beneath the foundation. For Aliante homes where the pipe condition assessment reveals that the surrounding copper has been thinned by years of hard water exposure, or where a second leak on the same line is a reasonable concern, rerouting is often the more durable long-term solution because it eliminates the source of future slab leaks on that line.",
     linkPre: " See our ",
-    // No Aliante-specific repiping page exists yet. Using core /re-piping/ as the appropriate fallback.
-    linkHref: "/re-piping/",
+    // No Aliante-specific repiping page exists yet. Using core /repiping/ as the appropriate fallback.
+    linkHref: "/repiping/",
     linkText: "repiping services",
     linkPost: " page for information on full and partial pipe replacement options.",
   },

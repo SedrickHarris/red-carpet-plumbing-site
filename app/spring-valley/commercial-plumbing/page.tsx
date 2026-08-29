@@ -182,7 +182,7 @@ const COMMERCIAL_SERVICES: {
     title: "Commercial Pipe Repair and Repiping",
     description:
       "Repair and replacement of aging or failing supply lines, drain lines, and commercial pipe systems in Spring Valley businesses and multi-unit buildings. Older commercial buildings in the Desert Inn and West Sahara corridors may have original galvanized supply lines that require full replacement rather than spot repair.",
-    href: "/spring-valley/re-piping/",
+    href: "/spring-valley/repiping/",
   },
   // FLAG: 24/7 emergency-availability claim implied by this card — verify before final launch.
   {

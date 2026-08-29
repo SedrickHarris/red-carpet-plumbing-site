@@ -9,7 +9,7 @@
 // FLAG comments appear only in source. No FLAG text appears in any visible
 // string or schema text.
 //
-// Henderson service-location schema pattern (matches app/henderson/re-piping/
+// Henderson service-location schema pattern (matches app/henderson/repiping/
 // page.tsx): Plumber provider; areaServed City (Henderson) + containedInPlace
 // State (Nevada); no sameAs, no hasCredential, no AggregateRating. 5 separate
 // JsonLd blocks in order WebPage -> BreadcrumbList -> Service -> HowTo ->
@@ -268,7 +268,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Repiping in Henderson",
-    href: "/henderson/re-piping/",
+    href: "/henderson/repiping/",
   },
   {
     label: "Sewer Line Services in Las Vegas",

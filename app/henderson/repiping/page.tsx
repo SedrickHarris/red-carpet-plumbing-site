@@ -20,7 +20,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 // provider; areaServed City Henderson + containedInPlace State Nevada, no
 // sameAs; WebPage isPartOf WebSite; separate JsonLd blocks; HowTo for the
 // visible process steps), per the standing guardrail. Like siblings P13/P14/P15
-// and unlike the core /re-piping/ page, this service-location page omits
+// and unlike the core /repiping/ page, this service-location page omits
 // AggregateRating (Guardrail 4) and hasCredential.
 
 export const metadata: Metadata = {
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
   description:
     "Professional repiping services in Henderson, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe throughout Henderson. Serving Green Valley, Lake Las Vegas, and all Henderson communities. Permits pulled.",
   alternates: {
-    canonical: "https://redcarpetplumbing.com/henderson/re-piping/",
+    canonical: "https://redcarpetplumbing.com/henderson/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Henderson, NV | Red Carpet Plumbing",
     description:
       "Whole-house and partial repiping throughout Henderson, NV. Green Valley polybutylene and copper replacement. Green Valley Ranch Kitec replacement. Permits pulled. Licensed plumbers.",
-    url: "https://redcarpetplumbing.com/henderson/re-piping/",
+    url: "https://redcarpetplumbing.com/henderson/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
     type: "website",
@@ -139,7 +139,7 @@ const PIPE_MATERIALS = [
 
 // Section 4 service cards. Rendered as non-linked descriptive cards
 // (built={false}) — the brief assigns no destination routes to these cards and
-// the internal-link table includes none — matching the core /re-piping/ page
+// the internal-link table includes none — matching the core /repiping/ page
 // and sibling P15 treatment. href is required by the component type but is not
 // rendered when built is false.
 const REPIPE_SERVICES = [
@@ -229,7 +229,7 @@ const webpageSchema = {
   name: "Repiping Services in Henderson, NV | Red Carpet Plumbing",
   description:
     "Professional repiping services in Henderson, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe. Serving Green Valley, Lake Las Vegas, and all Henderson communities. Permits pulled.",
-  url: "https://redcarpetplumbing.com/henderson/re-piping/",
+  url: "https://redcarpetplumbing.com/henderson/repiping/",
   isPartOf: {
     "@type": "WebSite",
     name: "Red Carpet Plumbing",
@@ -257,7 +257,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 3,
       name: "Repiping",
-      item: "https://redcarpetplumbing.com/henderson/re-piping/",
+      item: "https://redcarpetplumbing.com/henderson/repiping/",
     },
   ],
 };
@@ -402,7 +402,7 @@ export default function HendersonRePipingPage() {
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 {PIPE_GUIDE_INTRO} For a broader overview, see our{" "}
                 <Link
-                  href="/re-piping/"
+                  href="/repiping/"
                   className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   repiping services
@@ -461,7 +461,7 @@ export default function HendersonRePipingPage() {
                       key={card.title}
                       title={card.title}
                       description={card.description}
-                      href="/henderson/re-piping/"
+                      href="/henderson/repiping/"
                       built={false}
                     />
                   ))}
@@ -650,7 +650,7 @@ export default function HendersonRePipingPage() {
             <p className="mt-8 text-base leading-7 text-white/80">
               For Las Vegas repiping service, visit our{" "}
               <Link
-                href="/las-vegas/re-piping/"
+                href="/las-vegas/repiping/"
                 className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
               >
                 Las Vegas repiping

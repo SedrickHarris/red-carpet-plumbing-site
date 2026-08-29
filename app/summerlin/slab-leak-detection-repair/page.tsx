@@ -159,7 +159,7 @@ const REPAIR_OPTIONS: {
     },
   },
   {
-    // /summerlin/re-piping/ (Batch 6 Page 11) is now built, so per the Page 11
+    // /summerlin/repiping/ (Batch 6 Page 11) is now built, so per the Page 11
     // brief (Files Allowed to Edit #3) the repiping anchor is ACTIVATED to the
     // Summerlin-specific page. Only the href changed; the visible anchor text
     // ("repiping") is unchanged from the approved copy.
@@ -167,7 +167,7 @@ const REPAIR_OPTIONS: {
     body: "Pipe rerouting bypasses the damaged section entirely by running a new supply line through walls or above-slab pathways, removing the aging pipe from beneath the foundation. For original Summerlin village homes where copper supply lines have been exposed to hard water for 25 to 35 years, rerouting is often the more durable long-term solution because it eliminates the source of future slab leaks on that line.",
     link: {
       pre: " See our ",
-      href: "/summerlin/re-piping/",
+      href: "/summerlin/repiping/",
       text: "repiping",
       post: " page for homes where the full supply system may be approaching similar age and condition.",
     },
@@ -235,7 +235,7 @@ const RELATED_SERVICES = [
   },
   {
     label: "Repiping",
-    href: "/summerlin/re-piping/",
+    href: "/summerlin/repiping/",
   },
   {
     label: "Slab Leak Detection and Repair in Las Vegas",

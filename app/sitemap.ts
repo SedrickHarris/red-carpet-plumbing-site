@@ -156,7 +156,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: "https://redcarpetplumbing.com/re-piping/",
+      url: "https://redcarpetplumbing.com/repiping/",
       lastModified,
       changeFrequency: "monthly",
       priority: 0.7,

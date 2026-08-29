@@ -57,7 +57,7 @@ Each was read individually and kept.
 |---|---|---|
 | `summerlin/slab-leak-detection-repair` | 442 | Records that the target page **is** built, but the approved copy contains no anchor phrase, so no link was injected without approval. Deleting it would invite someone to "fix" a link that was deliberately not added. |
 | `las-vegas/commercial-plumbing` | 594 | Explains why the brief's Guardrail 14 fallback to `/commercial-plumbing/` is unnecessary, because `/henderson/commercial-plumbing/` is live. Still accurate. |
-| `green-valley/re-piping` | 196 | States that all cluster siblings are live and no marker entries remain. True, and it documents completeness rather than pending work. |
+| `green-valley/repiping` | 196 | States that all cluster siblings are live and no marker entries remain. True, and it documents completeness rather than pending work. |
 
 ## 3. What Was Removed: 77 Markers
 
@@ -94,8 +94,8 @@ node and changed the rendered spacing.
 | File | Line | Treatment |
 |---|---|---|
 | `enterprise/commercial-plumbing` | 533-535 | Text merged onto one line: `...in Enterprise, call Red Carpet Plumbing at{" "}` |
-| `enterprise/re-piping` | 688-690 | Same merge |
-| `enterprise/re-piping` | 607 | Comment replaced with the bare `{" "}` it carried, which supplies the space in "repair page." |
+| `enterprise/repiping` | 688-690 | Same merge |
+| `enterprise/repiping` | 607 | Comment replaced with the bare `{" "}` it carried, which supplies the space in "repair page." |
 
 Verified in raw HTML from both builds:
 

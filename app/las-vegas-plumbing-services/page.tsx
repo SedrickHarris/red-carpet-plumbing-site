@@ -106,7 +106,7 @@ const LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
   },
   {
     title: "Repiping",
-    href: "/las-vegas/re-piping/",
+    href: "/las-vegas/repiping/",
     image:
       "/images/services/re-piping/hero.webp",
     imageAlt: "Repiping services in Las Vegas",

@@ -494,7 +494,7 @@ export default function LasVegasSlabLeakPage() {
               </article>
 
               {/* Pipe rerouting card */}
-              {/* ACTIVATED: /las-vegas/re-piping/ built (P15) */}
+              {/* ACTIVATED: /las-vegas/repiping/ built (P15) */}
               <article className="rounded-2xl bg-white p-6 ring-1 ring-brand-surface-alt sm:p-8">
                 <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
                   Pipe Rerouting
@@ -510,7 +510,7 @@ export default function LasVegasSlabLeakPage() {
                   and removes the source of future slab leaks on the affected
                   line. Learn more about our{" "}
                   <Link
-                    href="/las-vegas/re-piping/"
+                    href="/las-vegas/repiping/"
                     className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     repiping

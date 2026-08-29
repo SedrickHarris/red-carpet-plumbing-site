@@ -149,7 +149,7 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     title: "Full Repiping",
     description:
       "Full replacement of the home or building's water supply pipe system for properties with widespread pipe failure or aging materials.",
-    href: "/re-piping/",
+    href: "/repiping/",
   },
 ];
 
@@ -219,7 +219,7 @@ const RELATED_SERVICES: RelatedService[] = [
     title: "Repiping",
     description:
       "Full and partial repiping for homes and businesses with aging, corroded, or widespread pipe failures.",
-    href: "/re-piping/",
+    href: "/repiping/",
     image: "/images/services/re-piping/hero.webp",
     imageAlt: "Whole home repiping service in Las Vegas",
     built: true,

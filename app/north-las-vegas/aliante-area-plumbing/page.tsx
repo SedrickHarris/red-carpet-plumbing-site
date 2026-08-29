@@ -113,7 +113,7 @@ const ALIANTE_FEATURED_SERVICES: ServiceLink[] = [
   },
   {
     title: "Repiping",
-    href: "/re-piping/",
+    href: "/repiping/",
     image:
       "/images/services/re-piping/hero.webp",
     imageAlt: "Repiping services in the Aliante area",

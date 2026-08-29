@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T00:03:37.687Z",
+  "generatedAt": "2026-08-29T00:15:13.432Z",
   "routeCount": 110,
   "routes": [
     {
@@ -758,8 +758,8 @@
       "wordEstimate": 914
     },
     {
-      "route": "/enterprise/re-piping",
-      "sourceFile": "app/enterprise/re-piping/page.tsx",
+      "route": "/enterprise/repiping",
+      "sourceFile": "app/enterprise/repiping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
         "Repiping Services in Enterprise, NV | Red Carpet Plumbing"
@@ -778,7 +778,7 @@
       ],
       "internalHrefs": [
         "/enterprise-plumbing-services/",
-        "/re-piping/",
+        "/repiping/",
         "/water-pipe-repair-replacement/",
         "/plumbing-services/"
       ],
@@ -1280,8 +1280,8 @@
       "wordEstimate": 1147
     },
     {
-      "route": "/green-valley/re-piping",
-      "sourceFile": "app/green-valley/re-piping/page.tsx",
+      "route": "/green-valley/repiping",
+      "sourceFile": "app/green-valley/repiping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
         "Repiping Services in Green Valley, Henderson, NV | Red Carpet Plumbing",
@@ -1307,13 +1307,13 @@
         "Repiping FAQs for Green Valley Homeowners"
       ],
       "internalHrefs": [
-        "/re-piping/",
+        "/repiping/",
         "/green-valley-plumbing-services/",
         "/water-pipe-repair-replacement/",
         "/green-valley/slab-leak-detection-repair/",
         "/green-valley/leak-detection-repair/",
         "/henderson-plumbing-services/",
-        "/henderson/re-piping/"
+        "/henderson/repiping/"
       ],
       "schemaTypeHints": [
         "WebPage",
@@ -1769,8 +1769,8 @@
       "wordEstimate": 756
     },
     {
-      "route": "/henderson/re-piping",
-      "sourceFile": "app/henderson/re-piping/page.tsx",
+      "route": "/henderson/repiping",
+      "sourceFile": "app/henderson/repiping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
         "Repiping Services in Henderson, NV | Red Carpet Plumbing",
@@ -1796,15 +1796,15 @@
         "Frequently Asked Questions About Repiping in Henderson"
       ],
       "internalHrefs": [
-        "/re-piping/",
+        "/repiping/",
         "/henderson/leak-detection-repair/",
-        "/henderson/re-piping/",
+        "/henderson/repiping/",
         "/henderson/slab-leak-detection-repair/",
         "/water-pipe-repair-replacement/",
         "/henderson/emergency-plumbing/",
         "/contact/",
         "/henderson-plumbing-services/",
-        "/las-vegas/re-piping/",
+        "/las-vegas/repiping/",
         "/service-areas/"
       ],
       "schemaTypeHints": [
@@ -1904,7 +1904,7 @@
         "/slab-leak-detection-repair/",
         "/henderson/leak-detection-repair/",
         "/water-pipe-repair-replacement/",
-        "/henderson/re-piping/",
+        "/henderson/repiping/",
         "/henderson/emergency-plumbing/",
         "/contact/",
         "/henderson-plumbing-services/",
@@ -2698,8 +2698,8 @@
       "wordEstimate": 852
     },
     {
-      "route": "/las-vegas/re-piping",
-      "sourceFile": "app/las-vegas/re-piping/page.tsx",
+      "route": "/las-vegas/repiping",
+      "sourceFile": "app/las-vegas/repiping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
         "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
@@ -2726,14 +2726,14 @@
         "Related Plumbing Services"
       ],
       "internalHrefs": [
-        "/re-piping/",
-        "/las-vegas/re-piping/",
+        "/repiping/",
+        "/las-vegas/repiping/",
         "/las-vegas/slab-leak-detection-repair/",
         "/water-pipe-repair-replacement/",
         "/las-vegas/emergency-plumbing/",
         "/contact/",
         "/las-vegas-plumbing-services/",
-        "/henderson/re-piping/",
+        "/henderson/repiping/",
         "/service-areas/"
       ],
       "schemaTypeHints": [
@@ -2827,7 +2827,7 @@
         "/slab-leak-detection-repair/",
         "/las-vegas/leak-detection-repair/",
         "/water-pipe-repair-replacement/",
-        "/las-vegas/re-piping/",
+        "/las-vegas/repiping/",
         "/las-vegas/emergency-plumbing/",
         "/contact/",
         "/las-vegas-plumbing-services/",
@@ -3912,7 +3912,7 @@
       "internalHrefs": [
         "/paradise/emergency-plumbing/",
         "/water-heater-repair-installation/",
-        "/re-piping/",
+        "/repiping/",
         "/slab-leak-detection-repair/",
         "/las-vegas-plumbing-services/",
         "/paradise-plumbing-services/",
@@ -4029,8 +4029,8 @@
       "wordEstimate": 508
     },
     {
-      "route": "/re-piping",
-      "sourceFile": "app/re-piping/page.tsx",
+      "route": "/repiping",
+      "sourceFile": "app/repiping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
         "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
@@ -4455,8 +4455,8 @@
       "wordEstimate": 986
     },
     {
-      "route": "/spring-valley/re-piping",
-      "sourceFile": "app/spring-valley/re-piping/page.tsx",
+      "route": "/spring-valley/repiping",
+      "sourceFile": "app/spring-valley/repiping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
         "Repiping Services in Spring Valley, NV | Red Carpet Plumbing"
@@ -4480,7 +4480,7 @@
         "/las-vegas-plumbing-services/",
         "/summerlin-plumbing-services/",
         "/spring-valley/emergency-plumbing/",
-        "/las-vegas/re-piping/"
+        "/las-vegas/repiping/"
       ],
       "schemaTypeHints": [
         "City",
@@ -4787,8 +4787,8 @@
       "wordEstimate": 882
     },
     {
-      "route": "/summerlin/re-piping",
-      "sourceFile": "app/summerlin/re-piping/page.tsx",
+      "route": "/summerlin/repiping",
+      "sourceFile": "app/summerlin/repiping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
         "Repiping Services in Summerlin, NV | Red Carpet Plumbing"
@@ -4806,7 +4806,7 @@
       ],
       "internalHrefs": [
         "/summerlin-plumbing-services/",
-        "/re-piping/",
+        "/repiping/",
         "/contact/",
         "/water-pipe-repair-replacement/",
         "/summerlin/slab-leak-detection-repair/",
