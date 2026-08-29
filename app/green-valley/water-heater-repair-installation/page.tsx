@@ -180,9 +180,9 @@ const GV_WH_SERVICES: {
     flag: "FLAG: VERIFY gas line scope before publishing",
   },
   {
-    label: "Re-piping support",
-    body: "For original Green Valley homes where aging copper supply lines are contributing to water quality or pressure problems at the water heater, our licensed plumbers can assess whether re-piping is needed alongside the water heater replacement.",
-    link: { href: "/green-valley/re-piping/", text: "re-piping services" },
+    label: "Repiping support",
+    body: "For original Green Valley homes where aging copper supply lines are contributing to water quality or pressure problems at the water heater, our licensed plumbers can assess whether repiping is needed alongside the water heater replacement.",
+    link: { href: "/green-valley/re-piping/", text: "repiping services" },
   },
 ];
 

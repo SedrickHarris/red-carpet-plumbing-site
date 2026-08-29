@@ -208,7 +208,7 @@ const RELATED_SERVICES = [
     href: "/summerlin/slab-leak-detection-repair/",
   },
   {
-    label: "Re-Piping",
+    label: "Repiping",
     href: "/summerlin/re-piping/",
   },
   {
@@ -546,7 +546,7 @@ export default function SummerlinDrainCleaningPage() {
                 Summerlin plumbing services
               </Link>{" "}
               including emergency plumbing, water heater repair, slab leak
-              detection, and re-piping. We also serve communities near Summerlin
+              detection, and repiping. We also serve communities near Summerlin
               including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"

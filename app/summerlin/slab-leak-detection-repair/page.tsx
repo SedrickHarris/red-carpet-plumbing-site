@@ -160,15 +160,15 @@ const REPAIR_OPTIONS: {
   },
   {
     // /summerlin/re-piping/ (Batch 6 Page 11) is now built, so per the Page 11
-    // brief (Files Allowed to Edit #3) the re-piping anchor is ACTIVATED to the
+    // brief (Files Allowed to Edit #3) the repiping anchor is ACTIVATED to the
     // Summerlin-specific page. Only the href changed; the visible anchor text
-    // ("re-piping") is unchanged from the approved copy.
+    // ("repiping") is unchanged from the approved copy.
     heading: "Pipe rerouting",
     body: "Pipe rerouting bypasses the damaged section entirely by running a new supply line through walls or above-slab pathways, removing the aging pipe from beneath the foundation. For original Summerlin village homes where copper supply lines have been exposed to hard water for 25 to 35 years, rerouting is often the more durable long-term solution because it eliminates the source of future slab leaks on that line.",
     link: {
       pre: " See our ",
       href: "/summerlin/re-piping/",
-      text: "re-piping",
+      text: "repiping",
       post: " page for homes where the full supply system may be approaching similar age and condition.",
     },
   },
@@ -234,7 +234,7 @@ const RELATED_SERVICES = [
     href: "/summerlin/water-heater-repair-installation/",
   },
   {
-    label: "Re-Piping",
+    label: "Repiping",
     href: "/summerlin/re-piping/",
   },
   {
@@ -619,7 +619,7 @@ export default function SummerlinSlabLeakPage() {
                 Summerlin plumbing services
               </Link>{" "}
               including emergency plumbing, drain cleaning, water heater repair,
-              and re-piping. We also serve communities near Summerlin including{" "}
+              and repiping. We also serve communities near Summerlin including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
                 className="font-semibold text-brand-dark underline hover:text-brand-dark/70"

@@ -561,7 +561,7 @@ export default function EnterpriseDrainCleaningPage() {
               >
                 Enterprise plumbing services
               </Link>{" "}
-              including water heater repair, slab leak detection, re-piping, and
+              including water heater repair, slab leak detection, repiping, and
               emergency plumbing. We also serve communities near Enterprise
               including{" "}
               <Link

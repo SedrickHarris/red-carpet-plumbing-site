@@ -56,7 +56,7 @@ const HENDERSON_FAQS: FaqItem[] = [
     question:
       "What plumbing services does Red Carpet Plumbing offer in Henderson?",
     answer:
-      "Red Carpet Plumbing provides a full range of residential and commercial plumbing services in Henderson including emergency plumbing, drain cleaning, water heater repair and installation, slab leak detection and repair, leak detection, re-piping, sewer line services, gas line plumbing, and commercial plumbing.",
+      "Red Carpet Plumbing provides a full range of residential and commercial plumbing services in Henderson including emergency plumbing, drain cleaning, water heater repair and installation, slab leak detection and repair, leak detection, repiping, sewer line services, gas line plumbing, and commercial plumbing.",
     category: "the-service",
   },
   {
@@ -109,11 +109,11 @@ const HENDERSON_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Sewer line services in Henderson",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     href: "/henderson/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
-    imageAlt: "Re-piping services in Henderson",
+    imageAlt: "Repiping services in Henderson",
   },
   {
     title: "Water Heater Repair and Installation",
@@ -364,7 +364,7 @@ export default function HendersonPlumbingServicesPage() {
               <br /> in Henderson, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides residential and commercial plumbing services throughout Henderson, Nevada, including Green Valley, Lake Las Vegas, and surrounding communities. Our licensed plumbers handle everything from emergency plumbing and drain cleaning to water heater repair, slab leak detection, and re-piping. NV Contractor License #0048585A."
+          subheading="Red Carpet Plumbing provides residential and commercial plumbing services throughout Henderson, Nevada, including Green Valley, Lake Las Vegas, and surrounding communities. Our licensed plumbers handle everything from emergency plumbing and drain cleaning to water heater repair, slab leak detection, and repiping. NV Contractor License #0048585A."
           trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",

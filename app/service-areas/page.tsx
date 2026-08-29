@@ -49,13 +49,13 @@ const SERVICE_AREAS_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve Henderson, NV?",
     answer:
-      "Yes, Red Carpet Plumbing serves Henderson, Nevada including the Green Valley and Lake Las Vegas areas. Services available in Henderson include emergency plumbing, drain cleaning, leak detection and repair, water heater service, slab leak detection and repair, and re-piping.",
+      "Yes, Red Carpet Plumbing serves Henderson, Nevada including the Green Valley and Lake Las Vegas areas. Services available in Henderson include emergency plumbing, drain cleaning, leak detection and repair, water heater service, slab leak detection and repair, and repiping.",
     category: "service-area",
   },
   {
     question: "Does Red Carpet Plumbing serve Summerlin?",
     answer:
-      "Yes, Red Carpet Plumbing provides plumbing services in the Summerlin area of Las Vegas. Available services in Summerlin include emergency plumbing, drain cleaning, water heater repair and installation, leak detection, slab leak repair, and re-piping.",
+      "Yes, Red Carpet Plumbing provides plumbing services in the Summerlin area of Las Vegas. Available services in Summerlin include emergency plumbing, drain cleaning, water heater repair and installation, leak detection, slab leak repair, and repiping.",
     category: "service-area",
   },
   {
@@ -67,7 +67,7 @@ const SERVICE_AREAS_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve Spring Valley and Enterprise?",
     answer:
-      "Yes, Red Carpet Plumbing serves both the Spring Valley and Enterprise areas of the Las Vegas Valley. Available services include emergency plumbing, drain cleaning, leak detection and repair, slab leak detection, water heater service, and re-piping.",
+      "Yes, Red Carpet Plumbing serves both the Spring Valley and Enterprise areas of the Las Vegas Valley. Available services include emergency plumbing, drain cleaning, leak detection and repair, slab leak detection, water heater service, and repiping.",
     category: "service-area",
   },
   {
@@ -80,7 +80,7 @@ const SERVICE_AREAS_FAQS: FaqItem[] = [
     question:
       "What plumbing services does Red Carpet Plumbing offer throughout the Las Vegas Valley?",
     answer:
-      "Red Carpet Plumbing offers emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection and repair, sewer line services, re-piping, gas line plumbing, commercial plumbing, and a full range of residential and commercial plumbing repair and installation services throughout the Las Vegas Valley.",
+      "Red Carpet Plumbing offers emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection and repair, sewer line services, repiping, gas line plumbing, commercial plumbing, and a full range of residential and commercial plumbing repair and installation services throughout the Las Vegas Valley.",
     category: "the-service",
   },
   {
@@ -138,7 +138,7 @@ const LOCATION_CARDS: LocationCardData[] = [
     image: "/images/locations/summerlin/hero.webp",
     alt: "Summerlin community entrance in Las Vegas",
     description:
-      "Plumbing services for Summerlin homes and businesses, including emergency plumbing, drain cleaning, water heater service, leak detection, and re-piping.",
+      "Plumbing services for Summerlin homes and businesses, including emergency plumbing, drain cleaning, water heater service, leak detection, and repiping.",
     href: "/summerlin-plumbing-services/",
   },
   {
@@ -170,7 +170,7 @@ const LOCATION_CARDS: LocationCardData[] = [
     // TODO: Replace placeholder with location image when available
     alt: "Green Valley community in Henderson, Nevada",
     description:
-      "Plumbing services for Green Valley residents including drain cleaning, leak detection, slab leak repair, re-piping, and water heater service.",
+      "Plumbing services for Green Valley residents including drain cleaning, leak detection, slab leak repair, repiping, and water heater service.",
     href: "/green-valley-plumbing-services/",
   },
   {
@@ -238,7 +238,7 @@ const POPULAR_SERVICES = [
     href: "/slab-leak-detection-repair/",
   },
   { label: "Sewer Line Services", href: "/sewer-line-services/" },
-  { label: "Re-Piping", href: "/re-piping/" },
+  { label: "Repiping", href: "/re-piping/" },
   { label: "Commercial Plumbing", href: "/commercial-plumbing/" },
 ];
 

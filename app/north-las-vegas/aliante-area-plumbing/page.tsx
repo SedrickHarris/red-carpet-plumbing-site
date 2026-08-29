@@ -112,11 +112,11 @@ const ALIANTE_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Sewer line services in the Aliante area",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     href: "/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
-    imageAlt: "Re-piping services in the Aliante area",
+    imageAlt: "Repiping services in the Aliante area",
   },
   {
     // ACTIVATED: P42 built and staged

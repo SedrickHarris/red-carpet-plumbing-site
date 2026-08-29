@@ -60,7 +60,7 @@ const HOMEPAGE_FAQS: FaqItem[] = [
   {
     question: "What plumbing services does Red Carpet Plumbing offer?",
     answer:
-      "Red Carpet Plumbing offers a full range of plumbing services including emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection and repair, sewer line services, re-piping, gas line plumbing, commercial plumbing, and more.",
+      "Red Carpet Plumbing offers a full range of plumbing services including emergency plumbing, drain cleaning, leak detection and repair, water heater repair and installation, slab leak detection and repair, sewer line services, repiping, gas line plumbing, commercial plumbing, and more.",
     category: "the-service",
   },
   {
@@ -134,12 +134,12 @@ const SERVICE_CARDS: ServiceCardEntry[] = [
     built: true,
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     description:
-      "Whole-home and commercial re-piping to replace aging, corroded, or failing pipe systems.",
+      "Whole-home and commercial repiping to replace aging, corroded, or failing pipe systems.",
     href: "/re-piping/",
     image: "/images/services/re-piping/hero.webp",
-    imageAlt: "Professional re-piping service for a Las Vegas home",
+    imageAlt: "Professional repiping service for a Las Vegas home",
     built: true,
   },
   {
@@ -186,7 +186,7 @@ const LOCAL_ISSUES = [
   {
     question: "What Happens to Older Pipes in the Las Vegas Climate?",
     answer:
-      "Many Las Vegas homes built before the 1990s still have original galvanized steel or early copper plumbing. These older pipe materials were not designed for Las Vegas's hard water conditions and decades of heat stress. Galvanized pipes corrode from the inside out, reducing water quality and flow. When older pipes reach the end of their usable life, re-piping with modern materials is the most durable long-term solution.",
+      "Many Las Vegas homes built before the 1990s still have original galvanized steel or early copper plumbing. These older pipe materials were not designed for Las Vegas's hard water conditions and decades of heat stress. Galvanized pipes corrode from the inside out, reducing water quality and flow. When older pipes reach the end of their usable life, repiping with modern materials is the most durable long-term solution.",
   },
 ];
 
@@ -282,7 +282,7 @@ const plumberSchema = {
     "Clark County, NV",
   ],
   description:
-    "Red Carpet Plumbing is a local, family-owned Las Vegas plumbing company with over 40 years of experience. We provide 24/7 emergency plumbing, drain cleaning, water heater repair, leak detection, slab leak repair, sewer line services, re-piping, and commercial plumbing throughout the Las Vegas Valley. Licensed plumbers, transparent pricing, no hidden fees.",
+    "Red Carpet Plumbing is a local, family-owned Las Vegas plumbing company with over 40 years of experience. We provide 24/7 emergency plumbing, drain cleaning, water heater repair, leak detection, slab leak repair, sewer line services, repiping, and commercial plumbing throughout the Las Vegas Valley. Licensed plumbers, transparent pricing, no hidden fees.",
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
@@ -344,7 +344,7 @@ export default function Home() {
               <br className="hidden sm:block" /> in Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides plumbing services for homes and businesses throughout the Las Vegas Valley. From emergency plumbing and drain cleaning to water heater repair, slab leak detection, and full re-piping, our local team is ready to help. We have been serving Las Vegas for over 40 years as a licensed, family-owned plumbing company."
+          subheading="Red Carpet Plumbing provides plumbing services for homes and businesses throughout the Las Vegas Valley. From emergency plumbing and drain cleaning to water heater repair, slab leak detection, and full repiping, our local team is ready to help. We have been serving Las Vegas for over 40 years as a licensed, family-owned plumbing company."
           trustItems={[
             "4.8 stars, 76 Google reviews",
             "Local, family-owned, over 40 years in Las Vegas",
@@ -381,7 +381,7 @@ export default function Home() {
                 Red Carpet Plumbing is a licensed Las Vegas plumbing company
                 providing emergency plumbing, drain cleaning, water heater
                 repair and installation, slab leak detection and repair,
-                re-piping, sewer line services, gas line plumbing, and
+                repiping, sewer line services, gas line plumbing, and
                 commercial plumbing throughout Las Vegas, Henderson, North
                 Las Vegas, and the Las Vegas Valley. Nevada Contractor License
                 #0048585A, C-1 Plumbing and Heating. To schedule service or
@@ -459,7 +459,7 @@ export default function Home() {
                     plumbers handle every job with care. Our services include
                     emergency plumbing, drain cleaning, water heater repair and
                     installation, leak detection and repair, slab leak detection
-                    and repair, sewer line services, re-piping, and commercial
+                    and repair, sewer line services, repiping, and commercial
                     plumbing.
                   </p>
                 </div>

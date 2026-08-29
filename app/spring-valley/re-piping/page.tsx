@@ -23,14 +23,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 // telephone). No AggregateRating/Review. No sameAs.
 
 export const metadata: Metadata = {
-  title: "Re-Piping Services in Spring Valley, NV | Red Carpet Plumbing",
+  title: "Repiping Services in Spring Valley, NV | Red Carpet Plumbing",
   description:
-    "Professional re-piping services in Spring Valley, NV. Red Carpet Plumbing replaces galvanized, polybutylene, Kitec, and aging copper pipe throughout Spring Valley. PEX and copper repiping. Permits pulled through Clark County. Licensed plumbers.",
+    "Professional repiping services in Spring Valley, NV. Red Carpet Plumbing replaces galvanized, polybutylene, Kitec, and aging copper pipe throughout Spring Valley. PEX and copper repiping. Permits pulled through Clark County. Licensed plumbers.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/spring-valley/re-piping/",
   },
   openGraph: {
-    title: "Re-Piping Services in Spring Valley, NV | Red Carpet Plumbing",
+    title: "Repiping Services in Spring Valley, NV | Red Carpet Plumbing",
     description:
       "Whole-house and partial repiping throughout Spring Valley, NV. Galvanized, polybutylene, Kitec, and copper pipe replacement. Clark County permits pulled. Licensed plumbers.",
     url: "https://redcarpetplumbing.com/spring-valley/re-piping/",
@@ -82,7 +82,7 @@ const SV_REPIPE_FAQS = [
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides whole-house and partial re-piping for homes and businesses in Spring Valley, Nevada. Spring Valley is one of the most densely populated unincorporated communities in the United States, and its established northern neighborhoods along the Desert Inn and West Sahara corridors contain some of the oldest residential plumbing in the Las Vegas Valley. Our licensed plumbers assess existing pipe conditions, explain material options, pull required Clark County permits, and complete repipe projects with minimal household disruption.";
+  "Red Carpet Plumbing provides whole-house and partial repiping for homes and businesses in Spring Valley, Nevada. Spring Valley is one of the most densely populated unincorporated communities in the United States, and its established northern neighborhoods along the Desert Inn and West Sahara corridors contain some of the oldest residential plumbing in the Las Vegas Valley. Our licensed plumbers assess existing pipe conditions, explain material options, pull required Clark County permits, and complete repipe projects with minimal household disruption.";
 
 const HERO_TRUST_ITEMS = [
   // FLAG: VERIFY rating and review count before publishing.
@@ -105,9 +105,9 @@ const PIPE_MATERIALS: {
       "Galvanized Steel Pipes (Desert Inn and West Sahara Corridor Homes, Built Before 1990)",
     body: "Galvanized steel supply lines were the standard material in Las Vegas Valley homes built before approximately 1975, and they remained in use in some construction through the late 1980s. Northern Spring Valley neighborhoods along the Desert Inn and West Sahara corridors have a high concentration of these older homes. Over decades of exposure to Las Vegas hard water, the zinc coating on galvanized steel pipes wears away and the pipe corrodes from the inside out. As corrosion advances, the pipe interior develops a rough, narrowing surface that reduces water pressure and water quality. Reduced water pressure throughout the home, discolored water, and a metallic taste are the most common indicators. Unlike copper pipe failures, galvanized pipe failures can occur suddenly without prior visible external signs. For Spring Valley homes with original galvanized supply lines, a full system evaluation is warranted.",
     link: {
-      pre: " For our full re-piping service overview, see our ",
+      pre: " For our full repiping service overview, see our ",
       href: "/re-piping/",
-      text: "re-piping services",
+      text: "repiping services",
       post: " page.",
     },
   },
@@ -125,14 +125,14 @@ const PIPE_MATERIALS: {
   },
 ];
 
-// Section 4 — re-piping services (bold label + body).
+// Section 4 — repiping services (bold label + body).
 const REPIPE_SERVICES = [
   {
-    label: "Whole-house re-piping",
+    label: "Whole-house repiping",
     body: "We replace all supply lines throughout the home in a single coordinated project, from the main shutoff through all branch lines to every fixture. Whole-house repipes require a Clark County permit, which we pull and schedule for inspection as part of the project.",
   },
   {
-    label: "Partial re-piping",
+    label: "Partial repiping",
     body: "When only a specific area of the home has defective or failing pipe material, a targeted partial repipe replaces the affected runs without disturbing the rest of the system. We assess whether the remaining pipe materials are in acceptable condition before recommending a partial approach.",
   },
   {
@@ -148,11 +148,11 @@ const REPIPE_SERVICES = [
     body: "For Spring Valley homes with original galvanized supply lines, we assess the full extent of the galvanized system, identify the areas of greatest corrosion and risk, and replace all galvanized supply lines as part of a whole-house or targeted repipe.",
   },
   {
-    label: "PEX re-piping",
+    label: "PEX repiping",
     body: "PEX (cross-linked polyethylene) is the standard modern replacement material for residential repiping in the Las Vegas Valley. It is flexible, resistant to mineral scale, and performs well in Las Vegas hard water conditions. In Spring Valley homes, PEX pipe runs through attic spaces require proper insulation because Las Vegas attic temperatures can exceed 150 degrees Fahrenheit. Red Carpet Plumbing installs PEX to current Clark County code including required attic insulation.",
   },
   {
-    label: "Copper re-piping",
+    label: "Copper repiping",
     body: "Copper is a proven, durable material that is naturally resistant to bacterial growth and provides excellent water quality. Red Carpet Plumbing installs Type L copper, the standard for residential plumbing in the Las Vegas Valley.",
   },
 ];
@@ -222,9 +222,9 @@ const SV_AREAS = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Re-Piping Services in Spring Valley, NV | Red Carpet Plumbing",
+  name: "Repiping Services in Spring Valley, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides re-piping services in Spring Valley, NV. Galvanized, polybutylene, Kitec, and copper pipe replacement. Clark County permits pulled. Licensed plumbers.",
+    "Red Carpet Plumbing provides repiping services in Spring Valley, NV. Galvanized, polybutylene, Kitec, and copper pipe replacement. Clark County permits pulled. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/spring-valley/re-piping/",
   isPartOf: {
     "@type": "WebSite",
@@ -252,7 +252,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Re-Piping Services in Spring Valley",
+      name: "Repiping Services in Spring Valley",
       item: "https://redcarpetplumbing.com/spring-valley/re-piping/",
     },
   ],
@@ -261,10 +261,10 @@ const breadcrumbSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Re-Piping Services in Spring Valley, NV",
-  serviceType: "Re-Piping",
+  name: "Repiping Services in Spring Valley, NV",
+  serviceType: "Repiping",
   description:
-    "Red Carpet Plumbing provides whole-house and partial re-piping services for homes and businesses in Spring Valley, NV. Services include galvanized steel pipe replacement, polybutylene pipe replacement, Kitec pipe replacement, PEX repiping, and copper repiping. Clark County permits pulled.",
+    "Red Carpet Plumbing provides whole-house and partial repiping services for homes and businesses in Spring Valley, NV. Services include galvanized steel pipe replacement, polybutylene pipe replacement, Kitec pipe replacement, PEX repiping, and copper repiping. Clark County permits pulled.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -291,9 +291,9 @@ const serviceSchema = {
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How Red Carpet Plumbing Handles Re-Piping in Spring Valley",
+  name: "How Red Carpet Plumbing Handles Repiping in Spring Valley",
   description:
-    "The process Red Carpet Plumbing follows for re-piping homes in Spring Valley, NV.",
+    "The process Red Carpet Plumbing follows for repiping homes in Spring Valley, NV.",
   step: REPIPE_STEPS.map((s, i) => ({
     "@type": "HowToStep",
     position: i + 1,
@@ -335,12 +335,12 @@ export default function SpringValleyRePipingPage() {
               label: "Spring Valley Plumbing Services",
               href: "/spring-valley-plumbing-services/",
             },
-            { label: "Re-Piping Services in Spring Valley" },
+            { label: "Repiping Services in Spring Valley" },
           ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>
-              Re-Piping Services
+              Repiping Services
               <br /> in Spring Valley, NV
             </>
           }
@@ -355,10 +355,10 @@ export default function SpringValleyRePipingPage() {
             href: "/contact/",
           }}
           ctaNote="Licensed plumbers. Clark County permits pulled. Transparent pricing."
-          formSlot={<QuoteFormPlaceholder title="Get Re-Piping Help" />}
+          formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           backgroundImage={{
             src: "/images/services/re-piping/hero.webp",
-            alt: "Re-piping services in Spring Valley, NV",
+            alt: "Repiping services in Spring Valley, NV",
           }}
         />
 
@@ -369,7 +369,7 @@ export default function SpringValleyRePipingPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Re-Piping in Spring Valley, NV
+                Repiping in Spring Valley, NV
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 Homes in Spring Valley built before approximately 1990 face a
@@ -419,7 +419,7 @@ export default function SpringValleyRePipingPage() {
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 Understanding what is in your home&apos;s walls is the first step
-                in evaluating whether re-piping is the right decision for your
+                in evaluating whether repiping is the right decision for your
                 Spring Valley property.
               </p>
             </div>
@@ -458,7 +458,7 @@ export default function SpringValleyRePipingPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Re-Piping Services We Provide in Spring Valley
+                Repiping Services We Provide in Spring Valley
               </h2>
             </div>
             <ul className="mt-10 space-y-5">
@@ -545,7 +545,7 @@ export default function SpringValleyRePipingPage() {
               <SectionRevealItem>
                 <div className="text-left">
                   <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                    Our Re-Piping Process in Spring Valley
+                    Our Repiping Process in Spring Valley
                   </h2>
                 </div>
               </SectionRevealItem>
@@ -581,7 +581,7 @@ export default function SpringValleyRePipingPage() {
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Why Spring Valley Homeowners Choose Red Carpet Plumbing for
-                Re-Piping
+                Repiping
               </h2>
             </div>
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -638,10 +638,10 @@ export default function SpringValleyRePipingPage() {
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Spring Valley Re-Piping Coverage Areas
+                Spring Valley Repiping Coverage Areas
               </h2>
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-                Red Carpet Plumbing provides re-piping services throughout Spring
+                Red Carpet Plumbing provides repiping services throughout Spring
                 Valley and its surrounding communities.
               </p>
             </div>
@@ -656,12 +656,12 @@ export default function SpringValleyRePipingPage() {
               ))}
             </ul>
             <p className="mt-8 text-base leading-7 text-brand-dark/80">
-              For re-piping services across the Las Vegas Valley, see our{" "}
+              For repiping services across the Las Vegas Valley, see our{" "}
               <Link
                 href="/las-vegas/re-piping/"
                 className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
               >
-                Las Vegas re-piping
+                Las Vegas repiping
               </Link>{" "}
               page.
             </p>
@@ -673,7 +673,7 @@ export default function SpringValleyRePipingPage() {
           <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Re-Piping FAQs for Spring Valley Homeowners
+                Repiping FAQs for Spring Valley Homeowners
               </h2>
             </div>
             <div className="mt-12 space-y-4">
@@ -698,8 +698,8 @@ export default function SpringValleyRePipingPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline={<>Schedule Re-Piping Service<br />in Spring Valley Today</>}
-          body="Red Carpet Plumbing provides whole-house and partial re-piping throughout Spring Valley, NV, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. Clark County permits pulled and inspections scheduled. Call (702) 567-9172 or request service online."
+          headline={<>Schedule Repiping Service<br />in Spring Valley Today</>}
+          body="Red Carpet Plumbing provides whole-house and partial repiping throughout Spring Valley, NV, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. Clark County permits pulled and inspections scheduled. Call (702) 567-9172 or request service online."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

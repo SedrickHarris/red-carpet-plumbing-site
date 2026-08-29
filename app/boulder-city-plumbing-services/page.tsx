@@ -50,7 +50,7 @@ const BOULDER_CITY_FAQS: FaqItem[] = [
     question:
       "What plumbing services does Red Carpet Plumbing offer in Boulder City?",
     answer:
-      "Red Carpet Plumbing provides plumbing services in Boulder City including emergency plumbing, drain cleaning, water heater repair and installation, leak detection, water pipe repair, and re-piping. Call (702) 567-9172 to discuss your plumbing needs.",
+      "Red Carpet Plumbing provides plumbing services in Boulder City including emergency plumbing, drain cleaning, water heater repair and installation, leak detection, water pipe repair, and repiping. Call (702) 567-9172 to discuss your plumbing needs.",
     category: "the-service",
   },
   {
@@ -103,11 +103,11 @@ const BOULDER_CITY_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Sewer line services in Boulder City, NV",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     href: "/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
-    imageAlt: "Re-piping services in Boulder City, NV",
+    imageAlt: "Repiping services in Boulder City, NV",
   },
   {
     title: "Water Heater Repair and Installation",
@@ -213,7 +213,7 @@ const TRUST_ITEMS = [
 const BOULDER_CITY_CONTEXT = [
   {
     title: "Boulder City's Historic Housing and Aging Plumbing",
-    body: "Boulder City was established in the early 1930s as a federally administered construction camp for workers on Hoover Dam. After Hoover Dam's completion, it developed into a permanent planned city and retains many of its original structures. Homes in the historic downtown core and surrounding original neighborhoods date from the 1930s through the 1960s, giving Boulder City some of the oldest residential plumbing infrastructure in the Las Vegas region. Galvanized steel supply lines installed in the 1930s through 1950s have an expected service life of 40 to 70 years under normal conditions, and under Las Vegas Valley hard water conditions, actual service life is often shorter. Many of these original lines are now 60 to 90 years old and are well past typical service life. Reduced water pressure, rust-colored water from tap, and recurring small leaks are common signs that original galvanized pipe has reached end of service life. Re-piping with modern materials is the most durable long-term solution for Boulder City homes still on original plumbing.",
+    body: "Boulder City was established in the early 1930s as a federally administered construction camp for workers on Hoover Dam. After Hoover Dam's completion, it developed into a permanent planned city and retains many of its original structures. Homes in the historic downtown core and surrounding original neighborhoods date from the 1930s through the 1960s, giving Boulder City some of the oldest residential plumbing infrastructure in the Las Vegas region. Galvanized steel supply lines installed in the 1930s through 1950s have an expected service life of 40 to 70 years under normal conditions, and under Las Vegas Valley hard water conditions, actual service life is often shorter. Many of these original lines are now 60 to 90 years old and are well past typical service life. Reduced water pressure, rust-colored water from tap, and recurring small leaks are common signs that original galvanized pipe has reached end of service life. Repiping with modern materials is the most durable long-term solution for Boulder City homes still on original plumbing.",
   },
   {
     title: "Hard Water from Lake Mead",
@@ -289,7 +289,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Plumbing Services in Boulder City, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed plumbing services in Boulder City, NV including emergency plumbing, drain cleaning, water heater repair, and re-piping. NV Licensed #0048585A.",
+    "Red Carpet Plumbing provides licensed plumbing services in Boulder City, NV including emergency plumbing, drain cleaning, water heater repair, and repiping. NV Licensed #0048585A.",
   url: "https://redcarpetplumbing.com/boulder-city-plumbing-services/",
   isPartOf: {
     "@type": "WebSite",

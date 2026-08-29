@@ -119,7 +119,7 @@ const SERVICE_QUICK_LINKS = [
     href: "/slab-leak-detection-repair/",
   },
   { label: "Sewer Line Services", href: "/sewer-line-services/" },
-  { label: "Re-Piping", href: "/re-piping/" },
+  { label: "Repiping", href: "/re-piping/" },
   {
     label: "Water Pipe Repair and Replacement",
     href: "/water-pipe-repair-replacement/",
@@ -210,7 +210,7 @@ const plumberSchema = {
   ],
   sameAs: ["https://share.google/oY5LcfC0lhWJXVjJj"],
   description:
-    "Red Carpet Plumbing provides residential and commercial plumbing services throughout the Las Vegas Valley, including emergency plumbing, drain cleaning, leak detection, water heater repair, slab leak detection, sewer line services, re-piping, and more.",
+    "Red Carpet Plumbing provides residential and commercial plumbing services throughout the Las Vegas Valley, including emergency plumbing, drain cleaning, leak detection, water heater repair, slab leak detection, sewer line services, repiping, and more.",
   areaServed: [
     "Las Vegas, NV",
     "Henderson, NV",

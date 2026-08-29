@@ -535,7 +535,7 @@ export default function ParadiseWaterHeaterPage() {
                         href="/re-piping/"
                         className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
-                        re-piping
+                        repiping
                       </Link>{" "}
                       and{" "}
                       <Link

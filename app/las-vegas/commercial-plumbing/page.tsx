@@ -169,9 +169,9 @@ const COMMERCIAL_SERVICES: {
     href: "/las-vegas/backflow-prevention/",
   },
   {
-    title: "Commercial Pipe Repair and Re-Piping",
+    title: "Commercial Pipe Repair and Repiping",
     description:
-      "Aging supply lines, corroded drain lines, and failing pipe systems in commercial buildings require assessment and repair by a licensed contractor. Red Carpet Plumbing provides commercial pipe repair and re-piping for businesses and multi-unit properties throughout Las Vegas.",
+      "Aging supply lines, corroded drain lines, and failing pipe systems in commercial buildings require assessment and repair by a licensed contractor. Red Carpet Plumbing provides commercial pipe repair and repiping for businesses and multi-unit properties throughout Las Vegas.",
     href: "/commercial-plumbing/",
   },
   // FLAG: 24/7 emergency-availability claim stated in this card — verify before final launch.

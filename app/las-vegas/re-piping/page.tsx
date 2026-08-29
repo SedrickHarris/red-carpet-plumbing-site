@@ -24,14 +24,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 // AggregateRating (Guardrail 4) and hasCredential, matching siblings P13/P14.
 
 export const metadata: Metadata = {
-  title: "Re-Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Professional re-piping services in Las Vegas, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe throughout Las Vegas. PEX and copper repiping. Permits pulled and inspections scheduled.",
+    "Professional repiping services in Las Vegas, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe throughout Las Vegas. PEX and copper repiping. Permits pulled and inspections scheduled.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/re-piping/",
   },
   openGraph: {
-    title: "Re-Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+    title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
       "Whole-house and partial repiping throughout Las Vegas, NV. Polybutylene, Kitec, galvanized, and copper pipe replacement. Permits pulled. Licensed plumbers.",
     url: "https://redcarpetplumbing.com/las-vegas/re-piping/",
@@ -234,9 +234,9 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Re-Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Professional re-piping services in Las Vegas, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe. PEX and copper repiping. Permits pulled and inspections scheduled.",
+    "Professional repiping services in Las Vegas, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe. PEX and copper repiping. Permits pulled and inspections scheduled.",
   url: "https://redcarpetplumbing.com/las-vegas/re-piping/",
   isPartOf: {
     "@type": "WebSite",
@@ -264,7 +264,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Re-Piping",
+      name: "Repiping",
       item: "https://redcarpetplumbing.com/las-vegas/re-piping/",
     },
   ],
@@ -273,10 +273,10 @@ const breadcrumbSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Re-Piping Services",
-  serviceType: "Re-Piping",
+  name: "Repiping Services",
+  serviceType: "Repiping",
   description:
-    "Professional re-piping services in Las Vegas, NV. Red Carpet Plumbing provides whole-house and partial repiping, polybutylene replacement, Kitec replacement, galvanized replacement, and PEX or copper installation throughout Las Vegas.",
+    "Professional repiping services in Las Vegas, NV. Red Carpet Plumbing provides whole-house and partial repiping, polybutylene replacement, Kitec replacement, galvanized replacement, and PEX or copper installation throughout Las Vegas.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -341,12 +341,12 @@ export default function LasVegasRePipingPage() {
               label: "Las Vegas Plumbing",
               href: "/las-vegas-plumbing-services/",
             },
-            { label: "Re-Piping" },
+            { label: "Repiping" },
           ]} variant="dark" />}
           headingLevel="h1"
           headline={
             <>
-              Re-Piping Services
+              Repiping Services
               <br /> in Las Vegas, NV
             </>
           }
@@ -364,7 +364,7 @@ export default function LasVegasRePipingPage() {
           formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           backgroundImage={{
             src: "/images/services/re-piping/hero.webp",
-            alt: "re-piping service in Las Vegas, NV",
+            alt: "repiping service in Las Vegas, NV",
           }}
         />
 
@@ -413,7 +413,7 @@ export default function LasVegasRePipingPage() {
                   href="/re-piping/"
                   className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
-                  re-piping services
+                  repiping services
                 </Link>
                 .
               </p>
@@ -643,7 +643,7 @@ export default function LasVegasRePipingPage() {
                 href="/henderson/re-piping/"
                 className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
               >
-                Henderson re-piping page
+                Henderson repiping page
               </Link>
               .
             </p>
@@ -719,7 +719,7 @@ export default function LasVegasRePipingPage() {
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
-          headline={<>Re-Piping Services<br />Throughout Las Vegas, NV</>}
+          headline={<>Repiping Services<br />Throughout Las Vegas, NV</>}
           body="Red Carpet Plumbing provides professional repiping services throughout Las Vegas, including whole-house and partial repipes, polybutylene replacement, Kitec replacement, galvanized replacement, and PEX or copper installation. Permits pulled and inspections scheduled as part of every whole-house project."
           primaryCTA={{
             label: "Call (702) 567-9172",

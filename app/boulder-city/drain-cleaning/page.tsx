@@ -551,7 +551,7 @@ export default function BoulderCityDrainCleaningPage() {
                     For Boulder City homeowners in historic homes, professional
                     drain cleaning every year rather than every two years is often
                     necessary to maintain adequate drainage. When a video camera
-                    inspection reveals significant interior corrosion, re-piping
+                    inspection reveals significant interior corrosion, repiping
                     the drain lines may be the more practical long-term solution
                     than repeated cleaning.
                   </p>

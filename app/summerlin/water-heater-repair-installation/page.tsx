@@ -169,7 +169,7 @@ const WH_SERVICES: {
   {
     label: "Gas and electric water heater service",
     body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under NV License #0048585A. For homes that may need broader pipe assessment alongside water heater service, see our",
-    link: { href: "/summerlin/re-piping/", text: "re-piping" },
+    link: { href: "/summerlin/re-piping/", text: "repiping" },
   },
 ];
 
@@ -230,7 +230,7 @@ const RELATED_SERVICES = [
     href: "/summerlin/slab-leak-detection-repair/",
   },
   {
-    label: "Re-Piping",
+    label: "Repiping",
     href: "/summerlin/re-piping/",
   },
   {
@@ -599,7 +599,7 @@ export default function SummerlinWaterHeaterPage() {
                 Summerlin plumbing services
               </Link>{" "}
               including emergency plumbing, drain cleaning, slab leak detection,
-              and re-piping. We also serve communities near Summerlin including{" "}
+              and repiping. We also serve communities near Summerlin including{" "}
               <Link
                 href="/las-vegas-plumbing-services/"
                 className="font-semibold text-brand-dark underline hover:text-brand-dark/70"

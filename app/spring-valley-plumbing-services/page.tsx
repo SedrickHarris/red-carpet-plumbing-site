@@ -61,7 +61,7 @@ const SPRING_VALLEY_FAQS: FaqItem[] = [
     question:
       "What plumbing services does Red Carpet Plumbing offer in Spring Valley?",
     answer:
-      "Red Carpet Plumbing provides a full range of residential and commercial plumbing services in Spring Valley including emergency plumbing, drain cleaning, water heater repair and installation, leak detection, slab leak detection and repair, re-piping, commercial plumbing, and more.",
+      "Red Carpet Plumbing provides a full range of residential and commercial plumbing services in Spring Valley including emergency plumbing, drain cleaning, water heater repair and installation, leak detection, slab leak detection and repair, repiping, commercial plumbing, and more.",
     category: "the-service",
   },
   {
@@ -89,7 +89,7 @@ const SPRING_VALLEY_FAQS: FaqItem[] = [
 // card.webp assets exist for the first five services; the rest use the
 // ServiceCard ServiceImagePlaceholder fallback (no image prop passed).
 // Built /spring-valley/[service]/ service-location pages (drain cleaning, leak
-// detection, water heater, slab leak, re-piping, commercial) link to those
+// detection, water heater, slab leak, repiping, commercial) link to those
 // pages; the remaining services link to their core service page until a Spring
 // Valley location page is built.
 // ---------------------------------------------------------------------------
@@ -111,11 +111,11 @@ const SPRING_VALLEY_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Sewer line services in Spring Valley",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     href: "/spring-valley/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
-    imageAlt: "Re-piping services in Spring Valley",
+    imageAlt: "Repiping services in Spring Valley",
   },
   {
     title: "Water Heater Repair and Installation",

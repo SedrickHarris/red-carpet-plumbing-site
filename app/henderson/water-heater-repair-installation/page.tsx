@@ -214,7 +214,7 @@ const RELATED_SERVICES = [
   { label: "Drain Cleaning in Henderson", href: "/henderson/drain-cleaning/" },
   { label: "Leak Detection and Repair", href: "/henderson/leak-detection-repair/" },
   { label: "Slab Leak Detection and Repair", href: "/henderson/slab-leak-detection-repair/" },
-  { label: "Re-Piping", href: "/henderson/re-piping/" },
+  { label: "Repiping", href: "/henderson/re-piping/" },
   { label: "Water Heater Repair and Installation in Las Vegas", href: "/las-vegas/water-heater-repair-installation/" },
 ];
 

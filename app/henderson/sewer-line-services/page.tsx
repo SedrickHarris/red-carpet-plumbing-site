@@ -267,7 +267,7 @@ const RELATED_SERVICES = [
     href: "/henderson/slab-leak-detection-repair/",
   },
   {
-    label: "Re-Piping in Henderson",
+    label: "Repiping in Henderson",
     href: "/henderson/re-piping/",
   },
   {

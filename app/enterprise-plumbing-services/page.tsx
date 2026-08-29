@@ -61,7 +61,7 @@ const ENTERPRISE_FAQS: FaqItem[] = [
     question:
       "What plumbing services does Red Carpet Plumbing offer in Enterprise?",
     answer:
-      "Red Carpet Plumbing provides a full range of residential and commercial plumbing services in Enterprise including emergency plumbing, drain cleaning, water heater repair and installation, slab leak detection and repair, leak detection, re-piping, commercial plumbing, and more.",
+      "Red Carpet Plumbing provides a full range of residential and commercial plumbing services in Enterprise including emergency plumbing, drain cleaning, water heater repair and installation, slab leak detection and repair, leak detection, repiping, commercial plumbing, and more.",
     category: "the-service",
   },
   {
@@ -112,11 +112,11 @@ const ENTERPRISE_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Sewer line services in Enterprise, NV",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     href: "/enterprise/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
-    imageAlt: "Re-piping services in Enterprise, NV",
+    imageAlt: "Repiping services in Enterprise, NV",
   },
   {
     title: "Water Heater Repair and Installation",

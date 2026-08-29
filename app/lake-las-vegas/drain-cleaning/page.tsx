@@ -113,7 +113,7 @@ const LLV_DRAIN_STEPS = [
   },
   {
     name: "Final Check and Recommendations",
-    body: "The plumber confirms flow is restored and provides recommendations for any follow-up service, such as sewer line inspection or re-piping, if the drain or pipe condition warrants it.",
+    body: "The plumber confirms flow is restored and provides recommendations for any follow-up service, such as sewer line inspection or repiping, if the drain or pipe condition warrants it.",
   },
 ];
 

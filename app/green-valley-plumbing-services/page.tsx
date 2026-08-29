@@ -18,14 +18,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Green Valley, NV | Red Carpet Plumbing",
   description:
-    "Plumbing services in Green Valley, NV. Slab leak detection, re-piping, water heater repair for original and newer homes. NV #0048585A. (702) 567-9172.",
+    "Plumbing services in Green Valley, NV. Slab leak detection, repiping, water heater repair for original and newer homes. NV #0048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/green-valley-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Green Valley, NV | Red Carpet Plumbing",
     description:
-      "Plumbing services in Green Valley, NV. Slab leak detection, re-piping, water heater repair for original and newer homes. NV #0048585A. (702) 567-9172.",
+      "Plumbing services in Green Valley, NV. Slab leak detection, repiping, water heater repair for original and newer homes. NV #0048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/green-valley-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -67,7 +67,7 @@ const GREEN_VALLEY_FAQS: FaqItem[] = [
     question:
       "What plumbing services does Red Carpet Plumbing offer in Green Valley?",
     answer:
-      "Red Carpet Plumbing provides a full range of plumbing services in Green Valley including emergency plumbing, drain cleaning, water heater repair and installation, slab leak detection and repair, leak detection, re-piping, and more.",
+      "Red Carpet Plumbing provides a full range of plumbing services in Green Valley including emergency plumbing, drain cleaning, water heater repair and installation, slab leak detection and repair, leak detection, repiping, and more.",
     category: "the-service",
   },
   {
@@ -112,10 +112,10 @@ const GREEN_VALLEY_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Sewer line services in Green Valley, NV",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     href: "/green-valley/re-piping/",
     image: "/images/services/re-piping/hero.webp",
-    imageAlt: "Re-piping services in Green Valley, NV",
+    imageAlt: "Repiping services in Green Valley, NV",
   },
   {
     title: "Water Heater Repair and Installation",
@@ -201,7 +201,7 @@ const TRUST_ITEMS = [
 const GREEN_VALLEY_CONTEXT = [
   {
     title: "Original Green Valley Neighborhoods and Aging Plumbing",
-    body: "Green Valley's original development began in 1978, making it one of the first large master-planned communities in the American Southwest. Homes in the original Green Valley neighborhoods, built from the late 1970s through the mid-1990s, now have plumbing systems that are 30 to 45 years old. Many of these homes were constructed with copper supply lines that have been exposed to Las Vegas Valley hard water for their entire service life. Hard water mineral corrosion thins copper pipe walls over time, and in homes at the 30 to 45 year mark, this process has been ongoing long enough to create meaningful slab leak risk and re-piping candidacy. The caliche and expansive clay soils beneath Green Valley's slab foundations add mechanical stress to these already-compromised pipes. For homeowners in original Green Valley neighborhoods, a plumbing inspection is a practical step in understanding the current condition of supply lines and water heaters before a small issue becomes a significant repair.",
+    body: "Green Valley's original development began in 1978, making it one of the first large master-planned communities in the American Southwest. Homes in the original Green Valley neighborhoods, built from the late 1970s through the mid-1990s, now have plumbing systems that are 30 to 45 years old. Many of these homes were constructed with copper supply lines that have been exposed to Las Vegas Valley hard water for their entire service life. Hard water mineral corrosion thins copper pipe walls over time, and in homes at the 30 to 45 year mark, this process has been ongoing long enough to create meaningful slab leak risk and repiping candidacy. The caliche and expansive clay soils beneath Green Valley's slab foundations add mechanical stress to these already-compromised pipes. For homeowners in original Green Valley neighborhoods, a plumbing inspection is a practical step in understanding the current condition of supply lines and water heaters before a small issue becomes a significant repair.",
   },
   {
     title: "Hard Water and Slab Foundations in Green Valley",
@@ -282,7 +282,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Plumbing Services in Green Valley, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed plumbing services in Green Valley, NV including slab leak detection, re-piping, and water heater repair. NV Licensed #0048585A.",
+    "Red Carpet Plumbing provides licensed plumbing services in Green Valley, NV including slab leak detection, repiping, and water heater repair. NV Licensed #0048585A.",
   url: "https://redcarpetplumbing.com/green-valley-plumbing-services/",
   isPartOf: {
     "@type": "WebSite",

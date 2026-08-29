@@ -257,7 +257,7 @@ export default function AboutPage() {
               commercial plumbing and heating work in Nevada. Services include
               emergency plumbing, drain cleaning, leak detection and repair,
               water heater repair and installation, slab leak detection and
-              repair, sewer line services, re-piping, gas line plumbing, and
+              repair, sewer line services, repiping, gas line plumbing, and
               commercial plumbing. Call (702) 567-9172 to schedule service.
             </p>
           </div>
@@ -291,7 +291,7 @@ export default function AboutPage() {
                 Boulder City, Green Valley, Lake Las Vegas, and
                 surrounding communities. From emergency plumbing and drain
                 cleaning to water heater repair, slab leak detection,
-                re-piping, and gas line service, we handle the full range
+                repiping, and gas line service, we handle the full range
                 of residential and commercial plumbing needs.
               </p>
             </div>
@@ -341,7 +341,7 @@ export default function AboutPage() {
                 Valley. Our services include emergency plumbing, drain
                 cleaning, leak detection and repair, water heater repair
                 and installation, slab leak detection and repair, sewer
-                line services, re-piping, gas line plumbing, commercial
+                line services, repiping, gas line plumbing, commercial
                 plumbing, and more. See our full list of plumbing services
                 at{" "}
                 <Link

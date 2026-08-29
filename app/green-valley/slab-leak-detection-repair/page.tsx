@@ -173,7 +173,7 @@ const REPAIR_OPTIONS: {
     linkPre: " See our ",
     // ACTIVATED: /green-valley/re-piping/ (P34) built and committed.
     linkHref: "/green-valley/re-piping/",
-    linkText: "Green Valley re-piping services",
+    linkText: "Green Valley repiping services",
     linkPost:
       " for homes where the full supply system may be approaching similar age and condition.",
   },
@@ -239,7 +239,7 @@ const RELATED_SERVICES: { label: string; href?: string }[] = [
     href: "/green-valley/water-heater-repair-installation/",
   },
   // ACTIVATED: /green-valley/re-piping/ (P34) built and committed.
-  { label: "Green Valley Re-Piping", href: "/green-valley/re-piping/" },
+  { label: "Green Valley Repiping", href: "/green-valley/re-piping/" },
 ];
 
 // ---------------------------------------------------------------------------

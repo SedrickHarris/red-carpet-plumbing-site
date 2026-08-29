@@ -172,7 +172,7 @@ const REPAIR_OPTIONS: {
     link: {
       pre: " See our ",
       href: "/enterprise/re-piping/",
-      text: "re-piping services",
+      text: "repiping services",
       post: " page for information on full and partial pipe replacement options.",
     },
   },

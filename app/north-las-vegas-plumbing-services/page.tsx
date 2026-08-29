@@ -57,7 +57,7 @@ const NORTH_LAS_VEGAS_FAQS: FaqItem[] = [
     question:
       "What plumbing services does Red Carpet Plumbing offer in North Las Vegas?",
     answer:
-      "Red Carpet Plumbing provides residential and commercial plumbing services throughout North Las Vegas including emergency plumbing, drain cleaning, water heater repair and installation, leak detection and repair, sewer line services, commercial plumbing, re-piping, and more.",
+      "Red Carpet Plumbing provides residential and commercial plumbing services throughout North Las Vegas including emergency plumbing, drain cleaning, water heater repair and installation, leak detection and repair, sewer line services, commercial plumbing, repiping, and more.",
     category: "the-service",
   },
   {
@@ -112,11 +112,11 @@ const NORTH_LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
     imageAlt: "Sewer line services in North Las Vegas",
   },
   {
-    title: "Re-Piping",
+    title: "Repiping",
     href: "/re-piping/",
     image:
       "/images/services/re-piping/hero.webp",
-    imageAlt: "Re-piping services in North Las Vegas",
+    imageAlt: "Repiping services in North Las Vegas",
   },
   {
     title: "Water Heater Repair and Installation",

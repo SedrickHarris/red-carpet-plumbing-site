@@ -513,7 +513,7 @@ export default function LasVegasSlabLeakPage() {
                     href="/las-vegas/re-piping/"
                     className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
-                    re-piping
+                    repiping
                   </Link>{" "}
                   services.
                 </p>
