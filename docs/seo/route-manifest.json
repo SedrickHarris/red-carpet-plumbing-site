@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T20:59:02.473Z",
+  "generatedAt": "2026-08-29T00:03:37.687Z",
   "routeCount": 110,
   "routes": [
     {
@@ -9,7 +9,7 @@
       "possibleTitles": [
         "Plumbing Company in Las Vegas, NV | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Over 40 Years Serving Las Vegas",
@@ -144,7 +144,7 @@
       "possibleTitles": [
         "Plumbing Services in Boulder City, NV | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Emergency Plumbing",
@@ -182,7 +182,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 713
+      "wordEstimate": 668
     },
     {
       "route": "/boulder-city/drain-cleaning",
@@ -266,7 +266,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1084
+      "wordEstimate": 1071
     },
     {
       "route": "/boulder-city/leak-detection-repair",
@@ -537,7 +537,7 @@
       "possibleTitles": [
         "Plumbing Services in Enterprise, NV | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Emergency Plumbing",
@@ -762,16 +762,16 @@
       "sourceFile": "app/enterprise/re-piping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Re-Piping Services in Enterprise, NV | Red Carpet Plumbing"
+        "Repiping Services in Enterprise, NV | Red Carpet Plumbing"
       ],
       "possibleH1s": [],
       "possibleH2s": [
-        "Re-Piping Services in Enterprise: What Homeowners Need to Know",
+        "Repiping Services in Enterprise: What Homeowners Need to Know",
         "Pipe Materials in Enterprise Homes: What to Know",
-        "Signs Your Enterprise Home May Need Re-Piping",
+        "Signs Your Enterprise Home May Need Repiping",
         "When to Repair vs. When to Repipe Your Enterprise Home",
-        "Re-Piping Services for Enterprise Homes",
-        "Our Re-Piping Process in Enterprise",
+        "Repiping Services for Enterprise Homes",
+        "Our Repiping Process in Enterprise",
         "Why Enterprise Homeowners Choose Red Carpet Plumbing",
         "Enterprise Neighborhoods and Communities We Serve",
         "Related Plumbing Services"
@@ -1048,7 +1048,7 @@
       "possibleTitles": [
         "Plumbing Services in Green Valley, NV | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Emergency Plumbing",
@@ -1284,7 +1284,7 @@
       "sourceFile": "app/green-valley/re-piping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Re-Piping Services in Green Valley, Henderson, NV | Red Carpet Plumbing",
+        "Repiping Services in Green Valley, Henderson, NV | Red Carpet Plumbing",
         "Polybutylene and Aging Copper in Green Valley",
         "Kitec Pipe in Green Valley Ranch and Henderson Condominiums (Late 1990s to 2005)",
         "Hard Water Mineral Corrosion Across All Green Valley Homes",
@@ -1299,12 +1299,12 @@
       "possibleH2s": [
         "Signs You May Need to Repipe Your Green Valley Home",
         "Pipe Materials in Green Valley Homes",
-        "Re-Piping Services We Provide in Green Valley",
+        "Repiping Services We Provide in Green Valley",
         "When to Repair and When to Repipe in Green Valley",
         "How Red Carpet Plumbing Handles a Repipe in Green Valley",
-        "Re-Piping in Green Valley?",
+        "Repiping in Green Valley?",
         "Green Valley and Nearby Henderson Communities We Serve",
-        "Re-Piping FAQs for Green Valley Homeowners"
+        "Repiping FAQs for Green Valley Homeowners"
       ],
       "internalHrefs": [
         "/re-piping/",
@@ -1487,7 +1487,7 @@
       "possibleTitles": [
         "Plumbing Services in Henderson, NV | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Emergency Plumbing",
@@ -1527,7 +1527,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 734
+      "wordEstimate": 684
     },
     {
       "route": "/henderson/commercial-plumbing",
@@ -1622,7 +1622,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 713
+      "wordEstimate": 696
     },
     {
       "route": "/henderson/emergency-plumbing",
@@ -1665,7 +1665,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 698
+      "wordEstimate": 682
     },
     {
       "route": "/henderson/gas-line-plumbing",
@@ -1773,7 +1773,7 @@
       "sourceFile": "app/henderson/re-piping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Re-Piping Services in Henderson, NV | Red Carpet Plumbing",
+        "Repiping Services in Henderson, NV | Red Carpet Plumbing",
         "Polybutylene and Aging Copper in Green Valley",
         "Kitec Pipe in Green Valley Ranch and Henderson Condominiums (Late 1990s to 2005)",
         "Hard Water Mineral Corrosion Across All Henderson Homes",
@@ -1969,7 +1969,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 828
+      "wordEstimate": 813
     },
     {
       "route": "/lake-las-vegas-plumbing-services",
@@ -1978,7 +1978,7 @@
       "possibleTitles": [
         "Plumbing Services in Lake Las Vegas, NV | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Emergency Plumbing",
@@ -2270,7 +2270,7 @@
       "possibleTitles": [
         "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Emergency Plumbing",
@@ -2308,7 +2308,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 645
+      "wordEstimate": 638
     },
     {
       "route": "/las-vegas/backflow-prevention",
@@ -2454,7 +2454,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 693
+      "wordEstimate": 675
     },
     {
       "route": "/las-vegas/emergency-plumbing",
@@ -2496,7 +2496,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 654
+      "wordEstimate": 642
     },
     {
       "route": "/las-vegas/faucet-sink-repair-installation",
@@ -2702,7 +2702,7 @@
       "sourceFile": "app/las-vegas/re-piping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Re-Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+        "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
         "Polybutylene Pipe (Homes Built 1975 to 1995)",
         "Kitec Pipe (Homes Built Late 1990s to 2005)",
         "Galvanized Steel Pipe (Homes Built Before 1975)",
@@ -2994,7 +2994,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 817
+      "wordEstimate": 802
     },
     {
       "route": "/leak-detection-repair",
@@ -3053,7 +3053,7 @@
       "possibleTitles": [
         "Plumbing Services in North Las Vegas, NV | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Emergency Plumbing",
@@ -3092,7 +3092,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 744
+      "wordEstimate": 700
     },
     {
       "route": "/north-las-vegas/aliante-area-plumbing",
@@ -3102,7 +3102,7 @@
         "Plumbing Services in Aliante, North Las Vegas, NV | Red Carpet Plumbing",
         "Plumbing Services in the Aliante Area, North Las Vegas | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Emergency Plumbing",
@@ -3453,7 +3453,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 766
+      "wordEstimate": 749
     },
     {
       "route": "/north-las-vegas/emergency-plumbing",
@@ -3495,7 +3495,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 748
+      "wordEstimate": 732
     },
     {
       "route": "/north-las-vegas/leak-detection-repair",
@@ -3545,7 +3545,7 @@
         "Answer",
         "LocalBusiness"
       ],
-      "wordEstimate": 764
+      "wordEstimate": 750
     },
     {
       "route": "/north-las-vegas/slab-leak-detection-repair",
@@ -3640,7 +3640,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 917
+      "wordEstimate": 903
     },
     {
       "route": "/paradise-plumbing-services",
@@ -3649,7 +3649,7 @@
       "possibleTitles": [
         "Plumbing Services in Paradise, NV | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Emergency Plumbing",
@@ -3688,7 +3688,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 719
+      "wordEstimate": 712
     },
     {
       "route": "/paradise/commercial-plumbing",
@@ -3790,7 +3790,7 @@
         "LocalBusiness",
         "AggregateRating"
       ],
-      "wordEstimate": 1169
+      "wordEstimate": 1157
     },
     {
       "route": "/paradise/emergency-plumbing",
@@ -4002,7 +4002,7 @@
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Pipe Repair and Replacement",
         "Gas Line Plumbing"
       ],
@@ -4033,7 +4033,7 @@
       "sourceFile": "app/re-piping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Re-Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+        "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
         "Whole-House Repiping",
         "Partial Repiping",
         "Polybutylene Pipe Replacement",
@@ -4047,14 +4047,14 @@
       "possibleH1s": [],
       "possibleH2s": [
         "Signs You May Need Repiping",
-        "Re-Piping Services in Las Vegas",
+        "Repiping Services in Las Vegas",
         "Las Vegas Pipe Materials and Why They Fail",
         "How Red Carpet Plumbing Handles Repiping",
         "Aging or Failing Pipes in Las Vegas?",
-        "Re-Piping Service Areas",
+        "Repiping Service Areas",
         "Related Plumbing Services",
-        "Frequently Asked Questions About Re-Piping in Las Vegas",
-        "Ready to Schedule Re-Piping Service in Las Vegas?"
+        "Frequently Asked Questions About Repiping in Las Vegas",
+        "Ready to Schedule Repiping Service in Las Vegas?"
       ],
       "internalHrefs": [
         "/service-areas/",
@@ -4108,7 +4108,7 @@
         "State",
         "FAQPage"
       ],
-      "wordEstimate": 627
+      "wordEstimate": 605
     },
     {
       "route": "/sewer-line-services",
@@ -4217,7 +4217,7 @@
       "possibleTitles": [
         "Plumbing Services in Spring Valley, NV | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Emergency Plumbing",
@@ -4355,7 +4355,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 777
+      "wordEstimate": 756
     },
     {
       "route": "/spring-valley/emergency-plumbing",
@@ -4452,25 +4452,25 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1004
+      "wordEstimate": 986
     },
     {
       "route": "/spring-valley/re-piping",
       "sourceFile": "app/spring-valley/re-piping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Re-Piping Services in Spring Valley, NV | Red Carpet Plumbing"
+        "Repiping Services in Spring Valley, NV | Red Carpet Plumbing"
       ],
       "possibleH1s": [],
       "possibleH2s": [
-        "Re-Piping in Spring Valley, NV",
+        "Repiping in Spring Valley, NV",
         "What Pipe Materials Are in Spring Valley Homes?",
-        "Re-Piping Services We Provide in Spring Valley",
+        "Repiping Services We Provide in Spring Valley",
         "When Repair Is Right and When Repiping Makes More Sense",
-        "Our Re-Piping Process in Spring Valley",
-        "Why Spring Valley Homeowners Choose Red Carpet Plumbing for Re-Piping",
-        "Spring Valley Re-Piping Coverage Areas",
-        "Re-Piping FAQs for Spring Valley Homeowners"
+        "Our Repiping Process in Spring Valley",
+        "Why Spring Valley Homeowners Choose Red Carpet Plumbing for Repiping",
+        "Spring Valley Repiping Coverage Areas",
+        "Repiping FAQs for Spring Valley Homeowners"
       ],
       "internalHrefs": [
         "/spring-valley/leak-detection-repair/",
@@ -4551,7 +4551,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 868
+      "wordEstimate": 854
     },
     {
       "route": "/spring-valley/water-heater-repair-installation",
@@ -4599,7 +4599,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 823
+      "wordEstimate": 802
     },
     {
       "route": "/summerlin-plumbing-services",
@@ -4608,7 +4608,7 @@
       "possibleTitles": [
         "Plumbing Services in Summerlin, NV | Red Carpet Plumbing",
         "Sewer Line Services",
-        "Re-Piping",
+        "Repiping",
         "Water Heater Repair and Installation",
         "Slab Leak Detection and Repair",
         "Emergency Plumbing",
@@ -4647,7 +4647,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 659
+      "wordEstimate": 652
     },
     {
       "route": "/summerlin/drain-cleaning",
@@ -4784,24 +4784,24 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 895
+      "wordEstimate": 882
     },
     {
       "route": "/summerlin/re-piping",
       "sourceFile": "app/summerlin/re-piping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Re-Piping Services in Summerlin, NV | Red Carpet Plumbing"
+        "Repiping Services in Summerlin, NV | Red Carpet Plumbing"
       ],
       "possibleH1s": [],
       "possibleH2s": [
-        "Re-Piping Services in Summerlin",
+        "Repiping Services in Summerlin",
         "Pipe Materials in Summerlin Homes: What to Know",
-        "Re-Piping Services We Provide in Summerlin",
+        "Repiping Services We Provide in Summerlin",
         "When Repair Is Right and When Repiping Makes More Sense",
-        "Our Re-Piping Process in Summerlin",
-        "Why Summerlin Homeowners Choose Red Carpet Plumbing for Re-Piping",
-        "Frequently Asked Questions About Re-Piping in Summerlin",
+        "Our Repiping Process in Summerlin",
+        "Why Summerlin Homeowners Choose Red Carpet Plumbing for Repiping",
+        "Frequently Asked Questions About Repiping in Summerlin",
         "Related Plumbing Services"
       ],
       "internalHrefs": [

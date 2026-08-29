@@ -725,7 +725,8 @@ export default function RePipingServicesPage() {
         <section className="bg-brand-primary text-white">
           <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
             <h2 className="text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Ready to Schedule Re-Piping Service
+              Ready to Schedule
+              <br className="hidden sm:block" /> Repiping Service
               <br className="hidden sm:block" /> in Las Vegas?
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
