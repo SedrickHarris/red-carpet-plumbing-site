@@ -119,7 +119,7 @@ Recommended sections:
    - Water Heater Repair and Installation
    - Slab Leak Detection and Repair
    - Sewer Line Services
-   - Re-Piping
+   - Repiping
    - Commercial Plumbing
 
 4. Local plumbing issues in Las Vegas
@@ -488,7 +488,7 @@ Recommended internal links:
 
 ---
 
-## 3.7 Re-Piping
+## 3.7 Repiping
 
 URL:
 
@@ -496,7 +496,7 @@ URL:
 
 H1:
 
-`Re-Piping Services in Las Vegas, NV`
+`Repiping Services in Las Vegas, NV`
 
 Recommended internal links:
 
@@ -1485,7 +1485,7 @@ Include only core service pages:
 - Water Heater Repair and Installation
 - Slab Leak Detection and Repair
 - Sewer Line Services
-- Re-Piping
+- Repiping
 - Commercial Plumbing
 
 Keep the dropdown clean. Do not include every service-location page in the main nav.
@@ -1606,7 +1606,7 @@ Build first:
 - Water heater repair and installation pages
 - Leak detection and repair pages
 - Slab leak detection and repair pages
-- Re-piping pages
+- Repiping pages
 - Commercial plumbing pages where relevant
 
 ## Phase 5: Tier 2 Neighborhood Hubs

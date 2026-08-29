@@ -57,7 +57,7 @@ Create a high-performing plumbing website optimized for local SEO, GEO targeting
 - Water Heater Repair and Installation
 - Slab Leak Detection and Repair
 - Sewer Line Services
-- Re-Piping
+- Repiping
 - Water Pipe Repair and Replacement
 - Gas Line Plumbing
 - Commercial Plumbing

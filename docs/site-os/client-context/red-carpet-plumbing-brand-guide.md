@@ -111,7 +111,7 @@ List approved service categories:
 - Water Heater Repair and Installation
 - Slab Leak Detection and Repair
 - Sewer Line Services
-- Re-Piping
+- Repiping
 - Water Pipe Repair and Replacement
 - Gas Line Plumbing
 - Commercial Plumbing
