@@ -412,7 +412,7 @@ export default function GreenValleyRePipingPage() {
           ctaNote="Licensed plumbers. Permits pulled and inspections scheduled."
           formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           backgroundImage={{
-            src: "/images/services/re-piping/hero.webp",
+            src: "/images/services/repiping/hero.webp",
             alt: "repiping service in Green Valley, Henderson, NV",
           }}
         />

@@ -361,7 +361,7 @@ export default function EnterpriseRePipingPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get a Repiping Assessment" />}
           backgroundImage={{
-            src: "/images/services/re-piping/hero.webp",
+            src: "/images/services/repiping/hero.webp",
             alt: "repiping services in Enterprise, NV",
           }}
         />

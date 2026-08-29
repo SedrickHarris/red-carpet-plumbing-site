@@ -355,7 +355,7 @@ export default function HendersonRePipingPage() {
           ctaNote="Licensed plumbers. Permits pulled. All options explained before work begins."
           formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           backgroundImage={{
-            src: "/images/services/re-piping/hero.webp",
+            src: "/images/services/repiping/hero.webp",
             alt: "repiping service in Henderson, NV",
           }}
         />
