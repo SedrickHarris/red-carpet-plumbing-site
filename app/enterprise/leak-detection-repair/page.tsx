@@ -85,6 +85,11 @@ const ENT_LEAK_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides commercial leak detection services for businesses, commercial parks, and industrial properties throughout Enterprise and the Southwest Las Vegas area, including the 215 Beltway corridor. Call (702) 567-9172 for commercial leak detection service.",
   },
+  {
+    question: "Do you offer same-day leak detection service in Enterprise?",
+    answer:
+      "Same-day leak detection service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

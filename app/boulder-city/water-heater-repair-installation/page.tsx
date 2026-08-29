@@ -91,6 +91,11 @@ const BC_WH_FAQS = [
     answer:
       "Water heater repair and replacement costs vary based on the unit type, the scope of work, and the materials required. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
   },
+  {
+    question: "Do you offer same-day water heater repair service in Boulder City?",
+    answer:
+      "Same-day water heater repair service is available in Boulder City, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

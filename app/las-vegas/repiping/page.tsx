@@ -79,6 +79,11 @@ const LV_REPIPE_FAQS = [
     answer:
       "A documented whole-house repipe with closed permits and final inspection sign-off removes a major concern for home buyers and inspectors. Homes with known defective pipe materials such as polybutylene or Kitec can face challenges during the sale process. A completed repipe with proper permits and documentation provides buyers with confidence in the plumbing system and can support the home's value in the transaction.",
   },
+  {
+    question: "Do you offer same-day repiping service in Las Vegas?",
+    answer:
+      "Same-day repiping service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

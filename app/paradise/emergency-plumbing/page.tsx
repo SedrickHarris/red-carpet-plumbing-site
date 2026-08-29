@@ -82,6 +82,11 @@ const PARADISE_EMERGENCY_FAQS = [
     answer:
       "A slab leak becomes an emergency when it causes visible water damage, a sudden drop in water pressure, warm or wet spots on the floor, or the sound of running water when all fixtures are off. Early detection prevents major foundation damage. Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Paradise and the Las Vegas Valley.",
   },
+  {
+    question: "Do you offer same-day emergency plumbing service in Paradise?",
+    answer:
+      "Same-day emergency plumbing service is available in Paradise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

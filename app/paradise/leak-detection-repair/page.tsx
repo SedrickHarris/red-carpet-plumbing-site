@@ -89,6 +89,11 @@ const PARADISE_LEAK_FAQS = [
     answer:
       "Plumbing permits in Paradise are issued by Clark County, Nevada. Paradise is an unincorporated community within Clark County, so the City of Las Vegas building department does not have jurisdiction over Paradise properties. For repairs that require a permit, Red Carpet Plumbing handles filing with Clark County.",
   },
+  {
+    question: "Do you offer same-day leak detection service in Paradise?",
+    answer:
+      "Same-day leak detection service is available in Paradise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

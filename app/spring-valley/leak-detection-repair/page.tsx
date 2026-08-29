@@ -81,6 +81,11 @@ const SV_LEAK_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides leak detection and repair throughout Spring Valley, including the Desert Inn and West Sahara corridors, Rainbow Boulevard area, Decatur Boulevard area, Tropicana corridor, and surrounding Spring Valley neighborhoods. Call (702) 567-9172 to confirm coverage for your address.",
   },
+  {
+    question: "Do you offer same-day leak detection service in Spring Valley?",
+    answer:
+      "Same-day leak detection service is available in Spring Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

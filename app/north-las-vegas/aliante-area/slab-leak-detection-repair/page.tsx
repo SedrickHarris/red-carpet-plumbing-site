@@ -302,6 +302,11 @@ const ALIANTE_SLAB_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides slab leak detection and repair throughout the Aliante area of North Las Vegas. Aliante is a master-planned community within the City of North Las Vegas, and our Nevada Contractor License #0048585A covers plumbing work throughout North Las Vegas including the Aliante community and surrounding neighborhoods. Call (702) 567-9172 to confirm coverage for your address or to request service.",
   },
+  {
+    question: "Do you offer same-day slab leak repair service in the Aliante Area of North Las Vegas?",
+    answer:
+      "Same-day slab leak repair service is available in the Aliante Area of North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

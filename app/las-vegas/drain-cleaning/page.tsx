@@ -77,6 +77,11 @@ const LV_DRAIN_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides drain cleaning for residential and commercial properties throughout Las Vegas, including kitchen drains, floor drains, main sewer lines, and hydro jetting service for commercial facilities with heavy drain use.",
   },
+  {
+    question: "Do you offer same-day drain cleaning service in Las Vegas?",
+    answer:
+      "Same-day drain cleaning service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // Why Las Vegas drains clog faster (bold label + description). Hard water leads

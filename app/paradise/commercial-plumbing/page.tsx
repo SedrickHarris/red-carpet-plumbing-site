@@ -91,6 +91,11 @@ const PARADISE_COMMERCIAL_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing works with property managers overseeing multi-unit residential buildings, mixed-use developments, and commercial properties throughout Paradise. We provide documented commercial plumbing service, coordinate scheduling to minimize tenant disruption, and handle permit filing with Clark County for applicable projects. Call (702) 567-9172 or request service online to discuss your property's needs.",
   },
+  {
+    question: "Do you offer same-day commercial plumbing service in Paradise?",
+    answer:
+      "Same-day commercial plumbing service is available in Paradise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

@@ -86,6 +86,11 @@ const SUMMERLIN_WH_FAQS = [
     answer:
       "Permit jurisdiction in Summerlin depends on which side of the city boundary the property sits. Summerlin spans both the City of Las Vegas and unincorporated Clark County. Red Carpet Plumbing holds NV License #0048585A and works within the applicable permit process for your address.",
   },
+  {
+    question: "Do you offer same-day water heater repair service in Summerlin?",
+    answer:
+      "Same-day water heater repair service is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

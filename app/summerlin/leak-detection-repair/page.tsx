@@ -78,6 +78,11 @@ const SUMMERLIN_LEAK_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides leak detection and repair throughout Summerlin, including Summerlin North, Summerlin South, The Hills, The Trails, The Arbors, The Canyons, The Ridges, The Willows, The Gardens, and all Summerlin communities. Call (702) 567-9172 to confirm coverage for your address.",
   },
+  {
+    question: "Do you offer same-day leak detection service in Summerlin?",
+    answer:
+      "Same-day leak detection service is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

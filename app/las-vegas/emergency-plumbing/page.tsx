@@ -82,6 +82,11 @@ const LAS_VEGAS_EMERGENCY_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service for both residential and commercial properties throughout Las Vegas.",
   },
+  {
+    question: "Do you offer same-day emergency plumbing service in Las Vegas?",
+    answer:
+      "Same-day emergency plumbing service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // Common emergency problems (bold label + description). The build brief used

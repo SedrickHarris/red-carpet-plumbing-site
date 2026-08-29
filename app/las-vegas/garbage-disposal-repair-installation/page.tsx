@@ -99,6 +99,11 @@ const LV_DISPOSAL_FAQS = [
     answer:
       "Garbage disposal leaks most commonly come from three locations: the sink flange at the top where the disposal meets the sink drain, the discharge tube on the side where water exits to the drain pipe, or the bottom of the housing where internal seals have failed. Leaks at the flange or discharge tube are usually repairable. Leaks from the bottom of the housing typically indicate failed internal seals and usually mean the unit needs replacement.",
   },
+  {
+    question: "Do you offer same-day garbage disposal repair service in Las Vegas?",
+    answer:
+      "Same-day garbage disposal repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

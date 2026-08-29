@@ -94,6 +94,12 @@ const ENTERPRISE_REPIPE_FAQS: FaqItem[] = [
       "Yes. Red Carpet Plumbing provides repiping services throughout Enterprise including Rhodes Ranch, Mountain's Edge, and the broader Southwest Las Vegas area. Call (702) 567-9172 to schedule an assessment.",
     category: "the-service",
   },
+  {
+    question: "Do you offer same-day repiping service in Enterprise?",
+    answer:
+      "Same-day repiping service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
+  },
 ];
 
 const HERO_SUBHEADING =

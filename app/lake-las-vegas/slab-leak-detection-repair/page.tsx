@@ -207,6 +207,11 @@ const LLV_SLAB_FAQS = [
     answer:
       "Slab leak repair permits in Lake Las Vegas are issued by the City of Henderson, which is the governing jurisdiction for the Lake Las Vegas community. Red Carpet Plumbing holds Nevada Contractor License #0048585A and handles all applicable City of Henderson permit and inspection requirements.",
   },
+  {
+    question: "Do you offer same-day slab leak repair service in Lake Las Vegas?",
+    answer:
+      "Same-day slab leak repair service is available in Lake Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

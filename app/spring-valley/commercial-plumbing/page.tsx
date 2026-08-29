@@ -92,6 +92,11 @@ const SV_COMMERCIAL_FAQS = [
     answer:
       "Spring Valley is an unincorporated Clark County community. The permit jurisdiction for commercial plumbing work in Spring Valley is Clark County, not the City of Las Vegas. Red Carpet Plumbing coordinates the required Clark County permits for applicable commercial plumbing projects in Spring Valley. If you are unsure whether your commercial plumbing project requires a permit, contact us before work begins.",
   },
+  {
+    question: "Do you offer same-day commercial plumbing service in Spring Valley?",
+    answer:
+      "Same-day commercial plumbing service is available in Spring Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

@@ -81,6 +81,11 @@ const SUMMERLIN_SLAB_FAQS = [
     answer:
       "Slab leak repair involving concrete cutting and pipe repair or rerouting typically requires a permit in both the City of Las Vegas and unincorporated Clark County. Permit jurisdiction in Summerlin depends on which side of the city boundary the property sits. Red Carpet Plumbing holds NV License #0048585A and works within the applicable permit process for your address.",
   },
+  {
+    question: "Do you offer same-day slab leak repair service in Summerlin?",
+    answer:
+      "Same-day slab leak repair service is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

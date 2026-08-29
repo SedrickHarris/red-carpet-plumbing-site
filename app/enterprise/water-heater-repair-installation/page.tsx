@@ -86,6 +86,11 @@ const ENT_WH_FAQS = [
     answer:
       "Enterprise is an unincorporated Clark County community, and Clark County is the permit jurisdiction for water heater installation here. Red Carpet Plumbing holds NV License #0048585A and works within the Clark County permit process for applicable water heater installations.",
   },
+  {
+    question: "Do you offer same-day water heater repair service in Enterprise?",
+    answer:
+      "Same-day water heater repair service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

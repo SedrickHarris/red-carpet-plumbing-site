@@ -102,6 +102,11 @@ const ALIANTE_WH_FAQS = [
     answer:
       "The City of North Las Vegas is the permit jurisdiction for water heater installations in the Aliante area. Aliante is a master-planned community within the incorporated City of North Las Vegas. Red Carpet Plumbing holds NV License #0048585A and works within the City of North Las Vegas permit process for applicable installations.",
   },
+  {
+    question: "Do you offer same-day water heater repair service in the Aliante Area of North Las Vegas?",
+    answer:
+      "Same-day water heater repair service is available in the Aliante Area of North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

@@ -77,6 +77,11 @@ const HENDERSON_DRAIN_FAQS = [
     answer:
       "Drain cleaning costs vary based on the type of drain, the severity of the clog, and the method required. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
   },
+  {
+    question: "Do you offer same-day drain cleaning service in Henderson?",
+    answer:
+      "Same-day drain cleaning service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // Why Henderson drains clog (bold label + description). The two-phase Green

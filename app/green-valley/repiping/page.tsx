@@ -85,6 +85,11 @@ const GV_REPIPE_FAQS = [
     answer:
       "Most single-story Green Valley homes can be repiped in one to two days. Water is restored each evening on multi-day projects so the household is not without water overnight. Multi-story homes, condominiums, and larger properties take longer. Red Carpet Plumbing will provide a timeline estimate based on your home's size and plumbing layout before work begins.",
   },
+  {
+    question: "Do you offer same-day repiping service in Green Valley?",
+    answer:
+      "Same-day repiping service is available in Green Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

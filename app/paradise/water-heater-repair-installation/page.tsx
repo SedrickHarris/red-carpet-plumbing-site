@@ -82,6 +82,11 @@ const PARADISE_WATER_HEATER_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing installs tankless water heaters for residential and commercial properties throughout Paradise. In the Las Vegas Valley hard water environment, tankless water heaters require annual descaling to remove mineral deposits from the heat exchanger. We install, service, and descale tankless units. All installations are completed to current Clark County plumbing code.",
   },
+  {
+    question: "Do you offer same-day water heater repair service in Paradise?",
+    answer:
+      "Same-day water heater repair service is available in Paradise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

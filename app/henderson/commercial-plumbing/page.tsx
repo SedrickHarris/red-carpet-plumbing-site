@@ -85,6 +85,11 @@ const HENDERSON_COMMERCIAL_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services for property managers overseeing multi-unit residential buildings, condominium communities, and commercial facilities throughout Henderson. We handle everything from individual unit repairs to shared sewer line maintenance and water heater replacement. Our licensed status under NV #0048585A supports permit compliance requirements for managed Henderson properties.",
   },
+  {
+    question: "Do you offer same-day commercial plumbing service in Henderson?",
+    answer:
+      "Same-day commercial plumbing service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

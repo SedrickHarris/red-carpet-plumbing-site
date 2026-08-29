@@ -94,6 +94,11 @@ const BC_LEAK_FAQS = [
     answer:
       "Boulder City is an incorporated city with its own building department. Plumbing repair permits in Boulder City are processed through the Boulder City Building Department. Red Carpet Plumbing holds Nevada Contractor License #0048585A and handles the permit process for repair and replacement projects in Boulder City that require permits.",
   },
+  {
+    question: "Do you offer same-day leak detection service in Boulder City?",
+    answer:
+      "Same-day leak detection service is available in Boulder City, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const HERO_SUBHEADING =

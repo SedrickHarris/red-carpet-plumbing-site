@@ -84,6 +84,11 @@ const NLV_WH_FAQS = [
     answer:
       "A thermal expansion tank absorbs the pressure created when a water heater heats water in a closed-loop plumbing system. Most North Las Vegas homes operate on a closed-loop system due to backflow preventers at the street meter. Clark County plumbing code and most manufacturer warranties require a thermal expansion tank on closed-loop water heater installations. If your water heater was installed without one, Red Carpet Plumbing can add it.",
   },
+  {
+    question: "Do you offer same-day water heater repair service in North Las Vegas?",
+    answer:
+      "Same-day water heater repair service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // Why North Las Vegas water heaters need service (bold label + description). The

@@ -205,6 +205,11 @@ const LLV_LEAK_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides leak detection and repair for homes throughout Lake Las Vegas as part of its Henderson, NV service area. Lake Las Vegas is a master-planned resort community within the incorporated City of Henderson. Call (702) 567-9172 to schedule a leak detection inspection.",
   },
+  {
+    question: "Do you offer same-day leak detection service in Lake Las Vegas?",
+    answer:
+      "Same-day leak detection service is available in Lake Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------

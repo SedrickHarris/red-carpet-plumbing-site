@@ -112,6 +112,11 @@ const LV_BACKFLOW_FAQS = [
     answer:
       "Yes, in most cases. Residential irrigation systems in Las Vegas are among the most common applications requiring a backflow preventer because the irrigation line creates a direct cross-connection between the water supply and potentially contaminated soil or fertilizer. Pressure vacuum breakers are the most common backflow device installed on residential irrigation systems in Clark County. If your irrigation system does not have a backflow preventer, contact a licensed plumber to assess and install the appropriate device.",
   },
+  {
+    question: "Do you offer same-day backflow prevention service in Las Vegas?",
+    answer:
+      "Same-day backflow prevention service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
