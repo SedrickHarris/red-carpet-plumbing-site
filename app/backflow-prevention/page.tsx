@@ -75,6 +75,11 @@ const BACKFLOW_FAQS = [
     answer:
       "Red Carpet Plumbing provides backflow prevention device installation, repair, and service throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
+  {
+    question: "Do you offer same-day backflow prevention service in Las Vegas?",
+    answer:
+      "Same-day backflow prevention service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const BACKFLOW_INFO_BLOCKS = [

@@ -81,6 +81,12 @@ const DRAIN_CLEANING_FAQS: FaqItem[] = [
       "Yes. Red Carpet Plumbing provides drain cleaning service throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
     category: "the-service",
   },
+  {
+    question: "Do you offer same-day drain cleaning service in Las Vegas?",
+    answer:
+      "Same-day drain cleaning service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
+  },
 ];
 
 const SIGNS_CALL_NOW = [

@@ -72,6 +72,11 @@ const LEAK_DETECTION_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides leak detection and repair throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
+  {
+    question: "Do you offer same-day leak detection service in Las Vegas?",
+    answer:
+      "Same-day leak detection service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const LEAK_WARNING_SIGNS = [

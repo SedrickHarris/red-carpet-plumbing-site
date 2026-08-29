@@ -69,6 +69,11 @@ const COMMERCIAL_FAQS = [
     answer:
       "Red Carpet Plumbing provides commercial plumbing services throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
+  {
+    question: "Do you offer same-day commercial plumbing service in Las Vegas?",
+    answer:
+      "Same-day commercial plumbing service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const COMMERCIAL_WARNING_SIGNS = [

@@ -69,6 +69,11 @@ const GAS_LINE_FAQS = [
     answer:
       "Red Carpet Plumbing provides gas line services throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
+  {
+    question: "Do you offer same-day gas line service in Las Vegas?",
+    answer:
+      "Same-day gas line service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const GAS_LINE_WARNING_SIGNS = [

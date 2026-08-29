@@ -73,6 +73,11 @@ const WATER_HEATER_FAQS = [
     answer:
       "Yes. Red Carpet Plumbing provides water heater repair and installation throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
   },
+  {
+    question: "Do you offer same-day water heater repair service in Las Vegas?",
+    answer:
+      "Same-day water heater repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+  },
 ];
 
 const SIGNS_NEED_REPAIR = [
