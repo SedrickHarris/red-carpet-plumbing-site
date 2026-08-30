@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-30T22:01:22.412Z",
-  "routeCount": 114,
+  "generatedAt": "2026-08-30T22:42:14.204Z",
+  "routeCount": 115,
   "routes": [
     {
       "route": "/",
@@ -3736,6 +3736,56 @@
         "AggregateRating"
       ],
       "wordEstimate": 531
+    },
+    {
+      "route": "/north-las-vegas/toilet-repair-installation",
+      "sourceFile": "app/north-las-vegas/toilet-repair-installation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Toilet Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+        "Hard Water Mineral Buildup",
+        "Two Housing Vintages, Two Wear Patterns",
+        "Wax Ring Wear and Caliche Soil Movement",
+        "When repair is the right choice",
+        "When replacement makes more sense"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Common Toilet Problems in North Las Vegas Homes",
+        "Why North Las Vegas Homes Have Toilet Problems",
+        "Toilet Repair and Installation Services in North Las Vegas",
+        "Toilet Repair or Replacement: What Makes Sense for Your North Las Vegas Home?",
+        "How We Handle Toilet Service in North Las Vegas",
+        "Why North Las Vegas Homeowners Choose Red Carpet Plumbing",
+        "Toilet Trouble in Your North Las Vegas Home?",
+        "Toilet Repair and Installation Across North Las Vegas",
+        "Frequently Asked Questions About Toilet Repair and Installation in North Las Vegas"
+      ],
+      "internalHrefs": [
+        "/toilet-repair-installation/",
+        "/contact/",
+        "/north-las-vegas-plumbing-services/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "PostalCodeSpecification",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "LocalBusiness",
+        "Review",
+        "AggregateRating"
+      ],
+      "wordEstimate": 994
     },
     {
       "route": "/north-las-vegas/water-heater-repair-installation",

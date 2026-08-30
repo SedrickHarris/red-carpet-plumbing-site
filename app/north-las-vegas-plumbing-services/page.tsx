@@ -169,7 +169,7 @@ const NORTH_LAS_VEGAS_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Toilet Repair and Installation",
-    href: "/toilet-repair-installation/",
+    href: "/north-las-vegas/toilet-repair-installation/",
   },
 ];
 
