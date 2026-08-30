@@ -32,9 +32,10 @@
 // SKIPPED LINKS (routes do not exist in this repo, verified at Gate 1):
 // /repiping/whole-house/ and /repiping/partial/. Both were specified in this
 // build's internal linking table. Neither directory exists under app/. Per the
-// brief, the links are skipped rather than invented. Note that the core
-// /repiping/ page already links to both dead routes; that is a pre-existing
-// defect on a page outside this build's scope and is reported, not fixed here.
+// brief, the links are skipped rather than invented. The core /repiping/ page
+// previously linked to both dead routes; those links were fixed separately and
+// now point at /repiping/ itself. The routes still do not exist, so the skip
+// above stands.
 //
 // Spelling standard: "Repiping", one word, no hyphen, everywhere.
 
