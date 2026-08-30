@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-29T02:58:45.591Z",
-  "routeCount": 111,
+  "generatedAt": "2026-08-30T18:22:46.338Z",
+  "routeCount": 112,
   "routes": [
     {
       "route": "/",
@@ -3687,6 +3687,51 @@
         "Answer"
       ],
       "wordEstimate": 903
+    },
+    {
+      "route": "/north-las-vegas/water-pipe-repair-replacement",
+      "sourceFile": "app/north-las-vegas/water-pipe-repair-replacement/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Water Pipe Repair and Replacement in North Las Vegas, NV | Red Carpet Plumbing"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Dealing with a Water Pipe Problem in North Las Vegas?",
+        "Water Pipe Issues Common to North Las Vegas Homes",
+        "Do You Need Pipe Repair or Full Replacement?",
+        "Water Pipe Services We Provide in North Las Vegas",
+        "How We Handle Water Pipe Repair and Replacement",
+        "Water Pipe Problem in North Las Vegas?",
+        "Why North Las Vegas Homeowners Choose Red Carpet Plumbing",
+        "Serving North Las Vegas and the Surrounding Area",
+        "Water Pipe Repair FAQs North Las Vegas"
+      ],
+      "internalHrefs": [
+        "/leak-detection-repair/",
+        "/contact/",
+        "/north-las-vegas/aliante-area-plumbing/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "PostalCodeSpecification",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "LocalBusiness",
+        "Review",
+        "AggregateRating"
+      ],
+      "wordEstimate": 1018
     },
     {
       "route": "/paradise-plumbing-services",
