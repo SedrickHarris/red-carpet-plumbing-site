@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-30T21:39:36.231Z",
-  "routeCount": 113,
+  "generatedAt": "2026-08-30T22:01:22.412Z",
+  "routeCount": 114,
   "routes": [
     {
       "route": "/",
@@ -3414,6 +3414,51 @@
       "wordEstimate": 868
     },
     {
+      "route": "/north-las-vegas/commercial-plumbing",
+      "sourceFile": "app/north-las-vegas/commercial-plumbing/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Commercial Plumbing in North Las Vegas, NV | Red Carpet Plumbing"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Need Commercial Plumbing Service in North Las Vegas?",
+        "Commercial Plumbing Needs Along North Las Vegas&apos;s Industrial Corridors",
+        "Who We Serve in North Las Vegas",
+        "Commercial Plumbing Services We Provide in North Las Vegas",
+        "How We Handle Commercial Plumbing in North Las Vegas",
+        "Need Commercial Plumbing Service?",
+        "Why North Las Vegas Businesses Choose Red Carpet Plumbing",
+        "Serving North Las Vegas and the Surrounding Area",
+        "Commercial Plumbing FAQs North Las Vegas"
+      ],
+      "internalHrefs": [
+        "/commercial-plumbing/",
+        "/contact/",
+        "/north-las-vegas/aliante-area-plumbing/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "PostalCodeSpecification",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "LocalBusiness",
+        "Review",
+        "AggregateRating"
+      ],
+      "wordEstimate": 966
+    },
+    {
       "route": "/north-las-vegas/drain-cleaning",
       "sourceFile": "app/north-las-vegas/drain-cleaning/page.tsx",
       "routerType": "app",
@@ -3591,7 +3636,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1056
+      "wordEstimate": 1058
     },
     {
       "route": "/north-las-vegas/sewer-line-services",

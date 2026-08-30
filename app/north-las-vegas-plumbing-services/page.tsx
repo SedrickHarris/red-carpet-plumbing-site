@@ -165,7 +165,7 @@ const NORTH_LAS_VEGAS_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Commercial Plumbing",
-    href: "/commercial-plumbing/",
+    href: "/north-las-vegas/commercial-plumbing/",
   },
   {
     title: "Toilet Repair and Installation",
