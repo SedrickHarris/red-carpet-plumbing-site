@@ -119,7 +119,7 @@ const NORTH_LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
   },
   {
     title: "Repiping",
-    href: "/repiping/",
+    href: "/north-las-vegas/repiping/",
     image:
       "/images/services/repiping/hero.webp",
     imageAlt: "Repiping services in North Las Vegas",

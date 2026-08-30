@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-30T18:22:46.338Z",
-  "routeCount": 112,
+  "generatedAt": "2026-08-30T21:24:33.746Z",
+  "routeCount": 113,
   "routes": [
     {
       "route": "/",
@@ -3546,6 +3546,52 @@
         "LocalBusiness"
       ],
       "wordEstimate": 750
+    },
+    {
+      "route": "/north-las-vegas/repiping",
+      "sourceFile": "app/north-las-vegas/repiping/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Repiping in North Las Vegas, NV | Red Carpet Plumbing"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Considering a Repipe in North Las Vegas?",
+        "Repiping Needs Common to North Las Vegas Homes",
+        "Signs Your North Las Vegas Home May Need Repiping",
+        "Whole-House or Partial Repipe: Which Do You Need?",
+        "How We Handle Repiping in North Las Vegas",
+        "Considering a Repipe?",
+        "Why North Las Vegas Homeowners Choose Red Carpet Plumbing",
+        "Serving North Las Vegas and the Surrounding Area",
+        "Repiping FAQs North Las Vegas"
+      ],
+      "internalHrefs": [
+        "/repiping/",
+        "/north-las-vegas/water-pipe-repair-replacement/",
+        "/contact/",
+        "/north-las-vegas/aliante-area-plumbing/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "PostalCodeSpecification",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "LocalBusiness",
+        "Review",
+        "AggregateRating"
+      ],
+      "wordEstimate": 1056
     },
     {
       "route": "/north-las-vegas/sewer-line-services",
