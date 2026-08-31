@@ -360,7 +360,7 @@ export default function SummerlinDrainCleaningPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Drain Cleaning Help" />}
           backgroundImage={{
-            src: "/images/locations/summerlin/hero.webp",
+            src: "/images/locations/summerlin/red-carpet-plumbing-summerlin-nv-red-rock-canyon-location-hero.webp",
             alt: "Licensed drain cleaning plumbers serving Summerlin, NV",
           }}
         />

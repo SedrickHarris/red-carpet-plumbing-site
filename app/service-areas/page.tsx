@@ -103,7 +103,7 @@ type LocationCardData = {
 const LOCATION_CARDS: LocationCardData[] = [
   {
     name: "Las Vegas",
-    image: "/images/locations/las-vegas/hero.webp",
+    image: "/images/locations/las-vegas/red-carpet-plumbing-las-vegas-nv-skyline-location-hero.webp",
     alt: "View of the Las Vegas Strip from above",
     description:
       "Plumbing services for homes and businesses throughout Las Vegas, including residential repair, emergency plumbing, drain cleaning, leak detection, and commercial plumbing.",
@@ -111,7 +111,7 @@ const LOCATION_CARDS: LocationCardData[] = [
   },
   {
     name: "Henderson",
-    image: "/images/locations/henderson/hero.webp",
+    image: "/images/locations/henderson/red-carpet-plumbing-henderson-nv-water-street-district-location-hero.webp",
     alt: "Henderson, Nevada residential district",
     description:
       "Plumbing repair, installation, and emergency service for Henderson homeowners and businesses, including Green Valley and Lake Las Vegas areas.",
@@ -135,7 +135,7 @@ const LOCATION_CARDS: LocationCardData[] = [
   },
   {
     name: "Summerlin",
-    image: "/images/locations/summerlin/hero.webp",
+    image: "/images/locations/summerlin/red-carpet-plumbing-summerlin-nv-red-rock-canyon-location-hero.webp",
     alt: "Summerlin community entrance in Las Vegas",
     description:
       "Plumbing services for Summerlin homes and businesses, including emergency plumbing, drain cleaning, water heater service, leak detection, and repiping.",
@@ -143,7 +143,7 @@ const LOCATION_CARDS: LocationCardData[] = [
   },
   {
     name: "Spring Valley",
-    image: "/images/locations/spring-valley/hero.webp",
+    image: "/images/locations/spring-valley/red-carpet-plumbing-spring-valley-nv-desert-breeze-location-hero.webp",
     alt: "Spring Valley neighborhood near Las Vegas",
     description:
       "Plumbing services for Spring Valley residents and businesses, including emergency response, drain cleaning, leak detection, and water heater service.",
@@ -411,7 +411,7 @@ export default function ServiceAreasPage() {
             />
           }
           backgroundImage={{
-            src: "/images/locations/las-vegas/hero.webp",
+            src: "/images/locations/las-vegas/red-carpet-plumbing-las-vegas-nv-skyline-location-hero.webp",
             alt: "View of the Las Vegas Strip from above",
           }}
         />

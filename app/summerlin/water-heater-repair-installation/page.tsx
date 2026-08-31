@@ -382,7 +382,7 @@ export default function SummerlinWaterHeaterPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Water Heater Help" />}
           backgroundImage={{
-            src: "/images/locations/summerlin/hero.webp",
+            src: "/images/locations/summerlin/red-carpet-plumbing-summerlin-nv-red-rock-canyon-location-hero.webp",
             alt: "Licensed water heater repair and installation in Summerlin, NV",
           }}
         />

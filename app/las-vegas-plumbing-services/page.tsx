@@ -384,7 +384,7 @@ export default function LasVegasPlumbingServicesPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
-            src: "/images/locations/las-vegas/hero.webp",
+            src: "/images/locations/las-vegas/red-carpet-plumbing-las-vegas-nv-skyline-location-hero.webp",
             alt: "Licensed plumbers serving Las Vegas, NV",
           }}
         />
