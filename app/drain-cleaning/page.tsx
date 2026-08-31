@@ -106,57 +106,82 @@ type DrainTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved drain service image when available
 const DRAIN_TYPES: DrainTypeCard[] = [
   {
     title: "Kitchen Drain Cleaning",
     description:
       "Kitchen drains are the most common drain service call in Las Vegas. Grease, cooking oils, and food particles build up inside kitchen drain lines over time. Las Vegas hard water accelerates this process by creating mineral deposits that give grease something to bond to. Red Carpet Plumbing clears kitchen drains completely, from the sink trap to the main connection.",
     href: "/drain-cleaning/kitchen/",
+    image:
+      "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-kitchen-drain-cleaning-card.webp",
+    imageAlt: "Red Carpet Plumbing kitchen drain cleaning in Las Vegas, NV",
   },
   {
     title: "Bathroom Drain Cleaning",
     description:
       "Bathroom drains collect hair, soap scum, toothpaste residue, and personal care products. Hard water minerals in Las Vegas compound the problem by creating rough deposits inside pipe walls that catch and hold debris. We clear bathroom sink drains, shower drains, and bathtub drains using methods matched to the specific clog and pipe type.",
     href: "/drain-cleaning/bathroom/",
+    image:
+      "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-bathroom-drain-cleaning-card.webp",
+    imageAlt: "Red Carpet Plumbing bathroom drain cleaning in Las Vegas, NV",
   },
   {
     title: "Shower and Tub Drain Cleaning",
     description:
       "Shower and tub drains are especially prone to hair and soap scum buildup. In Las Vegas homes with hard water, soap scum bonds with calcium and magnesium deposits to create a sticky lining that traps hair and debris faster than in softer-water cities. We clear shower and tub drains thoroughly and can recommend drain screens to reduce future buildup.",
     href: "/drain-cleaning/shower-tub/",
+    image:
+      "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-shower-tub-drain-cleaning-card.webp",
+    imageAlt: "Red Carpet Plumbing shower and tub drain cleaning in Las Vegas, NV",
   },
   {
     title: "Main Sewer Line Cleaning",
     description:
       "When multiple drains in your home are slow or backing up simultaneously, the blockage is usually in the main sewer line. Main line clogs require professional clearing equipment. We clear main sewer lines using cable machines and hydro jetting depending on the type and location of the blockage.",
     href: "/drain-cleaning/main-sewer-line/",
+    image:
+      "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-main-sewer-line-cleaning-card.webp",
+    imageAlt: "Red Carpet Plumbing main sewer line cleaning in Las Vegas, NV",
   },
   {
     title: "Floor Drain Cleaning",
     description:
       "Floor drains in garages, utility rooms, basements, and laundry areas collect debris, sediment, and buildup over time. In Las Vegas, desert sand and mineral deposits are common floor drain clog contributors. We clear floor drains and can inspect the line with a camera to identify any structural issues.",
     href: "/drain-cleaning/floor-drain/",
+    image:
+      "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-floor-drain-cleaning-card.webp",
+    imageAlt: "Red Carpet Plumbing floor drain cleaning in Las Vegas, NV",
   },
   {
     title: "Laundry Drain Cleaning",
     description:
       "Laundry drain lines clog from lint, soap residue, and detergent buildup. In Las Vegas homes with older plumbing, laundry drain lines may also have mineral deposits from hard water that narrow the pipe over time. Slow laundry drainage or standing water in the utility area are signs the line needs professional attention.",
     href: "/drain-cleaning/laundry/",
+    image:
+      "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-laundry-drain-cleaning-card.webp",
+    imageAlt: "Red Carpet Plumbing laundry drain cleaning in Las Vegas, NV",
   },
   {
     title: "Hydro Jetting",
     description:
       "Hydro jetting uses high-pressure water to scour the interior walls of drain and sewer lines, removing grease, mineral scale, soap buildup, and debris completely rather than just punching a hole through the clog. It is the most effective method for clearing stubborn or recurring clogs and for lines with significant hard water mineral buildup.",
     href: "/drain-cleaning/hydro-jetting/",
+    image:
+      "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-hydro-jetting-card.webp",
+    imageAlt: "Red Carpet Plumbing hydro jetting drain service in Las Vegas, NV",
   },
   {
     title: "Video Camera Drain Inspection",
     description:
       "A video camera inspection lets us see exactly what is inside your drain or sewer line before and after cleaning. We use camera inspections to identify the type and location of a blockage, confirm that the line is fully clear after cleaning, and check for pipe damage, root intrusion, or structural issues that could cause future problems.",
     href: "/drain-cleaning/video-camera-inspection/",
+    image:
+      "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-video-camera-drain-inspection-card.webp",
+    imageAlt: "Red Carpet Plumbing video camera drain inspection in Las Vegas, NV",
   },
 ];
 
@@ -484,7 +509,6 @@ export default function DrainCleaningPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved drain service image when available */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {DRAIN_TYPES.map((card) => (
                     <ServiceCard
@@ -492,6 +516,8 @@ export default function DrainCleaningPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}

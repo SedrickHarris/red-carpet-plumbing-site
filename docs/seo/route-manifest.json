@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T21:55:15.029Z",
+  "generatedAt": "2026-08-31T22:40:28.362Z",
   "routeCount": 115,
   "routes": [
     {
@@ -481,7 +481,7 @@
         "WebPage",
         "WebSite"
       ],
-      "wordEstimate": 522
+      "wordEstimate": 512
     },
     {
       "route": "/emergency-plumbing",
