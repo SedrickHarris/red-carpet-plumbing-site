@@ -1,9 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import type { ReactNode } from "react";
-import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { useEffect, useState, type ReactNode } from "react";
+import {
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+  type Variants,
+} from "framer-motion";
 import { Button } from "@/components/Button";
+
+// How long each background slide holds before crossfading, in ms. Only applies
+// when `backgroundImages` carries more than one entry.
+const SLIDE_HOLD_MS = 6500;
 
 type CTA = {
   label: string;
@@ -24,6 +33,12 @@ type HeroSectionProps = {
   ctaNote?: ReactNode;
   formSlot?: ReactNode;
   backgroundImage?: { src: string; alt: string };
+  // Optional multi-image background. When more than one entry is supplied the
+  // hero crossfades between them; a single entry renders identically to
+  // `backgroundImage` with no motion machinery. Mutually exclusive with
+  // `backgroundImage` — if both are passed, this one wins. Only the homepage
+  // uses it; every other page keeps passing the singular prop.
+  backgroundImages?: { src: string; alt: string }[];
   accentWidth?: "sm" | "md" | "lg";
   size?: "default" | "tall";
   // Back-compat: accepted but ignored. The split layout is now always 50/50.
@@ -42,6 +57,7 @@ export function HeroSection({
   ctaNote,
   formSlot,
   backgroundImage,
+  backgroundImages,
   accentWidth = "md",
   size = "default",
   className = "",
@@ -50,6 +66,55 @@ export function HeroSection({
   const hasSplit = Boolean(formSlot);
   const shouldReduceMotion = useReducedMotion();
   const accentWidthClass = { sm: "w-12", md: "w-20", lg: "w-32" }[accentWidth];
+
+  // `backgroundImages` wins when both props are supplied. Everything below
+  // works off this one normalized list, so the single-image path and the
+  // carousel path cannot drift apart.
+  const slides =
+    backgroundImages && backgroundImages.length > 0
+      ? backgroundImages
+      : backgroundImage
+      ? [backgroundImage]
+      : [];
+
+  const [slideIndex, setSlideIndex] = useState(0);
+  const slideCount = slides.length;
+  // A single image, or a reduced-motion preference, means no rotation at all:
+  // no interval, no AnimatePresence, nothing that only ever fires once.
+  const isRotating = slideCount > 1 && !shouldReduceMotion;
+
+  useEffect(() => {
+    if (!isRotating) return;
+
+    let timer: ReturnType<typeof setInterval> | undefined;
+
+    const stop = () => {
+      if (timer !== undefined) {
+        clearInterval(timer);
+        timer = undefined;
+      }
+    };
+    const start = () => {
+      stop();
+      timer = setInterval(
+        () => setSlideIndex((i) => (i + 1) % slideCount),
+        SLIDE_HOLD_MS,
+      );
+    };
+    // A backgrounded tab should not keep cycling animations nobody can see.
+    const handleVisibility = () => {
+      if (document.hidden) stop();
+      else start();
+    };
+
+    if (!document.hidden) start();
+    document.addEventListener("visibilitychange", handleVisibility);
+
+    return () => {
+      stop();
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
+  }, [isRotating, slideCount]);
 
   const paddingY =
     size === "tall"
@@ -87,16 +152,42 @@ export function HeroSection({
     <section
       className={`relative isolate overflow-hidden bg-brand-charcoal ${className}`}
     >
-      {backgroundImage ? (
+      {slideCount > 0 ? (
         <div className="absolute inset-0 -z-10" aria-hidden="true">
-          <Image
-            src={backgroundImage.src}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
+          {isRotating ? (
+            // Crossfade only: no pan, no slide, no controls. This sits behind
+            // hero text, so anything more assertive would fight the copy.
+            <AnimatePresence initial={false} mode="sync">
+              <motion.div
+                key={slides[slideIndex].src}
+                className="absolute inset-0"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1, ease: [0.2, 0.65, 0.3, 1] }}
+              >
+                <Image
+                  src={slides[slideIndex].src}
+                  alt=""
+                  fill
+                  // Only the opening slide is LCP-eligible. The rest load when
+                  // they first become active rather than all at once up front.
+                  priority={slideIndex === 0}
+                  sizes="100vw"
+                  className="object-cover"
+                />
+              </motion.div>
+            </AnimatePresence>
+          ) : (
+            <Image
+              src={slides[0].src}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+          )}
           {/* One flat scrim rather than a gradient. The previous version ran
               charcoal/95 to /30 across split heroes and /90 to /50 down
               stacked ones, so how dark a photo read depended on where you

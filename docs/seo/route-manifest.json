@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T16:03:18.010Z",
+  "generatedAt": "2026-08-31T17:24:17.351Z",
   "routeCount": 115,
   "routes": [
     {
@@ -45,7 +45,7 @@
         "WebPage",
         "Service"
       ],
-      "wordEstimate": 567
+      "wordEstimate": 603
     },
     {
       "route": "/about",
@@ -404,7 +404,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 378
+      "wordEstimate": 425
     },
     {
       "route": "/contact",

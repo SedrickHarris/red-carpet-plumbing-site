@@ -368,10 +368,32 @@ export default function Home() {
             </>
           }
           size="tall"
-          backgroundImage={{
-            src: "/images/homepage/red-carpet-plumbing-las-vegas-branded-service-van-home-hero.webp",
-            alt: "Red Carpet Plumbing branded service van in Las Vegas, NV",
-          }}
+          // Ambient crossfade across the five homepage hero assets. The
+          // branded service van stays first: it is the LCP image and the only
+          // slide marked priority. Homepage only; every other page still
+          // passes the singular backgroundImage prop.
+          backgroundImages={[
+            {
+              src: "/images/homepage/red-carpet-plumbing-las-vegas-branded-service-van-home-hero.webp",
+              alt: "Red Carpet Plumbing branded service van in Las Vegas, NV",
+            },
+            {
+              src: "/images/homepage/red-carpet-plumbing-las-vegas-commercial-plumbing-services-hero.webp",
+              alt: "Red Carpet Plumbing commercial plumbing services in Las Vegas, NV",
+            },
+            {
+              src: "/images/homepage/red-carpet-plumbing-las-vegas-emergency-plumbing-leak-hero.webp",
+              alt: "Red Carpet Plumbing emergency plumbing leak repair in Las Vegas, NV",
+            },
+            {
+              src: "/images/homepage/red-carpet-plumbing-las-vegas-residential-service-van-equipment-hero.webp",
+              alt: "Red Carpet Plumbing residential service van and equipment in Las Vegas, NV",
+            },
+            {
+              src: "/images/homepage/red-carpet-plumbing-las-vegas-sewer-drain-services-hero.webp",
+              alt: "Red Carpet Plumbing sewer and drain services in Las Vegas, NV",
+            },
+          ]}
         />
 
         {/* SECTION 2.5: AEO DIRECT-ANSWER BLOCK */}
