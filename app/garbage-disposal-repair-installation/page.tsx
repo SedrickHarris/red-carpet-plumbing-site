@@ -105,57 +105,82 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved garbage disposal service image when available
 const DISPOSAL_SERVICES: ServiceTypeCard[] = [
   {
     title: "Garbage Disposal Jam Clearing",
     description:
       "Safe clearing of jammed garbage disposal impellers, including inspection of the flywheel, grinding ring, and motor after clearing.",
     href: "/garbage-disposal-repair-installation/",
+    image:
+      "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-jam-clearing-card.webp",
+    imageAlt: "Red Carpet Plumbing garbage disposal jam clearing in Las Vegas, NV",
   },
   {
     title: "Garbage Disposal Leak Repair",
     description:
       "Repair of disposal leaks at the sink flange, discharge tube, and dishwasher inlet connections.",
     href: "/garbage-disposal-repair-installation/",
+    image:
+      "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-leak-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing garbage disposal leak repair in Las Vegas, NV",
   },
   {
     title: "Garbage Disposal Reset and Electrical Diagnosis",
     description:
       "Reset service and electrical diagnosis for disposals that will not start, including breaker checks and wiring inspection.",
     href: "/garbage-disposal-repair-installation/",
+    image:
+      "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-reset-electrical-diagnosis-card.webp",
+    imageAlt: "Red Carpet Plumbing garbage disposal reset and electrical diagnosis in Las Vegas, NV",
   },
   {
     title: "Garbage Disposal Replacement",
     description:
       "Full garbage disposal replacement for units with failed motors, cracked housings, or repeated repair history.",
     href: "/garbage-disposal-repair-installation/",
+    image:
+      "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing garbage disposal replacement in Las Vegas, NV",
   },
   {
     title: "Garbage Disposal Installation",
     description:
       "Professional installation of new garbage disposals including drain connection, dishwasher inlet hookup, and leak testing.",
     href: "/garbage-disposal-repair-installation/",
+    image:
+      "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-installation-card.webp",
+    imageAlt: "Red Carpet Plumbing garbage disposal installation in Las Vegas, NV",
   },
   {
     title: "Discharge Line Cleaning and Repair",
     description:
       "Cleaning and repair of garbage disposal discharge lines clogged by grease and mineral buildup behind the unit.",
     href: "/drain-cleaning/",
+    image:
+      "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-discharge-line-cleaning-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing garbage disposal discharge line cleaning and repair in Las Vegas, NV",
   },
   {
     title: "Sink Flange and Mounting Repair",
     description:
       "Repair and resealing of garbage disposal sink flanges that have loosened or developed leaks at the sink drain connection.",
     href: "/garbage-disposal-repair-installation/",
+    image:
+      "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-sink-flange-mounting-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing garbage disposal sink flange and mounting repair in Las Vegas, NV",
   },
   {
     title: "Disposal Upgrade and Swap",
     description:
       "Upgrade service for older, underpowered, or inefficient disposals with installation of a new unit suited to your kitchen use.",
     href: "/garbage-disposal-repair-installation/",
+    image:
+      "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-upgrade-swap-card.webp",
+    imageAlt: "Red Carpet Plumbing garbage disposal upgrade and swap in Las Vegas, NV",
   },
 ];
 
@@ -480,7 +505,6 @@ export default function GarbageDisposalRepairInstallationPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved garbage disposal service image when available */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {DISPOSAL_SERVICES.map((card, index) => (
                     <ServiceCard
@@ -488,6 +512,8 @@ export default function GarbageDisposalRepairInstallationPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}

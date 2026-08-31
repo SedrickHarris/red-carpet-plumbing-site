@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T23:04:44.123Z",
+  "generatedAt": "2026-08-31T23:27:40.422Z",
   "routeCount": 115,
   "routes": [
     {
@@ -989,7 +989,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 370
+      "wordEstimate": 359
     },
     {
       "route": "/gas-line-plumbing",
