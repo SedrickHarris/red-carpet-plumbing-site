@@ -136,24 +136,35 @@ const COMMERCIAL_SERVICES: {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 }[] = [
   {
     title: "Commercial Drain Cleaning and Hydro Jetting",
     description:
       "Grease buildup, mineral scale, and debris accumulation in commercial drain lines cause slow drains and backups that disrupt business operations. Red Carpet Plumbing provides commercial drain cleaning and hydro jetting for kitchen drains, floor drains, restroom lines, and main sewer connections throughout Henderson.",
     href: "/henderson/drain-cleaning/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-restroom-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial drain cleaning and hydro jetting in Henderson, NV",
   },
   {
     title: "Grease Trap and Floor Drain Service",
     description:
       "Henderson restaurants and food service businesses require regular grease trap maintenance and floor drain cleaning to meet health code requirements. Red Carpet Plumbing provides grease trap and floor drain service for food service operators throughout Henderson.",
     href: "/commercial-plumbing/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-kitchen-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing grease trap and floor drain service in Henderson, NV",
   },
   {
     title: "Commercial Water Heater Repair and Installation",
     description:
       "High-capacity water heater systems in Henderson commercial properties operate under continuous demand. Hard water mineral scale accelerates sediment buildup in commercial water heaters at high usage volumes. Red Carpet Plumbing provides repair, maintenance, and replacement of commercial water heater systems throughout Henderson.",
     href: "/henderson/water-heater-repair-installation/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-water-heater-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial water heater repair and installation in Henderson, NV",
   },
   {
     title: "Commercial Leak Detection and Repair",
@@ -166,12 +177,18 @@ const COMMERCIAL_SERVICES: {
     description:
       "Commercial properties in Henderson generate higher sewer line demand than residential systems, and blockages or failures disrupt operations. Red Carpet Plumbing provides commercial sewer line inspection, cleaning, repair, and replacement throughout Henderson.",
     href: "/henderson/sewer-line-services/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-mechanical-room-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial sewer line services in Henderson, NV",
   },
   {
     title: "Backflow Prevention and Testing",
     description:
       "HOA communities and commercial properties in Henderson with irrigation systems, fire suppression connections, and shared water service connections require backflow prevention devices. Henderson and Clark County require backflow preventer installation and periodic testing for qualifying commercial and HOA properties. Red Carpet Plumbing installs, tests, and repairs backflow prevention devices for commercial and HOA clients throughout Henderson.",
     href: "/backflow-prevention/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-pipe-valve-detail-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing backflow prevention and testing in Henderson, NV",
   },
   {
     title: "Commercial Pipe Repair and Repiping",
@@ -450,7 +467,8 @@ export default function HendersonCommercialPlumbingPage() {
                 </div>
               </SectionRevealItem>
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved commercial plumbing service images when available. */}
+                {/* TODO: some cards render an approved image; these still need an
+                    asset: Commercial Leak Detection and Repair, Commercial Pipe Repair and Repiping, and Emergency Commercial Plumbing. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {COMMERCIAL_SERVICES.map((card) => (
                     <ServiceCard
@@ -458,6 +476,8 @@ export default function HendersonCommercialPlumbingPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={true}
                     />
                   ))}

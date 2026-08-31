@@ -136,24 +136,35 @@ const COMMERCIAL_SERVICES: {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 }[] = [
   {
     title: "Commercial Drain Cleaning and Hydro Jetting",
     description:
       "Grease buildup, mineral scale, and debris accumulation in commercial drain lines cause slow drains and backups that disrupt business operations. Red Carpet Plumbing provides commercial drain cleaning and hydro jetting for kitchen drains, floor drains, restroom lines, and main sewer connections.",
     href: "/las-vegas/drain-cleaning/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-restroom-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial drain cleaning and hydro jetting in Las Vegas, NV",
   },
   {
     title: "Grease Trap and Floor Drain Service",
     description:
       "Commercial kitchens and food service operations require regular grease trap maintenance and floor drain cleaning to meet health code requirements. Red Carpet Plumbing provides grease trap and floor drain service for restaurants and food service businesses throughout Las Vegas.",
     href: "/commercial-plumbing/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-kitchen-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing grease trap and floor drain service in Las Vegas, NV",
   },
   {
     title: "Commercial Water Heater Repair and Installation",
     description:
       "High-capacity water heater systems in commercial properties operate under continuous demand. Mineral buildup from Las Vegas hard water accelerates scale accumulation in commercial water heaters at high usage volumes. Red Carpet Plumbing provides repair, maintenance, and replacement of commercial water heater systems.",
     href: "/las-vegas/water-heater-repair-installation/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-water-heater-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial water heater repair and installation in Las Vegas, NV",
   },
   {
     title: "Commercial Leak Detection and Repair",
@@ -166,12 +177,18 @@ const COMMERCIAL_SERVICES: {
     description:
       "Commercial properties generate higher sewer line demand than residential systems, and blockages or failures disrupt operations. Red Carpet Plumbing provides commercial sewer line inspection, cleaning, repair, and replacement for businesses throughout Las Vegas.",
     href: "/las-vegas/sewer-line-services/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-mechanical-room-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial sewer line services in Las Vegas, NV",
   },
   {
     title: "Backflow Prevention and Testing",
     description:
       "Commercial properties with irrigation systems, fire suppression connections, and specialized equipment require backflow prevention devices. Clark County requires backflow preventer installation and periodic testing for qualifying commercial properties. Red Carpet Plumbing installs, tests, and repairs backflow prevention devices for commercial clients.",
     href: "/las-vegas/backflow-prevention/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-pipe-valve-detail-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing backflow prevention and testing in Las Vegas, NV",
   },
   {
     title: "Commercial Pipe Repair and Repiping",
@@ -438,7 +455,8 @@ export default function LasVegasCommercialPlumbingPage() {
                 </div>
               </SectionRevealItem>
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved commercial plumbing service images when available. */}
+                {/* TODO: some cards render an approved image; these still need an
+                    asset: Commercial Leak Detection and Repair, Commercial Pipe Repair and Repiping, and Emergency Commercial Plumbing. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {COMMERCIAL_SERVICES.map((card) => (
                     <ServiceCard
@@ -446,6 +464,8 @@ export default function LasVegasCommercialPlumbingPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={true}
                     />
                   ))}
