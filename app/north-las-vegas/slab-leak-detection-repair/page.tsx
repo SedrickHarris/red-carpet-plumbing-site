@@ -194,7 +194,7 @@ const NLV_SLAB_RELATED = [
     description:
       "Non-invasive leak detection and repair for hidden leaks in North Las Vegas homes. Acoustic sensors, pressure testing, and thermal imaging.",
     href: "/north-las-vegas/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
     imageAlt: "Leak detection and repair in North Las Vegas, NV",
   },
   {

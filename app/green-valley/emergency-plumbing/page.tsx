@@ -171,7 +171,7 @@ const GV_EMERGENCY_RELATED = [
     description:
       "Non-invasive leak detection and repair for hidden leaks in Green Valley homes. Acoustic sensors, pressure testing, and thermal imaging.",
     href: "/green-valley/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
     imageAlt: "Leak detection and repair in Green Valley, NV",
   },
   {

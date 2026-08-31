@@ -222,7 +222,7 @@ const ALIANTE_DRAIN_RELATED = [
       "Accurate detection and repair of visible and hidden leaks in Aliante area homes, including pinhole leaks in copper lines.",
     // ACTIVATED: P43 built and staged
     href: "/north-las-vegas/aliante-area/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
     imageAlt: "Leak detection and repair in the Aliante area",
   },
   {
