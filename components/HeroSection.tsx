@@ -286,8 +286,12 @@ export function HeroSection({
                   </Button>
                 ) : null}
               </div>
+              {/* white/85, not /70. Over the 65% scrim a near-white photo
+                  composites to rgb(100,105,115), where white/70 measures
+                  3.65:1 and fails AA for normal text. white/85 clears it at
+                  4.52:1. */}
               {ctaNote ? (
-                <p className="mt-3 text-sm text-white/70">{ctaNote}</p>
+                <p className="mt-3 text-sm text-white/85">{ctaNote}</p>
               ) : null}
               {primaryCTA?.disabled || secondaryCTA?.disabled ? (
                 <p className="mt-3 text-xs text-white/60">

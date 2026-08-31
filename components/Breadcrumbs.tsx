@@ -15,8 +15,15 @@ type BreadcrumbsProps = {
 // The dark variant is for crumbs sitting on bg-brand-charcoal, where the light
 // palette is unreadable: brand-dark measures 1.09:1 against #111827 and
 // brand-muted 3.67:1, both under the 4.5:1 floor. It therefore separates the
-// current page by weight and brightness rather than hue. Measured against
-// #111827: white/70 composites to #b8babe at 9.13:1, white is 17.74:1.
+// current page by weight and brightness rather than hue.
+//
+// These crumbs render inside HeroSection, on top of a photo behind a
+// bg-brand-charcoal/65 scrim, not on flat #111827. That matters: against solid
+// charcoal white/70 measures 9.10:1, but over the scrim a near-white photo
+// composites to rgb(100,105,115), where white/70 drops to 3.65:1 and fails AA
+// for normal text. white/85 clears it at 4.52:1, which is why link and muted
+// sit at /85 rather than /70. Do not lower them without recomputing against
+// that composite rather than against flat charcoal.
 const styles = {
   light: {
     link: "text-brand-muted transition-colors hover:text-brand-dark",
@@ -25,9 +32,9 @@ const styles = {
     chevron: "text-brand-muted/60",
   },
   dark: {
-    link: "text-white/70 transition-colors hover:text-white",
+    link: "text-white/85 transition-colors hover:text-white",
     current: "font-medium text-white",
-    muted: "text-white/70",
+    muted: "text-white/85",
     chevron: "text-white/40",
   },
 } as const;
