@@ -104,15 +104,20 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved water pipe service image when available
+// TODO: cards below without an image prop still need an approved asset: Pinhole Leak Repair, Galvanized Pipe Replacement, and Polybutylene Pipe Replacement.
 const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
   {
     title: "Burst Pipe Repair",
     description:
       "Emergency repair of burst or ruptured water supply pipes throughout Las Vegas. Shut off the main supply and call immediately.",
     href: "/emergency-plumbing/",
+    image:
+      "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-burst-pipe-repair-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing burst pipe repair in Las Vegas, NV",
   },
   {
     title: "Pinhole Leak Repair",
@@ -125,6 +130,9 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     description:
       "Replacement of damaged, corroded, or leaking pipe sections in supply lines throughout the home or building.",
     href: "/water-pipe-repair-replacement/",
+    image:
+      "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-wall-access-pipe-replacement-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing pipe section replacement through wall access in Las Vegas, NV",
   },
   {
     title: "Galvanized Pipe Replacement",
@@ -143,18 +151,27 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     description:
       "Repair and replacement of the main water supply line connecting the property to the municipal water service.",
     href: "/water-pipe-repair-replacement/",
+    image:
+      "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-main-water-line-repair-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing main water line repair in Las Vegas, NV",
   },
   {
     title: "Supply Line and Shut-Off Valve Replacement",
     description:
       "Replacement of corroded or failing supply lines and shut-off valves serving fixtures, water heaters, and appliances.",
     href: "/water-pipe-repair-replacement/",
+    image:
+      "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-under-sink-water-line-replacement-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing under sink water supply line replacement in Las Vegas, NV",
   },
   {
     title: "Full Repiping",
     description:
       "Full replacement of the home or building's water supply pipe system for properties with widespread pipe failure or aging materials.",
     href: "/repiping/",
+    image:
+      "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-copper-pex-pipe-replacement-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing copper and PEX pipe replacement in Las Vegas, NV",
   },
 ];
 
@@ -485,7 +502,8 @@ export default function WaterPipeRepairReplacementPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved water pipe service image when available */}
+                {/* TODO: some cards render an approved image; these still need an
+                    asset: Pinhole Leak Repair, Galvanized Pipe Replacement, and Polybutylene Pipe Replacement. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {WATER_PIPE_SERVICES.map((card, index) => (
                     <ServiceCard
@@ -493,6 +511,8 @@ export default function WaterPipeRepairReplacementPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}

@@ -103,9 +103,11 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved gas line service image when available
+// TODO: cards below without an image prop still need an approved asset: Gas Line Leak Detection and Repair, Gas Line Pressure Testing, and Emergency Gas Line Service.
 const GAS_LINE_SERVICES: ServiceTypeCard[] = [
   {
     title: "Gas Line Leak Detection and Repair",
@@ -118,24 +120,36 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     description:
       "New gas line installation for appliances, additions, and new construction throughout the Las Vegas Valley.",
     href: "/gas-line-plumbing/",
+    image:
+      "/images/services/gas-line-plumbing/red-carpet-plumbing-commercial-gas-line-system-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial gas line system installation in Las Vegas, NV",
   },
   {
     title: "Gas Line Inspection",
     description:
       "Comprehensive inspection of your home or business gas supply lines to identify aging materials, corrosion, loose connections, and pressure irregularities.",
     href: "/gas-line-plumbing/",
+    image:
+      "/images/services/gas-line-plumbing/red-carpet-plumbing-exterior-gas-meter-service-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing exterior gas meter service in Las Vegas, NV",
   },
   {
     title: "Gas Appliance Hookup and Connection",
     description:
       "Professional gas line connections for stoves, dryers, water heaters, furnaces, and other gas-powered appliances.",
     href: "/gas-line-plumbing/",
+    image:
+      "/images/services/gas-line-plumbing/red-carpet-plumbing-kitchen-gas-line-installation-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing kitchen gas line installation in Las Vegas, NV",
   },
   {
     title: "Outdoor Gas Line Extensions",
     description:
       "Permitted gas line extensions for outdoor grills, fire pits, pool heaters, and outdoor kitchens throughout Las Vegas.",
     href: "/gas-line-plumbing/",
+    image:
+      "/images/services/gas-line-plumbing/red-carpet-plumbing-underground-gas-line-replacement-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing underground gas line replacement in Las Vegas, NV",
   },
   {
     title: "Gas Line Pressure Testing",
@@ -148,6 +162,9 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     description:
       "Repair and replacement of damaged, corroded, or aging gas supply pipes and fittings in residential and commercial properties.",
     href: "/gas-line-plumbing/",
+    image:
+      "/images/services/gas-line-plumbing/red-carpet-plumbing-residential-gas-line-repair-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing residential gas line repair in Las Vegas, NV",
   },
   {
     title: "Emergency Gas Line Service",
@@ -479,7 +496,8 @@ export default function GasLinePlumbingPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved gas line service image when available */}
+                {/* TODO: some cards render an approved image; these still need an
+                    asset: Gas Line Leak Detection and Repair, Gas Line Pressure Testing, and Emergency Gas Line Service. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {GAS_LINE_SERVICES.map((card, index) => (
                     <ServiceCard
@@ -487,6 +505,8 @@ export default function GasLinePlumbingPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}

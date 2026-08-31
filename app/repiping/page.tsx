@@ -93,21 +93,29 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved repiping service image when available
+// TODO: cards below without an image prop still need an approved asset: Polybutylene Pipe Replacement, Kitec Pipe Replacement, and Copper Repiping.
 const REPIPING_SERVICES: ServiceTypeCard[] = [
   {
     title: "Whole-House Repiping",
     description:
       "Whole-house repiping replaces all supply lines throughout the home from the main water line through to each fixture connection. This is the most comprehensive solution for homes with aging, failing, or defective pipe materials. Red Carpet Plumbing performs whole-house repipes using PEX or copper depending on the home's specific conditions and the homeowner's preferences.",
     href: "/repiping/",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-whole-home-repiping-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing whole home repiping in Las Vegas, NV",
   },
   {
     title: "Partial Repiping",
     description:
       "When only a section of the plumbing system is failing or has been identified as a problem material, partial repiping replaces the affected lines without repiping the entire home. Partial repipes are common when a specific area of the home, such as the kitchen supply lines or the hot water distribution system, has developed recurring problems.",
     href: "/repiping/",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-exposed-wall-repiping-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing partial repiping at an exposed wall in Las Vegas, NV",
   },
   {
     title: "Polybutylene Pipe Replacement",
@@ -126,12 +134,18 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
     description:
       "Homes built before 1975 often have galvanized steel supply lines. Galvanized pipes corrode from the inside out, narrowing the pipe interior, reducing water pressure and water quality, and eventually failing. In Las Vegas, the hard water accelerates galvanized pipe corrosion significantly. Red Carpet Plumbing replaces galvanized steel with PEX or copper to restore full flow, water quality, and pressure.",
     href: "/repiping/",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-old-pipe-new-pipe-replacement-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing galvanized steel pipe replacement in Las Vegas, NV",
   },
   {
     title: "PEX Repiping",
     description:
       "PEX is a flexible, cross-linked polyethylene pipe that is a common choice for whole-house repipes. It resists scale buildup from hard water, handles temperature changes well, requires fewer fittings than rigid pipe, and is faster to install with less drywall disruption. In Las Vegas, PEX pipe runs through attic spaces require proper insulation because attic temperatures can exceed 150 degrees Fahrenheit. Red Carpet Plumbing installs PEX to current Clark County code including required insulation.",
     href: "/repiping/",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-pex-repiping-installation-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing PEX repiping installation in Las Vegas, NV",
   },
   {
     title: "Copper Repiping",
@@ -144,6 +158,9 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
     description:
       "Red Carpet Plumbing provides repiping services for commercial buildings, multi-unit residential properties, and HOA communities throughout the Las Vegas Valley. Commercial repiping projects require coordination with building management and code-compliant materials for the occupancy type. We work with commercial property managers and building owners to minimize disruption to occupants during the repiping process.",
     href: "/repiping/",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-multi-fixture-repiping-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing multi-fixture commercial repiping in Las Vegas, NV",
   },
 ];
 
@@ -484,7 +501,8 @@ export default function RePipingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved repiping service image when available */}
+                {/* TODO: some cards render an approved image; these still need an
+                    asset: Polybutylene Pipe Replacement, Kitec Pipe Replacement, and Copper Repiping. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {REPIPING_SERVICES.map((card) => (
                     <ServiceCard
@@ -492,6 +510,8 @@ export default function RePipingServicesPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}

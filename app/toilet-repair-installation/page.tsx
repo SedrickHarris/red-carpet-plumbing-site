@@ -105,9 +105,11 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved toilet service image when available
+// TODO: cards below without an image prop still need an approved asset: Running Toilet Repair, Leaking Toilet Repair, Toilet Clog Clearing, Wax Ring and Flange Repair, Toilet Tank Component Repair, and Supply Line Repair and Replacement.
 const TOILET_SERVICES: ServiceTypeCard[] = [
   {
     title: "Running Toilet Repair",
@@ -132,12 +134,18 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     description:
       "Full toilet replacement for cracked, damaged, or aging toilets that are no longer repairable or efficient.",
     href: "/toilet-repair-installation/",
+    image:
+      "/images/services/toilet-repair-installation/red-carpet-plumbing-toilet-repair-installation-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing toilet replacement in Las Vegas, NV",
   },
   {
     title: "New Toilet Installation",
     description:
       "Professional installation of new toilets for bathroom renovations, additions, and upgrades throughout Las Vegas.",
     href: "/toilet-repair-installation/",
+    image:
+      "/images/services/toilet-repair-installation/red-carpet-plumbing-new-toilet-installation-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing new toilet installation in Las Vegas, NV",
   },
   {
     title: "Wax Ring and Flange Repair",
@@ -483,7 +491,8 @@ export default function ToiletRepairInstallationPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved toilet service image when available */}
+                {/* TODO: some cards render an approved image; these still need an
+                    asset: Running Toilet Repair, Leaking Toilet Repair, Toilet Clog Clearing, Wax Ring and Flange Repair, Toilet Tank Component Repair, and Supply Line Repair and Replacement. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {TOILET_SERVICES.map((card, index) => (
                     <ServiceCard
@@ -491,6 +500,8 @@ export default function ToiletRepairInstallationPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}
