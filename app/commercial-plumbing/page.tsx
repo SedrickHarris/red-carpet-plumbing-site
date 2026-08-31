@@ -414,10 +414,41 @@ export default function CommercialPlumbingPage() {
           ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
           formSlot={<QuoteFormPlaceholder title="Get Commercial Plumbing Help" />}
           accentWidth="sm"
-          backgroundImage={{
-            src: "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
-            alt: "Red Carpet Plumbing commercial plumbing in Las Vegas, NV",
-          }}
+          // Ambient crossfade across all seven commercial plumbing assets,
+          // reusing the shared HeroSection carousel. The system hero stays
+          // first: it is this page's LCP image and the only slide marked
+          // priority. Core hub page only. The six city variants in this
+          // cluster keep the singular backgroundImage prop unchanged.
+          backgroundImages={[
+            {
+              src: "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
+              alt: "Red Carpet Plumbing commercial plumbing in Las Vegas, NV",
+            },
+            {
+              src: "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-kitchen-plumbing-las-vegas.webp",
+              alt: "Red Carpet Plumbing commercial kitchen plumbing service in Las Vegas, NV",
+            },
+            {
+              src: "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-mechanical-room-plumbing-las-vegas.webp",
+              alt: "Red Carpet Plumbing commercial mechanical room plumbing in Las Vegas, NV",
+            },
+            {
+              src: "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-pipe-valve-detail-las-vegas.webp",
+              alt: "Red Carpet Plumbing commercial pipe and valve detail in Las Vegas, NV",
+            },
+            {
+              src: "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-restroom-plumbing-las-vegas.webp",
+              alt: "Red Carpet Plumbing commercial restroom plumbing in Las Vegas, NV",
+            },
+            {
+              src: "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-water-heater-plumbing-las-vegas.webp",
+              alt: "Red Carpet Plumbing commercial water heater plumbing in Las Vegas, NV",
+            },
+            {
+              src: "/images/services/commercial-plumbing/red-carpet-plumbing-multi-unit-property-plumbing-las-vegas.webp",
+              alt: "Red Carpet Plumbing multi-unit property plumbing in Las Vegas, NV",
+            },
+          ]}
         />
 
         {/* SECTION 3: COMMERCIAL PLUMBING PROBLEMS THAT NEED ATTENTION */}
