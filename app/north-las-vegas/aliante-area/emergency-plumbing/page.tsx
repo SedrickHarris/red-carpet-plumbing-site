@@ -187,7 +187,7 @@ const ALIANTE_EMERGENCY_RELATED = [
       "Accurate leak detection and repair for visible and hidden leaks in Aliante area homes.",
     // ACTIVATED: P43 built and staged
     href: "/north-las-vegas/aliante-area/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
     imageAlt: "Leak detection and repair in the Aliante area",
   },
   {

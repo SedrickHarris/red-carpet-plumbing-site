@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T17:25:46.995Z",
+  "generatedAt": "2026-08-31T19:17:54.332Z",
   "routeCount": 115,
   "routes": [
     {
@@ -5169,7 +5169,7 @@
         "/"
       ],
       "schemaTypeHints": [],
-      "wordEstimate": 8
+      "wordEstimate": 122
     },
     {
       "route": "/toilet-repair-installation",

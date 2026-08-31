@@ -240,7 +240,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate leak detection using advanced equipment to find hidden leaks before they cause serious damage.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
   },
   {

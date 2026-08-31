@@ -133,7 +133,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Leak Detection and Repair",
-    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
     alt: "Plumber performing leak detection in a Las Vegas home",
     description:
       "Accurate leak detection and repair for visible and hidden leaks throughout your home or business plumbing system.",
