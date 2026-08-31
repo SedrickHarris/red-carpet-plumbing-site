@@ -112,21 +112,21 @@ const BOULDER_CITY_FEATURED_SERVICES: ServiceLink[] = [
     title: "Repiping",
     href: "/repiping/",
     image:
-      "/images/services/repiping/hero.webp",
+      "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
     imageAlt: "Repiping services in Boulder City, NV",
   },
   {
     title: "Water Heater Repair and Installation",
     href: "/boulder-city/water-heater-repair-installation/",
     image:
-      "/images/services/water-heater-repair-installation/card.webp",
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Water heater repair and installation in Boulder City, NV",
   },
   {
     title: "Slab Leak Detection and Repair",
     href: "/slab-leak-detection-repair/",
     image:
-      "/images/services/slab-leak-detection-repair/card.webp",
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     imageAlt: "Slab leak detection and repair in Boulder City, NV",
   },
 ];

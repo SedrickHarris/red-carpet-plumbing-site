@@ -120,21 +120,21 @@ const SPRING_VALLEY_FEATURED_SERVICES: ServiceLink[] = [
     title: "Repiping",
     href: "/spring-valley/repiping/",
     image:
-      "/images/services/repiping/hero.webp",
+      "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
     imageAlt: "Repiping services in Spring Valley",
   },
   {
     title: "Water Heater Repair and Installation",
     href: "/spring-valley/water-heater-repair-installation/",
     image:
-      "/images/services/water-heater-repair-installation/card.webp",
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Water heater repair and installation in Spring Valley",
   },
   {
     title: "Slab Leak Detection and Repair",
     href: "/spring-valley/slab-leak-detection-repair/",
     image:
-      "/images/services/slab-leak-detection-repair/card.webp",
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     imageAlt: "Slab leak detection and repair in Spring Valley",
   },
 ];

@@ -391,7 +391,7 @@ export default function LakeLasVegasEmergencyPlumbingPage() {
             <QuoteFormPlaceholder title="Get Emergency Plumbing Help" />
           }
           backgroundImage={{
-            src: "/images/services/emergency-plumbing/hero.webp",
+            src: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-hero.webp",
             alt: "emergency plumbing service in Lake Las Vegas, Henderson, NV",
           }}
         />

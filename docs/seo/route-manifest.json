@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T22:42:14.204Z",
+  "generatedAt": "2026-08-31T15:50:10.846Z",
   "routeCount": 115,
   "routes": [
     {
@@ -481,7 +481,7 @@
         "WebPage",
         "WebSite"
       ],
-      "wordEstimate": 521
+      "wordEstimate": 522
     },
     {
       "route": "/emergency-plumbing",
@@ -528,7 +528,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 474
+      "wordEstimate": 475
     },
     {
       "route": "/enterprise-plumbing-services",
@@ -3044,7 +3044,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 538
+      "wordEstimate": 539
     },
     {
       "route": "/north-las-vegas-plumbing-services",
@@ -4308,7 +4308,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 614
+      "wordEstimate": 615
     },
     {
       "route": "/service-areas",

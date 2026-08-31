@@ -224,7 +224,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Professional drain cleaning and hydro jetting to clear clogs and restore proper flow.",
     href: "/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Hydro jetting equipment clearing a tough drain clog",
     built: true,
   },
@@ -233,7 +233,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate leak detection using advanced equipment to find hidden leaks before they cause serious damage.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -242,7 +242,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Specialized slab leak detection and repair for Las Vegas homes where shifting desert soils and hard water accelerate pipe damage.",
     href: "/slab-leak-detection-repair/",
-    image: "/images/services/slab-leak-detection-repair/card.webp",
+    image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     imageAlt: "Home foundation showing signs of a slab leak",
     built: true,
   },
@@ -251,7 +251,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Fast response to burst pipes, major leaks, and plumbing emergencies throughout Las Vegas.",
     href: "/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
+    image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
     imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
     built: true,
   },

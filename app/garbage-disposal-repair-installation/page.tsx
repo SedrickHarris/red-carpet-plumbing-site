@@ -226,7 +226,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Professional drain cleaning for kitchen drains, disposal discharge lines, and main sewer lines throughout Las Vegas.",
     href: "/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Hydro jetting equipment clearing a tough drain clog",
     built: true,
   },
@@ -242,7 +242,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and under-sink connections.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -417,7 +417,7 @@ export default function GarbageDisposalRepairInstallationPage() {
           formSlot={<QuoteFormPlaceholder title="Get Garbage Disposal Help" />}
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/garbage-disposal-repair-installation/hero.webp",
+            src: "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-repair-installation-hero.webp",
             alt: "Modern garbage disposal installation in a Las Vegas kitchen",
           }}
         />

@@ -450,7 +450,7 @@ export default function LasVegasBackflowPreventionPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Backflow Prevention Help" />}
           backgroundImage={{
-            src: "/images/services/backflow-prevention/hero.webp",
+            src: "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-prevention-hero.webp",
             alt: "Backflow prevention device installation and service in Las Vegas, NV",
           }}
         />

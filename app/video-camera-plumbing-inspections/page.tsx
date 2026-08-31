@@ -226,7 +226,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Professional drain cleaning and hydro jetting for sewer lines, kitchen drains, and bathroom drains throughout Las Vegas.",
     href: "/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Hydro jetting equipment clearing a tough drain clog",
     built: true,
   },
@@ -242,7 +242,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and underground connections.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -419,7 +419,7 @@ export default function VideoCameraPlumbingInspectionsPage() {
           }
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/video-camera-plumbing-inspections/hero.webp",
+            src: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspection-hero.webp",
             alt: "Licensed plumber performing a video camera pipe inspection",
           }}
         />

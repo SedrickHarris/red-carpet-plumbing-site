@@ -240,7 +240,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Professional drain cleaning for shower drains, sink drains, and main lines throughout Las Vegas.",
     href: "/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Hydro jetting equipment clearing a tough drain clog",
     built: true,
   },
@@ -249,7 +249,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate detection and repair of hidden leaks in supply lines, valves, and fixture connections.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -419,7 +419,7 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
           formSlot={<QuoteFormPlaceholder title="Get a Fixture Service Quote" />}
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/plumbing-fixture-repair-replacement-installation/hero.webp",
+            src: "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-plumbing-fixture-repair-replacement-installation-hero.webp",
             alt: "Professional plumbing fixture installation and repair",
           }}
         />

@@ -226,7 +226,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Professional drain cleaning for slow sinks, clogged drains, and recurring blockages in kitchens and bathrooms.",
     href: "/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Hydro jetting equipment clearing a tough drain clog",
     built: true,
   },
@@ -235,7 +235,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and under-sink connections.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -417,7 +417,7 @@ export default function FaucetSinkRepairInstallationPage() {
           formSlot={<QuoteFormPlaceholder title="Get Faucet or Sink Help" />}
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/faucet-sink-repair-installation/hero.webp",
+            src: "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-sink-repair-hero.webp",
             alt: "Faucet and sink repair, replacement, and installation services",
           }}
         />

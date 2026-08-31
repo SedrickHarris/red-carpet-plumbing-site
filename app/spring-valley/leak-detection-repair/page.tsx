@@ -386,7 +386,7 @@ export default function SpringValleyLeakDetectionPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
-            src: "/images/services/leak-detection-repair/hero.webp",
+            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-hero.webp",
             alt: "Non-invasive leak detection and repair in Spring Valley, NV",
           }}
         />

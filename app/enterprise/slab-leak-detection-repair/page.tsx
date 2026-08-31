@@ -394,7 +394,7 @@ export default function EnterpriseSlabLeakPage() {
           ctaNote="Licensed plumbers. Non-invasive detection. Transparent pricing."
           formSlot={<QuoteFormPlaceholder title="Get Slab Leak Help" />}
           backgroundImage={{
-            src: "/images/services/slab-leak-detection-repair/card.webp",
+            src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
             alt: "Slab leak detection and repair in Enterprise, NV",
           }}
         />

@@ -370,7 +370,7 @@ export default function ParadiseWaterHeaterPage() {
           ctaNote={HERO_CTA_NOTE}
           formSlot={<QuoteFormPlaceholder title="Get Water Heater Help" />}
           backgroundImage={{
-            src: "/images/services/water-heater-repair-installation/card.webp",
+            src: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
             alt: "Water heater service in Paradise, NV",
           }}
         />

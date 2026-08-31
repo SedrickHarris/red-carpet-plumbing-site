@@ -227,7 +227,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Video camera inspection required before trenchless repair to confirm pipe condition and access requirements.",
     href: "/video-camera-plumbing-inspections/",
-    image: "/images/services/video-camera-plumbing-inspections/hero.webp",
+    image: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspection-hero.webp",
     imageAlt: "Licensed plumber performing a video camera pipe inspection",
     built: true,
   },
@@ -236,7 +236,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Full and partial repiping for homes and businesses with aging or failing pipe systems.",
     href: "/repiping/",
-    image: "/images/services/repiping/hero.webp",
+    image: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
     imageAlt: "Whole home repiping service in Las Vegas",
     built: true,
   },
@@ -245,7 +245,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Professional drain cleaning and hydro jetting for sewer lines and drain pipes throughout Las Vegas.",
     href: "/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Hydro jetting equipment clearing a tough drain clog",
     built: true,
   },
@@ -415,7 +415,7 @@ export default function TrenchlessPipingPage() {
           }
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/trenchless-piping/hero.webp",
+            src: "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-piping-hero.webp",
             alt: "Small excavation site for trenchless piping service in Las Vegas",
           }}
         />

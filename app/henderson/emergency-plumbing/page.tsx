@@ -322,7 +322,7 @@ export default function HendersonEmergencyPlumbingPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Emergency Plumbing Help" />}
           backgroundImage={{
-            src: "/images/services/emergency-plumbing/hero.webp",
+            src: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-hero.webp",
             alt: "Emergency plumber responding to a burst pipe in Henderson, NV",
           }}
         />

@@ -389,7 +389,7 @@ export default function LakeLasVegasLeakDetectionPage() {
           ctaNote="Licensed plumbers. Non-invasive detection. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
-            src: "/images/services/leak-detection-repair/hero.webp",
+            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-hero.webp",
             alt: "leak detection and repair in Lake Las Vegas, Henderson, NV",
           }}
         />

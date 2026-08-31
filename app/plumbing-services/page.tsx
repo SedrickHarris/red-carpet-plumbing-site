@@ -117,7 +117,7 @@ type ServiceCardData = {
 const SERVICE_CARDS: ServiceCardData[] = [
   {
     title: "Emergency Plumbing",
-    image: "/images/services/emergency-plumbing/card.webp",
+    image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
     alt: "Emergency plumber responding to a plumbing call in Las Vegas",
     description:
       "Fast response for burst pipes, severe leaks, sewer backups, water heater failures, and other urgent plumbing situations in Las Vegas.",
@@ -125,7 +125,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Drain Cleaning",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     alt: "Drain cleaning service in Las Vegas",
     description:
       "Professional drain cleaning for slow drains, clogged drains, and recurring blockages in kitchens, bathrooms, and main lines.",
@@ -133,7 +133,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Leak Detection and Repair",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     alt: "Plumber performing leak detection in a Las Vegas home",
     description:
       "Accurate leak detection and repair for visible and hidden leaks throughout your home or business plumbing system.",
@@ -141,7 +141,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Water Heater Repair and Installation",
-    image: "/images/services/water-heater-repair-installation/card.webp",
+    image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     alt: "Modern energy efficient water heater installation",
     description:
       "Water heater diagnosis, repair, and installation for tank and tankless units in Las Vegas homes and businesses.",
@@ -149,7 +149,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Slab Leak Detection and Repair",
-    image: "/images/services/slab-leak-detection-repair/card.webp",
+    image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     alt: "Home foundation showing signs of a slab leak",
     description:
       "Detection and repair of water leaks beneath concrete slabs, protecting your foundation and preventing water damage.",
@@ -165,7 +165,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Repiping",
-    image: "/images/services/repiping/hero.webp",
+    image: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
     alt: "Repiping services for Las Vegas homes",
     description:
       "Full and partial repiping services for homes and businesses with aging, corroded, or failing pipe systems.",
@@ -173,7 +173,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Water Pipe Repair and Replacement",
-    image: "/images/services/water-pipe-repair-replacement/hero.webp",
+    image: "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-water-pipe-repair-replacement-hero.webp",
     alt: "Water pipe repair and replacement in Las Vegas",
     description:
       "Repair and replacement of damaged, corroded, or leaking water supply pipes throughout your property.",
@@ -181,7 +181,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Gas Line Plumbing",
-    image: "/images/services/gas-line-plumbing/hero.webp",
+    image: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-services-hero.webp",
     alt: "Gas line plumbing service in Las Vegas",
     description:
       "Gas line inspection, repair, and installation for homes and businesses by trained plumbing professionals.",
@@ -197,7 +197,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Toilet Repair and Installation",
-    image: "/images/services/toilet-repair-installation/hero.webp",
+    image: "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-hero.webp",
     alt: "Toilet repair and installation service in Las Vegas",
     description:
       "Toilet repair, replacement, and installation for all makes and models in residential and commercial settings.",
@@ -205,7 +205,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Faucet and Sink Repair and Installation",
-    image: "/images/services/faucet-sink-repair-installation/hero.webp",
+    image: "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-sink-repair-hero.webp",
     alt: "Faucet and sink repair and installation in Las Vegas",
     description:
       "Faucet and sink repair, replacement, and installation for kitchens, bathrooms, and utility areas.",
@@ -213,7 +213,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Garbage Disposal Repair and Installation",
-    image: "/images/services/garbage-disposal-repair-installation/hero.webp",
+    image: "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-repair-installation-hero.webp",
     alt: "Garbage disposal repair and installation in Las Vegas",
     description:
       "Garbage disposal repair, replacement, and installation for kitchen sinks throughout the Las Vegas Valley.",
@@ -221,7 +221,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Backflow Prevention",
-    image: "/images/services/backflow-prevention/hero.webp",
+    image: "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-prevention-hero.webp",
     alt: "Backflow prevention services in Las Vegas",
     description:
       "Backflow prevention device installation, testing, and repair to protect your water supply from contamination.",
@@ -229,7 +229,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Video Camera Plumbing Inspections",
-    image: "/images/services/video-camera-plumbing-inspections/hero.webp",
+    image: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspection-hero.webp",
     alt: "Video camera plumbing inspection in Las Vegas",
     description:
       "Camera inspection inside pipes to identify blockages, damage, root intrusion, and hidden plumbing problems.",
@@ -237,7 +237,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Plumbing Fixture Repair, Replacement and Installation",
-    image: "/images/services/plumbing-fixture-repair-replacement-installation/hero.webp",
+    image: "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-plumbing-fixture-repair-replacement-installation-hero.webp",
     alt: "Plumbing fixture repair replacement and installation in Las Vegas",
     description:
       "Repair, replacement, and installation of plumbing fixtures including faucets, toilets, showers, tubs, and sinks.",
@@ -245,7 +245,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Trenchless Piping",
-    image: "/images/services/trenchless-piping/hero.webp",
+    image: "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-piping-hero.webp",
     alt: "Trenchless piping service in Las Vegas",
     description:
       "Trenchless pipe repair and replacement methods that minimize excavation and disruption to your property.",
@@ -253,7 +253,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Water Meter and Pressure Regulator Services",
-    image: "/images/services/water-meter-pressure-regulator-services/hero.webp",
+    image: "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-water-meter-pressure-regulator-services-hero.webp",
     alt: "Water meter and pressure regulator service in Las Vegas",
     description:
       "Water meter inspection and pressure regulator service to maintain safe, consistent water pressure in your plumbing system.",

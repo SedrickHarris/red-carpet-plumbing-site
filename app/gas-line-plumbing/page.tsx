@@ -224,7 +224,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "24/7 emergency plumbing service for burst pipes, sewer backups, water heater failures, and gas line emergencies.",
     href: "/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
+    image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
     imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
     built: true,
   },
@@ -233,7 +233,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Water heater diagnostics, repair, and installation for tank and tankless systems. Gas water heater work requires a licensed plumber.",
     href: "/water-heater-repair-installation/",
-    image: "/images/services/water-heater-repair-installation/card.webp",
+    image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Modern energy efficient water heater installation",
     built: true,
   },
@@ -242,7 +242,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate detection and repair of hidden water leaks using advanced equipment before they cause serious damage.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -417,7 +417,7 @@ export default function GasLinePlumbingPage() {
           formSlot={<QuoteFormPlaceholder title="Get Gas Line Help" />}
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/gas-line-plumbing/hero.webp",
+            src: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-services-hero.webp",
             alt: "Professional gas line installation in progress in Las Vegas",
           }}
         />

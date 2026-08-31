@@ -214,7 +214,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Specialized slab leak detection and repair for Las Vegas homes where shifting desert soils and hard water accelerate pipe damage.",
     href: "/slab-leak-detection-repair/",
-    image: "/images/services/slab-leak-detection-repair/card.webp",
+    image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     imageAlt: "Home foundation showing signs of a slab leak",
     built: true,
   },
@@ -223,7 +223,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate leak detection using advanced equipment to find hidden leaks before they cause serious damage.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -232,7 +232,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Water heater diagnostics, repair, and installation for traditional and tankless systems.",
     href: "/water-heater-repair-installation/",
-    image: "/images/services/water-heater-repair-installation/card.webp",
+    image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Modern energy efficient water heater installation",
     built: true,
   },
@@ -241,7 +241,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Fast response to burst pipes, major leaks, and plumbing emergencies throughout Las Vegas.",
     href: "/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
+    image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
     imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
     built: true,
   },
@@ -396,6 +396,10 @@ export default function RePipingServicesPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           accentWidth="sm"
+          backgroundImage={{
+            src: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
+            alt: "Red Carpet Plumbing repiping technician in Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 3: SIGNS YOU MAY NEED REPIPING */}

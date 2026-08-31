@@ -224,7 +224,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "24/7 emergency plumbing service for burst pipes, sewer backups, and major leaks in commercial and residential properties.",
     href: "/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
+    image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
     imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
     built: true,
   },
@@ -233,7 +233,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Professional drain cleaning and hydro jetting for commercial kitchens, restrooms, floor drains, and main sewer lines.",
     href: "/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Hydro jetting equipment clearing a tough drain clog",
     built: true,
   },
