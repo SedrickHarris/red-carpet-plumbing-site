@@ -173,7 +173,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Water Pipe Repair and Replacement",
-    image: "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-water-pipe-repair-replacement-hero.webp",
+    image: "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-water-pipe-repair-replacement-primary-hero.webp",
     alt: "Water pipe repair and replacement in Las Vegas",
     description:
       "Repair and replacement of damaged, corroded, or leaking water supply pipes throughout your property.",
@@ -229,7 +229,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Video Camera Plumbing Inspections",
-    image: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspection-hero.webp",
+    image: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspections-primary-hero.webp",
     alt: "Video camera plumbing inspection in Las Vegas",
     description:
       "Camera inspection inside pipes to identify blockages, damage, root intrusion, and hidden plumbing problems.",
@@ -245,7 +245,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Trenchless Piping",
-    image: "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-piping-hero.webp",
+    image: "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-pipe-replacement-hero.webp",
     alt: "Trenchless piping service in Las Vegas",
     description:
       "Trenchless pipe repair and replacement methods that minimize excavation and disruption to your property.",
@@ -253,7 +253,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Water Meter and Pressure Regulator Services",
-    image: "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-water-meter-pressure-regulator-services-hero.webp",
+    image: "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-water-meter-pressure-regulator-services-primary-hero.webp",
     alt: "Water meter and pressure regulator service in Las Vegas",
     description:
       "Water meter inspection and pressure regulator service to maintain safe, consistent water pressure in your plumbing system.",

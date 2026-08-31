@@ -352,7 +352,7 @@ export default function NorthLasVegasWaterPipeRepairReplacementPage() {
           backgroundImage={{
             // Reused from the core /water-pipe-repair-replacement/ page.
             // See the file header TODO on resolution at hero display size.
-            src: "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-water-pipe-repair-replacement-hero.webp",
+            src: "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-water-pipe-repair-replacement-primary-hero.webp",
             alt: "Red Carpet Plumbing water pipe repair technician in North Las Vegas, NV",
           }}
         />

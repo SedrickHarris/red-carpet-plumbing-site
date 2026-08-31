@@ -408,7 +408,7 @@ export default function EnterpriseLeakDetectionPage() {
           ctaNote="Licensed plumbers. Non-invasive detection. Transparent pricing."
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
-            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-hero.webp",
+            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-hero.webp",
             alt: "Leak detection and repair in Enterprise, NV",
           }}
         />
