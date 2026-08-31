@@ -105,15 +105,20 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved faucet and sink service image when available
+// TODO: cards below without an image prop still need an approved asset: Faucet Replacement, Faucet Installation, Under-Sink Leak Repair, Aerator and Cartridge Service, and Drain and P-Trap Repair.
 const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
   {
     title: "Dripping Faucet Repair",
     description:
       "Diagnosis and repair of dripping faucets including cartridge, O-ring, washer, and valve seat replacement for all faucet types.",
     href: "/faucet-sink-repair-installation/",
+    image:
+      "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-faucet-sink-repair-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing faucet repair in Las Vegas, NV",
   },
   {
     title: "Faucet Replacement",
@@ -132,12 +137,18 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     description:
       "Installation of drop-in, undermount, and farmhouse kitchen sinks including drain assembly, P-trap connection, and supply line hookup.",
     href: "/faucet-sink-repair-installation/",
+    image:
+      "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-kitchen-sink-installation-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing kitchen sink installation in Las Vegas, NV",
   },
   {
     title: "Bathroom Sink Installation",
     description:
       "Bathroom sink installation for undermount, vessel, pedestal, and vanity-top configurations throughout Las Vegas homes.",
     href: "/faucet-sink-repair-installation/",
+    image:
+      "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-bathroom-faucet-sink-repair-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing bathroom faucet and sink service in Las Vegas, NV",
   },
   {
     title: "Under-Sink Leak Repair",
@@ -479,7 +490,8 @@ export default function FaucetSinkRepairInstallationPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved faucet and sink service image when available */}
+                {/* TODO: some cards render an approved image; these still need an
+                    asset: Faucet Replacement, Faucet Installation, Under-Sink Leak Repair, Aerator and Cartridge Service, and Drain and P-Trap Repair. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {FAUCET_SINK_SERVICES.map((card, index) => (
                     <ServiceCard
@@ -487,6 +499,8 @@ export default function FaucetSinkRepairInstallationPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}
