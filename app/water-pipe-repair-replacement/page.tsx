@@ -225,7 +225,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Full and partial repiping for homes and businesses with aging, corroded, or widespread pipe failures.",
     href: "/repiping/",
-    image: "/images/services/repiping/hero.webp",
+    image: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
     imageAlt: "Whole home repiping service in Las Vegas",
     built: true,
   },
@@ -234,7 +234,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and underground connections.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -243,7 +243,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Detection and repair of water leaks beneath concrete slab foundations in Las Vegas homes and businesses.",
     href: "/slab-leak-detection-repair/",
-    image: "/images/services/slab-leak-detection-repair/card.webp",
+    image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     imageAlt: "Home foundation showing signs of a slab leak",
     built: true,
   },
@@ -252,7 +252,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "24/7 emergency plumbing for burst pipes, major leaks, and urgent water supply failures throughout Las Vegas.",
     href: "/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
+    image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
     imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
     built: true,
   },
@@ -424,7 +424,7 @@ export default function WaterPipeRepairReplacementPage() {
           }
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/water-pipe-repair-replacement/hero.webp",
+            src: "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-water-pipe-repair-replacement-hero.webp",
             alt: "Professional water pipe repair work in progress",
           }}
         />

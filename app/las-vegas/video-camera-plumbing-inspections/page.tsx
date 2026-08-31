@@ -459,7 +459,7 @@ export default function LasVegasVideoCameraInspectionPage() {
             <QuoteFormPlaceholder title="Get a Camera Inspection Quote" />
           }
           backgroundImage={{
-            src: "/images/services/video-camera-plumbing-inspections/hero.webp",
+            src: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspection-hero.webp",
             alt: "Video camera plumbing inspection service in Las Vegas, NV",
           }}
         />

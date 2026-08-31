@@ -186,7 +186,7 @@ const NLV_SLAB_RELATED = [
     description:
       "Fast response to burst pipes, active slab leaks, sewer backups, and other plumbing emergencies throughout North Las Vegas.",
     href: "/north-las-vegas/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
+    image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
     imageAlt: "Emergency plumbing service in North Las Vegas, NV",
   },
   {
@@ -194,7 +194,7 @@ const NLV_SLAB_RELATED = [
     description:
       "Non-invasive leak detection and repair for hidden leaks in North Las Vegas homes. Acoustic sensors, pressure testing, and thermal imaging.",
     href: "/north-las-vegas/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Leak detection and repair in North Las Vegas, NV",
   },
   {
@@ -202,7 +202,7 @@ const NLV_SLAB_RELATED = [
     description:
       "Professional drain cleaning for North Las Vegas homes including older galvanized drain systems in central neighborhoods.",
     href: "/north-las-vegas/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Drain cleaning in North Las Vegas, NV",
   },
   {
@@ -210,7 +210,7 @@ const NLV_SLAB_RELATED = [
     description:
       "Tank and tankless water heater repair and installation for North Las Vegas homes under hard water conditions.",
     href: "/north-las-vegas/water-heater-repair-installation/",
-    image: "/images/services/water-heater-repair-installation/card.webp",
+    image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Water heater repair and installation in North Las Vegas, NV",
   },
 ];
@@ -372,7 +372,7 @@ export default function NorthLasVegasSlabLeakPage() {
           backgroundImage={{
             // hero.webp is a low-res asset (18KB); card.webp is the higher-res image.
             // TODO: swap to a dedicated high-res slab-leak hero when available.
-            src: "/images/services/slab-leak-detection-repair/card.webp",
+            src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
             alt: "Slab leak detection in North Las Vegas, NV",
           }}
         />

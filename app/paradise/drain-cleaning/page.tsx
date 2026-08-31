@@ -364,7 +364,7 @@ export default function ParadiseDrainCleaningPage() {
           ctaNote={HERO_CTA_NOTE}
           formSlot={<QuoteFormPlaceholder title="Get Drain Cleaning Help" />}
           backgroundImage={{
-            src: "/images/services/drain-cleaning/card.webp",
+            src: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
             alt: "Drain cleaning service in Paradise, NV",
           }}
         />

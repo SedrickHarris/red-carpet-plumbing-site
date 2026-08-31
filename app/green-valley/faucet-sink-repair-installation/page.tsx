@@ -415,7 +415,7 @@ export default function GreenValleyFaucetSinkPage() {
           ctaNote="NV Licensed, #0048585A. Transparent pricing, no hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Faucet and Sink Help" />}
           backgroundImage={{
-            src: "/images/services/faucet-sink-repair-installation/hero.webp",
+            src: "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-sink-repair-hero.webp",
             alt: "Faucet and sink repair and installation in Green Valley, Henderson, NV",
           }}
         />

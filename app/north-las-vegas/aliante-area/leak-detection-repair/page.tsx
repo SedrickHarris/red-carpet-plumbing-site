@@ -212,7 +212,7 @@ const ALIANTE_LEAK_RELATED = [
       "Fast response to burst pipes, active leaks, slab leaks, and other plumbing emergencies in the Aliante area.",
     // P40 built — linking directly to Aliante-specific route
     href: "/north-las-vegas/aliante-area/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
+    image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
     imageAlt: "Emergency plumbing service in the Aliante area",
   },
   {
@@ -221,7 +221,7 @@ const ALIANTE_LEAK_RELATED = [
       "Professional drain cleaning for Aliante area homes where hard water mineral buildup drives recurring clogs.",
     // P41 built — linking directly to Aliante-specific route
     href: "/north-las-vegas/aliante-area/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Drain cleaning service in the Aliante area",
   },
   {
@@ -230,7 +230,7 @@ const ALIANTE_LEAK_RELATED = [
       "Water heater diagnosis, repair, and installation for Aliante area homes affected by hard water sediment.",
     // P42 built — linking directly to Aliante-specific route
     href: "/north-las-vegas/aliante-area/water-heater-repair-installation/",
-    image: "/images/services/water-heater-repair-installation/card.webp",
+    image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Water heater repair and installation in the Aliante area",
   },
   {
@@ -239,7 +239,7 @@ const ALIANTE_LEAK_RELATED = [
       "Detection and repair of copper supply line leaks beneath slab foundations in Aliante area homes.",
     // ACTIVATED: P44 built and staged
     href: "/north-las-vegas/aliante-area/slab-leak-detection-repair/",
-    image: "/images/services/slab-leak-detection-repair/card.webp",
+    image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     imageAlt: "Slab leak detection and repair in the Aliante area",
   },
 ];
@@ -450,7 +450,7 @@ export default function AlianteLeakDetectionRepairPage() {
           ctaNote="NV Licensed, #0048585A. Transparent pricing, no hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
-            src: "/images/services/leak-detection-repair/hero.webp",
+            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-hero.webp",
             alt: "Leak detection service in the Aliante area of North Las Vegas, NV",
           }}
         />

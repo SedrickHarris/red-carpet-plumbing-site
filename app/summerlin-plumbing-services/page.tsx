@@ -112,21 +112,21 @@ const SUMMERLIN_FEATURED_SERVICES: ServiceLink[] = [
     title: "Repiping",
     href: "/summerlin/repiping/",
     image:
-      "/images/services/repiping/hero.webp",
+      "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
     imageAlt: "Repiping services in Summerlin",
   },
   {
     title: "Water Heater Repair and Installation",
     href: "/summerlin/water-heater-repair-installation/",
     image:
-      "/images/services/water-heater-repair-installation/card.webp",
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Water heater repair and installation in Summerlin",
   },
   {
     title: "Slab Leak Detection and Repair",
     href: "/summerlin/slab-leak-detection-repair/",
     image:
-      "/images/services/slab-leak-detection-repair/card.webp",
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     imageAlt: "Slab leak detection and repair in Summerlin",
   },
 ];

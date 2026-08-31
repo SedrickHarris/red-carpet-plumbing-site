@@ -224,7 +224,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Specialized slab leak detection and repair for Las Vegas homes where shifting desert soils and hard water accelerate pipe damage.",
     href: "/slab-leak-detection-repair/",
-    image: "/images/services/slab-leak-detection-repair/card.webp",
+    image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     imageAlt: "Home foundation showing signs of a slab leak",
   },
   {
@@ -232,7 +232,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Professional drain cleaning and hydro jetting to clear clogs and restore proper flow.",
     href: "/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Hydro jetting equipment clearing a tough drain clog",
   },
   {
@@ -240,7 +240,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate leak detection using advanced equipment to find hidden leaks before they cause serious damage.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
   },
   {
@@ -248,7 +248,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Water heater diagnostics, repair, and installation for traditional and tankless systems.",
     href: "/water-heater-repair-installation/",
-    image: "/images/services/water-heater-repair-installation/card.webp",
+    image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Modern energy efficient water heater installation",
   },
 ];
@@ -402,6 +402,10 @@ export default function EmergencyPlumbingPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Emergency Help" />}
           accentWidth="sm"
+          backgroundImage={{
+            src: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-hero.webp",
+            alt: "Red Carpet Plumbing emergency plumber responding to a call in Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 3: WHAT COUNTS AS A PLUMBING EMERGENCY */}

@@ -138,7 +138,7 @@ const SERVICE_CARDS: ServiceCardEntry[] = [
     description:
       "Whole-home and commercial repiping to replace aging, corroded, or failing pipe systems.",
     href: "/repiping/",
-    image: "/images/services/repiping/hero.webp",
+    image: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
     imageAlt: "Professional repiping service for a Las Vegas home",
     built: true,
   },
@@ -147,7 +147,7 @@ const SERVICE_CARDS: ServiceCardEntry[] = [
     description:
       "Water heater diagnostics, repair, and installation for traditional and tankless systems.",
     href: "/water-heater-repair-installation/",
-    image: "/images/services/water-heater-repair-installation/card.webp",
+    image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Modern energy efficient water heater installation",
     built: true,
   },
@@ -156,7 +156,7 @@ const SERVICE_CARDS: ServiceCardEntry[] = [
     description:
       "Specialized slab leak detection and repair for Las Vegas homes where shifting desert soils and hard water accelerate pipe damage.",
     href: "/slab-leak-detection-repair/",
-    image: "/images/services/slab-leak-detection-repair/card.webp",
+    image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     imageAlt: "Home foundation showing signs of a slab leak",
     built: true,
   },

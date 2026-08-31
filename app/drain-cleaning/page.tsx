@@ -234,7 +234,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Fast response to burst pipes, major leaks, and plumbing emergencies throughout Las Vegas.",
     href: "/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
+    image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
     imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
     built: true,
   },
@@ -243,7 +243,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate leak detection using advanced equipment to find hidden leaks before they cause serious damage.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -394,6 +394,10 @@ export default function DrainCleaningPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Drain Cleaning Help" />}
           accentWidth="sm"
+          backgroundImage={{
+            src: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-hero.webp",
+            alt: "Red Carpet Plumbing drain cleaning technician in Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 3: SIGNS YOU NEED DRAIN CLEANING */}

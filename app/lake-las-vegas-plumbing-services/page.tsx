@@ -124,7 +124,7 @@ const LAKE_LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
     title: "Repiping",
     href: "/repiping/",
     image:
-      "/images/services/repiping/hero.webp",
+      "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
     imageAlt: "Repiping services in Lake Las Vegas, NV",
   },
   {
@@ -132,7 +132,7 @@ const LAKE_LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
     title: "Water Heater Repair and Installation",
     href: "/lake-las-vegas/water-heater-repair-installation/",
     image:
-      "/images/services/water-heater-repair-installation/card.webp",
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Water heater repair and installation in Lake Las Vegas, NV",
   },
   {
@@ -140,7 +140,7 @@ const LAKE_LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
     title: "Slab Leak Detection and Repair",
     href: "/lake-las-vegas/slab-leak-detection-repair/",
     image:
-      "/images/services/slab-leak-detection-repair/card.webp",
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     imageAlt: "Slab leak detection and repair in Lake Las Vegas, NV",
   },
 ];

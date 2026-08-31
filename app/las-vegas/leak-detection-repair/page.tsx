@@ -368,7 +368,7 @@ export default function LasVegasLeakDetectionPage() {
           ctaNote="Licensed plumbers. Non-invasive detection. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
-            src: "/images/services/leak-detection-repair/hero.webp",
+            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-hero.webp",
             alt: "Professional leak detection service in Las Vegas, NV",
           }}
         />

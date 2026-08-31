@@ -435,7 +435,7 @@ export default function GreenValleyToiletPage() {
           ctaNote="NV Licensed, #0048585A. Transparent pricing, no hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Toilet Repair Help" />}
           backgroundImage={{
-            src: "/images/services/toilet-repair-installation/hero.webp",
+            src: "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-hero.webp",
             alt: "Toilet repair and installation in Green Valley, Henderson, NV",
           }}
         />

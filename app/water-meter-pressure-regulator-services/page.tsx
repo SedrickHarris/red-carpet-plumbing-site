@@ -227,7 +227,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and underground connections.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -243,7 +243,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Water heater repair and installation for tank and tankless systems. High water pressure accelerates water heater wear.",
     href: "/water-heater-repair-installation/",
-    image: "/images/services/water-heater-repair-installation/card.webp",
+    image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Modern energy efficient water heater installation",
     built: true,
   },
@@ -252,7 +252,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Full and partial repiping for homes with aging supply pipe systems that have been damaged by years of excessive water pressure.",
     href: "/repiping/",
-    image: "/images/services/repiping/hero.webp",
+    image: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
     imageAlt: "Whole home repiping service in Las Vegas",
     built: true,
   },
@@ -424,7 +424,7 @@ export default function WaterMeterPressureRegulatorServicesPage() {
           }
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/water-meter-pressure-regulator-services/hero.webp",
+            src: "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-water-meter-pressure-regulator-services-hero.webp",
             alt: "Licensed technician servicing a water meter and pressure regulator",
           }}
         />

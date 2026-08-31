@@ -412,7 +412,7 @@ export default function BoulderCityLeakDetectionPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
-            src: "/images/services/leak-detection-repair/hero.webp",
+            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-hero.webp",
             alt: "non-invasive leak detection and repair in Boulder City, NV",
           }}
         />

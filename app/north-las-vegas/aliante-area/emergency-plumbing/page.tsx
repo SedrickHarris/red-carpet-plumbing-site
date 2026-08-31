@@ -169,7 +169,7 @@ const ALIANTE_EMERGENCY_RELATED = [
       "Detection and repair of water leaks beneath concrete slab foundations in Aliante area homes.",
     // ACTIVATED: P44 built and staged
     href: "/north-las-vegas/aliante-area/slab-leak-detection-repair/",
-    image: "/images/services/slab-leak-detection-repair/card.webp",
+    image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
     imageAlt: "Slab leak detection and repair in the Aliante area",
   },
   {
@@ -178,7 +178,7 @@ const ALIANTE_EMERGENCY_RELATED = [
       "Professional drain cleaning and clearing for Aliante area homes with slow or blocked drains.",
     // ACTIVATED: P41 built and staged
     href: "/north-las-vegas/aliante-area/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Drain cleaning service in the Aliante area",
   },
   {
@@ -187,7 +187,7 @@ const ALIANTE_EMERGENCY_RELATED = [
       "Accurate leak detection and repair for visible and hidden leaks in Aliante area homes.",
     // ACTIVATED: P43 built and staged
     href: "/north-las-vegas/aliante-area/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Leak detection and repair in the Aliante area",
   },
   {
@@ -196,7 +196,7 @@ const ALIANTE_EMERGENCY_RELATED = [
       "Water heater diagnosis, repair, and installation for Aliante area homes affected by hard water sediment.",
     // ACTIVATED: P42 built and staged
     href: "/north-las-vegas/aliante-area/water-heater-repair-installation/",
-    image: "/images/services/water-heater-repair-installation/card.webp",
+    image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
     imageAlt: "Water heater repair and installation in the Aliante area",
   },
 ];
@@ -400,7 +400,7 @@ export default function AlianteEmergencyPlumbingPage() {
             <QuoteFormPlaceholder title="Get Emergency Plumbing Help" />
           }
           backgroundImage={{
-            src: "/images/services/emergency-plumbing/hero.webp",
+            src: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-hero.webp",
             alt: "Emergency plumbing service in the Aliante area of North Las Vegas, NV",
           }}
         />

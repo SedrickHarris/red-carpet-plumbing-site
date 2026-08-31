@@ -355,7 +355,7 @@ export default function SummerlinRePipingPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           backgroundImage={{
-            src: "/images/services/repiping/hero.webp",
+            src: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
             alt: "Repiping services in Summerlin, NV",
           }}
         />

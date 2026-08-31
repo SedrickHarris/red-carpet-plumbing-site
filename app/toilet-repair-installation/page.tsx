@@ -226,7 +226,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Professional drain cleaning for toilet clogs, slow drains, and recurring blockages in kitchens and bathrooms.",
     href: "/drain-cleaning/",
-    image: "/images/services/drain-cleaning/card.webp",
+    image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
     imageAlt: "Hydro jetting equipment clearing a tough drain clog",
     built: true,
   },
@@ -235,7 +235,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and plumbing connections.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -244,7 +244,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "24/7 emergency plumbing service for overflowing toilets, sewer backups, and urgent plumbing situations throughout Las Vegas.",
     href: "/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
+    image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
     imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
     built: true,
   },
@@ -420,7 +420,7 @@ export default function ToiletRepairInstallationPage() {
           formSlot={<QuoteFormPlaceholder title="Get Toilet Help" />}
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/toilet-repair-installation/hero.webp",
+            src: "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-hero.webp",
             alt: "Stylish modern toilet installation in a Las Vegas bathroom",
           }}
         />

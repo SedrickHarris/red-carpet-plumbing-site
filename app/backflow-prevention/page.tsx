@@ -240,7 +240,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and plumbing connections throughout Las Vegas.",
     href: "/leak-detection-repair/",
-    image: "/images/services/leak-detection-repair/card.webp",
+    image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-card.webp",
     imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
     built: true,
   },
@@ -249,7 +249,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "24/7 emergency plumbing service for urgent plumbing situations throughout the Las Vegas Valley.",
     href: "/emergency-plumbing/",
-    image: "/images/services/emergency-plumbing/card.webp",
+    image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
     imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
     built: true,
   },
@@ -417,7 +417,7 @@ export default function BackflowPreventionPage() {
           formSlot={<QuoteFormPlaceholder title="Get Backflow Service Help" />}
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/backflow-prevention/hero.webp",
+            src: "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-prevention-hero.webp",
             alt: "Professional backflow prevention device installation",
           }}
         />

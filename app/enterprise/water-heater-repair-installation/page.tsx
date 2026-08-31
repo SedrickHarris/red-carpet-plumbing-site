@@ -386,7 +386,7 @@ export default function EnterpriseWaterHeaterPage() {
           ctaNote="Licensed plumbers. Clark County code-compliant installation. Transparent pricing."
           formSlot={<QuoteFormPlaceholder title="Get Water Heater Help" />}
           backgroundImage={{
-            src: "/images/services/water-heater-repair-installation/hero.webp",
+            src: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-hero.webp",
             alt: "Water heater repair and installation in Enterprise, NV",
           }}
         />

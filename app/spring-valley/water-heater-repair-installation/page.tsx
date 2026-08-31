@@ -379,7 +379,7 @@ export default function SpringValleyWaterHeaterPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Water Heater Help" />}
           backgroundImage={{
-            src: "/images/services/water-heater-repair-installation/hero.webp",
+            src: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-hero.webp",
             alt: "Licensed water heater repair and installation in Spring Valley, NV",
           }}
         />

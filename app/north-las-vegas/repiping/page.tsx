@@ -342,7 +342,7 @@ export default function NorthLasVegasRepipingPage() {
           }}
           formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           backgroundImage={{
-            src: "/images/services/repiping/hero.webp",
+            src: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
             alt: "Red Carpet Plumbing repiping technician in North Las Vegas, NV",
           }}
         />
