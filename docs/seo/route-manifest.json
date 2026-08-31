@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T20:54:31.339Z",
+  "generatedAt": "2026-08-31T21:11:56.332Z",
   "routeCount": 115,
   "routes": [
     {
@@ -939,7 +939,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 395
+      "wordEstimate": 411
     },
     {
       "route": "/garbage-disposal-repair-installation",
@@ -1039,7 +1039,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 361
+      "wordEstimate": 377
     },
     {
       "route": "/green-valley-plumbing-services",
@@ -4308,7 +4308,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 615
+      "wordEstimate": 626
     },
     {
       "route": "/service-areas",
@@ -5219,7 +5219,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 393
+      "wordEstimate": 419
     },
     {
       "route": "/trenchless-piping",
@@ -5468,7 +5468,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 397
+      "wordEstimate": 408
     }
   ],
   "warnings": []
