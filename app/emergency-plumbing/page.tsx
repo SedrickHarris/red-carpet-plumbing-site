@@ -100,57 +100,82 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved emergency service image when available
 const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
   {
     title: "Burst Pipe Repair",
     description:
       "A burst pipe can release dozens of gallons of water per minute, causing rapid flooding and structural damage. In Las Vegas, burst pipes are most common during extreme summer heat that stresses aging pipe joints and during occasional winter cold snaps that affect exposed lines in garages and exterior walls. Shut off your main water supply immediately and call Red Carpet Plumbing.",
     href: "/emergency-plumbing/burst-pipe-repair/",
+    image:
+      "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-burst-pipe-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing emergency burst pipe repair in Las Vegas, NV",
   },
   {
     title: "Sewer Backup and Overflow",
     description:
       "A sewer backup means wastewater is flowing back into your home through drains, toilets, or floor drains. This is a health emergency. Do not use any drains or toilets in the building until the blockage is cleared. A plumber can clear the line, inspect for damage, and identify the underlying cause.",
     href: "/emergency-plumbing/sewer-backup/",
+    image:
+      "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-sewer-backup-overflow-card.webp",
+    imageAlt: "Red Carpet Plumbing emergency sewer backup and overflow service in Las Vegas, NV",
   },
   {
     title: "Water Heater Emergency",
     description:
       "A water heater emergency includes an active leak at the tank or connections, a gas smell near the heater, unusual sounds indicating pressure buildup, or total loss of hot water combined with visible damage. Turn off the water supply to the heater and, for gas units, turn off the gas supply at the valve before calling.",
     href: "/emergency-plumbing/water-heater/",
+    image:
+      "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-water-heater-emergency-card.webp",
+    imageAlt: "Red Carpet Plumbing emergency water heater service in Las Vegas, NV",
   },
   {
     title: "Slab Leak Emergency",
     description:
       "A slab leak under your home's foundation becomes an emergency when it causes visible water damage, sudden water pressure loss, warm spots on floors, or the sound of running water when all fixtures are off. Las Vegas homes are particularly vulnerable to slab leaks due to hard water corrosion and desert soil movement. Early detection prevents major structural damage.",
     href: "/emergency-plumbing/slab-leak/",
+    image:
+      "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-slab-leak-emergency-card.webp",
+    imageAlt: "Red Carpet Plumbing emergency slab leak service in Las Vegas, NV",
   },
   {
     title: "Gas Line Emergency",
     description:
       "If you smell gas, leave the building immediately without operating any light switches or electrical devices. Call your gas utility from outside, then call a licensed plumber for gas line inspection and repair. Red Carpet Plumbing is licensed for gas line work under NV #0048585A (C-1 Plumbing and Heating).",
     href: "/emergency-plumbing/gas-line/",
+    image:
+      "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-gas-line-emergency-card.webp",
+    imageAlt: "Red Carpet Plumbing emergency gas line service in Las Vegas, NV",
   },
   {
     title: "Major Active Water Leak",
     description:
       "An active water leak that is too large to contain with a bucket or towels should be treated as an emergency. Locate your main water shutoff valve, turn off the water supply, and call a plumber. Even a slow hidden leak inside a wall can cause mold growth and structural damage if left unaddressed.",
     href: "/emergency-plumbing/major-leak/",
+    image:
+      "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-major-active-water-leak-card.webp",
+    imageAlt: "Red Carpet Plumbing major active water leak response in Las Vegas, NV",
   },
   {
     title: "Overflowing Toilet",
     description:
       "If a toilet is overflowing and cannot be stopped with a plunger, locate the shutoff valve at the base of the toilet and turn it clockwise to stop the water flow. If the toilet continues to overflow or if multiple toilets are backing up simultaneously, this may indicate a main sewer line problem requiring immediate professional attention.",
     href: "/emergency-plumbing/overflowing-toilet/",
+    image:
+      "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-overflowing-toilet-card.webp",
+    imageAlt: "Red Carpet Plumbing overflowing toilet emergency service in Las Vegas, NV",
   },
   {
     title: "Loss of Water Supply",
     description:
       "A sudden complete loss of water to your home or building can indicate a main line break, a failed pressure regulator, or a municipal supply issue. Check with neighbors to determine if the outage is isolated to your property. If it is, call a plumber for emergency diagnosis.",
     href: "/emergency-plumbing/water-loss/",
+    image:
+      "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-loss-of-water-supply-card.webp",
+    imageAlt: "Red Carpet Plumbing emergency response to loss of water supply in Las Vegas, NV",
   },
 ];
 
@@ -486,7 +511,6 @@ export default function EmergencyPlumbingPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved emergency service image when available */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {EMERGENCY_SERVICE_TYPES.map((card) => (
                     <ServiceCard
@@ -494,6 +518,8 @@ export default function EmergencyPlumbingPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}
