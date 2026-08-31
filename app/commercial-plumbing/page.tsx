@@ -383,7 +383,6 @@ export default function CommercialPlumbingPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* TODO: Replace ServiceImagePlaceholder with approved commercial plumbing hero image when client supplies asset at: public/images/services/commercial-plumbing/hero.webp */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -415,6 +414,10 @@ export default function CommercialPlumbingPage() {
           ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
           formSlot={<QuoteFormPlaceholder title="Get Commercial Plumbing Help" />}
           accentWidth="sm"
+          backgroundImage={{
+            src: "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
+            alt: "Red Carpet Plumbing commercial plumbing in Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 3: COMMERCIAL PLUMBING PROBLEMS THAT NEED ATTENTION */}

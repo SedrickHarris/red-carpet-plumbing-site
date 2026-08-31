@@ -351,9 +351,6 @@ export default function LasVegasCommercialPlumbingPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* TODO: Replace ServiceImagePlaceholder/accent hero with an approved commercial */}
-        {/* plumbing hero image when the client supplies one at */}
-        {/* public/images/services/commercial-plumbing/hero.webp (none exists yet). */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -383,6 +380,10 @@ export default function LasVegasCommercialPlumbingPage() {
           ctaNote="NV Licensed #0048585A, C-1 Plumbing and Heating. Permits coordinated."
           formSlot={<QuoteFormPlaceholder title="Get Commercial Plumbing Help" />}
           accentWidth="sm"
+          backgroundImage={{
+            src: "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
+            alt: "Red Carpet Plumbing commercial plumbing in Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 2: WHO WE SERVE */}

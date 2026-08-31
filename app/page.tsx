@@ -368,6 +368,10 @@ export default function Home() {
             </>
           }
           size="tall"
+          backgroundImage={{
+            src: "/images/homepage/red-carpet-plumbing-las-vegas-branded-service-van-home-hero.webp",
+            alt: "Red Carpet Plumbing branded service van in Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 2.5: AEO DIRECT-ANSWER BLOCK */}

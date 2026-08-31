@@ -358,10 +358,6 @@ export default function NorthLasVegasPlumbingServicesPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* TODO: Add client-supplied North Las Vegas hero image at
-            /images/locations/north-las-vegas/hero.webp, then pass it via the
-            HeroSection backgroundImage prop. Omitted for now (image missing);
-            hero renders its gradient background. */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -387,6 +383,10 @@ export default function NorthLasVegasPlumbingServicesPage() {
           }}
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder />}
+          backgroundImage={{
+            src: "/images/locations/north-las-vegas/red-carpet-plumbing-north-las-vegas-nv-neighborhood-location-hero.webp",
+            alt: "Red Carpet Plumbing plumbing services in North Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 2: DIRECT ANSWER BLOCK */}

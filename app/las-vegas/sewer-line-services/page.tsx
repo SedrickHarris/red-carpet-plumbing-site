@@ -30,10 +30,9 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 // const (visible = schema). Hero carries trustItems AND a separate red trust
 // band (Section 2), per the LV cluster.
 //
-// Hero has no backgroundImage: no sewer-line-services image asset exists
-// (public/images/services/sewer-line-services/ is absent, and the core sewer
-// page also ships without a hero image). HeroSection renders its gradient.
-// TODO: add a dedicated /images/services/sewer-line-services/ hero asset.
+// Hero uses the shared sewer-line-services hero asset, which the client
+// supplied after this page was first built. The same asset is used by the core
+// /sewer-line-services/ page and the Henderson and North Las Vegas variants.
 //
 // Service schema provider includes a PostalAddress (locality/region/country)
 // per the approved P47 Service schema; the LV drain sibling omits the address.
@@ -370,9 +369,6 @@ export default function LasVegasSewerLinePage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* TODO: no /images/services/sewer-line-services/ hero asset exists;
-            hero renders its gradient background. Add a dedicated hero image when
-            available and pass it via backgroundImage. */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -407,6 +403,10 @@ export default function LasVegasSewerLinePage() {
           }}
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Sewer Line Help" />}
+          backgroundImage={{
+            src: "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-hero.webp",
+            alt: "Red Carpet Plumbing sewer line services in Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 3: WHY LAS VEGAS HOMES NEED SEWER LINE SERVICE */}

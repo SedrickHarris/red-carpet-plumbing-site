@@ -374,10 +374,6 @@ export default function AlianteAreaPlumbingPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* TODO: Add client-supplied Aliante area hero image at
-            /images/locations/aliante/hero.webp, then pass it via the
-            HeroSection backgroundImage prop. Omitted for now (image missing);
-            hero renders its gradient background. */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -407,6 +403,10 @@ export default function AlianteAreaPlumbingPage() {
           }}
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder />}
+          backgroundImage={{
+            src: "/images/locations/aliante-area/red-carpet-plumbing-aliante-north-las-vegas-nv-location-hero.webp",
+            alt: "Red Carpet Plumbing plumbing services in the Aliante area of North Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 2: DIRECT ANSWER BLOCK */}

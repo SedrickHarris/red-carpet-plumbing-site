@@ -23,10 +23,9 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 // url, telephone). 5 separate JsonLd blocks. HowTo included because Section 5
 // renders the matching visible numbered process steps.
 //
-// IMAGE NOTE: No commercial-plumbing hero/card image exists under
-// public/images/services/commercial-plumbing/. Per build-brief Guardrail 7 we
-// do NOT invent a path; the hero renders without a background image (its
-// default radial-gradient treatment) until an approved asset is added.
+// IMAGE NOTE: the hero uses the shared commercial-plumbing hero asset, which
+// the client supplied after this page was first built. It is the same asset
+// used by the core /commercial-plumbing/ page and every other city variant.
 
 export const metadata: Metadata = {
   title: "Commercial Plumbing in Enterprise, NV | Red Carpet Plumbing",
@@ -348,9 +347,6 @@ export default function EnterpriseCommercialPlumbingPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* TODO: No commercial-plumbing hero/card image exists under
-            public/images/services/commercial-plumbing/. Add an approved asset
-            and pass it as backgroundImage. Do not invent a path. */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -381,6 +377,10 @@ export default function EnterpriseCommercialPlumbingPage() {
           formSlot={
             <QuoteFormPlaceholder title="Request Commercial Plumbing Service" />
           }
+          backgroundImage={{
+            src: "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
+            alt: "Red Carpet Plumbing commercial plumbing in Enterprise, NV",
+          }}
         />
 
         {/* SECTION 2: DIRECT ANSWER BLOCK */}
