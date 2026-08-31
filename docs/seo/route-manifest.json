@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T23:27:40.422Z",
+  "generatedAt": "2026-08-31T23:58:09.003Z",
   "routeCount": 115,
   "routes": [
     {
@@ -3044,7 +3044,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 539
+      "wordEstimate": 528
     },
     {
       "route": "/north-las-vegas-plumbing-services",

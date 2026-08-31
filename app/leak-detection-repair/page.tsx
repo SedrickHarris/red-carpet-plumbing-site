@@ -93,57 +93,82 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved leak detection service image when available
 const LEAK_SERVICES: ServiceTypeCard[] = [
   {
     title: "Electronic Leak Detection",
     description:
       "Red Carpet Plumbing uses professional electronic leak detection equipment to locate hidden leaks precisely. Electronic detectors use acoustic sensors to identify the sound of water escaping from pressurized pipes through walls, floors, and underground, allowing us to pinpoint the leak location without opening up large sections of the home.",
     href: "/leak-detection-repair/electronic/",
+    image:
+      "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-electronic-leak-detection-card.webp",
+    imageAlt: "Red Carpet Plumbing electronic leak detection in Las Vegas, NV",
   },
   {
     title: "Wall and Ceiling Leak Detection",
     description:
       "Leaks inside walls and ceilings are among the most common and most damaging hidden leaks in Las Vegas homes. Corroded copper or galvanized pipes, failed supply line connections, and leaking drain lines can all release water inside walls without any visible sign until significant damage has occurred. We locate wall and ceiling leaks using acoustic and moisture detection equipment.",
     href: "/leak-detection-repair/wall-ceiling/",
+    image:
+      "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-wall-ceiling-leak-detection-card.webp",
+    imageAlt: "Red Carpet Plumbing wall and ceiling leak detection in Las Vegas, NV",
   },
   {
     title: "Slab Leak Detection",
     description:
       "Slab leaks occur when water or sewer pipes running beneath a home's concrete foundation develop cracks or holes. They are among the most serious and most common plumbing problems in Las Vegas due to the combination of hard water corrosion and desert soil movement. We locate slab leaks using acoustic sensors, thermal imaging, and pressure testing to identify the precise location before any repair begins.",
     href: "/leak-detection-repair/slab-leak/",
+    image:
+      "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-card.webp",
+    imageAlt: "Red Carpet Plumbing slab leak detection in Las Vegas, NV",
   },
   {
     title: "Underground Line Leak Detection",
     description:
       "Buried water supply lines, irrigation lines, and sewer lines can develop leaks from pipe corrosion, root intrusion, soil movement, and connection failures. Underground leaks are difficult to detect without professional equipment because the water often does not surface near the actual leak location. We locate underground line leaks using electronic detection equipment and pressure testing.",
     href: "/leak-detection-repair/underground/",
+    image:
+      "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-underground-line-leak-detection-card.webp",
+    imageAlt: "Red Carpet Plumbing underground line leak detection in Las Vegas, NV",
   },
   {
     title: "Gas Line Leak Detection",
     description:
       "If you smell gas in or around your home, leave immediately and call your gas utility before calling a plumber. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under our NV Contractor License #0048585A (C-1 Plumbing and Heating). We detect gas line leaks using pressure testing and gas-specific detection equipment.",
     href: "/leak-detection-repair/gas-line/",
+    image:
+      "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-gas-line-leak-detection-card.webp",
+    imageAlt: "Red Carpet Plumbing gas line leak detection in Las Vegas, NV",
   },
   {
     title: "Water Supply Line Leak Repair",
     description:
       "Once the source of a leak is located, Red Carpet Plumbing repairs or replaces the damaged section of pipe. For supply line leaks inside walls or ceilings, we make targeted repairs with minimal opening of the wall surface. For leaks in accessible locations, we repair or replace the affected section and test the line before closing up.",
     href: "/leak-detection-repair/supply-line/",
+    image:
+      "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-water-supply-line-leak-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing water supply line leak repair in Las Vegas, NV",
   },
   {
     title: "Slab Leak Repair",
     description:
       "Slab leak repair depends on the location and severity of the leak. Options include direct access repair through the concrete, pipe rerouting through walls or attic spaces to bypass the damaged section, or epoxy pipe lining for some pipe configurations. We discuss the options and the pros and cons of each approach before any repair begins.",
     href: "/leak-detection-repair/slab-repair/",
+    image:
+      "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing slab leak repair in Las Vegas, NV",
   },
   {
     title: "Commercial Leak Detection",
     description:
       "Red Carpet Plumbing provides leak detection and repair for commercial buildings, retail properties, office buildings, and multi-unit residential properties throughout the Las Vegas Valley. Commercial properties with high water usage are particularly vulnerable to undetected leaks that accumulate significant costs before being discovered.",
     href: "/leak-detection-repair/commercial/",
+    image:
+      "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-commercial-leak-detection-card.webp",
+    imageAlt: "Red Carpet Plumbing commercial leak detection in Las Vegas, NV",
   },
 ];
 
@@ -473,7 +498,6 @@ export default function LeakDetectionAndRepairPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved leak detection service image when available */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {LEAK_SERVICES.map((card) => (
                     <ServiceCard
@@ -481,6 +505,8 @@ export default function LeakDetectionAndRepairPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}
