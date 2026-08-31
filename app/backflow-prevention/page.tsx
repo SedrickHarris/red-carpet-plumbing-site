@@ -105,57 +105,82 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved backflow prevention service image when available
 const BACKFLOW_SERVICES: ServiceTypeCard[] = [
   {
     title: "Backflow Preventer Installation",
     description:
       "Installation of backflow prevention devices for residential irrigation systems, commercial properties, and fire suppression connections throughout Las Vegas.",
     href: "/backflow-prevention/",
+    image:
+      "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-preventer-installation-card.webp",
+    imageAlt: "Red Carpet Plumbing backflow preventer installation in Las Vegas, NV",
   },
   {
     title: "Irrigation System Backflow Protection",
     description:
       "Pressure vacuum breaker installation for residential and commercial irrigation systems to meet LVVWD and Clark County cross-connection requirements.",
     href: "/backflow-prevention/",
+    image:
+      "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-irrigation-system-backflow-protection-card.webp",
+    imageAlt: "Red Carpet Plumbing irrigation system backflow protection in Las Vegas, NV",
   },
   {
     title: "Commercial Backflow Prevention",
     description:
       "Containment backflow prevention device installation and repair for commercial properties, multi-unit buildings, and high-hazard connections.",
     href: "/commercial-plumbing/",
+    image:
+      "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-commercial-backflow-prevention-card.webp",
+    imageAlt: "Red Carpet Plumbing commercial backflow prevention in Las Vegas, NV",
   },
   {
     title: "Backflow Device Repair",
     description:
       "Repair of failed or malfunctioning backflow prevention assemblies to restore compliance after a failed annual test.",
     href: "/backflow-prevention/",
+    image:
+      "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-device-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing backflow device repair in Las Vegas, NV",
   },
   {
     title: "Backflow Device Replacement",
     description:
       "Replacement of outdated, failed, or non-compliant backflow prevention devices with current approved assemblies.",
     href: "/backflow-prevention/",
+    image:
+      "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-device-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing backflow device replacement in Las Vegas, NV",
   },
   {
     title: "RPZ Assembly Service",
     description:
       "Installation and repair of reduced pressure zone (RPZ) assemblies for high-hazard commercial and industrial connections requiring the highest level of backflow protection.",
     href: "/backflow-prevention/",
+    image:
+      "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-rpz-assembly-service-card.webp",
+    imageAlt: "Red Carpet Plumbing RPZ assembly service in Las Vegas, NV",
   },
   {
     title: "PVB and DCVA Service",
     description:
       "Installation and repair of pressure vacuum breakers and double check valve assemblies for residential and moderate-hazard commercial applications.",
     href: "/backflow-prevention/",
+    image:
+      "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-pvb-dcva-service-card.webp",
+    imageAlt: "Red Carpet Plumbing PVB and DCVA backflow device service in Las Vegas, NV",
   },
   {
     title: "Backflow Compliance Assessment",
     description:
       "Property assessment to determine backflow prevention requirements, identify missing or non-compliant devices, and plan installations to meet LVVWD and municipal requirements.",
     href: "/backflow-prevention/",
+    image:
+      "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-compliance-assessment-card.webp",
+    imageAlt: "Red Carpet Plumbing backflow compliance assessment in Las Vegas, NV",
   },
 ];
 
@@ -481,7 +506,6 @@ export default function BackflowPreventionPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved backflow prevention service image when available */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {BACKFLOW_SERVICES.map((card, index) => (
                     <ServiceCard
@@ -489,6 +513,8 @@ export default function BackflowPreventionPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}
