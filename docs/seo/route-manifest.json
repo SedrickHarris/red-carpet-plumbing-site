@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T21:11:56.332Z",
+  "generatedAt": "2026-08-31T21:55:15.029Z",
   "routeCount": 115,
   "routes": [
     {
@@ -135,7 +135,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 414
+      "wordEstimate": 403
     },
     {
       "route": "/boulder-city-plumbing-services",
