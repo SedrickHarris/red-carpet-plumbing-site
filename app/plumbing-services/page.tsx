@@ -385,7 +385,7 @@ export default function PlumbingServicesPage() {
             href: "tel:+17025679172",
           }}
           backgroundImage={{
-            src: "/images/locations/las-vegas/hero.webp",
+            src: "/images/locations/las-vegas/red-carpet-plumbing-las-vegas-nv-skyline-location-hero.webp",
             alt: "Plumbing services in Las Vegas, NV",
           }}
           formSlot={

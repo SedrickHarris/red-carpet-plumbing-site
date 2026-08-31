@@ -357,7 +357,7 @@ export default function SummerlinEmergencyPlumbingPage() {
           ctaNote={HERO_CTA_NOTE}
           formSlot={<QuoteFormPlaceholder title="Get Emergency Plumbing Help" />}
           backgroundImage={{
-            src: "/images/locations/summerlin/hero.webp",
+            src: "/images/locations/summerlin/red-carpet-plumbing-summerlin-nv-red-rock-canyon-location-hero.webp",
             alt: "Emergency plumbing service in Summerlin, NV",
           }}
         />

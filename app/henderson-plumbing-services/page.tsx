@@ -383,7 +383,7 @@ export default function HendersonPlumbingServicesPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
-            src: "/images/locations/henderson/hero.webp",
+            src: "/images/locations/henderson/red-carpet-plumbing-henderson-nv-water-street-district-location-hero.webp",
             alt: "Licensed plumbers serving Henderson, NV",
           }}
         />
