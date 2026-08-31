@@ -399,7 +399,7 @@ export default function ParadiseLeakDetectionPage() {
           ctaNote={HERO_CTA_NOTE}
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
-            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-hero.webp",
+            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-hero.webp",
             alt: "Leak detection service in Paradise, NV",
           }}
         />

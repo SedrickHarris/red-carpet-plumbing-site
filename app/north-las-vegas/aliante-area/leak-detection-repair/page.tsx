@@ -450,7 +450,7 @@ export default function AlianteLeakDetectionRepairPage() {
           ctaNote="NV Licensed, #0048585A. Transparent pricing, no hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
-            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-hero.webp",
+            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-hero.webp",
             alt: "Leak detection service in the Aliante area of North Las Vegas, NV",
           }}
         />

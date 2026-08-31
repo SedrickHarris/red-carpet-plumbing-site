@@ -227,7 +227,7 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Video camera inspection required before trenchless repair to confirm pipe condition and access requirements.",
     href: "/video-camera-plumbing-inspections/",
-    image: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspection-hero.webp",
+    image: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspections-primary-hero.webp",
     imageAlt: "Licensed plumber performing a video camera pipe inspection",
     built: true,
   },
@@ -415,7 +415,7 @@ export default function TrenchlessPipingPage() {
           }
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-piping-hero.webp",
+            src: "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-pipe-replacement-hero.webp",
             alt: "Small excavation site for trenchless piping service in Las Vegas",
           }}
         />

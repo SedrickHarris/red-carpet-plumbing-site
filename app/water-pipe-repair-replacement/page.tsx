@@ -424,7 +424,7 @@ export default function WaterPipeRepairReplacementPage() {
           }
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-water-pipe-repair-replacement-hero.webp",
+            src: "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-water-pipe-repair-replacement-primary-hero.webp",
             alt: "Professional water pipe repair work in progress",
           }}
         />

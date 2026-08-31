@@ -398,7 +398,7 @@ export default function LeakDetectionAndRepairPage() {
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-hero.webp",
+            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-hero.webp",
             alt: "Red Carpet Plumbing leak detection service in Las Vegas, NV",
           }}
         />

@@ -435,7 +435,7 @@ export default function GreenValleyLeakDetectionPage() {
           ctaNote="Licensed plumbers. Non-invasive detection. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
-            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-hero.webp",
+            src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-hero.webp",
             alt: "Professional leak detection service in Green Valley, Henderson, NV",
           }}
         />

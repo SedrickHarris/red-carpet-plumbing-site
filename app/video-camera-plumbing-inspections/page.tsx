@@ -419,7 +419,7 @@ export default function VideoCameraPlumbingInspectionsPage() {
           }
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspection-hero.webp",
+            src: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspections-primary-hero.webp",
             alt: "Licensed plumber performing a video camera pipe inspection",
           }}
         />
