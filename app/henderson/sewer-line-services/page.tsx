@@ -17,9 +17,9 @@
 // carries trustItems AND a separate red trust band (Section 2). Context and
 // services render as H3 article cards.
 //
-// Hero has no backgroundImage: no /images/services/sewer-line-services/ asset
-// exists (directory absent, same as the core/LV sewer pages). HeroSection
-// renders its gradient. TODO: add a dedicated sewer-line-services hero asset.
+// Hero uses the shared sewer-line-services hero asset, which the client
+// supplied after this page was first built. The same asset is used by the core
+// /sewer-line-services/ page and the Las Vegas and North Las Vegas variants.
 
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -401,9 +401,6 @@ export default function HendersonSewerLinePage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* TODO: no /images/services/sewer-line-services/ hero asset exists;
-            hero renders its gradient background. Add a dedicated hero image when
-            available and pass it via backgroundImage. */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -432,6 +429,10 @@ export default function HendersonSewerLinePage() {
           }}
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Sewer Line Help" />}
+          backgroundImage={{
+            src: "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-hero.webp",
+            alt: "Red Carpet Plumbing sewer line services in Henderson, NV",
+          }}
         />
 
         {/* SECTION 3: HENDERSON SEWER LINE CONTEXT */}

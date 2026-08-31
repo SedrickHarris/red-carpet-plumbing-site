@@ -364,10 +364,6 @@ export default function ParadisePlumbingServicesPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* TODO: Add client-supplied Paradise hero image at
-            /images/locations/paradise/hero.webp, then pass it via the
-            HeroSection backgroundImage prop. Omitted for now (image missing);
-            hero renders its gradient background. */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -393,6 +389,10 @@ export default function ParadisePlumbingServicesPage() {
           }}
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder />}
+          backgroundImage={{
+            src: "/images/locations/paradise/red-carpet-plumbing-paradise-nv-las-vegas-strip-location-hero.webp",
+            alt: "Red Carpet Plumbing plumbing services in Paradise, NV",
+          }}
         />
 
         {/* SECTION 2: DIRECT ANSWER BLOCK */}

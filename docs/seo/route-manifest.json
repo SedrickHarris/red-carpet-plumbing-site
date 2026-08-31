@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T15:50:10.846Z",
+  "generatedAt": "2026-08-31T16:03:18.010Z",
   "routeCount": 115,
   "routes": [
     {
@@ -45,7 +45,7 @@
         "WebPage",
         "Service"
       ],
-      "wordEstimate": 566
+      "wordEstimate": 567
     },
     {
       "route": "/about",
@@ -182,7 +182,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 668
+      "wordEstimate": 669
     },
     {
       "route": "/boulder-city/drain-cleaning",
@@ -404,7 +404,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 377
+      "wordEstimate": 378
     },
     {
       "route": "/contact",
@@ -435,7 +435,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 317
+      "wordEstimate": 318
     },
     {
       "route": "/drain-cleaning",
@@ -576,7 +576,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 745
+      "wordEstimate": 746
     },
     {
       "route": "/enterprise/commercial-plumbing",
@@ -619,7 +619,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 845
+      "wordEstimate": 847
     },
     {
       "route": "/enterprise/drain-cleaning",
@@ -1088,7 +1088,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 772
+      "wordEstimate": 773
     },
     {
       "route": "/green-valley/drain-cleaning",
@@ -1579,7 +1579,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 688
+      "wordEstimate": 689
     },
     {
       "route": "/henderson/drain-cleaning",
@@ -1873,7 +1873,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 987
+      "wordEstimate": 997
     },
     {
       "route": "/henderson/slab-leak-detection-repair",
@@ -2018,7 +2018,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 758
+      "wordEstimate": 759
     },
     {
       "route": "/lake-las-vegas/drain-cleaning",
@@ -2413,7 +2413,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 708
+      "wordEstimate": 709
     },
     {
       "route": "/las-vegas/drain-cleaning",
@@ -2795,7 +2795,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 848
+      "wordEstimate": 850
     },
     {
       "route": "/las-vegas/slab-leak-detection-repair",
@@ -3092,7 +3092,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 700
+      "wordEstimate": 701
     },
     {
       "route": "/north-las-vegas/aliante-area-plumbing",
@@ -3141,7 +3141,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 707
+      "wordEstimate": 708
     },
     {
       "route": "/north-las-vegas/aliante-area/drain-cleaning",
@@ -3456,7 +3456,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 966
+      "wordEstimate": 946
     },
     {
       "route": "/north-las-vegas/drain-cleaning",
@@ -3682,7 +3682,7 @@
         "Answer",
         "AggregateRating"
       ],
-      "wordEstimate": 853
+      "wordEstimate": 836
     },
     {
       "route": "/north-las-vegas/slab-leak-detection-repair",
@@ -3920,7 +3920,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 712
+      "wordEstimate": 713
     },
     {
       "route": "/paradise/commercial-plumbing",
@@ -3975,7 +3975,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 539
+      "wordEstimate": 540
     },
     {
       "route": "/paradise/drain-cleaning",
@@ -4390,7 +4390,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 593
+      "wordEstimate": 594
     },
     {
       "route": "/slab-leak-detection-repair",
@@ -4440,7 +4440,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 600
+      "wordEstimate": 601
     },
     {
       "route": "/spring-valley-plumbing-services",
@@ -4540,7 +4540,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 756
+      "wordEstimate": 757
     },
     {
       "route": "/spring-valley/drain-cleaning",
@@ -5368,7 +5368,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 582
+      "wordEstimate": 583
     },
     {
       "route": "/water-meter-pressure-regulator-services",

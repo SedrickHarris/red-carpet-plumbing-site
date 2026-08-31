@@ -377,10 +377,6 @@ export default function LakeLasVegasPlumbingServicesPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* TODO: Add client-supplied Lake Las Vegas hero image at
-            /images/locations/lake-las-vegas/hero.webp, then pass it via the
-            HeroSection backgroundImage prop. Omitted for now (image missing);
-            hero renders its gradient background. */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -410,6 +406,10 @@ export default function LakeLasVegasPlumbingServicesPage() {
           }}
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder />}
+          backgroundImage={{
+            src: "/images/locations/lake-las-vegas/red-carpet-plumbing-lake-las-vegas-nv-waterfront-location-hero.webp",
+            alt: "Red Carpet Plumbing plumbing services in Lake Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 2: DIRECT ANSWER BLOCK */}

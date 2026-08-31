@@ -397,6 +397,10 @@ export default function SlabLeakDetectionAndRepairPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Slab Leak Help" />}
           accentWidth="sm"
+          backgroundImage={{
+            src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-hero.webp",
+            alt: "Red Carpet Plumbing slab leak detection and repair in Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 3: SIGNS OF A SLAB LEAK */}

@@ -430,6 +430,10 @@ export default function ParadiseCommercialPlumbingPage() {
           ctaNote="Licensed commercial plumbing throughout Paradise, NV"
           formSlot={<QuoteFormPlaceholder title="Get Commercial Plumbing Help" />}
           accentWidth="sm"
+          backgroundImage={{
+            src: "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
+            alt: "Red Carpet Plumbing commercial plumbing in Paradise, NV",
+          }}
         />
 
         {/* SECTION 2: WHO WE SERVE */}

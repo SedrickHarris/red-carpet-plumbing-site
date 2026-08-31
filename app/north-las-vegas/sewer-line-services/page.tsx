@@ -22,11 +22,9 @@
 // City node, surfacing the ten client-confirmed North Las Vegas ZIP codes
 // recorded in docs/site-os/client-context/. No other page does this yet.
 //
-// Hero renders the gradient with no background image, matching the Henderson
-// and Las Vegas sewer pages. TODO: /images/services/sewer-line-services/ holds
-// five real assets that no sewer page uses, and both sibling pages carry a
-// stale comment claiming the directory is absent. Flagged for a future
-// cleanup pass; deliberately not addressed in this build.
+// Hero uses the shared sewer-line-services hero asset, which the client
+// supplied after this page was first built. The same asset is used by the core
+// /sewer-line-services/ page and the Henderson and Las Vegas variants.
 
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -299,8 +297,6 @@ export default function NorthLasVegasSewerLinePage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* Hero renders its gradient background: no sewer-line hero asset is
-            wired on any sewer page. See the file header TODO. */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -327,6 +323,10 @@ export default function NorthLasVegasSewerLinePage() {
             href: "/contact/",
           }}
           formSlot={<QuoteFormPlaceholder title="Get Sewer Line Help" />}
+          backgroundImage={{
+            src: "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-hero.webp",
+            alt: "Red Carpet Plumbing sewer line services in North Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 2: DIRECT ANSWER / PROBLEM-SOLUTION */}

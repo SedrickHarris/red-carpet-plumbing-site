@@ -36,14 +36,10 @@
 // review-count and years-in-business claims not part of this build's approved
 // content.
 //
-// TODO: Hero image — requires client confirmation before launch. No
-// public/images/services/commercial-plumbing/hero.webp exists. The hero
-// renders its gradient with no background image, matching the core
+// Hero uses the shared commercial-plumbing hero asset, which the client
+// supplied after this page was first built. The same asset is used by the core
 // /commercial-plumbing/ page and the Las Vegas, Henderson, Paradise, Spring
-// Valley, and Enterprise commercial pages, all of which carry the same open
-// flag. The five assets under public/images/services/commercial-plumbing/hero/
-// are unreferenced by any page and are NOT approved for hero use; they were
-// deliberately not promoted here.
+// Valley, and Enterprise variants, all of which were wired in the same pass.
 
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -338,8 +334,6 @@ export default function NorthLasVegasCommercialPlumbingPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* Hero renders its gradient with no background image. See the file
-            header TODO: no commercial-plumbing hero asset exists. */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -368,6 +362,10 @@ export default function NorthLasVegasCommercialPlumbingPage() {
           formSlot={
             <QuoteFormPlaceholder title="Get Commercial Plumbing Help" />
           }
+          backgroundImage={{
+            src: "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
+            alt: "Red Carpet Plumbing commercial plumbing in North Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 2: DIRECT ANSWER / PROBLEM-SOLUTION */}

@@ -407,6 +407,10 @@ export default function WaterHeaterRepairInstallationPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Water Heater Help" />}
           accentWidth="sm"
+          backgroundImage={{
+            src: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-hero.webp",
+            alt: "Red Carpet Plumbing water heater repair and installation in Las Vegas, NV",
+          }}
         />
 
         {/* SECTION 3: SIGNS YOUR WATER HEATER NEEDS SERVICE */}

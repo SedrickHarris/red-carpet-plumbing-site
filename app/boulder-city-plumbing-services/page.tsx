@@ -350,10 +350,6 @@ export default function BoulderCityPlumbingServicesPage() {
 
       <main id="main" className="flex-1 bg-white">
         {/* SECTION 1: HERO */}
-        {/* TODO: Add client-supplied Boulder City hero image at
-            /images/locations/boulder-city/hero.webp, then pass it via the
-            HeroSection backgroundImage prop. Omitted for now (image missing);
-            hero renders its gradient background. */}
         <HeroSection
           breadcrumbs={<Breadcrumbs trail={[
             { label: "Home", href: "/" },
@@ -379,6 +375,10 @@ export default function BoulderCityPlumbingServicesPage() {
           }}
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder />}
+          backgroundImage={{
+            src: "/images/locations/boulder-city/red-carpet-plumbing-boulder-city-nv-downtown-location-hero.webp",
+            alt: "Red Carpet Plumbing plumbing services in Boulder City, NV",
+          }}
         />
 
         {/* SECTION 2: DIRECT ANSWER BLOCK */}
