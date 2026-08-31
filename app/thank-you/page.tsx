@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+
+// This page deliberately does not use HeroSection. That component assumes a
+// marketing hero shape (breadcrumbs, trust strip, dual CTAs, optional form
+// slot) that does not belong on a post-form confirmation page. What is copied
+// here is only its background treatment: an aria-hidden absolutely-positioned
+// Image plus the same flat bg-brand-charcoal/65 scrim, so this page matches
+// every other scrimmed section on the site without inheriting hero structure.
+// Text colors below were switched from the dark-on-white originals to the
+// white-on-scrim values HeroSection uses, since the copy now sits on charcoal.
 
 export const metadata: Metadata = {
   title: "Thank You | Red Carpet Plumbing",
@@ -17,7 +27,20 @@ export default function ThankYou() {
       <SiteHeader />
 
       <main id="main" className="flex-1 bg-white">
-        <section className="bg-white">
+        <section className="relative isolate overflow-hidden bg-brand-charcoal">
+          <div className="absolute inset-0 -z-10" aria-hidden="true">
+            <Image
+              src="/images/company/thank-you/red-carpet-plumbing-las-vegas-service-request-thank-you.webp"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+            {/* Same flat scrim value every other scrimmed section uses, so text
+                contrast here is predictable rather than image-dependent. */}
+            <div className="absolute inset-0 bg-brand-charcoal/65" />
+          </div>
           <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 sm:py-32 lg:px-10">
             <div className="text-center">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
@@ -37,11 +60,11 @@ export default function ThankYou() {
                 </svg>
               </div>
 
-              <h1 className="mt-8 text-4xl tracking-tight text-brand-dark sm:text-5xl">
+              <h1 className="mt-8 text-4xl tracking-tight text-white sm:text-5xl">
                 Thank You for Contacting Red Carpet Plumbing
               </h1>
 
-              <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+              <p className="mt-6 text-lg leading-8 text-white/90">
                 We received your request and will be in touch shortly. For
                 immediate assistance, call us directly.
               </p>
@@ -49,7 +72,7 @@ export default function ThankYou() {
               <div className="mt-10 flex flex-col items-center gap-4">
                 <Button
                   href="tel:+17025679172"
-                  variant="primary"
+                  variant="inverse-charcoal"
                   size="lg"
                 >
                   Call (702) 567-9172
@@ -57,7 +80,7 @@ export default function ThankYou() {
 
                 <Link
                   href="/"
-                  className="text-sm font-medium text-brand-muted underline-offset-4 transition-colors hover:text-brand-dark hover:underline"
+                  className="text-sm font-medium text-white/70 underline-offset-4 transition-colors hover:text-white hover:underline"
                 >
                   Return to Home
                 </Link>
