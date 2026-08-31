@@ -391,7 +391,7 @@ export default function LakeLasVegasSlabLeakPage() {
           ctaNote="Licensed plumbers. Non-invasive detection. All repair options explained."
           formSlot={<QuoteFormPlaceholder title="Get Slab Leak Help" />}
           backgroundImage={{
-            src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
+            src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-hero.webp",
             alt: "slab leak detection and repair in Lake Las Vegas, Henderson, NV",
           }}
         />

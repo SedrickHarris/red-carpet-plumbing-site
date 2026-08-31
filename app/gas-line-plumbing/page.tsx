@@ -417,7 +417,7 @@ export default function GasLinePlumbingPage() {
           formSlot={<QuoteFormPlaceholder title="Get Gas Line Help" />}
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-services-hero.webp",
+            src: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-plumbing-hero.webp",
             alt: "Professional gas line installation in progress in Las Vegas",
           }}
         />

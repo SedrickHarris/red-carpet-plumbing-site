@@ -181,7 +181,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Gas Line Plumbing",
-    image: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-services-hero.webp",
+    image: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-plumbing-hero.webp",
     alt: "Gas line plumbing service in Las Vegas",
     description:
       "Gas line inspection, repair, and installation for homes and businesses by trained plumbing professionals.",
