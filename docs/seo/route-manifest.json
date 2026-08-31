@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T17:24:17.351Z",
+  "generatedAt": "2026-08-31T17:25:46.995Z",
   "routeCount": 115,
   "routes": [
     {
@@ -404,7 +404,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 425
+      "wordEstimate": 440
     },
     {
       "route": "/contact",
@@ -4390,7 +4390,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 594
+      "wordEstimate": 610
     },
     {
       "route": "/slab-leak-detection-repair",

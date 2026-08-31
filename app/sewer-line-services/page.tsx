@@ -90,27 +90,38 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved sewer line service image when available
+// TODO: cards below without an image prop still need an approved asset: Sewer Line Replacement, Pipe Bursting, Root Intrusion Removal and Treatment, and Emergency Sewer Line Service.
 const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
   {
     title: "Sewer Camera Inspection",
     description:
       "A sewer camera inspection lets us see exactly what is happening inside your sewer line before recommending any repair. We insert a high-resolution camera into the line from a cleanout access point and inspect the interior in real time. Camera inspections identify blockages, root intrusion, corrosion, cracks, pipe offsets, and other structural issues accurately without any digging.",
     href: "/sewer-line-services/camera-inspection/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-sewer-cleanout-inspection-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing sewer camera inspection in Las Vegas, NV",
   },
   {
     title: "Sewer Line Cleaning",
     description:
       "Sewer line cleaning removes accumulated grease, scale, debris, and soft root intrusion from the interior of sewer lines using cable machines or hydro jetting. For main sewer lines with significant hard water mineral scale or grease accumulation, hydro jetting uses high-pressure water to scour the pipe walls clean. Sewer line cleaning restores full flow capacity and is a recommended maintenance service for Las Vegas homes with older cast iron or clay sewer lines.",
     href: "/sewer-line-services/cleaning/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-sewer-backup-repair-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing sewer line cleaning in Las Vegas, NV",
   },
   {
     title: "Sewer Line Repair",
     description:
       "For sewer lines with localized damage, including cracks, offsets, or root damage at a specific section, targeted repair restores the line without replacing the entire run. We recommend the repair method based on the location, type, and extent of the damage and the condition of the surrounding pipe material.",
     href: "/sewer-line-services/repair/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-main-sewer-line-repair-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing sewer line repair in Las Vegas, NV",
   },
   {
     title: "Sewer Line Replacement",
@@ -123,6 +134,9 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     description:
       "Cured-in-place pipe lining (CIPP) is a trenchless sewer repair method that creates a new pipe inside the existing one. A resin-saturated liner is inserted into the damaged pipe through a cleanout access point, inflated, and cured in place, creating a seamless, corrosion-resistant inner pipe that seals cracks, prevents root intrusion, and restores structural integrity without excavation. CIPP is well-suited for Las Vegas properties where excavating through established landscaping, driveways, or hardscaping would be disruptive and costly.",
     href: "/sewer-line-services/cipp-lining/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-trenchless-sewer-line-replacement-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing trenchless CIPP pipe lining in Las Vegas, NV",
   },
   {
     title: "Pipe Bursting",
@@ -477,7 +491,8 @@ export default function SewerLineServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved sewer line service image when available */}
+                {/* TODO: some cards render an approved image; these still need an
+                    asset: Sewer Line Replacement, Pipe Bursting, Root Intrusion Removal and Treatment, and Emergency Sewer Line Service. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {SEWER_LINE_SERVICES_LIST.map((card) => (
                     <ServiceCard
@@ -485,6 +500,8 @@ export default function SewerLineServicesPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}

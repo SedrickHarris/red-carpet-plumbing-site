@@ -103,21 +103,29 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved commercial plumbing service image when available
+// TODO: cards below without an image prop still need an approved asset: Commercial Leak Detection and Repair, Commercial Pipe Repair and Repiping, and Emergency Commercial Plumbing.
 const COMMERCIAL_SERVICES: ServiceTypeCard[] = [
   {
     title: "Commercial Drain Cleaning",
     description:
       "High-capacity drain cleaning and hydro jetting for commercial kitchens, restrooms, floor drains, and main sewer lines in Las Vegas businesses.",
     href: "/drain-cleaning/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-restroom-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial drain cleaning in Las Vegas, NV",
   },
   {
     title: "Commercial Water Heater Repair and Installation",
     description:
       "Repair and replacement of commercial water heaters, including high-capacity tank and tankless systems for businesses throughout the Las Vegas Valley.",
     href: "/water-heater-repair-installation/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-water-heater-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial water heater repair and installation in Las Vegas, NV",
   },
   {
     title: "Commercial Leak Detection and Repair",
@@ -130,12 +138,18 @@ const COMMERCIAL_SERVICES: ServiceTypeCard[] = [
     description:
       "Inspection, cleaning, repair, and replacement of commercial sewer lines serving businesses, multi-unit buildings, and commercial properties in Las Vegas.",
     href: "/sewer-line-services/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-mechanical-room-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial sewer line services in Las Vegas, NV",
   },
   {
     title: "Backflow Prevention and Testing",
     description:
       "Installation, testing, and repair of backflow prevention devices required for commercial properties, irrigation systems, and fire suppression connections.",
     href: "/backflow-prevention/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-pipe-valve-detail-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing backflow prevention and testing in Las Vegas, NV",
   },
   {
     title: "Commercial Pipe Repair and Repiping",
@@ -148,6 +162,9 @@ const COMMERCIAL_SERVICES: ServiceTypeCard[] = [
     description:
       "Grease trap maintenance and floor drain cleaning for commercial kitchens and food service operations in the Las Vegas area.",
     href: "/commercial-plumbing/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-kitchen-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing grease trap and floor drain service in Las Vegas, NV",
   },
   {
     title: "Emergency Commercial Plumbing",
@@ -510,7 +527,8 @@ export default function CommercialPlumbingPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved commercial plumbing service image when available */}
+                {/* TODO: some cards render an approved image; these still need an
+                    asset: Commercial Leak Detection and Repair, Commercial Pipe Repair and Repiping, and Emergency Commercial Plumbing. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {COMMERCIAL_SERVICES.map((card, index) => (
                     <ServiceCard
@@ -518,6 +536,8 @@ export default function CommercialPlumbingPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}

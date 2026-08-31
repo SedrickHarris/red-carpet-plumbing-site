@@ -144,6 +144,8 @@ const COMMERCIAL_SERVICES: {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 }[] = [
   {
     title: "Commercial Drain Cleaning and Hydro Jetting",
@@ -151,18 +153,27 @@ const COMMERCIAL_SERVICES: {
       "Grease buildup, mineral scale, and debris accumulation in commercial drain lines cause slow drains and backups that disrupt business operations. Red Carpet Plumbing provides commercial drain cleaning and hydro jetting for kitchen drains, floor drains, restroom lines, and main sewer connections throughout Spring Valley.",
     // /spring-valley/drain-cleaning/ (Page 13) is built and validated.
     href: "/spring-valley/drain-cleaning/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-restroom-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial drain cleaning and hydro jetting in Spring Valley, NV",
   },
   {
     title: "Grease Trap and Floor Drain Service",
     description:
       "Spring Valley restaurants and food service businesses require regular grease trap maintenance and floor drain cleaning to meet health code requirements. Red Carpet Plumbing provides grease trap and floor drain service for food service operators throughout Spring Valley.",
     href: "/commercial-plumbing/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-kitchen-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing grease trap and floor drain service in Spring Valley, NV",
   },
   {
     title: "Commercial Water Heater Repair and Installation",
     description:
       "High-capacity water heater systems in Spring Valley commercial properties face continuous demand and accelerated mineral scale buildup from Las Vegas hard water. Red Carpet Plumbing provides repair, maintenance, and replacement of commercial water heater systems throughout Spring Valley.",
     href: "/spring-valley/water-heater-repair-installation/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-water-heater-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial water heater repair and installation in Spring Valley, NV",
   },
   {
     title: "Commercial Leak Detection and Repair",
@@ -176,12 +187,18 @@ const COMMERCIAL_SERVICES: {
     description:
       "Inspection, cleaning, repair, and replacement of commercial sewer lines serving businesses, multi-unit buildings, and commercial properties throughout Spring Valley.",
     href: "/sewer-line-services/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-mechanical-room-plumbing-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing commercial sewer line services in Spring Valley, NV",
   },
   {
     title: "Backflow Prevention and Testing",
     description:
       "Installation, testing, and repair of backflow prevention devices required for commercial properties, irrigation systems, and fire suppression connections under Clark County code. Spring Valley commercial properties with irrigation systems or fire suppression connections require licensed backflow prevention devices.",
     href: "/backflow-prevention/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-pipe-valve-detail-las-vegas.webp",
+    imageAlt: "Red Carpet Plumbing backflow prevention and testing in Spring Valley, NV",
   },
   {
     title: "Commercial Pipe Repair and Repiping",
@@ -458,7 +475,8 @@ export default function SpringValleyCommercialPlumbingPage() {
                 </div>
               </SectionRevealItem>
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved commercial plumbing service images when available. */}
+                {/* TODO: some cards render an approved image; these still need an
+                    asset: Commercial Leak Detection and Repair, Commercial Pipe Repair and Repiping, and Emergency Commercial Plumbing. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {COMMERCIAL_SERVICES.map((card) => (
                     <ServiceCard
@@ -466,6 +484,8 @@ export default function SpringValleyCommercialPlumbingPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                      image={card.image}
+                      imageAlt={card.imageAlt}
                       built={true}
                     />
                   ))}
