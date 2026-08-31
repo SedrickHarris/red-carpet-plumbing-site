@@ -372,7 +372,7 @@ export default function NorthLasVegasSlabLeakPage() {
           backgroundImage={{
             // hero.webp is a low-res asset (18KB); card.webp is the higher-res image.
             // TODO: swap to a dedicated high-res slab-leak hero when available.
-            src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
+            src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-hero.webp",
             alt: "Slab leak detection in North Las Vegas, NV",
           }}
         />

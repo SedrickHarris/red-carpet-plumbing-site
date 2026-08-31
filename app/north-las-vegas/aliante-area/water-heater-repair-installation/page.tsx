@@ -427,7 +427,7 @@ export default function AlianteWaterHeaterPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Water Heater Help" />}
           backgroundImage={{
-            src: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
+            src: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-hero.webp",
             alt: "water heater repair and installation in the Aliante area of North Las Vegas, NV",
           }}
         />

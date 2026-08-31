@@ -423,7 +423,7 @@ export default function LasVegasGasLinePage() {
           ctaNote="Licensed gas line plumbers. NV C-1 License #0048585A."
           formSlot={<QuoteFormPlaceholder title="Get Gas Line Help" />}
           backgroundImage={{
-            src: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-services-hero.webp",
+            src: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-plumbing-hero.webp",
             alt: "Licensed gas line plumbing service in Las Vegas, NV",
           }}
         />
