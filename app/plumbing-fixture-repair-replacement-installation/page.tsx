@@ -117,7 +117,7 @@ const FIXTURE_SERVICES: ServiceTypeCard[] = [
     href: "/plumbing-fixture-repair-replacement-installation/",
     image:
       "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-shower-valve-repair-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing shower valve repair and replacement in Las Vegas, NV",
+    imageAlt: "Open tile wall exposing a brass shower valve and copper stubs",
   },
   {
     title: "Showerhead Replacement and Installation",
@@ -126,7 +126,7 @@ const FIXTURE_SERVICES: ServiceTypeCard[] = [
     href: "/plumbing-fixture-repair-replacement-installation/",
     image:
       "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-showerhead-replacement-installation-card.webp",
-    imageAlt: "Red Carpet Plumbing showerhead replacement and installation in Las Vegas, NV",
+    imageAlt: "Newly mounted showerhead with the old one on the shower bench",
   },
   {
     title: "Bathtub Fixture Repair and Replacement",
@@ -135,7 +135,7 @@ const FIXTURE_SERVICES: ServiceTypeCard[] = [
     href: "/plumbing-fixture-repair-replacement-installation/",
     image:
       "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-bathtub-fixture-repair-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing bathtub fixture repair and replacement in Las Vegas, NV",
+    imageAlt: "Tub spout and single-handle trim with a cartridge on the deck",
   },
   {
     title: "Faucet Repair and Replacement",
@@ -144,7 +144,7 @@ const FIXTURE_SERVICES: ServiceTypeCard[] = [
     href: "/faucet-sink-repair-installation/",
     image:
       "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-faucet-repair-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing faucet repair and replacement in Las Vegas, NV",
+    imageAlt: "Brushed nickel faucet lifted out with seals on a cabinet mat",
   },
   {
     title: "Toilet Repair and Installation",
@@ -153,7 +153,7 @@ const FIXTURE_SERVICES: ServiceTypeCard[] = [
     href: "/toilet-repair-installation/",
     image:
       "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-card.webp",
-    imageAlt: "Red Carpet Plumbing toilet repair and installation in Las Vegas, NV",
+    imageAlt: "Toilet beside a wax ring, fill valve and closet bolts",
   },
   {
     title: "Outdoor Hose Bib and Spigot Service",
@@ -162,7 +162,7 @@ const FIXTURE_SERVICES: ServiceTypeCard[] = [
     href: "/plumbing-fixture-repair-replacement-installation/",
     image:
       "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-outdoor-hose-bib-spigot-service-card.webp",
-    imageAlt: "Red Carpet Plumbing outdoor hose bib and spigot service in Las Vegas, NV",
+    imageAlt: "Wall spigot on copper with a replacement bib and thread tape",
   },
   {
     title: "Utility and Laundry Fixture Service",
@@ -171,7 +171,7 @@ const FIXTURE_SERVICES: ServiceTypeCard[] = [
     href: "/plumbing-fixture-repair-replacement-installation/",
     image:
       "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-utility-laundry-fixture-service-card.webp",
-    imageAlt: "Red Carpet Plumbing utility and laundry fixture service in Las Vegas, NV",
+    imageAlt: "Laundry sink and washer box with a trap and valves on the floor",
   },
   {
     title: "Fixture Upgrade and Renovation Plumbing",
@@ -180,7 +180,7 @@ const FIXTURE_SERVICES: ServiceTypeCard[] = [
     href: "/plumbing-fixture-repair-replacement-installation/",
     image:
       "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-fixture-upgrade-renovation-plumbing-card.webp",
-    imageAlt: "Red Carpet Plumbing fixture upgrade and renovation plumbing in Las Vegas, NV",
+    imageAlt: "New showerhead, trim and stop valves staged on a vanity top",
   },
 ];
 

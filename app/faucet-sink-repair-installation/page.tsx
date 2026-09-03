@@ -117,7 +117,7 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     href: "/faucet-sink-repair-installation/",
     image:
       "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-faucet-sink-repair-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing faucet repair in Las Vegas, NV",
+    imageAlt: "Open vanity cabinet with supply stops and a pipe wrench",
   },
   {
     title: "Faucet Replacement",
@@ -126,7 +126,7 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     href: "/faucet-sink-repair-installation/",
     image:
       "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing faucet replacement in Las Vegas, NV",
+    imageAlt: "Old chrome faucet removed and laid beside its replacement",
   },
   {
     title: "Faucet Installation",
@@ -135,7 +135,7 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     href: "/faucet-sink-repair-installation/",
     image:
       "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-installation-card.webp",
-    imageAlt: "Red Carpet Plumbing faucet installation in Las Vegas, NV",
+    imageAlt: "Basin wrench and supply lines below a new pull-down faucet",
   },
   {
     title: "Kitchen Sink Installation",
@@ -144,7 +144,7 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     href: "/faucet-sink-repair-installation/",
     image:
       "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-kitchen-sink-installation-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing kitchen sink installation in Las Vegas, NV",
+    imageAlt: "New double-bowl sink plumbed with a PVC waste tee",
   },
   {
     title: "Bathroom Sink Installation",
@@ -153,7 +153,7 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     href: "/faucet-sink-repair-installation/",
     image:
       "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-bathroom-faucet-sink-repair-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing bathroom faucet and sink service in Las Vegas, NV",
+    imageAlt: "Angle stops and cartridges laid out under a bathroom vanity",
   },
   {
     title: "Under-Sink Leak Repair",
@@ -162,7 +162,7 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     href: "/faucet-sink-repair-installation/",
     image:
       "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-under-sink-leak-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing under-sink leak repair in Las Vegas, NV",
+    imageAlt: "Water dripping from a P-trap joint under a sink",
   },
   {
     title: "Aerator and Cartridge Service",
@@ -171,7 +171,7 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     href: "/faucet-sink-repair-installation/",
     image:
       "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-aerator-cartridge-service-card.webp",
-    imageAlt: "Red Carpet Plumbing faucet aerator and cartridge service in Las Vegas, NV",
+    imageAlt: "Faucet cartridge, aerator and O-rings laid out on a counter",
   },
   {
     title: "Drain and P-Trap Repair",
@@ -180,7 +180,7 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     href: "/drain-cleaning/",
     image:
       "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-drain-p-trap-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing drain and P-trap repair in Las Vegas, NV",
+    imageAlt: "Corroded trap section and washers removed below a sink",
   },
 ];
 
