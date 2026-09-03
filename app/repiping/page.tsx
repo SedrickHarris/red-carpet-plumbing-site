@@ -105,7 +105,7 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
     href: "/repiping/",
     image:
       "/images/services/repiping/red-carpet-plumbing-whole-house-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing whole-house repiping in Las Vegas, NV",
+    imageAlt: "Several wall openings down a hallway with drop cloths",
   },
   {
     title: "Partial Repiping",
@@ -114,7 +114,7 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
     href: "/repiping/",
     image:
       "/images/services/repiping/red-carpet-plumbing-partial-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing partial repiping in Las Vegas, NV",
+    imageAlt: "New PEX in one bay beside patinated copper",
   },
   {
     title: "Polybutylene Pipe Replacement",
@@ -123,7 +123,7 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
     href: "/repiping/",
     image:
       "/images/services/repiping/red-carpet-plumbing-polybutylene-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing polybutylene pipe replacement in Las Vegas, NV",
+    imageAlt: "Gray poly pipe and crimp fittings cut out of a wall",
   },
   {
     title: "Kitec Pipe Replacement",
@@ -132,7 +132,7 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
     href: "/repiping/",
     image:
       "/images/services/repiping/red-carpet-plumbing-kitec-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing Kitec pipe replacement in Las Vegas, NV",
+    imageAlt: "Tan flexible pipe with brass rings removed from a wall",
   },
   {
     title: "Galvanized Steel Pipe Replacement",
@@ -141,7 +141,7 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
     href: "/repiping/",
     image:
       "/images/services/repiping/red-carpet-plumbing-galvanized-steel-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing galvanized steel pipe replacement in Las Vegas, NV",
+    imageAlt: "Rusted gate valve wheel on the old galvanized riser",
   },
   {
     title: "PEX Repiping",
@@ -150,7 +150,7 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
     href: "/repiping/",
     image:
       "/images/services/repiping/red-carpet-plumbing-pex-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing PEX repiping in Las Vegas, NV",
+    imageAlt: "Access panel opened on a dense bank of PEX risers",
   },
   {
     title: "Copper Repiping",
@@ -159,7 +159,7 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
     href: "/repiping/",
     image:
       "/images/services/repiping/red-carpet-plumbing-copper-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing copper repiping in Las Vegas, NV",
+    imageAlt: "Copper manifold with six ball valves in a framed opening",
   },
   {
     title: "Commercial Repiping",
@@ -168,7 +168,7 @@ const REPIPING_SERVICES: ServiceTypeCard[] = [
     href: "/repiping/",
     image:
       "/images/services/repiping/red-carpet-plumbing-multi-fixture-repiping-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing multi-fixture commercial repiping in Las Vegas, NV",
+    imageAlt: "Manifold wall with inset views of connected fixtures",
   },
 ];
 

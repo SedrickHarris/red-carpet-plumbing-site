@@ -135,35 +135,35 @@ const REPIPE_SERVICES = [
     body: "Whole-house repiping replaces all supply lines throughout the home from the main water line through to each fixture connection. This is the most comprehensive solution for Enterprise homes with system-wide pipe thinning, known Kitec plumbing, or aging first-service-cycle copper showing recurring problems throughout multiple areas of the home.",
     image:
       "/images/services/repiping/red-carpet-plumbing-whole-house-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing whole-house repiping in Enterprise, NV",
+    imageAlt: "Several wall openings down a hallway with drop cloths",
   },
   {
     label: "Partial repiping",
     body: "When only a section of the plumbing system is failing or has been identified as containing a problem material, partial repiping replaces the affected lines without repiping the entire home. Partial repipes are common when a specific area of an Enterprise home has developed recurring problems while the rest of the system remains in good condition.",
     image:
       "/images/services/repiping/red-carpet-plumbing-partial-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing partial repiping in Enterprise, NV",
+    imageAlt: "New PEX in one bay beside patinated copper",
   },
   {
     label: "Kitec pipe replacement",
     body: "Kitec has brass fittings that corrode in mineral-rich Las Vegas water and fail at connection points. Kitec is identifiable by orange or blue flexible pipes with brass fittings. Red Carpet Plumbing replaces Kitec plumbing in Enterprise homes and condominiums, including properties built from the late 1990s through approximately 2005.",
     image:
       "/images/services/repiping/red-carpet-plumbing-kitec-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing Kitec pipe replacement in Enterprise, NV",
+    imageAlt: "Tan flexible pipe with brass rings removed from a wall",
   },
   {
     label: "Polybutylene pipe replacement",
     body: "Polybutylene degrades in chlorinated water and can fail without warning. Red Carpet Plumbing replaces polybutylene supply lines with PEX or copper to eliminate the risk of sudden failure in Enterprise homes and older properties built before 1998.",
     image:
       "/images/services/repiping/red-carpet-plumbing-polybutylene-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing polybutylene pipe replacement in Enterprise, NV",
+    imageAlt: "Gray poly pipe and crimp fittings cut out of a wall",
   },
   {
     label: "PEX and copper repiping",
     body: "PEX is a flexible pipe that resists hard water scale buildup, requires fewer fittings, and installs with less drywall disruption than rigid pipe. In Enterprise, PEX pipe runs through attic spaces require proper insulation because Las Vegas attic temperatures can exceed 150 degrees Fahrenheit. Red Carpet Plumbing installs PEX to current Clark County code including required attic insulation. Copper is a proven, durable material that is naturally resistant to bacteria growth and provides excellent water quality. Red Carpet Plumbing installs Type L copper, the standard for residential plumbing in the Las Vegas Valley.",
     image:
       "/images/services/repiping/red-carpet-plumbing-pex-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing PEX and copper repiping in Enterprise, NV",
+    imageAlt: "Access panel opened on a dense bank of PEX risers",
   },
 ];
 
