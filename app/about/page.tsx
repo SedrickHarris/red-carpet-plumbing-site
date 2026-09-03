@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -418,7 +419,34 @@ export default function AboutPage() {
         </section>
 
         {/* SECTION 6: SERVICE AREAS */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="relative isolate overflow-hidden bg-brand-charcoal text-white">
+          {/* Background photo: a Las Vegas Valley streetscape, multi-family
+              residential beside a retail strip with the desert mountains
+              behind. Decorative, so empty alt inside an aria-hidden wrapper,
+              matching HeroSection and the thank-you page. No `priority`: this
+              section is below the fold. This grid lists the same 11 valley
+              cities as the homepage Service Areas preview, so it carries the
+              same background; the sub-city neighborhood grids on the Paradise
+              and Summerlin pages are a different pattern and are left flat. */}
+          <div className="absolute inset-0 -z-10" aria-hidden="true">
+            <Image
+              src="/images/locations/las-vegas/red-carpet-plumbing-las-vegas-valley-residential-commercial-service-area.webp"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+            {/* Deliberate section-local override of the sitewide /65 scrim, not
+                a change to it. Every other scrimmed section keeps /65. This
+                photo's top third is bright sky sitting directly behind the
+                headline, and the city buttons below use bg-white/5 with
+                border-white/10, chrome tuned for a flat dark field. At /65 this
+                band read blue rather than charcoal and the button edges washed
+                out. The same override is applied to the matching grid on the
+                homepage. If you are auditing scrim consistency, this is
+                intentional. */}
+            <div className="absolute inset-0 bg-brand-charcoal/70" />
+          </div>
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <div className="max-w-3xl text-left">
               <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
@@ -432,7 +460,14 @@ export default function AboutPage() {
             <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
               {SERVICE_AREAS.map((area) => (
                 <li key={area}>
-                  <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80">
+                  {/* Heavier chrome than the /5 + /10 used by the same pill
+                      elsewhere on the site, matching the homepage Service
+                      Areas grid: this grid now sits on a photo, and the middle
+                      and right columns fall over a sunlit building facade
+                      where a white/10 border disappears. No hover bump needed
+                      here, unlike the homepage, because these are spans rather
+                      than links. */}
+                  <span className="block rounded-lg border border-white/20 bg-white/10 px-5 py-4 font-medium text-white/80">
                     {area}
                   </span>
                 </li>
