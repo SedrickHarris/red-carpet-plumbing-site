@@ -117,7 +117,7 @@ const BACKFLOW_SERVICES: ServiceTypeCard[] = [
     href: "/backflow-prevention/",
     image:
       "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-preventer-installation-card.webp",
-    imageAlt: "Red Carpet Plumbing backflow preventer installation in Las Vegas, NV",
+    imageAlt: "New brass backflow assembly mounted on copper risers",
   },
   {
     title: "Irrigation System Backflow Protection",
@@ -126,7 +126,7 @@ const BACKFLOW_SERVICES: ServiceTypeCard[] = [
     href: "/backflow-prevention/",
     image:
       "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-irrigation-system-backflow-protection-card.webp",
-    imageAlt: "Red Carpet Plumbing irrigation system backflow protection in Las Vegas, NV",
+    imageAlt: "Backflow assembly above a drip-irrigated planting bed",
   },
   {
     title: "Commercial Backflow Prevention",
@@ -135,7 +135,7 @@ const BACKFLOW_SERVICES: ServiceTypeCard[] = [
     href: "/commercial-plumbing/",
     image:
       "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-commercial-backflow-prevention-card.webp",
-    imageAlt: "Red Carpet Plumbing commercial backflow prevention in Las Vegas, NV",
+    imageAlt: "Large flanged backflow assembly on a steel support frame",
   },
   {
     title: "Backflow Device Repair",
@@ -144,7 +144,7 @@ const BACKFLOW_SERVICES: ServiceTypeCard[] = [
     href: "/backflow-prevention/",
     image:
       "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-device-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing backflow device repair in Las Vegas, NV",
+    imageAlt: "Backflow assembly opened with its bonnet and O-ring removed",
   },
   {
     title: "Backflow Device Replacement",
@@ -153,7 +153,7 @@ const BACKFLOW_SERVICES: ServiceTypeCard[] = [
     href: "/backflow-prevention/",
     image:
       "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-device-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing backflow device replacement in Las Vegas, NV",
+    imageAlt: "New backflow assembly beside the corroded unit it replaced",
   },
   {
     title: "RPZ Assembly Service",
@@ -162,7 +162,7 @@ const BACKFLOW_SERVICES: ServiceTypeCard[] = [
     href: "/backflow-prevention/",
     image:
       "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-rpz-assembly-service-card.webp",
-    imageAlt: "Red Carpet Plumbing RPZ assembly service in Las Vegas, NV",
+    imageAlt: "Backflow assembly on strut legs above a concrete pad",
   },
   {
     title: "PVB and DCVA Service",
@@ -171,7 +171,7 @@ const BACKFLOW_SERVICES: ServiceTypeCard[] = [
     href: "/backflow-prevention/",
     image:
       "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-pvb-dcva-service-card.webp",
-    imageAlt: "Red Carpet Plumbing PVB and DCVA backflow device service in Las Vegas, NV",
+    imageAlt: "Pressure vacuum breaker bracketed to a wall above copper risers",
   },
   {
     title: "Backflow Compliance Assessment",
@@ -180,7 +180,7 @@ const BACKFLOW_SERVICES: ServiceTypeCard[] = [
     href: "/backflow-prevention/",
     image:
       "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-compliance-assessment-card.webp",
-    imageAlt: "Red Carpet Plumbing backflow compliance assessment in Las Vegas, NV",
+    imageAlt: "Test form on a clipboard beside a backflow assembly",
   },
 ];
 

@@ -115,7 +115,7 @@ const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
     href: "/water-heater-repair-installation/repair/",
     image:
       "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing water heater repair in Las Vegas, NV",
+    imageAlt: "Burner assembly exposed on a water heater with parts laid out",
   },
   {
     title: "Water Heater Replacement",
@@ -124,7 +124,7 @@ const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
     href: "/water-heater-repair-installation/replacement/",
     image:
       "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing water heater replacement in Las Vegas, NV",
+    imageAlt: "Old water heater beside its newly installed replacement",
   },
   {
     title: "Tankless Water Heater Installation",
@@ -133,7 +133,7 @@ const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
     href: "/water-heater-repair-installation/tankless/",
     image:
       "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-tankless-water-heater-installation-card.webp",
-    imageAlt: "Red Carpet Plumbing tankless water heater installation in Las Vegas, NV",
+    imageAlt: "Wall-mounted tankless heater with vent and supply connections",
   },
   {
     title: "Water Heater Flush and Maintenance",
@@ -142,7 +142,7 @@ const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
     href: "/water-heater-repair-installation/maintenance/",
     image:
       "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-flush-maintenance-card.webp",
-    imageAlt: "Red Carpet Plumbing water heater flush and maintenance in Las Vegas, NV",
+    imageAlt: "Drain hose running from a water heater into a bucket",
   },
   {
     title: "Anode Rod Replacement",
@@ -151,7 +151,7 @@ const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
     href: "/water-heater-repair-installation/anode-rod/",
     image:
       "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-anode-rod-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing anode rod replacement in Las Vegas, NV",
+    imageAlt: "Spent anode rod beside a new replacement and socket wrench",
   },
   {
     title: "Thermal Expansion Tank Installation",
@@ -160,7 +160,7 @@ const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
     href: "/water-heater-repair-installation/expansion-tank/",
     image:
       "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-thermal-expansion-tank-installation-card.webp",
-    imageAlt: "Red Carpet Plumbing thermal expansion tank installation in Las Vegas, NV",
+    imageAlt: "Expansion tank mounted on copper above a water heater",
   },
   {
     title: "Gas Water Heater Service",
@@ -169,7 +169,7 @@ const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
     href: "/water-heater-repair-installation/gas/",
     image:
       "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-gas-water-heater-service-card.webp",
-    imageAlt: "Red Carpet Plumbing gas water heater service in Las Vegas, NV",
+    imageAlt: "Gas control valve on a tank heater with tools laid out",
   },
   {
     title: "Electric Water Heater Service",
@@ -178,7 +178,7 @@ const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
     href: "/water-heater-repair-installation/electric/",
     image:
       "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-electric-water-heater-service-card.webp",
-    imageAlt: "Red Carpet Plumbing electric water heater service in Las Vegas, NV",
+    imageAlt: "Multimeter beside an electric water heater's element access panels",
   },
 ];
 
