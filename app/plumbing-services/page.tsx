@@ -157,7 +157,10 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Sewer Line Services",
-    // TODO: Replace placeholder with owner-supplied image when available
+    // Reuses the approved sewer line services card asset already wired on the
+    // location hubs. A dedicated owner-supplied asset is still preferred here.
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
     alt: "Sewer line services in Las Vegas",
     description:
       "Sewer line inspection, cleaning, repair, and replacement for residential and commercial properties in Las Vegas.",
@@ -189,7 +192,11 @@ const SERVICE_CARDS: ServiceCardData[] = [
   },
   {
     title: "Commercial Plumbing",
-    // TODO: Replace placeholder with owner-supplied image when available
+    // Reuses the commercial plumbing system hero; no dedicated commercial
+    // plumbing card asset exists. A dedicated owner-supplied asset is still
+    // preferred here.
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
     alt: "Commercial plumbing services in Las Vegas",
     description:
       "Commercial plumbing repair, installation, drain service, and inspection for businesses and property managers in Las Vegas.",
