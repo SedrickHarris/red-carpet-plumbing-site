@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T13:15:56.979Z",
+  "generatedAt": "2026-09-03T13:20:49.139Z",
   "routeCount": 115,
   "routes": [
     {
@@ -5468,7 +5468,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 401
+      "wordEstimate": 386
     }
   ],
   "warnings": []
