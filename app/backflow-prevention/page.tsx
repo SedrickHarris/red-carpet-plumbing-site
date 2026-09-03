@@ -251,6 +251,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Licensed commercial plumbing repair, installation, and maintenance for businesses and property managers throughout Las Vegas.",
     href: "/commercial-plumbing/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
+    imageAlt: "Commercial plumbing services in Las Vegas",
     built: true,
   },
   {
