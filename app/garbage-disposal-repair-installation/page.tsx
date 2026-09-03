@@ -117,7 +117,7 @@ const DISPOSAL_SERVICES: ServiceTypeCard[] = [
     href: "/garbage-disposal-repair-installation/",
     image:
       "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-jam-clearing-card.webp",
-    imageAlt: "Red Carpet Plumbing garbage disposal jam clearing in Las Vegas, NV",
+    imageAlt: "Disposal wrench on the cabinet floor below a mounted unit",
   },
   {
     title: "Garbage Disposal Leak Repair",
@@ -126,7 +126,7 @@ const DISPOSAL_SERVICES: ServiceTypeCard[] = [
     href: "/garbage-disposal-repair-installation/",
     image:
       "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-leak-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing garbage disposal leak repair in Las Vegas, NV",
+    imageAlt: "Water dripping from a disposal elbow onto a cabinet mat",
   },
   {
     title: "Garbage Disposal Reset and Electrical Diagnosis",
@@ -135,7 +135,7 @@ const DISPOSAL_SERVICES: ServiceTypeCard[] = [
     href: "/garbage-disposal-repair-installation/",
     image:
       "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-reset-electrical-diagnosis-card.webp",
-    imageAlt: "Red Carpet Plumbing garbage disposal reset and electrical diagnosis in Las Vegas, NV",
+    imageAlt: "Multimeter and outlet tested beside a plugged-in disposal",
   },
   {
     title: "Garbage Disposal Replacement",
@@ -144,7 +144,7 @@ const DISPOSAL_SERVICES: ServiceTypeCard[] = [
     href: "/garbage-disposal-repair-installation/",
     image:
       "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing garbage disposal replacement in Las Vegas, NV",
+    imageAlt: "Rusted disposal removed with mounting ring and gasket set out",
   },
   {
     title: "Garbage Disposal Installation",
@@ -153,7 +153,7 @@ const DISPOSAL_SERVICES: ServiceTypeCard[] = [
     href: "/garbage-disposal-repair-installation/",
     image:
       "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-installation-card.webp",
-    imageAlt: "Red Carpet Plumbing garbage disposal installation in Las Vegas, NV",
+    imageAlt: "Disposal mounted to a double sink with hand tools set out",
   },
   {
     title: "Discharge Line Cleaning and Repair",
@@ -162,7 +162,7 @@ const DISPOSAL_SERVICES: ServiceTypeCard[] = [
     href: "/drain-cleaning/",
     image:
       "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-discharge-line-cleaning-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing garbage disposal discharge line cleaning and repair in Las Vegas, NV",
+    imageAlt: "Drain machine and removed discharge tube below a disposal",
   },
   {
     title: "Sink Flange and Mounting Repair",
@@ -171,7 +171,7 @@ const DISPOSAL_SERVICES: ServiceTypeCard[] = [
     href: "/garbage-disposal-repair-installation/",
     image:
       "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-sink-flange-mounting-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing garbage disposal sink flange and mounting repair in Las Vegas, NV",
+    imageAlt: "Sink flange, snap ring and bolts loosened at a disposal collar",
   },
   {
     title: "Disposal Upgrade and Swap",
@@ -180,7 +180,7 @@ const DISPOSAL_SERVICES: ServiceTypeCard[] = [
     href: "/garbage-disposal-repair-installation/",
     image:
       "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-upgrade-swap-card.webp",
-    imageAlt: "Red Carpet Plumbing garbage disposal upgrade and swap in Las Vegas, NV",
+    imageAlt: "Small older disposal beside a larger higher-capacity model",
   },
 ];
 
