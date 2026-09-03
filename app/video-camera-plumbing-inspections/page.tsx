@@ -109,7 +109,6 @@ type ServiceTypeCard = {
   imageAlt?: string;
 };
 
-// TODO: cards below without an image prop still need an approved asset: Post-Cleaning Confirmation Inspection.
 const CAMERA_SERVICES: ServiceTypeCard[] = [
   {
     title: "Sewer Line Camera Inspection",
@@ -161,6 +160,10 @@ const CAMERA_SERVICES: ServiceTypeCard[] = [
     description:
       "Camera inspection after drain cleaning or hydro jetting to confirm the line is fully clear and free of structural damage.",
     href: "/video-camera-plumbing-inspections/",
+    image:
+      "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-post-cleaning-confirmation-inspection-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing post-cleaning confirmation inspection in Las Vegas, NV",
   },
   {
     title: "Commercial Pipe Camera Inspection",

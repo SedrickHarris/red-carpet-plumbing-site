@@ -509,8 +509,6 @@ export default function RePipingServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: some cards render an approved image; these still need an
-                    asset: Polybutylene Pipe Replacement, Kitec Pipe Replacement, and Copper Repiping. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {REPIPING_SERVICES.map((card) => (
                     <ServiceCard

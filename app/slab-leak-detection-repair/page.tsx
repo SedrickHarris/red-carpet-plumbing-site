@@ -98,7 +98,6 @@ type ServiceTypeCard = {
   imageAlt?: string;
 };
 
-// TODO: cards below without an image prop still need an approved asset: Thermal Imaging.
 const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
   {
     title: "Slab Leak Detection",
@@ -150,6 +149,10 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     description:
       "Thermal imaging detects temperature differences caused by hot water leaking beneath the slab, showing up as warm spots on the floor surface. We use thermal imaging as part of the detection process for hot water line slab leaks to supplement acoustic detection and narrow the search area before pressure testing confirms the location.",
     href: "/slab-leak-detection-repair/thermal-imaging/",
+    image:
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-thermal-imaging-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing slab leak thermal imaging in Las Vegas, NV",
   },
   {
     title: "Emergency Slab Leak Response",
