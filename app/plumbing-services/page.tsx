@@ -161,7 +161,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
     // location hubs. A dedicated owner-supplied asset is still preferred here.
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
-    alt: "Sewer line services in Las Vegas",
+    alt: "Sewer camera cable descending into an open cleanout",
     description:
       "Sewer line inspection, cleaning, repair, and replacement for residential and commercial properties in Las Vegas.",
     href: "/sewer-line-services/",

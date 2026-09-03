@@ -130,8 +130,7 @@ const SERVICE_CARDS: ServiceCardEntry[] = [
     href: "/sewer-line-services/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
-    imageAlt:
-      "Sewer camera inspection at an outdoor cleanout on a Las Vegas property",
+    imageAlt: "Sewer camera cable descending into an open cleanout",
     built: true,
   },
   {

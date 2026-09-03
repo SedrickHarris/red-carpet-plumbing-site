@@ -118,7 +118,7 @@ const LAKE_LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
     href: "/sewer-line-services/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
-    imageAlt: "Sewer line services in Lake Las Vegas, NV",
+    imageAlt: "Sewer camera cable descending into an open cleanout",
   },
   {
     title: "Repiping",

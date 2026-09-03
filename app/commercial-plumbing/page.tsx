@@ -272,7 +272,7 @@ const RELATED_SERVICES: RelatedService[] = [
     href: "/sewer-line-services/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
-    imageAlt: "Sewer line services in Las Vegas",
+    imageAlt: "Sewer camera cable descending into an open cleanout",
     built: true,
   },
   {
