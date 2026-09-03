@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
+import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
@@ -135,30 +136,51 @@ const REPIPE_SERVICES = [
   {
     label: "Whole-house repiping",
     body: "We replace all supply lines throughout the home in a single coordinated project, from the main shutoff through all branch lines to every fixture. Whole-house repipes require a Clark County permit, which we pull and schedule for inspection as part of the project.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-whole-house-repiping-card.webp",
+    imageAlt: "Red Carpet Plumbing whole-house repiping in Spring Valley, NV",
   },
   {
     label: "Partial repiping",
     body: "When only a specific area of the home has defective or failing pipe material, a targeted partial repipe replaces the affected runs without disturbing the rest of the system. We assess whether the remaining pipe materials are in acceptable condition before recommending a partial approach.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-partial-repiping-card.webp",
+    imageAlt: "Red Carpet Plumbing partial repiping in Spring Valley, NV",
   },
   {
     label: "Polybutylene pipe replacement",
     body: "We remove all polybutylene supply lines and replace them with PEX or copper installed to current code. Polybutylene pipe replacement is a complete material removal, not a repair.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-polybutylene-pipe-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing polybutylene pipe replacement in Spring Valley, NV",
   },
   {
     label: "Kitec pipe replacement",
     body: "We identify all Kitec piping and fittings in your Spring Valley home and replace the full Kitec system. Partial Kitec replacement is not recommended because the brass fitting corrosion risk applies throughout the system.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-kitec-pipe-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing Kitec pipe replacement in Spring Valley, NV",
   },
   {
     label: "Galvanized steel pipe replacement",
     body: "For Spring Valley homes with original galvanized supply lines, we assess the full extent of the galvanized system, identify the areas of greatest corrosion and risk, and replace all galvanized supply lines as part of a whole-house or targeted repipe.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-galvanized-steel-pipe-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing galvanized steel pipe replacement in Spring Valley, NV",
   },
   {
     label: "PEX repiping",
     body: "PEX (cross-linked polyethylene) is the standard modern replacement material for residential repiping in the Las Vegas Valley. It is flexible, resistant to mineral scale, and performs well in Las Vegas hard water conditions. In Spring Valley homes, PEX pipe runs through attic spaces require proper insulation because Las Vegas attic temperatures can exceed 150 degrees Fahrenheit. Red Carpet Plumbing installs PEX to current Clark County code including required attic insulation.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-pex-repiping-card.webp",
+    imageAlt: "Red Carpet Plumbing PEX repiping in Spring Valley, NV",
   },
   {
     label: "Copper repiping",
     body: "Copper is a proven, durable material that is naturally resistant to bacterial growth and provides excellent water quality. Red Carpet Plumbing installs Type L copper, the standard for residential plumbing in the Las Vegas Valley.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-copper-repiping-card.webp",
+    imageAlt: "Red Carpet Plumbing copper repiping in Spring Valley, NV",
   },
 ];
 
@@ -460,27 +482,25 @@ export default function SpringValleyRePipingPage() {
 
         {/* SECTION 4: RE-PIPING SERVICES WE PROVIDE */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Repiping Services We Provide in Spring Valley
               </h2>
             </div>
-            <ul className="mt-10 space-y-5">
+            <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {REPIPE_SERVICES.map((s) => (
-                <li
+                <ServiceCard
                   key={s.label}
-                  className="rounded-2xl bg-brand-surface-alt p-6 ring-1 ring-brand-surface-alt"
-                >
-                  <p className="text-base leading-7 text-brand-dark/80">
-                    <strong className="font-semibold text-brand-dark">
-                      {s.label}.
-                    </strong>{" "}
-                    {s.body}
-                  </p>
-                </li>
+                  title={s.label}
+                  description={s.body}
+                  image={s.image}
+                  imageAlt={s.imageAlt}
+                  href="#"
+                  built={false}
+                />
               ))}
-            </ul>
+            </div>
           </div>
         </section>
 

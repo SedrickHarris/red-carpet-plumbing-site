@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
+import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
@@ -133,22 +134,37 @@ const REPIPE_SERVICES = [
   {
     label: "Whole-house repiping",
     body: "Whole-house repiping replaces all supply lines throughout the home from the main water line through to each fixture connection. This is the most comprehensive solution for Summerlin original village homes with aging copper pipe systems thinned by decades of hard water exposure. Red Carpet Plumbing performs whole-house repipes using PEX or copper depending on the home's specific conditions and the homeowner's preferences.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-whole-house-repiping-card.webp",
+    imageAlt: "Red Carpet Plumbing whole-house repiping in Summerlin, NV",
   },
   {
     label: "Partial repiping",
     body: "When only a section of the plumbing system is failing or has been identified as containing a problem material, partial repiping replaces the affected lines without repiping the entire home. Partial repipes are common when a specific area of a Summerlin home, such as the hot water distribution system or the kitchen supply lines, has developed recurring problems.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-partial-repiping-card.webp",
+    imageAlt: "Red Carpet Plumbing partial repiping in Summerlin, NV",
   },
   {
     label: "Polybutylene pipe replacement",
     body: "Polybutylene degrades in chlorinated water and can fail without warning. Red Carpet Plumbing replaces polybutylene supply lines with PEX or copper to eliminate the risk of sudden failure in Summerlin homes and older properties in the area built between 1975 and 1995.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-polybutylene-pipe-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing polybutylene pipe replacement in Summerlin, NV",
   },
   {
     label: "Kitec pipe replacement",
     body: "Kitec has brass fittings that corrode in mineral-rich Las Vegas water and fail at connection points. Kitec is identifiable by orange or blue flexible pipes with brass fittings. Red Carpet Plumbing replaces Kitec plumbing in Summerlin homes and condominiums, including Summerlin South properties built from the late 1990s through approximately 2005.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-kitec-pipe-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing Kitec pipe replacement in Summerlin, NV",
   },
   {
     label: "PEX and copper repiping",
     body: "PEX is a flexible pipe that resists hard water scale buildup, requires fewer fittings, and installs with less drywall disruption than rigid pipe. In Summerlin, PEX pipe runs through attic spaces require proper insulation because Las Vegas attic temperatures can exceed 150 degrees Fahrenheit. Red Carpet Plumbing installs PEX to current Clark County code including required attic insulation. Copper is a proven, durable material that is naturally resistant to bacteria growth and provides excellent water quality. Red Carpet Plumbing installs Type L copper, the standard for residential plumbing in the Las Vegas Valley.",
+    image:
+      "/images/services/repiping/red-carpet-plumbing-pex-repiping-card.webp",
+    imageAlt: "Red Carpet Plumbing PEX and copper repiping in Summerlin, NV",
   },
 ];
 
@@ -469,27 +485,25 @@ export default function SummerlinRePipingPage() {
 
         {/* SECTION 4: RE-PIPING SERVICES WE PROVIDE */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Repiping Services We Provide in Summerlin
               </h2>
             </div>
-            <ul className="mt-10 space-y-5">
+            <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {REPIPE_SERVICES.map((s) => (
-                <li
+                <ServiceCard
                   key={s.label}
-                  className="rounded-2xl bg-brand-surface-alt p-6 ring-1 ring-brand-surface-alt"
-                >
-                  <p className="text-base leading-7 text-brand-dark/80">
-                    <strong className="font-semibold text-brand-dark">
-                      {s.label}.
-                    </strong>{" "}
-                    {s.body}
-                  </p>
-                </li>
+                  title={s.label}
+                  description={s.body}
+                  image={s.image}
+                  imageAlt={s.imageAlt}
+                  href="#"
+                  built={false}
+                />
               ))}
-            </ul>
+            </div>
           </div>
         </section>
 
