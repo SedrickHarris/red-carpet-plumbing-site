@@ -24,8 +24,9 @@ function rel(p) {
   return path.relative(ROOT, p).split(path.sep).join("/");
 }
 
-// --min-score <n> (or --min-score=<n>) sets the build-priority cutoff. Default is 4.
-function parseMinScore(argv) {
+// --min-score <n> (or --min-score=<n>) sets the build-priority cutoff.
+// Returns null when the flag is absent, so the caller can fall back.
+function parseMinScoreFlag(argv) {
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--min-score") {
@@ -36,10 +37,34 @@ function parseMinScore(argv) {
       if (Number.isFinite(n)) return n;
     }
   }
-  return DEFAULT_MIN_SCORE;
+  return null;
 }
 
-const MIN_SCORE = parseMinScore(process.argv.slice(2));
+// Resolve the cutoff in precedence order: explicit flag, then the minScore
+// already recorded in opportunities.json, then DEFAULT_MIN_SCORE.
+//
+// Inheriting from the existing output is what makes a bare re-run reproduce the
+// committed file. Without it, a file generated with --min-score 0 was silently
+// rewritten at the default of 4 by anyone who re-ran the script with no flag,
+// discarding every opportunity scoring below 4 and rewriting the summary counts.
+// The cutoff is a property of the dataset on disk, not of the invocation, so it
+// has to survive a re-run that does not restate it. Pass --min-score explicitly
+// to change it.
+async function resolveMinScore(argv) {
+  const flag = parseMinScoreFlag(argv);
+  if (flag !== null) return { value: flag, source: "--min-score flag" };
+
+  try {
+    const previous = await readJson(OUTPUT_FILE);
+    if (Number.isFinite(previous.minScore)) {
+      return { value: previous.minScore, source: `existing ${rel(OUTPUT_FILE)}` };
+    }
+  } catch {
+    // No readable previous output. Fall through to the default.
+  }
+
+  return { value: DEFAULT_MIN_SCORE, source: "default" };
+}
 
 function tokenize(text) {
   return String(text || "")
@@ -153,6 +178,11 @@ function scoreCluster(cluster, baseTokens, overlap) {
 }
 
 async function main() {
+  const { value: MIN_SCORE, source: minScoreSource } = await resolveMinScore(
+    process.argv.slice(2)
+  );
+  console.log(`INFO: min-score ${MIN_SCORE} (from ${minScoreSource}).`);
+
   let clustersData;
   try {
     clustersData = await readJson(CLUSTERS_FILE);
