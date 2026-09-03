@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { FaqSection } from "@/components/FaqSection";
@@ -432,7 +433,24 @@ export default function Home() {
         </section>
 
         {/* SECTION 3: 24/7 EMERGENCY CTA */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="relative isolate overflow-hidden bg-brand-charcoal text-white">
+          {/* Background photo: an open under-sink cabinet with the P-trap
+              actively dripping and water pooled across the tile floor. The
+              image is decorative here, so it carries an empty alt inside an
+              aria-hidden wrapper, matching HeroSection and the thank-you page
+              rather than announcing a description the copy already gives.
+              No `priority`: this section sits below the fold, unlike the hero
+              and the thank-you page where the photo is LCP-eligible. */}
+          <div className="absolute inset-0 -z-10" aria-hidden="true">
+            <Image
+              src="/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-active-water-leak.webp"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-brand-charcoal/65" />
+          </div>
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -570,7 +588,32 @@ export default function Home() {
         </section>
 
         {/* SECTION 6: SERVICE AREAS PREVIEW */}
-        <section className="bg-brand-charcoal text-white">
+        <section className="relative isolate overflow-hidden bg-brand-charcoal text-white">
+          {/* Background photo: a Las Vegas Valley streetscape, multi-family
+              residential beside a retail strip with the desert mountains
+              behind. Decorative, so empty alt inside an aria-hidden wrapper,
+              matching HeroSection and the thank-you page. No `priority`: this
+              section is below the fold. The same photo backs the matching
+              11-city grid on /about/. */}
+          <div className="absolute inset-0 -z-10" aria-hidden="true">
+            <Image
+              src="/images/locations/las-vegas/red-carpet-plumbing-las-vegas-valley-residential-commercial-service-area.webp"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+            {/* Deliberate section-local override of the sitewide /65 scrim, not
+                a change to it. Every other scrimmed section keeps /65. This
+                photo's top third is bright sky sitting directly behind the
+                headline, and the city buttons below use bg-white/5 with
+                border-white/10, chrome tuned for a flat dark field. At /65 this
+                band read blue rather than charcoal and the button edges washed
+                out. The same override is applied to the matching grid on
+                /about/. If you are auditing scrim consistency, this is
+                intentional. */}
+            <div className="absolute inset-0 bg-brand-charcoal/70" />
+          </div>
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
             <SectionReveal>
               <SectionRevealItem>
@@ -594,7 +637,14 @@ export default function Home() {
                     <li key={area.label}>
                       <Link
                         href={area.href}
-                        className="block rounded-lg border border-white/10 bg-white/5 px-5 py-4 font-medium text-white/80 transition-colors hover:bg-white/10 hover:border-white/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                        // Heavier chrome than the /5 + /10 used by the same
+                        // pill elsewhere on the site: this grid now sits on a
+                        // photo, and the middle and right columns fall over a
+                        // sunlit building facade where a white/10 border
+                        // disappears. Hover moves up in step, because the old
+                        // hover:bg-white/10 would otherwise equal the new
+                        // resting state and silently remove the hover feedback.
+                        className="block rounded-lg border border-white/20 bg-white/10 px-5 py-4 font-medium text-white/80 transition-colors hover:bg-white/20 hover:border-white/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                       >
                         {area.label}
                       </Link>
