@@ -117,7 +117,7 @@ const PRESSURE_SERVICES: ServiceTypeCard[] = [
     href: "/water-meter-pressure-regulator-services/",
     image:
       "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-pressure-regulator-inspection-card.webp",
-    imageAlt: "Red Carpet Plumbing pressure regulator inspection in Las Vegas, NV",
+    imageAlt: "Meter and regulator assembly with a test fitting case open",
   },
   {
     title: "Pressure Regulator Replacement",
@@ -126,7 +126,7 @@ const PRESSURE_SERVICES: ServiceTypeCard[] = [
     href: "/water-meter-pressure-regulator-services/",
     image:
       "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-pressure-regulator-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing pressure regulator replacement in Las Vegas, NV",
+    imageAlt: "Corroded regulator body removed beside its replacement assembly",
   },
   {
     title: "Pressure Regulator Installation",
@@ -135,7 +135,7 @@ const PRESSURE_SERVICES: ServiceTypeCard[] = [
     href: "/water-meter-pressure-regulator-services/",
     image:
       "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-pressure-regulator-installation-card.webp",
-    imageAlt: "Red Carpet Plumbing pressure regulator installation in Las Vegas, NV",
+    imageAlt: "New brass regulator and gauge inline on copper at a wall",
   },
   {
     title: "Water Pressure Diagnosis",
@@ -144,7 +144,7 @@ const PRESSURE_SERVICES: ServiceTypeCard[] = [
     href: "/water-meter-pressure-regulator-services/",
     image:
       "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-water-pressure-diagnosis-card.webp",
-    imageAlt: "Red Carpet Plumbing water pressure diagnosis in Las Vegas, NV",
+    imageAlt: "Test gauge and coiled hose teed into a regulator assembly",
   },
   {
     title: "Water Hammer Repair",
@@ -153,7 +153,7 @@ const PRESSURE_SERVICES: ServiceTypeCard[] = [
     href: "/water-meter-pressure-regulator-services/",
     image:
       "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-water-hammer-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing water hammer repair in Las Vegas, NV",
+    imageAlt: "Two capped copper standpipes above a laundry washer box",
   },
   {
     title: "Water Meter Consultation",
@@ -162,7 +162,7 @@ const PRESSURE_SERVICES: ServiceTypeCard[] = [
     href: "/water-meter-pressure-regulator-services/",
     image:
       "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-water-meter-consultation-card.webp",
-    imageAlt: "Red Carpet Plumbing water meter consultation in Las Vegas, NV",
+    imageAlt: "Tablet and gauge at an open in-ground meter box",
   },
   {
     title: "Main Line Valve and PRV Assembly Service",
@@ -171,7 +171,7 @@ const PRESSURE_SERVICES: ServiceTypeCard[] = [
     href: "/water-meter-pressure-regulator-services/",
     image:
       "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-main-line-valve-prv-assembly-service-card.webp",
-    imageAlt: "Red Carpet Plumbing main line valve and PRV assembly service in Las Vegas, NV",
+    imageAlt: "Blue gate valve and regulator on a wall run with wet concrete",
   },
   {
     title: "Commercial Pressure Regulation",
@@ -180,7 +180,7 @@ const PRESSURE_SERVICES: ServiceTypeCard[] = [
     href: "/water-meter-pressure-regulator-services/",
     image:
       "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-commercial-pressure-regulation-card.webp",
-    imageAlt: "Red Carpet Plumbing commercial pressure regulation in Las Vegas, NV",
+    imageAlt: "Two regulators in parallel on a large copper main indoors",
   },
 ];
 

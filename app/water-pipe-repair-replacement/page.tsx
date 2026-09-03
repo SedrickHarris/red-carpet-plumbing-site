@@ -116,7 +116,7 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/",
     image:
       "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-burst-pipe-repair-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing burst pipe repair in Las Vegas, NV",
+    imageAlt: "Split copper line flooding the floor with a coupling ready",
   },
   {
     title: "Pinhole Leak Repair",
@@ -125,7 +125,7 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     href: "/water-pipe-repair-replacement/",
     image:
       "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-pinhole-leak-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing pinhole leak repair in Las Vegas, NV",
+    imageAlt: "Droplet forming at a pinhole in a corroded copper line",
   },
   {
     title: "Pipe Section Replacement",
@@ -134,7 +134,7 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     href: "/water-pipe-repair-replacement/",
     image:
       "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-wall-access-pipe-replacement-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing pipe section replacement through wall access in Las Vegas, NV",
+    imageAlt: "Removed pipe sections laid out below an opened stud wall",
   },
   {
     title: "Galvanized Pipe Replacement",
@@ -143,7 +143,7 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     href: "/water-pipe-repair-replacement/",
     image:
       "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-galvanized-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing galvanized pipe replacement in Las Vegas, NV",
+    imageAlt: "Rusted galvanized pipe beside new copper in a wall opening",
   },
   {
     title: "Polybutylene Pipe Replacement",
@@ -152,7 +152,7 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     href: "/water-pipe-repair-replacement/",
     image:
       "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-polybutylene-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing polybutylene pipe replacement in Las Vegas, NV",
+    imageAlt: "Gray polybutylene lines with brass fittings in a wall opening",
   },
   {
     title: "Main Water Line Repair",
@@ -161,7 +161,7 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     href: "/water-pipe-repair-replacement/",
     image:
       "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-main-water-line-repair-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing main water line repair in Las Vegas, NV",
+    imageAlt: "Main shutoff and regulator inside a recessed wall box",
   },
   {
     title: "Supply Line and Shut-Off Valve Replacement",
@@ -170,7 +170,7 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     href: "/water-pipe-repair-replacement/",
     image:
       "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-under-sink-water-line-replacement-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing under sink water supply line replacement in Las Vegas, NV",
+    imageAlt: "Red and blue risers feeding angle stops under a double sink",
   },
   {
     title: "Full Repiping",
@@ -179,7 +179,7 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     href: "/repiping/",
     image:
       "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-copper-pex-pipe-replacement-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing copper and PEX pipe replacement in Las Vegas, NV",
+    imageAlt: "Red and blue PEX manifolds on an open stud wall",
   },
 ];
 
