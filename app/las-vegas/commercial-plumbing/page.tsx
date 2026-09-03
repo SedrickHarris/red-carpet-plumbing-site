@@ -171,6 +171,10 @@ const COMMERCIAL_SERVICES: {
     description:
       "Undetected leaks in commercial supply lines, fixture connections, and sewer lines accumulate costs and cause property damage before they become visible. Red Carpet Plumbing provides commercial leak detection using acoustic sensors and pressure testing for businesses and multi-unit properties throughout Las Vegas.",
     href: "/las-vegas/leak-detection-repair/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-leak-detection-repair-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing commercial leak detection and repair in Las Vegas, NV",
   },
   {
     title: "Commercial Sewer Line Services",
@@ -195,6 +199,10 @@ const COMMERCIAL_SERVICES: {
     description:
       "Aging supply lines, corroded drain lines, and failing pipe systems in commercial buildings require assessment and repair by a licensed contractor. Red Carpet Plumbing provides commercial pipe repair and repiping for businesses and multi-unit properties throughout Las Vegas.",
     href: "/commercial-plumbing/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-pipe-repair-repiping-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing commercial pipe repair and repiping in Las Vegas, NV",
   },
   // FLAG: 24/7 emergency-availability claim stated in this card — verify before final launch.
   {
@@ -202,6 +210,10 @@ const COMMERCIAL_SERVICES: {
     description:
       "Burst pipes, sewer backups, water heater failures, and major leaks in commercial properties require immediate licensed response. Red Carpet Plumbing provides 24/7 emergency commercial plumbing service throughout Las Vegas.",
     href: "/las-vegas/emergency-plumbing/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-emergency-commercial-plumbing-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing emergency commercial plumbing in Las Vegas, NV",
   },
 ];
 
@@ -455,8 +467,6 @@ export default function LasVegasCommercialPlumbingPage() {
                 </div>
               </SectionRevealItem>
               <SectionRevealItem className="mt-14">
-                {/* TODO: some cards render an approved image; these still need an
-                    asset: Commercial Leak Detection and Repair, Commercial Pipe Repair and Repiping, and Emergency Commercial Plumbing. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {COMMERCIAL_SERVICES.map((card) => (
                     <ServiceCard
