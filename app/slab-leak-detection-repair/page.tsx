@@ -94,39 +94,56 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved slab leak service image when available
+// TODO: cards below without an image prop still need an approved asset: Thermal Imaging.
 const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
   {
     title: "Slab Leak Detection",
     description:
       "Red Carpet Plumbing uses professional acoustic sensors, electronic detection equipment, and pressure testing to locate slab leaks precisely before any repair begins. Accurate detection is essential to a slab leak repair because the right repair method and the scope of work depend entirely on knowing the exact location and severity of the leak.",
     href: "/slab-leak-detection-repair/detection/",
+    image:
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-card.webp",
+    imageAlt: "Red Carpet Plumbing slab leak detection in Las Vegas, NV",
   },
   {
     title: "Spot Repair Through Concrete",
     description:
       "For isolated slab leaks in accessible locations, direct access repair through the concrete slab is an option. This involves cutting through the concrete at the leak location, repairing or replacing the damaged pipe section, and patching the concrete. Spot repair is appropriate when the leak is truly isolated and the surrounding pipe is in good condition.",
     href: "/slab-leak-detection-repair/spot-repair/",
+    image:
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-spot-repair-concrete-card.webp",
+    imageAlt: "Red Carpet Plumbing slab leak spot repair through concrete in Las Vegas, NV",
   },
   {
     title: "Pipe Rerouting",
     description:
       "Pipe rerouting abandons the damaged pipe under the slab entirely and installs new water lines through walls, ceilings, or attic spaces to bypass the foundation. Rerouting eliminates the source of future slab leaks on the affected line and avoids ongoing foundation disruption. It is particularly appropriate when older pipes have multiple failure points or when the pipe material has reached the end of its service life.",
     href: "/slab-leak-detection-repair/pipe-rerouting/",
+    image:
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-pipe-rerouting-card.webp",
+    imageAlt: "Red Carpet Plumbing slab leak pipe rerouting in Las Vegas, NV",
   },
   {
     title: "Epoxy Pipe Lining",
     description:
       "For some slab leak situations, epoxy pipe lining is an option. A specialized epoxy coating is applied to the interior of the existing pipe, sealing cracks and restoring pipe integrity from the inside without excavation. This method is less invasive than concrete cutting and works best for pipes with localized damage where the overall pipe structure is still intact.",
     href: "/slab-leak-detection-repair/epoxy-lining/",
+    image:
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-epoxy-pipe-lining-card.webp",
+    imageAlt: "Red Carpet Plumbing epoxy pipe lining in Las Vegas, NV",
   },
   {
     title: "Pressure Testing",
     description:
       "We use pressure testing to confirm active water loss in the plumbing system, isolate which line is losing pressure, and verify that repairs are complete and the line holds pressure after work is finished. Pressure testing is a standard part of the slab leak detection and verification process.",
     href: "/slab-leak-detection-repair/pressure-testing/",
+    image:
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-pressure-testing-card.webp",
+    imageAlt: "Red Carpet Plumbing slab leak pressure testing in Las Vegas, NV",
   },
   {
     title: "Thermal Imaging",
@@ -139,12 +156,18 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     description:
       "Active slab leaks that are causing water to surface on flooring, flooding enclosed spaces, or producing visible water damage require immediate attention. Red Carpet Plumbing is available 24/7 for emergency slab leak response. The first priority is stopping the water loss. We can shut off the water supply to the affected line to stop ongoing damage while the full repair is planned.",
     href: "/slab-leak-detection-repair/emergency/",
+    image:
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-emergency-slab-leak-response-card.webp",
+    imageAlt: "Red Carpet Plumbing emergency slab leak response in Las Vegas, NV",
   },
   {
     title: "Commercial Slab Leak Detection and Repair",
     description:
       "Slab leaks in commercial buildings, multi-unit residential properties, and HOA communities present unique challenges due to the size and complexity of the plumbing systems involved. Red Carpet Plumbing provides slab leak detection and repair for commercial properties throughout the Las Vegas Valley.",
     href: "/slab-leak-detection-repair/commercial/",
+    image:
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-commercial-slab-leak-detection-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing commercial slab leak detection and repair in Las Vegas, NV",
   },
 ];
 
@@ -483,7 +506,6 @@ export default function SlabLeakDetectionAndRepairPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved slab leak service image when available */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {SLAB_LEAK_SERVICES.map((card) => (
                     <ServiceCard
@@ -491,6 +513,8 @@ export default function SlabLeakDetectionAndRepairPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                    image={card.image}
+                    imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}

@@ -103,57 +103,82 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved water heater service image when available
 const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
   {
     title: "Water Heater Repair",
     description:
       "Red Carpet Plumbing diagnoses and repairs all types of water heater problems including failed heating elements, faulty thermostats, tripped breakers, pilot light issues, pressure relief valve failures, and sediment buildup. We assess the unit's age and condition before recommending repair to ensure the repair makes sense given the remaining service life of the heater.",
     href: "/water-heater-repair-installation/repair/",
+    image:
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing water heater repair in Las Vegas, NV",
   },
   {
     title: "Water Heater Replacement",
     description:
       "When repair is no longer cost-effective or the tank has reached the end of its service life, we replace the unit with a new water heater matched to your household's hot water demand. We handle the full installation including disconnecting the old unit, installing the new unit to Clark County code, and testing before we leave.",
     href: "/water-heater-repair-installation/replacement/",
+    image:
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing water heater replacement in Las Vegas, NV",
   },
   {
     title: "Tankless Water Heater Installation",
     description:
       "Tankless water heaters heat water on demand rather than storing a tank of heated water. They can last 15 to 20 years with proper maintenance and eliminate standby heat loss. In Las Vegas, tankless units require annual descaling to remove hard water mineral deposits from the heat exchanger. We install and service tankless water heaters for residential and commercial properties.",
     href: "/water-heater-repair-installation/tankless/",
+    image:
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-tankless-water-heater-installation-card.webp",
+    imageAlt: "Red Carpet Plumbing tankless water heater installation in Las Vegas, NV",
   },
   {
     title: "Water Heater Flush and Maintenance",
     description:
       "Las Vegas hard water causes sediment to accumulate inside water heater tanks faster than in most other cities. Annual flushing removes calcium and magnesium deposits that reduce efficiency, cause popping and rumbling noises, and shorten tank life. Red Carpet Plumbing recommends annual flushing for Las Vegas homes rather than the standard two-year interval used in softer-water cities.",
     href: "/water-heater-repair-installation/maintenance/",
+    image:
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-flush-maintenance-card.webp",
+    imageAlt: "Red Carpet Plumbing water heater flush and maintenance in Las Vegas, NV",
   },
   {
     title: "Anode Rod Replacement",
     description:
       "The anode rod is a sacrificial metal component inside every tank water heater that protects the tank from internal corrosion. In Las Vegas, the extremely hard water depletes anode rods significantly faster than the national average. A depleted anode rod leads to rapid internal tank corrosion. We inspect and replace anode rods as part of water heater maintenance to extend tank life.",
     href: "/water-heater-repair-installation/anode-rod/",
+    image:
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-anode-rod-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing anode rod replacement in Las Vegas, NV",
   },
   {
     title: "Thermal Expansion Tank Installation",
     description:
       "Las Vegas residential plumbing typically operates on a closed-loop system due to backflow preventers at the street meter. When a water heater heats water, the expanding water volume has nowhere to go in a closed system, causing pressure spikes that stress the tank and plumbing. A thermal expansion tank absorbs this pressure. Clark County code and most water heater warranties require a thermal expansion tank on closed-loop systems.",
     href: "/water-heater-repair-installation/expansion-tank/",
+    image:
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-thermal-expansion-tank-installation-card.webp",
+    imageAlt: "Red Carpet Plumbing thermal expansion tank installation in Las Vegas, NV",
   },
   {
     title: "Gas Water Heater Service",
     description:
       "Red Carpet Plumbing services gas water heaters including conventional tank units and gas tankless models. We diagnose and repair pilot light failures, thermocouple issues, gas valve problems, and venting concerns. All gas line work is performed under our NV Contractor License #0048585A (C-1 Plumbing and Heating).",
     href: "/water-heater-repair-installation/gas/",
+    image:
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-gas-water-heater-service-card.webp",
+    imageAlt: "Red Carpet Plumbing gas water heater service in Las Vegas, NV",
   },
   {
     title: "Electric Water Heater Service",
     description:
       "We diagnose and repair electric water heaters including failed upper and lower heating elements, thermostat failures, wiring issues, and tripped breakers. We also install electric tankless water heaters and can advise on the electrical panel capacity requirements for high-demand electric tankless units.",
     href: "/water-heater-repair-installation/electric/",
+    image:
+      "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-electric-water-heater-service-card.webp",
+    imageAlt: "Red Carpet Plumbing electric water heater service in Las Vegas, NV",
   },
 ];
 
@@ -496,7 +521,6 @@ export default function WaterHeaterRepairInstallationPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved water heater service image when available */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {WATER_HEATER_SERVICES.map((card) => (
                     <ServiceCard
@@ -504,6 +528,8 @@ export default function WaterHeaterRepairInstallationPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                    image={card.image}
+                    imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}

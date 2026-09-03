@@ -108,7 +108,7 @@ type ServiceTypeCard = {
   imageAlt?: string;
 };
 
-// TODO: cards below without an image prop still need an approved asset: Pinhole Leak Repair, Galvanized Pipe Replacement, and Polybutylene Pipe Replacement.
+// TODO: cards below without an image prop still need an approved asset: Polybutylene Pipe Replacement.
 const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
   {
     title: "Burst Pipe Repair",
@@ -124,6 +124,9 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     description:
       "Spot repair of pinhole leaks in copper supply pipe. Multiple pinhole leaks may indicate a need for section replacement or repiping.",
     href: "/water-pipe-repair-replacement/",
+    image:
+      "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-pinhole-leak-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing pinhole leak repair in Las Vegas, NV",
   },
   {
     title: "Pipe Section Replacement",
@@ -139,6 +142,9 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     description:
       "Replacement of aging galvanized steel supply pipe that has corroded internally, reducing pressure and water quality.",
     href: "/water-pipe-repair-replacement/",
+    image:
+      "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-galvanized-pipe-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing galvanized pipe replacement in Las Vegas, NV",
   },
   {
     title: "Polybutylene Pipe Replacement",
@@ -502,8 +508,6 @@ export default function WaterPipeRepairReplacementPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: some cards render an approved image; these still need an
-                    asset: Pinhole Leak Repair, Galvanized Pipe Replacement, and Polybutylene Pipe Replacement. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {WATER_PIPE_SERVICES.map((card, index) => (
                     <ServiceCard

@@ -107,13 +107,15 @@ type ServiceTypeCard = {
   imageAlt?: string;
 };
 
-// TODO: cards below without an image prop still need an approved asset: Gas Line Leak Detection and Repair, Gas Line Pressure Testing, and Emergency Gas Line Service.
 const GAS_LINE_SERVICES: ServiceTypeCard[] = [
   {
     title: "Gas Line Leak Detection and Repair",
     description:
       "Accurate detection and repair of gas line leaks using professional-grade equipment. Gas leaks are a safety emergency and require a licensed plumber.",
     href: "/gas-line-plumbing/",
+    image:
+      "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-leak-detection-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing gas line leak detection and repair in Las Vegas, NV",
   },
   {
     title: "Gas Line Installation",
@@ -156,6 +158,9 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     description:
       "Pressure testing to verify your gas supply lines are operating safely and meeting local code requirements.",
     href: "/gas-line-plumbing/",
+    image:
+      "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-pressure-testing-card.webp",
+    imageAlt: "Red Carpet Plumbing gas line pressure testing in Las Vegas, NV",
   },
   {
     title: "Gas Line Repair and Replacement",
@@ -171,6 +176,9 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     description:
       "24/7 emergency response for gas line issues throughout the Las Vegas Valley. Once Southwest Gas clears the area, our licensed plumbers respond quickly.",
     href: "/emergency-plumbing/",
+    image:
+      "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-emergency-gas-line-service-card.webp",
+    imageAlt: "Red Carpet Plumbing emergency gas line service in Las Vegas, NV",
   },
 ];
 
@@ -496,8 +504,6 @@ export default function GasLinePlumbingPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: some cards render an approved image; these still need an
-                    asset: Gas Line Leak Detection and Repair, Gas Line Pressure Testing, and Emergency Gas Line Service. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {GAS_LINE_SERVICES.map((card, index) => (
                     <ServiceCard

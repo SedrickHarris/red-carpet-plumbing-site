@@ -105,39 +105,56 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved camera inspection service image when available
+// TODO: cards below without an image prop still need an approved asset: Post-Cleaning Confirmation Inspection.
 const CAMERA_SERVICES: ServiceTypeCard[] = [
   {
     title: "Sewer Line Camera Inspection",
     description:
       "Full video inspection of the main sewer line to identify root intrusion, pipe bellies, offset joints, cracks, and blockages.",
     href: "/video-camera-plumbing-inspections/",
+    image:
+      "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-sewer-line-camera-inspection-card.webp",
+    imageAlt: "Red Carpet Plumbing sewer line camera inspection in Las Vegas, NV",
   },
   {
     title: "Drain Line Camera Inspection",
     description:
       "Camera inspection of kitchen, bathroom, and utility drain lines to locate blockages and confirm line condition after cleaning.",
     href: "/video-camera-plumbing-inspections/",
+    image:
+      "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-drain-line-camera-inspection-card.webp",
+    imageAlt: "Red Carpet Plumbing drain line camera inspection in Las Vegas, NV",
   },
   {
     title: "Pre-Purchase Sewer Inspection",
     description:
       "Sewer camera inspection for home buyers to document sewer line condition before closing on a Las Vegas property.",
     href: "/video-camera-plumbing-inspections/",
+    image:
+      "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-pre-purchase-sewer-inspection-card.webp",
+    imageAlt: "Red Carpet Plumbing pre-purchase sewer inspection in Las Vegas, NV",
   },
   {
     title: "Root Intrusion Inspection and Assessment",
     description:
       "Camera inspection to identify and locate root intrusion from trees and landscaping that have entered sewer lines.",
     href: "/video-camera-plumbing-inspections/",
+    image:
+      "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-root-intrusion-inspection-assessment-card.webp",
+    imageAlt: "Red Carpet Plumbing root intrusion inspection and assessment in Las Vegas, NV",
   },
   {
     title: "Pipe Belly and Offset Joint Detection",
     description:
       "Camera inspection to identify sags, bellies, and offset joints caused by soil movement in Las Vegas sewer lines.",
     href: "/video-camera-plumbing-inspections/",
+    image:
+      "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-pipe-belly-offset-joint-detection-card.webp",
+    imageAlt: "Red Carpet Plumbing pipe belly and offset joint detection in Las Vegas, NV",
   },
   {
     title: "Post-Cleaning Confirmation Inspection",
@@ -150,12 +167,18 @@ const CAMERA_SERVICES: ServiceTypeCard[] = [
     description:
       "Video camera inspection of commercial sewer and drain lines for businesses, restaurants, and property managers throughout Las Vegas.",
     href: "/video-camera-plumbing-inspections/",
+    image:
+      "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-commercial-pipe-camera-inspection-card.webp",
+    imageAlt: "Red Carpet Plumbing commercial pipe camera inspection in Las Vegas, NV",
   },
   {
     title: "Cleanout Installation and Inspection",
     description:
       "Installation of sewer cleanout access points where none exist, followed by camera inspection of the line.",
     href: "/video-camera-plumbing-inspections/",
+    image:
+      "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-cleanout-installation-inspection-card.webp",
+    imageAlt: "Red Carpet Plumbing cleanout installation and inspection in Las Vegas, NV",
   },
 ];
 
@@ -483,7 +506,6 @@ export default function VideoCameraPlumbingInspectionsPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved camera inspection service image when available */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {CAMERA_SERVICES.map((card, index) => (
                     <ServiceCard
@@ -491,6 +513,8 @@ export default function VideoCameraPlumbingInspectionsPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                    image={card.image}
+                    imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}

@@ -105,57 +105,82 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved fixture service image when available
 const FIXTURE_SERVICES: ServiceTypeCard[] = [
   {
     title: "Shower Valve Repair and Replacement",
     description:
       "Repair and replacement of pressure-balancing and thermostatic shower valves, cartridges, and trim kits for Las Vegas homes.",
     href: "/plumbing-fixture-repair-replacement-installation/",
+    image:
+      "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-shower-valve-repair-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing shower valve repair and replacement in Las Vegas, NV",
   },
   {
     title: "Showerhead Replacement and Installation",
     description:
       "Showerhead cleaning, replacement, and installation including handheld, rain, and multi-function showerhead styles.",
     href: "/plumbing-fixture-repair-replacement-installation/",
+    image:
+      "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-showerhead-replacement-installation-card.webp",
+    imageAlt: "Red Carpet Plumbing showerhead replacement and installation in Las Vegas, NV",
   },
   {
     title: "Bathtub Fixture Repair and Replacement",
     description:
       "Repair and replacement of bathtub faucets, spouts, diverters, and drain assemblies for standard and soaking tubs.",
     href: "/plumbing-fixture-repair-replacement-installation/",
+    image:
+      "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-bathtub-fixture-repair-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing bathtub fixture repair and replacement in Las Vegas, NV",
   },
   {
     title: "Faucet Repair and Replacement",
     description:
       "Kitchen and bathroom faucet repair, replacement, and installation for all fixture types and configurations.",
     href: "/faucet-sink-repair-installation/",
+    image:
+      "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-faucet-repair-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing faucet repair and replacement in Las Vegas, NV",
   },
   {
     title: "Toilet Repair and Installation",
     description:
       "Toilet repair, replacement, and installation for all makes and models in residential and commercial properties.",
     href: "/toilet-repair-installation/",
+    image:
+      "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-card.webp",
+    imageAlt: "Red Carpet Plumbing toilet repair and installation in Las Vegas, NV",
   },
   {
     title: "Outdoor Hose Bib and Spigot Service",
     description:
       "Repair and replacement of outdoor hose bibs, spigots, and frost-free sillcocks serving Las Vegas homes and businesses.",
     href: "/plumbing-fixture-repair-replacement-installation/",
+    image:
+      "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-outdoor-hose-bib-spigot-service-card.webp",
+    imageAlt: "Red Carpet Plumbing outdoor hose bib and spigot service in Las Vegas, NV",
   },
   {
     title: "Utility and Laundry Fixture Service",
     description:
       "Repair and installation of utility sink faucets, laundry supply connections, and utility room plumbing fixtures.",
     href: "/plumbing-fixture-repair-replacement-installation/",
+    image:
+      "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-utility-laundry-fixture-service-card.webp",
+    imageAlt: "Red Carpet Plumbing utility and laundry fixture service in Las Vegas, NV",
   },
   {
     title: "Fixture Upgrade and Renovation Plumbing",
     description:
       "Fixture installation for bathroom and kitchen renovations including supply line connection, drain assembly, and leak testing.",
     href: "/plumbing-fixture-repair-replacement-installation/",
+    image:
+      "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-fixture-upgrade-renovation-plumbing-card.webp",
+    imageAlt: "Red Carpet Plumbing fixture upgrade and renovation plumbing in Las Vegas, NV",
   },
 ];
 
@@ -483,7 +508,6 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved fixture service image when available */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {FIXTURE_SERVICES.map((card, index) => (
                     <ServiceCard
@@ -491,6 +515,8 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                    image={card.image}
+                    imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}

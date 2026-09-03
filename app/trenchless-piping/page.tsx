@@ -99,57 +99,82 @@ type ServiceTypeCard = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-// TODO: Replace ServiceImagePlaceholder with approved trenchless service image when available
 const TRENCHLESS_SERVICES: ServiceTypeCard[] = [
   {
     title: "CIPP Pipe Lining",
     description:
       "Cured-in-place pipe lining installs a structural resin liner inside existing damaged pipe, creating a new pipe within the old one without excavation.",
     href: "/trenchless-piping/",
+    image:
+      "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-cipp-pipe-lining-card.webp",
+    imageAlt: "Red Carpet Plumbing CIPP pipe lining in Las Vegas, NV",
   },
   {
     title: "Pipe Bursting",
     description:
       "Pipe bursting pulls new pipe through the old pipe while breaking it outward, replacing the full line without digging a trench along its length.",
     href: "/trenchless-piping/",
+    image:
+      "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-pipe-bursting-card.webp",
+    imageAlt: "Red Carpet Plumbing pipe bursting in Las Vegas, NV",
   },
   {
     title: "Trenchless Sewer Line Repair",
     description:
       "CIPP or pipe bursting repair for residential and commercial sewer lines with cracks, root intrusion, or corrosion throughout Las Vegas.",
     href: "/trenchless-piping/",
+    image:
+      "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-sewer-line-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing trenchless sewer line repair in Las Vegas, NV",
   },
   {
     title: "Trenchless Lateral Lining",
     description:
       "Lining of sewer lateral connections from the property to the main sewer line, protecting joints and sealing cracks without excavation.",
     href: "/trenchless-piping/",
+    image:
+      "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-lateral-lining-card.webp",
+    imageAlt: "Red Carpet Plumbing trenchless lateral lining in Las Vegas, NV",
   },
   {
     title: "Under-Slab Pipe Repair",
     description:
       "Trenchless repair of pipes running beneath concrete slabs and foundations, preserving the slab surface while restoring pipe integrity.",
     href: "/trenchless-piping/",
+    image:
+      "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-under-slab-pipe-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing under-slab pipe repair in Las Vegas, NV",
   },
   {
     title: "Pre-Trenchless Camera Inspection",
     description:
       "Video camera inspection to confirm pipe condition, identify the damage type, and determine whether the line qualifies for trenchless repair.",
     href: "/video-camera-plumbing-inspections/",
+    image:
+      "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-pre-trenchless-camera-inspection-card.webp",
+    imageAlt: "Red Carpet Plumbing pre-trenchless camera inspection in Las Vegas, NV",
   },
   {
     title: "Commercial Trenchless Pipe Repair",
     description:
       "Trenchless sewer and drain line repair for commercial properties, minimizing operational disruption in occupied buildings.",
     href: "/trenchless-piping/",
+    image:
+      "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-commercial-trenchless-pipe-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing commercial trenchless pipe repair in Las Vegas, NV",
   },
   {
     title: "Traditional Excavation When Required",
     description:
       "When trenchless methods are not suitable, Red Carpet Plumbing performs traditional excavation and sewer line replacement with full site restoration.",
     href: "/sewer-line-services/",
+    image:
+      "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-traditional-excavation-when-required-card.webp",
+    imageAlt: "Red Carpet Plumbing traditional excavation when required in Las Vegas, NV",
   },
 ];
 
@@ -478,7 +503,6 @@ export default function TrenchlessPipingPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: Replace ServiceImagePlaceholder with approved trenchless service image when available */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {TRENCHLESS_SERVICES.map((card, index) => (
                     <ServiceCard
@@ -486,6 +510,8 @@ export default function TrenchlessPipingPage() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
+                    image={card.image}
+                    imageAlt={card.imageAlt}
                       built={false}
                     />
                   ))}
