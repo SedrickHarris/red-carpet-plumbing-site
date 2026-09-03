@@ -236,8 +236,12 @@ async function main() {
 
   routes.sort((a, b) => a.route.localeCompare(b.route));
 
+  // Deliberately no generatedAt timestamp. Nothing reads it, and stamping one
+  // on every run made the manifest differ after a build that changed no routes,
+  // leaving the tree permanently dirty. Keeping the output deterministic means
+  // a rebuild is a no-op unless the route set actually changed, so a diff here
+  // is real signal.
   const manifest = {
-    generatedAt: new Date().toISOString(),
     routeCount: routes.length,
     routes,
     warnings,
