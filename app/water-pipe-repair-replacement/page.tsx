@@ -108,7 +108,6 @@ type ServiceTypeCard = {
   imageAlt?: string;
 };
 
-// TODO: cards below without an image prop still need an approved asset: Polybutylene Pipe Replacement.
 const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
   {
     title: "Burst Pipe Repair",
@@ -151,6 +150,9 @@ const WATER_PIPE_SERVICES: ServiceTypeCard[] = [
     description:
       "Replacement of polybutylene supply pipe in Las Vegas homes built approximately 1978 to 1995. Polybutylene degrades with chlorinated water and is prone to sudden failure.",
     href: "/water-pipe-repair-replacement/",
+    image:
+      "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-polybutylene-pipe-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing polybutylene pipe replacement in Las Vegas, NV",
   },
   {
     title: "Main Water Line Repair",
