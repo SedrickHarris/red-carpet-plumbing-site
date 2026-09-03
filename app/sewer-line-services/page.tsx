@@ -102,7 +102,7 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     href: "/sewer-line-services/camera-inspection/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-sewer-cleanout-inspection-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing sewer camera inspection in Las Vegas, NV",
+    imageAlt: "Sewer camera reel and monitor at an open driveway cleanout",
   },
   {
     title: "Sewer Line Cleaning",
@@ -111,7 +111,7 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     href: "/sewer-line-services/cleaning/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-sewer-backup-repair-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing sewer line cleaning in Las Vegas, NV",
+    imageAlt: "Camera inspection at a garage floor cleanout with standing water",
   },
   {
     title: "Sewer Line Repair",
@@ -120,7 +120,7 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     href: "/sewer-line-services/repair/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-main-sewer-line-repair-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing sewer line repair in Las Vegas, NV",
+    imageAlt: "New PVC sewer pipe joined with couplings in a trench",
   },
   {
     title: "Sewer Line Replacement",
@@ -130,7 +130,7 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-replacement-card.webp",
     imageAlt:
-      "Red Carpet Plumbing sewer line replacement in Las Vegas, NV",
+      "Old sewer pipe beside its PVC replacement in a trench",
   },
   {
     title: "Trenchless CIPP Pipe Lining",
@@ -139,7 +139,7 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     href: "/sewer-line-services/cipp-lining/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-trenchless-sewer-line-replacement-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing trenchless CIPP pipe lining in Las Vegas, NV",
+    imageAlt: "Pipe section and couplings staged beside a sewer access pit",
   },
   {
     title: "Pipe Bursting",
@@ -149,7 +149,7 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-pipe-bursting-card.webp",
     imageAlt:
-      "Red Carpet Plumbing pipe bursting sewer replacement in Las Vegas, NV",
+      "Hydraulic bursting rig pulling new pipe from a driveway pit",
   },
   {
     title: "Root Intrusion Removal and Treatment",
@@ -159,7 +159,7 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-root-intrusion-removal-treatment-card.webp",
     imageAlt:
-      "Red Carpet Plumbing root intrusion removal and treatment in Las Vegas, NV",
+      "Camera monitor showing tree roots inside a sewer line",
   },
   {
     title: "Emergency Sewer Line Service",
@@ -169,7 +169,7 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-emergency-sewer-line-service-card.webp",
     imageAlt:
-      "Red Carpet Plumbing emergency sewer line service in Las Vegas, NV",
+      "Water surging from a cleanout beside a running hydro jetter",
   },
 ];
 
