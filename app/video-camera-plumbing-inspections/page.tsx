@@ -117,7 +117,7 @@ const CAMERA_SERVICES: ServiceTypeCard[] = [
     href: "/video-camera-plumbing-inspections/",
     image:
       "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-sewer-line-camera-inspection-card.webp",
-    imageAlt: "Red Carpet Plumbing sewer line camera inspection in Las Vegas, NV",
+    imageAlt: "Monitor showing a clean pipe interior beside a black cable reel",
   },
   {
     title: "Drain Line Camera Inspection",
@@ -126,7 +126,7 @@ const CAMERA_SERVICES: ServiceTypeCard[] = [
     href: "/video-camera-plumbing-inspections/",
     image:
       "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-drain-line-camera-inspection-card.webp",
-    imageAlt: "Red Carpet Plumbing drain line camera inspection in Las Vegas, NV",
+    imageAlt: "Red camera cable fed into a small patio cleanout",
   },
   {
     title: "Pre-Purchase Sewer Inspection",
@@ -135,7 +135,7 @@ const CAMERA_SERVICES: ServiceTypeCard[] = [
     href: "/video-camera-plumbing-inspections/",
     image:
       "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-pre-purchase-sewer-inspection-card.webp",
-    imageAlt: "Red Carpet Plumbing pre-purchase sewer inspection in Las Vegas, NV",
+    imageAlt: "Camera reel and monitor at a cleanout by a home's entry",
   },
   {
     title: "Root Intrusion Inspection and Assessment",
@@ -144,7 +144,7 @@ const CAMERA_SERVICES: ServiceTypeCard[] = [
     href: "/video-camera-plumbing-inspections/",
     image:
       "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-root-intrusion-inspection-assessment-card.webp",
-    imageAlt: "Red Carpet Plumbing root intrusion inspection and assessment in Las Vegas, NV",
+    imageAlt: "Screen full of fine roots with a tree beside the cleanout",
   },
   {
     title: "Pipe Belly and Offset Joint Detection",
@@ -153,7 +153,7 @@ const CAMERA_SERVICES: ServiceTypeCard[] = [
     href: "/video-camera-plumbing-inspections/",
     image:
       "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-pipe-belly-offset-joint-detection-card.webp",
-    imageAlt: "Red Carpet Plumbing pipe belly and offset joint detection in Las Vegas, NV",
+    imageAlt: "Screen showing water standing in a sagging pipe section",
   },
   {
     title: "Post-Cleaning Confirmation Inspection",
@@ -163,7 +163,7 @@ const CAMERA_SERVICES: ServiceTypeCard[] = [
     image:
       "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-post-cleaning-confirmation-inspection-card.webp",
     imageAlt:
-      "Red Carpet Plumbing post-cleaning confirmation inspection in Las Vegas, NV",
+      "Clean white pipe on the monitor with a jetter parked nearby",
   },
   {
     title: "Commercial Pipe Camera Inspection",
@@ -172,7 +172,7 @@ const CAMERA_SERVICES: ServiceTypeCard[] = [
     href: "/video-camera-plumbing-inspections/",
     image:
       "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-commercial-pipe-camera-inspection-card.webp",
-    imageAlt: "Red Carpet Plumbing commercial pipe camera inspection in Las Vegas, NV",
+    imageAlt: "Camera reel at a floor cleanout in a commercial kitchen",
   },
   {
     title: "Cleanout Installation and Inspection",
@@ -181,7 +181,7 @@ const CAMERA_SERVICES: ServiceTypeCard[] = [
     href: "/video-camera-plumbing-inspections/",
     image:
       "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-cleanout-installation-inspection-card.webp",
-    imageAlt: "Red Carpet Plumbing cleanout installation and inspection in Las Vegas, NV",
+    imageAlt: "New white PVC cleanout capped in fresh concrete",
   },
 ];
 

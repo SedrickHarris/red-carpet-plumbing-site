@@ -111,7 +111,7 @@ const TRENCHLESS_SERVICES: ServiceTypeCard[] = [
     href: "/trenchless-piping/",
     image:
       "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-cipp-pipe-lining-card.webp",
-    imageAlt: "Red Carpet Plumbing CIPP pipe lining in Las Vegas, NV",
+    imageAlt: "Cured liner visible inside a cut length of old pipe",
   },
   {
     title: "Pipe Bursting",
@@ -120,7 +120,7 @@ const TRENCHLESS_SERVICES: ServiceTypeCard[] = [
     href: "/trenchless-piping/",
     image:
       "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-pipe-bursting-card.webp",
-    imageAlt: "Red Carpet Plumbing pipe bursting in Las Vegas, NV",
+    imageAlt: "Bursting head and rods at a pit with new pipe on stands",
   },
   {
     title: "Trenchless Sewer Line Repair",
@@ -129,7 +129,7 @@ const TRENCHLESS_SERVICES: ServiceTypeCard[] = [
     href: "/trenchless-piping/",
     image:
       "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-sewer-line-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing trenchless sewer line repair in Las Vegas, NV",
+    imageAlt: "White hose reel feeding an open cleanout in a driveway",
   },
   {
     title: "Trenchless Lateral Lining",
@@ -138,7 +138,7 @@ const TRENCHLESS_SERVICES: ServiceTypeCard[] = [
     href: "/trenchless-piping/",
     image:
       "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-lateral-lining-card.webp",
-    imageAlt: "Red Carpet Plumbing trenchless lateral lining in Las Vegas, NV",
+    imageAlt: "Rolled felt liner beside an inversion head at a cleanout",
   },
   {
     title: "Under-Slab Pipe Repair",
@@ -147,7 +147,7 @@ const TRENCHLESS_SERVICES: ServiceTypeCard[] = [
     href: "/trenchless-piping/",
     image:
       "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-under-slab-pipe-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing under-slab pipe repair in Las Vegas, NV",
+    imageAlt: "Long floor trench cut to a copper line with a work light",
   },
   {
     title: "Pre-Trenchless Camera Inspection",
@@ -156,7 +156,7 @@ const TRENCHLESS_SERVICES: ServiceTypeCard[] = [
     href: "/video-camera-plumbing-inspections/",
     image:
       "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-pre-trenchless-camera-inspection-card.webp",
-    imageAlt: "Red Carpet Plumbing pre-trenchless camera inspection in Las Vegas, NV",
+    imageAlt: "Camera head and skids laid out before a lining job",
   },
   {
     title: "Commercial Trenchless Pipe Repair",
@@ -165,7 +165,7 @@ const TRENCHLESS_SERVICES: ServiceTypeCard[] = [
     href: "/trenchless-piping/",
     image:
       "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-commercial-trenchless-pipe-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing commercial trenchless pipe repair in Las Vegas, NV",
+    imageAlt: "Blue hose into a sidewalk cleanout at a commercial building",
   },
   {
     title: "Traditional Excavation When Required",
@@ -174,7 +174,7 @@ const TRENCHLESS_SERVICES: ServiceTypeCard[] = [
     href: "/sewer-line-services/",
     image:
       "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-traditional-excavation-when-required-card.webp",
-    imageAlt: "Red Carpet Plumbing traditional excavation when required in Las Vegas, NV",
+    imageAlt: "Mini excavator and cones at an open pipe trench",
   },
 ];
 
