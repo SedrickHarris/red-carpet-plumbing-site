@@ -252,6 +252,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Sewer line inspection, cleaning, repair, and replacement for residential and commercial properties.",
     href: "/sewer-line-services/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
+    imageAlt: "Sewer line services in Las Vegas",
     built: true,
   },
   {
@@ -277,6 +280,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Video camera inspection to identify the type and location of blockages, confirm lines are clear after cleaning, and check for pipe damage, root intrusion, or structural issues.",
     href: "/video-camera-plumbing-inspections/",
+    image:
+      "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspections-primary-hero.webp",
+    imageAlt: "Video camera plumbing inspection in Las Vegas",
     built: true,
   },
 ];

@@ -251,6 +251,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Faucet repair, replacement, and sink installation for kitchens, bathrooms, and utility areas throughout Las Vegas.",
     href: "/faucet-sink-repair-installation/",
+    image:
+      "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-sink-repair-hero.webp",
+    imageAlt: "Faucet and sink repair and installation in Las Vegas",
     built: true,
   },
   {
@@ -258,6 +261,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Toilet repair, replacement, and installation for Las Vegas homes and businesses.",
     href: "/toilet-repair-installation/",
+    image:
+      "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-hero.webp",
+    imageAlt: "Toilet repair and installation service in Las Vegas",
     built: true,
   },
   {
