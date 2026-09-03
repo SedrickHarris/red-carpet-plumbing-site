@@ -128,7 +128,7 @@ const SERVICE_CARDS: ServiceCardEntry[] = [
       "Sewer line inspection, cleaning, repair, and replacement for residential and commercial properties.",
     href: "/sewer-line-services/",
     image:
-      "/images/services/sewer-line-services/red-carpet-plumbing-sewer-line-services-las-vegas.webp",
+      "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
     imageAlt:
       "Sewer camera inspection at an outdoor cleanout on a Las Vegas property",
     built: true,
