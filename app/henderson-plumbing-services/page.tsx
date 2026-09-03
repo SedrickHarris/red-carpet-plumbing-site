@@ -112,7 +112,7 @@ const HENDERSON_FEATURED_SERVICES: ServiceLink[] = [
     href: "/henderson/sewer-line-services/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
-    imageAlt: "Sewer line services in Henderson",
+    imageAlt: "Sewer camera cable descending into an open cleanout",
   },
   {
     title: "Repiping",
