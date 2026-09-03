@@ -115,7 +115,7 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     href: "/gas-line-plumbing/",
     image:
       "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-leak-detection-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing gas line leak detection and repair in Las Vegas, NV",
+    imageAlt: "Gas detector probing a meter connection beside a tool roll",
   },
   {
     title: "Gas Line Installation",
@@ -124,7 +124,7 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     href: "/gas-line-plumbing/",
     image:
       "/images/services/gas-line-plumbing/red-carpet-plumbing-commercial-gas-line-system-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing commercial gas line system installation in Las Vegas, NV",
+    imageAlt: "Overhead gas mains and regulators in a mechanical room",
   },
   {
     title: "Gas Line Inspection",
@@ -133,7 +133,7 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     href: "/gas-line-plumbing/",
     image:
       "/images/services/gas-line-plumbing/red-carpet-plumbing-exterior-gas-meter-service-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing exterior gas meter service in Las Vegas, NV",
+    imageAlt: "Wrenches and fittings laid out below an exterior gas meter",
   },
   {
     title: "Gas Appliance Hookup and Connection",
@@ -142,7 +142,7 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     href: "/gas-line-plumbing/",
     image:
       "/images/services/gas-line-plumbing/red-carpet-plumbing-kitchen-gas-line-installation-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing kitchen gas line installation in Las Vegas, NV",
+    imageAlt: "Gas piping and flex connector inside an open kitchen cabinet",
   },
   {
     title: "Outdoor Gas Line Extensions",
@@ -151,7 +151,7 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     href: "/gas-line-plumbing/",
     image:
       "/images/services/gas-line-plumbing/red-carpet-plumbing-underground-gas-line-replacement-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing underground gas line replacement in Las Vegas, NV",
+    imageAlt: "New gas line laid in a shallow trench beside a meter",
   },
   {
     title: "Gas Line Pressure Testing",
@@ -160,7 +160,7 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     href: "/gas-line-plumbing/",
     image:
       "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-pressure-testing-card.webp",
-    imageAlt: "Red Carpet Plumbing gas line pressure testing in Las Vegas, NV",
+    imageAlt: "Pressure gauge and test hoses connected to a gas riser",
   },
   {
     title: "Gas Line Repair and Replacement",
@@ -169,7 +169,7 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     href: "/gas-line-plumbing/",
     image:
       "/images/services/gas-line-plumbing/red-carpet-plumbing-residential-gas-line-repair-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing residential gas line repair in Las Vegas, NV",
+    imageAlt: "Brass regulator on garage gas piping beside a water heater",
   },
   {
     title: "Emergency Gas Line Service",
@@ -178,7 +178,7 @@ const GAS_LINE_SERVICES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/",
     image:
       "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-emergency-gas-line-service-card.webp",
-    imageAlt: "Red Carpet Plumbing emergency gas line service in Las Vegas, NV",
+    imageAlt: "Gas detector at a meter with a disconnected pipe union",
   },
 ];
 
