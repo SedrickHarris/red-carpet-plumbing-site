@@ -119,7 +119,7 @@ const LOCATION_CARDS: LocationCardData[] = [
   },
   {
     name: "North Las Vegas",
-    // TODO: Replace placeholder with location image when available
+    image: "/images/locations/north-las-vegas/red-carpet-plumbing-north-las-vegas-nv-neighborhood-location-hero.webp",
     alt: "North Las Vegas neighborhood",
     description:
       "Residential and commercial plumbing services throughout North Las Vegas, including the Aliante area and surrounding neighborhoods.",
@@ -127,7 +127,7 @@ const LOCATION_CARDS: LocationCardData[] = [
   },
   {
     name: "Paradise",
-    // TODO: Replace placeholder with location image when available
+    image: "/images/locations/paradise/red-carpet-plumbing-paradise-nv-las-vegas-strip-location-hero.webp",
     alt: "Paradise, Nevada near Las Vegas",
     description:
       "Plumbing services for the Paradise area of the Las Vegas Valley, serving residential and commercial customers near the Strip corridor and surrounding neighborhoods.",
@@ -151,7 +151,7 @@ const LOCATION_CARDS: LocationCardData[] = [
   },
   {
     name: "Enterprise",
-    // TODO: Replace placeholder with location image when available
+    image: "/images/locations/enterprise/red-carpet-plumbing-enterprise-nv-exploration-peak-location-hero.webp",
     alt: "Enterprise area of southwest Las Vegas",
     description:
       "Plumbing services for homes, businesses, and commercial properties in the Enterprise area of southwest Las Vegas.",
@@ -159,7 +159,7 @@ const LOCATION_CARDS: LocationCardData[] = [
   },
   {
     name: "Boulder City",
-    // TODO: Replace placeholder with location image when available
+    image: "/images/locations/boulder-city/red-carpet-plumbing-boulder-city-nv-downtown-location-hero.webp",
     alt: "Boulder City, Nevada",
     description:
       "Plumbing repair, drain cleaning, water heater service, and emergency plumbing for Boulder City homes and properties.",
@@ -167,7 +167,7 @@ const LOCATION_CARDS: LocationCardData[] = [
   },
   {
     name: "Green Valley",
-    // TODO: Replace placeholder with location image when available
+    image: "/images/locations/green-valley/red-carpet-plumbing-green-valley-nv-neighborhood-location-hero.webp",
     alt: "Green Valley community in Henderson, Nevada",
     description:
       "Plumbing services for Green Valley residents including drain cleaning, leak detection, slab leak repair, repiping, and water heater service.",
@@ -175,7 +175,7 @@ const LOCATION_CARDS: LocationCardData[] = [
   },
   {
     name: "Lake Las Vegas",
-    // TODO: Replace placeholder with location image when available
+    image: "/images/locations/lake-las-vegas/red-carpet-plumbing-lake-las-vegas-nv-waterfront-location-hero.webp",
     alt: "Lake Las Vegas community in Henderson, Nevada",
     description:
       "Plumbing services for Lake Las Vegas homes including water heater service, leak detection, slab leak repair, and drain cleaning.",
@@ -183,7 +183,7 @@ const LOCATION_CARDS: LocationCardData[] = [
   },
   {
     name: "Aliante Area (North Las Vegas)",
-    // TODO: Replace placeholder with location image when available
+    image: "/images/locations/aliante-area/red-carpet-plumbing-aliante-north-las-vegas-nv-location-hero.webp",
     alt: "Aliante area in North Las Vegas, Nevada",
     description:
       "Plumbing services for the Aliante master-planned community and surrounding North Las Vegas neighborhoods.",
