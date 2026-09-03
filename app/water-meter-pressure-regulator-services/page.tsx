@@ -261,6 +261,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Repair and replacement of water supply pipes including burst pipes, pinhole leaks, and aging pipe material.",
     href: "/water-pipe-repair-replacement/",
+    image:
+      "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-water-pipe-repair-replacement-primary-hero.webp",
+    imageAlt: "Water pipe repair and replacement in Las Vegas",
     built: true,
   },
   {
