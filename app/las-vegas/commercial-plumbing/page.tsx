@@ -146,7 +146,7 @@ const COMMERCIAL_SERVICES: {
     href: "/las-vegas/drain-cleaning/",
     image:
       "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-restroom-plumbing-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing commercial drain cleaning and hydro jetting in Las Vegas, NV",
+    imageAlt: "Open access panels behind a row of restroom lavatories",
   },
   {
     title: "Grease Trap and Floor Drain Service",
@@ -155,7 +155,7 @@ const COMMERCIAL_SERVICES: {
     href: "/commercial-plumbing/",
     image:
       "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-kitchen-plumbing-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing grease trap and floor drain service in Las Vegas, NV",
+    imageAlt: "Grease interceptor under a stainless three-compartment sink",
   },
   {
     title: "Commercial Water Heater Repair and Installation",
@@ -164,7 +164,7 @@ const COMMERCIAL_SERVICES: {
     href: "/las-vegas/water-heater-repair-installation/",
     image:
       "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-water-heater-plumbing-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing commercial water heater repair and installation in Las Vegas, NV",
+    imageAlt: "Three commercial water heaters with expansion tanks overhead",
   },
   {
     title: "Commercial Leak Detection and Repair",
@@ -174,7 +174,7 @@ const COMMERCIAL_SERVICES: {
     image:
       "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-leak-detection-repair-card.webp",
     imageAlt:
-      "Red Carpet Plumbing commercial leak detection and repair in Las Vegas, NV",
+      "Leak correlator case open below gauged copper risers",
   },
   {
     title: "Commercial Sewer Line Services",
@@ -183,7 +183,7 @@ const COMMERCIAL_SERVICES: {
     href: "/las-vegas/sewer-line-services/",
     image:
       "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-mechanical-room-plumbing-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing commercial sewer line services in Las Vegas, NV",
+    imageAlt: "PVC waste main with banded couplings above a floor cleanout",
   },
   {
     title: "Backflow Prevention and Testing",
@@ -192,7 +192,7 @@ const COMMERCIAL_SERVICES: {
     href: "/las-vegas/backflow-prevention/",
     image:
       "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-pipe-valve-detail-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing backflow prevention and testing in Las Vegas, NV",
+    imageAlt: "Close view of brass ball valves and a gauge on copper",
   },
   {
     title: "Commercial Pipe Repair and Repiping",
@@ -202,7 +202,7 @@ const COMMERCIAL_SERVICES: {
     image:
       "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-pipe-repair-repiping-card.webp",
     imageAlt:
-      "Red Carpet Plumbing commercial pipe repair and repiping in Las Vegas, NV",
+      "Old flanged iron beside new copper on strut supports",
   },
   // FLAG: 24/7 emergency-availability claim stated in this card — verify before final launch.
   {
@@ -213,7 +213,7 @@ const COMMERCIAL_SERVICES: {
     image:
       "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-emergency-commercial-plumbing-card.webp",
     imageAlt:
-      "Red Carpet Plumbing emergency commercial plumbing in Las Vegas, NV",
+      "Water arcing from a broken fitting into a bucket and vac",
   },
 ];
 
