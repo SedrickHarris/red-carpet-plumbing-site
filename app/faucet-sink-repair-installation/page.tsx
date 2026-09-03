@@ -109,7 +109,6 @@ type ServiceTypeCard = {
   imageAlt?: string;
 };
 
-// TODO: cards below without an image prop still need an approved asset: Faucet Replacement, Faucet Installation, Under-Sink Leak Repair, Aerator and Cartridge Service, and Drain and P-Trap Repair.
 const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
   {
     title: "Dripping Faucet Repair",
@@ -125,12 +124,18 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     description:
       "Full faucet replacement for worn, corroded, or repeatedly failing fixtures in kitchens, bathrooms, and utility areas.",
     href: "/faucet-sink-repair-installation/",
+    image:
+      "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing faucet replacement in Las Vegas, NV",
   },
   {
     title: "Faucet Installation",
     description:
       "Professional installation of new faucets including supply line connection, shut-off valve inspection, and leak testing.",
     href: "/faucet-sink-repair-installation/",
+    image:
+      "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-installation-card.webp",
+    imageAlt: "Red Carpet Plumbing faucet installation in Las Vegas, NV",
   },
   {
     title: "Kitchen Sink Installation",
@@ -155,18 +160,27 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     description:
       "Repair of leaks under kitchen and bathroom sinks including drain connections, P-trap seals, supply lines, and shut-off valves.",
     href: "/faucet-sink-repair-installation/",
+    image:
+      "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-under-sink-leak-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing under-sink leak repair in Las Vegas, NV",
   },
   {
     title: "Aerator and Cartridge Service",
     description:
       "Cleaning and replacement of faucet aerators and cartridges to restore water pressure and stop drips caused by mineral buildup.",
     href: "/faucet-sink-repair-installation/",
+    image:
+      "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-aerator-cartridge-service-card.webp",
+    imageAlt: "Red Carpet Plumbing faucet aerator and cartridge service in Las Vegas, NV",
   },
   {
     title: "Drain and P-Trap Repair",
     description:
       "Repair and replacement of sink drain assemblies, pop-up drain hardware, and P-trap connections for kitchens and bathrooms.",
     href: "/drain-cleaning/",
+    image:
+      "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-drain-p-trap-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing drain and P-trap repair in Las Vegas, NV",
   },
 ];
 
@@ -490,8 +504,6 @@ export default function FaucetSinkRepairInstallationPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: some cards render an approved image; these still need an
-                    asset: Faucet Replacement, Faucet Installation, Under-Sink Leak Repair, Aerator and Cartridge Service, and Drain and P-Trap Repair. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {FAUCET_SINK_SERVICES.map((card, index) => (
                     <ServiceCard

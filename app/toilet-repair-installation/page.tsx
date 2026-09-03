@@ -109,25 +109,33 @@ type ServiceTypeCard = {
   imageAlt?: string;
 };
 
-// TODO: cards below without an image prop still need an approved asset: Running Toilet Repair, Leaking Toilet Repair, Toilet Clog Clearing, Wax Ring and Flange Repair, Toilet Tank Component Repair, and Supply Line Repair and Replacement.
 const TOILET_SERVICES: ServiceTypeCard[] = [
   {
     title: "Running Toilet Repair",
     description:
       "Diagnosis and repair of toilets that run continuously after flushing, including flapper, fill valve, and float replacement.",
     href: "/toilet-repair-installation/",
+    image:
+      "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-running-toilet-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing running toilet repair in Las Vegas, NV",
   },
   {
     title: "Leaking Toilet Repair",
     description:
       "Repair of toilets leaking at the base, tank, or supply line connections, including wax ring and flange service.",
     href: "/toilet-repair-installation/",
+    image:
+      "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-leaking-toilet-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing leaking toilet repair in Las Vegas, NV",
   },
   {
     title: "Toilet Clog Clearing",
     description:
       "Professional clearing of toilet clogs, including stubborn or recurring blockages that a plunger cannot resolve.",
     href: "/drain-cleaning/",
+    image:
+      "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-clog-clearing-card.webp",
+    imageAlt: "Red Carpet Plumbing toilet clog clearing in Las Vegas, NV",
   },
   {
     title: "Toilet Replacement",
@@ -152,18 +160,27 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     description:
       "Replacement of failed wax rings and repair of damaged toilet flanges to stop base leaks and sewer gas entry.",
     href: "/toilet-repair-installation/",
+    image:
+      "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-wax-ring-flange-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing toilet wax ring and flange repair in Las Vegas, NV",
   },
   {
     title: "Toilet Tank Component Repair",
     description:
       "Repair and replacement of toilet tank internals including flappers, fill valves, flush valves, and floats.",
     href: "/toilet-repair-installation/",
+    image:
+      "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-tank-component-repair-card.webp",
+    imageAlt: "Red Carpet Plumbing toilet tank component repair in Las Vegas, NV",
   },
   {
     title: "Supply Line Repair and Replacement",
     description:
       "Repair and replacement of toilet supply lines and shutoff valves to stop leaks and restore reliable water flow.",
     href: "/toilet-repair-installation/",
+    image:
+      "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-supply-line-repair-replacement-card.webp",
+    imageAlt: "Red Carpet Plumbing toilet supply line repair and replacement in Las Vegas, NV",
   },
 ];
 
@@ -491,8 +508,6 @@ export default function ToiletRepairInstallationPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: some cards render an approved image; these still need an
-                    asset: Running Toilet Repair, Leaking Toilet Repair, Toilet Clog Clearing, Wax Ring and Flange Repair, Toilet Tank Component Repair, and Supply Line Repair and Replacement. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {TOILET_SERVICES.map((card, index) => (
                     <ServiceCard
