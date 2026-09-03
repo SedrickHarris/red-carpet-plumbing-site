@@ -94,7 +94,6 @@ type ServiceTypeCard = {
   imageAlt?: string;
 };
 
-// TODO: cards below without an image prop still need an approved asset: Sewer Line Replacement, Pipe Bursting, Root Intrusion Removal and Treatment, and Emergency Sewer Line Service.
 const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
   {
     title: "Sewer Camera Inspection",
@@ -128,6 +127,10 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     description:
       "When a sewer line has extensive corrosion, multiple damage points, collapse, or severe structural deterioration, full replacement is the most durable long-term solution. Sewer line replacement can be performed using traditional excavation or trenchless methods depending on the property layout, pipe depth, and condition of the existing line.",
     href: "/sewer-line-services/replacement/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-replacement-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing sewer line replacement in Las Vegas, NV",
   },
   {
     title: "Trenchless CIPP Pipe Lining",
@@ -143,18 +146,30 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     description:
       "Pipe bursting is a trenchless sewer replacement method for lines that are too damaged for lining but where excavation is undesirable. A bursting head is pulled through the existing damaged pipe, fracturing it outward while simultaneously pulling a new pipe into place behind it. Pipe bursting replaces the sewer line with minimal excavation and is appropriate when the pipe alignment is intact but the pipe material has failed beyond repair.",
     href: "/sewer-line-services/pipe-bursting/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-pipe-bursting-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing pipe bursting sewer replacement in Las Vegas, NV",
   },
   {
     title: "Root Intrusion Removal and Treatment",
     description:
       "Desert tree roots are a major cause of sewer line blockages and damage in Las Vegas. Mesquite, olive, palm, and oleander roots penetrate sewer lines through small cracks and aging joints, growing into root masses that restrict or completely block flow. We clear root intrusion mechanically and with hydro jetting, and we use camera inspection to assess the damage the roots have caused to the pipe structure.",
     href: "/sewer-line-services/root-intrusion/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-root-intrusion-removal-treatment-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing root intrusion removal and treatment in Las Vegas, NV",
   },
   {
     title: "Emergency Sewer Line Service",
     description:
       "Complete sewer backups that are causing sewage to surface in the home or yard require immediate professional attention. Red Carpet Plumbing is available 24/7 for emergency sewer line response throughout the Las Vegas Valley. Stopping the backup and preventing continued sewage exposure is the immediate priority, and full diagnosis and repair planning follow once the immediate situation is controlled.",
     href: "/sewer-line-services/emergency/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-emergency-sewer-line-service-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing emergency sewer line service in Las Vegas, NV",
   },
 ];
 
@@ -491,8 +506,6 @@ export default function SewerLineServicesPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: some cards render an approved image; these still need an
-                    asset: Sewer Line Replacement, Pipe Bursting, Root Intrusion Removal and Treatment, and Emergency Sewer Line Service. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {SEWER_LINE_SERVICES_LIST.map((card) => (
                     <ServiceCard
