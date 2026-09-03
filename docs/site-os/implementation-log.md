@@ -988,3 +988,12 @@ FLAG: VERIFY items: not added to existing content (out of scope for this build)
 - **`HeroSection` accepts an `alt` prop it always discards.** Both the `backgroundImage` and `backgroundImages` branches render `alt=""`, correctly, since the image sits inside an `aria-hidden` wrapper as decoration. But the prop is still in the type and **38 authored alt strings are currently written into hero blocks and thrown away**. This is a trap: the strings look maintained and are not. Decide one way or the other, either drop `alt` from the hero image type so nobody writes one again, or keep it and document that it is intentionally ignored. Until then those 38 strings were left untouched rather than rewritten, since rewriting dead copy is waste.
 - **CIPP card and photo disagree on `sewer-line-services`.** The card is titled "Trenchless CIPP Pipe Lining" but the photo shows pipe and couplings laid beside an access pit, which is not lining. Either the card wants a lining photo or the photo wants a different card. An asset decision, not a wiring one.
 - **The 18 authored `imageAlt` strings from `71b3721` and `56f6019` remain owner-unapproved**, as flagged in the entry above. Note that this pass has since rewritten them along with everything else, so the review should look at the current strings rather than those commits.
+
+---
+
+## 2026-09-03 - Alt Text Copy Approved by Owner
+
+- **The owner has approved the customer-facing alt text.** This closes the copy-approval question that had been open across the two entries above, and it covers the current strings in `main` as of `25a2899`, not the superseded wording in the commits where the flags were first raised.
+- **Two earlier flags are now resolved.** The "18 new customer-facing alt strings, none owner-approved" flag raised in the Zero Placeholder Cards entry, and the follow-up item repeating it in the alt text entry, are both settled. Those 18 strings were themselves rewritten during the alt text pass, so what is approved is the text now in the tree.
+- **Scope of the approval as recorded here: all 173 card image alt strings**, every one of which was authored or rewritten during that pass. Approval was given on the pass as a whole rather than string by string.
+- **Still open, and not covered by this approval:** the `HeroSection` dead `alt` prop decision and its 38 discarded strings, and the CIPP card and photo mismatch on `sewer-line-services`. Both are listed in the entry above. Neither is a copy question.
