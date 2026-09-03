@@ -260,6 +260,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Faucet repair, replacement, and sink installation for kitchens and bathrooms throughout Las Vegas.",
     href: "/faucet-sink-repair-installation/",
+    image:
+      "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-sink-repair-hero.webp",
+    imageAlt: "Faucet and sink repair and installation in Las Vegas",
     built: true,
   },
   {
@@ -276,6 +279,10 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Full plumbing fixture services for kitchens, bathrooms, and utility areas throughout the Las Vegas Valley.",
     href: "/plumbing-fixture-repair-replacement-installation/",
+    image:
+      "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-plumbing-fixture-repair-replacement-installation-hero.webp",
+    imageAlt:
+      "Plumbing fixture repair replacement and installation in Las Vegas",
     built: true,
   },
 ];

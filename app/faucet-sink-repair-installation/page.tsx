@@ -269,6 +269,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Toilet repair, replacement, and installation for Las Vegas homes and businesses.",
     href: "/toilet-repair-installation/",
+    image:
+      "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-hero.webp",
+    imageAlt: "Toilet repair and installation service in Las Vegas",
     built: true,
   },
   {
@@ -276,6 +279,10 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Full plumbing fixture services including faucets, sinks, showerheads, and bathroom hardware throughout Las Vegas.",
     href: "/plumbing-fixture-repair-replacement-installation/",
+    image:
+      "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-plumbing-fixture-repair-replacement-installation-hero.webp",
+    imageAlt:
+      "Plumbing fixture repair replacement and installation in Las Vegas",
     built: true,
   },
 ];

@@ -276,6 +276,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Sewer line inspection, cleaning, repair, and replacement for residential and commercial properties in Las Vegas.",
     href: "/sewer-line-services/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
+    imageAlt: "Sewer line services in Las Vegas",
     built: true,
   },
 ];

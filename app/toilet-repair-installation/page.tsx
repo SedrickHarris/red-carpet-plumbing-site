@@ -278,6 +278,10 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Repair, replacement, and installation of plumbing fixtures including faucets, sinks, toilets, and bathroom hardware.",
     href: "/plumbing-fixture-repair-replacement-installation/",
+    image:
+      "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-plumbing-fixture-repair-replacement-installation-hero.webp",
+    imageAlt:
+      "Plumbing fixture repair replacement and installation in Las Vegas",
     built: true,
   },
 ];
