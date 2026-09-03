@@ -258,6 +258,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Sewer line inspection, cleaning, repair, and replacement for residential and commercial properties in Las Vegas.",
     href: "/sewer-line-services/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
+    imageAlt: "Sewer line services in Las Vegas",
     built: true,
   },
   {
@@ -274,6 +277,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Trenchless pipe repair and replacement methods that minimize excavation and disruption to your property.",
     href: "/trenchless-piping/",
+    image:
+      "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-pipe-replacement-hero.webp",
+    imageAlt: "Trenchless piping service in Las Vegas",
     built: true,
   },
 ];

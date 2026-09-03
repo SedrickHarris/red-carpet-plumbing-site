@@ -259,6 +259,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Sewer line inspection, cleaning, repair, and replacement for commercial and residential properties.",
     href: "/sewer-line-services/",
+    image:
+      "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
+    imageAlt: "Sewer line services in Las Vegas",
     built: true,
   },
   {
@@ -266,6 +269,9 @@ const RELATED_SERVICES: RelatedService[] = [
     description:
       "Backflow prevention device installation, testing, and repair required for commercial properties and irrigation systems.",
     href: "/backflow-prevention/",
+    image:
+      "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-prevention-hero.webp",
+    imageAlt: "Backflow prevention services in Las Vegas",
     built: true,
   },
 ];
