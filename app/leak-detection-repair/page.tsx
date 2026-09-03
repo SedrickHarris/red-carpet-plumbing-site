@@ -105,7 +105,7 @@ const LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/leak-detection-repair/electronic/",
     image:
       "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-electronic-leak-detection-card.webp",
-    imageAlt: "Red Carpet Plumbing electronic leak detection in Las Vegas, NV",
+    imageAlt: "Acoustic detection gear beside an opened wall showing corroded pipes",
   },
   {
     title: "Wall and Ceiling Leak Detection",
@@ -114,7 +114,7 @@ const LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/leak-detection-repair/wall-ceiling/",
     image:
       "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-wall-ceiling-leak-detection-card.webp",
-    imageAlt: "Red Carpet Plumbing wall and ceiling leak detection in Las Vegas, NV",
+    imageAlt: "Moisture meters and thermal gun below a stained wall",
   },
   {
     title: "Slab Leak Detection",
@@ -123,7 +123,7 @@ const LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/leak-detection-repair/slab-leak/",
     image:
       "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-card.webp",
-    imageAlt: "Red Carpet Plumbing slab leak detection in Las Vegas, NV",
+    imageAlt: "Damp floor patch taped off beside acoustic locating equipment",
   },
   {
     title: "Underground Line Leak Detection",
@@ -132,7 +132,7 @@ const LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/leak-detection-repair/underground/",
     image:
       "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-underground-line-leak-detection-card.webp",
-    imageAlt: "Red Carpet Plumbing underground line leak detection in Las Vegas, NV",
+    imageAlt: "Pipe locator and paint markings over a buried line outdoors",
   },
   {
     title: "Gas Line Leak Detection",
@@ -141,7 +141,7 @@ const LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/leak-detection-repair/gas-line/",
     image:
       "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-gas-line-leak-detection-card.webp",
-    imageAlt: "Red Carpet Plumbing gas line leak detection in Las Vegas, NV",
+    imageAlt: "Black iron gas piping and regulator with a leak detector",
   },
   {
     title: "Water Supply Line Leak Repair",
@@ -150,7 +150,7 @@ const LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/leak-detection-repair/supply-line/",
     image:
       "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-water-supply-line-leak-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing water supply line leak repair in Las Vegas, NV",
+    imageAlt: "Dripping fitting inside an open wall access panel",
   },
   {
     title: "Slab Leak Repair",
@@ -159,7 +159,7 @@ const LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/leak-detection-repair/slab-repair/",
     image:
       "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing slab leak repair in Las Vegas, NV",
+    imageAlt: "Repair coupling on copper pipe in an opened slab cutout",
   },
   {
     title: "Commercial Leak Detection",
@@ -168,7 +168,7 @@ const LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/leak-detection-repair/commercial/",
     image:
       "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-commercial-leak-detection-card.webp",
-    imageAlt: "Red Carpet Plumbing commercial leak detection in Las Vegas, NV",
+    imageAlt: "Correlator and ground microphone in a commercial mechanical room",
   },
 ];
 
