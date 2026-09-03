@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T23:58:09.003Z",
+  "generatedAt": "2026-09-03T13:15:56.979Z",
   "routeCount": 115,
   "routes": [
     {
@@ -799,7 +799,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1650
+      "wordEstimate": 1641
     },
     {
       "route": "/enterprise/slab-leak-detection-repair",
@@ -939,7 +939,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 411
+      "wordEstimate": 383
     },
     {
       "route": "/garbage-disposal-repair-installation",
@@ -1039,7 +1039,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 377
+      "wordEstimate": 350
     },
     {
       "route": "/green-valley-plumbing-services",
@@ -4220,7 +4220,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 385
+      "wordEstimate": 375
     },
     {
       "route": "/plumbing-services",
@@ -4308,7 +4308,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 626
+      "wordEstimate": 605
     },
     {
       "route": "/service-areas",
@@ -4440,7 +4440,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 601
+      "wordEstimate": 604
     },
     {
       "route": "/spring-valley-plumbing-services",
@@ -5219,7 +5219,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 419
+      "wordEstimate": 383
     },
     {
       "route": "/trenchless-piping",
@@ -5268,7 +5268,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 392
+      "wordEstimate": 382
     },
     {
       "route": "/video-camera-plumbing-inspections",
@@ -5318,7 +5318,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 392
+      "wordEstimate": 396
     },
     {
       "route": "/water-heater-repair-installation",
@@ -5368,7 +5368,7 @@
         "Question",
         "Answer"
       ],
-      "wordEstimate": 583
+      "wordEstimate": 572
     },
     {
       "route": "/water-meter-pressure-regulator-services",
@@ -5418,7 +5418,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 392
+      "wordEstimate": 381
     },
     {
       "route": "/water-pipe-repair-replacement",
@@ -5468,7 +5468,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 408
+      "wordEstimate": 401
     }
   ],
   "warnings": []
