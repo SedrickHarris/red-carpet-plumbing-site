@@ -250,7 +250,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "24/7 emergency plumbing service for burst pipes, sewer backups, water heater failures, and gas line emergencies.",
     href: "/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
-    imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
+    imageAlt: "Water spraying under a sink and pooling on the floor",
     built: true,
   },
   {
@@ -259,7 +259,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Water heater diagnostics, repair, and installation for tank and tankless systems. Gas water heater work requires a licensed plumber.",
     href: "/water-heater-repair-installation/",
     image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
-    imageAlt: "Modern energy efficient water heater installation",
+    imageAlt: "Tank water heater in a garage with a pan and gauge tool",
     built: true,
   },
   {
@@ -268,7 +268,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Accurate detection and repair of hidden water leaks using advanced equipment before they cause serious damage.",
     href: "/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
+    imageAlt: "Moisture meter and gauge below a leaking pipe joint",
     built: true,
   },
   {

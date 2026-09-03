@@ -251,7 +251,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Full and partial repiping for homes and businesses with aging, corroded, or widespread pipe failures.",
     href: "/repiping/",
     image: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
-    imageAlt: "Whole home repiping service in Las Vegas",
+    imageAlt: "New copper and PEX risers in an opened hallway wall",
     built: true,
   },
   {
@@ -260,7 +260,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and underground connections.",
     href: "/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
+    imageAlt: "Moisture meter and gauge below a leaking pipe joint",
     built: true,
   },
   {
@@ -269,7 +269,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Detection and repair of water leaks beneath concrete slab foundations in Las Vegas homes and businesses.",
     href: "/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
-    imageAlt: "Home foundation showing signs of a slab leak",
+    imageAlt: "Leak analyzer and headphones beside taped tile in a hallway",
     built: true,
   },
   {
@@ -278,7 +278,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "24/7 emergency plumbing for burst pipes, major leaks, and urgent water supply failures throughout Las Vegas.",
     href: "/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
-    imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
+    imageAlt: "Water spraying under a sink and pooling on the floor",
     built: true,
   },
 ];

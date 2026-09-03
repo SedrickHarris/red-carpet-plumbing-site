@@ -226,7 +226,7 @@ const ALIANTE_WH_RELATED = [
     // P40 built — linking directly to Aliante-specific route
     href: "/north-las-vegas/aliante-area/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
-    imageAlt: "Emergency plumbing service in the Aliante area",
+    imageAlt: "Water spraying under a sink and pooling on the floor",
   },
   {
     title: "Drain Cleaning",
@@ -235,7 +235,7 @@ const ALIANTE_WH_RELATED = [
     // P41 built — linking directly to Aliante-specific route
     href: "/north-las-vegas/aliante-area/drain-cleaning/",
     image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
-    imageAlt: "Drain cleaning service in the Aliante area",
+    imageAlt: "Drum cable machine feeding a stucco wall cleanout",
   },
   {
     title: "Leak Detection and Repair",
@@ -244,7 +244,7 @@ const ALIANTE_WH_RELATED = [
     // ACTIVATED: P43 built and staged
     href: "/north-las-vegas/aliante-area/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    imageAlt: "Leak detection and repair in the Aliante area",
+    imageAlt: "Moisture meter and gauge below a leaking pipe joint",
   },
   {
     title: "Slab Leak Detection and Repair",
@@ -253,7 +253,7 @@ const ALIANTE_WH_RELATED = [
     // ACTIVATED: P44 built and staged
     href: "/north-las-vegas/aliante-area/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
-    imageAlt: "Slab leak detection and repair in the Aliante area",
+    imageAlt: "Leak analyzer and headphones beside taped tile in a hallway",
   },
 ];
 

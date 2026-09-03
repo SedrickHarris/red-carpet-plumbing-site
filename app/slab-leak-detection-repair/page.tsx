@@ -242,7 +242,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Accurate leak detection using advanced equipment to find hidden leaks before they cause serious damage.",
     href: "/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
+    imageAlt: "Moisture meter and gauge below a leaking pipe joint",
     built: true,
   },
   {
@@ -251,7 +251,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Fast response to burst pipes, major leaks, and plumbing emergencies throughout Las Vegas.",
     href: "/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
-    imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
+    imageAlt: "Water spraying under a sink and pooling on the floor",
     built: true,
   },
   {
@@ -260,7 +260,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Whole-home and commercial repiping to replace aging, corroded, or failing pipe systems.",
     href: "/repiping/",
     image: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
-    imageAlt: "Professional repiping service for a Las Vegas home",
+    imageAlt: "New copper and PEX risers in an opened hallway wall",
     built: true,
   },
   {
@@ -269,7 +269,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Professional drain cleaning and hydro jetting to clear clogs and restore proper flow.",
     href: "/drain-cleaning/",
     image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
-    imageAlt: "Hydro jetting equipment clearing a tough drain clog",
+    imageAlt: "Drum cable machine feeding a stucco wall cleanout",
     built: true,
   },
 ];

@@ -118,7 +118,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   {
     title: "Emergency Plumbing",
     image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
-    alt: "Emergency plumber responding to a plumbing call in Las Vegas",
+    alt: "Water spraying under a sink and pooling on the floor",
     description:
       "Fast response for burst pipes, severe leaks, sewer backups, water heater failures, and other urgent plumbing situations in Las Vegas.",
     href: "/emergency-plumbing/",
@@ -126,7 +126,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   {
     title: "Drain Cleaning",
     image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
-    alt: "Drain cleaning service in Las Vegas",
+    alt: "Drum cable machine feeding a stucco wall cleanout",
     description:
       "Professional drain cleaning for slow drains, clogged drains, and recurring blockages in kitchens, bathrooms, and main lines.",
     href: "/drain-cleaning/",
@@ -134,7 +134,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   {
     title: "Leak Detection and Repair",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    alt: "Plumber performing leak detection in a Las Vegas home",
+    alt: "Moisture meter and gauge below a leaking pipe joint",
     description:
       "Accurate leak detection and repair for visible and hidden leaks throughout your home or business plumbing system.",
     href: "/leak-detection-repair/",
@@ -142,7 +142,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   {
     title: "Water Heater Repair and Installation",
     image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
-    alt: "Modern energy efficient water heater installation",
+    alt: "Tank water heater in a garage with a pan and gauge tool",
     description:
       "Water heater diagnosis, repair, and installation for tank and tankless units in Las Vegas homes and businesses.",
     href: "/water-heater-repair-installation/",
@@ -150,7 +150,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   {
     title: "Slab Leak Detection and Repair",
     image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
-    alt: "Home foundation showing signs of a slab leak",
+    alt: "Leak analyzer and headphones beside taped tile in a hallway",
     description:
       "Detection and repair of water leaks beneath concrete slabs, protecting your foundation and preventing water damage.",
     href: "/slab-leak-detection-repair/",
@@ -169,7 +169,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   {
     title: "Repiping",
     image: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
-    alt: "Repiping services for Las Vegas homes",
+    alt: "New copper and PEX risers in an opened hallway wall",
     description:
       "Full and partial repiping services for homes and businesses with aging, corroded, or failing pipe systems.",
     href: "/repiping/",
@@ -237,7 +237,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
   {
     title: "Video Camera Plumbing Inspections",
     image: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspections-primary-hero.webp",
-    alt: "Video camera plumbing inspection in Las Vegas",
+    alt: "Sunlit driveway cleanout open beside an inspection monitor",
     description:
       "Camera inspection inside pipes to identify blockages, damage, root intrusion, and hidden plumbing problems.",
     href: "/video-camera-plumbing-inspections/",

@@ -121,19 +121,19 @@ const GREEN_VALLEY_FEATURED_SERVICES: ServiceLink[] = [
     title: "Repiping",
     href: "/green-valley/repiping/",
     image: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
-    imageAlt: "Repiping services in Green Valley, NV",
+    imageAlt: "New copper and PEX risers in an opened hallway wall",
   },
   {
     title: "Water Heater Repair and Installation",
     href: "/green-valley/water-heater-repair-installation/",
     image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
-    imageAlt: "Water heater repair and installation in Green Valley, NV",
+    imageAlt: "Tank water heater in a garage with a pan and gauge tool",
   },
   {
     title: "Slab Leak Detection and Repair",
     href: "/green-valley/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
-    imageAlt: "Slab leak detection and repair in Green Valley, NV",
+    imageAlt: "Leak analyzer and headphones beside taped tile in a hallway",
   },
 ];
 

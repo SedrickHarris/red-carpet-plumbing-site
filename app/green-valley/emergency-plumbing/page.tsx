@@ -164,7 +164,7 @@ const GV_EMERGENCY_RELATED = [
       "Non-invasive slab leak detection and repair for original Green Valley homes and Green Valley Ranch properties. Acoustic sensors, pressure testing, and thermal imaging.",
     href: "/green-valley/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
-    imageAlt: "Slab leak detection and repair in Green Valley, NV",
+    imageAlt: "Leak analyzer and headphones beside taped tile in a hallway",
   },
   {
     title: "Leak Detection and Repair in Green Valley",
@@ -172,7 +172,7 @@ const GV_EMERGENCY_RELATED = [
       "Non-invasive leak detection and repair for hidden leaks in Green Valley homes. Acoustic sensors, pressure testing, and thermal imaging.",
     href: "/green-valley/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    imageAlt: "Leak detection and repair in Green Valley, NV",
+    imageAlt: "Moisture meter and gauge below a leaking pipe joint",
   },
   {
     title: "Water Heater Repair and Installation in Green Valley",
@@ -180,7 +180,7 @@ const GV_EMERGENCY_RELATED = [
       "Tank and tankless water heater repair and installation for Green Valley homes. Hard water maintenance and City of Henderson code installations.",
     href: "/green-valley/water-heater-repair-installation/",
     image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
-    imageAlt: "Water heater repair and installation in Green Valley, NV",
+    imageAlt: "Tank water heater in a garage with a pan and gauge tool",
   },
   {
     title: "Drain Cleaning in Green Valley",
@@ -188,7 +188,7 @@ const GV_EMERGENCY_RELATED = [
       "Professional drain cleaning for Green Valley homes. Kitchen drains, bathroom drains, main sewer line cleaning, and hydro jetting.",
     href: "/green-valley/drain-cleaning/",
     image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
-    imageAlt: "Drain cleaning in Green Valley, NV",
+    imageAlt: "Drum cable machine feeding a stucco wall cleanout",
   },
   {
     title: "Emergency Plumbing in Henderson",
@@ -196,7 +196,7 @@ const GV_EMERGENCY_RELATED = [
       "Emergency plumbing response across the wider Henderson area, including Green Valley and Green Valley Ranch. Burst pipes, active leaks, and water heater failures.",
     href: "/henderson/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
-    imageAlt: "Emergency plumbing in Henderson, NV",
+    imageAlt: "Water spraying under a sink and pooling on the floor",
   },
 ];
 

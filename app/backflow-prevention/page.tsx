@@ -272,7 +272,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and plumbing connections throughout Las Vegas.",
     href: "/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
+    imageAlt: "Moisture meter and gauge below a leaking pipe joint",
     built: true,
   },
   {
@@ -281,7 +281,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "24/7 emergency plumbing service for urgent plumbing situations throughout the Las Vegas Valley.",
     href: "/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
-    imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
+    imageAlt: "Water spraying under a sink and pooling on the floor",
     built: true,
   },
 ];

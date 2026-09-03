@@ -153,7 +153,7 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     href: "/toilet-repair-installation/",
     image:
       "/images/services/toilet-repair-installation/red-carpet-plumbing-new-toilet-installation-las-vegas.webp",
-    imageAlt: "New toilet in place with a wax ring and bolts still on the floor",
+    imageAlt: "New toilet set with wax ring and bolts still out",
   },
   {
     title: "Wax Ring and Flange Repair",
@@ -252,7 +252,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Professional drain cleaning for toilet clogs, slow drains, and recurring blockages in kitchens and bathrooms.",
     href: "/drain-cleaning/",
     image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
-    imageAlt: "Hydro jetting equipment clearing a tough drain clog",
+    imageAlt: "Drum cable machine feeding a stucco wall cleanout",
     built: true,
   },
   {
@@ -261,7 +261,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and plumbing connections.",
     href: "/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
+    imageAlt: "Moisture meter and gauge below a leaking pipe joint",
     built: true,
   },
   {
@@ -270,7 +270,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "24/7 emergency plumbing service for overflowing toilets, sewer backups, and urgent plumbing situations throughout Las Vegas.",
     href: "/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
-    imageAlt: "Twenty four hour emergency plumbing service in Las Vegas",
+    imageAlt: "Water spraying under a sink and pooling on the floor",
     built: true,
   },
   {
