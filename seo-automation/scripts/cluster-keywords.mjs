@@ -354,8 +354,10 @@ async function main() {
   });
 
   // _categories is internal scoring context for score-opportunities.mjs; keep it on the record.
+  // Deliberately no generatedAt timestamp. Nothing reads it, and stamping one
+  // on every run left the tracked output dirty after a re-run that changed no
+  // clusters. Keeping it deterministic means a diff here is real signal.
   const output = {
-    generatedAt: new Date().toISOString(),
     clusterCount: outputClusters.length,
     clusters: outputClusters,
     warnings,

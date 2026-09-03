@@ -228,8 +228,10 @@ async function main() {
     );
   }
 
+  // Deliberately no generatedAt timestamp. Nothing reads it, and stamping one
+  // on every run left the tracked output dirty after a re-run that changed no
+  // opportunities. Keeping it deterministic means a diff here is real signal.
   const output = {
-    generatedAt: new Date().toISOString(),
     minScore: MIN_SCORE,
     opportunityCount: keptOpportunities.length,
     filteredCount,

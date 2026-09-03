@@ -25,7 +25,7 @@ These apply regardless of stack (Next.js, plain React, static site, etc.):
 - [ ] Build before deploy
 - [ ] Deploy artifacts must be regenerated from current source
 - [ ] Source must be at the intended commit, HEAD verified
-- [ ] Working tree must be clean before deploy unless dirty state is intentional and documented (see the `route-manifest.json` exception in section 9)
+- [ ] Working tree must be clean before deploy unless dirty state is intentional and documented (no standing exceptions; see section 9)
 - [ ] Local main must be synchronized with origin/main if production tracks origin/main
 - [ ] Run all deploy commands from the correct client repo, never from Site OS Master
 - [ ] Verify production content after deploy, not just deploy CLI success
@@ -128,11 +128,14 @@ Two repos are involved in every Site OS Master client build:
 Stop and do not deploy if any of these are true:
 
 - [ ] Working tree is not clean and the dirty state is not intentional and approved
-  - Exception: `docs/seo/route-manifest.json` is rewritten by the `prebuild` npm
-    lifecycle script on every `npm run build`, because `scan-routes.mjs` stamps a
-    fresh `generatedAt` on every run. It is therefore expected to show as modified
-    after any build, including a build that changed nothing else. A tree dirty in
-    that file alone does not block a deploy. Any other modified path still does.
+  - No exception applies to `docs/seo/route-manifest.json`. It used to be rewritten
+    by the `prebuild` npm lifecycle script on every `npm run build`, because
+    `scan-routes.mjs` stamped a fresh `generatedAt` on every run, so it was expected
+    to show as modified after any build. That stamp was removed, so the generator is
+    now deterministic: `prebuild` rewrites the file byte-for-byte identically unless
+    the route set actually changed. **A dirty `route-manifest.json` now means routes
+    were added, removed, or renamed.** Treat it as a real change to review and commit,
+    not as noise to wave through.
 - [ ] HEAD does not match the intended source commit
 - [ ] `cf:build` or equivalent build command failed
 - [ ] Build artifact freshness check failed (artifacts older than HEAD commit)
