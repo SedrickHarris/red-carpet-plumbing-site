@@ -106,7 +106,7 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/slab-leak-detection-repair/detection/",
     image:
       "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-card.webp",
-    imageAlt: "Red Carpet Plumbing slab leak detection in Las Vegas, NV",
+    imageAlt: "Floor tile marked with an X beside leak listening probes",
   },
   {
     title: "Spot Repair Through Concrete",
@@ -115,7 +115,7 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/slab-leak-detection-repair/spot-repair/",
     image:
       "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-spot-repair-concrete-card.webp",
-    imageAlt: "Red Carpet Plumbing slab leak spot repair through concrete in Las Vegas, NV",
+    imageAlt: "Tile lifted over a dirt trench with an air mover running",
   },
   {
     title: "Pipe Rerouting",
@@ -124,7 +124,7 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/slab-leak-detection-repair/pipe-rerouting/",
     image:
       "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-pipe-rerouting-card.webp",
-    imageAlt: "Red Carpet Plumbing slab leak pipe rerouting in Las Vegas, NV",
+    imageAlt: "New PEX lines routed through an opened wall cavity",
   },
   {
     title: "Epoxy Pipe Lining",
@@ -133,7 +133,7 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/slab-leak-detection-repair/epoxy-lining/",
     image:
       "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-epoxy-pipe-lining-card.webp",
-    imageAlt: "Red Carpet Plumbing epoxy pipe lining in Las Vegas, NV",
+    imageAlt: "Epoxy liner buckets and a cutaway pipe with white lining",
   },
   {
     title: "Pressure Testing",
@@ -142,7 +142,7 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/slab-leak-detection-repair/pressure-testing/",
     image:
       "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-pressure-testing-card.webp",
-    imageAlt: "Red Carpet Plumbing slab leak pressure testing in Las Vegas, NV",
+    imageAlt: "Gauge manifold on a stand hosed to a wall shutoff valve",
   },
   {
     title: "Thermal Imaging",
@@ -152,7 +152,7 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     image:
       "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-thermal-imaging-card.webp",
     imageAlt:
-      "Red Carpet Plumbing slab leak thermal imaging in Las Vegas, NV",
+      "Thermal camera screen showing a warm pipe run under tile",
   },
   {
     title: "Emergency Slab Leak Response",
@@ -161,7 +161,7 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/slab-leak-detection-repair/emergency/",
     image:
       "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-emergency-slab-leak-response-card.webp",
-    imageAlt: "Red Carpet Plumbing emergency slab leak response in Las Vegas, NV",
+    imageAlt: "Wet tile floor with an open equipment case and headphones",
   },
   {
     title: "Commercial Slab Leak Detection and Repair",
@@ -170,7 +170,7 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/slab-leak-detection-repair/commercial/",
     image:
       "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-commercial-slab-leak-detection-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing commercial slab leak detection and repair in Las Vegas, NV",
+    imageAlt: "Open floor pit and pipe chase in a high-rise corridor",
   },
 ];
 

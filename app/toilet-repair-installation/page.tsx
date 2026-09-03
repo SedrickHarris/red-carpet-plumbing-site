@@ -117,7 +117,7 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     href: "/toilet-repair-installation/",
     image:
       "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-running-toilet-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing running toilet repair in Las Vegas, NV",
+    imageAlt: "Float arm and flapper chain inside an open toilet tank",
   },
   {
     title: "Leaking Toilet Repair",
@@ -126,7 +126,7 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     href: "/toilet-repair-installation/",
     image:
       "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-leaking-toilet-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing leaking toilet repair in Las Vegas, NV",
+    imageAlt: "Water pooled at a toilet base with a drip at the bowl",
   },
   {
     title: "Toilet Clog Clearing",
@@ -135,7 +135,7 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     href: "/drain-cleaning/",
     image:
       "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-clog-clearing-card.webp",
-    imageAlt: "Red Carpet Plumbing toilet clog clearing in Las Vegas, NV",
+    imageAlt: "Drain machine with its cable staged beside a toilet",
   },
   {
     title: "Toilet Replacement",
@@ -144,7 +144,7 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     href: "/toilet-repair-installation/",
     image:
       "/images/services/toilet-repair-installation/red-carpet-plumbing-toilet-repair-installation-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing toilet replacement in Las Vegas, NV",
+    imageAlt: "Toilet with wax ring, tank bolts and a supply line staged nearby",
   },
   {
     title: "New Toilet Installation",
@@ -153,7 +153,7 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     href: "/toilet-repair-installation/",
     image:
       "/images/services/toilet-repair-installation/red-carpet-plumbing-new-toilet-installation-las-vegas.webp",
-    imageAlt: "Red Carpet Plumbing new toilet installation in Las Vegas, NV",
+    imageAlt: "New toilet in place with a wax ring and bolts still on the floor",
   },
   {
     title: "Wax Ring and Flange Repair",
@@ -162,7 +162,7 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     href: "/toilet-repair-installation/",
     image:
       "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-wax-ring-flange-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing toilet wax ring and flange repair in Las Vegas, NV",
+    imageAlt: "Toilet set aside exposing an open floor flange and bolts",
   },
   {
     title: "Toilet Tank Component Repair",
@@ -171,7 +171,7 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     href: "/toilet-repair-installation/",
     image:
       "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-tank-component-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing toilet tank component repair in Las Vegas, NV",
+    imageAlt: "Replacement fill valve and flapper laid out with the tank lid off",
   },
   {
     title: "Supply Line Repair and Replacement",
@@ -180,7 +180,7 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     href: "/toilet-repair-installation/",
     image:
       "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-supply-line-repair-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing toilet supply line repair and replacement in Las Vegas, NV",
+    imageAlt: "Braided supply line at an angle stop with a spare alongside",
   },
 ];
 
