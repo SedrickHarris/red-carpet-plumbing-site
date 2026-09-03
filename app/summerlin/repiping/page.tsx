@@ -136,35 +136,35 @@ const REPIPE_SERVICES = [
     body: "Whole-house repiping replaces all supply lines throughout the home from the main water line through to each fixture connection. This is the most comprehensive solution for Summerlin original village homes with aging copper pipe systems thinned by decades of hard water exposure. Red Carpet Plumbing performs whole-house repipes using PEX or copper depending on the home's specific conditions and the homeowner's preferences.",
     image:
       "/images/services/repiping/red-carpet-plumbing-whole-house-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing whole-house repiping in Summerlin, NV",
+    imageAlt: "Several wall openings down a hallway with drop cloths",
   },
   {
     label: "Partial repiping",
     body: "When only a section of the plumbing system is failing or has been identified as containing a problem material, partial repiping replaces the affected lines without repiping the entire home. Partial repipes are common when a specific area of a Summerlin home, such as the hot water distribution system or the kitchen supply lines, has developed recurring problems.",
     image:
       "/images/services/repiping/red-carpet-plumbing-partial-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing partial repiping in Summerlin, NV",
+    imageAlt: "New PEX in one bay beside patinated copper",
   },
   {
     label: "Polybutylene pipe replacement",
     body: "Polybutylene degrades in chlorinated water and can fail without warning. Red Carpet Plumbing replaces polybutylene supply lines with PEX or copper to eliminate the risk of sudden failure in Summerlin homes and older properties in the area built between 1975 and 1995.",
     image:
       "/images/services/repiping/red-carpet-plumbing-polybutylene-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing polybutylene pipe replacement in Summerlin, NV",
+    imageAlt: "Gray poly pipe and crimp fittings cut out of a wall",
   },
   {
     label: "Kitec pipe replacement",
     body: "Kitec has brass fittings that corrode in mineral-rich Las Vegas water and fail at connection points. Kitec is identifiable by orange or blue flexible pipes with brass fittings. Red Carpet Plumbing replaces Kitec plumbing in Summerlin homes and condominiums, including Summerlin South properties built from the late 1990s through approximately 2005.",
     image:
       "/images/services/repiping/red-carpet-plumbing-kitec-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing Kitec pipe replacement in Summerlin, NV",
+    imageAlt: "Tan flexible pipe with brass rings removed from a wall",
   },
   {
     label: "PEX and copper repiping",
     body: "PEX is a flexible pipe that resists hard water scale buildup, requires fewer fittings, and installs with less drywall disruption than rigid pipe. In Summerlin, PEX pipe runs through attic spaces require proper insulation because Las Vegas attic temperatures can exceed 150 degrees Fahrenheit. Red Carpet Plumbing installs PEX to current Clark County code including required attic insulation. Copper is a proven, durable material that is naturally resistant to bacteria growth and provides excellent water quality. Red Carpet Plumbing installs Type L copper, the standard for residential plumbing in the Las Vegas Valley.",
     image:
       "/images/services/repiping/red-carpet-plumbing-pex-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing PEX and copper repiping in Summerlin, NV",
+    imageAlt: "Access panel opened on a dense bank of PEX risers",
   },
 ];
 

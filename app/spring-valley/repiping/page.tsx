@@ -138,49 +138,49 @@ const REPIPE_SERVICES = [
     body: "We replace all supply lines throughout the home in a single coordinated project, from the main shutoff through all branch lines to every fixture. Whole-house repipes require a Clark County permit, which we pull and schedule for inspection as part of the project.",
     image:
       "/images/services/repiping/red-carpet-plumbing-whole-house-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing whole-house repiping in Spring Valley, NV",
+    imageAlt: "Several wall openings down a hallway with drop cloths",
   },
   {
     label: "Partial repiping",
     body: "When only a specific area of the home has defective or failing pipe material, a targeted partial repipe replaces the affected runs without disturbing the rest of the system. We assess whether the remaining pipe materials are in acceptable condition before recommending a partial approach.",
     image:
       "/images/services/repiping/red-carpet-plumbing-partial-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing partial repiping in Spring Valley, NV",
+    imageAlt: "New PEX in one bay beside patinated copper",
   },
   {
     label: "Polybutylene pipe replacement",
     body: "We remove all polybutylene supply lines and replace them with PEX or copper installed to current code. Polybutylene pipe replacement is a complete material removal, not a repair.",
     image:
       "/images/services/repiping/red-carpet-plumbing-polybutylene-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing polybutylene pipe replacement in Spring Valley, NV",
+    imageAlt: "Gray poly pipe and crimp fittings cut out of a wall",
   },
   {
     label: "Kitec pipe replacement",
     body: "We identify all Kitec piping and fittings in your Spring Valley home and replace the full Kitec system. Partial Kitec replacement is not recommended because the brass fitting corrosion risk applies throughout the system.",
     image:
       "/images/services/repiping/red-carpet-plumbing-kitec-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing Kitec pipe replacement in Spring Valley, NV",
+    imageAlt: "Tan flexible pipe with brass rings removed from a wall",
   },
   {
     label: "Galvanized steel pipe replacement",
     body: "For Spring Valley homes with original galvanized supply lines, we assess the full extent of the galvanized system, identify the areas of greatest corrosion and risk, and replace all galvanized supply lines as part of a whole-house or targeted repipe.",
     image:
       "/images/services/repiping/red-carpet-plumbing-galvanized-steel-pipe-replacement-card.webp",
-    imageAlt: "Red Carpet Plumbing galvanized steel pipe replacement in Spring Valley, NV",
+    imageAlt: "Rusted gate valve wheel on the old galvanized riser",
   },
   {
     label: "PEX repiping",
     body: "PEX (cross-linked polyethylene) is the standard modern replacement material for residential repiping in the Las Vegas Valley. It is flexible, resistant to mineral scale, and performs well in Las Vegas hard water conditions. In Spring Valley homes, PEX pipe runs through attic spaces require proper insulation because Las Vegas attic temperatures can exceed 150 degrees Fahrenheit. Red Carpet Plumbing installs PEX to current Clark County code including required attic insulation.",
     image:
       "/images/services/repiping/red-carpet-plumbing-pex-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing PEX repiping in Spring Valley, NV",
+    imageAlt: "Access panel opened on a dense bank of PEX risers",
   },
   {
     label: "Copper repiping",
     body: "Copper is a proven, durable material that is naturally resistant to bacterial growth and provides excellent water quality. Red Carpet Plumbing installs Type L copper, the standard for residential plumbing in the Las Vegas Valley.",
     image:
       "/images/services/repiping/red-carpet-plumbing-copper-repiping-card.webp",
-    imageAlt: "Red Carpet Plumbing copper repiping in Spring Valley, NV",
+    imageAlt: "Copper manifold with six ball valves in a framed opening",
   },
 ];
 
