@@ -118,7 +118,7 @@ const DRAIN_TYPES: DrainTypeCard[] = [
     href: "/drain-cleaning/kitchen/",
     image:
       "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-kitchen-drain-cleaning-card.webp",
-    imageAlt: "Red Carpet Plumbing kitchen drain cleaning in Las Vegas, NV",
+    imageAlt: "Drain machine cabled into a kitchen sink trap",
   },
   {
     title: "Bathroom Drain Cleaning",
@@ -127,7 +127,7 @@ const DRAIN_TYPES: DrainTypeCard[] = [
     href: "/drain-cleaning/bathroom/",
     image:
       "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-bathroom-drain-cleaning-card.webp",
-    imageAlt: "Red Carpet Plumbing bathroom drain cleaning in Las Vegas, NV",
+    imageAlt: "Drum machine cabled into a bathroom vanity drain",
   },
   {
     title: "Shower and Tub Drain Cleaning",
@@ -136,7 +136,7 @@ const DRAIN_TYPES: DrainTypeCard[] = [
     href: "/drain-cleaning/shower-tub/",
     image:
       "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-shower-tub-drain-cleaning-card.webp",
-    imageAlt: "Red Carpet Plumbing shower and tub drain cleaning in Las Vegas, NV",
+    imageAlt: "Drain cable entering a tiled shower floor drain",
   },
   {
     title: "Main Sewer Line Cleaning",
@@ -145,7 +145,7 @@ const DRAIN_TYPES: DrainTypeCard[] = [
     href: "/drain-cleaning/main-sewer-line/",
     image:
       "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-main-sewer-line-cleaning-card.webp",
-    imageAlt: "Red Carpet Plumbing main sewer line cleaning in Las Vegas, NV",
+    imageAlt: "Large drain machine cabled into an outdoor sewer cleanout",
   },
   {
     title: "Floor Drain Cleaning",
@@ -154,7 +154,7 @@ const DRAIN_TYPES: DrainTypeCard[] = [
     href: "/drain-cleaning/floor-drain/",
     image:
       "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-floor-drain-cleaning-card.webp",
-    imageAlt: "Red Carpet Plumbing floor drain cleaning in Las Vegas, NV",
+    imageAlt: "Cable entering an open floor drain with its grate removed",
   },
   {
     title: "Laundry Drain Cleaning",
@@ -163,7 +163,7 @@ const DRAIN_TYPES: DrainTypeCard[] = [
     href: "/drain-cleaning/laundry/",
     image:
       "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-laundry-drain-cleaning-card.webp",
-    imageAlt: "Red Carpet Plumbing laundry drain cleaning in Las Vegas, NV",
+    imageAlt: "Drain cable fed into a laundry standpipe beside a washer",
   },
   {
     title: "Hydro Jetting",
@@ -172,7 +172,7 @@ const DRAIN_TYPES: DrainTypeCard[] = [
     href: "/drain-cleaning/hydro-jetting/",
     image:
       "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-hydro-jetting-card.webp",
-    imageAlt: "Red Carpet Plumbing hydro jetting drain service in Las Vegas, NV",
+    imageAlt: "Trailer-mounted jetter and nozzles beside an open cleanout",
   },
   {
     title: "Video Camera Drain Inspection",
@@ -181,7 +181,7 @@ const DRAIN_TYPES: DrainTypeCard[] = [
     href: "/drain-cleaning/video-camera-inspection/",
     image:
       "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-video-camera-drain-inspection-card.webp",
-    imageAlt: "Red Carpet Plumbing video camera drain inspection in Las Vegas, NV",
+    imageAlt: "Drain camera cable entering a cleanout beside an open tool bag",
   },
 ];
 

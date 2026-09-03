@@ -112,7 +112,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/burst-pipe-repair/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-burst-pipe-repair-card.webp",
-    imageAlt: "Red Carpet Plumbing emergency burst pipe repair in Las Vegas, NV",
+    imageAlt: "Water spraying from a split in a corroded copper riser",
   },
   {
     title: "Sewer Backup and Overflow",
@@ -121,7 +121,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/sewer-backup/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-sewer-backup-overflow-card.webp",
-    imageAlt: "Red Carpet Plumbing emergency sewer backup and overflow service in Las Vegas, NV",
+    imageAlt: "Sewage water pooled around an open floor cleanout in a garage",
   },
   {
     title: "Water Heater Emergency",
@@ -130,7 +130,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/water-heater/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-water-heater-emergency-card.webp",
-    imageAlt: "Red Carpet Plumbing emergency water heater service in Las Vegas, NV",
+    imageAlt: "Water dripping from a tank water heater's drain valve",
   },
   {
     title: "Slab Leak Emergency",
@@ -139,7 +139,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/slab-leak/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-slab-leak-emergency-card.webp",
-    imageAlt: "Red Carpet Plumbing emergency slab leak service in Las Vegas, NV",
+    imageAlt: "Leak detection tools laid out on a wet tile floor",
   },
   {
     title: "Gas Line Emergency",
@@ -148,7 +148,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/gas-line/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-gas-line-emergency-card.webp",
-    imageAlt: "Red Carpet Plumbing emergency gas line service in Las Vegas, NV",
+    imageAlt: "Gas detector beside an exterior gas regulator and shutoff valve",
   },
   {
     title: "Major Active Water Leak",
@@ -157,7 +157,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/major-leak/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-major-active-water-leak-card.webp",
-    imageAlt: "Red Carpet Plumbing major active water leak response in Las Vegas, NV",
+    imageAlt: "Water spraying from a supply joint and pooling on the floor",
   },
   {
     title: "Overflowing Toilet",
@@ -166,7 +166,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/overflowing-toilet/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-overflowing-toilet-card.webp",
-    imageAlt: "Red Carpet Plumbing overflowing toilet emergency service in Las Vegas, NV",
+    imageAlt: "Water overflowing a toilet bowl onto the bathroom floor",
   },
   {
     title: "Loss of Water Supply",
@@ -175,7 +175,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/water-loss/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-loss-of-water-supply-card.webp",
-    imageAlt: "Red Carpet Plumbing emergency response to loss of water supply in Las Vegas, NV",
+    imageAlt: "Pressure gauge on an exterior water meter and regulator",
   },
 ];
 
