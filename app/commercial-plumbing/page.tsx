@@ -107,7 +107,6 @@ type ServiceTypeCard = {
   imageAlt?: string;
 };
 
-// TODO: cards below without an image prop still need an approved asset: Commercial Leak Detection and Repair, Commercial Pipe Repair and Repiping, and Emergency Commercial Plumbing.
 const COMMERCIAL_SERVICES: ServiceTypeCard[] = [
   {
     title: "Commercial Drain Cleaning",
@@ -132,6 +131,10 @@ const COMMERCIAL_SERVICES: ServiceTypeCard[] = [
     description:
       "Accurate detection and repair of leaks in commercial water supply lines, fixtures, and plumbing connections before they cause property damage.",
     href: "/leak-detection-repair/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-leak-detection-repair-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing commercial leak detection and repair in Las Vegas, NV",
   },
   {
     title: "Commercial Sewer Line Services",
@@ -156,6 +159,10 @@ const COMMERCIAL_SERVICES: ServiceTypeCard[] = [
     description:
       "Repair and replacement of aging or failing supply lines, drain lines, and commercial pipe systems in businesses and multi-unit buildings.",
     href: "/repiping/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-pipe-repair-repiping-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing commercial pipe repair and repiping in Las Vegas, NV",
   },
   {
     title: "Grease Trap and Floor Drain Service",
@@ -171,6 +178,10 @@ const COMMERCIAL_SERVICES: ServiceTypeCard[] = [
     description:
       "24/7 emergency plumbing response for burst pipes, sewer backups, water heater failures, and major leaks in commercial properties throughout Las Vegas.",
     href: "/emergency-plumbing/",
+    image:
+      "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-emergency-commercial-plumbing-card.webp",
+    imageAlt:
+      "Red Carpet Plumbing emergency commercial plumbing in Las Vegas, NV",
   },
 ];
 
@@ -533,8 +544,6 @@ export default function CommercialPlumbingPage() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                {/* TODO: some cards render an approved image; these still need an
-                    asset: Commercial Leak Detection and Repair, Commercial Pipe Repair and Repiping, and Emergency Commercial Plumbing. */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                   {COMMERCIAL_SERVICES.map((card, index) => (
                     <ServiceCard
