@@ -252,7 +252,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Professional drain cleaning for kitchen drains, disposal discharge lines, and main sewer lines throughout Las Vegas.",
     href: "/drain-cleaning/",
     image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
-    imageAlt: "Hydro jetting equipment clearing a tough drain clog",
+    imageAlt: "Drum cable machine feeding a stucco wall cleanout",
     built: true,
   },
   {
@@ -271,7 +271,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and under-sink connections.",
     href: "/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
+    imageAlt: "Moisture meter and gauge below a leaking pipe joint",
     built: true,
   },
   {

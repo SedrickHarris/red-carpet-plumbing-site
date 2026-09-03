@@ -187,7 +187,7 @@ const NLV_SLAB_RELATED = [
       "Fast response to burst pipes, active slab leaks, sewer backups, and other plumbing emergencies throughout North Las Vegas.",
     href: "/north-las-vegas/emergency-plumbing/",
     image: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp",
-    imageAlt: "Emergency plumbing service in North Las Vegas, NV",
+    imageAlt: "Water spraying under a sink and pooling on the floor",
   },
   {
     title: "Leak Detection and Repair in North Las Vegas",
@@ -195,7 +195,7 @@ const NLV_SLAB_RELATED = [
       "Non-invasive leak detection and repair for hidden leaks in North Las Vegas homes. Acoustic sensors, pressure testing, and thermal imaging.",
     href: "/north-las-vegas/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    imageAlt: "Leak detection and repair in North Las Vegas, NV",
+    imageAlt: "Moisture meter and gauge below a leaking pipe joint",
   },
   {
     title: "Drain Cleaning in North Las Vegas",
@@ -203,7 +203,7 @@ const NLV_SLAB_RELATED = [
       "Professional drain cleaning for North Las Vegas homes including older galvanized drain systems in central neighborhoods.",
     href: "/north-las-vegas/drain-cleaning/",
     image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
-    imageAlt: "Drain cleaning in North Las Vegas, NV",
+    imageAlt: "Drum cable machine feeding a stucco wall cleanout",
   },
   {
     title: "Water Heater Repair and Installation in North Las Vegas",
@@ -211,7 +211,7 @@ const NLV_SLAB_RELATED = [
       "Tank and tankless water heater repair and installation for North Las Vegas homes under hard water conditions.",
     href: "/north-las-vegas/water-heater-repair-installation/",
     image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
-    imageAlt: "Water heater repair and installation in North Las Vegas, NV",
+    imageAlt: "Tank water heater in a garage with a pan and gauge tool",
   },
 ];
 

@@ -253,7 +253,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Accurate detection and repair of hidden leaks in supply lines, fixtures, and underground connections.",
     href: "/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
+    imageAlt: "Moisture meter and gauge below a leaking pipe joint",
     built: true,
   },
   {
@@ -272,7 +272,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Water heater repair and installation for tank and tankless systems. High water pressure accelerates water heater wear.",
     href: "/water-heater-repair-installation/",
     image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
-    imageAlt: "Modern energy efficient water heater installation",
+    imageAlt: "Tank water heater in a garage with a pan and gauge tool",
     built: true,
   },
   {
@@ -281,7 +281,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Full and partial repiping for homes with aging supply pipe systems that have been damaged by years of excessive water pressure.",
     href: "/repiping/",
     image: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
-    imageAlt: "Whole home repiping service in Las Vegas",
+    imageAlt: "New copper and PEX risers in an opened hallway wall",
     built: true,
   },
 ];

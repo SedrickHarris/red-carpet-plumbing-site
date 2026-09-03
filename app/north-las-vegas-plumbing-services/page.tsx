@@ -122,21 +122,21 @@ const NORTH_LAS_VEGAS_FEATURED_SERVICES: ServiceLink[] = [
     href: "/north-las-vegas/repiping/",
     image:
       "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
-    imageAlt: "Repiping services in North Las Vegas",
+    imageAlt: "New copper and PEX risers in an opened hallway wall",
   },
   {
     title: "Water Heater Repair and Installation",
     href: "/north-las-vegas/water-heater-repair-installation/",
     image:
       "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
-    imageAlt: "Water heater repair and installation in North Las Vegas",
+    imageAlt: "Tank water heater in a garage with a pan and gauge tool",
   },
   {
     title: "Slab Leak Detection and Repair",
     href: "/north-las-vegas/slab-leak-detection-repair/",
     image:
       "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
-    imageAlt: "Slab leak detection and repair in North Las Vegas",
+    imageAlt: "Leak analyzer and headphones beside taped tile in a hallway",
   },
 ];
 

@@ -250,7 +250,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Specialized slab leak detection and repair for Las Vegas homes where shifting desert soils and hard water accelerate pipe damage.",
     href: "/slab-leak-detection-repair/",
     image: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
-    imageAlt: "Home foundation showing signs of a slab leak",
+    imageAlt: "Leak analyzer and headphones beside taped tile in a hallway",
   },
   {
     title: "Drain Cleaning",
@@ -258,7 +258,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Professional drain cleaning and hydro jetting to clear clogs and restore proper flow.",
     href: "/drain-cleaning/",
     image: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp",
-    imageAlt: "Hydro jetting equipment clearing a tough drain clog",
+    imageAlt: "Drum cable machine feeding a stucco wall cleanout",
   },
   {
     title: "Leak Detection and Repair",
@@ -266,7 +266,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Accurate leak detection using advanced equipment to find hidden leaks before they cause serious damage.",
     href: "/leak-detection-repair/",
     image: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp",
-    imageAlt: "Advanced leak detection equipment in use at a Las Vegas home",
+    imageAlt: "Moisture meter and gauge below a leaking pipe joint",
   },
   {
     title: "Water Heater Repair and Installation",
@@ -274,7 +274,7 @@ const RELATED_SERVICES: RelatedService[] = [
       "Water heater diagnostics, repair, and installation for traditional and tankless systems.",
     href: "/water-heater-repair-installation/",
     image: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp",
-    imageAlt: "Modern energy efficient water heater installation",
+    imageAlt: "Tank water heater in a garage with a pan and gauge tool",
   },
 ];
 
