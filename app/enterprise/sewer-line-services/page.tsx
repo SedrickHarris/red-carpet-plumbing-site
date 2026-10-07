@@ -1,0 +1,766 @@
+// FLAG: VERIFY before publishing:
+// - Telephone +17025679172: project-established value; confirm before launch.
+// - License #0048585A, C-1 Plumbing and Heating: project-established value;
+//   confirm before launch.
+// - "Transparent pricing with no hidden fees": source-site claim; confirm
+//   before launch.
+// - "4.8-star rated" in the hero subheading: visible text only, matching the
+//   existing sewer pages. Deliberately NOT expressed as rating or review
+//   schema: no verified review count or source has been provided.
+// - Clark County Water Reclamation District sentences (local card and FAQ):
+//   sourced from the District's published Service Rules, Chapter 1 (cleanwaterteam.com).
+//   Rule 1.1.8: service area is unincorporated Clark County. Rule 1.1.9: the
+//   customer maintains, repairs, and replaces the lateral from the structure to
+//   the connection point. Rule 1.1.21(b): the owner keeps ownership of laterals
+//   from the property up to the public right-of-way or easement. Rule 1.1.14(a):
+//   lateral repairs inside a public easement or right-of-way need advance
+//   District approval and an inspection with a District employee present.
+//   Confirm the service provider for each address before publishing.
+// FLAG comments appear only in source. No FLAG text appears in any visible
+// string or schema text.
+//
+// Enterprise service-location schema pattern (matches the other city sewer and
+// drain pages): Plumber provider with telephone; areaServed Place (Enterprise)
+// containedInPlace AdministrativeArea (Clark County) containedInPlace State
+// (Nevada), per the Batch 6 normalization; no social-profile links, no credential node, no
+// rating or review schema, no ZIP data. 5 separate JsonLd blocks in order
+// WebPage, BreadcrumbList, Service, HowTo, FAQPage. HowTo and FAQPage derive
+// from the same consts that render visibly, so schema text and page text
+// cannot drift apart.
+//
+// Hero uses the shared sewer-line-services hero asset, also used by the core
+// /sewer-line-services/ page and the Henderson, Las Vegas, and North Las Vegas
+// variants. No city-specific sewer image exists.
+
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Button } from "@/components/Button";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { CTASection } from "@/components/CTASection";
+import { HeroSection } from "@/components/HeroSection";
+import { JsonLd } from "@/components/JsonLd";
+import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
+import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+
+export const metadata: Metadata = {
+  // FLAG: VERIFY license #0048585A in the description before publishing.
+  title: "Sewer Line Services in Enterprise, NV | Red Carpet Plumbing",
+  description:
+    "Sewer line inspection, cleaning, repair, and replacement in Enterprise, NV. Camera inspections and trenchless options. NV #0048585A. Call (702) 567-9172.",
+  alternates: {
+    canonical: "https://redcarpetplumbing.com/enterprise/sewer-line-services/",
+  },
+  openGraph: {
+    title: "Sewer Line Services in Enterprise, NV | Red Carpet Plumbing",
+    description:
+      "Sewer line inspection, cleaning, repair, and replacement in Enterprise, NV. Camera inspections and trenchless options. NV #0048585A. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/enterprise/sewer-line-services/",
+    siteName: "Red Carpet Plumbing",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: { index: true, follow: true },
+};
+
+type LinkSeg = string | { href: string; text: string };
+
+// FLAG: VERIFY "4.8-star rated" before publishing. Visible text only, not in schema.
+const HERO_SUBHEADING =
+  "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement for homes and businesses throughout Enterprise, NV. Trenchless options available. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.";
+
+const HERO_TRUST_ITEMS = [
+  // FLAG: VERIFY license #0048585A before publishing.
+  "NV Licensed, #0048585A",
+  "Sewer Camera Inspection Available",
+  "Residential and Commercial Sewer Service",
+  // FLAG: VERIFY transparent pricing claim before publishing.
+  "Transparent Pricing, No Hidden Fees",
+];
+
+// Section 2: direct answer.
+const DIRECT_ANSWER = {
+  heading: "Sewer Line Problems in Enterprise, and How We Fix Them",
+  p1: "Slow drains in several fixtures, sewage odors, and repeat backups are common signs of a sewer line problem in Enterprise homes and businesses. Red Carpet Plumbing finds the cause with a camera inspection, then cleans, repairs, relines, or replaces the line, including trenchless options that limit digging. Call (702) 567-9172 to schedule an inspection.",
+  // FLAG: VERIFY license #0048585A before publishing.
+  // FLAG: VERIFY transparent pricing claim before publishing.
+  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#0048585A). We explain your options after the camera inspection and provide transparent pricing with no hidden fees.",
+  p3: "Need sewer line service in Enterprise? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get an inspection on the schedule.",
+};
+
+// Section 3: why Enterprise properties develop sewer line problems (H3 article cards).
+const LOCAL_CARDS_HEADING = "Why Enterprise Properties Develop Sewer Line Problems";
+const LOCAL_CARDS: { title: string; body: string; tail?: LinkSeg[] }[] = [
+  {
+    title: "Newer Communities Entering Their First Service Cycle",
+    body: "Homes built in the late 1990s and early 2000s in communities like Rhodes Ranch and Mountain's Edge are now 20 to 25 years old. Their sewer lines are younger than those in the valley's older neighborhoods, but joint issues, settling, and the first signs of root growth can start to show at this age. A camera inspection gives you a baseline and catches small problems early.",
+  },
+  {
+    title: "Caliche and Soil Movement in the Southwest Valley",
+    body: "Like the rest of the Las Vegas Valley, Enterprise sits on caliche and expansive clay soils that shift with temperature changes. Over time, soil movement can leave a low spot, called a belly, in a sewer line where water and solids collect and cause repeat blockages.",
+  },
+  {
+    title: "Commercial Parks and the 215 Corridor",
+    body: "Enterprise includes commercial parks and business properties along the 215 Beltway corridor. A commercial sewer line often serves many fixtures, so a blockage can interrupt a whole building. Grease buildup and flow restrictions are common causes, and a camera inspection finds them before they become a backup.",
+    tail: [" See our ", { href: "/enterprise/commercial-plumbing/", text: "commercial plumbing in Enterprise" }, " page for more."],
+  },
+];
+
+// Section 4: sewer line services (H3 article cards).
+const SERVICES_HEADING = "Sewer Line Services in Enterprise";
+const SERVICES_INTRO = "Red Carpet Plumbing provides the full range of sewer line services for Enterprise homes and businesses.";
+const SERVICES: { title: string; body: string; tail?: LinkSeg[] }[] = [
+  {
+    title: "Sewer Camera Inspection",
+    body: "A high-resolution camera runs through a cleanout access point so we can see blockages, roots, cracks, offset joints, and bellies without digging. It is a useful baseline for newer homes and a smart check before you buy.",
+    tail: [" See our ", { href: "/video-camera-plumbing-inspections/", text: "video camera plumbing inspections" }, " page for more."],
+  },
+  {
+    title: "Sewer Line Cleaning",
+    body: "Cable machines and hydro jetting remove grease, scale, debris, and soft roots, matched to the type and location of the blockage.",
+    tail: [" For a single clogged fixture or floor drain, see our ", { href: "/enterprise/drain-cleaning/", text: "Enterprise drain cleaning" }, " page."],
+  },
+  {
+    title: "Root Intrusion Removal",
+    body: "We remove roots mechanically and with hydro jetting, then use the camera to check whether they damaged the pipe.",
+  },
+  {
+    title: "Sewer Line Repair",
+    body: "Cracks, offset joints, and damaged sections can often be repaired without replacing the entire line. We choose the method based on where the damage is and what sits above it.",
+  },
+  {
+    title: "Trenchless Sewer Repair",
+    body: "For lines that qualify, CIPP lining and pipe bursting repair or replace a sewer line without a full-length trench, which helps protect driveways, parking areas, and landscaping.",
+  },
+  {
+    title: "Sewer Line Replacement",
+    body: "When a line has collapsed or is too damaged to repair, we replace it using trenchless methods where the line qualifies and traditional excavation where it does not.",
+  },
+];
+
+// Mid-page CTA band (charcoal).
+const MID_CTA = {
+  headline: "Sewer Trouble at Your Enterprise Property?",
+  body: "Red Carpet Plumbing handles backups, root intrusion, damaged lines, and trenchless repair for Enterprise homes and businesses. Call now and describe what is happening, or request service online.",
+};
+
+// Section 5: warning signs.
+const WARNING_SIGNS_HEADING = "Signs of a Sewer Line Problem in Enterprise";
+const WARNING_SIGNS_INTRO = "Call for a camera inspection if you notice any of these signs.";
+const WARNING_SIGNS = [
+  "Slow drains or backups in more than one fixture at the same time",
+  "Sewage odor inside the building, in the yard, or near the foundation",
+  "Gurgling from toilets or floor drains when other fixtures run",
+  "Water backing up into a tub, shower, or floor drain when a toilet is flushed",
+  "Wet or unusually green areas along the sewer line path",
+  "Drain problems that come back soon after professional clearing",
+];
+
+// Section 6: process. Single source for the visible steps and the HowTo schema.
+const PROCESS_HEADING = "How We Handle Sewer Line Service in Enterprise";
+const PROCESS_STEPS: { name: string; body: string }[] = [
+  {
+    name: "Inspect the sewer line with a camera.",
+    body: "When the condition of the line is unknown, a licensed plumber runs a camera through the cleanout to find the cause and location of the problem.",
+  },
+  {
+    name: "Review the findings and your options.",
+    body: "We explain what the camera found and what it means, then walk through the repair options that apply, including trenchless repair where the line qualifies.",
+  },
+  {
+    name: "Complete the approved service.",
+    body: "After you approve the work, we complete the cleaning, repair, relining, or replacement that fits your line, working within the Clark County permit process that applies to your address.",
+  },
+  {
+    name: "Confirm the result.",
+    body: "For cleaning and repair work, we run a final camera check to confirm the line is clear and the repair is holding.",
+  },
+];
+
+// Section 7: why choose.
+const WHY_CHOOSE_HEADING = "Why Enterprise Property Owners Choose Red Carpet Plumbing";
+const WHY_CHOOSE_ITEMS = [
+  // FLAG: VERIFY license #0048585A before publishing.
+  "Licensed Nevada plumbers, NV License #0048585A, C-1 Plumbing and Heating",
+  "Camera inspection first, so every recommendation is based on what is actually in your line",
+  "Service for both homes and commercial properties in Enterprise and along the 215 Beltway corridor",
+  "Clear options explained before work begins, including trenchless repair where it fits",
+  // FLAG: VERIFY transparent pricing claim before publishing.
+  "Transparent pricing with no hidden fees",
+];
+
+// Section 8: areas. Chips are plain text; cross-links are in the paragraph.
+const AREAS_HEADING = "Sewer Line Services Across Enterprise";
+const AREAS_INTRO = "Red Carpet Plumbing provides sewer line services throughout Enterprise and the Southwest Las Vegas area. Call (702) 567-9172 to confirm coverage for your address.";
+const AREA_CHIPS = [
+  "Southwest Las Vegas",
+  "Enterprise 215 Corridor",
+  "Southern Highlands Area",
+  "Silverado Ranch Area",
+  "Rhodes Ranch Area",
+  "Mountain's Edge Area",
+  "Inspirada Adjacent",
+  "Enterprise Commercial Parks",
+];
+const AREAS_CROSS_LINKS: LinkSeg[] = ["We also provide sewer line services in ", { href: "/spring-valley/sewer-line-services/", text: "Spring Valley" }, " and ", { href: "/las-vegas/sewer-line-services/", text: "Las Vegas" }, ". For every service we offer in your community, visit our ", { href: "/enterprise-plumbing-services/", text: "Enterprise plumbing services" }, " page."];
+
+// Section 9: FAQs. Single source for the visible accordion and the FAQPage schema.
+const FAQS: { question: string; answer: string }[] = [
+  {
+    question: "What causes sewer line backups in Enterprise?",
+    answer: "Even in newer communities, backups come from root growth, offset or separated joints, low spots from soil movement, and grease or debris buildup. A camera inspection identifies the exact cause before any repair begins.",
+  },
+  {
+    question: "Are sewer line problems common in newer Enterprise homes?",
+    answer: "They are less common than in older neighborhoods, but homes built in the late 1990s and early 2000s in communities like Rhodes Ranch and Mountain's Edge are now 20 to 25 years old. A camera inspection gives you a baseline and catches small problems early.",
+  },
+  // FLAG: VERIFY Clark County Water Reclamation District sentence (Service Rules 1.1.8, 1.1.9, 1.1.14(a), 1.1.21(b)); confirm the service provider for each address before publishing.
+  {
+    question: "Who is responsible for the sewer line on my Enterprise property?",
+    answer: "In unincorporated Clark County, the Clark County Water Reclamation District's service rules make the property owner responsible for the sewer lateral, the pipe from the building to the public sewer connection. Repairs inside a public easement or right-of-way need the District's advance approval and inspection.",
+  },
+  {
+    question: "Who handles plumbing permits in Enterprise?",
+    answer: "Enterprise is an unincorporated Clark County community, so plumbing permits and inspections are handled through Clark County, not the City of Las Vegas. Red Carpet Plumbing works within the applicable Clark County process for your address.",
+  },
+  {
+    question: "Should I get a sewer camera inspection before buying a home in Enterprise?",
+    answer: "A camera inspection before closing shows the condition of the sewer line, including roots, cracks, and low spots that are easy to miss otherwise. It gives you a clear picture of the line before you commit and helps you plan for repairs or maintenance.",
+  },
+  {
+    question: "Do you service commercial sewer lines in Enterprise?",
+    answer: "Yes. Red Carpet Plumbing services sewer lines for commercial properties in Enterprise, including businesses along the 215 Beltway corridor, from camera inspection through repair or replacement. Call (702) 567-9172 to discuss your property and schedule an inspection.",
+  },
+  {
+    question: "Do you offer same-day sewer line service in Enterprise?",
+    answer: "Same-day sewer line service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address. When you call, tell us what you are seeing, such as slow drains in several fixtures, gurgling, or a backup, so we can schedule the right visit.",
+  },
+];
+
+// Section 10: related services.
+const RELATED_SERVICES: { label: string; href: string }[] = [
+  {
+    label: "Drain Cleaning in Enterprise",
+    href: "/enterprise/drain-cleaning/",
+  },
+  {
+    label: "Commercial Plumbing in Enterprise",
+    href: "/enterprise/commercial-plumbing/",
+  },
+  {
+    label: "Repiping in Enterprise",
+    href: "/enterprise/repiping/",
+  },
+  {
+    label: "Leak Detection and Repair in Enterprise",
+    href: "/enterprise/leak-detection-repair/",
+  },
+  {
+    label: "Video Camera Plumbing Inspections",
+    href: "/video-camera-plumbing-inspections/",
+  },
+  {
+    label: "Sewer Line Services (all of the Las Vegas Valley)",
+    href: "/sewer-line-services/",
+  },
+];
+
+// Section 11: final CTA.
+const FINAL_CTA = {
+  headline: "Sewer Line Problem in Enterprise? We Can Help.",
+  // FLAG: VERIFY transparent pricing claim before publishing.
+  body: "Red Carpet Plumbing provides camera inspection, cleaning, repair, trenchless repair, and replacement for Enterprise homes and businesses. Transparent pricing and licensed plumbers.",
+};
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Sewer Line Services in Enterprise, NV | Red Carpet Plumbing",
+  description:
+    "Sewer line inspection, cleaning, repair, and replacement in Enterprise, NV. Camera inspections and trenchless options. NV #0048585A. Call (702) 567-9172.",
+  url: "https://redcarpetplumbing.com/enterprise/sewer-line-services/",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Red Carpet Plumbing",
+    url: "https://redcarpetplumbing.com",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://redcarpetplumbing.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Enterprise Plumbing Services",
+      item: "https://redcarpetplumbing.com/enterprise-plumbing-services/",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Sewer Line Services in Enterprise",
+      item: "https://redcarpetplumbing.com/enterprise/sewer-line-services/",
+    },
+  ],
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Sewer Line Services",
+  serviceType: "Sewer Line Services",
+  // FLAG: VERIFY license #0048585A in the description before publishing.
+  description:
+    "Red Carpet Plumbing provides sewer line camera inspection, cleaning, root intrusion removal, repair, trenchless repair, and replacement for homes and businesses in Enterprise, NV. Nevada Contractor License #0048585A.",
+  provider: {
+    "@type": "Plumber",
+    name: "Red Carpet Plumbing",
+    url: "https://redcarpetplumbing.com",
+    // FLAG: VERIFY telephone before publishing.
+    telephone: "+17025679172",
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Enterprise",
+    containedInPlace: {
+      "@type": "AdministrativeArea",
+      name: "Clark County",
+      containedInPlace: {
+        "@type": "State",
+        name: "Nevada",
+      },
+    },
+  },
+};
+
+// HowTo schema included because Section 6 renders the matching visible numbered
+// process steps. Derived from PROCESS_STEPS for a guaranteed text match.
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How We Handle Sewer Line Service in Enterprise",
+  description: "The process Red Carpet Plumbing follows for sewer line service in Enterprise, NV.",
+  step: PROCESS_STEPS.map((s, i) => ({
+    "@type": "HowToStep",
+    position: i + 1,
+    name: s.name,
+    text: s.body,
+  })),
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+const LINK_CLASS =
+  "font-semibold text-brand-dark underline hover:text-brand-dark/70";
+const LINK_CLASS_ON_DARK =
+  "font-semibold text-white underline underline-offset-4 hover:text-white/80";
+
+function renderTail(tail: LinkSeg[], className: string = LINK_CLASS) {
+  return tail.map((seg, i) =>
+    typeof seg === "string" ? (
+      seg
+    ) : (
+      <Link key={i} href={seg.href} className={className}>
+        {seg.text}
+      </Link>
+    ),
+  );
+}
+
+export default function EnterpriseSewerLinePage() {
+  return (
+    <>
+      <JsonLd data={webpageSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={howToSchema} />
+      <JsonLd data={faqSchema} />
+
+      <SiteHeader />
+
+      <main id="main" className="flex-1 bg-white">
+        {/* SECTION 1: HERO */}
+        <HeroSection
+          breadcrumbs={<Breadcrumbs trail={[
+            { label: "Home", href: "/" },
+            {
+              label: "Enterprise Plumbing Services",
+              href: "/enterprise-plumbing-services/",
+            },
+            { label: "Sewer Line Services in Enterprise" },
+          ]} variant="dark" />}
+          headingLevel="h1"
+          headline={
+            <>
+              Sewer Line Services
+              <br /> in Enterprise, NV
+            </>
+          }
+          subheading={HERO_SUBHEADING}
+          trustItems={HERO_TRUST_ITEMS}
+          primaryCTA={{
+            label: "Call Now: (702) 567-9172",
+            href: "tel:+17025679172",
+          }}
+          secondaryCTA={{
+            label: "Request Service",
+            href: "/contact/",
+          }}
+          // FLAG: VERIFY transparent pricing claim before publishing.
+          ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
+          formSlot={<QuoteFormPlaceholder title="Get Sewer Line Help" />}
+          backgroundImage={{
+            src: "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-hero.webp",
+            alt: "Sewer line services in Enterprise, NV",
+          }}
+        />
+
+        {/* SECTION 2: DIRECT ANSWER */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
+              <h2 className="text-2xl tracking-tight text-brand-dark sm:text-3xl">
+                {DIRECT_ANSWER.heading}
+              </h2>
+              <p className="mt-4 text-lg leading-8 text-brand-dark/80">
+                {DIRECT_ANSWER.p1}
+              </p>
+              <p className="mt-4 text-base leading-7 text-brand-dark/80">
+                {DIRECT_ANSWER.p2}
+              </p>
+              <p className="mt-4 text-base leading-7 text-brand-dark/80">
+                {DIRECT_ANSWER.p3}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 3: LOCAL CARDS */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-10 lg:pb-24">
+            <div className="text-left">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                {LOCAL_CARDS_HEADING}
+              </h2>
+            </div>
+            <div className="mt-10 space-y-6">
+              {LOCAL_CARDS.map((c) => (
+                <article
+                  key={c.title}
+                  className="rounded-2xl bg-brand-surface-alt p-6 ring-1 ring-brand-surface-alt sm:p-8"
+                >
+                  <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
+                    {c.title}
+                  </h3>
+                  <p className="mt-3 text-base leading-7 text-brand-dark/80">
+                    {c.body}
+                    {c.tail ? renderTail(c.tail) : null}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 4: SERVICES */}
+        <section className="bg-brand-surface-alt">
+          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="text-left">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                {SERVICES_HEADING}
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                {SERVICES_INTRO}
+              </p>
+            </div>
+            <div className="mt-10 space-y-6">
+              {SERVICES.map((s) => (
+                <article
+                  key={s.title}
+                  className="rounded-2xl bg-white p-6 ring-1 ring-brand-surface-alt sm:p-8"
+                >
+                  <h3 className="text-xl font-semibold text-brand-dark sm:text-2xl">
+                    {s.title}
+                  </h3>
+                  <p className="mt-3 text-base leading-7 text-brand-dark/80">
+                    {s.body}
+                    {s.tail ? renderTail(s.tail) : null}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 4B: MID-PAGE CTA */}
+        <section className="bg-brand-charcoal text-white">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+              <div>
+                <h2 className="text-3xl tracking-tight text-white sm:text-4xl lg:text-5xl">
+                  {MID_CTA.headline}
+                </h2>
+                <p className="mt-6 text-lg leading-8 text-white/90">
+                  {MID_CTA.body}
+                </p>
+              </div>
+              <div className="flex flex-col items-start gap-4 lg:items-end">
+                <Button href="tel:+17025679172" variant="inverse" size="2xl">
+                  Call Now: (702) 567-9172
+                </Button>
+                <Button href="/contact/" variant="inverse-outline" size="lg">
+                  Request Service
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 5: WARNING SIGNS */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="text-left">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                {WARNING_SIGNS_HEADING}
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-brand-dark/80">
+                {WARNING_SIGNS_INTRO}
+              </p>
+            </div>
+            <div className="mt-8 rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
+              <ul className="space-y-3">
+                {WARNING_SIGNS.map((sign) => (
+                  <li key={sign} className="flex items-start gap-3">
+                    <span
+                      aria-hidden="true"
+                      className="mt-2 inline-block h-2 w-2 flex-none rounded-full bg-brand-primary"
+                    />
+                    <span className="text-base leading-7 text-brand-dark/80">
+                      {sign}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 6: PROCESS (HowTo) */}
+        <section className="bg-brand-surface-alt">
+          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionReveal>
+              <SectionRevealItem>
+                <div className="text-left">
+                  <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                    {PROCESS_HEADING}
+                  </h2>
+                </div>
+              </SectionRevealItem>
+              <SectionRevealItem className="mt-12">
+                <ol className="space-y-8">
+                  {PROCESS_STEPS.map((step, index) => (
+                    <li key={step.name} className="flex items-start gap-4">
+                      <span
+                        aria-hidden="true"
+                        className="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full bg-brand-dark text-lg font-semibold text-white"
+                      >
+                        {index + 1}
+                      </span>
+                      <div>
+                        <h3 className="text-xl font-semibold text-brand-dark">
+                          {step.name}
+                        </h3>
+                        <p className="mt-2 text-base leading-7 text-brand-dark/80">
+                          {step.body}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </SectionRevealItem>
+            </SectionReveal>
+          </div>
+        </section>
+
+        {/* SECTION 7: WHY CHOOSE RED CARPET PLUMBING */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <div className="text-left">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                {WHY_CHOOSE_HEADING}
+              </h2>
+            </div>
+            <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {WHY_CHOOSE_ITEMS.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckMark />
+                  <span className="text-base leading-7 text-brand-dark/85">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* SECTION 8: AREAS */}
+        <section className="bg-brand-charcoal text-white">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <div className="max-w-3xl text-left">
+              <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
+                {AREAS_HEADING}
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-white/85">
+                {AREAS_INTRO}
+              </p>
+            </div>
+
+            <ul className="mt-10 flex flex-wrap gap-3">
+              {AREA_CHIPS.map((name) => (
+                <li key={name}>
+                  <span className="block rounded-lg border border-white/10 bg-white/5 px-5 py-3 font-medium text-white/85">
+                    {name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-white/85">
+              {renderTail(AREAS_CROSS_LINKS, LINK_CLASS_ON_DARK)}
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 9: FAQ */}
+        <section className="bg-brand-surface-alt">
+          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <div className="text-left">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                Frequently Asked Questions
+                <br className="hidden sm:block" /> About Sewer Line Services in Enterprise, NV
+              </h2>
+            </div>
+            <div className="mt-12 space-y-4">
+              {FAQS.map((faq) => (
+                <details
+                  key={faq.question}
+                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
+                >
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
+                    <span>{faq.question}</span>
+                    <FaqChevron />
+                  </summary>
+                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
+                    {faq.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 10: RELATED SERVICES */}
+        <section className="bg-white">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <div className="text-left">
+              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+                Related Plumbing Services
+              </h2>
+            </div>
+            <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {RELATED_SERVICES.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="flex items-center gap-2 rounded-lg bg-brand-surface-alt px-4 py-3 text-base font-medium text-brand-dark ring-1 ring-brand-surface-alt transition hover:text-brand-dark/70 hover:shadow-md"
+                  >
+                    <span aria-hidden="true" className="text-brand-dark">
+                      &rarr;
+                    </span>
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* SECTION 11: FINAL CTA */}
+        <CTASection
+          background="red"
+          headline={FINAL_CTA.headline}
+          body={FINAL_CTA.body}
+          primaryCTA={{
+            label: "Call Now: (702) 567-9172",
+            href: "tel:+17025679172",
+          }}
+          secondaryCTA={{
+            label: "Request Service",
+            href: "/contact/",
+          }}
+        />
+      </main>
+
+      <SiteFooter />
+
+      {/* Spacer so the fixed sticky mobile CTA never covers footer content. */}
+      <div className="h-16 lg:hidden" aria-hidden="true" />
+
+      <StickyMobileCTA />
+    </>
+  );
+}
+
+function CheckMark() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="mt-1 h-5 w-5 flex-none text-brand-dark"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M5 12.5l4.5 4.5L19 7.5"
+      />
+    </svg>
+  );
+}
+
+function FaqChevron() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+    </svg>
+  );
+}

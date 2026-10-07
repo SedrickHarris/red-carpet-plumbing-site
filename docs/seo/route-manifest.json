@@ -1,5 +1,5 @@
 {
-  "routeCount": 115,
+  "routeCount": 119,
   "routes": [
     {
       "route": "/",
@@ -799,6 +799,49 @@
         "AggregateRating"
       ],
       "wordEstimate": 1641
+    },
+    {
+      "route": "/enterprise/sewer-line-services",
+      "sourceFile": "app/enterprise/sewer-line-services/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Sewer Line Services in Enterprise, NV | Red Carpet Plumbing",
+        "Newer Communities Entering Their First Service Cycle",
+        "Caliche and Soil Movement in the Southwest Valley",
+        "Commercial Parks and the 215 Corridor",
+        "Sewer Camera Inspection",
+        "Sewer Line Cleaning",
+        "Root Intrusion Removal",
+        "Sewer Line Repair",
+        "Trenchless Sewer Repair",
+        "Sewer Line Replacement"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Sewer Line Services in Enterprise, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "Place",
+        "AdministrativeArea",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 866
     },
     {
       "route": "/enterprise/slab-leak-detection-repair",
@@ -3999,7 +4042,7 @@
         "/paradise/emergency-plumbing/",
         "/las-vegas-plumbing-services/",
         "/paradise-plumbing-services/",
-        "/sewer-line-services/"
+        "/paradise/sewer-line-services/"
       ],
       "schemaTypeHints": [
         "WebPage",
@@ -4121,6 +4164,49 @@
         "AggregateRating"
       ],
       "wordEstimate": 1306
+    },
+    {
+      "route": "/paradise/sewer-line-services",
+      "sourceFile": "app/paradise/sewer-line-services/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Sewer Line Services in Paradise, NV | Red Carpet Plumbing",
+        "Older Neighborhoods Around UNLV and Between the Strip and Eastern Avenue",
+        "Commercial and Multi-Unit Properties Near the Strip Corridor",
+        "Clark County Jurisdiction, Not the City of Las Vegas",
+        "Sewer Camera Inspection",
+        "Sewer Line Cleaning",
+        "Root Intrusion Removal",
+        "Sewer Line Repair",
+        "Trenchless Sewer Repair",
+        "Sewer Line Replacement"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Sewer Line Services in Paradise, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "Place",
+        "AdministrativeArea",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 885
     },
     {
       "route": "/paradise/water-heater-repair-installation",
@@ -4735,6 +4821,49 @@
       "wordEstimate": 1112
     },
     {
+      "route": "/spring-valley/sewer-line-services",
+      "sourceFile": "app/spring-valley/sewer-line-services/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Sewer Line Services in Spring Valley, NV | Red Carpet Plumbing",
+        "Established Corridors With 30 to 50-Year-Old Plumbing Systems",
+        "Caliche, Expansive Soil, and Pipe Belly",
+        "Desert Tree Roots Near Aging Joints",
+        "Sewer Camera Inspection",
+        "Sewer Line Cleaning",
+        "Root Intrusion Removal",
+        "Sewer Line Repair",
+        "Trenchless Sewer Repair",
+        "Sewer Line Replacement"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Sewer Line Services in Spring Valley, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "Place",
+        "AdministrativeArea",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 886
+    },
+    {
       "route": "/spring-valley/slab-leak-detection-repair",
       "sourceFile": "app/spring-valley/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
@@ -5063,6 +5192,49 @@
         "AggregateRating"
       ],
       "wordEstimate": 926
+    },
+    {
+      "route": "/summerlin/sewer-line-services",
+      "sourceFile": "app/summerlin/sewer-line-services/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Sewer Line Services in Summerlin, NV | Red Carpet Plumbing",
+        "Original Summerlin Villages Are Now 25 to 35 Years Old",
+        "Mature Landscaping and Root Intrusion",
+        "Two Jurisdictions Within One Community",
+        "Sewer Camera Inspection",
+        "Sewer Line Cleaning",
+        "Root Intrusion Removal",
+        "Sewer Line Repair",
+        "Trenchless Sewer Repair",
+        "Sewer Line Replacement"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Sewer Line Services in Summerlin, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "Place",
+        "AdministrativeArea",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 856
     },
     {
       "route": "/summerlin/slab-leak-detection-repair",
