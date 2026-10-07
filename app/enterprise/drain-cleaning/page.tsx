@@ -145,7 +145,7 @@ const DRAIN_SERVICES: {
   {
     label: "Main sewer line cleaning",
     body: "We clear and clean main sewer lines serving Enterprise homes and commercial properties using cable machines and hydro jetting equipment from cleanout access points. See our",
-    link: { href: "/sewer-line-services/", text: "sewer line services" },
+    link: { href: "/enterprise/sewer-line-services/", text: "sewer line services" },
   },
   {
     label: "Video camera drain inspection",

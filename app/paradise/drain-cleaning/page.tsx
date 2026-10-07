@@ -132,7 +132,7 @@ const DRAIN_SERVICES: {
   {
     label: "Main Line Clearing",
     body: "Blockages in the main sewer line require clearing from the cleanout. We clear main line backups using cable machines or hydro jetting depending on the obstruction type and pipe condition.",
-    link: { href: "/sewer-line-services/", text: "sewer line services" },
+    link: { href: "/paradise/sewer-line-services/", text: "sewer line services" },
   },
   {
     label: "Video Camera Drain Inspection",
@@ -734,7 +734,7 @@ export default function ParadiseDrainCleaningPage() {
                       individual drain. Main line backups require clearing from the
                       cleanout. Red Carpet Plumbing provides{" "}
                       <Link
-                        href="/sewer-line-services/"
+                        href="/paradise/sewer-line-services/"
                         className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                       >
                         sewer line services

@@ -137,7 +137,7 @@ const SUMMERLIN_DRAIN_SERVICES: {
   {
     label: "Main sewer line cleaning",
     body: "When multiple drains in a Summerlin home are slow or backing up at the same time, the blockage is usually in the main sewer line. We clear main sewer lines using cable machines and hydro jetting based on the type and location of the blockage. For Summerlin homes with sewer line concerns, see our",
-    link: { href: "/sewer-line-services/", text: "sewer line services" },
+    link: { href: "/summerlin/sewer-line-services/", text: "sewer line services" },
   },
   {
     label: "Hydro jetting",
