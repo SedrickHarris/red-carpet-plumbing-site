@@ -134,7 +134,7 @@ const SV_DRAIN_SERVICES: {
   {
     label: "Main sewer line cleaning",
     body: "When multiple drains in a Spring Valley home are slow or backing up at the same time, the blockage is usually in the main sewer line. We clear main sewer lines using cable machines and hydro jetting based on the type and location of the blockage. For Spring Valley homes with sewer line concerns, see our",
-    link: { href: "/sewer-line-services/", text: "sewer line services" },
+    link: { href: "/spring-valley/sewer-line-services/", text: "sewer line services" },
   },
   {
     label: "Hydro jetting",

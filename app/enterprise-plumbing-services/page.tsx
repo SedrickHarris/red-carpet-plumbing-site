@@ -112,7 +112,7 @@ type ServiceLink = {
 const ENTERPRISE_FEATURED_SERVICES: ServiceLink[] = [
   {
     title: "Sewer Line Services",
-    href: "/sewer-line-services/",
+    href: "/enterprise/sewer-line-services/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
     imageAlt: "Sewer camera cable descending into an open cleanout",

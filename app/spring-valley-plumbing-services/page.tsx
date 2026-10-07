@@ -111,7 +111,7 @@ type ServiceLink = {
 const SPRING_VALLEY_FEATURED_SERVICES: ServiceLink[] = [
   {
     title: "Sewer Line Services",
-    href: "/sewer-line-services/",
+    href: "/spring-valley/sewer-line-services/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp",
     imageAlt: "Sewer camera cable descending into an open cleanout",

@@ -190,7 +190,7 @@ const COMMERCIAL_SERVICES: {
     title: "Commercial Sewer Line Services",
     description:
       "Inspection, cleaning, repair, and replacement of commercial sewer lines serving businesses, multi-unit buildings, and commercial properties throughout Spring Valley.",
-    href: "/sewer-line-services/",
+    href: "/spring-valley/sewer-line-services/",
     image:
       "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-mechanical-room-plumbing-las-vegas.webp",
     imageAlt: "PVC waste main with banded couplings above a floor cleanout",

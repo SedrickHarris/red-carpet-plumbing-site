@@ -168,7 +168,7 @@ const COMMERCIAL_SERVICES: {
   {
     title: "Commercial Sewer Line Services",
     body: "Commercial properties generate higher sewer line demand than residential systems. Blockages or failures disrupt operations. Red Carpet Plumbing provides commercial sewer line inspection, cleaning, repair, and replacement throughout Paradise.",
-    link: { href: "/sewer-line-services/", text: "sewer line services" },
+    link: { href: "/paradise/sewer-line-services/", text: "sewer line services" },
   },
   {
     title: "Backflow Prevention and Testing",
