@@ -148,11 +148,11 @@ const SUMMERLIN_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Water Pipe Repair and Replacement",
-    href: "/water-pipe-repair-replacement/",
+    href: "/summerlin/water-pipe-repair-replacement/",
   },
   {
     title: "Gas Line Plumbing",
-    href: "/gas-line-plumbing/",
+    href: "/summerlin/gas-line-plumbing/",
   },
   {
     title: "Commercial Plumbing",
@@ -160,18 +160,18 @@ const SUMMERLIN_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Toilet Repair and Installation",
-    href: "/toilet-repair-installation/",
+    href: "/summerlin/toilet-repair-installation/",
   },
 ];
 
 const SUMMERLIN_PILLS_ROW_TWO: ServicePill[] = [
   {
     title: "Faucet and Sink Repair and Installation",
-    href: "/faucet-sink-repair-installation/",
+    href: "/summerlin/faucet-sink-repair-installation/",
   },
   {
     title: "Garbage Disposal Repair and Installation",
-    href: "/garbage-disposal-repair-installation/",
+    href: "/summerlin/garbage-disposal-repair-installation/",
   },
   {
     title: "Backflow Prevention",

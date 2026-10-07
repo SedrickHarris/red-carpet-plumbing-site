@@ -158,7 +158,7 @@ const REPAIR_OPTIONS: {
     body: "Spot repair involves cutting the concrete slab directly above the leak location, repairing or replacing the damaged pipe section, and patching the concrete. This is a focused approach appropriate for an isolated leak in a pipe that is otherwise in good condition. For original Summerlin village homes where the surrounding pipe has been thinned by decades of hard water corrosion, a single spot repair may be followed by another leak on the same aging line.",
     link: {
       pre: " See our ",
-      href: "/water-pipe-repair-replacement/",
+      href: "/summerlin/water-pipe-repair-replacement/",
       text: "water pipe repair and replacement",
       post: " page for more on targeted pipe repairs.",
     },

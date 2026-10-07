@@ -519,7 +519,7 @@ export default function SummerlinRePipingPage() {
                 surrounding pipe is in good condition, and the pipe material is not
                 known to be defective. See our{" "}
                 <Link
-                  href="/water-pipe-repair-replacement/"
+                  href="/summerlin/water-pipe-repair-replacement/"
                   className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                 >
                   water pipe repair and replacement
