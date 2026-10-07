@@ -1,5 +1,5 @@
 {
-  "routeCount": 119,
+  "routeCount": 124,
   "routes": [
     {
       "route": "/",
@@ -5102,6 +5102,135 @@
       "wordEstimate": 1429
     },
     {
+      "route": "/summerlin/faucet-sink-repair-installation",
+      "sourceFile": "app/summerlin/faucet-sink-repair-installation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Faucet and Sink Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+        "Hard Water and Cartridge Wear",
+        "Premium and Specialty Fixtures in Newer Homes",
+        "Aging Fixtures and Under-Sink Valves in Original Villages",
+        "Dripping Faucet Repair",
+        "Faucet Replacement and Installation",
+        "Kitchen Sink Installation",
+        "Bathroom Sink Installation",
+        "Under-Sink Leak Repair",
+        "Aerator, Cartridge, and Drain Trap Service"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Faucet and Sink Repair and Installation in Summerlin, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "Place",
+        "AdministrativeArea",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 798
+    },
+    {
+      "route": "/summerlin/garbage-disposal-repair-installation",
+      "sourceFile": "app/summerlin/garbage-disposal-repair-installation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Garbage Disposal Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+        "Hard Water Scale on Internal Parts",
+        "Grease and Food Waste in the Discharge Line",
+        "Aging Units and Kitchen Upgrades",
+        "Garbage Disposal Jam Clearing",
+        "Garbage Disposal Leak Repair",
+        "Reset and Electrical Diagnosis",
+        "Garbage Disposal Replacement",
+        "Garbage Disposal Installation",
+        "Discharge Line and Sink Flange Service"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Garbage Disposal Repair and Installation in Summerlin, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "Place",
+        "AdministrativeArea",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 793
+    },
+    {
+      "route": "/summerlin/gas-line-plumbing",
+      "sourceFile": "app/summerlin/gas-line-plumbing/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Gas Line Plumbing in Summerlin, NV | Red Carpet Plumbing",
+        "Gas Systems in the Original Villages Are Now 25 to 35 Years Old",
+        "Summer Heat on Exposed Gas Lines",
+        "Outdoor Kitchens, Fire Pits, and Pool Heaters",
+        "Gas Line Leak Detection and Repair",
+        "Gas Line Inspection and Pressure Testing",
+        "Gas Line Installation",
+        "Gas Appliance Hookup and Connection",
+        "Outdoor Gas Line Extensions",
+        "Gas Line Repair and Replacement"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Gas Line Plumbing in Summerlin, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "Place",
+        "AdministrativeArea",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 955
+    },
+    {
       "route": "/summerlin/leak-detection-repair",
       "sourceFile": "app/summerlin/leak-detection-repair/page.tsx",
       "routerType": "app",
@@ -5168,7 +5297,7 @@
         "/summerlin-plumbing-services/",
         "/repiping/",
         "/contact/",
-        "/water-pipe-repair-replacement/",
+        "/summerlin/water-pipe-repair-replacement/",
         "/summerlin/slab-leak-detection-repair/",
         "/las-vegas-plumbing-services/",
         "/spring-valley-plumbing-services/"
@@ -5282,6 +5411,49 @@
       "wordEstimate": 815
     },
     {
+      "route": "/summerlin/toilet-repair-installation",
+      "sourceFile": "app/summerlin/toilet-repair-installation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Toilet Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+        "Hard Water Wear on Toilet Parts",
+        "Older Villages and Newer Homes Age Differently",
+        "Wax Ring Wear and Soil Movement",
+        "Running Toilet Repair",
+        "Leaking Toilet Repair",
+        "Toilet Clog Clearing",
+        "Toilet Replacement",
+        "New Toilet Installation",
+        "Wax Ring and Tank Component Repair"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Toilet Repair and Installation in Summerlin, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "Place",
+        "AdministrativeArea",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 813
+    },
+    {
       "route": "/summerlin/water-heater-repair-installation",
       "sourceFile": "app/summerlin/water-heater-repair-installation/page.tsx",
       "routerType": "app",
@@ -5324,6 +5496,49 @@
         "AggregateRating"
       ],
       "wordEstimate": 591
+    },
+    {
+      "route": "/summerlin/water-pipe-repair-replacement",
+      "sourceFile": "app/summerlin/water-pipe-repair-replacement/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Water Pipe Repair and Replacement in Summerlin, NV | Red Carpet Plumbing",
+        "Original Villages Are Now 25 to 35 Years Old",
+        "Hard Water and Soil Movement",
+        "Newer Summerlin South Homes",
+        "Burst Pipe Repair",
+        "Pinhole Leak Repair",
+        "Pipe Section Replacement",
+        "Main Water Line Repair",
+        "Supply Line and Shut-Off Valve Replacement",
+        "Pipe Replacement and Repiping"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Water Pipe Repair and Replacement in Summerlin, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "Place",
+        "AdministrativeArea",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 852
     },
     {
       "route": "/thank-you",
