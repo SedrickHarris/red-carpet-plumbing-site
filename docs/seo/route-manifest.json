@@ -1,5 +1,5 @@
 {
-  "routeCount": 129,
+  "routeCount": 133,
   "routes": [
     {
       "route": "/",
@@ -1611,7 +1611,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 1007
+      "wordEstimate": 1011
     },
     {
       "route": "/henderson/commercial-plumbing",
@@ -1791,7 +1791,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 793
+      "wordEstimate": 797
     },
     {
       "route": "/henderson/garbage-disposal-repair-installation",
@@ -1833,7 +1833,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 786
+      "wordEstimate": 790
     },
     {
       "route": "/henderson/gas-line-plumbing",
@@ -2136,7 +2136,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 815
+      "wordEstimate": 819
     },
     {
       "route": "/henderson/water-heater-repair-installation",
@@ -2221,7 +2221,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 858
+      "wordEstimate": 862
     },
     {
       "route": "/lake-las-vegas-plumbing-services",
@@ -2981,7 +2981,7 @@
         "/repiping/",
         "/las-vegas/repiping/",
         "/las-vegas/slab-leak-detection-repair/",
-        "/water-pipe-repair-replacement/",
+        "/las-vegas/water-pipe-repair-replacement/",
         "/las-vegas/emergency-plumbing/",
         "/contact/",
         "/las-vegas-plumbing-services/",
@@ -3078,7 +3078,7 @@
       "internalHrefs": [
         "/slab-leak-detection-repair/",
         "/las-vegas/leak-detection-repair/",
-        "/water-pipe-repair-replacement/",
+        "/las-vegas/water-pipe-repair-replacement/",
         "/las-vegas/repiping/",
         "/las-vegas/emergency-plumbing/",
         "/contact/",
@@ -3247,6 +3247,48 @@
         "Answer"
       ],
       "wordEstimate": 802
+    },
+    {
+      "route": "/las-vegas/water-pipe-repair-replacement",
+      "sourceFile": "app/las-vegas/water-pipe-repair-replacement/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
+        "Many Las Vegas Homes Are Decades Old",
+        "Lake Mead Hard Water and Soil Movement",
+        "Desert Heat on Exposed Plumbing",
+        "Burst Pipe Repair",
+        "Pinhole Leak Repair",
+        "Pipe Section Replacement",
+        "Main Water Line Repair",
+        "Supply Line and Shut-Off Valve Replacement",
+        "Pipe Replacement and Repiping"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Water Pipe Repair and Replacement in Las Vegas, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 899
     },
     {
       "route": "/leak-detection-repair",
@@ -3795,6 +3837,49 @@
       "wordEstimate": 732
     },
     {
+      "route": "/north-las-vegas/garbage-disposal-repair-installation",
+      "sourceFile": "app/north-las-vegas/garbage-disposal-repair-installation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Garbage Disposal Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+        "Hard Water Scale on Internal Parts",
+        "Grease and Food Waste in the Discharge Line",
+        "Two Housing Vintages, Two Wear Patterns",
+        "Garbage Disposal Jam Clearing",
+        "Garbage Disposal Leak Repair",
+        "Reset and Electrical Diagnosis",
+        "Garbage Disposal Replacement",
+        "Garbage Disposal Installation",
+        "Discharge Line and Sink Flange Service"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Garbage Disposal Repair and Installation in North Las Vegas, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "PostalCodeSpecification",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 826
+    },
+    {
       "route": "/north-las-vegas/leak-detection-repair",
       "sourceFile": "app/north-las-vegas/leak-detection-repair/page.tsx",
       "routerType": "app",
@@ -4175,6 +4260,49 @@
       "wordEstimate": 713
     },
     {
+      "route": "/paradise/backflow-prevention",
+      "sourceFile": "app/paradise/backflow-prevention/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Backflow Prevention Services in Paradise, NV | Red Carpet Plumbing",
+        "Commercial, Multi-Unit, and Fire Suppression Connections",
+        "Irrigation Systems and Cross-Connection Risk",
+        "Notices, Testing, and Failed Devices",
+        "Backflow Preventer Installation",
+        "Irrigation System Backflow Protection",
+        "Commercial Backflow Prevention",
+        "Backflow Device Repair",
+        "Backflow Device Replacement",
+        "Backflow Compliance Assessment"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Backflow Prevention in Paradise, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "Place",
+        "AdministrativeArea",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 1031
+    },
+    {
       "route": "/paradise/commercial-plumbing",
       "sourceFile": "app/paradise/commercial-plumbing/page.tsx",
       "routerType": "app",
@@ -4324,6 +4452,49 @@
         "AggregateRating"
       ],
       "wordEstimate": 1289
+    },
+    {
+      "route": "/paradise/gas-line-plumbing",
+      "sourceFile": "app/paradise/gas-line-plumbing/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Gas Line Plumbing in Paradise, NV | Red Carpet Plumbing",
+        "Older Paradise Homes Have Aging Gas Systems",
+        "Commercial and Multi-Unit Gas Service Near the Strip Corridor",
+        "Clark County Jurisdiction, Not the City of Las Vegas",
+        "Gas Line Leak Detection and Repair",
+        "Gas Line Inspection and Pressure Testing",
+        "Gas Line Installation",
+        "Gas Appliance Hookup and Connection",
+        "Commercial Gas Line Service",
+        "Gas Line Repair and Replacement"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Gas Line Plumbing in Paradise, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "Place",
+        "AdministrativeArea",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 1012
     },
     {
       "route": "/paradise/leak-detection-repair",
