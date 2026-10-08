@@ -180,7 +180,7 @@ const NORTH_LAS_VEGAS_PILLS_ROW_TWO: ServicePill[] = [
   },
   {
     title: "Garbage Disposal Repair and Installation",
-    href: "/garbage-disposal-repair-installation/",
+    href: "/north-las-vegas/garbage-disposal-repair-installation/",
   },
   {
     title: "Backflow Prevention",

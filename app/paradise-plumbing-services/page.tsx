@@ -158,7 +158,7 @@ const PARADISE_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Gas Line Plumbing",
-    href: "/gas-line-plumbing/",
+    href: "/paradise/gas-line-plumbing/",
   },
   {
     title: "Commercial Plumbing",
@@ -181,7 +181,7 @@ const PARADISE_PILLS_ROW_TWO: ServicePill[] = [
   },
   {
     title: "Backflow Prevention",
-    href: "/backflow-prevention/",
+    href: "/paradise/backflow-prevention/",
   },
   {
     title: "Video Camera Plumbing Inspections",

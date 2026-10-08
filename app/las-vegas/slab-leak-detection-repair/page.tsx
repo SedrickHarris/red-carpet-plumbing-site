@@ -489,7 +489,7 @@ export default function LasVegasSlabLeakPage() {
                   single spot repair may be followed by another leak on the same
                   aging line. Learn more about our{" "}
                   <Link
-                    href="/water-pipe-repair-replacement/"
+                    href="/las-vegas/water-pipe-repair-replacement/"
                     className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     water pipe repair and replacement

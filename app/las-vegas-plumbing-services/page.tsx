@@ -150,7 +150,7 @@ const LAS_VEGAS_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Water Pipe Repair and Replacement",
-    href: "/water-pipe-repair-replacement/",
+    href: "/las-vegas/water-pipe-repair-replacement/",
   },
   {
     title: "Gas Line Plumbing",
