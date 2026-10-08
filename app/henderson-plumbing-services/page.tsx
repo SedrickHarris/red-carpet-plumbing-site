@@ -154,7 +154,7 @@ const HENDERSON_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Water Pipe Repair and Replacement",
-    href: "/water-pipe-repair-replacement/",
+    href: "/henderson/water-pipe-repair-replacement/",
   },
   {
     title: "Gas Line Plumbing",
@@ -166,22 +166,22 @@ const HENDERSON_PILLS_ROW_ONE: ServicePill[] = [
   },
   {
     title: "Toilet Repair and Installation",
-    href: "/toilet-repair-installation/",
+    href: "/henderson/toilet-repair-installation/",
   },
 ];
 
 const HENDERSON_PILLS_ROW_TWO: ServicePill[] = [
   {
     title: "Faucet and Sink Repair and Installation",
-    href: "/faucet-sink-repair-installation/",
+    href: "/henderson/faucet-sink-repair-installation/",
   },
   {
     title: "Garbage Disposal Repair and Installation",
-    href: "/garbage-disposal-repair-installation/",
+    href: "/henderson/garbage-disposal-repair-installation/",
   },
   {
     title: "Backflow Prevention",
-    href: "/backflow-prevention/",
+    href: "/henderson/backflow-prevention/",
   },
   {
     title: "Video Camera Plumbing Inspections",
