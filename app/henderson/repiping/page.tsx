@@ -546,7 +546,7 @@ export default function HendersonRePipingPage() {
                   </Link>{" "}
                   and{" "}
                   <Link
-                    href="/water-pipe-repair-replacement/"
+                    href="/henderson/water-pipe-repair-replacement/"
                     className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
                   >
                     water pipe repair and replacement
