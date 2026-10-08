@@ -1,5 +1,5 @@
 {
-  "routeCount": 124,
+  "routeCount": 129,
   "routes": [
     {
       "route": "/",
@@ -1572,6 +1572,48 @@
       "wordEstimate": 684
     },
     {
+      "route": "/henderson/backflow-prevention",
+      "sourceFile": "app/henderson/backflow-prevention/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Backflow Prevention Services in Henderson, NV | Red Carpet Plumbing",
+        "Irrigation Systems and Cross-Connection Risk",
+        "Commercial, Multi-Unit, and Fire Suppression Connections",
+        "Notices, Testing, and Failed Devices",
+        "Backflow Preventer Installation",
+        "Irrigation System Backflow Protection",
+        "Commercial Backflow Prevention",
+        "Backflow Device Repair",
+        "Backflow Device Replacement",
+        "Backflow Compliance Assessment"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Backflow Prevention in Henderson, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 1007
+    },
+    {
       "route": "/henderson/commercial-plumbing",
       "sourceFile": "app/henderson/commercial-plumbing/page.tsx",
       "routerType": "app",
@@ -1710,6 +1752,90 @@
       "wordEstimate": 682
     },
     {
+      "route": "/henderson/faucet-sink-repair-installation",
+      "sourceFile": "app/henderson/faucet-sink-repair-installation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Faucet and Sink Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+        "Lake Mead Hard Water and Cartridge Wear",
+        "Remodeled and Newer Kitchens and Baths",
+        "Aging Fixtures and Under-Sink Valves in Original Green Valley Homes",
+        "Dripping Faucet Repair",
+        "Faucet Replacement and Installation",
+        "Kitchen Sink Installation",
+        "Bathroom Sink Installation",
+        "Under-Sink Leak Repair",
+        "Aerator, Cartridge, and Drain Trap Service"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Faucet and Sink Repair and Installation in Henderson, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 793
+    },
+    {
+      "route": "/henderson/garbage-disposal-repair-installation",
+      "sourceFile": "app/henderson/garbage-disposal-repair-installation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Garbage Disposal Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+        "Lake Mead Hard Water Scale on Internal Parts",
+        "Grease and Food Waste in the Discharge Line",
+        "Aging Units and Kitchen Remodels",
+        "Garbage Disposal Jam Clearing",
+        "Garbage Disposal Leak Repair",
+        "Reset and Electrical Diagnosis",
+        "Garbage Disposal Replacement",
+        "Garbage Disposal Installation",
+        "Discharge Line and Sink Flange Service"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Garbage Disposal Repair and Installation in Henderson, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 786
+    },
+    {
       "route": "/henderson/gas-line-plumbing",
       "sourceFile": "app/henderson/gas-line-plumbing/page.tsx",
       "routerType": "app",
@@ -1842,7 +1968,7 @@
         "/henderson/leak-detection-repair/",
         "/henderson/repiping/",
         "/henderson/slab-leak-detection-repair/",
-        "/water-pipe-repair-replacement/",
+        "/henderson/water-pipe-repair-replacement/",
         "/henderson/emergency-plumbing/",
         "/contact/",
         "/henderson-plumbing-services/",
@@ -1945,7 +2071,7 @@
       "internalHrefs": [
         "/slab-leak-detection-repair/",
         "/henderson/leak-detection-repair/",
-        "/water-pipe-repair-replacement/",
+        "/henderson/water-pipe-repair-replacement/",
         "/henderson/repiping/",
         "/henderson/emergency-plumbing/",
         "/contact/",
@@ -1969,6 +2095,48 @@
         "Answer"
       ],
       "wordEstimate": 1065
+    },
+    {
+      "route": "/henderson/toilet-repair-installation",
+      "sourceFile": "app/henderson/toilet-repair-installation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Toilet Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+        "Lake Mead Hard Water Wear on Toilet Parts",
+        "Original Green Valley Homes and Newer Communities",
+        "Wax Ring Wear and Soil Movement",
+        "Running Toilet Repair",
+        "Leaking Toilet Repair",
+        "Toilet Clog Clearing",
+        "Toilet Replacement",
+        "New Toilet Installation",
+        "Wax Ring and Tank Component Repair"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Toilet Repair and Installation in Henderson, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 815
     },
     {
       "route": "/henderson/water-heater-repair-installation",
@@ -2012,6 +2180,48 @@
         "Answer"
       ],
       "wordEstimate": 813
+    },
+    {
+      "route": "/henderson/water-pipe-repair-replacement",
+      "sourceFile": "app/henderson/water-pipe-repair-replacement/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Water Pipe Repair and Replacement in Henderson, NV | Red Carpet Plumbing",
+        "Original Green Valley Homes Are Now 30 to 40 Years Old",
+        "Lake Mead Hard Water and Soil Movement",
+        "Newer Henderson Communities",
+        "Burst Pipe Repair",
+        "Pinhole Leak Repair",
+        "Pipe Section Replacement",
+        "Main Water Line Repair",
+        "Supply Line and Shut-Off Valve Replacement",
+        "Pipe Replacement and Repiping"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Frequently Asked Questions About Water Pipe Repair and Replacement in Henderson, NV",
+        "Related Plumbing Services"
+      ],
+      "internalHrefs": [
+        "/contact/"
+      ],
+      "schemaTypeHints": [
+        "WebPage",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "Plumber",
+        "City",
+        "State",
+        "HowTo",
+        "HowToStep",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Review"
+      ],
+      "wordEstimate": 858
     },
     {
       "route": "/lake-las-vegas-plumbing-services",
@@ -5142,7 +5352,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 798
+      "wordEstimate": 802
     },
     {
       "route": "/summerlin/garbage-disposal-repair-installation",
@@ -5185,7 +5395,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 793
+      "wordEstimate": 797
     },
     {
       "route": "/summerlin/gas-line-plumbing",
@@ -5228,7 +5438,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 955
+      "wordEstimate": 959
     },
     {
       "route": "/summerlin/leak-detection-repair",
@@ -5451,7 +5661,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 813
+      "wordEstimate": 817
     },
     {
       "route": "/summerlin/water-heater-repair-installation",
@@ -5538,7 +5748,7 @@
         "Answer",
         "Review"
       ],
-      "wordEstimate": 852
+      "wordEstimate": 856
     },
     {
       "route": "/thank-you",
