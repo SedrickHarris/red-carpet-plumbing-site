@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ItemIcon } from "@/components/ItemIcon";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -417,7 +419,12 @@ export default function SummerlinDrainCleaningPage() {
 
         {/* SECTION 3: WHY DRAINS CLOG FASTER IN SUMMERLIN */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-10 lg:pb-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 pb-16 sm:px-6 sm:pb-20 lg:px-10 lg:pb-24">
+            <SectionImageSplit
+              src="/images/locations/summerlin/red-carpet-plumbing-summerlin-nv-location-page-hero-16x9.webp"
+              alt="Desert home with stone landscaping and mountains in the distance in Summerlin, Nevada"
+              position="25% 50%"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -451,6 +458,7 @@ export default function SummerlinDrainCleaningPage() {
                 </ul>
               </SectionRevealItem>
             </SectionReveal>
+          </SectionImageSplit>
           </div>
         </section>
 
@@ -540,7 +548,7 @@ export default function SummerlinDrainCleaningPage() {
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {WHY_CHOOSE.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <CheckMark />
+                  <ItemIcon text={item} />
                   <span className="text-base leading-7 text-brand-dark/85">
                     {item}
                   </span>
@@ -635,17 +643,3 @@ export default function SummerlinDrainCleaningPage() {
   );
 }
 
-function CheckMark() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="mt-1 h-5 w-5 flex-none text-brand-dark"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}

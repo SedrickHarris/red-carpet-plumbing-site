@@ -33,9 +33,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/Button";
+import { ItemIcon } from "@/components/ItemIcon";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -374,7 +376,12 @@ export default function NorthLasVegasWaterPipeRepairReplacementPage() {
             "pinhole leaks" as the leak detection link. No words added,
             removed, or altered. */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/locations/north-las-vegas/red-carpet-plumbing-north-las-vegas-nv-location-page-hero-16x9.webp"
+              alt="Single-story homes with desert landscaping on a residential street in North Las Vegas, Nevada"
+              position="20% 50%"
+            >
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Water Pipe Issues Common to North Las Vegas Homes
@@ -394,6 +401,7 @@ export default function NorthLasVegasWaterPipeRepairReplacementPage() {
                 condition before recommending a repair or replacement approach.
               </p>
             </div>
+          </SectionImageSplit>
           </div>
         </section>
 
@@ -422,7 +430,7 @@ export default function NorthLasVegasWaterPipeRepairReplacementPage() {
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {NLV_WATER_PIPE_SERVICES.map((s) => (
                 <li key={s.label} className="flex items-start gap-3">
-                  <CheckMark />
+                  <ItemIcon text={s.label} />
                   <span className="text-base leading-7 text-brand-dark/85">
                     {s.href ? (
                       <Link href={s.href} className={LINK_CLASS}>
@@ -577,21 +585,3 @@ export default function NorthLasVegasWaterPipeRepairReplacementPage() {
   );
 }
 
-function CheckMark() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="mt-1 h-5 w-5 flex-none text-brand-dark"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M5 12.5l4.5 4.5L19 7.5"
-      />
-    </svg>
-  );
-}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -512,7 +513,12 @@ export default function SpringValleyCommercialPlumbingPage() {
 
         {/* SECTION 4: SPRING VALLEY COMMERCIAL CONDITIONS */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/locations/spring-valley/red-carpet-plumbing-spring-valley-nv-location-page-hero-16x9.webp"
+              alt="Residential street with homes, palm trees and desert shrubs in Spring Valley, Nevada"
+              position="40% 50%"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -539,6 +545,7 @@ export default function SpringValleyCommercialPlumbingPage() {
                 </ul>
               </SectionRevealItem>
             </SectionReveal>
+          </SectionImageSplit>
           </div>
         </section>
 

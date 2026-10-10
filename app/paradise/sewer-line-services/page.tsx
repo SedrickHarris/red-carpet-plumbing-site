@@ -35,9 +35,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/Button";
+import { ItemIcon } from "@/components/ItemIcon";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -459,7 +461,12 @@ export default function ParadiseSewerLinePage() {
 
         {/* SECTION 3: LOCAL CARDS */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-10 lg:pb-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 pb-16 sm:px-6 sm:pb-20 lg:px-10 lg:pb-24">
+            <SectionImageSplit
+              src="/images/locations/paradise/red-carpet-plumbing-paradise-las-vegas-nv-location-page-hero-16x9.webp"
+              alt="Single-story homes shaded by palm trees on a residential street in Paradise, Nevada"
+              position="50% 50%"
+            >
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 {LOCAL_CARDS_HEADING}
@@ -481,6 +488,7 @@ export default function ParadiseSewerLinePage() {
                 </article>
               ))}
             </div>
+          </SectionImageSplit>
           </div>
         </section>
 
@@ -615,7 +623,7 @@ export default function ParadiseSewerLinePage() {
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {WHY_CHOOSE_ITEMS.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <CheckMark />
+                  <ItemIcon text={item} />
                   <span className="text-base leading-7 text-brand-dark/85">
                     {item}
                   </span>
@@ -712,21 +720,3 @@ export default function ParadiseSewerLinePage() {
   );
 }
 
-function CheckMark() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="mt-1 h-5 w-5 flex-none text-brand-dark"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M5 12.5l4.5 4.5L19 7.5"
-      />
-    </svg>
-  );
-}

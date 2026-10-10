@@ -9,6 +9,7 @@ import {
   type Variants,
 } from "framer-motion";
 import { Button } from "@/components/Button";
+import { ItemIcon } from "@/components/ItemIcon";
 
 // How long each background slide holds before crossfading, in ms. Only applies
 // when `backgroundImages` carries more than one entry.
@@ -249,7 +250,10 @@ export function HeroSection({
             >
               {trustItems.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  {getTrustIcon(item)}
+                  <ItemIcon
+                    text={item}
+                    className="mt-1 h-5 w-5 flex-none text-white"
+                  />
                   <span className="text-base text-white">{item}</span>
                 </li>
               ))}
@@ -313,103 +317,5 @@ export function HeroSection({
         ) : null}
       </div>
     </section>
-  );
-}
-
-// Picks a trust-item icon from keywords in the item text. First match wins,
-// so more specific categories are listed before broader ones. Falls back to
-// the checkmark when nothing matches.
-function getTrustIcon(text: string) {
-  const t = text.toLowerCase();
-  if (t.includes("star") || t.includes("review")) return <StarIcon />;
-  if (t.includes("licens")) return <ShieldIcon />;
-  if (t.includes("year")) return <ClockIcon />;
-  if (t.includes("pricing") || t.includes("fee") || t.includes("transparent"))
-    return <TagIcon />;
-  // "emergenc" also matches "emergencies", which "emergency" alone would miss.
-  if (t.includes("emergenc") || t.includes("24/7") || t.includes("24 hour"))
-    return <PhoneIcon />;
-  return <CheckMark />;
-}
-
-function iconProps(className = "mt-1 h-5 w-5 flex-none text-white") {
-  return {
-    "aria-hidden": "true" as const,
-    viewBox: "0 0 24 24",
-    className,
-    fill: "none",
-    stroke: "currentColor",
-    strokeWidth: 2,
-  };
-}
-
-function CheckMark() {
-  return (
-    <svg {...iconProps()}>
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M5 12.5l4.5 4.5L19 7.5"
-      />
-    </svg>
-  );
-}
-
-function StarIcon() {
-  return (
-    <svg {...iconProps()}>
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M12 3.5l2.6 5.3 5.9.9-4.25 4.15 1 5.85L12 16.9l-5.25 2.8 1-5.85L3.5 9.7l5.9-.9L12 3.5z"
-      />
-    </svg>
-  );
-}
-
-function ShieldIcon() {
-  return (
-    <svg {...iconProps()}>
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M12 3l7 3v5.5c0 4.2-2.9 7.6-7 8.5-4.1-.9-7-4.3-7-8.5V6l7-3z"
-      />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-    </svg>
-  );
-}
-
-function ClockIcon() {
-  return (
-    <svg {...iconProps()}>
-      <circle cx="12" cy="12" r="8.5" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5.25l3.25 2" />
-    </svg>
-  );
-}
-
-function TagIcon() {
-  return (
-    <svg {...iconProps()}>
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M4 12.4V5a1 1 0 011-1h7.4a1 1 0 01.7.3l7 7a1 1 0 010 1.4l-6.7 6.7a1 1 0 01-1.4 0l-7-7a1 1 0 01-.3-.7z"
-      />
-      <circle cx="8.75" cy="8.75" r="1.15" />
-    </svg>
-  );
-}
-
-function PhoneIcon() {
-  return (
-    <svg {...iconProps()}>
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M6.2 4h3l1.5 3.7-1.9 1.4a12 12 0 005.1 5.1l1.4-1.9L19 13.8v3a1.7 1.7 0 01-1.9 1.7A13.7 13.7 0 014.5 5.9 1.7 1.7 0 016.2 4z"
-      />
-    </svg>
   );
 }

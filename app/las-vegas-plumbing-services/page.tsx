@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PillRow, type ServicePill } from "@/components/Pill";
+import { ItemIcon } from "@/components/ItemIcon";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -497,7 +499,12 @@ export default function LasVegasPlumbingServicesPage() {
 
         {/* SECTION 5: NEIGHBORHOODS */}
         <section className="bg-brand-charcoal text-white">
-          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <SectionImageSplit
+              src="/images/locations/las-vegas/red-carpet-plumbing-las-vegas-nv-location-page-hero-16x9.webp"
+              alt="Stucco home with a tile roof and palm trees on a residential street in Las Vegas, Nevada"
+              position="55% 50%"
+            >
             <div className="max-w-3xl text-left">
               <h2 className="text-3xl tracking-tight sm:text-4xl lg:text-5xl">
                 Las Vegas Neighborhoods We Serve
@@ -524,6 +531,7 @@ export default function LasVegasPlumbingServicesPage() {
                 See all service areas
               </Button>
             </div>
+          </SectionImageSplit>
           </div>
         </section>
 
@@ -567,7 +575,7 @@ export default function LasVegasPlumbingServicesPage() {
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {TRUST_ITEMS.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <CheckMark />
+                  <ItemIcon text={item} />
                   <span className="text-base leading-7 text-brand-dark/85">
                     {item === "4.8-star rating across 81 Google reviews" ? (
                       <>
@@ -649,21 +657,6 @@ export default function LasVegasPlumbingServicesPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function CheckMark() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="mt-1 h-5 w-5 flex-none text-brand-dark"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
   );
 }
 
