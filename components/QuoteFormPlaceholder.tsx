@@ -1,13 +1,14 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Button } from "@/components/Button";
 
-// TODO: Replace with confirmed GHL webhook URL before launch.
-// Architecture decision (confirmed): Native Next.js form POST to GHL webhook.
+// TODO: Replace with confirmed third-party CRM webhook URL before launch.
+// Architecture decision (confirmed): Native Next.js form POST to third-party CRM webhook.
 // Payload shape is defined below. One edit here updates all pages.
-// Request the GHL webhook URL from the project owner before going live.
+// Request the third-party CRM webhook URL from the project owner before going live.
 const QUOTE_WEBHOOK_URL = "";
 
 const DEFAULT_SERVICES = [
@@ -410,6 +411,17 @@ export function QuoteFormPlaceholder({
             </p>
           ) : null}
         </div>
+
+        <p className="text-xs leading-5 text-brand-muted">
+          By submitting this form you agree to our{" "}
+          <Link
+            href="/privacy-policy/"
+            className="font-medium text-brand-dark underline hover:text-brand-dark/70"
+          >
+            Privacy Policy
+          </Link>{" "}
+          and consent to being contacted about your service request.
+        </p>
 
         <Button
           type="submit"
