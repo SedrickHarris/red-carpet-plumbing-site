@@ -150,6 +150,23 @@ export function SiteFooter() {
           <p className="text-xs text-white/60">
             {`© ${new Date().getFullYear()} Red Carpet Plumbing. All Rights Reserved.`}
           </p>
+          <nav
+            aria-label="Legal"
+            className="flex flex-wrap items-center gap-x-6 gap-y-1"
+          >
+            <Link
+              href="/privacy-policy/"
+              className="flex min-h-11 items-center text-xs text-white/60 transition-colors hover:text-white hover:underline focus-visible:text-white focus-visible:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms-and-conditions/"
+              className="flex min-h-11 items-center text-xs text-white/60 transition-colors hover:text-white hover:underline focus-visible:text-white focus-visible:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              Terms and Conditions
+            </Link>
+          </nav>
           <p className="text-xs text-white/60">
             Las Vegas, Nevada plumbing services
           </p>

@@ -1,5 +1,5 @@
 {
-  "routeCount": 133,
+  "routeCount": 135,
   "routes": [
     {
       "route": "/",
@@ -4727,6 +4727,22 @@
       "wordEstimate": 508
     },
     {
+      "route": "/privacy-policy",
+      "sourceFile": "app/privacy-policy/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem",
+        "Service"
+      ],
+      "wordEstimate": 216
+    },
+    {
       "route": "/repiping",
       "sourceFile": "app/repiping/page.tsx",
       "routerType": "app",
@@ -5920,6 +5936,22 @@
         "Review"
       ],
       "wordEstimate": 856
+    },
+    {
+      "route": "/terms-and-conditions",
+      "sourceFile": "app/terms-and-conditions/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem",
+        "Service"
+      ],
+      "wordEstimate": 149
     },
     {
       "route": "/thank-you",

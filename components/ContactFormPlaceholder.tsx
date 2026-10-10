@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Button } from "@/components/Button";
 
-// TODO: Replace with confirmed GHL webhook URL before launch.
-// Architecture decision (confirmed): Native Next.js form POST to GHL webhook.
+// TODO: Replace with confirmed third-party CRM webhook URL before launch.
+// Architecture decision (confirmed): Native Next.js form POST to third-party CRM webhook.
 // Payload shape is defined below. One edit here updates all pages.
-// Request the GHL webhook URL from the project owner before going live.
+// Request the third-party CRM webhook URL from the project owner before going live.
 const CONTACT_WEBHOOK_URL = "";
 
 const DEFAULT_SERVICES = [
@@ -399,8 +399,13 @@ export function ContactFormPlaceholder({
 
         <p className="text-xs leading-5 text-brand-muted">
           By submitting this form you agree to our{" "}
-          {/* TODO: /privacy-policy/ route not yet built — stub page needed before launch */}
-          <Link href="/privacy-policy/">Privacy Policy</Link> and consent to
+          <Link
+            href="/privacy-policy/"
+            className="font-medium text-brand-dark underline hover:text-brand-dark/70"
+          >
+            Privacy Policy
+          </Link>{" "}
+          and consent to
           being contacted about your service request.
         </p>
 
