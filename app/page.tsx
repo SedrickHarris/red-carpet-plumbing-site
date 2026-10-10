@@ -675,14 +675,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TODO: image needed for this section. A real technician or crew photo
-            (no readable text) belongs in a right-hand SectionImageSplit. No
-            suitable text-free team photo exists in public/images yet, and the
-            van photos are removed while the phone number on the van is
-            unverified. Do not substitute an unrelated image. */}
         {/* SECTION 7: WHY CHOOSE RED CARPET PLUMBING */}
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
+            <SectionImageSplit
+              src="/images/company/workmanship/red-carpet-plumbing-las-vegas-copper-piping-garage-install.webp"
+              alt="Neatly installed copper water supply piping and brass manifold on a garage wall in a Las Vegas home"
+              position="60% 50%"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="max-w-3xl text-left">
@@ -694,7 +694,7 @@ export default function Home() {
               </SectionRevealItem>
 
               <SectionRevealItem className="mt-14">
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
                   {WHY_CHOOSE_REASONS.map((reason) => (
                     <article
                       key={reason.title}
@@ -711,6 +711,7 @@ export default function Home() {
                 </div>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
