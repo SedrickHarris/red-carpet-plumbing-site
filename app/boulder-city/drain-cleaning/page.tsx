@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -417,7 +418,12 @@ export default function BoulderCityDrainCleaningPage() {
 
         {/* SECTION 3: WHY BOULDER CITY DRAINS CLOG */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/locations/boulder-city/red-carpet-plumbing-boulder-city-nv-location-page-hero-16x9.webp"
+              alt="Single-story stucco home with desert landscaping and hills behind it in Boulder City, Nevada"
+              position="60% 50%"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -451,6 +457,7 @@ export default function BoulderCityDrainCleaningPage() {
                 </ul>
               </SectionRevealItem>
             </SectionReveal>
+          </SectionImageSplit>
           </div>
         </section>
 

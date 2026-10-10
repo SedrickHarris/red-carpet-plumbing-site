@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
+import { ItemIcon } from "@/components/ItemIcon";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
@@ -569,7 +570,7 @@ export default function PlumbingServicesPage() {
                   className="flex flex-col items-center gap-3 rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-brand-surface-alt"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-dark/10 text-brand-dark">
-                    <CheckIcon className="h-6 w-6" />
+                    <ItemIcon text={label} className="h-6 w-6" />
                   </div>
                   <span className="text-base font-semibold text-brand-dark">
                     {label}
@@ -605,24 +606,5 @@ export default function PlumbingServicesPage() {
 
       <SiteFooter />
     </>
-  );
-}
-
-function CheckIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className={className}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M5 12.5l4.5 4.5L19 7.5"
-      />
-    </svg>
   );
 }

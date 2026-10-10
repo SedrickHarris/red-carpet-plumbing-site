@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -461,7 +462,12 @@ export default function GreenValleyDrainCleaningPage() {
 
         {/* SECTION 3: TWO-ERA HOUSING CONTEXT */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/locations/green-valley/red-carpet-plumbing-green-valley-nv-location-page-hero-16x9.webp"
+              alt="Tile-roofed homes beside a green lawn and mature trees in Green Valley, Nevada"
+              position="80% 50%"
+            >
             <div className="text-left">
               <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
                 Original Green Valley and Green Valley Ranch: Two Pipe Eras, Two
@@ -511,6 +517,7 @@ export default function GreenValleyDrainCleaningPage() {
                 </p>
               </div>
             </div>
+          </SectionImageSplit>
           </div>
         </section>
 

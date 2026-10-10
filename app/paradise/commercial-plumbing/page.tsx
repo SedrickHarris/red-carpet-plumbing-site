@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -522,7 +523,12 @@ export default function ParadiseCommercialPlumbingPage() {
 
         {/* SECTION 4: WHAT MAKES THIS MARKET DIFFERENT */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/locations/paradise/red-carpet-plumbing-paradise-las-vegas-nv-location-page-hero-16x9.webp"
+              alt="Single-story homes shaded by palm trees on a residential street in Paradise, Nevada"
+              position="50% 50%"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -550,6 +556,7 @@ export default function ParadiseCommercialPlumbingPage() {
                 </ul>
               </SectionRevealItem>
             </SectionReveal>
+          </SectionImageSplit>
           </div>
         </section>
 

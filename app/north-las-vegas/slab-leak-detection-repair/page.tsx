@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -444,7 +445,12 @@ export default function NorthLasVegasSlabLeakPage() {
 
         {/* SECTION 5: CAUSES */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/locations/north-las-vegas/red-carpet-plumbing-north-las-vegas-nv-location-page-hero-16x9.webp"
+              alt="Single-story homes with desert landscaping on a residential street in North Las Vegas, Nevada"
+              position="20% 50%"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
@@ -467,6 +473,7 @@ export default function NorthLasVegasSlabLeakPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+          </SectionImageSplit>
           </div>
         </section>
 

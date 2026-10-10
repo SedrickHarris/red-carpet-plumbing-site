@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -487,7 +488,12 @@ export default function GreenValleyWaterHeaterPage() {
 
         {/* SECTION 3: WHY GREEN VALLEY WATER HEATERS NEED SERVICE */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/locations/green-valley/red-carpet-plumbing-green-valley-nv-location-page-hero-16x9.webp"
+              alt="Tile-roofed homes beside a green lawn and mature trees in Green Valley, Nevada"
+              position="80% 50%"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -551,6 +557,7 @@ export default function GreenValleyWaterHeaterPage() {
                 </p>
               </SectionRevealItem>
             </SectionReveal>
+          </SectionImageSplit>
           </div>
         </section>
 
