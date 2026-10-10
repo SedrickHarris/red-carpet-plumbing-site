@@ -11,10 +11,11 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews)
-// and "Over 40 years" trust claims are source-site claims surfaced in the
-// approved brief and shown on this page. License #0048585A, permit handling,
+// FLAG: VERIFY before publishing — "Over 40 years" trust claims are source-site claims surfaced in the
+// approved brief and shown on this page. License #048585A, permit handling,
 // and transparent-pricing are also source-site claims. Confirm before launch.
 // Schema follows the established site-wide service-location pattern (Plumber
 // provider; areaServed City Henderson + containedInPlace State Nevada, no
@@ -47,53 +48,60 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const HENDERSON_REPIPE_FAQS = [
+const HENDERSON_REPIPE_FAQS: FaqItem[] = [
   {
     question: "What are the signs I need to repipe my Henderson home?",
     answer:
       "Common signs include recurring leaks in multiple locations, rust-colored or discolored water from the taps, consistently low water pressure throughout the home, frequent pinhole leaks in copper pipes, known defective pipe materials such as polybutylene or Kitec, a home built before 1990 that still has original plumbing, or multiple slab leaks on the same plumbing system. When multiple signs appear together, repiping is typically the more practical long-term solution than continued repairs.",
+    category: "causes-signs",
   },
   {
     question:
       "What pipe materials are most likely to fail in Henderson, NV homes?",
     answer:
       "Green Valley original homes built from the mid-1980s through the mid-1990s may have polybutylene pipe that degrades in chlorinated water and can fail without warning, as well as aging copper pipe thinned by 30 to 40 years of hard water mineral corrosion. Green Valley Ranch condominiums and HOA communities built from the late 1990s through approximately 2005 may have Kitec pipe with brass fittings that corrode in mineral-rich Las Vegas Valley water. Kitec is identifiable by orange or blue flexible pipes with brass fittings.",
+    category: "the-service",
   },
   {
     question: "Do I need a permit to repipe my house in Henderson?",
     answer:
       "Yes. A permit is required for whole-house repiping in Henderson. Repiping without a permit can create issues with home sales and insurance claims. Red Carpet Plumbing pulls the required permits and schedules the city inspection as part of the repiping project. A closed permit with final inspection sign-off is important documentation for Henderson homeowners.",
+    category: "trust",
   },
   {
     question: "Are Green Valley homes good candidates for repiping?",
     answer:
       "Yes. Green Valley's original neighborhoods, built from the mid-1980s through the mid-1990s, have the highest concentration of repiping candidates in Henderson. These homes have copper supply lines with 30 to 40 years of hard water mineral exposure and some contain polybutylene pipe. When original Green Valley homes begin developing recurring leaks or have had multiple slab leaks on the same line, repiping is often the more practical long-term solution than continued repairs.",
+    category: "the-service",
   },
   {
     question:
       "What is the difference between PEX and copper repiping in Henderson?",
     answer:
       "PEX is flexible, resists hard water scale buildup, requires fewer fittings, and is faster to install with less drywall disruption. In Henderson, PEX runs through attic spaces require proper insulation because attic temperatures can exceed 150 degrees Fahrenheit. Copper is a proven material that is durable, naturally resistant to bacteria growth, and provides excellent water quality. Red Carpet Plumbing can help you evaluate which material is the better fit for your specific home.",
+    category: "the-service",
   },
   {
     question: "How long does whole-house repiping take in Henderson?",
     answer:
       "Most single-story Henderson homes can be repiped in one to two days. Water is restored each evening on multi-day projects so the household is not without water overnight. Multi-story homes, condominiums, and larger properties take longer. Red Carpet Plumbing will provide a timeline estimate based on your home's size and plumbing layout before work begins.",
+    category: "timing-process",
   },
   {
     question: "Do you offer same-day repiping service in Henderson?",
     answer:
       "Same-day repiping service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
   "Henderson homes have elevated pipe failure rates driven by Green Valley's aging copper and polybutylene supply lines, Kitec pipe in Green Valley Ranch condominiums and HOA communities, and the Las Vegas Valley's hard water conditions. Red Carpet Plumbing provides whole-house and partial repiping using PEX or copper, replaces all failing pipe materials, and pulls all required permits as part of the project.";
 
-// FLAG: VERIFY rating and "40 years" claims before publishing (see top).
+// FLAG: VERIFY "40 years" claims before publishing (see top).
 const HERO_TRUST_ITEMS = [
-  "4.8 stars, 76 Google reviews",
-  "NV Licensed, #0048585A",
+  "4.8 stars, 81 Google reviews",
+  "NV Licensed, #048585A",
   "Over 40 years serving the Las Vegas Valley",
   "Permits pulled and inspections scheduled",
   "Transparent pricing, no hidden fees",
@@ -301,6 +309,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "City",
@@ -326,18 +342,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: HENDERSON_REPIPE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(HENDERSON_REPIPE_FAQS);
 
 export default function HendersonRePipingPage() {
   return (
@@ -700,32 +705,11 @@ export default function HendersonRePipingPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Repiping in Henderson
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {HENDERSON_REPIPE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Repiping in Henderson</>}
+          faqs={HENDERSON_REPIPE_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -750,20 +734,5 @@ export default function HendersonRePipingPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

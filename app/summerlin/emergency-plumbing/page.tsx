@@ -10,14 +10,15 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing — source-site / project claims surfaced in the
 // approved brief and shown on this page. Each instance carries an inline FLAG:
 //   - 24/7 emergency availability (hero trust item + hero sub-label + Step 1 +
 //     mid-page CTA + FAQ Q2 + final CTA) — source-site claim
-//   - 4.8-star rating, 76 Google reviews — verify before publishing
 //   - "Over 40 years" serving the area — verify before publishing
-// License #0048585A (C-1 Plumbing and Heating) is the established project value.
+// License #048585A (C-1 Plumbing and Heating) is the established project value.
 // Schema follows the brief: Service.areaServed uses Place -> AdministrativeArea
 // (Clark County) -> State (Nevada) per guardrail 7. NOTE: Summerlin spans BOTH
 // the City of Las Vegas and unincorporated Clark County; the visible copy
@@ -58,46 +59,53 @@ export const metadata: Metadata = {
 // than the brief's Block 5 — a deliberate, documented deviation to satisfy the
 // exact-match requirement. Per the sibling pattern, FAQ answers are plain text.
 // ---------------------------------------------------------------------------
-const SUMMERLIN_EMERGENCY_FAQS = [
+const SUMMERLIN_EMERGENCY_FAQS: FaqItem[] = [
   {
     question:
       "What should I do while waiting for an emergency plumber in Summerlin, NV?",
     answer:
       "Shut off the water supply to the affected area or the main shutoff valve if needed. For a burst pipe, locate the main shutoff near the front of the property or in a ground-level box near the street. Turn off the water heater if the water supply is off. Do not use any drains or toilets during a sewer backup. For a tankless water heater failure with flooding, shut off the water supply to the unit. If you smell gas, leave the building immediately and call your gas utility before calling us.",
+    category: "emergency",
   },
   // FLAG: 24/7 availability claim in this answer — source-site — verify before final launch.
   {
     question: "Is there a 24-hour plumber in Summerlin, NV?",
     answer:
       "Red Carpet Plumbing provides 24/7 emergency plumbing service in Summerlin, NV. Call (702) 567-9172 at any time for emergency response.",
+    category: "emergency",
   },
   {
     question:
       "Why are homes in the original Summerlin villages at higher risk for plumbing emergencies?",
     answer:
       "Homes in Summerlin's original western villages, including The Hills, The Trails, and The Arbors, were built in the 1990s and now have plumbing systems 25 to 35 years old. Copper supply lines in these homes have been exposed to Las Vegas Valley hard water for decades. Mineral corrosion thins copper pipe walls over time. Caliche and expansive clay soils beneath slab foundations add additional stress to buried pipes. The combination of aging pipe materials and hard water exposure makes burst pipes, pin-hole leaks, and slab leaks more common in older Summerlin properties than in newer construction.",
+    category: "causes-signs",
   },
   {
     question:
       "My Summerlin South home has a tankless water heater and it stopped working. Is that an emergency?",
     answer:
       "A failed tankless water heater that causes flooding or has no hot water is a situation that warrants prompt attention. In the Las Vegas Valley hard water environment, mineral scale accumulation on the heat exchanger is the most common cause of tankless water heater failure. If the unit is not producing hot water, check whether it has powered off or tripped a circuit. If there is active flooding from the unit, shut off the water supply to it and call Red Carpet Plumbing at (702) 567-9172.",
+    category: "emergency",
   },
   {
     question: "Who handles plumbing permits in Summerlin, NV?",
     answer:
-      "Summerlin spans portions of both the City of Las Vegas and unincorporated Clark County. The applicable permit jurisdiction depends on where your property sits within the community. Red Carpet Plumbing holds Nevada Contractor License #0048585A, which covers work throughout Nevada including all Summerlin properties. For repairs that require a permit, we determine the applicable jurisdiction and handle filing.",
+      "Summerlin spans portions of both the City of Las Vegas and unincorporated Clark County. The applicable permit jurisdiction depends on where your property sits within the community. Red Carpet Plumbing holds Nevada Contractor License #048585A, which covers work throughout Nevada including all Summerlin properties. For repairs that require a permit, we determine the applicable jurisdiction and handle filing.",
+    category: "trust",
   },
   {
     question:
       "Does Red Carpet Plumbing handle slab leak emergencies in Summerlin?",
     answer:
       "Yes. Red Carpet Plumbing provides slab leak detection and emergency repair throughout Summerlin. Slab leaks are a particular concern in older Summerlin villages where 1990s copper supply lines have experienced decades of hard water mineral corrosion and caliche soil movement. We use non-invasive detection equipment to locate slab leaks before any opening of floors or walls. For full information, see our slab leak detection and repair page.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day emergency plumbing service in Summerlin?",
     answer:
       "Same-day emergency plumbing service is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "emergency",
   },
 ];
 
@@ -105,11 +113,10 @@ const HERO_SUBHEADING =
   "Red Carpet Plumbing provides 24/7 emergency plumbing service throughout Summerlin, NV. Whether you have a burst pipe in one of the original 1990s villages, a slab leak in an older western Summerlin home, or a tankless water heater failure in a newer Summerlin South property, our licensed plumbers respond promptly. Call us any time, day or night.";
 
 const HERO_TRUST_ITEMS = [
-  "Licensed: Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+  "Licensed: Nevada Contractor License #048585A, C-1 Plumbing and Heating",
   // FLAG: source-site claim (24/7 availability) — verify before final launch.
   "Available 24/7 for plumbing emergencies",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating, 76 Google reviews",
+  "4.8-star rating, 81 Google reviews",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Serving Summerlin and the Las Vegas Valley for over 40 years",
 ];
@@ -271,7 +278,15 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+      name: "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+    },
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
     },
   },
   areaServed: {
@@ -302,18 +317,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SUMMERLIN_EMERGENCY_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SUMMERLIN_EMERGENCY_FAQS);
 
 export default function SummerlinEmergencyPlumbingPage() {
   return (
@@ -357,7 +361,7 @@ export default function SummerlinEmergencyPlumbingPage() {
           ctaNote={HERO_CTA_NOTE}
           formSlot={<QuoteFormPlaceholder title="Get Emergency Plumbing Help" />}
           backgroundImage={{
-            src: "/images/locations/summerlin/red-carpet-plumbing-summerlin-nv-red-rock-canyon-location-hero.webp",
+            src: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-hero.webp",
             alt: "Emergency plumbing service in Summerlin, NV",
           }}
         />
@@ -409,7 +413,7 @@ export default function SummerlinEmergencyPlumbingPage() {
                 residents use &quot;Summerlin&quot; as a single name, but for
                 permit purposes, the applicable jurisdiction depends on where the
                 property falls within the community. Red Carpet Plumbing holds
-                Nevada Contractor License #0048585A, which covers plumbing work
+                Nevada Contractor License #048585A, which covers plumbing work
                 throughout Nevada including all Summerlin properties regardless of
                 which side of the City of Las Vegas and Clark County boundary the
                 home or business sits on.
@@ -714,33 +718,11 @@ export default function SummerlinEmergencyPlumbingPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Emergency Plumbing in Summerlin,
-                NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SUMMERLIN_EMERGENCY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Emergency Plumbing in Summerlin, NV</>}
+          faqs={SUMMERLIN_EMERGENCY_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         {/* FLAG: 24/7 availability claim in body — source-site — verify before final launch. */}
@@ -784,21 +766,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

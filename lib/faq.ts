@@ -11,6 +11,9 @@ export type FaqItem = {
   question: string;
   answer: string;
   category: FaqCategoryId;
+  // Optional inline link. `phrase` must occur verbatim inside `answer`; the visible answer is
+  // rendered by slicing `answer` around `phrase`, so it always equals the schema text.
+  link?: { phrase: string; href: string };
 };
 
 // Source of category IDs and their human labels. This does NOT govern ordering.
@@ -23,6 +26,9 @@ export const FAQ_CATEGORIES: { id: FaqCategoryId; label: string }[] = [
   { id: "emergency", label: "Emergency Service" },
   { id: "trust", label: "Licensing and Trust" },
 ];
+
+// Minimum number of qualifying categories before the pill bar (and grouped ordering) applies.
+export const MIN_PILL_CATEGORIES = 2;
 
 // A category only qualifies toward pill rendering if it holds 2 or more questions. A
 // single-question category never earns its own pill and never counts toward the threshold.
@@ -44,10 +50,10 @@ export function qualifyingCategories(faqs: FaqItem[]): FaqCategoryId[] {
 
 // Conditional ordering, shared by the visible FAQ section AND the FAQPage schema so DOM
 // order and mainEntity order stay in lockstep in both modes.
-//   3 or more qualifying categories -> group by first appearance, stable within a group.
-//   fewer than 3                    -> return the authored array untouched (no reorder).
+//   MIN_PILL_CATEGORIES or more qualifying categories -> group by first appearance, stable within a group.
+//   fewer than MIN_PILL_CATEGORIES                    -> return the authored array untouched (no reorder).
 export function orderFaqs(faqs: FaqItem[]): FaqItem[] {
-  if (qualifyingCategories(faqs).length < 3) {
+  if (qualifyingCategories(faqs).length < MIN_PILL_CATEGORIES) {
     return faqs;
   }
 

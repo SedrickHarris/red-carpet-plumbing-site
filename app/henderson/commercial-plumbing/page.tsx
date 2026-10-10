@@ -11,13 +11,15 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
+// FLAG: VERIFY before publishing —
 // "Over 40 years," and "24/7 emergency commercial service" trust claims are
 // source-site claims surfaced in the approved brief and shown on this page.
 // Per Guardrail 8, the 24/7 emergency-availability FLAG is repeated inline at
 // every copy instance referencing emergency availability (hero trust strip,
-// Section 3 emergency card, Section 5 Step 1, FAQ Q5). License #0048585A and
+// Section 3 emergency card, Section 5 Step 1, FAQ Q5). License #048585A and
 // transparent-pricing are also source-site claims. Confirm before launch.
 // Schema follows the established site-wide service-location pattern (Plumber
 // provider; areaServed City Henderson + containedInPlace State Nevada, no
@@ -29,14 +31,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Commercial Plumbing in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Licensed commercial plumbing services in Henderson, NV. Red Carpet Plumbing serves businesses, restaurants, property managers, and HOA communities throughout Henderson. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Licensed commercial plumbing services in Henderson, NV. Red Carpet Plumbing serves businesses, restaurants, property managers, and HOA communities throughout Henderson. NV Licensed #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/commercial-plumbing/",
   },
   openGraph: {
     title: "Commercial Plumbing in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Licensed commercial plumbers for businesses, restaurants, property managers, and HOA communities throughout Henderson, NV. NV #0048585A.",
+      "Licensed commercial plumbers for businesses, restaurants, property managers, and HOA communities throughout Henderson, NV. NV #048585A.",
     url: "https://redcarpetplumbing.com/henderson/commercial-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -51,27 +53,31 @@ export const metadata: Metadata = {
 // match. Do not edit one without the other. FLAG comments live in this source
 // only and are NOT part of the visible/schema answer text (Guardrail 11).
 // ---------------------------------------------------------------------------
-const HENDERSON_COMMERCIAL_FAQS = [
+const HENDERSON_COMMERCIAL_FAQS: FaqItem[] = [
   {
     question: "What commercial plumbing services are available in Henderson, NV?",
     answer:
-      "Red Carpet Plumbing provides commercial plumbing repair, installation, and maintenance throughout Henderson including commercial drain cleaning and hydro jetting, grease trap and floor drain service, commercial water heater repair and installation, commercial leak detection, commercial sewer line services, backflow prevention installation and testing, and commercial pipe repair and repiping. All work is performed under Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+      "Red Carpet Plumbing provides commercial plumbing repair, installation, and maintenance throughout Henderson including commercial drain cleaning and hydro jetting, grease trap and floor drain service, commercial water heater repair and installation, commercial leak detection, commercial sewer line services, backflow prevention installation and testing, and commercial pipe repair and repiping. All work is performed under Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    category: "the-service",
   },
   {
     question:
       "Do I need a licensed plumber for commercial plumbing work in Henderson?",
     answer:
-      "Yes. Commercial plumbing work in Nevada must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, which covers commercial plumbing repair and installation throughout Henderson. Henderson requires permits for most commercial plumbing work. Always verify a contractor's license number before hiring for commercial jobs.",
+      "Yes. Commercial plumbing work in Nevada must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, which covers commercial plumbing repair and installation throughout Henderson. Henderson requires permits for most commercial plumbing work. Always verify a contractor's license number before hiring for commercial jobs.",
+    category: "trust",
   },
   {
     question: "Does Red Carpet Plumbing work with HOA communities in Henderson?",
     answer:
       "Yes. Red Carpet Plumbing provides commercial plumbing services for HOA communities and their management companies throughout Henderson, including Green Valley, Green Valley Ranch, Anthem, Inspirada, and MacDonald Ranch. HOA commercial plumbing services include backflow prevention installation and testing for irrigation systems, shared sewer line maintenance, and common area plumbing repair. We work with HOA boards and property management companies to coordinate access and scheduling.",
+    category: "the-service",
   },
   {
     question: "What are the most common commercial plumbing problems in Henderson?",
     answer:
       "Common commercial plumbing problems in Henderson include grease buildup and drain clogs in restaurant kitchen drain lines, commercial water heater failures accelerated by hard water mineral scale, backflow preventer issues in HOA irrigation systems and commercial fire suppression connections, aging supply lines in older commercial buildings and Green Valley Ranch properties, and slab leaks in single-story commercial buildings on Henderson's caliche-rich soil.",
+    category: "the-service",
   },
   // FLAG: 24/7 emergency-availability claim in this answer — verify before final launch.
   {
@@ -79,26 +85,28 @@ const HENDERSON_COMMERCIAL_FAQS = [
       "Does Red Carpet Plumbing handle commercial plumbing emergencies in Henderson?",
     answer:
       "Yes. Red Carpet Plumbing provides emergency service for commercial plumbing situations including burst pipes, sewer backups, water heater failures, and major leaks throughout Henderson. Commercial plumbing emergencies that disrupt business operations require fast, licensed response. Call (702) 567-9172 directly for the fastest response.",
+    category: "the-service",
   },
   {
     question: "Does Red Carpet Plumbing work with property managers in Henderson?",
     answer:
-      "Yes. Red Carpet Plumbing provides plumbing services for property managers overseeing multi-unit residential buildings, condominium communities, and commercial facilities throughout Henderson. We handle everything from individual unit repairs to shared sewer line maintenance and water heater replacement. Our licensed status under NV #0048585A supports permit compliance requirements for managed Henderson properties.",
+      "Yes. Red Carpet Plumbing provides plumbing services for property managers overseeing multi-unit residential buildings, condominium communities, and commercial facilities throughout Henderson. We handle everything from individual unit repairs to shared sewer line maintenance and water heater replacement. Our licensed status under NV #048585A supports permit compliance requirements for managed Henderson properties.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day commercial plumbing service in Henderson?",
     answer:
       "Same-day commercial plumbing service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson. All commercial work is performed under Nevada Contractor License #0048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson. All commercial work is performed under Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed #0048585A, C-1 Plumbing and Heating",
-  // FLAG: VERIFY rating before publishing.
-  "4.8 Stars, 76 Google Reviews",
+  "NV Licensed #048585A, C-1 Plumbing and Heating",
+  "4.8 Stars, 81 Google Reviews",
   // FLAG: VERIFY "Over 40 years" before publishing.
   "Over 40 Years Serving the Las Vegas Valley",
   // FLAG: 24/7 emergency-availability claim — verify before final launch.
@@ -118,7 +126,7 @@ const WHO_WE_SERVE = [
   },
   {
     title: "Property Managers and Multi-Unit Buildings",
-    body: "Henderson has a significant concentration of multi-unit residential buildings, condominium communities, and mixed-use developments. Property managers responsible for these properties need a licensed plumbing contractor who can handle shared sewer line maintenance, riser pipe inspection, individual unit repairs, and tenant improvement plumbing work. Red Carpet Plumbing works with Henderson property managers to provide responsive, documented commercial plumbing service under NV License #0048585A.",
+    body: "Henderson has a significant concentration of multi-unit residential buildings, condominium communities, and mixed-use developments. Property managers responsible for these properties need a licensed plumbing contractor who can handle shared sewer line maintenance, riser pipe inspection, individual unit repairs, and tenant improvement plumbing work. Red Carpet Plumbing works with Henderson property managers to provide responsive, documented commercial plumbing service under NV License #048585A.",
   },
   {
     title: "HOA and Master-Planned Communities",
@@ -231,7 +239,7 @@ const COMMERCIAL_CONTEXT = [
   },
   {
     title: "Henderson Permit Requirements for Commercial Plumbing",
-    body: "Most commercial plumbing work in Henderson requires permits and must be performed by a licensed contractor. Nevada C-1 Plumbing and Heating licensees are authorized for commercial plumbing work throughout Henderson. Red Carpet Plumbing holds NV Contractor License #0048585A and handles permit coordination for applicable commercial projects in Henderson. Working with an unlicensed contractor on commercial plumbing can result in failed inspections, code violations, and liability exposure.",
+    body: "Most commercial plumbing work in Henderson requires permits and must be performed by a licensed contractor. Nevada C-1 Plumbing and Heating licensees are authorized for commercial plumbing work throughout Henderson. Red Carpet Plumbing holds NV Contractor License #048585A and handles permit coordination for applicable commercial projects in Henderson. Working with an unlicensed contractor on commercial plumbing can result in failed inspections, code violations, and liability exposure.",
   },
   {
     title: "Hard Water Impact on Henderson Commercial Systems",
@@ -294,7 +302,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Commercial Plumbing in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Licensed commercial plumbing services in Henderson, NV. Red Carpet Plumbing serves businesses, restaurants, property managers, and HOA communities throughout Henderson. NV Licensed #0048585A.",
+    "Licensed commercial plumbing services in Henderson, NV. Red Carpet Plumbing serves businesses, restaurants, property managers, and HOA communities throughout Henderson. NV Licensed #048585A.",
   url: "https://redcarpetplumbing.com/henderson/commercial-plumbing/",
   isPartOf: {
     "@type": "WebSite",
@@ -334,13 +342,21 @@ const serviceSchema = {
   name: "Commercial Plumbing",
   serviceType: "Commercial Plumbing",
   description:
-    "Licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson, NV. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    "Licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson, NV. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "City",
@@ -366,18 +382,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: HENDERSON_COMMERCIAL_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(HENDERSON_COMMERCIAL_FAQS);
 
 export default function HendersonCommercialPlumbingPage() {
   return (
@@ -418,7 +423,7 @@ export default function HendersonCommercialPlumbingPage() {
             label: "Request Commercial Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A, C-1 Plumbing and Heating. Permits coordinated."
+          ctaNote="NV Licensed #048585A, C-1 Plumbing and Heating. Permits coordinated."
           formSlot={<QuoteFormPlaceholder title="Get Commercial Plumbing Help" />}
           accentWidth="sm"
           backgroundImage={{
@@ -474,7 +479,7 @@ export default function HendersonCommercialPlumbingPage() {
                       commercial plumbing services
                     </Link>{" "}
                     for businesses and properties throughout Henderson. All work
-                    is performed under NV Contractor License #0048585A.
+                    is performed under NV Contractor License #048585A.
                   </p>
                 </div>
               </SectionRevealItem>
@@ -585,7 +590,7 @@ export default function HendersonCommercialPlumbingPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing provides licensed commercial plumbing for
                   businesses, restaurants, property managers, and HOA
-                  communities throughout Henderson. NV Licensed #0048585A. Call
+                  communities throughout Henderson. NV Licensed #048585A. Call
                   or request service online. For urgent issues, see our{" "}
                   <Link
                     href="/henderson/emergency-plumbing/"
@@ -679,38 +684,17 @@ export default function HendersonCommercialPlumbingPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Commercial Plumbing in Henderson
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {HENDERSON_COMMERCIAL_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Commercial Plumbing in Henderson</>}
+          faqs={HENDERSON_COMMERCIAL_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
           background="red"
           headline={<>Licensed Commercial Plumbing<br />Throughout Henderson, NV</>}
-          body="Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson. NV Contractor License #0048585A, C-1 Plumbing and Heating."
+          body="Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson. NV Contractor License #048585A, C-1 Plumbing and Heating."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",
@@ -729,20 +713,5 @@ export default function HendersonCommercialPlumbingPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

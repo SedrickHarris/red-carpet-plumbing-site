@@ -11,13 +11,15 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only unless noted):
 //   - telephone (+17025679172) in serviceSchema.provider — VERIFY before launch.
 //   - "Transparent Pricing, No Hidden Fees" hero trust item + ctaNote and the
 //     Why-Choose pricing bullet — source-site claims, VERIFY before launch.
-//   - License #0048585A is a verified business claim.
+//   - License #048585A is a verified business claim.
 //
 // Schema follows the established site-wide service-location pattern with the
 // P44 brief variant for the Service block (provider includes PostalAddress per
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
   // NOTE: approved description exceeds the ~160 char SEO target (~218 chars).
   // Used verbatim per the approved brief; flag for trim consideration at launch.
   description:
-    "Red Carpet Plumbing provides non-invasive slab leak detection and repair in the Aliante area of North Las Vegas, NV. Acoustic sensors, thermal imaging, and all repair options explained. NV License #0048585A. (702) 567-9172.",
+    "Red Carpet Plumbing provides non-invasive slab leak detection and repair in the Aliante area of North Las Vegas, NV. Acoustic sensors, thermal imaging, and all repair options explained. NV License #048585A. (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/aliante-area/slab-leak-detection-repair/",
@@ -72,7 +74,7 @@ export const metadata: Metadata = {
 // the P40-P43 Aliante cluster pattern.
 const ALIANTE_SLAB_TRUST = [
   "Non-Invasive Detection",
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "All Repair Options Explained",
   // FLAG: VERIFY — "Transparent Pricing, No Hidden Fees" is a source-site claim.
   "Transparent Pricing, No Hidden Fees",
@@ -200,7 +202,7 @@ const ALIANTE_SLAB_WHY = [
   "Local Las Vegas Valley plumbing company familiar with Aliante area homes and the first-service-cycle copper plumbing conditions common in 2000 to 2008 construction",
   "Non-invasive detection methods that locate slab leaks before any concrete cutting begins",
   "All repair options explained clearly before any work starts",
-  "Licensed plumbers, NV License #0048585A, C-1 Plumbing and Heating",
+  "Licensed plumbers, NV License #048585A, C-1 Plumbing and Heating",
   "Transparent pricing with no hidden fees",
   "Slab leak detection and repair service throughout Aliante and North Las Vegas",
 ];
@@ -269,43 +271,50 @@ const ALIANTE_SLAB_RELATED = [
 // AND the FAQPage JSON-LD both derive from this single array, guaranteeing a
 // character-for-character match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const ALIANTE_SLAB_FAQS = [
+const ALIANTE_SLAB_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a slab leak in an Aliante area home?",
     answer:
       "Common signs of a slab leak in an Aliante area home include warm or hot spots on the floors, the sound of running water when all fixtures are off, an unexplained increase in your water bill, damp or wet flooring without an obvious source, cracks appearing in walls or floors, low water pressure throughout the home, and mold or mildew odor at floor level. Because slab leaks develop beneath the concrete foundation, these signs often appear before any visible pipe damage is accessible.",
+    category: "causes-signs",
   },
   {
     question: "Why do slab leaks happen in Aliante area homes?",
     answer:
       "Most Aliante area homes were built between 2000 and 2008, placing the copper supply lines beneath the slab at 17 to 25 years old. Las Vegas Valley hard water at 17 to 24 grains per gallon accelerates interior corrosion in copper pipe walls over time, thinning them from the inside out. Caliche soil movement beneath slab foundations adds mechanical stress to pipes that have already been weakened by corrosion. Closed-loop plumbing pressure cycles from thermal expansion contribute further pipe fatigue at joints and fittings. At this age and with these local conditions, Aliante homes are entering the first major service cycle for under-slab copper failures.",
+    category: "causes-signs",
   },
   {
     question: "How is a slab leak detected without breaking up the floor?",
     answer:
       "Professional slab leak detection uses acoustic sensors that amplify the sound of pressurized water escaping beneath the slab, pressure testing to confirm and isolate water loss to a specific plumbing line, and thermal imaging to identify temperature differences on the floor surface caused by hot water leaks. These non-invasive methods locate the slab leak precisely before any concrete cutting begins. Red Carpet Plumbing uses all three methods as part of its standard slab leak detection process in Aliante area homes.",
+    category: "the-service",
   },
   {
     question: "What are the slab leak repair options for Aliante homes?",
     answer:
       "Red Carpet Plumbing presents three slab leak repair options depending on the leak location, pipe condition, and what sits above the repair area. Spot repair involves cutting the concrete above the leak, repairing the pipe section, and patching the concrete. Pipe rerouting bypasses the damaged section by running a new supply line through walls or ceilings, eliminating the aging copper pipe from beneath the slab. Epoxy pipe lining coats the interior of the existing pipe to seal the damage without concrete cutting. The appropriate option depends on the pipe age, condition, and leak specifics. Red Carpet Plumbing explains all options before any work begins.",
+    category: "the-service",
   },
   {
     question:
       "Should I choose spot repair or pipe rerouting for a slab leak in Aliante?",
     answer:
       "For an isolated leak in a copper pipe that is otherwise in good condition, spot repair can be appropriate. For Aliante homes where copper supply lines have been thinned by 17 to 25 years of hard water corrosion, and where a second leak on the same aging line is a reasonable concern, pipe rerouting is often the more durable long-term solution because it removes the failing pipe from beneath the slab entirely. Red Carpet Plumbing assesses pipe condition and presents both options with a clear explanation of the tradeoffs before any repair begins.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing serve the Aliante area for slab leak repair?",
     answer:
-      "Yes. Red Carpet Plumbing provides slab leak detection and repair throughout the Aliante area of North Las Vegas. Aliante is a master-planned community within the City of North Las Vegas, and our Nevada Contractor License #0048585A covers plumbing work throughout North Las Vegas including the Aliante community and surrounding neighborhoods. Call (702) 567-9172 to confirm coverage for your address or to request service.",
+      "Yes. Red Carpet Plumbing provides slab leak detection and repair throughout the Aliante area of North Las Vegas. Aliante is a master-planned community within the City of North Las Vegas, and our Nevada Contractor License #048585A covers plumbing work throughout North Las Vegas including the Aliante community and surrounding neighborhoods. Call (702) 567-9172 to confirm coverage for your address or to request service.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day slab leak repair service in the Aliante Area of North Las Vegas?",
     answer:
       "Same-day slab leak repair service is available in the Aliante Area of North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -408,18 +417,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ALIANTE_SLAB_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ALIANTE_SLAB_FAQS);
 
 export default function AlianteSlabLeakPage() {
   return (
@@ -471,7 +469,7 @@ export default function AlianteSlabLeakPage() {
             href: "/contact/",
           }}
           // FLAG: VERIFY — transparent pricing is a source-site claim.
-          ctaNote="NV Licensed, #0048585A. Transparent pricing, no hidden fees."
+          ctaNote="NV Licensed, #048585A. Transparent pricing, no hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Slab Leak Help" />}
           backgroundImage={{
             src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-hero.webp",
@@ -811,32 +809,11 @@ export default function AlianteSlabLeakPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Slab Leaks in the Aliante Area
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ALIANTE_SLAB_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Slab Leaks in the Aliante Area</>}
+          faqs={ALIANTE_SLAB_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -879,21 +856,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

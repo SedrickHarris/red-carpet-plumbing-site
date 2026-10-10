@@ -10,14 +10,15 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing — source-site / project claims surfaced in the
 // approved brief and shown on this page. Each instance carries an inline FLAG:
 //   - 24/7 emergency availability (hero trust item + hero sub-label + Step 1 +
 //     mid-page CTA + FAQ Q2 + final CTA) — source-site claim
-//   - 4.8-star rating, 76 Google reviews — verify before publishing
 //   - "Over 40 years" serving the area — verify before publishing
-// License #0048585A (C-1 Plumbing and Heating) is the established project value.
+// License #048585A (C-1 Plumbing and Heating) is the established project value.
 // Schema follows the brief: Service.areaServed uses Place -> AdministrativeArea
 // (Clark County) -> State (Nevada), NOT City, because Paradise is unincorporated
 // Clark County. No AggregateRating. No sameAs.
@@ -47,45 +48,52 @@ export const metadata: Metadata = {
 // match. Do not edit one without the other. FLAG comments live in this source
 // only and are NOT part of the visible/schema answer text.
 // ---------------------------------------------------------------------------
-const PARADISE_EMERGENCY_FAQS = [
+const PARADISE_EMERGENCY_FAQS: FaqItem[] = [
   {
     question:
       "What should I do while waiting for an emergency plumber in Paradise, NV?",
     answer:
       "Shut off the water supply to the affected area or the main shutoff valve if needed. For a burst pipe, locate the main shutoff near the front of the property or inside a ground-level box near the street. Turn off the water heater if the water supply is off. Do not use any drains or toilets during a sewer backup. If you smell gas, leave the building immediately and call your gas utility before calling us.",
+    category: "emergency",
   },
   // FLAG: 24/7 availability claim in this answer — source-site — verify before final launch.
   {
     question: "Is there a 24-hour plumber in Paradise, NV?",
     answer:
       "Red Carpet Plumbing provides 24/7 emergency plumbing service in Paradise, NV. Call (702) 567-9172 at any time for emergency response.",
+    category: "emergency",
   },
   {
     question: "Who issues plumbing permits in Paradise, NV?",
     answer:
       "Plumbing permits in Paradise are issued by Clark County, Nevada. Paradise is an unincorporated community within Clark County, so the City of Las Vegas building department does not have jurisdiction over Paradise properties. Red Carpet Plumbing handles permit filing with Clark County for work requiring permits.",
+    category: "trust",
   },
   {
     question:
       "Why are older homes near UNLV at higher risk for plumbing emergencies?",
     answer:
       "Residential neighborhoods near UNLV and along the Tropicana and Flamingo corridors in Paradise include homes built in the 1960s through 1980s. Plumbing systems in these homes are 40 to 60 years old. Decades of exposure to hard Las Vegas Valley water has thinned copper supply lines and accelerated corrosion in older galvanized pipes. Slab leaks, burst pipes, and pin-hole leaks are more common in this housing stock than in newer construction.",
+    category: "causes-signs",
   },
   {
     question:
       "Does Red Carpet Plumbing handle commercial plumbing emergencies near the Las Vegas Strip?",
     answer:
-      "Yes. Red Carpet Plumbing provides commercial emergency plumbing for businesses, restaurants, and commercial properties throughout Paradise including the Strip corridor. Our license covers commercial plumbing under Nevada Contractor License #0048585A, C-1 Plumbing and Heating classification.",
+      "Yes. Red Carpet Plumbing provides commercial emergency plumbing for businesses, restaurants, and commercial properties throughout Paradise including the Strip corridor. Our license covers commercial plumbing under Nevada Contractor License #048585A, C-1 Plumbing and Heating classification.",
+    category: "the-service",
   },
   {
     question: "Is a slab leak an emergency in Paradise, NV?",
     answer:
       "A slab leak becomes an emergency when it causes visible water damage, a sudden drop in water pressure, warm or wet spots on the floor, or the sound of running water when all fixtures are off. Early detection prevents major foundation damage. Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Paradise and the Las Vegas Valley.",
+    category: "emergency",
   },
   {
     question: "Do you offer same-day emergency plumbing service in Paradise?",
     answer:
       "Same-day emergency plumbing service is available in Paradise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "emergency",
   },
 ];
 
@@ -93,11 +101,10 @@ const HERO_SUBHEADING =
   "Red Carpet Plumbing provides 24/7 emergency plumbing service throughout Paradise, NV and the surrounding Las Vegas Valley. Whether you have a burst pipe near the Strip, a sewer backup at a residential property near UNLV, or a water heater failure anywhere in the Paradise area, our licensed plumbers respond promptly. Call us any time.";
 
 const HERO_TRUST_ITEMS = [
-  "Licensed: Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+  "Licensed: Nevada Contractor License #048585A, C-1 Plumbing and Heating",
   // FLAG: source-site claim (24/7 availability) — verify before final launch.
   "Available 24/7 for plumbing emergencies",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating, 76 Google reviews",
+  "4.8-star rating, 81 Google reviews",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Serving Paradise and the Las Vegas Valley for over 40 years",
 ];
@@ -252,7 +259,15 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+      name: "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+    },
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
     },
   },
   areaServed: {
@@ -283,18 +298,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: PARADISE_EMERGENCY_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(PARADISE_EMERGENCY_FAQS);
 
 export default function ParadiseEmergencyPlumbingPage() {
   return (
@@ -487,7 +491,7 @@ export default function ParadiseEmergencyPlumbingPage() {
                       >
                         commercial plumbing
                       </Link>{" "}
-                      under Nevada Contractor License #0048585A, C-1
+                      under Nevada Contractor License #048585A, C-1
                       classification.
                     </p>
                   </article>
@@ -702,33 +706,11 @@ export default function ParadiseEmergencyPlumbingPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Emergency Plumbing in Paradise,
-                NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {PARADISE_EMERGENCY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Emergency Plumbing in Paradise, NV</>}
+          faqs={PARADISE_EMERGENCY_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         {/* FLAG: 24/7 availability claim in body — source-site — verify before final launch. */}
@@ -772,21 +754,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

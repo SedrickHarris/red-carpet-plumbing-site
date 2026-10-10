@@ -10,13 +10,15 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only):
 //   - telephone (+17025679172) in serviceSchema.provider — VERIFY before launch.
 //   - "Transparent Pricing, No Hidden Fees" trust strip item + ctaNote and the
 //     Why-Choose pricing bullet — source-site claims, VERIFY before launch.
-//   - License #0048585A is a verified business claim.
+//   - License #048585A is a verified business claim.
 //
 // Schema follows the established site-wide service-location pattern with the
 // P46 brief variant for the Service block (provider includes PostalAddress per
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
   title:
     "Faucet and Sink Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks in Green Valley, Henderson, NV. Dripping faucets, low pressure, under-sink leaks, and new sink installation. NV License #0048585A. (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks in Green Valley, Henderson, NV. Dripping faucets, low pressure, under-sink leaks, and new sink installation. NV License #048585A. (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/green-valley/faucet-sink-repair-installation/",
@@ -60,7 +62,7 @@ export const metadata: Metadata = {
 // Trust strip (4 items) rendered as a red brand-primary band, matching the GV
 // cluster pattern.
 const GV_FAUCET_SINK_TRUST = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Faucet and Sink Repair and Installation",
   "Serving Green Valley and Henderson",
   // FLAG: VERIFY — "Transparent Pricing, No Hidden Fees" is a source-site claim.
@@ -184,7 +186,7 @@ const GV_FAUCET_SINK_WHY = [
   "Local Las Vegas Valley plumbing company familiar with Green Valley homes and the hard water conditions that accelerate faucet and fixture wear",
   "Transparent assessment of repair vs. replacement before any work is recommended",
   "Supply line and shut-off valve inspection included as part of every faucet service in original Green Valley homes",
-  "Licensed plumbers, NV License #0048585A, C-1 Plumbing and Heating",
+  "Licensed plumbers, NV License #048585A, C-1 Plumbing and Heating",
   "Transparent pricing with no hidden fees",
   "Faucet and sink service throughout Green Valley and Henderson",
 ];
@@ -206,43 +208,50 @@ const GV_FAUCET_SINK_SUBAREAS = [
 // AND the FAQPage JSON-LD both derive from this single array, guaranteeing a
 // character-for-character match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const GV_FAUCET_SINK_FAQS = [
+const GV_FAUCET_SINK_FAQS: FaqItem[] = [
   {
     question: "Why is my faucet dripping in my Green Valley home?",
     answer:
       "A dripping faucet in a Green Valley home is almost always caused by a worn internal component. In cartridge faucets, a degraded cartridge or O-ring is the most common cause. In compression faucets, a worn rubber washer at the seat is typically to blame. Las Vegas Valley hard water at 17 to 24 grains per gallon accelerates wear on these components, so faucets in Green Valley homes may develop drips sooner than expected. A licensed plumber can diagnose the faucet type and replace the failing part.",
+    category: "causes-signs",
   },
   {
     question: "Why is my water pressure low at one faucet?",
     answer:
       "Low pressure at a single faucet is usually caused by a clogged aerator. The aerator is the small screen at the faucet tip that mixes air with water. In Green Valley, mineral deposits from Las Vegas Valley hard water build up inside aerators and restrict flow. Cleaning or replacing the aerator restores normal pressure in most cases. If the aerator is clear and pressure is still low, the issue may be in the supply line or shut-off valve beneath the sink.",
+    category: "causes-signs",
   },
   {
     question: "Should I repair or replace a leaky faucet in Green Valley?",
     answer:
       "Repair is usually the right choice for a faucet that is less than ten years old and has a single failing component such as a cartridge, O-ring, or washer. Replacement makes more sense for a faucet that leaks from the body, requires repeated repairs, shows visible corrosion, or is an older model where replacement parts are difficult to source. In original Green Valley homes, faucets that have been in service for 30 or more years and have significant mineral buildup inside the valve body are often more practical to replace than repair.",
+    category: "the-service",
   },
   {
     question: "What causes leaks under the sink?",
     answer:
       "Leaks under a sink are most commonly caused by a loose or corroded drain connection, a failing P-trap seal, a worn supply line, or a deteriorated shut-off valve. In original Green Valley homes, supply lines and shut-off valves that have been in place since the late 1970s through mid-1990s may be corroded from decades of hard water exposure and can fail when disturbed during faucet service. A plumber should inspect all under-sink connections as part of any faucet or sink repair.",
+    category: "causes-signs",
   },
   {
     question:
       "Does Red Carpet Plumbing install kitchen and bathroom sinks in Green Valley?",
     answer:
       "Yes. Red Carpet Plumbing installs kitchen sinks, bathroom sinks, and utility sinks for homes throughout Green Valley and Henderson. Sink installation includes connecting water supply lines, installing the drain assembly and P-trap, and confirming all connections are leak-free. We work with drop-in, undermount, vessel, pedestal, and vanity-top sink configurations and can advise on the plumbing requirements for your specific installation.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing serve Green Valley for faucet and sink repair?",
     answer:
-      "Yes. Red Carpet Plumbing provides faucet and sink repair and installation throughout Green Valley and the Henderson area. Green Valley is a community within the incorporated City of Henderson, and our Nevada Contractor License #0048585A covers plumbing work throughout Henderson including Green Valley and surrounding neighborhoods. Call (702) 567-9172 to request service or confirm coverage for your address.",
+      "Yes. Red Carpet Plumbing provides faucet and sink repair and installation throughout Green Valley and the Henderson area. Green Valley is a community within the incorporated City of Henderson, and our Nevada Contractor License #048585A covers plumbing work throughout Henderson including Green Valley and surrounding neighborhoods. Call (702) 567-9172 to request service or confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day faucet and sink repair service in Green Valley?",
     answer:
       "Same-day faucet and sink repair service is available in Green Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -256,7 +265,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Faucet and Sink Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks for homes in Green Valley, Henderson, NV. Dripping faucets, low pressure, under-sink leaks, and new sink installation. Licensed plumbers. NV #0048585A.",
+    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks for homes in Green Valley, Henderson, NV. Dripping faucets, low pressure, under-sink leaks, and new sink installation. Licensed plumbers. NV #048585A.",
   url: "https://redcarpetplumbing.com/green-valley/faucet-sink-repair-installation/",
   isPartOf: {
     "@type": "WebSite",
@@ -298,7 +307,7 @@ const serviceSchema = {
   name: "Faucet and Sink Repair and Installation in Green Valley",
   serviceType: "Faucet and Sink Repair and Installation",
   description:
-    "Faucet and sink repair and installation for homes in Green Valley, Henderson, NV. Dripping faucet repair, cartridge and aerator service, faucet replacement, kitchen and bathroom sink installation, under-sink leak repair, and P-trap service. Nevada Contractor License #0048585A.",
+    "Faucet and sink repair and installation for homes in Green Valley, Henderson, NV. Dripping faucet repair, cartridge and aerator service, faucet replacement, kitchen and bathroom sink installation, under-sink leak repair, and P-trap service. Nevada Contractor License #048585A.",
   areaServed: {
     "@type": "Place",
     name: "Green Valley, Nevada",
@@ -339,18 +348,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: GV_FAUCET_SINK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(GV_FAUCET_SINK_FAQS);
 
 function renderTail(tail: LinkSeg[]) {
   return tail.map((seg, i) =>
@@ -412,7 +410,7 @@ export default function GreenValleyFaucetSinkPage() {
             href: "/contact/",
           }}
           // FLAG: VERIFY — transparent pricing is a source-site claim.
-          ctaNote="NV Licensed, #0048585A. Transparent pricing, no hidden fees."
+          ctaNote="NV Licensed, #048585A. Transparent pricing, no hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Faucet and Sink Help" />}
           backgroundImage={{
             src: "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-sink-repair-hero.webp",
@@ -665,33 +663,11 @@ export default function GreenValleyFaucetSinkPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Faucet and Sink Repair and
-                Installation in Green Valley
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {GV_FAUCET_SINK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Faucet and Sink Repair and Installation in Green Valley</>}
+          faqs={GV_FAUCET_SINK_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -734,21 +710,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

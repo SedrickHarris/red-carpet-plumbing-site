@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { FaqSection } from "@/components/FaqSection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -91,7 +92,7 @@ const HOMEPAGE_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed in Nevada?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A, C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. You can verify contractor license status through the Nevada Contractors Board website.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. You can verify contractor license status through the Nevada Contractors Board website.",
     category: "trust",
   },
   {
@@ -215,7 +216,7 @@ const WHY_CHOOSE_REASONS = [
   },
   {
     title: "Licensed Plumbers",
-    body: "Every job Red Carpet Plumbing takes on is handled by licensed plumbing professionals. NV Contractor License #0048585A (C-1 Plumbing and Heating).",
+    body: "Every job Red Carpet Plumbing takes on is handled by licensed plumbing professionals. NV Contractor License #048585A (C-1 Plumbing and Heating).",
   },
   {
     title: "24/7 Emergency Service",
@@ -245,10 +246,11 @@ const plumberSchema = {
     postalCode: "89118",
     addressCountry: "US",
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -287,14 +289,14 @@ const plumberSchema = {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
     name: "Nevada C-1 Plumbing and Heating Contractor License",
-    identifier: "0048585A",
+    identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
       name: "State of Nevada Contractors Board",
     },
   },
   logo: "https://redcarpetplumbing.com/images/brand/logo/red-carpet-plumbing-logo.png",
-  image: "https://redcarpetplumbing.com/images/hero/homepage/hero-primary.webp",
+  image: "https://redcarpetplumbing.com/images/brand/logo/red-carpet-plumbing-logo.png",
 };
 
 const websiteSchema = {
@@ -346,7 +348,7 @@ export default function Home() {
           }
           subheading="Red Carpet Plumbing provides plumbing services for homes and businesses throughout the Las Vegas Valley. From emergency plumbing and drain cleaning to water heater repair, slab leak detection, and full repiping, our local team is ready to help. We have been serving Las Vegas for over 40 years as a licensed, family-owned plumbing company."
           trustItems={[
-            "4.8 stars, 76 Google reviews",
+            "4.8 stars, 81 Google reviews",
             "Local, family-owned, over 40 years in Las Vegas",
             "Licensed plumbers, transparent pricing",
             "24/7 emergency plumbing available",
@@ -369,13 +371,15 @@ export default function Home() {
           }
           size="tall"
           // Ambient crossfade across the five homepage hero assets. The
-          // branded service van stays first: it is the LCP image and the only
-          // slide marked priority. Homepage only; every other page still
+          // first slide is the LCP image and the only slide marked priority.
+          // Slides 1 and 4 are the verified branded van photos (phone number
+          // checked against the site number). Homepage only; every other page still
           // passes the singular backgroundImage prop.
           backgroundImages={[
             {
-              src: "/images/homepage/red-carpet-plumbing-las-vegas-branded-service-van-home-hero.webp",
-              alt: "Red Carpet Plumbing branded service van in Las Vegas, NV",
+              src: "/images/company/vehicles/red-carpet-plumbing-las-vegas-service-van-front-three-quarter-medium.webp",
+              position: "62% 50%",
+              alt: "Red Carpet Plumbing service van parked in Las Vegas, Nevada",
             },
             {
               src: "/images/homepage/red-carpet-plumbing-las-vegas-commercial-plumbing-services-hero.webp",
@@ -386,8 +390,9 @@ export default function Home() {
               alt: "Red Carpet Plumbing emergency plumbing leak repair in Las Vegas, NV",
             },
             {
-              src: "/images/homepage/red-carpet-plumbing-las-vegas-residential-service-van-equipment-hero.webp",
-              alt: "Red Carpet Plumbing residential service van and equipment in Las Vegas, NV",
+              src: "/images/company/vehicles/red-carpet-plumbing-las-vegas-service-van-front-three-quarter-close.webp",
+              position: "62% 60%",
+              alt: "Red Carpet Plumbing service van with branded wrap parked in Las Vegas, Nevada",
             },
             {
               src: "/images/homepage/red-carpet-plumbing-las-vegas-sewer-drain-services-hero.webp",
@@ -410,7 +415,7 @@ export default function Home() {
                 repiping, sewer line services, gas line plumbing, and
                 commercial plumbing throughout Las Vegas, Henderson, North
                 Las Vegas, and the Las Vegas Valley. Nevada Contractor License
-                #0048585A, C-1 Plumbing and Heating. To schedule service or
+                #048585A, C-1 Plumbing and Heating. To schedule service or
                 request emergency plumbing help, call{" "}
                 <a
                   href="tel:+17025679172"
@@ -549,7 +554,11 @@ export default function Home() {
 
         {/* SECTION 5: LOCAL LAS VEGAS PLUMBING ISSUES */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-pinhole-leak-repair-card.webp"
+              alt="Copper water line in an opened wall with a pinhole drip at a joint beside soldering tools"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -583,6 +592,7 @@ export default function Home() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -665,6 +675,11 @@ export default function Home() {
           </div>
         </section>
 
+        {/* TODO: image needed for this section. A real technician or crew photo
+            (no readable text) belongs in a right-hand SectionImageSplit. No
+            suitable text-free team photo exists in public/images yet, and the
+            van photos are removed while the phone number on the van is
+            unverified. Do not substitute an unrelated image. */}
         {/* SECTION 7: WHY CHOOSE RED CARPET PLUMBING */}
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">

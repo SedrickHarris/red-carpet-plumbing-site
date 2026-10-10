@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 — project-established value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating — project-established value;
+// - License #048585A, C-1 Plumbing and Heating — project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees" — source-site claim, present in
 //   the approved Section 8 copy; confirm documentation.
@@ -21,7 +21,7 @@
 //
 // Hero deliberately omits trustItems, matching the sibling NLV sewer page
 // rather than the core /water-pipe-repair-replacement/ page. The core page's
-// trustItems restate "76 Google Reviews" and "Over 40 Years in Las Vegas",
+// trustItems restate "81 Google Reviews" and "Over 40 Years in Las Vegas",
 // neither of which is part of this build's approved content.
 //
 // TODO: Hero reuses /images/services/water-pipe-repair-replacement/hero.webp,
@@ -42,6 +42,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
@@ -82,7 +84,7 @@ const REPAIR_VS_REPLACEMENT_BODY =
   "Spot repair is the right fix when the damage is limited to one section or joint and the rest of the pipe system is sound. Full or partial replacement is the better choice when a home has polybutylene pipe, galvanized pipe that has corroded enough to restrict flow, or copper pipe with recurring pinhole leaks in more than one location. Red Carpet Plumbing inspects the full system and explains which option fits your home before any work begins.";
 
 const TRUST_BODY =
-  "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#0048585A) rated 4.8 stars. Every water pipe job includes a full inspection, an upfront explanation of your repair or replacement options, and transparent pricing with no hidden fees.";
+  "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A) rated 4.8 stars. Every water pipe job includes a full inspection, an upfront explanation of your repair or replacement options, and transparent pricing with no hidden fees.";
 
 const URGENCY_BODY =
   "Need water pipe repair in North Las Vegas? Same-day service is available, subject to scheduling. Call (702) 567-9172 to reach Red Carpet Plumbing and get an inspection scheduled.";
@@ -126,54 +128,51 @@ const NLV_WATER_PIPE_STEPS = [
   },
 ];
 
-type Faq = {
-  question: string;
-  answer: string;
-  // Optional inline link. `phrase` must occur verbatim inside `answer`. The
-  // visible answer is rendered by splitting `answer` around `phrase` and
-  // reassembling it, so the rendered text is the schema string itself and the
-  // two cannot drift. See FaqAnswer below.
-  link?: { phrase: string; href: string };
-};
-
 // Section 10 FAQs. Drives both the visible accordion and the FAQPage schema.
-const NLV_WATER_PIPE_FAQS: Faq[] = [
+const NLV_WATER_PIPE_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a failing water pipe in North Las Vegas?",
     answer:
       "Common signs include a drop in water pressure, discolored or rust-tinged water, the sound of running water when no fixtures are in use, water stains on walls or ceilings, wet patches in the yard above buried lines, and a water bill that rises without a change in usage. A licensed plumber can identify the source.",
+    category: "causes-signs",
   },
   {
     question: "Should I repair my water pipe or replace it?",
     answer:
       "Spot repair works when the damage is limited to one section and the rest of the pipe system is sound. Replacement is the better option when a home has polybutylene pipe, corroded galvanized pipe, or recurring pinhole leaks in multiple locations. A licensed plumber can assess your system and recommend the right approach.",
+    category: "the-service",
   },
   {
     question: "What causes pinhole leaks in copper pipe?",
     answer:
       "Pinhole leaks are caused by pitting corrosion, which develops on the interior surface of the pipe over time. Las Vegas Valley's hard water and water chemistry contribute to accelerated pitting corrosion in copper supply lines, especially in pipe installed in the 1980s and 1990s.",
+    category: "causes-signs",
   },
   {
     question:
       "My North Las Vegas home was built in the 1980s. Could it have polybutylene pipe?",
     answer:
       "Homes built in the Las Vegas Valley between approximately 1978 and 1995 may have polybutylene supply pipe. Polybutylene can degrade from chlorinated water and fail without warning. A licensed plumber can confirm whether polybutylene pipe is present in your home.",
+    category: "the-service",
   },
   {
     question: "Can you repair a burst water pipe?",
     answer:
       "Yes. If a pipe has burst, shut off the main water supply to the home as quickly as possible, then call (702) 567-9172. Burst pipe repair typically involves replacing the damaged section and checking adjacent pipe for signs of stress or corrosion.",
+    category: "emergency",
   },
   {
     question: "What is the difference between water pipe repair and repiping?",
     answer:
       "Water pipe repair addresses a specific section of damaged or leaking pipe. Repiping replaces the entire supply pipe system, typically because the existing pipe material is failing throughout the home. Red Carpet Plumbing provides both spot pipe repair and full repiping through our separate repiping service.",
     link: { phrase: "full repiping", href: "/repiping/" },
+    category: "the-service",
   },
   {
     question: "Do you replace galvanized pipe in North Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing replaces galvanized steel supply pipe that has corroded internally, which reduces water pressure and water quality over time.",
+    category: "the-service",
   },
   {
     question:
@@ -181,11 +180,13 @@ const NLV_WATER_PIPE_FAQS: Faq[] = [
     answer:
       "Red Carpet Plumbing services water supply pipes for commercial properties in North Las Vegas, from inspection through repair or replacement.",
     link: { phrase: "commercial properties", href: "/commercial-plumbing/" },
+    category: "the-service",
   },
   {
     question: "Do you offer same-day water pipe repair in North Las Vegas?",
     answer:
       "Same-day water pipe repair is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -262,6 +263,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone before publishing.
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: [
     {
@@ -295,18 +304,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: NLV_WATER_PIPE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(NLV_WATER_PIPE_FAQS);
 
 export default function NorthLasVegasWaterPipeRepairReplacementPage() {
   return (
@@ -543,32 +541,11 @@ export default function NorthLasVegasWaterPipeRepairReplacementPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Water Pipe Repair FAQs
-                <br className="hidden sm:block" /> North Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {NLV_WATER_PIPE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    <FaqAnswer faq={faq} />
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Water Pipe Repair FAQs <br className="hidden sm:block" /> North Las Vegas</>}
+          faqs={NLV_WATER_PIPE_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -600,34 +577,6 @@ export default function NorthLasVegasWaterPipeRepairReplacementPage() {
   );
 }
 
-// Renders a FAQ answer, optionally wrapping one phrase in an internal link.
-//
-// ASSERTION: the rendered output is the schema string itself. `before`,
-// `phrase`, and `after` are slices of `faq.answer` taken at the phrase
-// boundary, so `before + phrase + after === faq.answer` holds by construction.
-// The visible answer and the FAQPage `acceptedAnswer.text` therefore cannot
-// drift apart, no matter how either is later edited. If `phrase` is not found
-// the answer renders as plain text rather than dropping content.
-function FaqAnswer({ faq }: { faq: Faq }) {
-  if (!faq.link) return <>{faq.answer}</>;
-
-  const start = faq.answer.indexOf(faq.link.phrase);
-  if (start === -1) return <>{faq.answer}</>;
-
-  const before = faq.answer.slice(0, start);
-  const after = faq.answer.slice(start + faq.link.phrase.length);
-
-  return (
-    <>
-      {before}
-      <Link href={faq.link.href} className={LINK_CLASS}>
-        {faq.link.phrase}
-      </Link>
-      {after}
-    </>
-  );
-}
-
 function CheckMark() {
   return (
     <svg
@@ -643,21 +592,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

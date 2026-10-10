@@ -10,8 +10,10 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, emergency/24-7
+// FLAG: VERIFY before publishing — license #048585A, emergency/24-7
 // availability, transparent-pricing, and any rating/40-year claims are
 // source-site/project claims. This page uses the conservative wording from the
 // approved brief and does NOT assert rating, review count, or "40 years" here.
@@ -45,42 +47,49 @@ export const metadata: Metadata = {
 // FLAG: VERIFY — Q6 (transparent pricing) uses conservative wording per the
 // approved brief; confirm before any expansion.
 // ---------------------------------------------------------------------------
-const NLV_DRAIN_FAQS = [
+const NLV_DRAIN_FAQS: FaqItem[] = [
   {
     question: "Why do drains clog faster in older North Las Vegas homes?",
     answer:
       "Homes in central and southern North Las Vegas built from the 1960s through the 1980s often still have original galvanized steel drain lines. Galvanized steel corrodes from the inside out under hard water conditions, creating a rough, pitted pipe interior that catches and holds grease, soap scum, and mineral deposits faster than copper or plastic lines. This corrosion-roughened surface is the primary reason older central North Las Vegas homes experience more frequent and more stubborn drain clogs than newer construction.",
+    category: "causes-signs",
   },
   {
     question: "Do Aliante homes need drain cleaning?",
     answer:
       "Yes. Aliante homes built between 2000 and 2008 are now 16 to 25 years old, and their copper drain lines are entering the age range where hard water mineral buildup and grease accumulation cause noticeable flow reduction. While Aliante pipes are in better condition than the oldest North Las Vegas housing stock, professional drain cleaning every one to two years helps maintain drainage capacity and prevents buildup from progressing to a full blockage.",
+    category: "the-service",
   },
   {
     question: "Is hydro jetting safe for older North Las Vegas galvanized pipes?",
     answer:
       "It depends on the condition of the pipe. Hydro jetting is highly effective for clearing mineral scale and grease from lines in good condition, including main sewer lines and newer plastic or copper lines. For older galvanized drain pipes in central North Las Vegas that may be thinned or structurally compromised by decades of corrosion, we assess pipe condition before recommending high-pressure methods. A video camera inspection can help determine the right approach.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing clean commercial and industrial drains in North Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing provides floor drain cleaning, main drain line clearing, and hydro jetting for commercial and industrial facilities throughout North Las Vegas, including businesses along Craig Road, Cheyenne Avenue, and the Losee Road industrial corridor.",
+    category: "the-service",
   },
   {
     question: "How often should North Las Vegas homeowners clean their drains?",
     answer:
       "Most North Las Vegas homeowners benefit from professional drain cleaning every one to two years. Homes in older central North Las Vegas neighborhoods with galvanized drain lines and significant hard water exposure may benefit from annual cleaning. Commercial properties with heavy drain use should be cleaned more frequently based on usage and drain condition.",
+    category: "timing-process",
   },
   {
     question: "How much does drain cleaning cost in North Las Vegas?",
     answer:
       "Drain cleaning costs vary based on the type of drain, severity of the clog, and the method required. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
+    category: "cost",
   },
   {
     question: "Do you offer same-day drain cleaning service in North Las Vegas?",
     answer:
       "Same-day drain cleaning service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -174,7 +183,7 @@ const DRAIN_STEPS = [
 // claims per the approved brief.
 const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with North Las Vegas housing stock and hard water conditions",
-  "Licensed plumbers (NV License #0048585A)",
+  "Licensed plumbers (NV License #048585A)",
   "Transparent pricing with no hidden fees",
   "Residential and commercial drain cleaning throughout North Las Vegas",
   "Hydro jetting available for stubborn or recurring clogs where pipe condition allows",
@@ -288,18 +297,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: NLV_DRAIN_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(NLV_DRAIN_FAQS);
 
 export default function NorthLasVegasDrainCleaningPage() {
   return (
@@ -332,7 +330,7 @@ export default function NorthLasVegasDrainCleaningPage() {
           }
           subheading="Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout North Las Vegas, NV, including the Aliante area, central North Las Vegas neighborhoods, and the Craig Road and Cheyenne Avenue commercial corridors. Whether you are dealing with a slow kitchen drain, a clogged bathroom sink, a blocked main sewer line, or floor drains at a commercial or industrial facility, our licensed plumbers clear drains completely. Call (702) 567-9172 to schedule service."
           trustItems={[
-            "NV Licensed Plumbers, #0048585A",
+            "NV Licensed Plumbers, #048585A",
             "Available for Emergency Drain Service",
             "Serving North Las Vegas and the Las Vegas Valley",
             "Transparent Pricing, No Hidden Fees",
@@ -625,32 +623,11 @@ export default function NorthLasVegasDrainCleaningPage() {
         </section>
 
         {/* SECTION 11: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Drain Cleaning FAQs for North Las
-                <br className="hidden sm:block" /> Vegas Homeowners and Businesses
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {NLV_DRAIN_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Drain Cleaning FAQs for North Las <br className="hidden sm:block" /> Vegas Homeowners and Businesses</>}
+          faqs={NLV_DRAIN_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 12: FINAL CTA */}
         <CTASection
@@ -689,21 +666,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,12 +11,14 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
     "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks for kitchens, bathrooms, and utility areas throughout Las Vegas. Dripping faucets, low pressure, sink installs. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks for kitchens, bathrooms, and utility areas throughout Las Vegas. Dripping faucets, low pressure, sink installs. NV Licensed #048585A. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/faucet-sink-repair-installation/",
@@ -24,57 +27,66 @@ export const metadata: Metadata = {
     title:
       "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed faucet and sink repair and installation throughout Las Vegas and the Las Vegas Valley. NV #0048585A. 4.8 stars, 76 reviews.",
+      "Licensed faucet and sink repair and installation throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
   },
 };
 
-const FAUCET_SINK_FAQS = [
+const FAUCET_SINK_FAQS: FaqItem[] = [
   {
     question: "Why is my faucet dripping?",
     answer:
       "A dripping faucet is almost always caused by a worn internal component. In cartridge faucets, a degraded cartridge or O-ring is the most common cause. In compression faucets, a worn rubber washer at the seat is typically to blame. In Las Vegas, hard water mineral deposits accelerate wear on these components, so faucets may develop drips sooner than they would in areas with softer water. A licensed plumber can diagnose the faucet type and replace the failing part.",
+    category: "causes-signs",
   },
   {
     question: "Why is my water pressure low at one faucet?",
     answer:
       "Low pressure at a single faucet is usually caused by a clogged aerator. The aerator is the small screen at the faucet tip that mixes air with water. In Las Vegas, mineral deposits from hard water build up inside aerators and restrict flow more quickly than in soft-water areas. Removing and cleaning or replacing the aerator restores normal pressure in most cases. If the aerator is clear and pressure is still low, the issue may be in the supply line or shut-off valve beneath the sink.",
+    category: "causes-signs",
   },
   {
     question: "Should I repair or replace a leaky faucet?",
     answer:
       "Repair is usually the right choice for a faucet that is less than ten years old and has a single failing component such as a cartridge, O-ring, or washer. Replacement makes more sense for a faucet that leaks from the body, requires repeated repairs, shows visible corrosion, or is an older model where replacement parts are difficult to source. In Las Vegas, mineral buildup inside older faucets can make cleaning and repair impractical, making replacement the more durable long-term option.",
+    category: "the-service",
   },
   {
     question: "Can hard water damage faucets?",
     answer:
       "Yes. Las Vegas hard water contains high levels of calcium and magnesium that deposit inside faucet cartridges, aerators, and valve seats over time. This mineral buildup restricts water flow, accelerates wear on rubber O-rings and seals, and causes handles to stiffen. Faucets in Las Vegas homes typically require more frequent cartridge and aerator maintenance than faucets in soft-water markets. Regular cleaning of aerators and timely cartridge replacement extends faucet life.",
+    category: "the-service",
   },
   {
     question: "How long does faucet installation take?",
     answer:
       "A standard faucet replacement typically takes one to two hours for a licensed plumber. This includes shutting off the supply, disconnecting and removing the old faucet, inspecting the supply lines and shut-off valves, installing the new faucet, and testing for leaks and proper operation. If the shut-off valves or supply lines are corroded and need replacement, the job may take longer. Red Carpet Plumbing handles the full installation and disposes of the old fixture.",
+    category: "timing-process",
   },
   {
     question:
       "Does Red Carpet Plumbing install kitchen and bathroom sinks?",
     answer:
       "Yes. Red Carpet Plumbing installs kitchen sinks, bathroom sinks, and utility sinks throughout the Las Vegas Valley. Sink installation includes connecting water supply lines, installing the drain assembly and P-trap, and confirming all connections are leak-free. We work with customer-supplied sinks and can advise on the plumbing requirements for different sink types including undermount, drop-in, vessel, and pedestal styles.",
+    category: "the-service",
   },
   {
     question: "What causes leaks under the sink?",
     answer:
       "Leaks under a sink are most commonly caused by a loose or corroded drain connection, a failing P-trap seal, a worn supply line, or a deteriorated shut-off valve. In older Las Vegas homes, original supply lines and shut-off valves may be corroded from years of hard water exposure and can fail when disturbed during a faucet repair or replacement. A plumber should inspect under-sink connections as part of any faucet or sink service.",
+    category: "causes-signs",
   },
   {
     question:
       "What areas does Red Carpet Plumbing serve for faucet and sink repair?",
     answer:
       "Red Carpet Plumbing provides faucet and sink repair and installation throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day faucet and sink repair service in Las Vegas?",
     answer:
       "Same-day faucet and sink repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -293,7 +305,7 @@ const serviceSchema = {
   name: "Faucet and Sink Repair and Installation",
   serviceType: "Faucet and Sink Repair and Installation",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks for kitchens, bathrooms, and utility areas throughout the Las Vegas Valley. Services include dripping faucet repair, faucet replacement, kitchen and bathroom sink installation, aerator and cartridge service, and under-sink leak repair. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks for kitchens, bathrooms, and utility areas throughout the Las Vegas Valley. Services include dripping faucet repair, faucet replacement, kitchen and bathroom sink installation, aerator and cartridge service, and under-sink leak repair. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -303,17 +315,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -370,7 +383,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/faucet-sink-repair-installation/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -391,18 +404,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAUCET_SINK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(FAUCET_SINK_FAQS);
 
 export default function FaucetSinkRepairInstallationPage() {
   return (
@@ -431,8 +433,8 @@ export default function FaucetSinkRepairInstallationPage() {
           }
           subheading="Faucet repair, replacement, and sink installation for kitchens, bathrooms, and utility areas throughout Las Vegas."
           trustItems={[
-            "Licensed Plumbers, NV #0048585A",
-            "4.8 Stars, 76 Google Reviews",
+            "Licensed Plumbers, NV #048585A",
+            "4.8 Stars, 81 Google Reviews",
             "Residential and Commercial Service",
             "Transparent Pricing, No Hidden Fees",
             "Over 40 Years in Las Vegas",
@@ -445,12 +447,14 @@ export default function FaucetSinkRepairInstallationPage() {
             label: "Request Faucet or Sink Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
+          ctaNote="NV Licensed #048585A | 4.8 Stars, 81 Reviews"
           formSlot={<QuoteFormPlaceholder title="Get Faucet or Sink Help" />}
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-sink-repair-hero.webp",
             alt: "Faucet and sink repair, replacement, and installation services",
+            // Square 1184x1184 source cropped to a wide band: keep the subject in frame.
+            position: "65% 35%",
           }}
         />
 
@@ -531,7 +535,11 @@ export default function FaucetSinkRepairInstallationPage() {
 
         {/* SECTION 5: WHY FAUCETS AND SINKS WEAR FASTER IN LAS VEGAS */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-faucet-repair-replacement-card.webp"
+              alt="Under-sink cabinet with supply lines and drain below a kitchen faucet and sink"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -565,12 +573,17 @@ export default function FaucetSinkRepairInstallationPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: HOWTO PROCESS */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-fixture-upgrade-renovation-plumbing-card.webp"
+              alt="Bathroom vanity with a faucet, showerhead and replacement fixture parts laid out with wrenches"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -611,6 +624,7 @@ export default function FaucetSinkRepairInstallationPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -626,7 +640,7 @@ export default function FaucetSinkRepairInstallationPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing handles faucet repairs, replacements,
                   and sink installations throughout the Las Vegas Valley. NV
-                  Contractor License #0048585A.
+                  Contractor License #048585A.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">
@@ -736,31 +750,11 @@ export default function FaucetSinkRepairInstallationPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Faucet and Sink Questions Answered
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {FAUCET_SINK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Faucet and Sink Questions Answered</>}
+          faqs={FAUCET_SINK_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -796,20 +790,5 @@ export default function FaucetSinkRepairInstallationPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

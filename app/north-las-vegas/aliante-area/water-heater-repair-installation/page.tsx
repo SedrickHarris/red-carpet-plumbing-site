@@ -11,6 +11,8 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear in rendered copy):
@@ -53,7 +55,7 @@ export const metadata: Metadata = {
     title:
       "Water Heater Repair and Installation in the Aliante Area of North Las Vegas, NV",
     description:
-      "Red Carpet Plumbing provides water heater repair, replacement, and tankless installation in the Aliante area of North Las Vegas. Aliante homes built 2000-2008 are at or past first replacement cycle. Licensed plumbers, NV #0048585A.",
+      "Red Carpet Plumbing provides water heater repair, replacement, and tankless installation in the Aliante area of North Las Vegas. Aliante homes built 2000-2008 are at or past first replacement cycle. Licensed plumbers, NV #048585A.",
     url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -67,45 +69,52 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const ALIANTE_WH_FAQS = [
+const ALIANTE_WH_FAQS: FaqItem[] = [
   {
     question:
       "How long do water heaters last in the Aliante area of North Las Vegas?",
     answer:
       "Tank water heaters in the Aliante area typically last 8 to 12 years, often at the lower end of that range due to Las Vegas Valley hard water. The valley's 17 to 24 grains per gallon water hardness accelerates sediment buildup and anode rod depletion, both of which shorten tank life. Most Aliante homes were built between 2000 and 2008, placing original water heaters at 17 to 25 years old, well past expected service life. Tankless water heaters generally last 15 to 20 years but require annual descaling.",
+    category: "timing-process",
   },
   {
     question: "Should I repair or replace my Aliante water heater?",
     answer:
       "For water heaters under 8 years old with a repairable component failure, repair is usually the right choice. For Aliante homes with original water heaters from 2000 to 2008, replacement typically makes more long-term financial sense. These units are now 17 to 25 years old and have been operating under hard water conditions throughout their service life. Red Carpet Plumbing will give you an honest assessment of both options before recommending a course of action.",
+    category: "the-service",
   },
   {
     question:
       "Why does my Aliante water heater make popping or rumbling noises?",
     answer:
       "Popping and rumbling sounds from a water heater are caused by sediment buildup on the bottom of the tank. Las Vegas Valley hard water from Lake Mead causes sediment to accumulate faster than in most other cities. Water trapped under sediment layers boils and creates these sounds during the heating cycle. Annual tank flushing removes sediment before it hardens into scale.",
+    category: "causes-signs",
   },
   {
     question: "Do I need a thermal expansion tank in the Aliante area?",
     answer:
       "Most Aliante homes operate on a closed-loop plumbing system due to backflow preventers at the street meter. Current plumbing code and most manufacturer warranties require a thermal expansion tank on closed-loop water heater installations. If your Aliante home does not have one, Red Carpet Plumbing can add it to your existing system or include it in a new installation.",
+    category: "the-service",
   },
   {
     question:
       "Is seismic bracing required for water heater installation in the Aliante area?",
     answer:
       "Yes. Nevada plumbing code requires seismic bracing on all water heater installations, including two heavy-gauge steel straps secured at code-specified heights. The City of North Las Vegas is the permit jurisdiction for water heater installations in the Aliante area. Red Carpet Plumbing installs all units to current code requirements including seismic bracing.",
+    category: "trust",
   },
   {
     question:
       "Who issues permits for water heater installation in the Aliante area?",
     answer:
-      "The City of North Las Vegas is the permit jurisdiction for water heater installations in the Aliante area. Aliante is a master-planned community within the incorporated City of North Las Vegas. Red Carpet Plumbing holds NV License #0048585A and works within the City of North Las Vegas permit process for applicable installations.",
+      "The City of North Las Vegas is the permit jurisdiction for water heater installations in the Aliante area. Aliante is a master-planned community within the incorporated City of North Las Vegas. Red Carpet Plumbing holds NV License #048585A and works within the City of North Las Vegas permit process for applicable installations.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day water heater repair service in the Aliante Area of North Las Vegas?",
     answer:
       "Same-day water heater repair service is available in the Aliante Area of North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -153,7 +162,7 @@ const ALIANTE_WH_SERVICES = [
   {
     // FLAG: VERIFY gas line scope before publishing.
     label: "Gas and electric water heater service",
-    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work performed under NV License #0048585A.",
+    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work performed under NV License #048585A.",
   },
 ];
 
@@ -260,7 +269,7 @@ const ALIANTE_WH_RELATED = [
 // Hero trust strip.
 const HERO_TRUST_ITEMS = [
   // FLAG: source-site claim — verify before final launch.
-  "NV Licensed Plumbers, #0048585A",
+  "NV Licensed Plumbers, #048585A",
   "Tank and Tankless Water Heaters",
   "Seismic Bracing and Expansion Tanks",
   // FLAG: source-site claim — verify before final launch.
@@ -352,7 +361,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Water Heater Repair and Installation in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides water heater repair and installation in the Aliante area of North Las Vegas, NV. Tank water heaters, tankless installation, anode rod replacement, thermal expansion tanks, and code-compliant service for Aliante homes. Licensed plumbers, NV License #0048585A.",
+    "Red Carpet Plumbing provides water heater repair and installation in the Aliante area of North Las Vegas, NV. Tank water heaters, tankless installation, anode rod replacement, thermal expansion tanks, and code-compliant service for Aliante homes. Licensed plumbers, NV License #048585A.",
   url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/water-heater-repair-installation/",
   isPartOf: {
     "@type": "WebSite",
@@ -361,18 +370,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ALIANTE_WH_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ALIANTE_WH_FAQS);
 
 export default function AlianteWaterHeaterPage() {
   return (
@@ -413,7 +411,7 @@ export default function AlianteWaterHeaterPage() {
               <br /> in the Aliante Area of North Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides water heater repair and installation throughout the Aliante area of North Las Vegas, NV. Most Aliante homes were built between 2000 and 2008, placing original water heaters at or past their expected service life under Las Vegas Valley hard water conditions. Our licensed plumbers handle tank water heater repair and replacement, tankless installation, and code-compliant service for Aliante homes. Call (702) 567-9172. NV Contractor License #0048585A."
+          subheading="Red Carpet Plumbing provides water heater repair and installation throughout the Aliante area of North Las Vegas, NV. Most Aliante homes were built between 2000 and 2008, placing original water heaters at or past their expected service life under Las Vegas Valley hard water conditions. Our licensed plumbers handle tank water heater repair and replacement, tankless installation, and code-compliant service for Aliante homes. Call (702) 567-9172. NV Contractor License #048585A."
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -673,31 +671,11 @@ export default function AlianteWaterHeaterPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Water Heater FAQs for Aliante Area Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ALIANTE_WH_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Water Heater FAQs for Aliante Area Homeowners</>}
+          faqs={ALIANTE_WH_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -722,20 +700,5 @@ export default function AlianteWaterHeaterPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

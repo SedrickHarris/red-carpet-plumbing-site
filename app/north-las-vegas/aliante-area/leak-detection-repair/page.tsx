@@ -11,6 +11,8 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear as unverified claims in
@@ -18,7 +20,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 //   - telephone (+17025679172) in serviceSchema.provider — VERIFY before launch.
 //   - "Transparent Pricing, No Hidden Fees" hero trust item + ctaNote and the
 //     Why-Choose pricing bullet — source-site claims, VERIFY before launch.
-//   - License #0048585A is a verified business claim.
+//   - License #048585A is a verified business claim.
 //
 // Schema follows the established site-wide service-location pattern with the
 // P43 brief variant for the Service block (provider includes PostalAddress per
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
   // NOTE: approved description exceeds the ~160 char SEO target (~234 chars).
   // Used verbatim per the approved brief; flag for trim consideration at launch.
   description:
-    "Red Carpet Plumbing provides non-invasive leak detection and repair in the Aliante area of North Las Vegas, NV. Acoustic sensor detection, thermal imaging, and pressure testing for copper pipe leaks. NV License #0048585A. (702) 567-9172.",
+    "Red Carpet Plumbing provides non-invasive leak detection and repair in the Aliante area of North Las Vegas, NV. Acoustic sensor detection, thermal imaging, and pressure testing for copper pipe leaks. NV License #048585A. (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/aliante-area/leak-detection-repair/",
@@ -72,7 +74,7 @@ export const metadata: Metadata = {
 // the P40-P42 Aliante cluster pattern.
 const ALIANTE_LEAK_TRUST = [
   "Non-Invasive Detection",
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Serving Aliante and North Las Vegas",
   // FLAG: VERIFY — "Transparent Pricing, No Hidden Fees" is a source-site claim.
   "Transparent Pricing, No Hidden Fees",
@@ -182,7 +184,7 @@ const ALIANTE_LEAK_SIGNS = [
 const ALIANTE_LEAK_WHY = [
   "Local Las Vegas Valley plumbing company familiar with Aliante area homes and the first-service-cycle plumbing conditions common in 2000 to 2008 construction",
   "Non-invasive detection methods that locate leaks before any surface is opened",
-  "Licensed plumbers, NV License #0048585A, C-1 Plumbing and Heating",
+  "Licensed plumbers, NV License #048585A, C-1 Plumbing and Heating",
   "Transparent pricing with no hidden fees",
   "Detection and repair for copper supply lines, underground lines, wall and ceiling leaks, and slab leaks",
   "Residential plumbing service throughout Aliante and North Las Vegas",
@@ -249,42 +251,49 @@ const ALIANTE_LEAK_RELATED = [
 // AND the FAQPage JSON-LD both derive from this single array, guaranteeing a
 // character-for-character match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const ALIANTE_LEAK_FAQS = [
+const ALIANTE_LEAK_FAQS: FaqItem[] = [
   {
     question: "How do plumbers find hidden leaks without digging?",
     answer:
       "Red Carpet Plumbing uses acoustic sensor equipment, thermal imaging, and pressure testing to locate hidden leaks without opening walls, ceilings, or concrete unnecessarily. Acoustic sensors detect the sound signature of an active water leak through solid materials. Thermal imaging identifies temperature differences caused by moisture. Pressure testing isolates plumbing zones to confirm leak activity. These non-invasive methods let us locate the leak precisely before any surface work begins.",
+    category: "the-service",
   },
   {
     question: "Why are Aliante area homes at risk for hidden pipe leaks?",
     answer:
       "Most Aliante area homes were built between 2000 and 2008, placing the copper plumbing systems at 17 to 25 years old. Las Vegas Valley hard water, measuring 17 to 24 grains per gallon, accelerates interior corrosion in copper pipe walls over time. At the 17 to 25 year mark, Aliante homes are entering the first major service cycle for this combination of pipe age and water hardness, which creates a higher likelihood of pinhole leaks and supply line failures.",
+    category: "causes-signs",
   },
   {
     question: "What are the signs of a hidden water leak in my home?",
     answer:
       "Common signs of a hidden water leak include an unexplained increase in your water bill, the sound of running water when all fixtures are off, warm or wet spots on floors, soft spots or staining on walls or ceilings, and a musty smell in areas without a known moisture source. If your water meter continues to move when all water use in the home is stopped, that is a strong indicator that a leak is active.",
+    category: "causes-signs",
   },
   {
     question:
       "What is the difference between leak detection and slab leak detection?",
     answer:
       "Leak detection covers the full range of hidden leaks in a home, including supply lines inside walls and ceilings, underground lines connecting the meter to the home, and fixtures and connection fittings. Slab leak detection is a specific application focused on leaks occurring in pipes that run beneath or through a concrete slab foundation. We use similar non-invasive detection methods for both, but slab leaks require additional assessment of the foundation and repair options that account for concrete cutting, pipe rerouting, or epoxy lining.",
+    category: "the-service",
   },
   {
     question: "Does Red Carpet Plumbing serve the Aliante area?",
     answer:
-      "Yes. Red Carpet Plumbing provides leak detection and repair throughout the Aliante area of North Las Vegas. Aliante is a master-planned community within the City of North Las Vegas, and our Nevada Contractor License #0048585A covers plumbing work throughout North Las Vegas including the Aliante community and surrounding neighborhoods. Call (702) 567-9172 to confirm coverage for your address.",
+      "Yes. Red Carpet Plumbing provides leak detection and repair throughout the Aliante area of North Las Vegas. Aliante is a master-planned community within the City of North Las Vegas, and our Nevada Contractor License #048585A covers plumbing work throughout North Las Vegas including the Aliante community and surrounding neighborhoods. Call (702) 567-9172 to confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question: "How long does leak detection take?",
     answer:
       "Most leak detection visits for a single suspected leak in a residential home take between one and two hours depending on the type of leak, how accessible the plumbing is, and how clearly the symptoms point to a specific area. Underground supply line leaks and slab leak detection may take longer depending on the size of the property and the number of zones that need to be tested.",
+    category: "timing-process",
   },
   {
     question: "Do you offer same-day leak detection service in the Aliante Area of North Las Vegas?",
     answer:
       "Same-day leak detection service is available in the Aliante Area of North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -387,18 +396,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ALIANTE_LEAK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ALIANTE_LEAK_FAQS);
 
 export default function AlianteLeakDetectionRepairPage() {
   return (
@@ -447,7 +445,7 @@ export default function AlianteLeakDetectionRepairPage() {
             href: "/contact/",
           }}
           // FLAG: VERIFY — transparent pricing is a source-site claim.
-          ctaNote="NV Licensed, #0048585A. Transparent pricing, no hidden fees."
+          ctaNote="NV Licensed, #048585A. Transparent pricing, no hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
             src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-hero.webp",
@@ -759,32 +757,11 @@ export default function AlianteLeakDetectionRepairPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Leak Detection in the Aliante Area
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ALIANTE_LEAK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Leak Detection in the Aliante Area</>}
+          faqs={ALIANTE_LEAK_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -827,21 +804,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

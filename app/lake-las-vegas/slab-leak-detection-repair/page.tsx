@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing. "Transparent pricing, no hidden fees" is a
-// source-site claim shown on this page. License #0048585A is a verified
+// source-site claim shown on this page. License #048585A is a verified
 // business claim.
 // SCHEMA NOTE: Lake Las Vegas is a master-planned community within the
 // incorporated City of Henderson, so Service.areaServed uses the Green Valley
@@ -56,7 +58,7 @@ export const metadata: Metadata = {
 // required per brief.
 const LLV_SLAB_TRUST = [
   "Non-Invasive Detection",
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "All Repair Options Explained",
   "Serving Lake Las Vegas and Henderson",
 ];
@@ -174,43 +176,50 @@ const LLV_SLAB_STEPS = [
 // ---------------------------------------------------------------------------
 // FAQ -- FAQPage schema source of truth.
 // ---------------------------------------------------------------------------
-const LLV_SLAB_FAQS = [
+const LLV_SLAB_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a slab leak in a Lake Las Vegas home?",
     answer:
       "The most common signs of a slab leak in a Lake Las Vegas home are warm or hot spots on floors, the sound of running water when all fixtures are off, an unexplained increase in your water bill, damp or wet flooring without an obvious source, cracks appearing in walls or flooring, low water pressure throughout the home, and mold or mildew odor at floor level. These signs appear because the leak is beneath the concrete slab and cannot be seen directly from inside the home.",
+    category: "causes-signs",
   },
   {
     question: "Why do slab leaks happen in Lake Las Vegas homes?",
     answer:
       "Lake Las Vegas homes were built between 2000 and 2010 using copper plumbing. The Las Vegas Valley water supply from Lake Mead measures 17 to 24 grains per gallon, which is considered very hard. Over 15 to 25 years of continuous exposure, dissolved minerals corrode copper pipe walls from the inside, thinning them until failures develop beneath the slab. Caliche soil movement beneath the foundation adds mechanical stress to those pipes. Unlike older Las Vegas Valley communities, Lake Las Vegas homes do not have galvanized steel or polybutylene pipe, so copper mineral corrosion is the primary cause factor.",
+    category: "causes-signs",
   },
   {
     question:
       "How is a slab leak detected in Lake Las Vegas without breaking up the floor?",
     answer:
       "Professional slab leak detection uses acoustic sensors that amplify the sound of pressurized water escaping beneath the slab, pressure testing to confirm and isolate water loss to a specific line, and thermal imaging to identify temperature differences caused by hot water leaks. These non-invasive methods locate the slab leak precisely before any concrete cutting begins.",
+    category: "the-service",
   },
   {
     question: "What are my options for slab leak repair in Lake Las Vegas?",
     answer:
       "The three main repair options are spot repair through concrete, which involves cutting the slab at the leak location and repairing the damaged pipe section; pipe rerouting, which bypasses the damaged pipe entirely by running a new supply line through walls or above-slab pathways; and epoxy pipe lining, which seals cracks from the inside without excavation. The right option depends on the leak location, the age and condition of the surrounding pipe, and what is above the repair area. Red Carpet Plumbing explains all three options before any work begins.",
+    category: "the-service",
   },
   {
     question:
       "Should I choose pipe rerouting or spot repair for a slab leak in my Lake Las Vegas home?",
     answer:
       "For an isolated leak in a pipe that is otherwise in good condition, spot repair can be appropriate. For Lake Las Vegas homes where the surrounding copper pipe has been assessed and shows signs of thinning from 15 to 25 years of hard water exposure, or where the first slab leak suggests other failure points may develop on the same aging line, pipe rerouting is often the more durable long-term solution because it removes the aging pipe from beneath the slab entirely. Red Carpet Plumbing assesses pipe condition and presents both options before any repair begins.",
+    category: "the-service",
   },
   {
     question: "Who handles slab leak repair permits in Lake Las Vegas?",
     answer:
-      "Slab leak repair permits in Lake Las Vegas are issued by the City of Henderson, which is the governing jurisdiction for the Lake Las Vegas community. Red Carpet Plumbing holds Nevada Contractor License #0048585A and handles all applicable City of Henderson permit and inspection requirements.",
+      "Slab leak repair permits in Lake Las Vegas are issued by the City of Henderson, which is the governing jurisdiction for the Lake Las Vegas community. Red Carpet Plumbing holds Nevada Contractor License #048585A and handles all applicable City of Henderson permit and inspection requirements.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day slab leak repair service in Lake Las Vegas?",
     answer:
       "Same-day slab leak repair service is available in Lake Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -258,7 +267,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Slab Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
   description:
-    "Non-invasive slab leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging. Spot repair, pipe rerouting, and epoxy lining options explained. Nevada Contractor License #0048585A.",
+    "Non-invasive slab leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging. Spot repair, pipe rerouting, and epoxy lining options explained. Nevada Contractor License #048585A.",
   url: "https://redcarpetplumbing.com/lake-las-vegas/slab-leak-detection-repair/",
   isPartOf: {
     "@type": "WebSite",
@@ -298,7 +307,7 @@ const serviceSchema = {
   name: "Slab Leak Detection and Repair in Lake Las Vegas, Henderson, NV",
   serviceType: "Slab Leak Detection and Repair",
   description:
-    "Non-invasive slab leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging locate leaks precisely before any concrete cutting. Spot repair, pipe rerouting, and epoxy pipe lining options explained. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    "Non-invasive slab leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging locate leaks precisely before any concrete cutting. Spot repair, pipe rerouting, and epoxy pipe lining options explained. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -336,18 +345,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LLV_SLAB_FAQS.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: f.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LLV_SLAB_FAQS);
 
 export default function LakeLasVegasSlabLeakPage() {
   return (
@@ -378,7 +376,7 @@ export default function LakeLasVegasSlabLeakPage() {
               <br /> in Lake Las Vegas, Henderson, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Lake Las Vegas and Henderson, NV. Lake Las Vegas homes built between 2000 and 2010 are entering the first major service cycle for their copper plumbing, and hard water mineral corrosion is the primary cause of slab leaks in this community. We use acoustic sensors, pressure testing, and thermal imaging to locate slab leaks precisely before any concrete is cut, and we explain all repair options before work begins. NV Contractor License #0048585A."
+          subheading="Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Lake Las Vegas and Henderson, NV. Lake Las Vegas homes built between 2000 and 2010 are entering the first major service cycle for their copper plumbing, and hard water mineral corrosion is the primary cause of slab leaks in this community. We use acoustic sensors, pressure testing, and thermal imaging to locate slab leaks precisely before any concrete is cut, and we explain all repair options before work begins. NV Contractor License #048585A."
           trustItems={LLV_SLAB_TRUST}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -615,31 +613,11 @@ export default function LakeLasVegasSlabLeakPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Slab Leak Questions for Lake Las Vegas Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LLV_SLAB_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Slab Leak Questions for Lake Las Vegas Homeowners</>}
+          faqs={LLV_SLAB_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 9: RELATED SERVICES (rerouting cards) */}
         <section className="bg-brand-surface-alt">
@@ -699,20 +677,5 @@ export default function LakeLasVegasSlabLeakPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

@@ -10,14 +10,15 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing — source-site / project claims surfaced in the
 // approved brief and shown on this page. Each instance carries an inline FLAG:
 //   - 24/7 emergency commercial service (hero trust item + Section 3 emergency
 //     card + Section 5 Step 1 + FAQ Q5) — source-site claim
-//   - 4.8-star rating, 76 Google reviews — verify before publishing
 //   - "Over 40 years" serving the area — verify before publishing
-// License #0048585A (C-1 Plumbing and Heating) is the established project value.
+// License #048585A (C-1 Plumbing and Heating) is the established project value.
 // Schema follows the brief: Service.areaServed uses Place -> AdministrativeArea
 // (Clark County) -> State (Nevada), NOT City, because Paradise is unincorporated
 // Clark County. No AggregateRating, no standalone LocalBusiness, and NO
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   // the site's <=160 meta-description standard; kept verbatim because page
   // metadata is approval-gated. Trim pending explicit approval.
   description:
-    "Licensed commercial plumbing in Paradise, NV. Restaurant drain service, grease trap clearing, backflow prevention, water heater service, and commercial leak detection near the Las Vegas Strip. NV License #0048585A. Call (702) 567-9172.",
+    "Licensed commercial plumbing in Paradise, NV. Restaurant drain service, grease trap clearing, backflow prevention, water heater service, and commercial leak detection near the Las Vegas Strip. NV License #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/paradise/commercial-plumbing/",
   },
@@ -54,29 +55,33 @@ export const metadata: Metadata = {
 // answer text. (Q5 answer carries the 24/7 source-site claim — verify before
 // final launch.)
 // ---------------------------------------------------------------------------
-const PARADISE_COMMERCIAL_FAQS = [
+const PARADISE_COMMERCIAL_FAQS: FaqItem[] = [
   {
     question:
       "Is Red Carpet Plumbing licensed for commercial plumbing in Paradise, NV?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the Nevada State Contractors Board. The C-1 classification covers commercial plumbing repair and installation throughout Nevada including Paradise and all Clark County properties. Commercial plumbing work in Paradise must be performed by a licensed Nevada contractor.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the Nevada State Contractors Board. The C-1 classification covers commercial plumbing repair and installation throughout Nevada including Paradise and all Clark County properties. Commercial plumbing work in Paradise must be performed by a licensed Nevada contractor.",
+    category: "trust",
   },
   {
     question: "Who issues commercial plumbing permits in Paradise, NV?",
     answer:
       "Commercial plumbing permits in Paradise are issued by Clark County, Nevada. Paradise is an unincorporated community within Clark County, so the City of Las Vegas building department does not have permit jurisdiction over Paradise properties. Red Carpet Plumbing handles permit coordination with Clark County for applicable commercial projects.",
+    category: "trust",
   },
   {
     question:
       "Does Red Carpet Plumbing service restaurants and commercial kitchens near the Las Vegas Strip?",
     answer:
       "Yes. Red Carpet Plumbing provides commercial plumbing services for restaurants, hotel kitchens, bars, and commercial food service operations throughout Paradise including the Strip corridor. Services include grease drain line clearing, floor drain service, high-capacity water heater repair and installation, backflow prevention testing, and commercial sewer line service.",
+    category: "the-service",
   },
   {
     question:
       "What is backflow prevention and is it required for commercial properties in Paradise?",
     answer:
-      "Backflow prevention devices prevent contaminated water from flowing back into the municipal water supply. Clark County requires backflow preventer installation and periodic testing for commercial properties with irrigation systems, fire suppression connections, and certain commercial kitchen equipment. Red Carpet Plumbing installs, tests, and repairs backflow prevention devices for commercial properties throughout Paradise under NV License #0048585A.",
+      "Backflow prevention devices prevent contaminated water from flowing back into the municipal water supply. Clark County requires backflow preventer installation and periodic testing for commercial properties with irrigation systems, fire suppression connections, and certain commercial kitchen equipment. Red Carpet Plumbing installs, tests, and repairs backflow prevention devices for commercial properties throughout Paradise under NV License #048585A.",
+    category: "trust",
   },
   {
     // FLAG: 24/7 source-site claim in this answer — verify before final launch.
@@ -84,28 +89,30 @@ const PARADISE_COMMERCIAL_FAQS = [
       "Does Red Carpet Plumbing provide emergency commercial plumbing service in Paradise?",
     answer:
       "Red Carpet Plumbing provides 24/7 emergency commercial plumbing service throughout Paradise. Burst pipes, sewer backups, water heater failures, and major leaks in commercial properties are handled by our licensed plumbers. Call (702) 567-9172 at any time for emergency commercial response.",
+    category: "emergency",
   },
   {
     question:
       "Can Red Carpet Plumbing work with our property management company in Paradise?",
     answer:
       "Yes. Red Carpet Plumbing works with property managers overseeing multi-unit residential buildings, mixed-use developments, and commercial properties throughout Paradise. We provide documented commercial plumbing service, coordinate scheduling to minimize tenant disruption, and handle permit filing with Clark County for applicable projects. Call (702) 567-9172 or request service online to discuss your property's needs.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day commercial plumbing service in Paradise?",
     answer:
       "Same-day commercial plumbing service is available in Paradise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides licensed commercial plumbing services for businesses, restaurants, property managers, and facilities throughout Paradise, NV. Paradise is home to the Las Vegas Strip and one of the highest concentrations of commercial plumbing demand in the United States. Our Nevada Contractor License #0048585A, C-1 Plumbing and Heating classification covers commercial plumbing repair and installation throughout Clark County including all Paradise properties. Call us or request service online.";
+  "Red Carpet Plumbing provides licensed commercial plumbing services for businesses, restaurants, property managers, and facilities throughout Paradise, NV. Paradise is home to the Las Vegas Strip and one of the highest concentrations of commercial plumbing demand in the United States. Our Nevada Contractor License #048585A, C-1 Plumbing and Heating classification covers commercial plumbing repair and installation throughout Clark County including all Paradise properties. Call us or request service online.";
 
 const HERO_TRUST_ITEMS = [
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
   "Commercial plumbing for restaurants, hospitality, and property managers",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating, 76 Google reviews",
+  "4.8-star rating, 81 Google reviews",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Serving Paradise and the Las Vegas Valley for over 40 years",
   // FLAG: source-site claim (24/7 emergency commercial service) — verify before
@@ -128,7 +135,7 @@ const WHO_WE_SERVE = [
   },
   {
     title: "Property Managers and Multi-Unit Buildings",
-    body: "Paradise includes multi-unit residential buildings, mixed-use developments, and commercial properties outside the Strip corridor. Property managers responsible for these properties need a licensed plumbing contractor who can handle shared sewer line maintenance, riser pipe inspection, individual unit repairs, and tenant improvement plumbing work. Red Carpet Plumbing works with property managers throughout Paradise to provide responsive, documented commercial plumbing service under NV License #0048585A.",
+    body: "Paradise includes multi-unit residential buildings, mixed-use developments, and commercial properties outside the Strip corridor. Property managers responsible for these properties need a licensed plumbing contractor who can handle shared sewer line maintenance, riser pipe inspection, individual unit repairs, and tenant improvement plumbing work. Red Carpet Plumbing works with property managers throughout Paradise to provide responsive, documented commercial plumbing service under NV License #048585A.",
   },
   {
     title: "Facilities Managers and Commercial Properties",
@@ -194,16 +201,16 @@ const COMMERCIAL_SERVICES: {
 const COMMERCIAL_CONTEXT = [
   {
     title: "Las Vegas Strip Corridor Demand",
-    body: "Paradise is home to the Las Vegas Strip, one of the most plumbing-intensive commercial corridors in the United States. The density of restaurants, hotel kitchens, bars, and entertainment venues operating around the clock creates sustained high-volume plumbing demand unlike any residential or standard commercial area. Grease buildup in commercial drain lines, high-capacity hot water demand, and backflow prevention requirements are everyday service needs in this corridor. Red Carpet Plumbing is licensed for commercial plumbing under NV Contractor License #0048585A and has experience serving commercial properties in the Paradise area.",
+    body: "Paradise is home to the Las Vegas Strip, one of the most plumbing-intensive commercial corridors in the United States. The density of restaurants, hotel kitchens, bars, and entertainment venues operating around the clock creates sustained high-volume plumbing demand unlike any residential or standard commercial area. Grease buildup in commercial drain lines, high-capacity hot water demand, and backflow prevention requirements are everyday service needs in this corridor. Red Carpet Plumbing is licensed for commercial plumbing under NV Contractor License #048585A and has experience serving commercial properties in the Paradise area.",
   },
   {
     // Permit jurisdiction: Clark County — not City of Las Vegas.
     title: "Clark County Permits and C-1 License Requirement",
-    body: "Commercial plumbing work in Paradise requires permits issued by Clark County, Nevada. Paradise is an unincorporated community within Clark County, so the City of Las Vegas building department does not have permit jurisdiction over Paradise properties. Most commercial plumbing work must be performed by a Nevada-licensed C-1 contractor. Red Carpet Plumbing holds NV Contractor License #0048585A, C-1 Plumbing and Heating, and handles permit coordination with Clark County for applicable commercial projects. Working with an unlicensed contractor on commercial plumbing can result in failed inspections and compliance issues.",
+    body: "Commercial plumbing work in Paradise requires permits issued by Clark County, Nevada. Paradise is an unincorporated community within Clark County, so the City of Las Vegas building department does not have permit jurisdiction over Paradise properties. Most commercial plumbing work must be performed by a Nevada-licensed C-1 contractor. Red Carpet Plumbing holds NV Contractor License #048585A, C-1 Plumbing and Heating, and handles permit coordination with Clark County for applicable commercial projects. Working with an unlicensed contractor on commercial plumbing can result in failed inspections and compliance issues.",
   },
   {
     title: "Property Management and Multi-Unit Service",
-    body: "Beyond the Strip corridor, Paradise has residential and mixed-use properties requiring regular commercial plumbing maintenance. Property managers overseeing multi-unit buildings in Paradise need a reliable licensed plumbing contractor who can coordinate shared sewer line maintenance, individual unit repairs, and tenant improvement plumbing. Red Carpet Plumbing provides documented commercial service for property managers under NV License #0048585A.",
+    body: "Beyond the Strip corridor, Paradise has residential and mixed-use properties requiring regular commercial plumbing maintenance. Property managers overseeing multi-unit buildings in Paradise need a reliable licensed plumbing contractor who can coordinate shared sewer line maintenance, individual unit repairs, and tenant improvement plumbing. Red Carpet Plumbing provides documented commercial service for property managers under NV License #048585A.",
   },
   {
     title: "Hard Water at Commercial Scale",
@@ -233,7 +240,7 @@ const COMMERCIAL_STEPS = [
   {
     // Permit jurisdiction: Clark County — not City of Las Vegas.
     name: "Complete the Work and Coordinate Permits",
-    body: "We complete the repair or installation to commercial code standards. For projects requiring Clark County permits, we handle filing and coordinate inspections. All work is performed under NV Contractor License #0048585A, C-1 Plumbing and Heating.",
+    body: "We complete the repair or installation to commercial code standards. For projects requiring Clark County permits, we handle filing and coordinate inspections. All work is performed under NV Contractor License #048585A, C-1 Plumbing and Heating.",
   },
 ];
 
@@ -283,7 +290,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Commercial Plumbing in Paradise, NV | Red Carpet Plumbing",
   description:
-    "Licensed commercial plumbing in Paradise, NV. Restaurant drain service, grease trap clearing, backflow prevention, water heater service, and commercial leak detection near the Las Vegas Strip. NV License #0048585A. Call (702) 567-9172.",
+    "Licensed commercial plumbing in Paradise, NV. Restaurant drain service, grease trap clearing, backflow prevention, water heater service, and commercial leak detection near the Las Vegas Strip. NV License #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/paradise/commercial-plumbing/",
   isPartOf: {
     "@type": "WebSite",
@@ -336,6 +343,14 @@ const serviceSchema = {
       postalCode: "89118",
       addressCountry: "US",
     },
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -370,18 +385,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: PARADISE_COMMERCIAL_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(PARADISE_COMMERCIAL_FAQS);
 
 export default function ParadiseCommercialPlumbingPage() {
   return (
@@ -601,7 +605,7 @@ export default function ParadiseCommercialPlumbingPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing serves businesses, restaurants, and property
                   managers throughout Paradise and the Las Vegas Valley. NV
-                  Contractor License #0048585A, C-1 Plumbing and Heating. For
+                  Contractor License #048585A, C-1 Plumbing and Heating. For
                   commercial emergencies, see{" "}
                   <Link
                     href="/paradise/emergency-plumbing/"
@@ -694,39 +698,17 @@ export default function ParadiseCommercialPlumbingPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Commercial Plumbing in Paradise,
-                NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {PARADISE_COMMERCIAL_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Commercial Plumbing in Paradise, NV</>}
+          faqs={PARADISE_COMMERCIAL_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
           background="red"
           headline={<>Ready to Schedule Commercial Plumbing Service<br />in Paradise, NV?</>}
-          body="Red Carpet Plumbing provides licensed commercial plumbing throughout Paradise and the Las Vegas Valley. NV Contractor License #0048585A, C-1 Plumbing and Heating. Call now or request service online."
+          body="Red Carpet Plumbing provides licensed commercial plumbing throughout Paradise and the Las Vegas Valley. NV Contractor License #048585A, C-1 Plumbing and Heating. Call now or request service online."
           primaryCTA={{
             label: "Call Now: (702) 567-9172",
             href: "tel:+17025679172",
@@ -745,20 +727,5 @@ export default function ParadiseCommercialPlumbingPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

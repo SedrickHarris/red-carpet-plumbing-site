@@ -280,8 +280,9 @@ export default function ContactPage() {
           }}
           formSlot={<ContactFormPlaceholder />}
           backgroundImage={{
-            src: "/images/company/contact/red-carpet-plumbing-las-vegas-contact-page-service-van.webp",
-            alt: "Red Carpet Plumbing service van in Las Vegas, NV",
+            src: "/images/company/vehicles/red-carpet-plumbing-las-vegas-service-van-front-three-quarter-close.webp",
+            position: "62% 60%",
+            alt: "Red Carpet Plumbing service van parked in Las Vegas, Nevada",
           }}
         />
 

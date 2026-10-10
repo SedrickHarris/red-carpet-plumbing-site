@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", and the
-// 4.8/76 rating are source-site/project claims. Each visible instance carries an
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", and the
+// 4.8/81 rating are source-site/project claims. Each visible instance carries an
 // inline FLAG comment.
 //
 // SCHEMA NOTE: Spring Valley is an unincorporated Clark County community; it is
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
   title:
     "Water Heater Repair and Installation in Spring Valley, NV | Red Carpet Plumbing",
   description:
-    "Water heater repair and installation in Spring Valley, NV. Tank and tankless water heaters, thermal expansion tanks, seismic bracing. NV #0048585A. (702) 567-9172.",
+    "Water heater repair and installation in Spring Valley, NV. Tank and tankless water heaters, thermal expansion tanks, seismic bracing. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/spring-valley/water-heater-repair-installation/",
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
     title:
       "Water Heater Repair and Installation in Spring Valley, NV | Red Carpet Plumbing",
     description:
-      "Water heater repair and installation in Spring Valley, NV. Tank and tankless water heaters, thermal expansion tanks, seismic bracing. NV #0048585A. (702) 567-9172.",
+      "Water heater repair and installation in Spring Valley, NV. Tank and tankless water heaters, thermal expansion tanks, seismic bracing. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -48,52 +50,59 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const SV_WH_FAQS = [
+const SV_WH_FAQS: FaqItem[] = [
   {
     question: "How long do water heaters last in Spring Valley?",
     answer:
       "Tank water heaters in the Las Vegas Valley typically last 8 to 12 years. Spring Valley's hard water supply accelerates anode rod depletion and sediment buildup compared to national averages, meaning water heaters tend to reach end of service life at the lower end of that range without regular maintenance. Older Spring Valley homes with galvanized supply lines may see even shorter effective service life due to rust particles and sediment entering the tank from corroding supply lines.",
+    category: "timing-process",
   },
   {
     question:
       "Do I need a thermal expansion tank on my Spring Valley water heater?",
     answer:
       "Most Spring Valley homes operate on a closed-loop plumbing system due to backflow preventers at the street meter. Clark County plumbing code and most manufacturer warranties require a thermal expansion tank on closed-loop water heater installations. If your water heater was installed without one, Red Carpet Plumbing can add it during a service call.",
+    category: "the-service",
   },
   {
     question: "Why is my hot water rust-colored in my Spring Valley home?",
     answer:
       "Rust-colored hot water in Spring Valley can have two common causes. The first is internal tank corrosion from a depleted anode rod; the anode rod has been consumed and the steel tank is now corroding. The second, more common in older Desert Inn and West Sahara corridor homes, is rust and sediment entering the water heater from corroding galvanized steel supply lines. Either cause warrants a professional inspection. A water heater with significant internal corrosion typically needs replacement.",
+    category: "causes-signs",
   },
   {
     question: "Should I repair or replace my Spring Valley water heater?",
     answer:
       "For units under 8 years old with a repairable component failure, repair is generally the right choice. For units 10 years or older, or units with tank corrosion or a failed tank body, replacement typically makes more financial sense, especially under Las Vegas hard water conditions that accelerate wear. For older Spring Valley homes with galvanized supply lines, we also assess whether supply line deterioration is affecting the water heater as part of our evaluation.",
+    category: "the-service",
   },
   {
     question:
       "Is seismic bracing required for water heater installation in Spring Valley?",
     answer:
       "Yes. Clark County plumbing code requires seismic bracing on all water heater installations, including two heavy-gauge steel straps secured at code-specified heights. Red Carpet Plumbing installs all water heaters to current Clark County code including seismic bracing.",
+    category: "trust",
   },
   {
     question:
       "Who issues permits for water heater installation in Spring Valley?",
     answer:
-      "Spring Valley is an unincorporated community in Clark County, Nevada. Plumbing permits and inspections in Spring Valley are handled through Clark County, not the City of Las Vegas. Red Carpet Plumbing holds NV License #0048585A and works within the applicable Clark County permit process for your address.",
+      "Spring Valley is an unincorporated community in Clark County, Nevada. Plumbing permits and inspections in Spring Valley are handled through Clark County, not the City of Las Vegas. Red Carpet Plumbing holds NV License #048585A and works within the applicable Clark County permit process for your address.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day water heater repair service in Spring Valley?",
     answer:
       "Same-day water heater repair service is available in Spring Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides water heater repair and installation throughout Spring Valley, Nevada, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. From tank water heater repair and replacement to new installations with code-compliant seismic bracing and thermal expansion tanks, our licensed plumbers serve Spring Valley homes. NV Contractor License #0048585A.";
+  "Red Carpet Plumbing provides water heater repair and installation throughout Spring Valley, Nevada, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. From tank water heater repair and replacement to new installations with code-compliant seismic bracing and thermal expansion tanks, our licensed plumbers serve Spring Valley homes. NV Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Tank and Tankless Water Heaters",
   "Seismic Bracing and Expansion Tanks",
   "Transparent Pricing, No Hidden Fees",
@@ -194,13 +203,12 @@ const WH_STEPS = [
 const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with Spring Valley's older housing stock, Desert Inn and West Sahara corridor galvanized supply conditions, and hard water water heater failure patterns",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Clark County code-compliant seismic bracing and thermal expansion tank installation on every new water heater",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // ---------------------------------------------------------------------------
@@ -291,6 +299,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -322,18 +338,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SV_WH_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SV_WH_FAQS);
 
 export default function SpringValleyWaterHeaterPage() {
   return (
@@ -395,7 +400,7 @@ export default function SpringValleyWaterHeaterPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Spring Valley, Nevada and the Las Vegas Valley. We hold
-                Nevada Contractor License #0048585A under the C-1 Plumbing and
+                Nevada Contractor License #048585A under the C-1 Plumbing and
                 Heating classification and have been serving the Las Vegas Valley
                 for over 40 years.
               </p>
@@ -642,33 +647,11 @@ export default function SpringValleyWaterHeaterPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Water Heater Repair and
-                Installation in Spring Valley
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SV_WH_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Water Heater Repair and Installation in Spring Valley</>}
+          faqs={SV_WH_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: RELATED SERVICES */}
         <section className="bg-white">
@@ -733,21 +716,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

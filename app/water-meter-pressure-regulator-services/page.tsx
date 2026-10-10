@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,12 +11,14 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
     "Water Meter and Pressure Regulator Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement for homes throughout Las Vegas. High water pressure and PRV failure are common in the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement for homes throughout Las Vegas. High water pressure and PRV failure are common in the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/water-meter-pressure-regulator-services/",
@@ -24,57 +27,66 @@ export const metadata: Metadata = {
     title:
       "Water Meter and Pressure Regulator Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed pressure regulator repair and replacement throughout Las Vegas and the Las Vegas Valley. NV #0048585A. 4.8 stars, 76 reviews.",
+      "Licensed pressure regulator repair and replacement throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
   },
 };
 
-const PRESSURE_FAQS = [
+const PRESSURE_FAQS: FaqItem[] = [
   {
     question: "What does a water pressure regulator do?",
     answer:
       "A water pressure regulator, also called a pressure reducing valve or PRV, is installed on your main water supply line where it enters the home. It reduces high municipal water pressure to a safe, consistent level for residential use, typically 50 to 60 PSI. In Las Vegas, municipal water pressure frequently exceeds 80 to 100 PSI due to the valley's elevation changes and distribution infrastructure. Without a functioning PRV, excessive pressure stresses pipes, fixtures, water heaters, and appliances, accelerating wear and increasing the risk of leaks.",
+    category: "the-service",
   },
   {
     question: "What are the signs of a failing pressure regulator?",
     answer:
       "Signs of a failing pressure regulator include fluctuating water pressure throughout the home, sudden high-pressure bursts at fixtures, banging or knocking pipes when water is turned on or off (water hammer), visible leaks or moisture around the valve body on the main line, and consistently low water pressure across multiple fixtures. A PRV that has failed in the open position allows full municipal pressure into the home, which can damage pipes and appliances. A PRV that has failed in the closed position restricts flow and reduces pressure throughout the home.",
+    category: "causes-signs",
   },
   {
     question: "What is the safe water pressure for a home?",
     answer:
       "Safe residential water pressure is generally 50 to 60 PSI, with 80 PSI as the maximum recommended limit. Pressure above 80 PSI is considered high and can cause premature failure of faucet washers, toilet fill valves, and appliance supply connections. Pressure above 100 PSI significantly increases the risk of pipe joint stress, pinhole leaks, and appliance damage. In Las Vegas, where municipal supply pressure often exceeds these levels, a properly set and functioning PRV is an important part of protecting the home's plumbing system.",
+    category: "the-service",
   },
   {
     question: "How long does a pressure reducing valve last?",
     answer:
       "A pressure reducing valve typically lasts 10 to 15 years under normal conditions. In Las Vegas, hard water mineral deposits accumulate inside the PRV diaphragm mechanism over time, degrading performance and shortening lifespan. A PRV that is approaching or past 15 years of age, or one in a home that has never had a PRV replaced since original construction, is a candidate for inspection and likely replacement. Many Las Vegas homes built in the 1980s and 1990s have original PRVs still in service.",
+    category: "timing-process",
   },
   {
     question: "Does Las Vegas have high water pressure?",
     answer:
       "Yes. Municipal water pressure in the Las Vegas Valley frequently exceeds 80 to 100 PSI in many areas due to elevation differences and the demands of the distribution network. The Southern Nevada Water Authority and local water utilities supply pressure adequate for the distribution system, which often exceeds the safe range for residential plumbing. A pressure reducing valve is the standard protection against excessive inlet pressure, and all Las Vegas homes should have a functioning PRV on the main supply line.",
+    category: "the-service",
   },
   {
     question: "Can I use my water meter to check for a hidden leak?",
     answer:
       "Yes. A water meter test is a useful first step for diagnosing a hidden leak. With all fixtures, appliances, and irrigation off, watch the water meter for movement. If the meter continues to register flow, water is actively leaving the supply system somewhere in the home or on the service line. This does not identify where the leak is, but it confirms that active water loss is occurring and a plumber should be called to investigate. Red Carpet Plumbing uses the water meter test as part of the initial leak assessment process.",
+    category: "the-service",
   },
   {
     question:
       "What is water hammer and how is it related to water pressure?",
     answer:
       "Water hammer is the banging or knocking sound that occurs in pipes when water flow is stopped suddenly, such as when a valve or faucet is closed quickly. It is caused by a pressure surge wave traveling through the supply line. High inlet pressure from a failed or absent PRV significantly increases the severity of water hammer and the stress it places on pipe joints and fittings. Installing or replacing a properly adjusted PRV reduces operating pressure and typically eliminates or greatly reduces water hammer.",
+    category: "the-service",
   },
   {
     question:
       "What areas does Red Carpet Plumbing serve for pressure regulator services?",
     answer:
       "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day pressure regulator service in Las Vegas?",
     answer:
       "Same-day pressure regulator service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -292,7 +304,7 @@ const serviceSchema = {
   name: "Water Meter and Pressure Regulator Services",
   serviceType: "Pressure Regulator and Water Meter Services",
   description:
-    "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement and water meter services for homes and businesses throughout the Las Vegas Valley. High municipal water pressure in the Las Vegas Valley makes properly functioning pressure reducing valves essential for protecting residential plumbing systems. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement and water meter services for homes and businesses throughout the Las Vegas Valley. High municipal water pressure in the Las Vegas Valley makes properly functioning pressure reducing valves essential for protecting residential plumbing systems. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -302,17 +314,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -369,7 +382,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Water Meter and Pressure Regulator Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/water-meter-pressure-regulator-services/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -390,18 +403,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: PRESSURE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(PRESSURE_FAQS);
 
 export default function WaterMeterPressureRegulatorServicesPage() {
   return (
@@ -432,8 +434,8 @@ export default function WaterMeterPressureRegulatorServicesPage() {
           }
           subheading="Pressure regulator inspection, repair, and replacement for homes and businesses throughout the Las Vegas Valley."
           trustItems={[
-            "Licensed Plumbers, NV #0048585A",
-            "4.8 Stars, 76 Google Reviews",
+            "Licensed Plumbers, NV #048585A",
+            "4.8 Stars, 81 Google Reviews",
             "Residential and Commercial Service",
             "Transparent Pricing, No Hidden Fees",
             "Over 40 Years in Las Vegas",
@@ -446,7 +448,7 @@ export default function WaterMeterPressureRegulatorServicesPage() {
             label: "Request Pressure Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
+          ctaNote="NV Licensed #048585A | 4.8 Stars, 81 Reviews"
           formSlot={
             <QuoteFormPlaceholder title="Get a Pressure Regulator Quote" />
           }
@@ -536,7 +538,11 @@ export default function WaterMeterPressureRegulatorServicesPage() {
 
         {/* SECTION 5: WHY PRESSURE REGULATION MATTERS IN LAS VEGAS */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/water-pipe-repair-replacement/red-carpet-plumbing-main-water-line-repair-las-vegas.webp"
+              alt="Water meter and pressure regulator vault with copper piping and a gauge"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -571,12 +577,17 @@ export default function WaterMeterPressureRegulatorServicesPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: HOWTO PROCESS */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-thermal-expansion-tank-installation-card.webp"
+              alt="Water heater with a thermal expansion tank mounted on copper piping"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -616,6 +627,7 @@ export default function WaterMeterPressureRegulatorServicesPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -631,7 +643,7 @@ export default function WaterMeterPressureRegulatorServicesPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing inspects, repairs, and replaces
                   pressure reducing valves throughout the Las Vegas Valley.
-                  NV Contractor License #0048585A.
+                  NV Contractor License #048585A.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">
@@ -741,31 +753,11 @@ export default function WaterMeterPressureRegulatorServicesPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Pressure Regulator and Water Meter Questions Answered
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {PRESSURE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Pressure Regulator and Water Meter Questions Answered</>}
+          faqs={PRESSURE_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -801,20 +793,5 @@ export default function WaterMeterPressureRegulatorServicesPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

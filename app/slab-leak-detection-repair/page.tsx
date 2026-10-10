@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,6 +11,8 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
@@ -30,53 +33,62 @@ export const metadata: Metadata = {
   },
 };
 
-const SLAB_LEAK_FAQS = [
+const SLAB_LEAK_FAQS: FaqItem[] = [
   {
     question: "What is a slab leak?",
     answer:
       "A slab leak is a leak in the water or sewer pipes running beneath or embedded in a home's concrete foundation. In Las Vegas, most slab leaks occur in copper water lines that have been thinned by hard water mineral corrosion over decades of exposure. Slab leaks can also occur in sewer lines beneath the foundation. Both types can cause significant foundation and structural damage if not addressed promptly.",
+    category: "the-service",
   },
   {
     question: "What are the signs of a slab leak in Las Vegas?",
     answer:
       "The most common signs are an unexplained increase in your water bill, the sound of running water when all fixtures are off, warm or hot spots on the floor (especially on tile or concrete), damp spots on flooring near walls, unexplained cracks in walls or flooring, a musty odor from floors or lower walls, and reduced water pressure throughout the home.",
+    category: "causes-signs",
   },
   {
     question: "What causes slab leaks in Las Vegas homes?",
     answer:
       "The primary causes in Las Vegas are hard water mineral corrosion that thins copper pipe walls over decades of exposure, caliche and expansive clay soil movement that stresses pipes beneath the foundation, aging pipe materials in homes built before 2000, and pressure stress from closed-loop plumbing systems. Las Vegas has some of the highest rates of slab leaks in the country due to these combined conditions.",
+    category: "causes-signs",
   },
   {
     question: "How is a slab leak detected?",
     answer:
       "Professional slab leak detection uses acoustic sensors to listen for the sound of pressurized water escaping beneath the slab, pressure testing to confirm and isolate water loss to a specific line, and thermal imaging to identify temperature differences caused by hot water leaks. These non-invasive methods locate the leak precisely before any repair begins.",
+    category: "the-service",
   },
   {
     question: "What are my options for slab leak repair?",
     answer:
       "The three main options are spot repair through concrete, which involves cutting the slab at the leak location and repairing the pipe; pipe rerouting through walls or ceilings to bypass the damaged section entirely; and epoxy pipe lining, which seals cracks from the inside without excavation. The right option depends on the leak location, pipe condition, pipe age, and what sits above the leak.",
+    category: "the-service",
   },
   {
     question:
       "Should I choose pipe rerouting or spot repair for a slab leak?",
     answer:
       "For isolated leaks in pipes that are otherwise in good condition, spot repair can be appropriate. For leaks in older pipes that have been thinned by hard water over decades, which describes many Las Vegas homes built before 2000, pipe rerouting is often the more durable long-term solution because it removes the aging pipe from under the slab entirely and eliminates the source of future slab leaks on that line.",
+    category: "the-service",
   },
   {
     question: "How long does slab leak repair take?",
     answer:
       "Detection typically takes a few hours. Spot repair through concrete usually takes one to two days including concrete patching. Pipe rerouting typically takes one to three days depending on the complexity of the plumbing layout. Epoxy lining timelines vary based on pipe length and configuration. Red Carpet Plumbing will give you a timeline estimate before work begins.",
+    category: "timing-process",
   },
   {
     question:
       "Does Red Carpet Plumbing detect and repair slab leaks throughout Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing provides slab leak detection and repair throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day slab leak repair service in Las Vegas?",
     answer:
       "Same-day slab leak repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -105,8 +117,8 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
       "Red Carpet Plumbing uses professional acoustic sensors, electronic detection equipment, and pressure testing to locate slab leaks precisely before any repair begins. Accurate detection is essential to a slab leak repair because the right repair method and the scope of work depend entirely on knowing the exact location and severity of the leak.",
     href: "/slab-leak-detection-repair/detection/",
     image:
-      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-card.webp",
-    imageAlt: "Floor tile marked with an X beside leak listening probes",
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
+    imageAlt: "Leak listening probe, headphones, analyzer and pressure gauge on a tile floor",
   },
   {
     title: "Spot Repair Through Concrete",
@@ -132,8 +144,9 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
       "For some slab leak situations, epoxy pipe lining is an option. A specialized epoxy coating is applied to the interior of the existing pipe, sealing cracks and restoring pipe integrity from the inside without excavation. This method is less invasive than concrete cutting and works best for pipes with localized damage where the overall pipe structure is still intact.",
     href: "/slab-leak-detection-repair/epoxy-lining/",
     image:
-      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-epoxy-pipe-lining-card.webp",
-    imageAlt: "Epoxy liner buckets and a cutaway pipe with white lining",
+      "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-epoxy-lined-drain-pipe-interior.webp",
+    imageAlt:
+      "Cutaway section of a rusted drain pipe showing a smooth white epoxy lining on the inside",
   },
   {
     title: "Pressure Testing",
@@ -290,17 +303,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -366,18 +380,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SLAB_LEAK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SLAB_LEAK_FAQS);
 
 export default function SlabLeakDetectionAndRepairPage() {
   return (
@@ -406,8 +409,8 @@ export default function SlabLeakDetectionAndRepairPage() {
           }
           subheading="Red Carpet Plumbing detects and repairs slab leaks for homes and businesses throughout the Las Vegas Valley. Slab leaks are one of the most serious plumbing problems a Las Vegas homeowner can face. Our licensed plumbers use professional detection equipment to locate the leak precisely and explain all repair options before any work begins."
           trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed Plumbers, #0048585A",
+            "4.8 stars, 81 Google reviews",
+            "NV Licensed Plumbers, #048585A",
             "Over 40 years serving Las Vegas",
             "Transparent pricing, no hidden fees",
             "24/7 Emergency Service",
@@ -529,7 +532,11 @@ export default function SlabLeakDetectionAndRepairPage() {
 
         {/* SECTION 5: WHY SLAB LEAKS ARE COMMON IN LAS VEGAS */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-card.webp"
+              alt="Leak analyzer, probe and pressure gauge on a tile floor beside taped survey lines"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -563,12 +570,17 @@ export default function SlabLeakDetectionAndRepairPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: DETECTION AND REPAIR PROCESS (HowTo) */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-slab-leak-emergency-card.webp"
+              alt="Leak detection tools and pressure gauges laid out on wet tile"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -608,6 +620,7 @@ export default function SlabLeakDetectionAndRepairPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -728,32 +741,11 @@ export default function SlabLeakDetectionAndRepairPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Slab Leak Repair in Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SLAB_LEAK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Slab Leak Repair in Las Vegas</>}
+          faqs={SLAB_LEAK_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -766,7 +758,7 @@ export default function SlabLeakDetectionAndRepairPage() {
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
               Red Carpet Plumbing is available for slab leak detection and
               repair throughout the Las Vegas Valley. Licensed
-              plumbers, 4.8-star rated, NV #0048585A.
+              plumbers, 4.8-star rated, NV #048585A.
             </p>
             <div className="mt-10">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
@@ -789,20 +781,5 @@ export default function SlabLeakDetectionAndRepairPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

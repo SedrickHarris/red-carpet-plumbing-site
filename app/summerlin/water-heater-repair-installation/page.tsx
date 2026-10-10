@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", and the
-// 4.8/76 rating are source-site/project claims. Each visible instance carries an
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", and the
+// 4.8/81 rating are source-site/project claims. Each visible instance carries an
 // inline FLAG comment.
 //
 // SCHEMA NOTE: Summerlin is a master-planned community spanning both the City of
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
   // past the site's <=160 meta-description standard; kept verbatim because page
   // metadata is approval-gated. Trim pending explicit approval.
   description:
-    "Water heater repair and installation in Summerlin, NV. Tank and tankless water heaters, descaling, thermal expansion tanks, seismic bracing. NV #0048585A. (702) 567-9172.",
+    "Water heater repair and installation in Summerlin, NV. Tank and tankless water heaters, descaling, thermal expansion tanks, seismic bracing. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/summerlin/water-heater-repair-installation/",
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
     title:
       "Water Heater Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Water heater repair and installation in Summerlin, NV. Tank and tankless water heaters, descaling, thermal expansion tanks, seismic bracing. NV #0048585A. (702) 567-9172.",
+      "Water heater repair and installation in Summerlin, NV. Tank and tankless water heaters, descaling, thermal expansion tanks, seismic bracing. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -52,52 +54,59 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const SUMMERLIN_WH_FAQS = [
+const SUMMERLIN_WH_FAQS: FaqItem[] = [
   {
     question: "How long do water heaters last in Summerlin?",
     answer:
       "Tank water heaters in the Las Vegas Valley typically last 8 to 12 years. Summerlin's hard water supply accelerates anode rod depletion and sediment buildup compared to national averages, which is why Las Vegas Valley water heaters tend to reach end of service life at the lower end of that range without regular maintenance. Tankless water heaters typically last 15 to 20 years with proper maintenance, including annual descaling to remove hard water mineral deposits from the heat exchanger.",
+    category: "timing-process",
   },
   {
     question:
       "Do I need a thermal expansion tank on my Summerlin water heater?",
     answer:
       "Most Summerlin homes operate on a closed-loop plumbing system due to backflow preventers at the street meter. Clark County plumbing code and most manufacturer warranties require a thermal expansion tank on closed-loop water heater installations. If your water heater was installed without one, Red Carpet Plumbing can add it during a service call.",
+    category: "the-service",
   },
   {
     question:
       "What is tankless water heater descaling and why does it matter in Summerlin?",
     answer:
       "Descaling removes hard water mineral deposits from a tankless water heater's heat exchanger. Las Vegas Valley water is among the hardest municipal water in the United States, depositing calcium and magnesium scale on heat exchanger surfaces faster than in most cities. Scale buildup reduces heating efficiency, restricts flow, and can shorten the service life of a tankless unit. Annual descaling is strongly recommended for Summerlin homes with tankless water heaters.",
+    category: "causes-signs",
   },
   {
     question: "Should I repair or replace my Summerlin water heater?",
     answer:
       "For units under 8 years old with a repairable component failure, repair is generally the right choice. For units 10 years or older, or units with tank corrosion or a failed tank body, replacement typically makes more financial sense than ongoing repairs, especially under Las Vegas hard water conditions that accelerate wear. Red Carpet Plumbing will assess your unit and give you an honest recommendation for your specific situation.",
+    category: "the-service",
   },
   {
     question:
       "Is seismic bracing required for water heater installation in Summerlin?",
     answer:
       "Yes. Clark County plumbing code requires seismic bracing on all water heater installations, including two heavy-gauge steel straps secured at code-specified heights. Red Carpet Plumbing installs all water heaters to current Clark County code including seismic bracing requirements.",
+    category: "trust",
   },
   {
     question: "Who issues permits for water heater installation in Summerlin?",
     answer:
-      "Permit jurisdiction in Summerlin depends on which side of the city boundary the property sits. Summerlin spans both the City of Las Vegas and unincorporated Clark County. Red Carpet Plumbing holds NV License #0048585A and works within the applicable permit process for your address.",
+      "Permit jurisdiction in Summerlin depends on which side of the city boundary the property sits. Summerlin spans both the City of Las Vegas and unincorporated Clark County. Red Carpet Plumbing holds NV License #048585A and works within the applicable permit process for your address.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day water heater repair service in Summerlin?",
     answer:
       "Same-day water heater repair service is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides water heater repair and installation throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. From tank water heater repair and replacement to tankless installation and descaling, our licensed plumbers serve Summerlin homes with code-compliant water heater service. NV Contractor License #0048585A.";
+  "Red Carpet Plumbing provides water heater repair and installation throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. From tank water heater repair and replacement to tankless installation and descaling, our licensed plumbers serve Summerlin homes with code-compliant water heater service. NV Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Tank and Tankless Water Heaters",
   "Seismic Bracing and Expansion Tanks",
   "Transparent Pricing, No Hidden Fees",
@@ -173,7 +182,7 @@ const WH_SERVICES: {
   },
   {
     label: "Gas and electric water heater service",
-    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under NV License #0048585A. For homes that may need broader pipe assessment alongside water heater service, see our",
+    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under NV License #048585A. For homes that may need broader pipe assessment alongside water heater service, see our",
     link: { href: "/summerlin/repiping/", text: "repiping" },
   },
 ];
@@ -202,15 +211,14 @@ const WH_STEPS = [
 const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with Summerlin's housing stock, hard water conditions, and original village water heater service cycles",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Tank and tankless water heater service throughout all Summerlin villages and Summerlin South",
   "Annual tankless descaling service for hard water scale buildup in Summerlin's premium homes",
   "Clark County code-compliant seismic bracing and thermal expansion tank installation",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // ---------------------------------------------------------------------------
@@ -296,6 +304,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -327,18 +343,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SUMMERLIN_WH_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SUMMERLIN_WH_FAQS);
 
 export default function SummerlinWaterHeaterPage() {
   return (
@@ -382,7 +387,7 @@ export default function SummerlinWaterHeaterPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Water Heater Help" />}
           backgroundImage={{
-            src: "/images/locations/summerlin/red-carpet-plumbing-summerlin-nv-red-rock-canyon-location-hero.webp",
+            src: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-hero.webp",
             alt: "Licensed water heater repair and installation in Summerlin, NV",
           }}
         />
@@ -398,7 +403,7 @@ export default function SummerlinWaterHeaterPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Summerlin, Nevada and the Las Vegas Valley. We hold Nevada
-                Contractor License #0048585A under the C-1 Plumbing and Heating
+                Contractor License #048585A under the C-1 Plumbing and Heating
                 classification and have been serving Summerlin homeowners for over
                 40 years.
               </p>
@@ -624,33 +629,11 @@ export default function SummerlinWaterHeaterPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Water Heater Repair and
-                Installation in Summerlin
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SUMMERLIN_WH_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Water Heater Repair and Installation in Summerlin</>}
+          faqs={SUMMERLIN_WH_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: RELATED SERVICES */}
         <section className="bg-white">
@@ -715,21 +698,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

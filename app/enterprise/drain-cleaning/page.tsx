@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", and the
-// 4.8/76 rating are source-site/project claims. Each visible instance carries an
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", and the
+// 4.8/81 rating are source-site/project claims. Each visible instance carries an
 // inline FLAG comment.
 //
 // SCHEMA NOTE: Enterprise is an unincorporated Clark County community (not an
@@ -30,14 +32,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Drain Cleaning in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Professional drain cleaning in Enterprise, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Enterprise homes and businesses. Rhodes Ranch, Mountain's Edge, Southwest Las Vegas. NV #0048585A. (702) 567-9172.",
+    "Professional drain cleaning in Enterprise, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Enterprise homes and businesses. Rhodes Ranch, Mountain's Edge, Southwest Las Vegas. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/enterprise/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in Enterprise, NV | Red Carpet Plumbing",
     description:
-      "Professional drain cleaning throughout Enterprise, NV. Kitchen drains, bathroom drains, main sewer lines, hydro jetting. Rhodes Ranch, Mountain's Edge, 215 Beltway. NV #0048585A.",
+      "Professional drain cleaning throughout Enterprise, NV. Kitchen drains, bathroom drains, main sewer lines, hydro jetting. Rhodes Ranch, Mountain's Edge, 215 Beltway. NV #048585A.",
     url: "https://redcarpetplumbing.com/enterprise/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -51,52 +53,58 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const ENT_DRAIN_FAQS = [
+const ENT_DRAIN_FAQS: FaqItem[] = [
   {
     question: "What causes drains to clog faster in Enterprise?",
     answer:
       "Las Vegas Valley water carries 17 to 24 grains per gallon of dissolved minerals, approximately 280 parts per million. This is among the hardest municipal water in the United States. Hard water leaves calcium and magnesium deposits inside pipe walls that narrow the pipe, slow water flow, and create rough surfaces that trap grease, soap scum, and debris. Enterprise homes in Rhodes Ranch and Mountain's Edge have been accumulating this mineral scale in their copper drain lines since original construction in the late 1990s and early 2000s. This is the primary reason Enterprise drains clog more frequently and more stubbornly as homes age.",
+    category: "causes-signs",
   },
   {
     question: "Do I need hydro jetting or drain snaking in my Enterprise home?",
     answer:
       "It depends on the type and location of the clog. Drain snaking (cable cleaning) is appropriate for isolated branch drain clogs from hair, soap, and food debris. Hydro jetting is more effective when mineral scale and grease buildup have coated the pipe walls, which is common in Enterprise homes now 20 to 25 years old. Hydro jetting scours the full pipe interior rather than just clearing a path through the clog, providing a longer-lasting result. We assess pipe condition and clog type before recommending the right method.",
+    category: "the-service",
   },
   {
     question: "How often should I clean the drains in my Enterprise home?",
     answer:
       "Most Enterprise homeowners benefit from professional drain cleaning every one to two years. Homes with larger households, frequent cooking, or a history of recurring clogs may benefit from annual cleaning. Enterprise homes that have not had professional drain cleaning since original construction are often overdue regardless of whether visible clogs have appeared, because mineral scale buildup accumulates gradually before causing flow problems.",
+    category: "timing-process",
   },
   {
     question:
       "Can Red Carpet Plumbing clean commercial drains in the Enterprise area?",
     answer:
       "Yes. Red Carpet Plumbing provides commercial drain cleaning for businesses, restaurants, and commercial properties throughout Enterprise and the Southwest Las Vegas area, including floor drain cleaning and main drain line service for commercial parks and warehouse facilities along the 215 Beltway corridor. Call (702) 567-9172 for commercial drain service.",
+    category: "the-service",
   },
   {
     question: "What is the difference between drain snaking and hydro jetting?",
     answer:
       "Drain snaking uses a cable machine to break through or pull out a specific clog. It is effective for solid obstructions like hair clogs or localized blockages. Hydro jetting uses high-pressure water to clean the entire interior of the pipe, removing buildup from the walls rather than just clearing the blockage. For recurring clogs or lines with significant mineral or grease buildup, as is common in Enterprise homes now 20 to 25 years old, hydro jetting provides a more thorough and longer-lasting result.",
+    category: "the-service",
   },
   {
     question: "Is Red Carpet Plumbing licensed to work in Enterprise, NV?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. Enterprise is an unincorporated Clark County community, and our license covers plumbing work throughout Clark County including Enterprise.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. Enterprise is an unincorporated Clark County community, and our license covers plumbing work throughout Clark County including Enterprise.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day drain cleaning service in Enterprise?",
     answer:
       "Same-day drain cleaning service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout Enterprise, Nevada and the Southwest Las Vegas area. Enterprise homes built in the late 1990s and early 2000s are now 20 to 25 years old, and Las Vegas hard water has been depositing mineral scale inside their copper drain lines since original construction. Our licensed plumbers clear kitchen drains, bathroom drains, main sewer lines, and floor drains using the right method for your pipe condition and clog type. NV Contractor License #0048585A.";
+  "Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout Enterprise, Nevada and the Southwest Las Vegas area. Enterprise homes built in the late 1990s and early 2000s are now 20 to 25 years old, and Las Vegas hard water has been depositing mineral scale inside their copper drain lines since original construction. Our licensed plumbers clear kitchen drains, bathroom drains, main sewer lines, and floor drains using the right method for your pipe condition and clog type. NV Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed Plumbers, #0048585A",
-  // FLAG: VERIFY rating before publishing.
-  "4.8 Stars, 76 Google Reviews",
+  "NV Licensed Plumbers, #048585A",
+  "4.8 Stars, 81 Google Reviews",
   // FLAG: VERIFY "Over 40 years" before publishing.
   "Over 40 Years Serving the Las Vegas Valley",
   "Transparent Pricing, No Hidden Fees",
@@ -189,14 +197,13 @@ const DRAIN_STEPS = [
 const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with Enterprise's housing stock, hard water conditions, and Rhodes Ranch and Mountain's Edge drain system conditions",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Residential and commercial drain cleaning throughout Enterprise and Southwest Las Vegas",
   "Hydro jetting available for hard water mineral scale in copper drain lines where pipe condition allows",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // Section 6 — related services (built core/sibling routes).
@@ -280,6 +287,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -311,18 +326,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ENT_DRAIN_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ENT_DRAIN_FAQS);
 
 export default function EnterpriseDrainCleaningPage() {
   return (
@@ -382,7 +386,7 @@ export default function EnterpriseDrainCleaningPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Enterprise, Nevada and the Las Vegas Valley. We hold
-                Nevada Contractor License #0048585A under the C-1 Plumbing and
+                Nevada Contractor License #048585A under the C-1 Plumbing and
                 Heating classification. We have been serving the Las Vegas
                 Valley, including Enterprise and the Southwest Las Vegas area, for
                 over 40 years.
@@ -623,31 +627,11 @@ export default function EnterpriseDrainCleaningPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Drain Cleaning FAQs for Enterprise Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ENT_DRAIN_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Drain Cleaning FAQs for Enterprise Homeowners</>}
+          faqs={ENT_DRAIN_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
@@ -686,21 +670,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

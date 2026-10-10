@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,6 +11,8 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
@@ -28,53 +31,62 @@ export const metadata: Metadata = {
   },
 };
 
-const REPIPING_FAQS = [
+const REPIPING_FAQS: FaqItem[] = [
   {
     question: "What are the signs I need to repipe my house?",
     answer:
       "Common signs include recurring leaks in multiple locations, rust-colored or discolored water from the taps, consistently low water pressure throughout the home, frequent pinhole leaks in copper pipes, known defective pipe materials such as polybutylene or Kitec, or a home built before 1990 that still has original plumbing. Multiple slab leaks on the same system are also a strong indicator that repiping is more practical than continued repairs.",
+    category: "causes-signs",
   },
   {
     question: "What pipe materials fail in Las Vegas homes?",
     answer:
       "Three materials are particularly common in Las Vegas homes that need replacement. Polybutylene pipe, used from the mid-1970s through mid-1990s, degrades in chlorinated water and can fail without warning. Kitec pipe, used in the late 1990s through mid-2000s, has brass fittings that corrode in mineral-rich water. Galvanized steel pipe, used in homes built before 1975, corrodes from the inside out over decades of hard water exposure.",
+    category: "the-service",
   },
   {
     question:
       "What is the difference between PEX and copper for repiping?",
     answer:
       "PEX is flexible, resists hard water scale buildup, requires fewer fittings, and is faster to install with less drywall disruption. In Las Vegas, PEX runs through attic spaces require proper insulation because attic temperatures can exceed 150 degrees Fahrenheit. Copper is a proven material with a long track record, provides excellent water quality, and is naturally resistant to bacteria growth. Red Carpet Plumbing can help you evaluate which material is the better fit for your specific home and conditions.",
+    category: "the-service",
   },
   {
     question: "How long does whole-house repiping take?",
     answer:
       "Most single-story Las Vegas homes can be repiped in one to two days. Water is restored each evening on multi-day projects so the household is not without water overnight. Multi-story homes and larger properties take longer. Red Carpet Plumbing will give you a timeline estimate based on your home's size and plumbing layout before work begins.",
+    category: "timing-process",
   },
   {
     question: "Do I need a permit for repiping in Las Vegas?",
     answer:
       "Yes. A permit is required for whole-house repiping in Las Vegas, Henderson, and North Las Vegas. Repiping without a permit can create issues with home sales and insurance. Red Carpet Plumbing pulls the required permits and schedules the city inspection as part of the repiping project. A closed permit with final inspection sign-off is important documentation for homeowners.",
+    category: "trust",
   },
   {
     question: "What is Kitec pipe and why is it a problem?",
     answer:
       "Kitec is a type of plumbing pipe installed in Las Vegas area homes primarily between the late 1990s and approximately 2005. Kitec has brass fittings that corrode when exposed to minerals in municipal water, eventually failing at the connection points. Las Vegas hard water accelerates Kitec fitting corrosion. Kitec pipes are typically orange or blue with brass fittings. If you have Kitec plumbing, having it evaluated and replaced is strongly recommended.",
+    category: "causes-signs",
   },
   {
     question: "Does repiping increase home value in Las Vegas?",
     answer:
       "A documented whole-house repipe with closed permits and final inspection sign-off removes a major concern for home buyers and inspectors. Homes with known defective pipe materials such as polybutylene or Kitec can face challenges during the sale process. A completed repipe with proper permits and documentation provides buyers with confidence in the plumbing system and can support the home's value in the transaction.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing serve Henderson and Summerlin for repiping?",
     answer:
       "Yes. Red Carpet Plumbing provides repiping services throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day repiping service in Las Vegas?",
     answer:
       "Same-day repiping service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -288,17 +300,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -364,18 +377,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: REPIPING_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(REPIPING_FAQS);
 
 export default function RePipingServicesPage() {
   return (
@@ -404,8 +406,8 @@ export default function RePipingServicesPage() {
           }
           subheading="Red Carpet Plumbing provides whole-house and partial repiping services for homes and businesses throughout the Las Vegas Valley. Whether your home has aging galvanized steel, failed polybutylene or Kitec pipes, or copper pipes thinned by decades of hard water exposure, our licensed plumbers assess your plumbing system and explain your options before any work begins."
           trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed Plumbers, #0048585A",
+            "4.8 stars, 81 Google reviews",
+            "NV Licensed Plumbers, #048585A",
             "Over 40 years serving Las Vegas",
             "Transparent pricing, no hidden fees",
             "Permits Pulled and Inspections Scheduled",
@@ -529,7 +531,11 @@ export default function RePipingServicesPage() {
 
         {/* SECTION 5: LAS VEGAS PIPE MATERIALS AND WHY THEY FAIL */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/repiping/red-carpet-plumbing-old-pipe-new-pipe-replacement-las-vegas.webp"
+              alt="Opened wall with old corroded pipes beside new red and blue PEX and copper, with replacement parts laid out"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -564,12 +570,17 @@ export default function RePipingServicesPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: PROCESS (HowTo) */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/repiping/red-carpet-plumbing-exposed-wall-repiping-las-vegas.webp"
+              alt="Opened wall with new red and blue PEX and copper manifold beside a water heater"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -609,6 +620,7 @@ export default function RePipingServicesPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -729,32 +741,11 @@ export default function RePipingServicesPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Repiping in Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {REPIPING_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Repiping in Las Vegas</>}
+          faqs={REPIPING_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -767,7 +758,7 @@ export default function RePipingServicesPage() {
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
               Red Carpet Plumbing is available for repiping throughout the
               Las Vegas Valley. Licensed plumbers, permits
-              pulled, 4.8-star rated, NV #0048585A.
+              pulled, 4.8-star rated, NV #048585A.
             </p>
             <div className="mt-10">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
@@ -790,20 +781,5 @@ export default function RePipingServicesPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

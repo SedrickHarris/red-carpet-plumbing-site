@@ -10,13 +10,14 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing — source-site / project claims surfaced in the
 // approved brief and shown on this page. Each instance carries an inline FLAG:
 //   - 24/7 emergency leak availability (hero sub-label) — source-site claim
-//   - 4.8-star rating, 76 Google reviews — verify before publishing
 //   - "Over 40 years" serving the area — verify before publishing
-// License #0048585A (C-1 Plumbing and Heating) is the established project value.
+// License #048585A (C-1 Plumbing and Heating) is the established project value.
 // Schema follows the brief: Service.areaServed uses Place -> AdministrativeArea
 // (Clark County) -> State (Nevada), NOT City, because Paradise is unincorporated
 // Clark County. No AggregateRating. No standalone LocalBusiness schema.
@@ -55,44 +56,51 @@ export const metadata: Metadata = {
 // a deliberate, documented deviation to satisfy the exact-match requirement.
 // Per the sibling pattern, FAQ answers are plain text with no embedded links.
 // ---------------------------------------------------------------------------
-const PARADISE_LEAK_FAQS = [
+const PARADISE_LEAK_FAQS: FaqItem[] = [
   {
     question: "How do I know if I have a hidden water leak in Paradise, NV?",
     answer:
       "The most common signs of a hidden water leak in Paradise include a water meter that keeps moving when all fixtures are off, an unexplained rise in your water bill, the sound of running water inside walls or under floors, warm or wet spots on the floor, and mold or discoloration in areas that are not normally wet. If you notice any of these, contact a licensed plumber for a professional leak inspection.",
+    category: "causes-signs",
   },
   {
     question:
       "How can I check for a water leak using my meter in Paradise, NV?",
     answer:
       "Turn off all water fixtures and appliances in the home. Locate your water meter, which is typically in a box near the street. Write down the current meter reading. Do not use any water for at least 30 minutes. Check the meter again. If the reading has changed or the meter dial has moved, water is flowing somewhere in the system and you likely have a leak. Call Red Carpet Plumbing at (702) 567-9172 for a professional inspection.",
+    category: "causes-signs",
   },
   {
     question:
       "Why are older homes near UNLV at higher risk for hidden leaks?",
     answer:
       "Residential neighborhoods near UNLV and along the Tropicana and Flamingo corridors in Paradise include homes built in the 1960s through 1980s. Plumbing systems in these homes are 40 to 60 years old. Decades of exposure to Las Vegas Valley hard water has thinned copper supply lines and accelerated corrosion in galvanized pipes. Caliche soil movement beneath older slab foundations adds additional stress. The combination of pipe age, hard water exposure, and soil movement makes hidden pipe leaks significantly more common in this housing stock.",
+    category: "causes-signs",
   },
   {
     question: "What is non-invasive leak detection and why does it matter?",
     answer:
       "Non-invasive leak detection uses acoustic listening equipment, thermal imaging cameras, and pressure testing to locate a hidden leak without opening walls, cutting into slabs, or removing flooring until the exact leak location is confirmed. This approach avoids unnecessary demolition and reduces repair scope and cost. Red Carpet Plumbing completes leak detection using non-invasive methods before any repair work begins.",
+    category: "causes-signs",
   },
   {
     question:
       "What is a slab leak and how is it different from other hidden leaks in Paradise?",
     answer:
       "A slab leak is a leak in a pipe running beneath the concrete slab foundation of a home or building. In Paradise, slab leaks are commonly caused by hard water mineral corrosion thinning copper pipes from the inside, and caliche soil movement stressing pipes from the outside. Signs of a slab leak include warm or wet spots on the floor, the sound of running water when all fixtures are off, and a sudden drop in water pressure. Slab leaks require acoustic detection and pressure testing before repair. See our slab leak detection and repair page for full information.",
+    category: "the-service",
   },
   {
     question: "Who issues permits for leak repair in Paradise, NV?",
     answer:
       "Plumbing permits in Paradise are issued by Clark County, Nevada. Paradise is an unincorporated community within Clark County, so the City of Las Vegas building department does not have jurisdiction over Paradise properties. For repairs that require a permit, Red Carpet Plumbing handles filing with Clark County.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day leak detection service in Paradise?",
     answer:
       "Same-day leak detection service is available in Paradise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -100,10 +108,9 @@ const HERO_SUBHEADING =
   "Red Carpet Plumbing provides non-invasive leak detection and repair for homes and businesses throughout Paradise, NV. Hidden water leaks in Paradise properties are often caused by hard water mineral corrosion, caliche soil movement beneath slab foundations, and aging copper or galvanized supply lines in the area's mid-century residential neighborhoods. Our licensed plumbers use professional detection equipment to locate leaks without unnecessary demolition, then repair them correctly. Call us or request service online.";
 
 const HERO_TRUST_ITEMS = [
-  "Licensed: Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+  "Licensed: Nevada Contractor License #048585A, C-1 Plumbing and Heating",
   "Non-invasive leak detection for homes and businesses in Paradise",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating, 76 Google reviews",
+  "4.8-star rating, 81 Google reviews",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Serving Paradise and the Las Vegas Valley for over 40 years",
 ];
@@ -309,7 +316,15 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+      name: "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+    },
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
     },
   },
   areaServed: {
@@ -340,18 +355,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: PARADISE_LEAK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(PARADISE_LEAK_FAQS);
 
 export default function ParadiseLeakDetectionPage() {
   return (
@@ -793,32 +797,11 @@ export default function ParadiseLeakDetectionPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Leak Detection in Paradise, NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {PARADISE_LEAK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Leak Detection in Paradise, NV</>}
+          faqs={PARADISE_LEAK_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -843,20 +826,5 @@ export default function ParadiseLeakDetectionPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

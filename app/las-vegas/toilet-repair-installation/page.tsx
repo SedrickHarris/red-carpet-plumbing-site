@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear as unverified claims in
@@ -21,7 +23,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 //     — VERIFY.
 //   - SNWA rebate/incentive availability (Section 4 water-conservation factor) —
 //     VERIFY current program before publishing.
-//   - License #0048585A is a verified business claim.
+//   - License #048585A is a verified business claim.
 //
 // Las Vegas cluster pattern (matches app/las-vegas/repiping/page.tsx):
 // 5 separate JsonLd blocks WebPage -> BreadcrumbList -> Service -> HowTo ->
@@ -41,7 +43,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout Las Vegas, NV. Running toilets, base leaks, wax ring replacement, clogs, and new installations. NV #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout Las Vegas, NV. Running toilets, base leaks, wax ring replacement, clogs, and new installations. NV #048585A. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/las-vegas/toilet-repair-installation/",
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
     title:
       "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed toilet repair and installation in Las Vegas. Running toilets, base leaks, wax ring replacement, hard water buildup, new installs. NV #0048585A.",
+      "Licensed toilet repair and installation in Las Vegas. Running toilets, base leaks, wax ring replacement, hard water buildup, new installs. NV #048585A.",
     url: "https://redcarpetplumbing.com/las-vegas/toilet-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -66,41 +68,48 @@ type LinkSeg = string | { href: string; text: string };
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const LV_TOILET_FAQS = [
+const LV_TOILET_FAQS: FaqItem[] = [
   {
     question: "Why does my toilet keep running in Las Vegas?",
     answer:
       "A running toilet is usually caused by a faulty flapper valve that no longer seals properly after flushing, a fill valve that does not shut off once the tank is full, or a float set too high that allows water to flow continuously into the overflow tube. Las Vegas hard water can accelerate wear on rubber flapper valves and fill valve components, making these repairs more common here than in areas with softer water. A running toilet can waste hundreds of gallons per day. A licensed plumber can identify and repair the specific component causing the problem.",
+    category: "causes-signs",
   },
   {
     question: "Why is my toilet leaking at the base?",
     answer:
       "A toilet leaking at the base is most often caused by a failed wax ring, the seal between the toilet and the floor flange. In Las Vegas homes, heat cycling between extreme summer temperatures and cooler winters can degrade wax rings faster than in moderate climates, especially in older properties where the seal has been in place for decades. A base leak is not just a water damage issue. It can also allow sewer gases to enter the home and should be repaired promptly.",
+    category: "causes-signs",
   },
   {
     question: "Should I repair or replace my toilet?",
     answer:
       "Repair is usually the right choice for a running toilet, a base leak, a weak flush from mineral buildup, or most clog situations. Replacement makes more sense when the toilet has a cracked tank or bowl, requires repeated repairs for the same problem, has severe mineral buildup blocking siphon jets that cannot be cleared, or is an older pre-1994 model that wastes significantly more water per flush than a modern efficient design. A plumber can assess the condition and recommend the more practical option.",
+    category: "the-service",
   },
   {
     question: "Can hard water damage my toilet?",
     answer:
       "Yes. Las Vegas has some of the hardest municipal water in the country. The mineral content builds up inside toilet siphon jets, rim holes, and the siphon tube over time, restricting water flow and weakening the flush. Hard water scale also accelerates wear on flapper valves and fill valves, meaning toilet components may need replacement more frequently in Las Vegas homes than in areas with softer water. Periodic cleaning and inspection of toilet internals helps extend the service life of Las Vegas toilets.",
+    category: "the-service",
   },
   {
     question: "How long does toilet installation take?",
     answer:
       "A standard toilet installation typically takes one to two hours for a licensed plumber. This includes removing the old toilet, inspecting the flange condition, setting the new wax ring, positioning and securing the toilet, and connecting the supply line. If the flange is damaged and needs repair, the job may take longer. Red Carpet Plumbing handles the full installation process and disposes of the old toilet.",
+    category: "timing-process",
   },
   {
     question: "What should I do if my toilet is overflowing?",
     answer:
       "If your toilet is overflowing and will not stop, locate the shutoff valve at the base of the toilet and turn it clockwise to stop the water supply. If the valve is inaccessible or not working, turn off the main water supply to the home. Do not continue to flush. Call Red Carpet Plumbing at (702) 567-9172. A toilet overflow that cannot be controlled with the shutoff valve may indicate a blockage in the main sewer line. See our Las Vegas emergency plumbing page for more information.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day toilet repair service in Las Vegas?",
     answer:
       "Same-day toilet repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -131,7 +140,7 @@ const LV_TOILET_STEPS = [
 // 24/7 availability are source-site claims. Confirm all before launch.
 const WHY_CHOOSE = [
   "Local Las Vegas plumbing company familiar with hard water conditions and desert heat cycling that affect toilet performance and component life",
-  "Licensed plumbers (NV License #0048585A)",
+  "Licensed plumbers (NV License #048585A)",
   "Residential and commercial toilet repair and installation throughout Las Vegas",
   "Full range of toilet services: running toilet repair, base leaks, wax ring replacement, clog clearing, and new installations",
   "Transparent pricing with no hidden fees",
@@ -140,7 +149,7 @@ const WHY_CHOOSE = [
 
 // Red brand-primary trust band (Section 2).
 const LV_TOILET_TRUST_STRIP = [
-  "NV Licensed Plumbers, #0048585A",
+  "NV Licensed Plumbers, #048585A",
   "Toilet Repair and Installation",
   "Serving Las Vegas and the Valley",
   "Transparent Pricing, No Hidden Fees",
@@ -278,7 +287,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout Las Vegas, NV. Running toilets, base leaks, wax ring replacement, clogs, and new installations. NV #0048585A.",
+    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout Las Vegas, NV. Running toilets, base leaks, wax ring replacement, clogs, and new installations. NV #048585A.",
   url: "https://redcarpetplumbing.com/las-vegas/toilet-repair-installation/",
   isPartOf: {
     "@type": "WebSite",
@@ -319,7 +328,7 @@ const serviceSchema = {
   name: "Toilet Repair and Installation in Las Vegas",
   serviceType: "Toilet Repair and Installation",
   description:
-    "Red Carpet Plumbing provides toilet repair, replacement, and installation for homes and businesses in Las Vegas, NV. Running toilet repair, base leak and wax ring repair, clog clearing, tank component replacement, and new toilet installation. NV License #0048585A.",
+    "Red Carpet Plumbing provides toilet repair, replacement, and installation for homes and businesses in Las Vegas, NV. Running toilet repair, base leak and wax ring repair, clog clearing, tank component replacement, and new toilet installation. NV License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -356,18 +365,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LV_TOILET_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LV_TOILET_FAQS);
 
 function renderTail(tail: LinkSeg[]) {
   return tail.map((seg, i) =>
@@ -585,7 +583,7 @@ export default function LasVegasToiletPage() {
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing handles running toilets, base leaks, clogs,
-                  wax ring replacement, and full toilet replacement throughout the Las Vegas Valley. NV Contractor License #0048585A.
+                  wax ring replacement, and full toilet replacement throughout the Las Vegas Valley. NV Contractor License #048585A.
                 </p>
                 {/* FLAG: VERIFY — 24/7 availability is a source-site claim. */}
                 <p className="mt-3 text-sm font-medium text-white/70">
@@ -667,33 +665,11 @@ export default function LasVegasToiletPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Toilet Repair and Installation in
-                Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LV_TOILET_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Toilet Repair and Installation in Las Vegas</>}
+          faqs={LV_TOILET_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         {/* FLAG: VERIFY — license number and trust claims in the body are
@@ -701,7 +677,7 @@ export default function LasVegasToiletPage() {
         <CTASection
           background="red"
           headline={<>Need Toilet Repair or Installation<br />in Las Vegas?</>}
-          body="Red Carpet Plumbing provides toilet repair, replacement, and installation throughout the Las Vegas Valley. Licensed, local, transparent pricing. NV #0048585A."
+          body="Red Carpet Plumbing provides toilet repair, replacement, and installation throughout the Las Vegas Valley. Licensed, local, transparent pricing. NV #048585A."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",
@@ -738,21 +714,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

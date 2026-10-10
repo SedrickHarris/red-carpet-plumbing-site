@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", the
-// 4.8/76 rating, and the emergency-availability trust-strip item are
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", the
+// 4.8/81 rating, and the emergency-availability trust-strip item are
 // source-site/project claims. Each visible instance carries an inline FLAG
 // comment.
 //
@@ -30,14 +32,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Professional non-invasive leak detection and repair in Enterprise, NV. Red Carpet Plumbing locates hidden water leaks using acoustic sensors, pressure testing, and thermal imaging. Rhodes Ranch, Mountain's Edge, Southwest Las Vegas. NV #0048585A.",
+    "Professional non-invasive leak detection and repair in Enterprise, NV. Red Carpet Plumbing locates hidden water leaks using acoustic sensors, pressure testing, and thermal imaging. Rhodes Ranch, Mountain's Edge, Southwest Las Vegas. NV #048585A.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/enterprise/leak-detection-repair/",
   },
   openGraph: {
     title: "Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing",
     description:
-      "Non-invasive leak detection throughout Enterprise, NV. Acoustic sensors, pressure testing, thermal imaging. Rhodes Ranch, Mountain's Edge. Licensed plumbers. NV #0048585A.",
+      "Non-invasive leak detection throughout Enterprise, NV. Acoustic sensors, pressure testing, thermal imaging. Rhodes Ranch, Mountain's Edge. Licensed plumbers. NV #048585A.",
     url: "https://redcarpetplumbing.com/enterprise/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -51,54 +53,60 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const ENT_LEAK_FAQS = [
+const ENT_LEAK_FAQS: FaqItem[] = [
   {
     question:
       "How do I know if I have a hidden water leak in my Enterprise home?",
     answer:
       "The most common signs of a hidden water leak in an Enterprise home are an unexplained increase in your water bill, the sound of running water when all fixtures are off, warm or wet spots on floors or walls, discoloration or bubbling paint, a persistent musty odor, reduced water pressure, and unexplained cracks in walls or flooring. If you notice one or more of these signs, a professional leak detection inspection can locate the source before further damage occurs.",
+    category: "causes-signs",
   },
   {
     question: "How can I check for a water leak using my meter in Enterprise?",
     answer:
       "Turn off all water fixtures and appliances in your home. Locate your water meter at the street and record the reading. Do not use any water for 30 minutes, then check the meter again. If the reading has changed, water is being used somewhere in the system, which indicates an active leak. This test confirms a leak is present but does not locate it. Call a licensed plumber for a professional inspection to find the source.",
+    category: "causes-signs",
   },
   {
     question: "What causes hidden pipe leaks in Enterprise, NV homes?",
     answer:
       "The most common causes in Enterprise are hard water mineral corrosion inside copper supply lines that have been thinning since original construction in the late 1990s and early 2000s, caliche and expansive clay soil movement beneath slab foundations that stresses underground pipes and connections, closed-loop pressure cycling that fatigues pipe joints and supply line connections over time, and aging fixture and appliance supply connections that have reached the end of their recommended service life in homes now 20 to 25 years old.",
+    category: "causes-signs",
   },
   {
     question: "How does non-invasive leak detection work in Enterprise?",
     answer:
       "Non-invasive leak detection uses acoustic sensors that amplify the sound of pressurized water escaping from pipes through walls, floors, and underground. This allows the plumber to pinpoint the leak location without opening large sections of the home. Pressure testing confirms which line is losing pressure, and thermal imaging identifies temperature differences caused by hot water leaks. Together these methods locate hidden leaks precisely before any repair begins.",
+    category: "the-service",
   },
   {
     question:
       "Can a small hidden leak cause serious damage in my Enterprise home?",
     answer:
       "Yes. A small hidden leak inside a wall can promote mold growth within 24 to 48 hours and can damage wood framing, drywall, insulation, and flooring over weeks and months without any visible sign above the surface. An underground supply line leak can waste hundreds of gallons per month and create soil saturation conditions near the foundation. Early detection and repair limits damage and reduces total repair cost.",
+    category: "causes-signs",
   },
   {
     question:
       "Does Red Carpet Plumbing detect leaks in commercial properties in Enterprise?",
     answer:
       "Yes. Red Carpet Plumbing provides commercial leak detection services for businesses, commercial parks, and industrial properties throughout Enterprise and the Southwest Las Vegas area, including the 215 Beltway corridor. Call (702) 567-9172 for commercial leak detection service.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day leak detection service in Enterprise?",
     answer:
       "Same-day leak detection service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Hidden water leaks in Enterprise homes can cause serious damage long before they become visible. Red Carpet Plumbing locates leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging, then makes targeted repairs without unnecessary demolition. Enterprise homes in Rhodes Ranch, Mountain's Edge, and surrounding communities built in the late 1990s and early 2000s are entering the first major service cycle for their copper supply lines. NV Contractor License #0048585A.";
+  "Hidden water leaks in Enterprise homes can cause serious damage long before they become visible. Red Carpet Plumbing locates leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging, then makes targeted repairs without unnecessary demolition. Enterprise homes in Rhodes Ranch, Mountain's Edge, and surrounding communities built in the late 1990s and early 2000s are entering the first major service cycle for their copper supply lines. NV Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  // FLAG: VERIFY rating before publishing.
-  "4.8 Stars, 76 Google Reviews",
-  "NV Licensed #0048585A",
+  "4.8 Stars, 81 Google Reviews",
+  "NV Licensed #048585A",
   // FLAG: VERIFY "Over 40 years" before publishing.
   "Over 40 Years Serving the Las Vegas Valley",
   "Transparent Pricing, No Hidden Fees",
@@ -200,7 +208,7 @@ const LEAK_SERVICES: {
   {
     // FLAG: verify gas line scope before publishing.
     label: "Gas line leak detection",
-    body: "If you smell gas, leave the building immediately and call your gas utility. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under NV License #0048585A.",
+    body: "If you smell gas, leave the building immediately and call your gas utility. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under NV License #048585A.",
   },
 ];
 
@@ -229,13 +237,12 @@ const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with Enterprise's first-service-cycle housing stock, Rhodes Ranch and Mountain's Edge copper pipe conditions, and Clark County permit requirements",
   "Non-invasive leak detection equipment that locates leaks precisely before any repair work begins",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Residential and commercial leak detection throughout Enterprise and Southwest Las Vegas",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // Section 7 — related services (built sibling routes).
@@ -322,6 +329,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -353,18 +368,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ENT_LEAK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ENT_LEAK_FAQS);
 
 export default function EnterpriseLeakDetectionPage() {
   return (
@@ -705,31 +709,11 @@ export default function EnterpriseLeakDetectionPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Leak Detection FAQs for Enterprise Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ENT_LEAK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Leak Detection FAQs for Enterprise Homeowners</>}
+          faqs={ENT_LEAK_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -768,21 +752,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

@@ -13,9 +13,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — rating (4.8 stars / 76 Google reviews)
-// and "Over 40 years" trust claims are source-site claims shown on this page.
-// License #0048585A, permit handling, and transparent-pricing are also
+// FLAG: VERIFY before publishing — "Over 40 years" trust claims are source-site claims shown on this page.
+// License #048585A, permit handling, and transparent-pricing are also
 // source-site claims. Confirm before launch.
 //
 // SCHEMA NOTE: Enterprise is an unincorporated Clark County community (not an
@@ -103,14 +102,13 @@ const ENTERPRISE_REPIPE_FAQS: FaqItem[] = [
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides whole-house and partial repiping services throughout Enterprise, Nevada and the Southwest Las Vegas area. Whether your home has first-service-cycle copper supply lines showing signs of hard water wear, Kitec plumbing with failing brass fittings, or polybutylene pipe that has degraded over time, our licensed plumbers evaluate the full system and recommend the right solution. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides whole-house and partial repiping services throughout Enterprise, Nevada and the Southwest Las Vegas area. Whether your home has first-service-cycle copper supply lines showing signs of hard water wear, Kitec plumbing with failing brass fittings, or polybutylene pipe that has degraded over time, our licensed plumbers evaluate the full system and recommend the right solution. Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
 
 const TRUST_STRIP_ITEMS = [
-  "Licensed Plumbers, NV #0048585A",
+  "Licensed Plumbers, NV #048585A",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 Years Serving Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-Star Rating, 76 Google Reviews",
+  "4.8-Star Rating, 81 Google Reviews",
   "Clark County Permits Pulled",
   "Transparent Pricing, No Hidden Fees",
 ];
@@ -196,9 +194,8 @@ const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "4.8-star rating across 81 Google reviews",
   "Clark County permits pulled and inspections scheduled",
   "Transparent pricing, no hidden fees",
   // FLAG: source-site claim — verify before final launch.
@@ -306,6 +303,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -416,7 +421,7 @@ export default function EnterpriseRePipingPage() {
                 <p>
                   Red Carpet Plumbing is a licensed local plumbing company
                   serving Enterprise and the Southwest Las Vegas area. Our Nevada
-                  Contractor License #0048585A covers plumbing work throughout
+                  Contractor License #048585A covers plumbing work throughout
                   Clark County, which is the permit jurisdiction for Enterprise.
                   For a full overview of our services in this community, visit
                   our{" "}
@@ -731,7 +736,7 @@ export default function EnterpriseRePipingPage() {
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Enterprise and the Southwest Las Vegas area. We hold
-                Nevada Contractor License #0048585A under the C-1 Plumbing and
+                Nevada Contractor License #048585A under the C-1 Plumbing and
                 Heating classification, covering residential and commercial
                 plumbing work throughout Clark County including Enterprise.
               </p>

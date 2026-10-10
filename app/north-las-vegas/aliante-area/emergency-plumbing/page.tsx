@@ -11,6 +11,8 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing. Active FLAGs on this page:
 //   - 24/7 emergency availability (source-site claim; confirm operational hours
@@ -18,7 +20,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 //   - Gas line scope (verify before publishing) -- appears in the emergency
 //     services list.
 //   - Transparent pricing, no hidden fees (source-site claim).
-// License #0048585A is a verified business claim.
+// License #048585A is a verified business claim.
 // SCHEMA NOTE: Aliante is a master-planned community within the incorporated
 // City of North Las Vegas, so Service.areaServed uses Place (Aliante, North Las
 // Vegas, Nevada) -> containedInPlace City (North Las Vegas) -> containedInPlace
@@ -52,7 +54,7 @@ export const metadata: Metadata = {
 
 // Hero trust strip (4 items).
 const ALIANTE_EMERGENCY_TRUST = [
-  "NV Licensed Plumbers, #0048585A",
+  "NV Licensed Plumbers, #048585A",
   // FLAG: VERIFY 24/7 availability before publishing.
   "Emergency Plumbing Service Available",
   "Serving Aliante and North Las Vegas",
@@ -204,44 +206,51 @@ const ALIANTE_EMERGENCY_RELATED = [
 // ---------------------------------------------------------------------------
 // Section 9 -- FAQ (FAQPage schema source of truth).
 // ---------------------------------------------------------------------------
-const ALIANTE_EMERGENCY_FAQS = [
+const ALIANTE_EMERGENCY_FAQS: FaqItem[] = [
   {
     question: "What should I do if a pipe bursts in my Aliante home?",
     answer:
       "Turn off the main water supply valve immediately. In most Aliante homes, this valve is located near the front of the property in a ground-level utility box near the street. After shutting off the water, document the damage and call Red Carpet Plumbing at (702) 567-9172 for emergency plumbing service.",
+    category: "emergency",
   },
   {
     question:
       "Do Aliante homes have a higher risk of plumbing problems after 20 years?",
     answer:
       "Yes. Most Aliante homes were built between 2000 and 2008 with copper supply lines, placing the plumbing systems in the 16 to 25 year range. This age coincides with the first major service cycle for copper pipe in Las Vegas Valley hard water conditions. Hard water mineral exposure and caliche soil movement beneath slab foundations can cause supply line deterioration, pinhole leaks, and slab leak events over time.",
+    category: "the-service",
   },
   {
     // FLAG: VERIFY 24/7 availability before publishing.
     question: "Is there an emergency plumber available in the Aliante area?",
     answer:
       "Red Carpet Plumbing provides emergency plumbing service for homes in the Aliante area of North Las Vegas. Call (702) 567-9172 to reach our team and describe your situation.",
+    category: "emergency",
   },
   {
     question: "Can a slab leak cause a plumbing emergency?",
     answer:
       "Yes. A slab leak is a supply line failure beneath your home's concrete foundation. Active water loss beneath the slab can cause structural damage, mold growth inside walls, and significant water damage if left unaddressed. Slab leaks often require specialized detection equipment and should be treated as an urgent service need.",
+    category: "emergency",
   },
   {
     question:
       "What are the most common plumbing emergencies in Aliante homes?",
     answer:
       "The most common emergency plumbing calls from Aliante area homeowners involve burst or leaking copper supply lines, slab leaks beneath slab foundations, water heater failures, and sewer backups. Hard water exposure and the age of the housing stock in Aliante contribute to these issues in homes built 16 to 25 years ago.",
+    category: "the-service",
   },
   {
     question: "How long does emergency plumbing service take?",
     answer:
       "The time required depends on the type and severity of the problem. A burst pipe repair or shutoff valve replacement may be completed in a single visit. A slab leak may require additional time for detection, diagnosis, and a decision about repair options. Red Carpet Plumbing will explain the process and timeline before any work begins.",
+    category: "emergency",
   },
   {
     question: "Do you offer same-day emergency plumbing service in the Aliante Area of North Las Vegas?",
     answer:
       "Same-day emergency plumbing service is available in the Aliante Area of North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "emergency",
   },
 ];
 
@@ -255,7 +264,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Emergency Plumbing in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides emergency plumbing service in the Aliante area of North Las Vegas, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers, NV License #0048585A.",
+    "Red Carpet Plumbing provides emergency plumbing service in the Aliante area of North Las Vegas, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers, NV License #048585A.",
   url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/emergency-plumbing/",
   isPartOf: {
     "@type": "WebSite",
@@ -339,18 +348,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ALIANTE_EMERGENCY_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ALIANTE_EMERGENCY_FAQS);
 
 export default function AlianteEmergencyPlumbingPage() {
   return (
@@ -385,7 +383,7 @@ export default function AlianteEmergencyPlumbingPage() {
               <br /> in the Aliante Area of North Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides emergency plumbing service for homes throughout the Aliante area of North Las Vegas, NV. Whether you are dealing with a burst pipe, slab leak, sewer backup, water heater failure, or gas line concern, our licensed plumbers are ready to help. Call (702) 567-9172 now. NV Contractor License #0048585A."
+          subheading="Red Carpet Plumbing provides emergency plumbing service for homes throughout the Aliante area of North Las Vegas, NV. Whether you are dealing with a burst pipe, slab leak, sewer backup, water heater failure, or gas line concern, our licensed plumbers are ready to help. Call (702) 567-9172 now. NV Contractor License #048585A."
           trustItems={ALIANTE_EMERGENCY_TRUST}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -632,31 +630,11 @@ export default function AlianteEmergencyPlumbingPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Emergency Plumbing FAQ for Aliante Area Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ALIANTE_EMERGENCY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Emergency Plumbing FAQ for Aliante Area Homeowners</>}
+          faqs={ALIANTE_EMERGENCY_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -699,21 +677,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

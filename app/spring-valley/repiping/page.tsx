@@ -10,9 +10,11 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", and the
-// 4.8/76 rating are source-site/project claims. Each visible instance carries an
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", and the
+// 4.8/81 rating are source-site/project claims. Each visible instance carries an
 // inline FLAG comment.
 //
 // SCHEMA NOTE: Spring Valley is an unincorporated Clark County community. Per
@@ -47,43 +49,50 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const SV_REPIPE_FAQS = [
+const SV_REPIPE_FAQS: FaqItem[] = [
   {
     question: "What are the signs I need to repipe my Spring Valley home?",
     answer:
       "The most common signs in Spring Valley homes include reduced water pressure throughout the home (a sign of galvanized pipe corrosion narrowing the pipe interior), discolored or rust-colored water from multiple fixtures, a metallic taste in the water, recurring leaks in different parts of the house, and visible signs of defective pipe materials such as gray polybutylene pipe or orange and blue Kitec pipes with brass fittings. For Spring Valley homes with original galvanized supply lines from the 1970s and 1980s, reduced pressure and water quality changes are often the earliest signs that the system is approaching end of life.",
+    category: "causes-signs",
   },
   {
     question: "How long does repiping take in Spring Valley?",
     answer:
       "Most Spring Valley single-story homes are repiped in one to two days. Two-story homes or homes with more complex layouts may take two to three days. Water is restored each evening on multi-day projects so your household is not without water overnight. The timeline also depends on the pipe material being replaced and the scope of the project, whether whole-house or partial.",
+    category: "timing-process",
   },
   {
     question: "Does repiping require a permit in Spring Valley?",
     answer:
       "Yes. Whole-house repiping in Spring Valley requires a permit through Clark County, which is the permit jurisdiction for Spring Valley as an unincorporated Clark County community. Red Carpet Plumbing pulls the required permit and schedules the inspection as part of every whole-house repipe project. Do not hire a contractor who offers to skip the permit process.",
+    category: "trust",
   },
   {
     question:
       "Is PEX pipe a good choice for Spring Valley hard water conditions?",
     answer:
       "Yes. PEX (cross-linked polyethylene) is the standard modern replacement material for residential repiping in the Las Vegas Valley, including Spring Valley. PEX is flexible, resistant to mineral scale buildup, and performs well in Las Vegas hard water conditions at 17 to 24 grains per gallon. One important installation requirement in Spring Valley: PEX pipe runs through attic spaces must be properly insulated because Las Vegas attic temperatures can exceed 150 degrees Fahrenheit. Red Carpet Plumbing installs PEX to current Clark County code including required attic insulation.",
+    category: "the-service",
   },
   {
     question: "Should I repair or repipe my Spring Valley home?",
     answer:
       "The answer depends on the pipe material and the extent of the problem. Spot repair is appropriate when a leak is isolated and the surrounding pipe is in good condition. For Spring Valley homes with original galvanized steel supply lines, a galvanized pipe failure is typically a sign of systemic corrosion throughout the remaining pipes, and a full repipe evaluation is warranted rather than relying on repeated spot repairs. For homes with polybutylene or Kitec supply lines, full replacement is the standard recommendation because these materials are defective throughout the system.",
+    category: "the-service",
   },
   {
     question:
       "What pipe material does Red Carpet Plumbing use to replace old pipes in Spring Valley?",
     answer:
       "Red Carpet Plumbing primarily uses PEX and Type L copper for residential repiping in Spring Valley. PEX is flexible, scale-resistant, and well-suited to Las Vegas hard water conditions, and is the most common replacement material for whole-house repipes. Copper is a proven, durable material that provides excellent water quality. The right choice for your Spring Valley home depends on your existing plumbing layout, household needs, and budget. We explain the options for each project before any work begins.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day repiping service in Spring Valley?",
     answer:
       "Same-day repiping service is available in Spring Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -91,9 +100,8 @@ const HERO_SUBHEADING =
   "Red Carpet Plumbing provides whole-house and partial repiping for homes and businesses in Spring Valley, Nevada. Spring Valley is one of the most densely populated unincorporated communities in the United States, and its established northern neighborhoods along the Desert Inn and West Sahara corridors contain some of the oldest residential plumbing in the Las Vegas Valley. Our licensed plumbers assess existing pipe conditions, explain material options, pull required Clark County permits, and complete repipe projects with minimal household disruption.";
 
 const HERO_TRUST_ITEMS = [
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8 stars, 76 Google reviews",
-  "NV Licensed #0048585A",
+  "4.8 stars, 81 Google reviews",
+  "NV Licensed #048585A",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
   "Transparent pricing, no hidden fees",
@@ -220,12 +228,11 @@ const WHY_CHOOSE = [
   "Clark County permits pulled and inspections scheduled on every whole-house repipe",
   "PEX installed to current Clark County code including required attic insulation for Las Vegas attic temperature conditions",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // Section 8 — coverage area chips (plain text only; no Spring Valley sub-area
@@ -298,6 +305,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -329,18 +344,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SV_REPIPE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SV_REPIPE_FAQS);
 
 export default function SpringValleyRePipingPage() {
   return (
@@ -694,31 +698,11 @@ export default function SpringValleyRePipingPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Repiping FAQs for Spring Valley Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SV_REPIPE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Repiping FAQs for Spring Valley Homeowners</>}
+          faqs={SV_REPIPE_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -757,21 +741,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

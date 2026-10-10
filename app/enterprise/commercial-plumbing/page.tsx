@@ -9,10 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — rating (4.8 stars / 76 Google reviews)
-// and "Over 40 years" trust claims are source-site claims shown on this page.
-// License #0048585A, C-1 classification, permit handling, and
+// FLAG: VERIFY before publishing — "Over 40 years" trust claims are source-site claims shown on this page.
+// License #048585A, C-1 classification, permit handling, and
 // transparent-pricing are also source-site claims. Confirm before launch.
 //
 // SCHEMA NOTE: Enterprise is an unincorporated Clark County community (not an
@@ -30,14 +31,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Commercial Plumbing in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Licensed commercial plumbing services in Enterprise, NV. Red Carpet Plumbing serves businesses, commercial parks, and property managers throughout the Southwest Las Vegas 215 Beltway corridor. NV Licensed #0048585A, C-1. Call (702) 567-9172.",
+    "Licensed commercial plumbing services in Enterprise, NV. Red Carpet Plumbing serves businesses, commercial parks, and property managers throughout the Southwest Las Vegas 215 Beltway corridor. NV Licensed #048585A, C-1. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/enterprise/commercial-plumbing/",
   },
   openGraph: {
     title: "Commercial Plumbing in Enterprise, NV | Red Carpet Plumbing",
     description:
-      "Licensed commercial plumbing for Enterprise businesses, commercial parks, warehouses, and property managers. Southwest Las Vegas 215 Beltway corridor. NV Licensed #0048585A, C-1 Plumbing and Heating.",
+      "Licensed commercial plumbing for Enterprise businesses, commercial parks, warehouses, and property managers. Southwest Las Vegas 215 Beltway corridor. NV Licensed #048585A, C-1 Plumbing and Heating.",
     url: "https://redcarpetplumbing.com/enterprise/commercial-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -51,58 +52,64 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const ENTERPRISE_COMMERCIAL_FAQS = [
+const ENTERPRISE_COMMERCIAL_FAQS: FaqItem[] = [
   {
     question:
       "Is Red Carpet Plumbing licensed for commercial plumbing in Enterprise?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers commercial plumbing work throughout Clark County including Enterprise.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers commercial plumbing work throughout Clark County including Enterprise.",
+    category: "trust",
   },
   {
     question:
       "What commercial plumbing services does Red Carpet Plumbing provide in Enterprise?",
     answer:
       "Red Carpet Plumbing provides commercial water heater repair and installation, commercial drain cleaning, backflow prevention testing and certification, supply line repair and replacement, permit-required commercial plumbing work, and commercial emergency plumbing support for businesses throughout Enterprise and the 215 Beltway corridor.",
+    category: "the-service",
   },
   {
     question:
       "What types of commercial properties does Red Carpet Plumbing serve in Enterprise?",
     answer:
       "Red Carpet Plumbing serves warehouse and distribution facilities, retail and restaurant properties, office and commercial parks, multi-unit residential and HOA properties, and light industrial properties throughout Enterprise and the Southwest Las Vegas 215 Beltway corridor.",
+    category: "service-area",
   },
   {
     question:
       "Who is the permit authority for commercial plumbing work in Enterprise?",
     answer:
       "Enterprise is an unincorporated Clark County community. The permit authority for commercial plumbing work in Enterprise is Clark County, not the City of Las Vegas. Red Carpet Plumbing files permits with Clark County Building Department and coordinates final inspections for commercial projects that require permits.",
+    category: "trust",
   },
   {
     question:
       "How often do commercial backflow prevention devices need to be tested in Enterprise?",
     answer:
       "Clark County requires annual testing of commercial backflow prevention devices by a licensed plumber. Red Carpet Plumbing provides backflow prevention device testing, certification, and replacement for commercial properties in Enterprise.",
+    category: "timing-process",
   },
   {
     question: "How do I request commercial plumbing service in Enterprise?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online. For commercial plumbing emergencies in Enterprise, calling directly is the fastest option.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day commercial plumbing service in Enterprise?",
     answer:
       "Same-day commercial plumbing service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides licensed commercial plumbing services for businesses, commercial parks, warehouse and distribution facilities, retail properties, and multi-unit residential buildings throughout Enterprise, Nevada and the Southwest Las Vegas 215 Beltway corridor. Nevada Contractor License #0048585A, C-1 Plumbing and Heating classification.";
+  "Red Carpet Plumbing provides licensed commercial plumbing services for businesses, commercial parks, warehouse and distribution facilities, retail properties, and multi-unit residential buildings throughout Enterprise, Nevada and the Southwest Las Vegas 215 Beltway corridor. Nevada Contractor License #048585A, C-1 Plumbing and Heating classification.";
 
 const TRUST_STRIP_ITEMS = [
-  "NV Licensed #0048585A, C-1 Plumbing and Heating",
+  "NV Licensed #048585A, C-1 Plumbing and Heating",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 Years Serving Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-Star Rating, 76 Google Reviews",
+  "4.8-Star Rating, 81 Google Reviews",
   "Clark County Permits and Inspections",
   "Transparent Pricing, No Hidden Fees",
 ];
@@ -197,12 +204,11 @@ const COMMERCIAL_STEPS = [
 
 // Section 6 — why choose (bulleted list). FLAGged items per brief.
 const WHY_CHOOSE_ITEMS = [
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
   "Clark County permits filed and inspections coordinated",
   "Transparent pricing, no hidden fees",
   // FLAG: source-site claim — verify before final launch.
@@ -243,7 +249,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Commercial Plumbing in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Licensed commercial plumbing services in Enterprise, NV. Red Carpet Plumbing serves businesses, commercial parks, and property managers throughout the Southwest Las Vegas 215 Beltway corridor. NV Licensed #0048585A, C-1.",
+    "Licensed commercial plumbing services in Enterprise, NV. Red Carpet Plumbing serves businesses, commercial parks, and property managers throughout the Southwest Las Vegas 215 Beltway corridor. NV Licensed #048585A, C-1.",
   url: "https://redcarpetplumbing.com/enterprise/commercial-plumbing/",
   isPartOf: {
     "@type": "WebSite",
@@ -290,6 +296,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -321,18 +335,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ENTERPRISE_COMMERCIAL_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ENTERPRISE_COMMERCIAL_FAQS);
 
 export default function EnterpriseCommercialPlumbingPage() {
   return (
@@ -401,7 +404,7 @@ export default function EnterpriseCommercialPlumbingPage() {
                   commercial plumbing services.
                 </p>
                 <p>
-                  Red Carpet Plumbing holds Nevada Contractor License #0048585A
+                  Red Carpet Plumbing holds Nevada Contractor License #048585A
                   under the C-1 Plumbing and Heating classification, which covers
                   commercial plumbing work throughout Clark County including
                   Enterprise. We provide plumbing services for businesses,
@@ -559,7 +562,7 @@ export default function EnterpriseCommercialPlumbingPage() {
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Enterprise and the Southwest Las Vegas area. We hold
-                Nevada Contractor License #0048585A under the C-1 Plumbing and
+                Nevada Contractor License #048585A under the C-1 Plumbing and
                 Heating classification, covering residential and commercial
                 plumbing work throughout Clark County including Enterprise.
               </p>
@@ -654,31 +657,11 @@ export default function EnterpriseCommercialPlumbingPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Commercial Plumbing FAQs for Enterprise Businesses
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ENTERPRISE_COMMERCIAL_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Commercial Plumbing FAQs for Enterprise Businesses</>}
+          faqs={ENTERPRISE_COMMERCIAL_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 9: FINAL CTA */}
         <CTASection
@@ -721,21 +704,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

@@ -10,11 +10,13 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
+// FLAG: VERIFY before publishing —
 // "Over 40 years," and "24/7 emergency service" trust claims are source-site
 // claims surfaced in the approved brief and shown on this page. License
-// #0048585A, transparent-pricing, and Clark County code-compliance are also
+// #048585A, transparent-pricing, and Clark County code-compliance are also
 // source-site claims. Confirm all before final launch.
 // FLAG: VERIFY gas line scope before publishing (gas water heater service item).
 // Schema follows the established site-wide service-location pattern (Plumber
@@ -59,43 +61,50 @@ export const metadata: Metadata = {
 // derive from this single array — character-for-character match guaranteed.
 // Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const GV_WH_FAQS = [
+const GV_WH_FAQS: FaqItem[] = [
   {
     question: "How long do water heaters last in Green Valley?",
     answer:
       "In Green Valley, tank water heaters typically last 8 to 12 years, often shorter than the national average due to Las Vegas Valley hard water. Hard water causes faster sediment buildup and accelerated anode rod depletion, both of which shorten tank life. Original Green Valley homes with plumbing systems 30 to 45 years old have often cycled through multiple water heaters under these hard water conditions. Tankless water heaters generally last 15 to 20 years but require annual descaling to remove mineral deposits from the heat exchanger.",
+    category: "timing-process",
   },
   {
     question: "Do Green Valley homes have more water heater problems?",
     answer:
       "Yes. Green Valley's original neighborhoods, built from the late 1970s through the mid-1990s, have plumbing systems that have operated under Las Vegas Valley hard water conditions for 30 to 45 years. This sustained mineral exposure depletes anode rods faster, accumulates more sediment, and puts more cumulative stress on water heater systems than in newer construction. Original Green Valley homeowners are among the most common Henderson water heater service calls. Green Valley Ranch homes built from the mid-1990s through mid-2000s are also entering the second replacement cycle as original or first-replacement units reach or pass the 8 to 12 year Las Vegas service life.",
+    category: "the-service",
   },
   {
     question: "Should I repair or replace my Green Valley water heater?",
     answer:
       "For water heaters under 8 years old with repairable components, repair is usually the right choice. For units 10 years or older, units with visible tank corrosion, or units leaking from the tank body, replacement typically makes more financial sense than continued repairs. Red Carpet Plumbing provides an honest assessment of both options before recommending a course of action.",
+    category: "the-service",
   },
   {
     question: "Is a tankless water heater worth it in Green Valley?",
     answer:
       "Tankless water heaters offer longer service life, no standby heat loss, and continuous hot water on demand. In Green Valley, they require annual descaling to remove hard water mineral deposits from the heat exchanger. For original Green Valley homes where aging tank units are a recurring issue, or for households with high hot water demand, a tankless unit is often a sound long-term investment.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing serve Green Valley Ranch for water heater service?",
     answer:
       "Yes. Red Carpet Plumbing provides water heater repair and installation throughout Green Valley, including Green Valley Ranch, as well as the surrounding Henderson communities. Green Valley is part of the incorporated City of Henderson, and we serve all Green Valley neighborhoods.",
+    category: "service-area",
   },
   {
     question:
       "What is a thermal expansion tank and does my Green Valley home need one?",
     answer:
       "A thermal expansion tank absorbs the pressure created when a water heater heats water in a closed-loop plumbing system. Most Green Valley homes operate on a closed-loop system due to backflow preventers at the street meter. Clark County plumbing code and most manufacturer warranties require a thermal expansion tank on closed-loop water heater installations. If your water heater was installed without one, Red Carpet Plumbing can add it.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day water heater repair service in Green Valley?",
     answer:
       "Same-day water heater repair service is available in Green Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -180,7 +189,7 @@ const GV_WH_SERVICES: {
   },
   {
     label: "Gas and electric water heater service",
-    body: "We service both gas and electric water heaters, including pilot light issues, thermocouple failures, heating element replacement, and gas valve repairs. All gas work is performed under NV License #0048585A.",
+    body: "We service both gas and electric water heaters, including pilot light issues, thermocouple failures, heating element replacement, and gas valve repairs. All gas work is performed under NV License #048585A.",
     // FLAG: VERIFY gas line scope before publishing.
     flag: "FLAG: VERIFY gas line scope before publishing",
   },
@@ -269,9 +278,9 @@ const GV_COMMUNITIES: { name: string; href?: string }[] = [
 // Hero trust strip. FLAG comments retained per established sibling pattern.
 const HERO_TRUST_ITEMS = [
   // FLAG: verify before publishing.
-  "4.8 stars, 76 Google reviews",
+  "4.8 stars, 81 Google reviews",
   // FLAG: verify before final launch.
-  "NV Licensed Plumbers, #0048585A",
+  "NV Licensed Plumbers, #048585A",
   // FLAG: verify before publishing.
   "Over 40 years serving the Las Vegas Valley",
   "Installed to Clark County Code",
@@ -329,13 +338,21 @@ const serviceSchema = {
   name: "Water Heater Repair and Installation in Green Valley",
   serviceType: "Water Heater Repair and Installation",
   description:
-    "Red Carpet Plumbing repairs and installs water heaters for homes and businesses in Green Valley, Henderson, NV. Tank water heater repair and replacement, tankless water heater installation, flush and maintenance, anode rod replacement, and thermal expansion tank installation. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing repairs and installs water heaters for homes and businesses in Green Valley, Henderson, NV. Tank water heater repair and replacement, tankless water heater installation, flush and maintenance, anode rod replacement, and thermal expansion tank installation. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -367,18 +384,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: GV_WH_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(GV_WH_FAQS);
 
 export default function GreenValleyWaterHeaterPage() {
   return (
@@ -814,31 +820,11 @@ export default function GreenValleyWaterHeaterPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Water Heater FAQs for Green Valley Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {GV_WH_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Water Heater FAQs for Green Valley Homeowners</>}
+          faqs={GV_WH_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -863,20 +849,5 @@ export default function GreenValleyWaterHeaterPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

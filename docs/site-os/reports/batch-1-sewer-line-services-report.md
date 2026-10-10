@@ -78,7 +78,7 @@ Schema: five blocks per page (WebPage, BreadcrumbList, Service, HowTo, FAQPage),
       visible breadcrumb = ["Home","Summerlin Plumbing Services","Sewer Line Services in Summerlin"]
       WebPage = {"name":"Sewer Line Services in Summerlin, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/summerlin/sewer-line-services/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Sewer Line Services in Summerlin, NV | Red Carpet Plumbing"
-      description="Sewer line inspection, cleaning, repair, and replacement in Summerlin, NV. Camera inspections and trenchless options. NV #0048585A. Call (702) 567-9172."
+      description="Sewer line inspection, cleaning, repair, and replacement in Summerlin, NV. Camera inspections and trenchless options. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/summerlin/sewer-line-services/
       og:title="Sewer Line Services in Summerlin, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/summerlin/sewer-line-services/ robots=index, follow
   [9] hrefs (33):
@@ -135,7 +135,7 @@ Schema: five blocks per page (WebPage, BreadcrumbList, Service, HowTo, FAQPage),
       visible breadcrumb = ["Home","Spring Valley Plumbing Services","Sewer Line Services in Spring Valley"]
       WebPage = {"name":"Sewer Line Services in Spring Valley, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/spring-valley/sewer-line-services/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Sewer Line Services in Spring Valley, NV | Red Carpet Plumbing"
-      description="Sewer line inspection, cleaning, repair, and replacement in Spring Valley, NV. Camera inspections and trenchless options. NV #0048585A. Call (702) 567-9172."
+      description="Sewer line inspection, cleaning, repair, and replacement in Spring Valley, NV. Camera inspections and trenchless options. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/spring-valley/sewer-line-services/
       og:title="Sewer Line Services in Spring Valley, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/spring-valley/sewer-line-services/ robots=index, follow
   [9] hrefs (34):
@@ -193,7 +193,7 @@ Schema: five blocks per page (WebPage, BreadcrumbList, Service, HowTo, FAQPage),
       visible breadcrumb = ["Home","Enterprise Plumbing Services","Sewer Line Services in Enterprise"]
       WebPage = {"name":"Sewer Line Services in Enterprise, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/enterprise/sewer-line-services/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Sewer Line Services in Enterprise, NV | Red Carpet Plumbing"
-      description="Sewer line inspection, cleaning, repair, and replacement in Enterprise, NV. Camera inspections and trenchless options. NV #0048585A. Call (702) 567-9172."
+      description="Sewer line inspection, cleaning, repair, and replacement in Enterprise, NV. Camera inspections and trenchless options. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/enterprise/sewer-line-services/
       og:title="Sewer Line Services in Enterprise, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/enterprise/sewer-line-services/ robots=index, follow
   [9] hrefs (34):
@@ -251,7 +251,7 @@ Schema: five blocks per page (WebPage, BreadcrumbList, Service, HowTo, FAQPage),
       visible breadcrumb = ["Home","Paradise Plumbing Services","Sewer Line Services in Paradise, NV"]
       WebPage = {"name":"Sewer Line Services in Paradise, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/paradise/sewer-line-services/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Sewer Line Services in Paradise, NV | Red Carpet Plumbing"
-      description="Sewer line inspection, cleaning, repair, and replacement in Paradise, NV. Camera inspections and trenchless options. NV #0048585A. Call (702) 567-9172."
+      description="Sewer line inspection, cleaning, repair, and replacement in Paradise, NV. Camera inspections and trenchless options. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/paradise/sewer-line-services/
       og:title="Sewer Line Services in Paradise, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/paradise/sewer-line-services/ robots=index, follow
   [9] hrefs (33):

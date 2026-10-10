@@ -10,8 +10,10 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, transparent-pricing,
+// FLAG: VERIFY before publishing — license #048585A, transparent-pricing,
 // gas-line scope, commercial scope, and any rating/24-7/40-year claims are
 // source-site/project claims. This page uses the conservative wording from the
 // approved brief and does NOT assert rating, review count, or "40 years" here.
@@ -45,41 +47,48 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const LV_LEAK_FAQS = [
+const LV_LEAK_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a hidden water leak in a Las Vegas home?",
     answer:
       "The most common signs are an unexplained increase in your water bill, the sound of running water when all fixtures are off, warm or wet spots on floors or walls, discoloration or bubbling paint, a persistent musty odor, reduced water pressure, and unexplained cracks in walls or flooring. In Las Vegas, hidden leaks are especially common in older homes due to hard water pipe corrosion and desert soil movement.",
+    category: "causes-signs",
   },
   {
     question: "How do I check if I have a water leak using my meter?",
     answer:
       "Turn off every water fixture and appliance in the home. Find your water meter near the street in a ground-level box and check whether the dial or digital display is still moving. If the meter continues to advance with all water off, water is being used somewhere in your system. Call a plumber for a professional inspection to locate the source.",
+    category: "the-service",
   },
   {
     question: "What causes hidden leaks in Las Vegas homes?",
     answer:
       "The most common causes in Las Vegas are hard water mineral corrosion inside copper and galvanized pipes, desert soil movement that stresses underground pipes and slab connections, aging plumbing in homes built before 2000, and tree root intrusion into underground sewer lines. Las Vegas pipes develop leaks faster than in most cities due to the valley's extremely hard water.",
+    category: "causes-signs",
   },
   {
     question: "How does non-invasive leak detection work?",
     answer:
       "Non-invasive leak detection uses acoustic sensors to listen for the sound of pressurized water escaping from pipes through walls, floors, and underground. Electronic detection equipment amplifies these sounds to pinpoint the leak location within a few inches without opening large sections of the home. Thermal imaging can also identify temperature differences caused by water escaping from hot water lines.",
+    category: "the-service",
   },
   {
     question: "Can a small hidden leak really cause serious damage?",
     answer:
       "Yes. A small hidden leak inside a wall can cause significant mold growth within 24 to 48 hours and can damage wood framing, drywall, insulation, and flooring over weeks and months without any visible sign. A slab leak can erode soil beneath the foundation and cause concrete cracking. Even a slow drip from an underground supply line can waste hundreds of gallons per month and create saturated soil conditions that affect the foundation.",
+    category: "causes-signs",
   },
   {
     question: "What is the difference between a slab leak and a wall leak?",
     answer:
       "A slab leak is a leak in water or sewer pipes running beneath the concrete foundation of a home. Signs include warm spots on floors, running water sounds when fixtures are off, and unexplained water bill increases. A wall leak is a leak inside the wall cavity from supply lines, drain lines, or connections behind finished surfaces. Signs include damp spots, discoloration, bubbling paint, and musty odors. Both require professional detection equipment to locate precisely.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day leak detection service in Las Vegas?",
     answer:
       "Same-day leak detection service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -150,7 +159,7 @@ const LV_LEAK_SERVICES: {
   },
   {
     label: "Gas line leak detection",
-    body: "If you smell gas, leave the building immediately and call your gas utility. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under NV License #0048585A.",
+    body: "If you smell gas, leave the building immediately and call your gas utility. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under NV License #048585A.",
   },
   {
     label: "Water supply line repair",
@@ -190,7 +199,7 @@ const LEAK_STEPS = [
 const WHY_CHOOSE = [
   "Local Las Vegas plumbing company with extensive experience locating hidden leaks caused by hard water corrosion and desert soil conditions",
   "Non-invasive detection equipment that locates leaks precisely without unnecessary demolition",
-  "Licensed plumbers (NV License #0048585A)",
+  "Licensed plumbers (NV License #048585A)",
   "Transparent pricing with no hidden fees",
   "Residential and commercial leak detection throughout Las Vegas",
 ];
@@ -307,18 +316,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LV_LEAK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LV_LEAK_FAQS);
 
 export default function LasVegasLeakDetectionPage() {
   return (
@@ -351,7 +349,7 @@ export default function LasVegasLeakDetectionPage() {
           }
           subheading="Red Carpet Plumbing provides professional leak detection and repair for homes and businesses throughout Las Vegas, NV. Las Vegas hard water is among the most corrosive in the country, and hidden leaks are more common here than in most cities. Our licensed plumbers use acoustic sensors, electronic detection equipment, and thermal imaging to locate hidden leaks precisely, without unnecessary demolition. Call (702) 567-9172 to schedule service."
           trustItems={[
-            "NV Licensed Plumbers, #0048585A",
+            "NV Licensed Plumbers, #048585A",
             "Non-Invasive Leak Detection Equipment",
             "Serving the Las Vegas Valley",
             "Transparent Pricing, No Hidden Fees",
@@ -671,31 +669,11 @@ export default function LasVegasLeakDetectionPage() {
         </section>
 
         {/* SECTION 12: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Leak Detection FAQs for Las Vegas Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LV_LEAK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Leak Detection FAQs for Las Vegas Homeowners</>}
+          faqs={LV_LEAK_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 13: FINAL CTA */}
         <CTASection
@@ -734,21 +712,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

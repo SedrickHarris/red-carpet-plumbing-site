@@ -11,10 +11,12 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing. "emergency plumbing service available" and
 // "transparent pricing, no hidden fees" are source-site claims. License
-// #0048585A is a verified business claim. Telephone +17025679172 is carried
+// #048585A is a verified business claim. Telephone +17025679172 is carried
 // from existing pages. VERIFY before launch.
 // SCHEMA NOTE: North Las Vegas is an incorporated city.
 // Service.areaServed uses City (North Las Vegas) -> State (Nevada).
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
 };
 
 const NLV_SLAB_TRUST = [
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
   "Non-Invasive Slab Leak Detection",
   "All Repair Options Explained",
   "Serving North Las Vegas and the Las Vegas Valley",
@@ -215,53 +217,62 @@ const NLV_SLAB_RELATED = [
   },
 ];
 
-const NLV_SLAB_FAQS = [
+const NLV_SLAB_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve North Las Vegas for slab leak detection and repair?",
     answer:
       "Yes. Red Carpet Plumbing provides slab leak detection and repair throughout North Las Vegas, NV, including older central neighborhoods, the Aliante area, and the Craig Road and Cheyenne Avenue corridors. Call (702) 567-9172 to schedule service.",
+    category: "service-area",
   },
   {
     question: "What causes slab leaks in North Las Vegas homes?",
     answer:
       "The most common causes in North Las Vegas are hard water mineral corrosion and caliche soil movement. Homes in central and southern North Las Vegas built from the 1960s through the 1980s often still have original galvanized steel supply lines, which corrode from the inside out under hard water conditions. Aliante-area homes built between 2000 and 2008 have copper lines now entering their first service cycle. Las Vegas Valley water from Lake Mead measures 17 to 24 grains per gallon, which accelerates pipe wall thinning in both materials.",
+    category: "causes-signs",
   },
   {
     question: "How is a slab leak detected without tearing up the floor?",
     answer:
       "Red Carpet Plumbing uses acoustic sensors, pressure testing, and thermal imaging to locate slab leaks without cutting concrete. Acoustic sensors amplify the sound of pressurized water escaping through a pipe breach. Pressure testing confirms which line is losing pressure. Thermal imaging identifies hot water line leaks by detecting temperature differences on the floor surface above the breach. These methods allow us to pinpoint the leak location before any repair work begins.",
+    category: "the-service",
   },
   {
     question: "What are my repair options for a slab leak in North Las Vegas?",
     answer:
       "The three main repair options are spot repair through concrete, pipe rerouting above the slab, and epoxy pipe lining. Spot repair is appropriate for an isolated leak in a pipe that is otherwise in good condition. Pipe rerouting bypasses the damaged section entirely and is often the better long-term solution for older North Las Vegas homes with galvanized lines corroded throughout. Epoxy lining seals the interior of the existing pipe without excavation. Red Carpet Plumbing explains all options before any work begins.",
+    category: "the-service",
   },
   {
     question: "Are older North Las Vegas homes at higher risk for slab leaks?",
     answer:
       "Yes. Homes in central and southern North Las Vegas built from the 1960s through the 1980s with original galvanized steel supply lines are at elevated slab leak risk. Galvanized pipe corrodes from the inside out under Las Vegas Valley hard water, thinning pipe walls over decades until failure points develop at joints and fittings beneath the slab. Aliante-area homes built between 2000 and 2008 with copper lines are entering the age range where first-service-cycle slab leaks begin appearing.",
+    category: "the-service",
   },
   {
     question: "Is there an emergency slab leak plumber available in North Las Vegas?",
     // FLAG: VERIFY 24/7 availability before final launch.
     answer:
       "Red Carpet Plumbing provides emergency plumbing service for North Las Vegas including slab leak response. Call (702) 567-9172 to reach a plumber.",
+    category: "emergency",
   },
   {
     question: "Who issues plumbing permits for slab leak repairs in North Las Vegas?",
     answer:
-      "Plumbing permits for North Las Vegas properties, including slab leak repair work, are issued by the City of North Las Vegas. Red Carpet Plumbing holds Nevada Contractor License #0048585A and handles permit filing with the City of North Las Vegas for permitted repair work.",
+      "Plumbing permits for North Las Vegas properties, including slab leak repair work, are issued by the City of North Las Vegas. Red Carpet Plumbing holds Nevada Contractor License #048585A and handles permit filing with the City of North Las Vegas for permitted repair work.",
+    category: "trust",
   },
   {
     question: "How much does slab leak repair cost in North Las Vegas?",
     // FLAG: VERIFY transparent pricing claim before final launch.
     answer:
       "Slab leak repair costs vary based on the location of the leak, the pipe material, the repair method selected, and the extent of concrete work required. Red Carpet Plumbing provides transparent pricing after detection and before any repair work begins. Call (702) 567-9172 for more information.",
+    category: "cost",
   },
   {
     question: "Do you offer same-day slab leak repair service in North Las Vegas?",
     answer:
       "Same-day slab leak repair service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -270,7 +281,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Slab Leak Detection and Repair in North Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides non-invasive slab leak detection and repair for homes in North Las Vegas, NV. Acoustic sensors, pressure testing, and thermal imaging. Galvanized pipe and copper line expertise. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides non-invasive slab leak detection and repair for homes in North Las Vegas, NV. Acoustic sensors, pressure testing, and thermal imaging. Galvanized pipe and copper line expertise. Nevada Contractor License #048585A.",
   url: "https://redcarpetplumbing.com/north-las-vegas/slab-leak-detection-repair/",
   isPartOf: {
     "@type": "WebSite",
@@ -295,7 +306,7 @@ const serviceSchema = {
   name: "Slab Leak Detection and Repair in North Las Vegas, NV",
   serviceType: "Slab Leak Detection and Repair",
   description:
-    "Red Carpet Plumbing provides non-invasive slab leak detection and repair for homes in North Las Vegas, NV. Acoustic sensors, pressure testing, and thermal imaging locate leaks without demolition. Repair options include spot repair, pipe rerouting, and epoxy pipe lining. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides non-invasive slab leak detection and repair for homes in North Las Vegas, NV. Acoustic sensors, pressure testing, and thermal imaging locate leaks without demolition. Repair options include spot repair, pipe rerouting, and epoxy pipe lining. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -327,15 +338,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: NLV_SLAB_FAQS.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
-};
+const faqSchema = buildFaqPageSchema(NLV_SLAB_FAQS);
 
 export default function NorthLasVegasSlabLeakPage() {
   return (
@@ -702,31 +705,11 @@ export default function NorthLasVegasSlabLeakPage() {
         </section>
 
         {/* SECTION 12: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Slab Leak Questions for North Las Vegas Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {NLV_SLAB_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Slab Leak Questions for North Las Vegas Homeowners</>}
+          faqs={NLV_SLAB_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 13: FINAL CTA */}
         <CTASection
@@ -740,21 +723,5 @@ export default function NorthLasVegasSlabLeakPage() {
       <StickyMobileCTA />
       <SiteFooter />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={2}
-      stroke="currentColor"
-      className="h-5 w-5 flex-none transition-transform duration-200 group-open:rotate-180"
-      aria-hidden="true"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-    </svg>
   );
 }

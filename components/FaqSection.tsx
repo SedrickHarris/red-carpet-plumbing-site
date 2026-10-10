@@ -2,8 +2,10 @@
 
 import { useMemo, useState } from "react";
 import type { ReactNode } from "react";
+import Link from "next/link";
 import {
   FAQ_CATEGORIES,
+  MIN_PILL_CATEGORIES,
   orderFaqs,
   qualifyingCategories,
   type FaqCategoryId,
@@ -42,7 +44,7 @@ export function FaqSection({
     }));
   }, [faqs]);
 
-  const showPills = presentCategories.length >= 3;
+  const showPills = presentCategories.length >= MIN_PILL_CATEGORIES;
 
   // When pills are not shown, force the "all" view regardless of state.
   const effectiveCategory: PillFilter = showPills ? activeCategory : "all";
@@ -59,7 +61,7 @@ export function FaqSection({
 
   const sectionBg = surface === "light" ? "bg-white" : "bg-brand-surface-alt";
   const cardBg = surface === "light" ? "bg-brand-surface-alt" : "bg-white";
-  const container = showPills ? "max-w-4xl" : "max-w-3xl";
+  const container = showPills ? "max-w-4xl" : "max-w-5xl";
   const inactivePill =
     surface === "light"
       ? "bg-brand-surface-alt text-brand-dark/80 ring-1 ring-brand-surface-alt hover:text-brand-dark hover:ring-brand-dark/20"
@@ -110,7 +112,13 @@ export function FaqSection({
           </>
         ) : null}
 
-        <div className="mt-12 space-y-4">
+        <div
+          className={
+            showPills
+              ? "mt-12 space-y-4"
+              : "mt-12 grid items-start gap-4 md:grid-cols-2"
+          }
+        >
           {orderedFaqs.map((faq) => {
             const isHidden =
               effectiveCategory !== "all" && faq.category !== effectiveCategory;
@@ -126,7 +134,7 @@ export function FaqSection({
                   <FaqChevron />
                 </summary>
                 <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                  {faq.answer}
+                  <FaqAnswer faq={faq} />
                 </p>
               </details>
             );
@@ -171,5 +179,26 @@ function FaqChevron() {
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
+  );
+}
+
+// Renders the answer, optionally wrapping one phrase in an internal link. The output is
+// built by slicing faq.answer, so the visible text always equals the FAQPage schema text.
+// If the phrase is not found the answer renders as plain text rather than dropping content.
+function FaqAnswer({ faq }: { faq: FaqItem }) {
+  if (!faq.link) return <>{faq.answer}</>;
+  const start = faq.answer.indexOf(faq.link.phrase);
+  if (start === -1) return <>{faq.answer}</>;
+  return (
+    <>
+      {faq.answer.slice(0, start)}
+      <Link
+        href={faq.link.href}
+        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
+      >
+        {faq.link.phrase}
+      </Link>
+      {faq.answer.slice(start + faq.link.phrase.length)}
+    </>
   );
 }

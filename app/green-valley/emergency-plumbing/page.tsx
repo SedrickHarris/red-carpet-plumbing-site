@@ -11,10 +11,12 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing. "emergency plumbing service available" and
 // "transparent pricing, no hidden fees" are source-site claims shown on this
-// page. License #0048585A is a verified business claim. Gas line scope (FLAG:
+// page. License #048585A is a verified business claim. Gas line scope (FLAG:
 // verify gas line scope before publishing) is carried forward from sibling
 // emergency pages. 24/7 availability (FLAG: verify before final launch) is
 // present in FAQ Q4 answer.
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
 
 // Hero trust strip
 const GV_EMERGENCY_TRUST = [
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
   // FLAG: source-site claim -- verify before final launch.
   "Emergency plumbing service available",
   // FLAG: source-site claim -- verify before final launch.
@@ -201,52 +203,61 @@ const GV_EMERGENCY_RELATED = [
 ];
 
 // FAQs -- FAQPage schema source of truth
-const GV_EMERGENCY_FAQS = [
+const GV_EMERGENCY_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing serve Green Valley for emergency plumbing?",
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service in Green Valley as part of its Henderson, NV service area. Green Valley is a master-planned community within the incorporated City of Henderson. Call (702) 567-9172 for emergency response.",
+    category: "service-area",
   },
   {
     question: "What should I do if a pipe bursts in my Green Valley home?",
     answer:
       "Shut off the water at the main supply valve as quickly as possible. In most Green Valley homes, the main shutoff valve is located in a ground-level box near the front of the property or near the water meter at the street. Once the water is off, call Red Carpet Plumbing at (702) 567-9172.",
+    category: "emergency",
   },
   {
     question: "Why are Green Valley homes at higher risk for plumbing emergencies?",
     answer:
       "Homes in original Green Valley neighborhoods, built from the late 1970s through the mid-1990s, have copper supply lines now 30 to 45 years old. Las Vegas Valley water from Lake Mead measures 17 to 24 grains per gallon. Over decades of mineral exposure, copper pipe walls thin, increasing the risk of burst pipes and slab leaks. Green Valley Ranch condos and HOA communities built between the mid-1990s and mid-2000s may also contain Kitec pipe, which can fail without warning.",
+    category: "causes-signs",
   },
   {
     question: "Is there a 24-hour plumber available in Green Valley?",
     // FLAG: VERIFY 24/7 availability before final launch.
     answer:
       "Red Carpet Plumbing provides emergency plumbing service for Green Valley and the Henderson area. Call (702) 567-9172 to reach a plumber.",
+    category: "emergency",
   },
   {
     question: "What is Kitec pipe and why is it a risk in Green Valley Ranch?",
     answer:
       "Kitec is a flexible pipe product manufactured with aluminum reinforcement and orange or blue plastic fittings that was used in residential construction from the mid-1990s through the mid-2000s. It was recalled due to premature failure of the brass fittings. Many Green Valley Ranch condos and HOA communities built during this period were plumbed with Kitec. A Kitec pipe failure is a sudden emergency that can cause significant water damage inside walls or beneath the slab.",
+    category: "causes-signs",
   },
   {
     question: "Who issues plumbing permits for emergency repairs in Green Valley?",
     answer:
-      "Plumbing permits for Green Valley properties are issued by the City of Henderson, which is the governing jurisdiction for the Green Valley community. Red Carpet Plumbing holds Nevada Contractor License #0048585A and handles permit filing with the City of Henderson for permitted repair work.",
+      "Plumbing permits for Green Valley properties are issued by the City of Henderson, which is the governing jurisdiction for the Green Valley community. Red Carpet Plumbing holds Nevada Contractor License #048585A and handles permit filing with the City of Henderson for permitted repair work.",
+    category: "emergency",
   },
   {
     question: "What counts as a plumbing emergency versus a non-urgent issue?",
     answer:
       "A plumbing emergency includes active water damage, loss of water supply, sewage backing up into the home, signs of a gas leak, water heater failure causing flooding, suspected slab leak with running water sounds or warm floor areas, or a Kitec pipe failure. Issues like a slow drain, a dripping faucet, or reduced water pressure can typically wait for a scheduled appointment.",
+    category: "emergency",
   },
   {
     question: "What areas near Green Valley does Red Carpet Plumbing serve?",
     answer:
       "Red Carpet Plumbing serves Green Valley as part of its Henderson, NV service area, which also includes Lake Las Vegas and the broader Henderson community. We also serve Las Vegas, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, and Boulder City throughout the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day emergency plumbing service in Green Valley?",
     answer:
       "Same-day emergency plumbing service is available in Green Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "emergency",
   },
 ];
 
@@ -295,7 +306,7 @@ const serviceSchema = {
   name: "Emergency Plumbing in Green Valley, Henderson, NV",
   serviceType: "Emergency Plumbing",
   description:
-    "Red Carpet Plumbing provides emergency plumbing service for homes in Green Valley, Henderson, NV. Burst pipes, slab leaks, Kitec pipe failures, sewer backups, water heater failures, and gas line emergencies handled by licensed plumbers. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides emergency plumbing service for homes in Green Valley, Henderson, NV. Burst pipes, slab leaks, Kitec pipe failures, sewer backups, water heater failures, and gas line emergencies handled by licensed plumbers. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -331,18 +342,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: GV_EMERGENCY_FAQS.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: f.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(GV_EMERGENCY_FAQS);
 
 export default function GreenValleyEmergencyPlumbingPage() {
   return (
@@ -656,31 +656,11 @@ export default function GreenValleyEmergencyPlumbingPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Emergency Plumbing Questions for Green Valley Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {GV_EMERGENCY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Emergency Plumbing Questions for Green Valley Homeowners</>}
+          faqs={GV_EMERGENCY_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -700,21 +680,5 @@ export default function GreenValleyEmergencyPlumbingPage() {
       <StickyMobileCTA />
       <SiteFooter />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={2}
-      stroke="currentColor"
-      className="h-5 w-5 flex-none transition-transform duration-200 group-open:rotate-180"
-      aria-hidden="true"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-    </svg>
   );
 }

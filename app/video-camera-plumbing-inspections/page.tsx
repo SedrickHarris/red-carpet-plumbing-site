@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,12 +11,14 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
     "Video Camera Plumbing Inspections in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing performs video camera plumbing inspections for homes and businesses throughout Las Vegas. Root intrusion, pipe bellies, blockages, and pre-purchase inspections. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing performs video camera plumbing inspections for homes and businesses throughout Las Vegas. Root intrusion, pipe bellies, blockages, and pre-purchase inspections. NV Licensed #048585A. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/video-camera-plumbing-inspections/",
@@ -24,57 +27,66 @@ export const metadata: Metadata = {
     title:
       "Video Camera Plumbing Inspections in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed video camera plumbing inspections throughout Las Vegas and the Las Vegas Valley. Root intrusion, pipe bellies, pre-purchase. NV #0048585A. 4.8 stars, 76 reviews.",
+      "Licensed video camera plumbing inspections throughout Las Vegas and the Las Vegas Valley. Root intrusion, pipe bellies, pre-purchase. NV #048585A. 4.8 stars, 81 reviews.",
   },
 };
 
-const CAMERA_FAQS = [
+const CAMERA_FAQS: FaqItem[] = [
   {
     question: "What does a sewer camera inspection show?",
     answer:
       "A sewer camera inspection shows the inside condition of your sewer line or drain pipe in real time. The camera can identify root intrusion from trees seeking moisture inside the pipe, pipe bellies or sags where waste collects and causes repeated clogs, offset or separated pipe joints from soil movement, cracked or collapsed pipe sections, hard water scale or grease buildup narrowing the line, and foreign object blockages. The footage provides a clear diagnosis before any repair decision is made.",
+    category: "the-service",
   },
   {
     question: "When do I need a video camera plumbing inspection?",
     answer:
       "A camera inspection is useful when drain cleaning does not fully resolve a recurring clog, when you want to confirm a drain line is clear after cleaning, when you are experiencing unexplained sewer odors or slow drains throughout the house, before buying a home to document the sewer line condition, when a plumber suspects root intrusion or pipe damage, or after a plumbing repair to confirm the work resolved the problem. In Las Vegas, where caliche soil and mature landscaping create specific pipe stress conditions, camera inspections are a practical diagnostic step for homes with older sewer lines.",
+    category: "timing-process",
   },
   {
     question: "How long does a sewer camera inspection take?",
     answer:
       "A standard sewer camera inspection typically takes thirty minutes to one hour for a single line, depending on the length of the line, the presence of obstructions, and the access point available. If a cleanout is not already installed, additional time may be needed to establish access. Red Carpet Plumbing can provide an accurate time estimate when you call to schedule.",
+    category: "timing-process",
   },
   {
     question: "Can a camera inspection find root intrusion?",
     answer:
       "Yes. Root intrusion is one of the most common findings in sewer camera inspections throughout Las Vegas. Desert trees including mesquite, olive, and some ornamental trees send roots into sewer lines seeking moisture, and those roots can partially or fully block the line over time. A camera inspection shows the location and extent of root intrusion so the plumber can recommend the appropriate clearing or repair approach.",
+    category: "the-service",
   },
   {
     question:
       "Should I get a sewer inspection before buying a home in Las Vegas?",
     answer:
       "Yes. A pre-purchase sewer camera inspection documents the condition of the sewer line before closing and can identify root intrusion, pipe belly, cracked sections, or offset joints that would otherwise be unknown. In Las Vegas, caliche soil movement and aging sewer infrastructure in neighborhoods built before the 1990s make sewer line condition a meaningful variable in home purchase decisions. The recorded footage can also support repair negotiations if problems are found.",
+    category: "the-service",
   },
   {
     question: "Does a sewer camera inspection require digging?",
     answer:
       "No. A video camera inspection is a non-invasive diagnostic process. The camera is inserted through an existing cleanout access point and fed through the pipe. No excavation is needed for the inspection itself. If a cleanout is not available, a plumber may need to install one to gain access. Clark County recommends two-way cleanouts for sewer line maintenance access, and one can be added as part of the inspection service if needed.",
+    category: "the-service",
   },
   {
     question: "What is a pipe belly and how does a camera find it?",
     answer:
       "A pipe belly is a section of sewer line that has sagged below the surrounding grade, creating a low point where waste and water collect instead of flowing through. In Las Vegas, caliche soil and uneven desert ground conditions contribute to pipe belly formation, particularly in older sewer lines. A camera inspection shows these low spots in real time, and the sonde locator can mark the surface position of the sag for targeted repair.",
+    category: "the-service",
   },
   {
     question:
       "What areas does Red Carpet Plumbing serve for video camera plumbing inspections?",
     answer:
       "Red Carpet Plumbing provides video camera plumbing inspections throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day camera inspection service in Las Vegas?",
     answer:
       "Same-day camera inspection service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -293,7 +305,7 @@ const serviceSchema = {
   name: "Video Camera Plumbing Inspections",
   serviceType: "Video Camera Plumbing Inspection",
   description:
-    "Red Carpet Plumbing performs video camera plumbing inspections for homes and businesses throughout the Las Vegas Valley, including sewer line camera inspection, drain line inspection, pre-purchase sewer inspection, root intrusion assessment, pipe belly detection, and post-cleaning confirmation. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing performs video camera plumbing inspections for homes and businesses throughout the Las Vegas Valley, including sewer line camera inspection, drain line inspection, pre-purchase sewer inspection, root intrusion assessment, pipe belly detection, and post-cleaning confirmation. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -303,17 +315,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -370,7 +383,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Video Camera Plumbing Inspections in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing performs video camera plumbing inspections for homes and businesses throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing performs video camera plumbing inspections for homes and businesses throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/video-camera-plumbing-inspections/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -391,18 +404,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: CAMERA_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(CAMERA_FAQS);
 
 export default function VideoCameraPlumbingInspectionsPage() {
   return (
@@ -431,8 +433,8 @@ export default function VideoCameraPlumbingInspectionsPage() {
           }
           subheading="Video camera inspection of sewer lines and drain pipes for homes and businesses throughout the Las Vegas Valley."
           trustItems={[
-            "Licensed Plumbers, NV #0048585A",
-            "4.8 Stars, 76 Google Reviews",
+            "Licensed Plumbers, NV #048585A",
+            "4.8 Stars, 81 Google Reviews",
             "Residential and Commercial Service",
             "Transparent Pricing, No Hidden Fees",
             "Over 40 Years in Las Vegas",
@@ -445,7 +447,7 @@ export default function VideoCameraPlumbingInspectionsPage() {
             label: "Request a Camera Inspection",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
+          ctaNote="NV Licensed #048585A | 4.8 Stars, 81 Reviews"
           formSlot={
             <QuoteFormPlaceholder title="Get a Camera Inspection Quote" />
           }
@@ -535,7 +537,11 @@ export default function VideoCameraPlumbingInspectionsPage() {
 
         {/* SECTION 5: WHY SEWER CAMERA INSPECTIONS MATTER IN LAS VEGAS */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-video-camera-drain-inspection-card.webp"
+              alt="Video inspection camera reel and monitor beside a drain cleanout"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -569,12 +575,17 @@ export default function VideoCameraPlumbingInspectionsPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: HOWTO PROCESS */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/sewer-line-services/red-carpet-plumbing-sewer-cleanout-inspection-las-vegas.webp"
+              alt="Inspection camera reel and tools at a cleanout beside a home"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -614,6 +625,7 @@ export default function VideoCameraPlumbingInspectionsPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -629,7 +641,7 @@ export default function VideoCameraPlumbingInspectionsPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing performs video camera plumbing
                   inspections for homes and businesses throughout the Las
-                  Vegas Valley. NV Contractor License #0048585A.
+                  Vegas Valley. NV Contractor License #048585A.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">
@@ -739,31 +751,11 @@ export default function VideoCameraPlumbingInspectionsPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Video Camera Inspection Questions Answered
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {CAMERA_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Video Camera Inspection Questions Answered</>}
+          faqs={CAMERA_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -798,20 +790,5 @@ export default function VideoCameraPlumbingInspectionsPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

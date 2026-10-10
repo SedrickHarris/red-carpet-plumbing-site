@@ -10,8 +10,10 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, emergency/24-7
+// FLAG: VERIFY before publishing — license #048585A, emergency/24-7
 // availability, transparent-pricing, and any rating/40-year claims are
 // source-site/project claims. This page uses the conservative wording from the
 // approved brief and does NOT assert rating, review count, or "40 years" here.
@@ -45,42 +47,49 @@ export const metadata: Metadata = {
 // FLAG: VERIFY — Q6 (transparent pricing) uses conservative wording per the
 // approved brief; confirm before any expansion.
 // ---------------------------------------------------------------------------
-const HENDERSON_DRAIN_FAQS = [
+const HENDERSON_DRAIN_FAQS: FaqItem[] = [
   {
     question: "Why do drains clog faster in Henderson homes?",
     answer:
       "Henderson receives the same hard water supply as the rest of the Las Vegas Valley, which leaves calcium and magnesium deposits inside pipe walls that narrow the pipe and trap grease and soap scum. In original Green Valley homes built from the mid-1980s through mid-1990s, these deposits have been accumulating for 30 to 40 years, making drain clog formation faster and more stubborn than in newer construction.",
+    category: "causes-signs",
   },
   {
     question: "Is hydro jetting safe for older Green Valley pipes?",
     answer:
       "It depends on the condition of the pipe. Hydro jetting is highly effective for clearing mineral scale and grease from lines in good condition. For older Green Valley copper or polybutylene pipes that may be thinned by years of hard water exposure, we assess pipe condition before recommending high-pressure methods. A video camera inspection can help determine whether hydro jetting is the right approach for a specific line.",
+    category: "the-service",
   },
   {
     question: "How do I know if I need professional drain cleaning in Henderson?",
     answer:
       "Call a plumber when multiple drains are slow at the same time, when you have a complete blockage, when drains produce sewage or sulfur odors, or when you hear gurgling sounds from toilets or other fixtures. Multiple affected drains usually indicate a main sewer line problem that requires professional clearing.",
+    category: "causes-signs",
   },
   {
     question: "How often should Henderson homeowners have their drains cleaned?",
     answer:
       "Most Henderson homeowners benefit from professional drain cleaning every one to two years. Homes in original Green Valley neighborhoods with older pipes and accumulated hard water mineral buildup may benefit from annual cleaning. Commercial properties with heavy drain use should be cleaned more frequently.",
+    category: "timing-process",
   },
   {
     question:
       "Does Red Carpet Plumbing serve Green Valley and Lake Las Vegas for drain cleaning?",
     answer:
       "Yes. Red Carpet Plumbing provides drain cleaning throughout Henderson, including Green Valley, Green Valley Ranch, and Lake Las Vegas.",
+    category: "service-area",
   },
   {
     question: "How much does drain cleaning cost in Henderson?",
     answer:
       "Drain cleaning costs vary based on the type of drain, the severity of the clog, and the method required. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
+    category: "cost",
   },
   {
     question: "Do you offer same-day drain cleaning service in Henderson?",
     answer:
       "Same-day drain cleaning service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -174,7 +183,7 @@ const DRAIN_STEPS = [
 // claims per the approved brief.
 const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with Henderson's housing stock and hard water conditions",
-  "Licensed plumbers (NV License #0048585A)",
+  "Licensed plumbers (NV License #048585A)",
   "Transparent pricing with no hidden fees",
   "Residential and commercial drain cleaning throughout Henderson",
   "Hydro jetting available for stubborn or recurring clogs where pipe condition allows",
@@ -292,18 +301,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: HENDERSON_DRAIN_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(HENDERSON_DRAIN_FAQS);
 
 export default function HendersonDrainCleaningPage() {
   return (
@@ -336,7 +334,7 @@ export default function HendersonDrainCleaningPage() {
           }
           subheading="Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout Henderson, NV, including Green Valley, Green Valley Ranch, and Lake Las Vegas. Whether you are dealing with a slow kitchen drain, a clogged bathroom sink, a blocked main sewer line, or recurring drain problems from hard water mineral buildup, our licensed plumbers clear drains completely. Call (702) 567-9172 to schedule service."
           trustItems={[
-            "NV Licensed Plumbers, #0048585A",
+            "NV Licensed Plumbers, #048585A",
             "Available for Emergency Drain Service",
             "Serving Henderson and the Las Vegas Valley",
             "Transparent Pricing, No Hidden Fees",
@@ -630,32 +628,11 @@ export default function HendersonDrainCleaningPage() {
         </section>
 
         {/* SECTION 11: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Drain Cleaning FAQs
-                <br className="hidden sm:block" /> for Henderson Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {HENDERSON_DRAIN_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Drain Cleaning FAQs <br className="hidden sm:block" /> for Henderson Homeowners</>}
+          faqs={HENDERSON_DRAIN_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 12: FINAL CTA */}
         <CTASection
@@ -694,21 +671,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

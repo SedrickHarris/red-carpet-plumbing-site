@@ -9,10 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — rating (4.8 stars / 76 Google reviews)
-// and "Over 40 years" trust claims are source-site claims shown on this page.
-// License #0048585A, permit handling, and transparent-pricing are also
+// FLAG: VERIFY before publishing — "Over 40 years" trust claims are source-site claims shown on this page.
+// License #048585A, permit handling, and transparent-pricing are also
 // source-site claims. Confirm before launch.
 //
 // SCHEMA NOTE: Boulder City IS an incorporated city (not an unincorporated
@@ -56,53 +57,60 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const BC_WH_FAQS = [
+const BC_WH_FAQS: FaqItem[] = [
   {
     question: "How long do water heaters last in Boulder City?",
     answer:
       "Tank water heaters in Boulder City typically last 8 to 12 years under Las Vegas Valley hard water conditions. The hard water from Lake Mead, which carries approximately 280 parts per million of dissolved minerals, accelerates sediment buildup and anode rod depletion, shortening service life compared to softer-water cities. Annual flushing and anode rod inspection can extend service life. Tankless water heaters can last 15 to 20 years with proper annual descaling.",
+    category: "timing-process",
   },
   {
     question: "What is an anode rod and why does it matter in Boulder City?",
     answer:
       "The anode rod is a sacrificial metal component inside every tank water heater designed to corrode in place of the steel tank, protecting it from internal rust. Boulder City hard water depletes anode rods significantly faster than the three to five year national average. A depleted anode rod can lead to rapid internal tank corrosion within one to two years. Red Carpet Plumbing recommends annual anode rod inspection for Boulder City water heaters.",
+    category: "causes-signs",
   },
   {
     question:
       "What is a thermal expansion tank and do I need one in Boulder City?",
     answer:
       "A thermal expansion tank absorbs the pressure that builds up when heated water expands inside a closed-loop plumbing system. Most Boulder City homes operate on a closed-loop system due to backflow preventers at the street meter. Boulder City plumbing code and most manufacturer warranties require a thermal expansion tank on closed-loop water heater installations. If your water heater was installed without one, Red Carpet Plumbing can add it.",
+    category: "the-service",
   },
   {
     question:
       "Is seismic bracing required for water heater installation in Boulder City?",
     answer:
       "Yes. Boulder City plumbing code requires seismic bracing on water heater installations, including heavy-gauge steel straps secured at code-specified heights. Red Carpet Plumbing installs all water heaters to current Boulder City plumbing code including seismic bracing requirements.",
+    category: "trust",
   },
   {
     question:
       "Who issues permits for water heater installation in Boulder City?",
     answer:
-      "Boulder City is an incorporated city with its own building department. Permits for water heater installation in Boulder City are processed through the Boulder City Building Department. Red Carpet Plumbing holds Nevada Contractor License #0048585A and works within the Boulder City permit process for installations that require permits.",
+      "Boulder City is an incorporated city with its own building department. Permits for water heater installation in Boulder City are processed through the Boulder City Building Department. Red Carpet Plumbing holds Nevada Contractor License #048585A and works within the Boulder City permit process for installations that require permits.",
+    category: "trust",
   },
   {
     question:
       "How much does water heater repair or replacement cost in Boulder City?",
     answer:
       "Water heater repair and replacement costs vary based on the unit type, the scope of work, and the materials required. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
+    category: "cost",
   },
   {
     question: "Do you offer same-day water heater repair service in Boulder City?",
     answer:
       "Same-day water heater repair service is available in Boulder City, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides water heater repair and installation throughout Boulder City, Nevada. From tank water heater repair and replacement to tankless installation and annual sediment flushing, our licensed plumbers service Boulder City homes with code-compliant water heater work. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides water heater repair and installation throughout Boulder City, Nevada. From tank water heater repair and replacement to tankless installation and annual sediment flushing, our licensed plumbers service Boulder City homes with code-compliant water heater work. Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
 
 const TRUST_STRIP_ITEMS = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Tank and Tankless Water Heaters",
   "Seismic Bracing and Expansion Tanks",
   "Transparent Pricing, No Hidden Fees",
@@ -185,7 +193,7 @@ const BC_WH_SERVICES: {
     // Body split at the anchor: rendered output reads
     // "...see our repiping services page." exactly as approved.
     label: "Gas and electric water heater service",
-    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under NV License #0048585A. For Boulder City homes that may need broader pipe assessment alongside water heater service, see our ",
+    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under NV License #048585A. For Boulder City homes that may need broader pipe assessment alongside water heater service, see our ",
     link: { href: "/repiping/", text: "repiping services page" },
   },
 ];
@@ -216,9 +224,8 @@ const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "4.8-star rating across 81 Google reviews",
   "Boulder City code-compliant seismic bracing and expansion tank installation",
   "Tank and tankless water heater service throughout Boulder City",
   "Annual descaling service for tankless units",
@@ -311,6 +318,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "City",
@@ -338,18 +353,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: BC_WH_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(BC_WH_FAQS);
 
 export default function BoulderCityWaterHeaterPage() {
   return (
@@ -427,7 +431,7 @@ export default function BoulderCityWaterHeaterPage() {
                   particularly important in Boulder City.
                 </p>
                 <p>
-                  Nevada Contractor License #0048585A covers plumbing work
+                  Nevada Contractor License #048585A covers plumbing work
                   throughout Nevada including Boulder City. For our full range of
                   plumbing services in Boulder City, visit our{" "}
                   <Link
@@ -605,7 +609,7 @@ export default function BoulderCityWaterHeaterPage() {
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Boulder City and the Las Vegas Valley. We hold Nevada
-                Contractor License #0048585A under the C-1 Plumbing and Heating
+                Contractor License #048585A under the C-1 Plumbing and Heating
                 classification, covering residential and commercial plumbing work
                 throughout Nevada including Boulder City.
               </p>
@@ -671,31 +675,11 @@ export default function BoulderCityWaterHeaterPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Water Heater FAQs for Boulder City Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {BC_WH_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Water Heater FAQs for Boulder City Homeowners</>}
+          faqs={BC_WH_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: RELATED SERVICES */}
         <section className="bg-white">
@@ -764,21 +748,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

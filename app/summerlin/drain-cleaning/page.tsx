@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", and the
-// 4.8/76 rating are source-site/project claims. Each visible instance carries an
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", and the
+// 4.8/81 rating are source-site/project claims. Each visible instance carries an
 // inline FLAG comment.
 //
 // SCHEMA NOTE: Summerlin is a master-planned community spanning both the City of
@@ -25,14 +27,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Drain Cleaning in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Professional drain cleaning in Summerlin, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Summerlin homes. NV #0048585A. (702) 567-9172.",
+    "Professional drain cleaning in Summerlin, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Summerlin homes. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Professional drain cleaning in Summerlin, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Summerlin homes. NV #0048585A. (702) 567-9172.",
+      "Professional drain cleaning in Summerlin, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Summerlin homes. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -46,49 +48,56 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const SUMMERLIN_DRAIN_FAQS = [
+const SUMMERLIN_DRAIN_FAQS: FaqItem[] = [
   {
     question: "What causes drains to clog faster in Summerlin?",
     answer:
       "Las Vegas Valley water carries 17 to 24 grains per gallon of dissolved minerals, approximately 280 parts per million. This is among the hardest municipal water in the United States. Hard water leaves calcium and magnesium deposits inside pipe walls that narrow the pipe, slow water flow, and create rough surfaces that trap grease, soap scum, and debris. This is why Summerlin drains tend to clog faster and more stubbornly than drains in cities with softer water.",
+    category: "causes-signs",
   },
   {
     question: "How do I know if I need professional drain cleaning in Summerlin?",
     answer:
       "Call a plumber when multiple drains are slow at the same time, when you have a complete blockage, when drains produce sewage or sulfur odors, or when you hear gurgling sounds from toilets or other fixtures. Multiple affected drains usually indicate a main sewer line problem that requires professional clearing.",
+    category: "causes-signs",
   },
   {
     question: "Are chemical drain cleaners safe for Summerlin pipes?",
     answer:
       "Chemical drain cleaners can damage pipe linings, especially in older copper or galvanized pipes common in original Summerlin villages. They typically dissolve only part of the clog and do not address mineral buildup or root intrusion. Professional drain cleaning removes the entire blockage and is safer for aging Summerlin pipe systems.",
+    category: "the-service",
   },
   {
     question: "What is hydro jetting and when is it needed in Summerlin?",
     answer:
       "Hydro jetting uses high-pressure water to scour the interior walls of drain and sewer lines, removing grease, mineral scale, and debris from the pipe walls rather than just clearing a path through the clog. It is recommended for recurring clogs, main sewer line cleaning, and lines with significant hard water mineral buildup, all common conditions in Summerlin homes. We assess pipe condition before recommending hydro jetting on older village home drain lines.",
+    category: "timing-process",
   },
   {
     question: "How much does drain cleaning cost in Summerlin?",
     answer:
       "Drain cleaning costs vary based on the type of drain, the severity of the clog, and the method required. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
+    category: "cost",
   },
   {
     question: "Who issues permits for plumbing work in Summerlin?",
     answer:
-      "Permit jurisdiction in Summerlin depends on which side of the city boundary the property sits. Summerlin spans both the City of Las Vegas and unincorporated Clark County. Red Carpet Plumbing is licensed for plumbing work throughout Nevada under NV License #0048585A and works within the applicable permit process for your address.",
+      "Permit jurisdiction in Summerlin depends on which side of the city boundary the property sits. Summerlin spans both the City of Las Vegas and unincorporated Clark County. Red Carpet Plumbing is licensed for plumbing work throughout Nevada under NV License #048585A and works within the applicable permit process for your address.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day drain cleaning service in Summerlin?",
     answer:
       "Same-day drain cleaning service is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides professional drain cleaning throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. From slow kitchen drains and bathroom clogs to main sewer line cleaning and hydro jetting, our licensed plumbers clear Summerlin drains completely. NV Contractor License #0048585A.";
+  "Red Carpet Plumbing provides professional drain cleaning throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. From slow kitchen drains and bathroom clogs to main sewer line cleaning and hydro jetting, our licensed plumbers clear Summerlin drains completely. NV Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Drain Cleaning and Hydro Jetting",
   "Serving Summerlin and the Las Vegas Valley",
   "Transparent Pricing, No Hidden Fees",
@@ -181,14 +190,13 @@ const DRAIN_STEPS = [
 const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with Summerlin's housing stock, hard water conditions, and original village pipe systems",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Residential drain cleaning service throughout all Summerlin villages and Summerlin South",
   "Hydro jetting available for stubborn or recurring clogs where pipe condition allows",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // ---------------------------------------------------------------------------
@@ -274,6 +282,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -305,18 +321,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SUMMERLIN_DRAIN_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SUMMERLIN_DRAIN_FAQS);
 
 export default function SummerlinDrainCleaningPage() {
   return (
@@ -360,7 +365,7 @@ export default function SummerlinDrainCleaningPage() {
           ctaNote="Licensed plumbers. Transparent pricing. No hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Drain Cleaning Help" />}
           backgroundImage={{
-            src: "/images/locations/summerlin/red-carpet-plumbing-summerlin-nv-red-rock-canyon-location-hero.webp",
+            src: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-hero.webp",
             alt: "Licensed drain cleaning plumbers serving Summerlin, NV",
           }}
         />
@@ -376,7 +381,7 @@ export default function SummerlinDrainCleaningPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Summerlin, Nevada and the Las Vegas Valley. We hold Nevada
-                Contractor License #0048585A under the C-1 Plumbing and Heating
+                Contractor License #048585A under the C-1 Plumbing and Heating
                 classification and have been serving Summerlin homeowners for over
                 40 years.
               </p>
@@ -572,32 +577,11 @@ export default function SummerlinDrainCleaningPage() {
         </section>
 
         {/* SECTION 7: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Drain Cleaning in Summerlin
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SUMMERLIN_DRAIN_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Drain Cleaning in Summerlin</>}
+          faqs={SUMMERLIN_DRAIN_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 8: RELATED SERVICES */}
         <section className="bg-brand-surface-alt">
@@ -662,21 +646,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,6 +11,8 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Sewer Line Services in Las Vegas, NV | Red Carpet Plumbing",
@@ -28,52 +31,61 @@ export const metadata: Metadata = {
   },
 };
 
-const SEWER_LINE_FAQS = [
+const SEWER_LINE_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a damaged sewer line?",
     answer:
       "Common signs include multiple slow drains or backups throughout the home at the same time, sewage odor inside the home or yard, gurgling sounds from toilets or drains when water is used elsewhere, water backing up into tubs or floor drains when flushing, wet spots or soggy ground in the yard near the sewer line path, and drain problems that recur shortly after clearing.",
+    category: "causes-signs",
   },
   {
     question: "What causes sewer line problems in Las Vegas?",
     answer:
       "The most common causes in Las Vegas are aging cast iron or clay sewer lines that have corroded or cracked over decades, desert tree root intrusion from mesquite, olive, and palm trees seeking moisture in dry soil, caliche and expansive clay soil movement that stresses pipe joints and creates pipe belly conditions, and hard water mineral scale that reduces flow capacity over time.",
+    category: "causes-signs",
   },
   {
     question: "What is trenchless sewer repair?",
     answer:
       "Trenchless sewer repair fixes or replaces damaged sewer lines without digging a trench along the full length of the pipe. The two main trenchless methods are CIPP lining, which creates a new pipe inside the old one by inserting and curing a resin-saturated liner, and pipe bursting, which fractures the old pipe outward while pulling a new pipe into place. Both require only small access points rather than full excavation of the yard or driveway.",
+    category: "the-service",
   },
   {
     question: "How does CIPP pipe lining work?",
     answer:
       "Cured-in-place pipe lining inserts a resin-saturated liner into the existing damaged sewer pipe through a cleanout access point. The liner is inflated, positioned correctly, and then cured in place using heat or UV light. When the resin hardens, it forms a seamless new pipe inside the old one, sealing cracks, preventing root intrusion, and restoring the structural integrity of the line. The process requires minimal excavation and is typically completed in one day.",
+    category: "the-service",
   },
   {
     question: "How do I know if I need sewer line repair or replacement?",
     answer:
       "A sewer camera inspection is the most reliable way to determine whether repair or replacement is appropriate. Lines with localized damage in otherwise sound pipe can often be repaired. Lines with extensive corrosion, multiple damage points, severe structural deterioration, or complete collapse typically require replacement. Red Carpet Plumbing will show you the camera footage and explain what it means before recommending a course of action.",
+    category: "causes-signs",
   },
   {
     question: "What is pipe belly and why does it matter?",
     answer:
       "Pipe belly is a low spot or sag in a sewer line caused by soil settling beneath the pipe. Water and solids pool in the belly rather than flowing to the municipal sewer, creating recurring blockages and the conditions for sewage backup. Pipe belly is common in Las Vegas due to caliche and expansive clay soil movement. Hydro jetting can clear debris from a belly, but the structural condition of the line typically determines whether the belly needs to be addressed with repair or replacement.",
+    category: "causes-signs",
   },
   {
     question: "How long does sewer line repair take?",
     answer:
       "Sewer camera inspection typically takes one to two hours. Sewer line cleaning with hydro jetting is usually completed in a few hours. Trenchless CIPP lining is typically completed in one day. Pipe bursting and traditional excavation and replacement timelines vary based on the length of line and site conditions. Red Carpet Plumbing will give you a timeline estimate after the camera inspection.",
+    category: "timing-process",
   },
   {
     question:
       "Does Red Carpet Plumbing serve Henderson and Summerlin for sewer line services?",
     answer:
       "Yes. Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement throughout Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day sewer line service in Las Vegas?",
     answer:
       "Same-day sewer line service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -289,17 +301,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -365,18 +378,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SEWER_LINE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SEWER_LINE_FAQS);
 
 export default function SewerLineServicesPage() {
   return (
@@ -405,8 +407,8 @@ export default function SewerLineServicesPage() {
           }
           subheading="Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement for homes and businesses throughout the Las Vegas Valley. From recurring sewer backups and slow drains to damaged lines and root intrusion, our licensed plumbers diagnose the problem accurately and explain all repair options before any work begins."
           trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed Plumbers, #0048585A",
+            "4.8 stars, 81 Google reviews",
+            "NV Licensed Plumbers, #048585A",
             "Over 40 years serving Las Vegas",
             "Transparent pricing, no hidden fees",
             "24/7 Emergency Service",
@@ -526,7 +528,11 @@ export default function SewerLineServicesPage() {
 
         {/* SECTION 5: WHY LAS VEGAS SEWER LINES FAIL FASTER */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp"
+              alt="Sewer camera cable reel beside a drain cleanout"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -559,12 +565,17 @@ export default function SewerLineServicesPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: PROCESS (HowTo) */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-main-sewer-line-cleaning-card.webp"
+              alt="Large drain machine with a cable reel on a paver walkway"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -604,6 +615,7 @@ export default function SewerLineServicesPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -723,32 +735,11 @@ export default function SewerLineServicesPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Sewer Line Services in Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SEWER_LINE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Sewer Line Services in Las Vegas</>}
+          faqs={SEWER_LINE_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -761,7 +752,7 @@ export default function SewerLineServicesPage() {
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
               Red Carpet Plumbing is available for sewer line inspection,
               cleaning, repair, and replacement throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated, NV
-              #0048585A.
+              #048585A.
             </p>
             <div className="mt-10">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
@@ -784,20 +775,5 @@ export default function SewerLineServicesPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172: project-established value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating: project-established value;
+// - License #048585A, C-1 Plumbing and Heating: project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees": source-site claim; confirm
 //   before launch.
@@ -35,19 +35,21 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  // FLAG: VERIFY license #0048585A in the description before publishing.
+  // FLAG: VERIFY license #048585A in the description before publishing.
   title: "Toilet Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. NV #0048585A. Call (702) 567-9172.",
+    "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. NV #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin/toilet-repair-installation/",
   },
   openGraph: {
     title: "Toilet Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. NV #0048585A. Call (702) 567-9172.",
+      "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. NV #048585A. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/toilet-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -58,13 +60,12 @@ export const metadata: Metadata = {
 
 type LinkSeg = string | { href: string; text: string };
 
-// FLAG: VERIFY "4.8-star rated" before publishing. Visible text only, not in schema.
 const HERO_SUBHEADING =
   "Red Carpet Plumbing provides toilet repair and installation for homes and businesses throughout Summerlin, NV. Running toilets, base leaks, clogs, toilet replacement, and new installations. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.";
 
 const HERO_TRUST_ITEMS = [
-  // FLAG: VERIFY license #0048585A before publishing.
-  "NV Licensed, #0048585A",
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed, #048585A",
   "Toilet Repair and Installation",
   "Serving All Summerlin Villages",
   // FLAG: VERIFY transparent pricing claim before publishing.
@@ -75,9 +76,9 @@ const HERO_TRUST_ITEMS = [
 const DIRECT_ANSWER = {
   heading: "Toilet Problems in Summerlin, and How We Fix Them",
   p1: "A toilet that runs, leaks at the base, clogs often, flushes weakly, or wobbles usually has a worn part that can be repaired, or it has reached the point where replacement makes more sense. Red Carpet Plumbing diagnoses the cause, explains whether to repair or replace, and completes the work, including new toilet installation. Call (702) 567-9172 to schedule service.",
-  // FLAG: VERIFY license #0048585A before publishing.
+  // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
-  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#0048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
+  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
   p3: "Need toilet service in Summerlin? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get on the schedule.",
 };
 
@@ -187,8 +188,8 @@ const PROCESS_STEPS: { name: string; body: string }[] = [
 // Why choose.
 const WHY_CHOOSE_HEADING = "Why Summerlin Homeowners Choose Red Carpet Plumbing";
 const WHY_CHOOSE_ITEMS = [
-  // FLAG: VERIFY license #0048585A before publishing.
-  "Licensed Nevada plumbers, NV License #0048585A, C-1 Plumbing and Heating",
+  // FLAG: VERIFY license #048585A before publishing.
+  "Licensed Nevada plumbers, NV License #048585A, C-1 Plumbing and Heating",
   "Honest repair or replace assessment before any work is recommended",
   "Familiar with Summerlin's mix of older villages and newer builds",
   "Clear options explained before work begins",
@@ -215,35 +216,42 @@ const AREA_CHIPS = [
 const AREAS_CROSS_LINKS: LinkSeg[] = ["We also provide toilet repair and installation in ", { href: "/las-vegas/toilet-repair-installation/", text: "Las Vegas" }, " and ", { href: "/north-las-vegas/toilet-repair-installation/", text: "North Las Vegas" }, ". For every service we offer in your community, visit our ", { href: "/summerlin-plumbing-services/", text: "Summerlin plumbing services" }, " page."];
 
 // FAQs. Single source for the visible accordion and the FAQPage schema.
-const FAQS: { question: string; answer: string }[] = [
+const FAQS: FaqItem[] = [
   {
     question: "Why does my toilet keep running?",
     answer: "A worn flapper, a failing fill valve, or a float set too high are the usual causes. Hard water speeds up wear on these rubber and plastic parts, so tank components often need replacing. A plumber can find the cause and fix it quickly in most cases.",
+    category: "causes-signs",
   },
   {
     question: "Why is my toilet leaking at the base?",
     answer: "A leak at the base is most often a failed wax ring, the seal between the toilet and the floor flange. Soil movement under a slab, loose bolts, or a damaged flange can also cause it. Stop using the toilet and call us before the water damages the floor.",
+    category: "causes-signs",
   },
   {
     question: "How do I know if my toilet needs repair or replacement?",
     answer: "Repair fits most single problems, such as a worn flapper, a failed wax ring, or a loose base. Replacement makes more sense for a cracked bowl or tank, repeated repairs on the same fixture, or heavy mineral scale. We explain both options, and you approve the work first.",
+    category: "causes-signs",
   },
   {
     question: "Can hard water damage a toilet?",
     answer: "Yes. Minerals from hard water build up in the siphon jets and rim holes, which weakens the flush, and they wear out flappers, fill valves, and seals faster. Regular repairs, and replacement when scale is severe, keep a toilet working properly.",
+    category: "the-service",
   },
   // FLAG: VERIFY single-visit installation timing before publishing.
   {
     question: "How long does toilet installation take?",
     answer: "A standard toilet replacement is usually completed in a single visit. The time depends on the condition of the floor flange, shut-off valve, and supply line, which we check before installing the new toilet. We tell you what to expect when you call.",
+    category: "timing-process",
   },
   {
     question: "What should I do if my toilet is overflowing?",
     answer: "Do not flush again. Shut off the water at the valve behind the toilet by turning it clockwise. Then call (702) 567-9172 and tell us what happened. If water has reached the floor, move rugs and valuables away from it if it is safe to do so.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day toilet repair in Summerlin?",
     answer: "Same-day toilet repair is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address. When you call, tell us what the toilet is doing, such as running, leaking, or clogging, so we can schedule the right visit.",
+    category: "timing-process",
   },
 ];
 
@@ -283,7 +291,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Toilet Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. NV #0048585A. Call (702) 567-9172.",
+    "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. NV #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/summerlin/toilet-repair-installation/",
   isPartOf: {
     "@type": "WebSite",
@@ -322,15 +330,23 @@ const serviceSchema = {
   "@type": "Service",
   name: "Toilet Repair and Installation",
   serviceType: "Toilet Repair and Installation",
-  // FLAG: VERIFY license #0048585A in the description before publishing.
+  // FLAG: VERIFY license #048585A in the description before publishing.
   description:
-    "Red Carpet Plumbing provides running toilet repair, leaking toilet repair, toilet clog clearing, toilet replacement, new toilet installation, and wax ring and tank component repair for homes and businesses in Summerlin, NV. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides running toilet repair, leaking toilet repair, toilet clog clearing, toilet replacement, new toilet installation, and wax ring and tank component repair for homes and businesses in Summerlin, NV. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone before publishing.
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -361,18 +377,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(FAQS);
 
 const LINK_CLASS =
   "font-semibold text-brand-dark underline hover:text-brand-dark/70";
@@ -688,32 +693,11 @@ export default function SummerlinToiletPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Toilet Repair and Installation in Summerlin, NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Toilet Repair and Installation in Summerlin, NV</>}
+          faqs={FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: RELATED SERVICES */}
         <section className="bg-white">
@@ -782,21 +766,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 — project-established value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating — project-established value;
+// - License #048585A, C-1 Plumbing and Heating — project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees" — source-site claim, present in
 //   the approved Section 8 copy; confirm documentation.
@@ -51,6 +51,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Repiping in North Las Vegas, NV | Red Carpet Plumbing",
@@ -85,7 +87,7 @@ const DIRECT_ANSWER_BODY =
   "Recurring leaks, low water pressure, or known problem pipe materials like polybutylene or Kitec are common reasons North Las Vegas homeowners consider repiping. Red Carpet Plumbing assesses your plumbing system, explains whether a whole-house or partial repipe fits your situation, and completes the work with PEX or copper. Call (702) 567-9172 to schedule an assessment.";
 
 const TRUST_BODY =
-  "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#0048585A) rated 4.8 stars. Every repiping job includes a full system assessment, an upfront explanation of your material and approach options, and transparent pricing with no hidden fees.";
+  "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A) rated 4.8 stars. Every repiping job includes a full system assessment, an upfront explanation of your material and approach options, and transparent pricing with no hidden fees.";
 
 // Note: this page says "same-day evaluations", while FAQ 9 says "same-day
 // repiping service". Both are approved as written and are deliberately NOT
@@ -132,54 +134,63 @@ const NLV_REPIPING_STEPS = [
 // No FAQ carries an inline link in this build, so the split-on-phrase
 // FaqAnswer renderer used on /north-las-vegas/water-pipe-repair-replacement/
 // is deliberately not ported here rather than shipped unused.
-const NLV_REPIPING_FAQS = [
+const NLV_REPIPING_FAQS: FaqItem[] = [
   {
     question: "What are the signs I need to repipe my North Las Vegas home?",
     answer:
       "Recurring leaks in multiple locations, discolored water, consistently low water pressure, frequent pinhole leaks in copper pipe, known problem materials like polybutylene or Kitec, and a pre-1990 home with original plumbing are the most common signs. A licensed plumber can assess your system and confirm what's needed.",
+    category: "causes-signs",
   },
   {
     question:
       "What is the difference between whole-house and partial repiping?",
     answer:
       "Whole-house repiping replaces every supply line in the home. Partial repiping replaces only the affected section when the rest of the system is sound. Red Carpet Plumbing assesses your system and recommends the right approach.",
+    category: "the-service",
   },
   {
     question: "What is the difference between PEX and copper for repiping?",
     answer:
       "PEX is flexible, resists hard water scale, and requires fewer fittings. Copper is a proven material with a long track record and excellent water quality. Red Carpet Plumbing can help you evaluate which material fits your North Las Vegas home.",
+    category: "the-service",
   },
   {
     question: "Do I need a permit to repipe my house in North Las Vegas?",
     answer:
       "Yes. A permit is required for whole-house repiping in Las Vegas, Henderson, and North Las Vegas. Red Carpet Plumbing pulls the required permits and schedules the city inspection as part of the repiping project.",
+    category: "trust",
   },
   {
     question: "What is Kitec pipe and why does it need to be replaced?",
     answer:
       "Kitec is a plumbing pipe installed in many Las Vegas Valley homes between the late 1990s and mid-2000s. It has brass fittings that corrode when exposed to minerals in the water, eventually failing at the connection points. If your North Las Vegas home has Kitec plumbing, replacement is strongly recommended.",
+    category: "causes-signs",
   },
   {
     question:
       "My North Las Vegas home was built in the 1980s. Could it have polybutylene pipe?",
     answer:
       "Homes in the Las Vegas Valley built between approximately 1978 and 1995 may have polybutylene supply pipe. Polybutylene can degrade from chlorinated water and fail without warning. A licensed plumber can confirm whether polybutylene pipe is present in your home.",
+    category: "the-service",
   },
   {
     question: "Does repiping increase home value in North Las Vegas?",
     answer:
       "A documented repipe with closed permits and final inspection sign-off removes a major concern for home buyers and inspectors, and can support the home's value in a sale.",
+    category: "the-service",
   },
   {
     question:
       "Do you offer repiping for commercial properties in North Las Vegas?",
     answer:
       "Red Carpet Plumbing provides repiping services for commercial buildings and multi-unit properties in North Las Vegas.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day repiping service in North Las Vegas?",
     answer:
       "Same-day repiping service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -256,6 +267,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone before publishing.
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: [
     {
@@ -289,18 +308,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: NLV_REPIPING_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(NLV_REPIPING_FAQS);
 
 export default function NorthLasVegasRepipingPage() {
   return (
@@ -548,32 +556,11 @@ export default function NorthLasVegasRepipingPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Repiping FAQs
-                <br className="hidden sm:block" /> North Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {NLV_REPIPING_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Repiping FAQs <br className="hidden sm:block" /> North Las Vegas</>}
+          faqs={NLV_REPIPING_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -620,21 +607,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

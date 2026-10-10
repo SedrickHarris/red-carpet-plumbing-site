@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,12 +11,14 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
     "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout Las Vegas and the Las Vegas Valley. Running toilets, base leaks, clogs, and new installations. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout Las Vegas and the Las Vegas Valley. Running toilets, base leaks, clogs, and new installations. NV Licensed #048585A. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/toilet-repair-installation/",
@@ -24,57 +27,66 @@ export const metadata: Metadata = {
     title:
       "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed toilet repair and installation throughout Las Vegas and the Las Vegas Valley. Running toilets, leaks, clogs, and new installs. NV #0048585A. 4.8 stars, 76 reviews.",
+      "Licensed toilet repair and installation throughout Las Vegas and the Las Vegas Valley. Running toilets, leaks, clogs, and new installs. NV #048585A. 4.8 stars, 81 reviews.",
   },
 };
 
-const TOILET_FAQS = [
+const TOILET_FAQS: FaqItem[] = [
   {
     question: "Why does my toilet keep running?",
     answer:
       "A running toilet is usually caused by a faulty flapper valve that is no longer sealing properly, a failing fill valve that does not shut off after the tank refills, or a float that is set too high and allows water to run continuously into the overflow tube. A running toilet can waste hundreds of gallons of water per day. A licensed plumber can diagnose and repair the specific component causing the problem.",
+    category: "causes-signs",
   },
   {
     question: "Why is my toilet leaking at the base?",
     answer:
       "A toilet leaking at the base is most often caused by a failed wax ring, which is the seal between the toilet and the floor flange. In Las Vegas homes, heat cycling and minor ground movement can degrade wax rings over time, especially in older properties. A leaking base is not just a water damage issue; it can also allow sewer gases to enter the home and should be repaired promptly.",
+    category: "causes-signs",
   },
   {
     question:
       "How do I know if my toilet needs repair or full replacement?",
     answer:
       "Repair is usually the right choice for running toilets, base leaks, weak flushes, and most clog situations. Replacement makes more sense when the toilet has a cracked tank or bowl, requires repeated repairs for the same problem, has severe mineral buildup blocking siphon jets that cannot be cleared, or is an older low-efficiency model that wastes water. A plumber can assess the condition and recommend the most practical option.",
+    category: "causes-signs",
   },
   {
     question: "Can hard water damage a toilet?",
     answer:
       "Yes. Las Vegas has some of the hardest water in the country, and the mineral content builds up inside toilet siphon jets, rim holes, and the siphon tube over time. This buildup restricts water flow, weakens the flush, and increases the risk of clogs. Hard water scale also accelerates wear on flapper valves and fill valves, meaning toilet components may need replacement more frequently in Las Vegas homes than in areas with softer water.",
+    category: "the-service",
   },
   {
     question: "How long does toilet installation take?",
     answer:
       "A standard toilet installation typically takes one to two hours for a licensed plumber. This includes removing the old toilet, inspecting the flange condition, setting the new wax ring, positioning and securing the toilet, and connecting the supply line. If the flange is damaged and needs repair, the job may take longer. Red Carpet Plumbing handles the full installation process and disposes of the old toilet.",
+    category: "timing-process",
   },
   {
     question: "Does Red Carpet Plumbing install new toilets?",
     answer:
       "Yes. Red Carpet Plumbing installs replacement toilets and new toilet installations throughout the Las Vegas Valley. We work with customer-supplied toilets and can advise on suitable options based on your bathroom configuration, including comfort-height models and water-efficient designs.",
+    category: "the-service",
   },
   {
     question: "What should I do if my toilet is overflowing?",
     answer:
       "If your toilet is overflowing and will not stop, locate the shutoff valve at the base of the toilet and turn it clockwise to stop the water supply. If the valve is inaccessible or not working, turn off the main water supply to the home. Do not continue to flush. Call Red Carpet Plumbing at (702) 567-9172. An overflowing toilet that cannot be stopped with the shutoff valve may indicate a main sewer line problem.",
+    category: "the-service",
   },
   {
     question:
       "What areas does Red Carpet Plumbing serve for toilet repair and installation?",
     answer:
       "Red Carpet Plumbing provides toilet repair and installation throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day toilet repair service in Las Vegas?",
     answer:
       "Same-day toilet repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -292,7 +304,7 @@ const serviceSchema = {
   name: "Toilet Repair and Installation",
   serviceType: "Toilet Repair and Installation",
   description:
-    "Red Carpet Plumbing provides toilet repair, replacement, and installation for homes and businesses throughout the Las Vegas Valley, including running toilet repair, base leak repair, clog clearing, wax ring replacement, and new toilet installation. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides toilet repair, replacement, and installation for homes and businesses throughout the Las Vegas Valley, including running toilet repair, base leak repair, clog clearing, wax ring replacement, and new toilet installation. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -302,17 +314,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -369,7 +382,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/toilet-repair-installation/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -390,18 +403,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: TOILET_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(TOILET_FAQS);
 
 export default function ToiletRepairInstallationPage() {
   return (
@@ -431,8 +433,8 @@ export default function ToiletRepairInstallationPage() {
           }
           subheading="Toilet repair, replacement, and installation for Las Vegas homes and businesses."
           trustItems={[
-            "Licensed Plumbers, NV #0048585A",
-            "4.8 Stars, 76 Google Reviews",
+            "Licensed Plumbers, NV #048585A",
+            "4.8 Stars, 81 Google Reviews",
             "24/7 Emergency Service",
             "Transparent Pricing, No Hidden Fees",
             "Over 40 Years in Las Vegas",
@@ -445,7 +447,7 @@ export default function ToiletRepairInstallationPage() {
             label: "Request Toilet Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
+          ctaNote="NV Licensed #048585A | 4.8 Stars, 81 Reviews"
           formSlot={<QuoteFormPlaceholder title="Get Toilet Help" />}
           accentWidth="sm"
           backgroundImage={{
@@ -532,7 +534,11 @@ export default function ToiletRepairInstallationPage() {
 
         {/* SECTION 5: WHY TOILETS IN LAS VEGAS NEED EXTRA ATTENTION */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-card.webp"
+              alt="White toilet with a chrome supply line in a modern bathroom"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -567,12 +573,17 @@ export default function ToiletRepairInstallationPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: HOWTO PROCESS */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/toilet-repair-installation/red-carpet-plumbing-commercial-toilet-repair-las-vegas.webp"
+              alt="Commercial restroom toilet repair setup with a tool bag and replacement parts"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -612,6 +623,7 @@ export default function ToiletRepairInstallationPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -627,7 +639,7 @@ export default function ToiletRepairInstallationPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing handles running toilets, base leaks,
                   clogs, and full toilet replacement throughout the Las Vegas
-                  Valley. NV Contractor License #0048585A.
+                  Valley. NV Contractor License #048585A.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">
@@ -737,32 +749,11 @@ export default function ToiletRepairInstallationPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Toilet Repair and Installation
-                <br className="hidden sm:block" /> Questions Answered
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {TOILET_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Toilet Repair and Installation <br className="hidden sm:block" /> Questions Answered</>}
+          faqs={TOILET_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -798,20 +789,5 @@ export default function ToiletRepairInstallationPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

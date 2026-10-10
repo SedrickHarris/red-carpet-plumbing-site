@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172: project-established value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating: project-established value;
+// - License #048585A, C-1 Plumbing and Heating: project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees": source-site claim; confirm
 //   before launch.
@@ -38,19 +38,21 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  // FLAG: VERIFY license #0048585A in the description before publishing.
+  // FLAG: VERIFY license #048585A in the description before publishing.
   title: "Garbage Disposal Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. NV #0048585A. Call (702) 567-9172.",
+    "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/north-las-vegas/garbage-disposal-repair-installation/",
   },
   openGraph: {
     title: "Garbage Disposal Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. NV #0048585A. Call (702) 567-9172.",
+      "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/garbage-disposal-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -61,7 +63,6 @@ export const metadata: Metadata = {
 
 type LinkSeg = string | { href: string; text: string };
 
-// FLAG: VERIFY "4.8-star rated" before publishing. Visible text only, not in schema.
 const HERO_SUBHEADING =
   "Red Carpet Plumbing repairs and installs garbage disposals for homes and businesses throughout North Las Vegas, NV. Jams, leaks, humming units, units that will not turn on, and replacements. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.";
 
@@ -69,9 +70,9 @@ const HERO_SUBHEADING =
 const DIRECT_ANSWER = {
   heading: "Garbage Disposal Problems in North Las Vegas, and How We Fix Them",
   p1: "A garbage disposal that hums but will not spin, will not turn on, leaks, jams often, or makes grinding noises can often be cleared, reset, or repaired. When the motor has failed or the housing is cracked, replacement is the better choice. Red Carpet Plumbing diagnoses the problem and completes the repair or installation. Call (702) 567-9172 to schedule service.",
-  // FLAG: VERIFY license #0048585A before publishing.
+  // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
-  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#0048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
+  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
   p3: "Need garbage disposal service in North Las Vegas? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get on the schedule.",
 };
 
@@ -181,8 +182,8 @@ const PROCESS_STEPS: { name: string; body: string }[] = [
 // Why choose.
 const WHY_CHOOSE_HEADING = "Why North Las Vegas Homeowners Choose Red Carpet Plumbing";
 const WHY_CHOOSE_ITEMS = [
-  // FLAG: VERIFY license #0048585A before publishing.
-  "Licensed Nevada plumbers, NV License #0048585A, C-1 Plumbing and Heating",
+  // FLAG: VERIFY license #048585A before publishing.
+  "Licensed Nevada plumbers, NV License #048585A, C-1 Plumbing and Heating",
   "Honest repair or replace assessment before any work is recommended",
   "Familiar with North Las Vegas housing from established neighborhoods to Aliante",
   "Clear options explained before work begins",
@@ -219,35 +220,42 @@ const AREA_CHIPS = [...NLV_ZIPS, ...NLV_SUBAREAS];
 const AREAS_CROSS_LINKS: LinkSeg[] = ["We also provide garbage disposal repair and installation in ", { href: "/las-vegas/garbage-disposal-repair-installation/", text: "Las Vegas" }, " and ", { href: "/summerlin/garbage-disposal-repair-installation/", text: "Summerlin" }, ". For every service we offer in your community, visit our ", { href: "/north-las-vegas-plumbing-services/", text: "North Las Vegas plumbing services" }, " page."];
 
 // FAQs. Single source for the visible accordion and the FAQPage schema.
-const FAQS: { question: string; answer: string }[] = [
+const FAQS: FaqItem[] = [
   {
     question: "Why is my garbage disposal humming but not spinning?",
     answer: "A hum without spinning usually means the grinding plate is jammed by a hard object or food, or the motor is struggling. Turn the disposal off at the switch first and never reach inside. A plumber can clear the jam safely and check whether the motor is damaged.",
+    category: "causes-signs",
   },
   // FLAG: VERIFY reset button instruction before publishing.
   {
     question: "How do I reset a garbage disposal?",
     answer: "Turn the disposal off, wait a few minutes, then press the red reset button on the bottom of the unit. If it trips again right away, there may be a jam, a motor problem, or an electrical issue, and it is best to have a plumber inspect it.",
+    category: "the-service",
   },
   {
     question: "When should I replace a garbage disposal instead of repairing it?",
     answer: "Replace it when the motor has failed, the housing is cracked or leaking, or the same disposal keeps needing repair. Repair is usually the better choice for a jam, a reset, a loose connection, or a leak at the flange or a hose.",
+    category: "timing-process",
   },
   {
     question: "What should not go into a garbage disposal?",
     answer: "Grease and oils, fibrous scraps such as celery and corn husks, bones, fruit pits, and large amounts of starchy food such as pasta and rice should stay out. These items can jam the unit or build up in the drain line behind it.",
+    category: "the-service",
   },
   {
     question: "Can a plumber install a garbage disposal in my North Las Vegas kitchen?",
     answer: "Yes. Installation needs a sink drain that fits a disposal and a power connection, plus drain and dishwasher connections. We assess your setup, explain what is needed, install the unit, and test it for leaks before we leave.",
+    category: "the-service",
   },
   {
     question: "Why is my garbage disposal leaking?",
     answer: "Leaks usually come from the sink flange, the discharge tube, the dishwasher inlet, or a cracked housing. A leak from a connection can often be repaired. A leak from the housing itself usually means the unit needs to be replaced.",
+    category: "causes-signs",
   },
   {
     question: "Do you offer same-day garbage disposal repair in North Las Vegas?",
     answer: "Same-day garbage disposal repair is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address. When you call, tell us what the disposal is doing, such as humming, leaking, or not turning on, so we can schedule the right visit.",
+    category: "timing-process",
   },
 ];
 
@@ -283,7 +291,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Garbage Disposal Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. NV #0048585A. Call (702) 567-9172.",
+    "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/north-las-vegas/garbage-disposal-repair-installation/",
   isPartOf: {
     "@type": "WebSite",
@@ -322,15 +330,23 @@ const serviceSchema = {
   "@type": "Service",
   name: "Garbage Disposal Repair and Installation",
   serviceType: "Garbage Disposal Repair and Installation",
-  // FLAG: VERIFY license #0048585A in the description before publishing.
+  // FLAG: VERIFY license #048585A in the description before publishing.
   description:
-    "Red Carpet Plumbing provides garbage disposal jam clearing, leak repair, reset and electrical diagnosis, replacement, installation, and discharge line and sink flange service for homes and businesses in North Las Vegas, NV. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides garbage disposal jam clearing, leak repair, reset and electrical diagnosis, replacement, installation, and discharge line and sink flange service for homes and businesses in North Las Vegas, NV. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone before publishing.
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: [
     {
@@ -364,18 +380,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(FAQS);
 
 const LINK_CLASS =
   "font-semibold text-brand-dark underline hover:text-brand-dark/70";
@@ -690,32 +695,11 @@ export default function NorthLasVegasGarbageDisposalPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Garbage Disposal Repair and Installation in North Las Vegas, NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Garbage Disposal Repair and Installation in North Las Vegas, NV</>}
+          faqs={FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: RELATED SERVICES */}
         <section className="bg-white">
@@ -784,21 +768,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }
