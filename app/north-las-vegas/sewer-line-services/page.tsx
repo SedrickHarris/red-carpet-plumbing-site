@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 — project-established value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating — project-established value;
+// - License #048585A, C-1 Plumbing and Heating — project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees" — source-site claim, present in
 //   the approved Section 4 and Section 8 copy; confirm documentation.
@@ -38,6 +38,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Sewer Line Services in North Las Vegas, NV | Red Carpet Plumbing",
@@ -76,7 +78,7 @@ const NLV_CONTEXT_BODY =
   "Many North Las Vegas neighborhoods have older clay or cast iron sewer lines that are more prone to root intrusion, cracking, and joint separation over time. Desert soil conditions can also shift and settle around buried lines. Red Carpet Plumbing's licensed plumbers inspect the full line with a camera before recommending a repair, replacement, or trenchless option, so you know exactly what you're dealing with before any work begins.";
 
 const TRUST_BODY =
-  "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#0048585A) rated 4.8 stars. Every sewer line job includes a camera inspection, an upfront explanation of your options, and transparent pricing with no hidden fees.";
+  "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A) rated 4.8 stars. Every sewer line job includes a camera inspection, an upfront explanation of your options, and transparent pricing with no hidden fees.";
 
 const URGENCY_BODY =
   "Need sewer line service in North Las Vegas? Same-day service is available, subject to scheduling. Call (702) 567-9172 to reach Red Carpet Plumbing and get an inspection scheduled.";
@@ -113,58 +115,68 @@ const NLV_SEWER_STEPS = [
 ];
 
 // Section 10 FAQs. Drives both the visible accordion and the FAQPage schema.
-const NLV_SEWER_FAQS = [
+const NLV_SEWER_FAQS: FaqItem[] = [
   {
     question: "What causes a sewer line backup in North Las Vegas?",
     answer:
       "Tree root intrusion, aging clay or cast iron pipe, and grease or debris buildup are the most common causes of sewer line backups. A camera inspection identifies the exact cause before any repair work begins.",
+    category: "causes-signs",
   },
   {
     question: "How do I know if my sewer line is collapsed or just clogged?",
     answer:
       "Multiple slow drains throughout the house, gurgling sounds, and sewage odor often point to a bigger problem than a single clog. A camera inspection is the only reliable way to tell the difference.",
+    category: "causes-signs",
   },
   {
     question: "Can tree roots really break a sewer line?",
     answer:
       "Yes. Tree roots seek out moisture and can enter small cracks or joints in a sewer line, eventually growing large enough to crack or collapse the pipe.",
+    category: "the-service",
   },
   {
     question: "Is trenchless sewer line repair available in North Las Vegas?",
     answer:
       "Trenchless sewer line repair is available for qualifying lines. Red Carpet Plumbing inspects the line first to determine if trenchless repair or replacement is the right fit.",
+    category: "the-service",
   },
   {
     question: "How much does sewer line repair cost in North Las Vegas?",
     answer:
       "Sewer line repair cost depends on the cause, access, and repair method. Red Carpet Plumbing provides transparent pricing with no hidden fees after a camera inspection identifies the exact problem.",
+    category: "cost",
   },
   {
     question: "Why does my yard smell like sewage?",
     answer:
       "A sewage smell in the yard often means a sewer line is cracked, leaking, or backed up below the surface. This should be inspected promptly to prevent further damage.",
+    category: "causes-signs",
   },
   {
     question: "Are you licensed to do sewer line work in Nevada?",
     answer:
-      "Red Carpet Plumbing holds Nevada C-1 Plumbing and Heating Contractor License #0048585A and performs all sewer line work with licensed plumbers.",
+      "Red Carpet Plumbing holds Nevada C-1 Plumbing and Heating Contractor License #048585A and performs all sewer line work with licensed plumbers.",
+    category: "trust",
   },
   {
     question:
       "Do you provide sewer line camera inspections before buying a home?",
     answer:
       "Yes. A pre-purchase sewer line camera inspection identifies existing damage, root intrusion, or aging pipe before you close on a North Las Vegas home.",
+    category: "the-service",
   },
   {
     question:
       "Do you offer sewer line service for commercial properties in North Las Vegas?",
     answer:
       "Red Carpet Plumbing services sewer lines for commercial properties in North Las Vegas, from inspection through repair or replacement.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day sewer line service in North Las Vegas?",
     answer:
       "Same-day sewer line service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -239,6 +251,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone before publishing.
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: [
     {
@@ -271,18 +291,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: NLV_SEWER_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(NLV_SEWER_FAQS);
 
 export default function NorthLasVegasSewerLinePage() {
   return (
@@ -533,32 +542,11 @@ export default function NorthLasVegasSewerLinePage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Sewer Line Service FAQs
-                <br className="hidden sm:block" /> North Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {NLV_SEWER_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Sewer Line Service FAQs <br className="hidden sm:block" /> North Las Vegas</>}
+          faqs={NLV_SEWER_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -605,21 +593,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

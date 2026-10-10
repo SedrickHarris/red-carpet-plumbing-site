@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 — project-established value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating — project-established value;
+// - License #048585A, C-1 Plumbing and Heating — project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees" — source-site claim, present in
 //   the approved Section 8 copy; confirm documentation.
@@ -53,6 +53,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Commercial Plumbing in North Las Vegas, NV | Red Carpet Plumbing",
@@ -88,7 +90,7 @@ const DIRECT_ANSWER_BODY =
   "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, retail properties, and multi-unit buildings throughout North Las Vegas. We work with property managers and business owners to minimize disruption to operations. For a commercial plumbing emergency, call (702) 567-9172 for 24/7 response.";
 
 const TRUST_BODY =
-  "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#0048585A) rated 4.8 stars. We provide 24/7 emergency response for commercial plumbing situations, transparent pricing with no hidden fees, and permit coordination for applicable commercial projects.";
+  "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A) rated 4.8 stars. We provide 24/7 emergency response for commercial plumbing situations, transparent pricing with no hidden fees, and permit coordination for applicable commercial projects.";
 
 // Claim 1 of 2: 24/7 emergency response. Unqualified by design. Scoped to
 // commercial plumbing emergencies. Section 7 only. See the file header.
@@ -147,57 +149,66 @@ const NLV_COMMERCIAL_STEPS = [
 // Section 10 FAQs. Drives both the visible accordion and the FAQPage schema.
 // FAQ 4 carries the unqualified 24/7 claim; FAQ 9 carries the qualified
 // same-day claim. Neither may be reworded toward the other.
-const NLV_COMMERCIAL_FAQS = [
+const NLV_COMMERCIAL_FAQS: FaqItem[] = [
   {
     question: "What does commercial plumbing include?",
     answer:
       "Commercial plumbing covers the installation, repair, and maintenance of plumbing systems in businesses, restaurants, office buildings, multi-unit residential properties, and industrial facilities, including drain systems, water supply lines, water heaters, grease traps, floor drains, backflow prevention devices, and sewer line connections.",
+    category: "the-service",
   },
   {
     question:
       "Do I need a licensed plumber for commercial plumbing work in North Las Vegas?",
     answer:
-      "Yes. Commercial plumbing work in Nevada must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, which covers commercial plumbing repair and installation.",
+      "Yes. Commercial plumbing work in Nevada must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, which covers commercial plumbing repair and installation.",
+    category: "trust",
   },
   {
     question:
       "Does Red Carpet Plumbing work with property managers in North Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services for property managers overseeing multi-unit residential buildings, mixed-use properties, and commercial facilities in North Las Vegas, from individual unit repairs to shared line maintenance.",
+    category: "the-service",
   },
   {
     question: "Do you handle commercial plumbing emergencies in North Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing provides 24/7 emergency service for commercial plumbing situations including burst pipes, sewer backups, water heater failures, and major leaks. Commercial plumbing emergencies that disrupt business operations require fast, licensed response.",
+    category: "the-service",
   },
   {
     question:
       "What are common commercial plumbing problems for North Las Vegas businesses?",
     answer:
       "Common commercial plumbing problems include grease buildup and drain clogs in restaurant kitchens, high-demand water heater failures, backflow preventer issues, aging supply lines in older commercial buildings, and slab leaks in single-story commercial properties.",
+    category: "the-service",
   },
   {
     question:
       "Do you service warehouses and distribution centers in North Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing services warehouses, distribution centers, and manufacturing facilities along North Las Vegas's industrial corridors, including floor drain maintenance and high-capacity water heater systems.",
+    category: "the-service",
   },
   {
     question:
       "Do you provide backflow prevention testing for commercial properties?",
     answer:
       "Yes. Red Carpet Plumbing installs, tests, and repairs backflow prevention devices required for commercial properties and irrigation systems in North Las Vegas.",
+    category: "the-service",
   },
   {
     question: "How often should commercial plumbing be inspected?",
     answer:
       "Most commercial plumbing professionals recommend annual inspections. High-traffic facilities such as restaurants and multi-unit buildings may benefit from more frequent inspection of drains, grease traps, water heaters, and backflow prevention devices.",
+    category: "timing-process",
   },
   {
     question:
       "Do you offer same-day commercial plumbing service in North Las Vegas?",
     answer:
       "Same-day commercial plumbing service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -275,6 +286,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone before publishing.
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: [
     {
@@ -308,18 +327,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: NLV_COMMERCIAL_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(NLV_COMMERCIAL_FAQS);
 
 export default function NorthLasVegasCommercialPlumbingPage() {
   return (
@@ -402,7 +410,7 @@ export default function NorthLasVegasCommercialPlumbingPage() {
                 plumbing service for floor drain maintenance, high-capacity
                 water heater systems, backflow prevention, and plumbing
                 inspections for lease turnovers and tenant improvements. Red
-                Carpet Plumbing holds Nevada Contractor License #0048585A under
+                Carpet Plumbing holds Nevada Contractor License #048585A under
                 the C-1 Plumbing and Heating classification, covering{" "}
                 <Link href="/commercial-plumbing/" className={LINK_CLASS}>
                   commercial plumbing
@@ -568,32 +576,11 @@ export default function NorthLasVegasCommercialPlumbingPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Commercial Plumbing FAQs
-                <br className="hidden sm:block" /> North Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {NLV_COMMERCIAL_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Commercial Plumbing FAQs <br className="hidden sm:block" /> North Las Vegas</>}
+          faqs={NLV_COMMERCIAL_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -640,21 +627,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

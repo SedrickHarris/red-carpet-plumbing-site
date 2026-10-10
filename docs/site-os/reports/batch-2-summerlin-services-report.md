@@ -77,7 +77,7 @@ Five JSON-LD blocks per page in order; HowTo and FAQPage derive from the arrays 
       visible breadcrumb = ["Home","Summerlin Plumbing Services","Water Pipe Repair and Replacement in Summerlin"]
       WebPage = {"name":"Water Pipe Repair and Replacement in Summerlin, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/summerlin/water-pipe-repair-replacement/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Water Pipe Repair and Replacement in Summerlin, NV | Red Carpet Plumbing"
-      description="Water pipe repair and replacement in Summerlin, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #0048585A. Call (702) 567-9172."
+      description="Water pipe repair and replacement in Summerlin, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/summerlin/water-pipe-repair-replacement/
       og:title="Water Pipe Repair and Replacement in Summerlin, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/summerlin/water-pipe-repair-replacement/ robots=index, follow
       hero image file referenced: true; alt present: false
@@ -142,7 +142,7 @@ Five JSON-LD blocks per page in order; HowTo and FAQPage derive from the arrays 
       visible breadcrumb = ["Home","Summerlin Plumbing Services","Gas Line Plumbing in Summerlin"]
       WebPage = {"name":"Gas Line Plumbing in Summerlin, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/summerlin/gas-line-plumbing/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Gas Line Plumbing in Summerlin, NV | Red Carpet Plumbing"
-      description="Gas line repair, installation, and inspection in Summerlin, NV. Appliance hookups and outdoor gas lines. NV #0048585A. Call (702) 567-9172."
+      description="Gas line repair, installation, and inspection in Summerlin, NV. Appliance hookups and outdoor gas lines. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/summerlin/gas-line-plumbing/
       og:title="Gas Line Plumbing in Summerlin, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/summerlin/gas-line-plumbing/ robots=index, follow
       hero image file referenced: true; alt present: false
@@ -210,7 +210,7 @@ Five JSON-LD blocks per page in order; HowTo and FAQPage derive from the arrays 
       visible breadcrumb = ["Home","Summerlin Plumbing Services","Toilet Repair and Installation in Summerlin"]
       WebPage = {"name":"Toilet Repair and Installation in Summerlin, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/summerlin/toilet-repair-installation/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Toilet Repair and Installation in Summerlin, NV | Red Carpet Plumbing"
-      description="Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. NV #0048585A. Call (702) 567-9172."
+      description="Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/summerlin/toilet-repair-installation/
       og:title="Toilet Repair and Installation in Summerlin, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/summerlin/toilet-repair-installation/ robots=index, follow
       hero image file referenced: true; alt present: false
@@ -277,7 +277,7 @@ Five JSON-LD blocks per page in order; HowTo and FAQPage derive from the arrays 
       visible breadcrumb = ["Home","Summerlin Plumbing Services","Faucet and Sink Repair and Installation in Summerlin"]
       WebPage = {"name":"Faucet and Sink Repair and Installation in Summerlin, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/summerlin/faucet-sink-repair-installation/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Faucet and Sink Repair and Installation in Summerlin, NV | Red Carpet Plumbing"
-      description="Faucet and sink repair and installation in Summerlin, NV. Leaks, drips, low pressure, and new fixtures. NV #0048585A. Call (702) 567-9172."
+      description="Faucet and sink repair and installation in Summerlin, NV. Leaks, drips, low pressure, and new fixtures. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/summerlin/faucet-sink-repair-installation/
       og:title="Faucet and Sink Repair and Installation in Summerlin, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/summerlin/faucet-sink-repair-installation/ robots=index, follow
       hero image file referenced: true; alt present: false
@@ -343,7 +343,7 @@ Five JSON-LD blocks per page in order; HowTo and FAQPage derive from the arrays 
       visible breadcrumb = ["Home","Summerlin Plumbing Services","Garbage Disposal Repair and Installation in Summerlin"]
       WebPage = {"name":"Garbage Disposal Repair and Installation in Summerlin, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/summerlin/garbage-disposal-repair-installation/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Garbage Disposal Repair and Installation in Summerlin, NV | Red Carpet Plumbing"
-      description="Garbage disposal repair and installation in Summerlin, NV. Jams, leaks, humming, and replacements. NV #0048585A. Call (702) 567-9172."
+      description="Garbage disposal repair and installation in Summerlin, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/summerlin/garbage-disposal-repair-installation/
       og:title="Garbage Disposal Repair and Installation in Summerlin, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/summerlin/garbage-disposal-repair-installation/ robots=index, follow
       hero image file referenced: true; alt present: false

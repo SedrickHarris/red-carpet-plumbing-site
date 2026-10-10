@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqSection } from "@/components/FaqSection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -303,17 +304,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -408,8 +410,8 @@ export default function DrainCleaningPage() {
           }
           subheading="Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout the Las Vegas Valley. From slow kitchen drains and bathroom clogs to main sewer line blockages, our licensed plumbers clear the problem and restore full flow."
           trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed Plumbers, #0048585A",
+            "4.8 stars, 81 Google reviews",
+            "NV Licensed Plumbers, #048585A",
             "Over 40 years serving Las Vegas",
             "Transparent pricing, no hidden fees",
             "24/7 Emergency Service",
@@ -535,7 +537,11 @@ export default function DrainCleaningPage() {
 
         {/* SECTION 5: WHY LAS VEGAS DRAINS CLOG FASTER */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp"
+              alt="Drain machine cabled into an outdoor cleanout beside a stucco wall"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -569,12 +575,17 @@ export default function DrainCleaningPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: PROCESS (HowTo) */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-drain-line-camera-inspection-card.webp"
+              alt="Drain camera reel and monitor beside an open cleanout"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -613,6 +624,7 @@ export default function DrainCleaningPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -754,7 +766,7 @@ export default function DrainCleaningPage() {
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl">
               Red Carpet Plumbing is available for professional drain cleaning
               throughout the Las Vegas Valley. Licensed plumbers,
-              4.8-star rated, NV #0048585A.
+              4.8-star rated, NV #048585A.
             </p>
             <div className="mt-10">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">

@@ -10,11 +10,13 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
+// FLAG: VERIFY before publishing —
 // "Over 40 years," and "24/7 emergency service" trust claims are source-site
 // claims surfaced in the approved brief and shown on this page. License
-// #0048585A and transparent-pricing are also source-site claims. Confirm all
+// #048585A and transparent-pricing are also source-site claims. Confirm all
 // before final launch.
 // Schema follows the established site-wide service-location pattern (Plumber
 // provider; areaServed Place (Green Valley) + containedInPlace City (Henderson)
@@ -57,44 +59,51 @@ export const metadata: Metadata = {
 // FAQ source of truth. Visible FAQ section AND FAQPage JSON-LD both derive
 // from this single array. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const GV_LEAK_FAQS = [
+const GV_LEAK_FAQS: FaqItem[] = [
   {
     question:
       "How do I know if I have a hidden water leak in my Green Valley home?",
     answer:
       "The most common signs of a hidden water leak in a Green Valley home are an unexplained increase in your water bill, the sound of running water when all fixtures are off, warm or wet spots on floors or walls, discoloration or bubbling paint on walls or ceilings, a persistent musty odor in part of the home, reduced water pressure with no other explanation, and unexplained cracks in walls or flooring. If you notice one or more of these signs, a professional leak detection inspection can locate the source.",
+    category: "causes-signs",
   },
   {
     question: "How can I check for a water leak myself in Green Valley?",
     answer:
       "Turn off all water fixtures and appliances in your home. Locate your water meter at the street and record the reading. Do not use any water for 30 minutes, then check the meter again. If the meter reading has changed, water is being used somewhere in the system, which indicates an active leak. This test confirms a leak is present but does not locate it. Call a licensed plumber for a professional inspection to find the source.",
+    category: "causes-signs",
   },
   {
     question: "What causes pipe leaks in Green Valley homes?",
     answer:
       "The most common causes in Green Valley are aging copper supply lines in homes built from the late 1970s through the mid-1990s, which have been thinned by 30 to 45 years of hard water mineral corrosion. Caliche and expansive clay soil movement beneath slab foundations adds mechanical stress to those pipes. Some older Green Valley homes also contain polybutylene pipe, which is prone to failure without warning. Closed-loop system pressure cycling accelerates pipe fatigue in pipes already weakened by corrosion.",
+    category: "causes-signs",
   },
   {
     question:
       "Does Green Valley have more pipe leaks than newer Henderson neighborhoods?",
     answer:
       "Yes. Green Valley's original neighborhoods, built from the late 1970s through the mid-1990s, have copper supply lines that have been exposed to Las Vegas Valley hard water for 30 to 45 years. Hard water mineral corrosion thins pipe walls continuously over that period. Combined with caliche soil movement beneath slab foundations, original Green Valley homes carry a higher leak risk than newer Henderson construction such as Green Valley Ranch and communities developed after 2000.",
+    category: "service-area",
   },
   {
     question: "How does non-invasive leak detection work in Green Valley?",
     answer:
       "Non-invasive leak detection uses acoustic sensors that amplify the sound of pressurized water escaping from pipes through walls, floors, and underground. This allows the plumber to pinpoint the leak location without opening large sections of the home. Pressure testing confirms which line is losing pressure, and thermal imaging identifies temperature differences caused by hot water leaks. Together these methods locate hidden leaks precisely before any repair begins.",
+    category: "the-service",
   },
   {
     question:
       "Can a small hidden leak cause serious damage in my Green Valley home?",
     answer:
       "Yes. A small hidden leak inside a wall can promote mold growth within 24 to 48 hours and can damage wood framing, drywall, insulation, and flooring over weeks and months without any visible sign above the surface. An underground supply line leak can waste hundreds of gallons per month and create soil saturation conditions near the foundation. Early detection and repair limits damage and reduces total repair cost.",
+    category: "causes-signs",
   },
   {
     question: "Do you offer same-day leak detection service in Green Valley?",
     answer:
       "Same-day leak detection service is available in Green Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -279,9 +288,9 @@ const GV_COMMUNITIES: { name: string; href?: string }[] = [
 
 const HERO_TRUST_ITEMS = [
   // FLAG: verify before publishing.
-  "4.8 stars, 76 Google reviews",
+  "4.8 stars, 81 Google reviews",
   // FLAG: verify before final launch.
-  "NV Licensed #0048585A",
+  "NV Licensed #048585A",
   // FLAG: verify before publishing.
   "Over 40 years serving the Las Vegas Valley",
   // FLAG: source-site claim — verify before final launch.
@@ -341,13 +350,21 @@ const serviceSchema = {
   name: "Leak Detection and Repair in Green Valley",
   serviceType: "Leak Detection and Repair",
   description:
-    "Non-invasive leak detection and repair for homes and businesses in Green Valley, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging. Wall and ceiling leak detection, underground supply line detection, slab leak detection, and all repair options. Nevada Contractor License #0048585A.",
+    "Non-invasive leak detection and repair for homes and businesses in Green Valley, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging. Wall and ceiling leak detection, underground supply line detection, slab leak detection, and all repair options. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -379,18 +396,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: GV_LEAK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(GV_LEAK_FAQS);
 
 export default function GreenValleyLeakDetectionPage() {
   return (
@@ -806,31 +812,11 @@ export default function GreenValleyLeakDetectionPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Leak Detection FAQs for Green Valley Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {GV_LEAK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Leak Detection FAQs for Green Valley Homeowners</>}
+          faqs={GV_LEAK_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -855,20 +841,5 @@ export default function GreenValleyLeakDetectionPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

@@ -10,13 +10,14 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing — source-site / project claims surfaced in the
 // approved brief and shown on this page. Each instance carries an inline FLAG:
 //   - 24/7 emergency water heater availability (hero sub-label) — source-site
-//   - 4.8-star rating, 76 Google reviews — verify before publishing
 //   - "Over 40 years" serving the area — verify before publishing
-// License #0048585A (C-1 Plumbing and Heating) is the established project value.
+// License #048585A (C-1 Plumbing and Heating) is the established project value.
 // Schema follows the brief: Service.areaServed uses Place -> AdministrativeArea
 // (Clark County) -> State (Nevada), NOT City, because Paradise is unincorporated
 // Clark County. No AggregateRating. No standalone LocalBusiness schema.
@@ -48,44 +49,51 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const PARADISE_WATER_HEATER_FAQS = [
+const PARADISE_WATER_HEATER_FAQS: FaqItem[] = [
   {
     question: "How long do water heaters last in Paradise, NV?",
     answer:
       "Tank water heaters in the Las Vegas Valley typically last 8 to 12 years. Tankless water heaters typically last 15 to 20 years with proper maintenance. Both lifespans are shorter than national averages due to Las Vegas Valley hard water, which deposits mineral scale inside tanks and on heat exchanger surfaces faster than in softer-water cities. Annual flushing and anode rod maintenance extend tank water heater life.",
+    category: "timing-process",
   },
   {
     question:
       "Why is my water heater making popping and rumbling noises in Paradise?",
     answer:
       "Popping and rumbling noises from a water heater in Paradise are almost always caused by sediment buildup. Las Vegas Valley water carries 17 to 24 grains per gallon of dissolved minerals. These minerals accumulate inside the tank as scale and trap water beneath the sediment layer. When the burner heats the water trapped under the scale, it causes the popping and rumbling sounds. Annual flushing removes the sediment before it hardens and causes damage.",
+    category: "causes-signs",
   },
   {
     question:
       "Do I need a thermal expansion tank for my water heater in Paradise, NV?",
     answer:
       "Most Paradise homes operate on a closed-loop plumbing system due to backflow preventers at the street meter. When a water heater heats water, the expanding water volume needs somewhere to go. In a closed-loop system, a thermal expansion tank absorbs that pressure. Clark County code and most manufacturer warranties require a thermal expansion tank on closed-loop water heater installations. Red Carpet Plumbing can inspect your setup and install an expansion tank if one is needed.",
+    category: "the-service",
   },
   {
     question: "Who issues water heater installation permits in Paradise, NV?",
     answer:
       "Water heater installation permits in Paradise are issued by Clark County, Nevada. Paradise is an unincorporated community within Clark County, so the City of Las Vegas building department does not have jurisdiction over Paradise properties. Red Carpet Plumbing handles permit filing with Clark County for all installations that require permits.",
+    category: "trust",
   },
   {
     question: "Should I repair or replace my water heater in Paradise?",
     answer:
       "For units under 8 years old with a repairable component, repair is usually the right choice. For units 10 years or older, or units with internal tank corrosion, replacement typically makes more financial sense than repeated repairs. Las Vegas Valley hard water shortens water heater lifespan, so older units near or past 10 years with declining performance are strong replacement candidates. Red Carpet Plumbing assesses the unit and gives you an honest recommendation.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing install tankless water heaters in Paradise?",
     answer:
       "Yes. Red Carpet Plumbing installs tankless water heaters for residential and commercial properties throughout Paradise. In the Las Vegas Valley hard water environment, tankless water heaters require annual descaling to remove mineral deposits from the heat exchanger. We install, service, and descale tankless units. All installations are completed to current Clark County plumbing code.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day water heater repair service in Paradise?",
     answer:
       "Same-day water heater repair service is available in Paradise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -93,11 +101,10 @@ const HERO_SUBHEADING =
   "Red Carpet Plumbing provides water heater repair and installation for homes and businesses throughout Paradise, NV. Las Vegas Valley hard water is among the most demanding in the country for water heater performance, causing sediment to accumulate faster and anode rods to deplete sooner than in most cities. When your water heater stops producing hot water, makes unusual noises, produces rust-colored water, or has reached the end of its service life, call us for an honest assessment and clear options.";
 
 const HERO_TRUST_ITEMS = [
-  "Licensed: Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+  "Licensed: Nevada Contractor License #048585A, C-1 Plumbing and Heating",
   "Residential and commercial water heater service in Paradise",
   "All installations to current Clark County plumbing code",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating, 76 Google reviews",
+  "4.8-star rating, 81 Google reviews",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Serving Paradise and the Las Vegas Valley for over 40 years",
 ];
@@ -147,7 +154,7 @@ const WATER_HEATER_SERVICES = [
   },
   {
     label: "Gas and Electric Water Heater Service",
-    body: "We service both gas and electric tank and tankless water heaters. All gas line work is performed under Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    body: "We service both gas and electric tank and tankless water heaters. All gas line work is performed under Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   },
 ];
 
@@ -277,7 +284,15 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+      name: "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+    },
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
     },
   },
   areaServed: {
@@ -312,18 +327,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: PARADISE_WATER_HEATER_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(PARADISE_WATER_HEATER_FAQS);
 
 export default function ParadiseWaterHeaterPage() {
   return (
@@ -710,31 +714,11 @@ export default function ParadiseWaterHeaterPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Water Heater FAQs for Paradise, NV Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {PARADISE_WATER_HEATER_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Water Heater FAQs for Paradise, NV Homeowners</>}
+          faqs={PARADISE_WATER_HEATER_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -759,20 +743,5 @@ export default function ParadiseWaterHeaterPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

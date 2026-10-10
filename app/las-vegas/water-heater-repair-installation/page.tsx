@@ -10,8 +10,10 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, emergency/24-7
+// FLAG: VERIFY before publishing — license #048585A, emergency/24-7
 // availability, transparent-pricing, and any rating/40-year claims are
 // source-site/project claims. This page uses the conservative wording from the
 // approved brief and does NOT assert rating, review count, or "40 years" here.
@@ -49,42 +51,49 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const LV_WATER_HEATER_FAQS = [
+const LV_WATER_HEATER_FAQS: FaqItem[] = [
   {
     question: "How long does a water heater last in Las Vegas?",
     answer:
       "In Las Vegas, tank water heaters typically last 8 to 12 years, often shorter than the national average due to the valley's extremely hard water. Hard water causes sediment buildup and accelerates anode rod depletion, both of which shorten tank life. Tankless water heaters generally last 15 to 20 years but require annual descaling to remove hard water mineral deposits from the heat exchanger.",
+    category: "timing-process",
   },
   {
     question: "Why does my water heater make popping or rumbling noises?",
     answer:
       "Popping and rumbling sounds are caused by sediment buildup on the bottom of the tank. In Las Vegas, the high mineral content in the water causes sediment to accumulate faster than in most other cities. Water trapped under sediment layers boils during the heating cycle and creates these sounds. Annual flushing removes sediment before it hardens into scale.",
+    category: "causes-signs",
   },
   {
     question: "Should I repair or replace my Las Vegas water heater?",
     answer:
       "For water heaters under 8 years old with repairable components, repair is usually the right choice. For units 10 years or older, units with visible tank corrosion, or units leaking from the tank body itself, replacement typically makes more financial sense than continued repairs. Red Carpet Plumbing provides an honest assessment of both options before recommending a course of action.",
+    category: "the-service",
   },
   {
     question: "Is a tankless water heater worth it in Las Vegas?",
     answer:
       "Tankless water heaters offer longer service life, no standby heat loss, and continuous hot water on demand. In Las Vegas, they require annual descaling to remove hard water mineral deposits from the heat exchanger. For homes with high hot water demand or older tank units nearing end of life, a tankless water heater is often a sound long-term investment.",
+    category: "the-service",
   },
   {
     question: "How often should I flush my water heater in Las Vegas?",
     answer:
       "Annual flushing is recommended for Las Vegas homes. Las Vegas water hardness of 17 to 24 grains per gallon causes sediment to accumulate and harden into scale faster than in softer-water cities. Annual flushing removes deposits before they reduce efficiency or damage the tank.",
+    category: "timing-process",
   },
   {
     question:
       "What is a thermal expansion tank and do I need one in Las Vegas?",
     answer:
       "A thermal expansion tank absorbs the pressure that builds up when heated water expands inside a closed-loop plumbing system. Most Las Vegas homes operate on a closed-loop system due to backflow preventers at the street meter. Clark County plumbing code and most manufacturer warranties require a thermal expansion tank on closed-loop water heater installations. If your water heater was installed without one, Red Carpet Plumbing can add it.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day water heater repair service in Las Vegas?",
     answer:
       "Same-day water heater repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -159,7 +168,7 @@ const LV_WH_SERVICES = [
   },
   {
     label: "Gas and electric water heater service",
-    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under NV License #0048585A.",
+    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under NV License #048585A.",
   },
 ];
 
@@ -186,7 +195,7 @@ const WH_STEPS = [
 // claims per the approved brief.
 const WHY_CHOOSE = [
   "Local Las Vegas plumbing company with extensive experience servicing water heaters under Las Vegas hard water conditions",
-  "Licensed plumbers (NV License #0048585A)",
+  "Licensed plumbers (NV License #048585A)",
   "All installations completed to Clark County plumbing code including seismic bracing",
   "Transparent pricing with no hidden fees",
   "Honest repair vs. replacement assessments",
@@ -294,18 +303,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LV_WATER_HEATER_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LV_WATER_HEATER_FAQS);
 
 export default function LasVegasWaterHeaterPage() {
   return (
@@ -340,7 +338,7 @@ export default function LasVegasWaterHeaterPage() {
           }
           subheading="Red Carpet Plumbing repairs and installs water heaters for homes and businesses throughout Las Vegas, NV. Las Vegas hard water averages 17 to 24 grains per gallon, causing faster sediment buildup, accelerated anode rod depletion, and shorter water heater lifespans than most cities. Whether you need a repair, a replacement, a tankless installation, or annual maintenance, our licensed plumbers handle all water heater work to current Clark County plumbing code. Call (702) 567-9172 to schedule service."
           trustItems={[
-            "NV Licensed Plumbers, #0048585A",
+            "NV Licensed Plumbers, #048585A",
             "Emergency Water Heater Service Available",
             "Serving the Las Vegas Valley",
             "Transparent Pricing, No Hidden Fees",
@@ -648,31 +646,11 @@ export default function LasVegasWaterHeaterPage() {
         </section>
 
         {/* SECTION 11: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Water Heater FAQs for Las Vegas Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LV_WATER_HEATER_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Water Heater FAQs for Las Vegas Homeowners</>}
+          faqs={LV_WATER_HEATER_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 12: FINAL CTA */}
         <CTASection
@@ -711,21 +689,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

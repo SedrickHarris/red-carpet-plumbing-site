@@ -18,14 +18,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Plumbing services in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, water heater repair. NV #0048585A. (702) 567-9172.",
+    "Plumbing services in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, water heater repair. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Plumbing services in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, water heater repair. NV #0048585A. (702) 567-9172.",
+      "Plumbing services in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, water heater repair. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -74,7 +74,7 @@ const HENDERSON_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed to work in Henderson, NV?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Henderson.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Henderson.",
     category: "trust",
   },
   {
@@ -220,8 +220,8 @@ const HENDERSON_COMMUNITIES = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
-  "4.8-star rating across 76 Google reviews",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
 ];
@@ -272,10 +272,11 @@ const plumberSchema = {
       closes: "16:30",
     },
   ],
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -283,7 +284,7 @@ const plumberSchema = {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
     name: "Nevada C-1 Plumbing and Heating Contractor License",
-    identifier: "0048585A",
+    identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
       name: "State of Nevada Contractors Board",
@@ -302,7 +303,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Plumbing Services in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed plumbing services throughout Henderson, NV including Green Valley and Lake Las Vegas. NV Licensed #0048585A.",
+    "Red Carpet Plumbing provides licensed plumbing services throughout Henderson, NV including Green Valley and Lake Las Vegas. NV Licensed #048585A.",
   url: "https://redcarpetplumbing.com/henderson-plumbing-services/",
   isPartOf: {
     "@type": "WebSite",
@@ -339,8 +340,8 @@ const breadcrumbSchema = {
 const faqSchema = buildFaqPageSchema(HENDERSON_FAQS);
 
 const TRUST_STRIP_ITEMS = [
-"4.8 stars, 76 Google reviews",
-"NV Licensed #0048585A",
+"4.8 stars, 81 Google reviews",
+"NV Licensed #048585A",
 "Over 40 years serving Las Vegas Valley",
 "Transparent pricing, no hidden fees",
 ];
@@ -370,7 +371,7 @@ export default function HendersonPlumbingServicesPage() {
               <br /> in Henderson, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides residential and commercial plumbing services throughout Henderson, Nevada, including Green Valley, Lake Las Vegas, and surrounding communities. Our licensed plumbers handle everything from emergency plumbing and drain cleaning to water heater repair, slab leak detection, and repiping. NV Contractor License #0048585A."
+          subheading="Red Carpet Plumbing provides residential and commercial plumbing services throughout Henderson, Nevada, including Green Valley, Lake Las Vegas, and surrounding communities. Our licensed plumbers handle everything from emergency plumbing and drain cleaning to water heater repair, slab leak detection, and repiping. NV Contractor License #048585A."
           trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -398,7 +399,7 @@ export default function HendersonPlumbingServicesPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Henderson, Nevada and surrounding communities. We hold
-                Nevada Contractor License #0048585A under the C-1 Plumbing and
+                Nevada Contractor License #048585A under the C-1 Plumbing and
                 Heating classification and have been serving the Las Vegas
                 Valley, including Henderson, for over 40 years. Our licensed
                 plumbers provide residential and commercial plumbing for
@@ -586,9 +587,9 @@ export default function HendersonPlumbingServicesPage() {
                 <li key={item} className="flex items-start gap-3">
                   <CheckMark />
                   <span className="text-base leading-7 text-brand-dark/85">
-                    {item === "4.8-star rating across 76 Google reviews" ? (
+                    {item === "4.8-star rating across 81 Google reviews" ? (
                       <>
-                        4.8-star rating across 76 Google reviews.{" "}
+                        4.8-star rating across 81 Google reviews.{" "}
                         <a
                           href="https://share.google/oY5LcfC0lhWJXVjJj"
                           target="_blank"

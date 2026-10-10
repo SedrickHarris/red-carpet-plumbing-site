@@ -23,7 +23,7 @@ Use this prompt at new-client startup (during `docs/new-client-startup-workflow.
 - `{{PRIMARY_SERVICES}}` — comma-separated list of primary services (e.g., `Commercial & Office Cleaning, Janitorial Services, Post-Construction Cleanup, Move-In Cleaning, Move-Out Cleaning, Deep Cleaning, Retail Space Cleaning`)
 - `{{PRIMARY_LOCATIONS}}` — comma-separated list of primary cities + county (e.g., `Las Vegas, Henderson, North Las Vegas, Boulder City, Clark County`)
 - `{{BRAND_MESSAGE}}` — short core message (e.g., `Where small details bring BIG RESULTS.`)
-- `{{PHONE}}` — display-format phone number (e.g., `(702) 444-5077`)
+- `{{PHONE}}` — display-format phone number (e.g., `(702) 567-9172`)
 - `{{EMAIL}}` — primary email address (e.g., `info@finaltouchcleaningteam.com`)
 
 ---

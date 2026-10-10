@@ -9,10 +9,12 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing. "24/7 Emergency Service" and
 // "transparent pricing, no hidden fees" are source-site claims shown on this
-// page. License #0048585A is a verified business claim.
+// page. License #048585A is a verified business claim.
 // SCHEMA NOTE: Lake Las Vegas is a master-planned community within the
 // incorporated City of Henderson, so Service.areaServed uses the Green Valley
 // pattern: Place (Lake Las Vegas, Nevada) -> containedInPlace City (Henderson)
@@ -52,7 +54,7 @@ export const metadata: Metadata = {
 // Hero trust strip. FLAG comment retained per established sibling pattern.
 const LLV_LEAK_TRUST = [
   "Non-Invasive Detection",
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   // FLAG: source-site claim -- verify before final launch.
   "24/7 Emergency Service",
   "Serving Lake Las Vegas and Henderson",
@@ -170,45 +172,52 @@ const LLV_LEAK_STEPS = [
 // ---------------------------------------------------------------------------
 // FAQ -- FAQPage schema source of truth.
 // ---------------------------------------------------------------------------
-const LLV_LEAK_FAQS = [
+const LLV_LEAK_FAQS: FaqItem[] = [
   {
     question:
       "How do I know if I have a hidden water leak in my Lake Las Vegas home?",
     answer:
       "The most common signs of a hidden water leak in a Lake Las Vegas home are an unexplained increase in your water bill, the sound of running water when all fixtures are off, warm or wet spots on floors or walls, discoloration or bubbling paint on walls or ceilings, a persistent musty odor in part of the home, reduced water pressure with no other explanation, and unexplained cracks in walls or flooring. If you notice one or more of these signs, a professional leak detection inspection can locate the source.",
+    category: "causes-signs",
   },
   {
     question:
       "How can I check for a water leak using my meter in Lake Las Vegas?",
     answer:
       "Turn off all water fixtures and appliances in your home. Locate your water meter at the street and record the reading. Do not use any water for 30 minutes, then check the meter again. If the reading has changed, water is being used somewhere in the system, which indicates an active leak. This test confirms a leak is present but does not locate it. Call a licensed plumber for a professional inspection to find the source.",
+    category: "causes-signs",
   },
   {
     question: "What causes hidden pipe leaks in Lake Las Vegas homes?",
     answer:
       "The most common cause in Lake Las Vegas is mineral corrosion inside copper supply lines from hard water. Lake Las Vegas homes were built between 2000 and 2010 using copper plumbing, and the Las Vegas Valley water supply from Lake Mead measures 17 to 24 grains per gallon. Over 15 to 25 years, dissolved minerals corrode copper pipe walls from the inside, thinning them until pinhole leaks develop. Caliche soil movement beneath slab foundations adds mechanical stress to buried copper lines. Unlike older Las Vegas Valley communities, Lake Las Vegas homes do not have galvanized steel or polybutylene pipe.",
+    category: "causes-signs",
   },
   {
     question:
       "What is non-invasive leak detection and why does it matter for Lake Las Vegas homes?",
     answer:
       "Non-invasive leak detection uses acoustic sensors, thermal imaging, and pressure testing to locate a hidden leak without opening walls, cutting into slabs, or removing flooring until the exact leak location is confirmed. This approach is particularly important for Lake Las Vegas resort residential homes where unnecessary demolition is disruptive and costly. Red Carpet Plumbing locates the leak precisely first, then discusses repair options before any work begins.",
+    category: "causes-signs",
   },
   {
     question:
       "Can a small hidden leak in my Lake Las Vegas home cause serious damage?",
     answer:
       "Yes. A small hidden leak inside a wall can promote mold growth within 24 to 48 hours and can damage wood framing, drywall, insulation, and flooring over weeks and months without any visible surface sign. An underground supply line leak can waste hundreds of gallons per month and create soil saturation conditions near the foundation. Early detection and repair limits damage and reduces total repair cost.",
+    category: "causes-signs",
   },
   {
     question: "Does Red Carpet Plumbing serve Lake Las Vegas for leak detection?",
     answer:
       "Yes. Red Carpet Plumbing provides leak detection and repair for homes throughout Lake Las Vegas as part of its Henderson, NV service area. Lake Las Vegas is a master-planned resort community within the incorporated City of Henderson. Call (702) 567-9172 to schedule a leak detection inspection.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day leak detection service in Lake Las Vegas?",
     answer:
       "Same-day leak detection service is available in Lake Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -256,7 +265,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
   description:
-    "Non-invasive leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging locate hidden leaks without demolition. Licensed plumbers. Nevada Contractor License #0048585A.",
+    "Non-invasive leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging locate hidden leaks without demolition. Licensed plumbers. Nevada Contractor License #048585A.",
   url: "https://redcarpetplumbing.com/lake-las-vegas/leak-detection-repair/",
   isPartOf: {
     "@type": "WebSite",
@@ -296,7 +305,7 @@ const serviceSchema = {
   name: "Leak Detection and Repair in Lake Las Vegas, Henderson, NV",
   serviceType: "Leak Detection and Repair",
   description:
-    "Non-invasive leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging locate hidden water leaks without demolition. Wall leaks, underground supply line leaks, and slab-adjacent leaks. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    "Non-invasive leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging locate hidden water leaks without demolition. Wall leaks, underground supply line leaks, and slab-adjacent leaks. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -334,18 +343,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LLV_LEAK_FAQS.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: f.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LLV_LEAK_FAQS);
 
 export default function LakeLasVegasLeakDetectionPage() {
   return (
@@ -629,31 +627,11 @@ export default function LakeLasVegasLeakDetectionPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Leak Detection Questions for Lake Las Vegas Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LLV_LEAK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Leak Detection Questions for Lake Las Vegas Homeowners</>}
+          faqs={LLV_LEAK_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 9: RELATED SERVICES (rerouting cards) */}
         <section className="bg-brand-surface-alt">
@@ -713,20 +691,5 @@ export default function LakeLasVegasLeakDetectionPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

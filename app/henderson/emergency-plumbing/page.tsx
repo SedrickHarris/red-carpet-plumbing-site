@@ -10,8 +10,10 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, 24/7 availability,
+// FLAG: VERIFY before publishing — license #048585A, 24/7 availability,
 // transparent-pricing, and any rating/40-year claims are source-site/project
 // claims. This page uses the conservative wording from the approved brief and
 // does NOT assert rating, review count, or "40 years" here.
@@ -45,42 +47,49 @@ export const metadata: Metadata = {
 // FLAG: VERIFY — Q2 (24-hour availability) and Q4 (transparent pricing) use
 // conservative wording per the approved brief; confirm before any expansion.
 // ---------------------------------------------------------------------------
-const HENDERSON_EMERGENCY_FAQS = [
+const HENDERSON_EMERGENCY_FAQS: FaqItem[] = [
   {
     question:
       "What should I do while waiting for an emergency plumber in Henderson?",
     answer:
       "Shut off the water at the nearest shutoff valve or at your main supply if a pipe has burst or a major leak is active. If you suspect a gas issue, leave the building and call your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
+    category: "emergency",
   },
   {
     question: "Is there a 24-hour plumber in Henderson, NV?",
     answer:
       "Red Carpet Plumbing provides emergency plumbing service in Henderson. Call (702) 567-9172 to reach our team.",
+    category: "emergency",
   },
   {
     question: "Are slab leaks a common emergency in Henderson?",
     answer:
       "Yes. Henderson's older Green Valley neighborhoods have copper supply lines now 30 to 40 years old, thinned by years of hard water mineral exposure. Caliche soil movement beneath slab foundations adds stress to those pipes. Slab leaks are one of the more common emergency plumbing situations we see in Henderson.",
+    category: "emergency",
   },
   {
     question: "How much does emergency plumbing cost in Henderson?",
     answer:
       "Emergency plumbing costs vary based on the type of repair, time of service, and materials needed. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
+    category: "emergency",
   },
   {
     question: "Do you serve Green Valley and Lake Las Vegas for emergency plumbing?",
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service throughout Henderson, including Green Valley and Lake Las Vegas.",
+    category: "service-area",
   },
   {
     question: "Do you offer emergency plumbing for businesses in Henderson?",
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service for both residential and commercial properties throughout Henderson.",
+    category: "emergency",
   },
   {
     question: "Do you offer same-day emergency plumbing service in Henderson?",
     answer:
       "Same-day emergency plumbing service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "emergency",
   },
 ];
 
@@ -150,7 +159,7 @@ const EMERGENCY_STEPS = [
 // claims per the approved brief.
 const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with Henderson's construction history and plumbing conditions",
-  "Licensed plumbers (NV License #0048585A)",
+  "Licensed plumbers (NV License #048585A)",
   "Transparent pricing with no hidden fees",
   "Familiar with Green Valley's aging pipe systems, caliche soil conditions, and slab construction",
   "Residential and commercial emergency service throughout Henderson",
@@ -262,18 +271,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: HENDERSON_EMERGENCY_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(HENDERSON_EMERGENCY_FAQS);
 
 export default function HendersonEmergencyPlumbingPage() {
   return (
@@ -306,7 +304,7 @@ export default function HendersonEmergencyPlumbingPage() {
           }
           subheading="Red Carpet Plumbing provides emergency plumbing service for homes and businesses throughout Henderson, NV, including Green Valley, Lake Las Vegas, and surrounding communities. Whether you are dealing with a burst pipe, sewer backup, slab leak, water heater failure, or gas line issue, our licensed plumbers are ready to help. Call (702) 567-9172 now."
           trustItems={[
-            "NV Licensed Plumbers, #0048585A",
+            "NV Licensed Plumbers, #048585A",
             "Emergency Plumbing Service Available",
             "Serving Henderson and the Las Vegas Valley",
             "Transparent Pricing, No Hidden Fees",
@@ -577,32 +575,11 @@ export default function HendersonEmergencyPlumbingPage() {
         </section>
 
         {/* SECTION 11: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Emergency Plumbing FAQs
-                <br className="hidden sm:block" /> for Henderson Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {HENDERSON_EMERGENCY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Emergency Plumbing FAQs <br className="hidden sm:block" /> for Henderson Homeowners</>}
+          faqs={HENDERSON_EMERGENCY_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 12: FINAL CTA */}
         <CTASection
@@ -641,21 +618,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

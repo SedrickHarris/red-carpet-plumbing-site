@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", and the
-// 4.8/76 rating are source-site/project claims. Each visible instance carries an
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", and the
+// 4.8/81 rating are source-site/project claims. Each visible instance carries an
 // inline FLAG comment.
 //
 // SCHEMA NOTE: Spring Valley is an unincorporated Clark County community; it is
@@ -24,14 +26,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Drain Cleaning in Spring Valley, NV | Red Carpet Plumbing",
   description:
-    "Professional drain cleaning in Spring Valley, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Spring Valley homes. NV #0048585A. (702) 567-9172.",
+    "Professional drain cleaning in Spring Valley, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Spring Valley homes. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/spring-valley/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in Spring Valley, NV | Red Carpet Plumbing",
     description:
-      "Professional drain cleaning in Spring Valley, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Spring Valley homes. NV #0048585A. (702) 567-9172.",
+      "Professional drain cleaning in Spring Valley, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Spring Valley homes. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -45,51 +47,58 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const SV_DRAIN_FAQS = [
+const SV_DRAIN_FAQS: FaqItem[] = [
   {
     question: "What causes drains to clog faster in Spring Valley?",
     answer:
       "Spring Valley homes face two clog-accelerating conditions. All Spring Valley homes receive Las Vegas Valley water that carries 17 to 24 grains of hardness per gallon, approximately 280 parts per million. This is among the hardest municipal water in the United States, and it causes calcium and magnesium deposits to build up inside pipe walls, narrowing the pipe interior and creating surfaces that trap grease and soap faster than in softer-water cities. Older homes in the Desert Inn and West Sahara corridors built in the 1970s through 1990s face an additional challenge: original galvanized steel drain lines that have been corroding from the inside out for 30 to 50 years, significantly narrowing the pipe interior and producing faster, more stubborn clogs than any other housing vintage in the Las Vegas Valley.",
+    category: "causes-signs",
   },
   {
     question:
       "How do I know if I need professional drain cleaning in Spring Valley?",
     answer:
       "Call a plumber when multiple drains are slow at the same time, when you have a complete blockage that DIY methods have not cleared, when drains produce sewage or sulfur odors, or when you hear gurgling sounds from toilets or other fixtures after using a drain. Multiple affected drains usually indicate a main sewer line problem that requires professional clearing.",
+    category: "causes-signs",
   },
   {
     question: "Are chemical drain cleaners safe for older Spring Valley pipes?",
     answer:
       "Chemical drain cleaners are not recommended for older Spring Valley homes with galvanized steel drain lines. Chemical cleaners can accelerate corrosion in already-degraded galvanized pipe walls, and they typically dissolve only part of the clog rather than addressing the corroded pipe interior that is the underlying cause of recurring clogs. Professional drain cleaning removes the actual blockage and allows a visual assessment of the pipe's condition.",
+    category: "the-service",
   },
   {
     question:
       "Is hydro jetting safe for older galvanized drain lines in Spring Valley?",
     answer:
       "Hydro jetting uses high-pressure water that is effective at removing grease, mineral scale, and debris from pipe walls. For older Spring Valley homes with galvanized drain lines that have been corroding for 30 to 50 years, a pipe condition assessment is required before applying full hydro jetting pressure. Heavily corroded galvanized pipe walls may not withstand the full pressure of hydro jetting. Red Carpet Plumbing assesses pipe condition before recommending this method on older Spring Valley drain lines.",
+    category: "the-service",
   },
   {
     question: "How much does drain cleaning cost in Spring Valley?",
     answer:
       "Drain cleaning costs vary based on the type of drain, the severity of the clog, the method required, and the pipe material. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
+    category: "cost",
   },
   {
     question: "Who handles plumbing permits in Spring Valley?",
     answer:
-      "Spring Valley is an unincorporated community in Clark County, Nevada. Plumbing permits and inspections in Spring Valley are handled through Clark County, not the City of Las Vegas. Red Carpet Plumbing holds NV License #0048585A and works within the applicable Clark County permit process for your address.",
+      "Spring Valley is an unincorporated community in Clark County, Nevada. Plumbing permits and inspections in Spring Valley are handled through Clark County, not the City of Las Vegas. Red Carpet Plumbing holds NV License #048585A and works within the applicable Clark County permit process for your address.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day drain cleaning service in Spring Valley?",
     answer:
       "Same-day drain cleaning service is available in Spring Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides professional drain cleaning throughout Spring Valley, Nevada, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. From slow kitchen drains and bathroom clogs to main sewer line cleaning and hydro jetting, our licensed plumbers clear Spring Valley drains completely. NV Contractor License #0048585A.";
+  "Red Carpet Plumbing provides professional drain cleaning throughout Spring Valley, Nevada, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. From slow kitchen drains and bathroom clogs to main sewer line cleaning and hydro jetting, our licensed plumbers clear Spring Valley drains completely. NV Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Drain Cleaning and Hydro Jetting",
   "Serving Spring Valley and Clark County",
   "Transparent Pricing, No Hidden Fees",
@@ -179,14 +188,13 @@ const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with Spring Valley's older housing stock, Desert Inn and West Sahara corridor galvanized drain lines, and hard water clog conditions",
   "Pipe condition assessment before applying high-pressure methods on older Spring Valley drain lines",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Residential drain cleaning service throughout Spring Valley including the Desert Inn and West Sahara corridors",
   "Hydro jetting available where pipe condition allows",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // ---------------------------------------------------------------------------
@@ -282,6 +290,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -313,18 +329,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SV_DRAIN_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SV_DRAIN_FAQS);
 
 export default function SpringValleyDrainCleaningPage() {
   return (
@@ -384,7 +389,7 @@ export default function SpringValleyDrainCleaningPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Spring Valley, Nevada and the Las Vegas Valley. We hold
-                Nevada Contractor License #0048585A under the C-1 Plumbing and
+                Nevada Contractor License #048585A under the C-1 Plumbing and
                 Heating classification and have been serving the Las Vegas Valley
                 for over 40 years.
               </p>
@@ -603,33 +608,11 @@ export default function SpringValleyDrainCleaningPage() {
         </section>
 
         {/* SECTION 7: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Drain Cleaning in Spring
-                Valley
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SV_DRAIN_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Drain Cleaning in Spring Valley</>}
+          faqs={SV_DRAIN_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 8: RELATED SERVICES */}
         <section className="bg-brand-surface-alt">
@@ -694,21 +677,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

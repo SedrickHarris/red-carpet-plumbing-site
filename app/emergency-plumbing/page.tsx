@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -11,6 +12,8 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Emergency Plumber in Las Vegas, NV | Red Carpet Plumbing",
@@ -29,53 +32,62 @@ export const metadata: Metadata = {
   },
 };
 
-const EMERGENCY_FAQS = [
+const EMERGENCY_FAQS: FaqItem[] = [
   {
     question:
       "Does Red Carpet Plumbing offer 24/7 emergency plumbing in Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service for homes and businesses throughout the Las Vegas Valley. Call (702) 567-9172 any time for emergency plumbing assistance.",
+    category: "emergency",
   },
   {
     question: "What counts as a plumbing emergency?",
     answer:
       "A plumbing emergency is any situation that poses an immediate risk of water damage, property damage, or a health hazard. Common emergencies include burst pipes, sewage backups, major active leaks, complete loss of water supply, and overflowing toilets that cannot be stopped. Slow drains and dripping faucets can typically wait for a scheduled appointment.",
+    category: "emergency",
   },
   {
     question: "What should I do first when a pipe bursts?",
     answer:
       "Shut off the main water supply to your home as quickly as possible. In most Las Vegas homes, the main shutoff valve is located near the front of the property in a ground-level box near the street. Once the water is off, call Red Carpet Plumbing at (702) 567-9172 for emergency repair.",
+    category: "emergency",
   },
   {
     question: "Why are slab leaks so common in Las Vegas?",
     answer:
       "Slab leaks are common in Las Vegas because of the combination of hard water mineral corrosion, desert soil movement from caliche and expansive clay, and the extreme heat and temperature swings that stress underground pipes. Many Las Vegas homes also have aging copper or galvanized pipes that have been weakened over decades of hard water exposure.",
+    category: "causes-signs",
   },
   {
     question: "Can I use water during a sewer backup?",
     answer:
       "No. Do not use any drains, toilets, or water fixtures in the building during a sewer backup. Using water will worsen the backup and increase the risk of sewage overflow into the home. Shut off the water supply if the backup is severe and call a plumber immediately.",
+    category: "the-service",
   },
   {
     question: "Is a slab leak an emergency?",
     answer:
       "A slab leak becomes an emergency when it causes visible water damage, sudden pressure loss, warm spots on the floor, or the sound of running water when all fixtures are off. Addressing a slab leak early prevents major foundation damage and mold growth. Red Carpet Plumbing provides slab leak detection and repair throughout the Las Vegas Valley.",
+    category: "emergency",
   },
   {
     question: "Does Red Carpet Plumbing handle gas line emergencies?",
     answer:
-      "Yes. Red Carpet Plumbing is licensed for gas line work under NV Contractor License #0048585A (C-1 Plumbing and Heating). If you smell gas, leave the building immediately and call your gas utility first, then call us for gas line inspection and repair after the area is declared safe.",
+      "Yes. Red Carpet Plumbing is licensed for gas line work under NV Contractor License #048585A (C-1 Plumbing and Heating). If you smell gas, leave the building immediately and call your gas utility first, then call us for gas line inspection and repair after the area is declared safe.",
+    category: "the-service",
   },
   {
     question:
       "What areas does Red Carpet Plumbing serve for emergency plumbing?",
     answer:
       "Red Carpet Plumbing provides emergency plumbing service throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities throughout the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day emergency plumbing service in Las Vegas?",
     answer:
       "Same-day emergency plumbing service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "emergency",
   },
 ];
 
@@ -144,7 +156,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
   {
     title: "Gas Line Emergency",
     description:
-      "If you smell gas, leave the building immediately without operating any light switches or electrical devices. Call your gas utility from outside, then call a licensed plumber for gas line inspection and repair. Red Carpet Plumbing is licensed for gas line work under NV #0048585A (C-1 Plumbing and Heating).",
+      "If you smell gas, leave the building immediately without operating any light switches or electrical devices. Call your gas utility from outside, then call a licensed plumber for gas line inspection and repair. Red Carpet Plumbing is licensed for gas line work under NV #048585A (C-1 Plumbing and Heating).",
     href: "/emergency-plumbing/gas-line/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-gas-line-emergency-card.webp",
@@ -294,17 +306,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -370,18 +383,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: EMERGENCY_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(EMERGENCY_FAQS);
 
 export default function EmergencyPlumbingPage() {
   return (
@@ -410,8 +412,8 @@ export default function EmergencyPlumbingPage() {
           }
           subheading="Red Carpet Plumbing provides 24/7 emergency plumbing service for homes and businesses throughout the Las Vegas Valley. If you have a burst pipe, sewer backup, water heater failure, or any urgent plumbing situation, call us now at (702) 567-9172."
           trustItems={[
-            "4.8 stars, 76 Google reviews",
-            "NV Licensed Plumbers, #0048585A",
+            "4.8 stars, 81 Google reviews",
+            "NV Licensed Plumbers, #048585A",
             "Available 24/7 for plumbing emergencies",
             "Over 40 years serving Las Vegas",
             "Transparent Pricing, No Hidden Fees",
@@ -531,7 +533,11 @@ export default function EmergencyPlumbingPage() {
 
         {/* SECTION 5: WHY LAS VEGAS HOMES */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-active-water-leak.webp"
+              alt="Open under-sink cabinet with water dripping from the P-trap onto a wet tile floor"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -564,12 +570,17 @@ export default function EmergencyPlumbingPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: EMERGENCY STEPS (HowTo) */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp"
+              alt="Water spraying from a leaking under-sink drain connection beside a plumber's tool bag"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -606,6 +617,7 @@ export default function EmergencyPlumbingPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -713,32 +725,11 @@ export default function EmergencyPlumbingPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Emergency Plumbing in Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {EMERGENCY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Emergency Plumbing in Las Vegas</>}
+          faqs={EMERGENCY_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -750,7 +741,7 @@ export default function EmergencyPlumbingPage() {
               <br className="hidden sm:block" /> in Las Vegas?
             </>
           }
-          body="Red Carpet Plumbing is available 24 hours a day for emergency plumbing throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated, NV #0048585A."
+          body="Red Carpet Plumbing is available 24 hours a day for emergency plumbing throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated, NV #048585A."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",
@@ -769,20 +760,5 @@ export default function EmergencyPlumbingPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172: project-established value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating: project-established value;
+// - License #048585A, C-1 Plumbing and Heating: project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees": source-site claim; confirm
 //   before launch.
@@ -45,19 +45,21 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  // FLAG: VERIFY license #0048585A in the description before publishing.
+  // FLAG: VERIFY license #048585A in the description before publishing.
   title: "Sewer Line Services in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Sewer line inspection, cleaning, repair, and replacement in Summerlin, NV. Camera inspections and trenchless options. NV #0048585A. Call (702) 567-9172.",
+    "Sewer line inspection, cleaning, repair, and replacement in Summerlin, NV. Camera inspections and trenchless options. NV #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin/sewer-line-services/",
   },
   openGraph: {
     title: "Sewer Line Services in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Sewer line inspection, cleaning, repair, and replacement in Summerlin, NV. Camera inspections and trenchless options. NV #0048585A. Call (702) 567-9172.",
+      "Sewer line inspection, cleaning, repair, and replacement in Summerlin, NV. Camera inspections and trenchless options. NV #048585A. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/sewer-line-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -68,13 +70,12 @@ export const metadata: Metadata = {
 
 type LinkSeg = string | { href: string; text: string };
 
-// FLAG: VERIFY "4.8-star rated" before publishing. Visible text only, not in schema.
 const HERO_SUBHEADING =
   "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement for homes and businesses throughout Summerlin, NV. Trenchless options available. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.";
 
 const HERO_TRUST_ITEMS = [
-  // FLAG: VERIFY license #0048585A before publishing.
-  "NV Licensed, #0048585A",
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed, #048585A",
   "Sewer Camera Inspection Available",
   "Serving All Summerlin Villages",
   // FLAG: VERIFY transparent pricing claim before publishing.
@@ -85,9 +86,9 @@ const HERO_TRUST_ITEMS = [
 const DIRECT_ANSWER = {
   heading: "Sewer Line Problems in Summerlin, and How We Fix Them",
   p1: "Slow drains in more than one fixture, sewage odors, and repeat backups are common signs of a sewer line problem in Summerlin homes. Red Carpet Plumbing finds the cause with a camera inspection, then cleans, repairs, relines, or replaces the line, including trenchless options that limit digging in your yard. Call (702) 567-9172 to schedule an inspection.",
-  // FLAG: VERIFY license #0048585A before publishing.
+  // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
-  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#0048585A). We explain your options after the camera inspection and provide transparent pricing with no hidden fees.",
+  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain your options after the camera inspection and provide transparent pricing with no hidden fees.",
   p3: "Need sewer line service in Summerlin? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get an inspection on the schedule.",
 };
 
@@ -182,8 +183,8 @@ const PROCESS_STEPS: { name: string; body: string }[] = [
 // Section 7: why choose.
 const WHY_CHOOSE_HEADING = "Why Summerlin Homeowners Choose Red Carpet Plumbing";
 const WHY_CHOOSE_ITEMS = [
-  // FLAG: VERIFY license #0048585A before publishing.
-  "Licensed Nevada plumbers, NV License #0048585A, C-1 Plumbing and Heating",
+  // FLAG: VERIFY license #048585A before publishing.
+  "Licensed Nevada plumbers, NV License #048585A, C-1 Plumbing and Heating",
   "Camera inspection first, so every recommendation is based on what is actually in your line",
   "Familiar with Summerlin's mix of older villages, newer builds, and two permit jurisdictions",
   "Clear options explained before work begins, including trenchless repair where it fits",
@@ -210,34 +211,41 @@ const AREA_CHIPS = [
 const AREAS_CROSS_LINKS: LinkSeg[] = ["We also provide sewer line services in ", { href: "/spring-valley/sewer-line-services/", text: "Spring Valley" }, " and ", { href: "/las-vegas/sewer-line-services/", text: "Las Vegas" }, ". For every service we offer in your community, visit our ", { href: "/summerlin-plumbing-services/", text: "Summerlin plumbing services" }, " page."];
 
 // Section 9: FAQs. Single source for the visible accordion and the FAQPage schema.
-const FAQS: { question: string; answer: string }[] = [
+const FAQS: FaqItem[] = [
   {
     question: "What causes sewer line backups in Summerlin?",
     answer: "Root intrusion, aging pipe, cracked or offset joints, and grease or debris buildup are the most common causes. Summerlin's established landscaping makes roots a frequent finding. A camera inspection identifies the exact cause before any repair begins.",
+    category: "causes-signs",
   },
   {
     question: "Are sewer line problems common in older Summerlin villages?",
     answer: "They become more likely as lines age. Homes in the oldest villages, including The Hills, The Trails, and The Arbors, are now 25 to 35 years old. A camera inspection shows the condition of the line and whether maintenance or repair makes sense.",
+    category: "the-service",
   },
   {
     question: "How do I know if my sewer line is clogged or damaged?",
     answer: "A single slow drain usually points to a local clog. Several slow drains, gurgling, sewage odor, or repeat backups suggest a problem in the main sewer line. A camera inspection is the reliable way to tell a clog from damage.",
+    category: "causes-signs",
   },
   {
     question: "Who is responsible for the sewer line on my Summerlin property?",
     answer: "The property owner is generally responsible for the sewer lateral, the pipe from the home to the public sewer connection. Summerlin spans the City of Las Vegas and unincorporated Clark County, so the agency and rules that apply depend on your address. We can help you confirm what applies.",
+    category: "the-service",
   },
   {
     question: "Can sewer line repair avoid digging up my Summerlin yard?",
     answer: "Often, yes. For lines that qualify, trenchless CIPP lining or pipe bursting repairs or replaces the pipe without a full-length trench. A camera inspection determines whether your line qualifies. Collapsed sections may still need excavation.",
+    category: "the-service",
   },
   {
     question: "Do I need to check with my homeowners association before sewer work?",
     answer: "Excavation can disturb landscaping and hardscape that an association may regulate, so check your community's rules before work begins. Trenchless methods can reduce surface disturbance, and we can explain what the work involves at your property.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day sewer line service in Summerlin?",
     answer: "Same-day sewer line service is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address. When you call, tell us what you are seeing, such as slow drains in several fixtures, gurgling, or a backup, so we can schedule the right visit.",
+    category: "timing-process",
   },
 ];
 
@@ -277,7 +285,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Sewer Line Services in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Sewer line inspection, cleaning, repair, and replacement in Summerlin, NV. Camera inspections and trenchless options. NV #0048585A. Call (702) 567-9172.",
+    "Sewer line inspection, cleaning, repair, and replacement in Summerlin, NV. Camera inspections and trenchless options. NV #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/summerlin/sewer-line-services/",
   isPartOf: {
     "@type": "WebSite",
@@ -316,15 +324,23 @@ const serviceSchema = {
   "@type": "Service",
   name: "Sewer Line Services",
   serviceType: "Sewer Line Services",
-  // FLAG: VERIFY license #0048585A in the description before publishing.
+  // FLAG: VERIFY license #048585A in the description before publishing.
   description:
-    "Red Carpet Plumbing provides sewer line camera inspection, cleaning, root intrusion removal, repair, trenchless repair, and replacement for homes and businesses in Summerlin, NV. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides sewer line camera inspection, cleaning, root intrusion removal, repair, trenchless repair, and replacement for homes and businesses in Summerlin, NV. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone before publishing.
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -355,18 +371,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(FAQS);
 
 const LINK_CLASS =
   "font-semibold text-brand-dark underline hover:text-brand-dark/70";
@@ -650,32 +655,11 @@ export default function SummerlinSewerLinePage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Sewer Line Services in Summerlin, NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Sewer Line Services in Summerlin, NV</>}
+          faqs={FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: RELATED SERVICES */}
         <section className="bg-white">
@@ -744,21 +728,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

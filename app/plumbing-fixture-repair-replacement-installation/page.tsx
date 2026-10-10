@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,12 +11,14 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
     "Plumbing Fixture Repair, Replacement and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs plumbing fixtures for homes and businesses throughout Las Vegas. Faucets, shower valves, showerheads, bathtub fixtures, and more. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs plumbing fixtures for homes and businesses throughout Las Vegas. Faucets, shower valves, showerheads, bathtub fixtures, and more. NV Licensed #048585A. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/plumbing-fixture-repair-replacement-installation/",
@@ -24,57 +27,66 @@ export const metadata: Metadata = {
     title:
       "Plumbing Fixture Repair, Replacement and Installation in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed plumbing fixture repair and installation throughout Las Vegas and the Las Vegas Valley. NV #0048585A. 4.8 stars, 76 reviews.",
+      "Licensed plumbing fixture repair and installation throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
   },
 };
 
-const FIXTURE_FAQS = [
+const FIXTURE_FAQS: FaqItem[] = [
   {
     question: "What are plumbing fixtures?",
     answer:
       "Plumbing fixtures are the devices and hardware connected to your home's water supply and drain system that control water flow for daily use. Common plumbing fixtures include faucets, showerheads, shower valves, bathtub faucets and spouts, sinks, toilets, utility sinks, and outdoor hose bibs. Plumbing fixtures require periodic repair or replacement as components wear, corrode, or become outdated. In Las Vegas, hard water mineral deposits accelerate fixture wear compared to soft-water markets.",
+    category: "the-service",
   },
   {
     question:
       "When should I replace a plumbing fixture instead of repairing it?",
     answer:
       "Replacement is generally the right choice when a fixture requires repeated repairs for the same problem, when the body is cracked or corroded beyond repair, when replacement parts are no longer available for older models, or when the fixture is significantly inefficient by current standards. In Las Vegas, fixtures with severe internal mineral buildup that cannot be cleared, or shower valves with failing cartridges that have been repaired multiple times, are common replacement candidates. A plumber can assess whether repair or replacement is the more practical long-term decision.",
+    category: "timing-process",
   },
   {
     question: "Can hard water damage plumbing fixtures?",
     answer:
       "Yes. Las Vegas hard water contains high concentrations of calcium and magnesium that deposit on fixture surfaces and inside valve components over time. Scale buildup clogs showerhead spray holes, restricts flow through aerators, accelerates cartridge wear in shower valves and faucets, and corrodes finish surfaces. Fixtures in Las Vegas homes typically require more frequent maintenance and earlier replacement than the same fixtures would in soft-water markets. Regular cleaning of showerheads and aerators helps extend fixture life.",
+    category: "the-service",
   },
   {
     question: "Does a plumber install shower valves and shower fixtures?",
     answer:
       "Yes. A licensed plumber installs and repairs shower valves, shower trim kits, showerheads, handheld showers, and bathtub fixtures. Shower valve installation requires working inside the wall to connect the valve body to supply lines and the drain connection. This is licensed plumbing work. Red Carpet Plumbing handles full shower fixture installations including valve replacement, trim installation, and supply line connection throughout Las Vegas.",
+    category: "the-service",
   },
   {
     question: "How long do plumbing fixtures last?",
     answer:
       "The lifespan of a plumbing fixture depends on the type, quality, and water conditions. In Las Vegas, hard water stress shortens the practical life of fixtures compared to manufacturer estimates. Shower cartridges may need replacement every five to ten years in hard water conditions. Showerheads accumulate significant scale buildup within a few years. Faucet aerators need cleaning or replacement more frequently than in soft-water areas. Fixtures with ceramic disc valves generally outlast compression and cartridge valves in hard water conditions.",
+    category: "timing-process",
   },
   {
     question: "Can a plumber help with bathroom renovation plumbing?",
     answer:
       "Yes. Red Carpet Plumbing provides plumbing services for bathroom and kitchen renovations throughout Las Vegas, including fixture installation, supply line rough-in, drain connection, and coordination with renovation contractors. Fixture installation as part of a renovation includes connecting new fixtures to existing or new supply lines, installing drain assemblies, and confirming all connections are leak-free before the renovation is complete.",
+    category: "the-service",
   },
   {
     question: "What causes low water pressure at a showerhead?",
     answer:
       "Low shower pressure is most commonly caused by mineral scale clogging the showerhead spray holes, which is a particularly common issue in Las Vegas due to hard water. Cleaning or replacing the showerhead usually resolves the problem. If pressure is low throughout the shower system and not just at the head, the cause may be a partially closed shut-off valve, a failing pressure-balancing valve cartridge, or a supply line issue that requires a plumber to diagnose.",
+    category: "causes-signs",
   },
   {
     question:
       "What areas does Red Carpet Plumbing serve for plumbing fixture services?",
     answer:
       "Red Carpet Plumbing provides plumbing fixture repair, replacement, and installation throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day fixture repair service in Las Vegas?",
     answer:
       "Same-day fixture repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -292,7 +304,7 @@ const serviceSchema = {
   name: "Plumbing Fixture Repair, Replacement and Installation",
   serviceType: "Plumbing Fixture Repair and Installation",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs plumbing fixtures for homes and businesses throughout the Las Vegas Valley. Services include shower valve repair and replacement, showerhead installation, bathtub fixture service, faucet repair, outdoor hose bib service, and renovation fixture installation. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing repairs, replaces, and installs plumbing fixtures for homes and businesses throughout the Las Vegas Valley. Services include shower valve repair and replacement, showerhead installation, bathtub fixture service, faucet repair, outdoor hose bib service, and renovation fixture installation. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -302,17 +314,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -369,7 +382,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Plumbing Fixture Repair, Replacement and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs plumbing fixtures throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs plumbing fixtures throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/plumbing-fixture-repair-replacement-installation/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -390,18 +403,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FIXTURE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(FIXTURE_FAQS);
 
 export default function PlumbingFixtureRepairReplacementInstallationPage() {
   return (
@@ -432,8 +434,8 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
           }
           subheading="Repair, replacement, and installation of plumbing fixtures for kitchens, bathrooms, and utility areas throughout the Las Vegas Valley."
           trustItems={[
-            "Licensed Plumbers, NV #0048585A",
-            "4.8 Stars, 76 Google Reviews",
+            "Licensed Plumbers, NV #048585A",
+            "4.8 Stars, 81 Google Reviews",
             "Residential and Commercial Service",
             "Transparent Pricing, No Hidden Fees",
             "Over 40 Years in Las Vegas",
@@ -446,7 +448,7 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
             label: "Request Fixture Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
+          ctaNote="NV Licensed #048585A | 4.8 Stars, 81 Reviews"
           formSlot={<QuoteFormPlaceholder title="Get a Fixture Service Quote" />}
           accentWidth="sm"
           backgroundImage={{
@@ -534,7 +536,11 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
 
         {/* SECTION 5: WHY PLUMBING FIXTURES WEAR FASTER IN LAS VEGAS */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/faucet-sink-repair-installation/red-carpet-plumbing-bathroom-faucet-sink-repair-las-vegas.webp"
+              alt="Open vanity cabinet under a bathroom sink with a tool bag and a view of the Las Vegas skyline"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -568,12 +574,17 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: HOWTO PROCESS */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/toilet-repair-installation/red-carpet-plumbing-new-toilet-installation-las-vegas.webp"
+              alt="Toilet installation with a wax ring, supply line and tools beside a tool bag"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -613,6 +624,7 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -628,7 +640,7 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing handles fixture repairs, replacements,
                   and renovation installations throughout the Las Vegas
-                  Valley. NV Contractor License #0048585A.
+                  Valley. NV Contractor License #048585A.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">
@@ -739,31 +751,11 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Plumbing Fixture Questions Answered
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {FIXTURE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Plumbing Fixture Questions Answered</>}
+          faqs={FIXTURE_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -798,20 +790,5 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

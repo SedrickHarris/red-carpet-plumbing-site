@@ -10,8 +10,10 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, emergency/24-7
+// FLAG: VERIFY before publishing — license #048585A, emergency/24-7
 // availability, transparent-pricing, and any rating/40-year claims are
 // source-site/project claims. This page uses the conservative wording from the
 // approved brief and does NOT assert rating, review count, or "40 years" here.
@@ -49,43 +51,50 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const HENDERSON_WH_FAQS = [
+const HENDERSON_WH_FAQS: FaqItem[] = [
   {
     question: "How long do water heaters last in Henderson, NV?",
     answer:
       "In Henderson, tank water heaters typically last 8 to 12 years, often shorter than the national average due to the Las Vegas Valley's hard water. Hard water causes faster sediment buildup and accelerated anode rod depletion, both of which shorten tank life. Original Green Valley homes with plumbing systems 30 to 40 years old have often cycled through multiple water heaters under these conditions. Tankless water heaters generally last 15 to 20 years but require annual descaling.",
+    category: "timing-process",
   },
   {
     question: "Do Green Valley homes have more water heater problems?",
     answer:
       "Yes. Green Valley's original neighborhoods, built from the mid-1980s through the mid-1990s, have plumbing systems that have operated under Las Vegas Valley hard water conditions for 30 to 40 years. This sustained mineral exposure has depleted anode rods faster, accumulated more sediment, and put more cumulative stress on water heater systems than in newer Henderson construction. Original Green Valley homeowners are among the most common Henderson water heater service calls.",
+    category: "the-service",
   },
   {
     question: "Should I repair or replace my Henderson water heater?",
     answer:
       "For water heaters under 8 years old with repairable components, repair is usually the right choice. For units 10 years or older, units with visible tank corrosion, or units leaking from the tank body, replacement typically makes more financial sense. Red Carpet Plumbing provides an honest assessment of both options before recommending a course of action.",
+    category: "the-service",
   },
   {
     question: "Is a tankless water heater worth it in Henderson?",
     answer:
       "Tankless water heaters offer longer service life, no standby heat loss, and continuous hot water. In Henderson, they require annual descaling to remove hard water mineral deposits from the heat exchanger. For Green Valley homes where aging tank units are a recurring issue, or for households with high hot water demand, a tankless unit is often a sound long-term investment.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing serve Green Valley and Lake Las Vegas for water heater service?",
     answer:
       "Yes. Red Carpet Plumbing provides water heater repair and installation throughout Henderson, including Green Valley, Green Valley Ranch, and Lake Las Vegas.",
+    category: "service-area",
   },
   {
     question:
       "What is a thermal expansion tank and does my Henderson home need one?",
     answer:
       "A thermal expansion tank absorbs the pressure created when a water heater heats water in a closed-loop plumbing system. Most Henderson homes operate on a closed-loop system due to backflow preventers at the street meter. Clark County plumbing code and most manufacturer warranties require a thermal expansion tank on closed-loop installations. If your water heater was installed without one, Red Carpet Plumbing can add it.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day water heater repair service in Henderson?",
     answer:
       "Same-day water heater repair service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -163,7 +172,7 @@ const HENDERSON_WH_SERVICES = [
   },
   {
     label: "Gas and electric water heater service",
-    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work performed under NV License #0048585A.",
+    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work performed under NV License #048585A.",
   },
 ];
 
@@ -191,7 +200,7 @@ const WH_STEPS = [
 const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company with extensive experience servicing water heaters under Henderson hard water conditions",
   "Familiar with Green Valley original home plumbing systems and aging water heater profiles",
-  "Licensed plumbers (NV License #0048585A)",
+  "Licensed plumbers (NV License #048585A)",
   "All installations completed to Clark County code including seismic bracing",
   "Transparent pricing with no hidden fees",
   "Residential and commercial water heater service throughout Henderson",
@@ -303,18 +312,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: HENDERSON_WH_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(HENDERSON_WH_FAQS);
 
 export default function HendersonWaterHeaterPage() {
   return (
@@ -349,7 +347,7 @@ export default function HendersonWaterHeaterPage() {
           }
           subheading="Red Carpet Plumbing repairs and installs water heaters for homes and businesses throughout Henderson, NV, including Green Valley, Green Valley Ranch, and Lake Las Vegas. Henderson hard water causes faster sediment buildup and anode rod depletion, and original Green Valley homes with 30 to 40 years of hard water exposure face above-average water heater failure rates. Our licensed plumbers handle all water heater work to current Clark County plumbing code. Call (702) 567-9172 to schedule service."
           trustItems={[
-            "NV Licensed Plumbers, #0048585A",
+            "NV Licensed Plumbers, #048585A",
             "Emergency Water Heater Service Available",
             "Serving Henderson and the Las Vegas Valley",
             "Transparent Pricing, No Hidden Fees",
@@ -654,31 +652,11 @@ export default function HendersonWaterHeaterPage() {
         </section>
 
         {/* SECTION 11: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Water Heater FAQs for Henderson Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {HENDERSON_WH_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Water Heater FAQs for Henderson Homeowners</>}
+          faqs={HENDERSON_WH_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 12: FINAL CTA */}
         <CTASection
@@ -717,21 +695,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

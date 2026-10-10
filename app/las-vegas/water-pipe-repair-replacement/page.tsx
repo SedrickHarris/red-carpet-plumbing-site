@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172: project-established value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating: project-established value;
+// - License #048585A, C-1 Plumbing and Heating: project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees": source-site claim; confirm
 //   before launch.
@@ -37,19 +37,21 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  // FLAG: VERIFY license #0048585A in the description before publishing.
+  // FLAG: VERIFY license #048585A in the description before publishing.
   title: "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Water pipe repair and replacement in Las Vegas, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #0048585A. Call (702) 567-9172.",
+    "Water pipe repair and replacement in Las Vegas, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/water-pipe-repair-replacement/",
   },
   openGraph: {
     title: "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Water pipe repair and replacement in Las Vegas, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #0048585A. Call (702) 567-9172.",
+      "Water pipe repair and replacement in Las Vegas, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #048585A. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/water-pipe-repair-replacement/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -60,13 +62,12 @@ export const metadata: Metadata = {
 
 type LinkSeg = string | { href: string; text: string };
 
-// FLAG: VERIFY "4.8-star rated" before publishing. Visible text only, not in schema.
 const HERO_SUBHEADING =
   "Red Carpet Plumbing repairs and replaces water supply pipes for homes and businesses throughout Las Vegas, NV. Burst pipes, pinhole leaks, low water pressure, corroded lines, and main water line repair. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.";
 
 const HERO_TRUST_ITEMS = [
-  // FLAG: VERIFY license #0048585A before publishing.
-  "NV Licensed, #0048585A",
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed, #048585A",
   "Burst Pipe and Leak Repair",
   "Serving Neighborhoods Across Las Vegas",
   // FLAG: VERIFY transparent pricing claim before publishing.
@@ -77,9 +78,9 @@ const HERO_TRUST_ITEMS = [
 const DIRECT_ANSWER = {
   heading: "Water Pipe Problems in Las Vegas, and How We Fix Them",
   p1: "Falling water pressure, discolored water, water stains, and the sound of running water when nothing is on are common signs of a failing water pipe in Las Vegas homes. Red Carpet Plumbing locates the problem, then repairs or replaces the damaged section, or recommends repiping when the pipe is failing in more than one place. Call (702) 567-9172 to schedule an assessment.",
-  // FLAG: VERIFY license #0048585A before publishing.
+  // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
-  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#0048585A). We explain repair and replacement options before work begins and provide transparent pricing with no hidden fees.",
+  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain repair and replacement options before work begins and provide transparent pricing with no hidden fees.",
   p3: "Need water pipe service in Las Vegas? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get on the schedule.",
 };
 
@@ -194,8 +195,8 @@ const PROCESS_STEPS: { name: string; body: string }[] = [
 // Why choose.
 const WHY_CHOOSE_HEADING = "Why Las Vegas Homeowners Choose Red Carpet Plumbing";
 const WHY_CHOOSE_ITEMS = [
-  // FLAG: VERIFY license #0048585A before publishing.
-  "Licensed Nevada plumbers, NV License #0048585A, C-1 Plumbing and Heating",
+  // FLAG: VERIFY license #048585A before publishing.
+  "Licensed Nevada plumbers, NV License #048585A, C-1 Plumbing and Heating",
   "Honest repair or replace assessment before any work is recommended",
   "Familiar with Las Vegas homes built across several decades",
   "Clear options explained before work begins",
@@ -220,36 +221,43 @@ const AREA_CHIPS = [
 const AREAS_CROSS_LINKS: LinkSeg[] = ["We also provide water pipe repair and replacement in ", { href: "/north-las-vegas/water-pipe-repair-replacement/", text: "North Las Vegas" }, " and ", { href: "/summerlin/water-pipe-repair-replacement/", text: "Summerlin" }, ". For every service we offer in your community, visit our ", { href: "/las-vegas-plumbing-services/", text: "Las Vegas plumbing services" }, " page."];
 
 // FAQs. Single source for the visible accordion and the FAQPage schema.
-const FAQS: { question: string; answer: string }[] = [
+const FAQS: FaqItem[] = [
   {
     question: "What causes water pipe leaks in Las Vegas homes?",
     answer: "Age, corrosion from hard water, worn fittings, and soil movement under the slab are the most common causes. Many Las Vegas homes were built between the 1970s and early 1990s, so leaks from wear are more likely. An assessment identifies the cause before any repair begins.",
+    category: "causes-signs",
   },
   {
     question: "How do I know if I have a hidden water leak?",
     answer: "Common signs include a higher water bill, the sound of running water when nothing is on, damp or stained walls and floors, warm spots on the floor, and low pressure. A plumber can test for active water loss and locate the leak before opening anything up.",
+    category: "causes-signs",
   },
   {
     question: "Should I repair or replace old water pipes?",
     answer: "A single leak or failed fitting is usually repaired. When leaks keep appearing in different places, or pipe is corroded over a long run, replacement or repiping is usually the better long-term choice. We explain both options and you approve the scope before work begins.",
+    category: "the-service",
   },
   // FLAG: VERIFY meter-to-home water line responsibility wording before publishing.
   {
     question: "Who is responsible for the water line between the meter and my Las Vegas home?",
     answer: "The property owner is generally responsible for the water line from the meter to the home, while the water utility handles the meter and its own side of the connection. Individual properties can differ, so we can help you confirm what applies at your address.",
+    category: "the-service",
   },
   {
     question: "What should I do if a pipe bursts?",
     answer: "Shut off the water at the main valve right away, then open a low faucet to drain the remaining water. Call (702) 567-9172 and describe what happened so we can schedule the repair. Move valuables away from the water if it is safe to do so.",
+    category: "emergency",
   },
   // FLAG: VERIFY permit wording (depends on address and scope) before publishing.
   {
     question: "Do water pipe repairs in Las Vegas need a permit?",
     answer: "It depends on your address and the scope of the work. Small repairs often do not need a permit, while larger replacements or repiping may. We confirm the requirements for your property before work begins.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day water pipe service in Las Vegas?",
     answer: "Same-day water pipe service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address. When you call, tell us what you are seeing, such as low pressure, a leak, or water stains, so we can schedule the right visit.",
+    category: "timing-process",
   },
 ];
 
@@ -289,7 +297,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Water pipe repair and replacement in Las Vegas, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #0048585A. Call (702) 567-9172.",
+    "Water pipe repair and replacement in Las Vegas, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/las-vegas/water-pipe-repair-replacement/",
   isPartOf: {
     "@type": "WebSite",
@@ -328,15 +336,23 @@ const serviceSchema = {
   "@type": "Service",
   name: "Water Pipe Repair and Replacement",
   serviceType: "Water Pipe Repair and Replacement",
-  // FLAG: VERIFY license #0048585A in the description before publishing.
+  // FLAG: VERIFY license #048585A in the description before publishing.
   description:
-    "Red Carpet Plumbing provides burst pipe repair, pinhole leak repair, pipe section replacement, main water line repair, supply line and shut-off valve replacement, and repiping for homes and businesses in Las Vegas, NV. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides burst pipe repair, pinhole leak repair, pipe section replacement, main water line repair, supply line and shut-off valve replacement, and repiping for homes and businesses in Las Vegas, NV. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone before publishing.
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "City",
@@ -363,18 +379,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(FAQS);
 
 const LINK_CLASS =
   "font-semibold text-brand-dark underline hover:text-brand-dark/70";
@@ -690,32 +695,11 @@ export default function LasVegasWaterPipePage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Water Pipe Repair and Replacement in Las Vegas, NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Water Pipe Repair and Replacement in Las Vegas, NV</>}
+          faqs={FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: RELATED SERVICES */}
         <section className="bg-white">
@@ -784,21 +768,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

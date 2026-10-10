@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", and the
-// 4.8/76 rating are source-site/project claims. Each visible instance carries an
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", and the
+// 4.8/81 rating are source-site/project claims. Each visible instance carries an
 // inline FLAG comment.
 //
 // SCHEMA NOTE: Spring Valley is an unincorporated Clark County community; it is
@@ -24,7 +26,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Leak Detection and Repair in Spring Valley, NV | Red Carpet Plumbing",
   description:
-    "Non-invasive leak detection and repair in Spring Valley, NV. Hidden leaks, galvanized pipe leaks, slab leaks. Licensed plumbers. NV #0048585A. (702) 567-9172.",
+    "Non-invasive leak detection and repair in Spring Valley, NV. Hidden leaks, galvanized pipe leaks, slab leaks. Licensed plumbers. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/spring-valley/leak-detection-repair/",
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
     title:
       "Leak Detection and Repair in Spring Valley, NV | Red Carpet Plumbing",
     description:
-      "Non-invasive leak detection and repair in Spring Valley, NV. Hidden leaks, galvanized pipe leaks, slab leaks. Licensed plumbers. NV #0048585A. (702) 567-9172.",
+      "Non-invasive leak detection and repair in Spring Valley, NV. Hidden leaks, galvanized pipe leaks, slab leaks. Licensed plumbers. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -47,52 +49,59 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const SV_LEAK_FAQS = [
+const SV_LEAK_FAQS: FaqItem[] = [
   {
     question:
       "What are the signs of a hidden water leak in a Spring Valley home?",
     answer:
       "The most common signs are an unexplained increase in your water bill, the sound of running water when all fixtures are off, warm or wet spots on floors or walls, discoloration or bubbling paint, a persistent musty odor, reduced water pressure, unexplained cracks in walls or flooring, and rust-colored water from one or more fixtures. Rust-colored water is particularly notable in older Spring Valley homes with original galvanized supply lines, where internal pipe corrosion can introduce rust particles into the water supply as the pipe approaches failure.",
+    category: "causes-signs",
   },
   {
     question: "How do I check for a water leak using my meter in Spring Valley?",
     answer:
       "Turn off all water fixtures and appliances in your home. Locate your water meter at the street and record the reading. Do not use any water for 30 minutes, then check the meter again. If the reading has changed, water is being used somewhere in the system, which indicates an active leak. This test confirms a leak is present but does not locate it. Call a licensed plumber for a professional inspection to find the source.",
+    category: "the-service",
   },
   {
     question: "What causes hidden pipe leaks in Spring Valley homes?",
     answer:
       "The most common causes in Spring Valley are galvanized steel supply line corrosion in older Desert Inn and West Sahara corridor homes built in the 1970s through 1990s, hard water mineral corrosion thinning copper pipe walls in same-era homes exposed to Las Vegas Valley hard water for 30 to 45 years, caliche and expansive clay soil movement beneath slab foundations that stresses underground pipes and connections, and closed-loop pressure cycling that fatigues pipe joints over time.",
+    category: "causes-signs",
   },
   {
     question: "How does non-invasive leak detection work in Spring Valley?",
     answer:
       "Non-invasive leak detection uses acoustic sensors that amplify the sound of pressurized water escaping from pipes through walls, floors, and underground, allowing the plumber to pinpoint the leak location without opening large sections of the home. Pressure testing isolates which section of the plumbing system is losing water. Thermal imaging can identify temperature differences caused by hot water leaks beneath slabs or inside walls. For older Spring Valley homes with galvanized supply lines, acoustic detection helps identify the active failure point precisely along a line that may be corroded throughout.",
+    category: "the-service",
   },
   {
     question:
       "If my galvanized pipe develops a leak in Spring Valley, should I repair it or replace the pipe system?",
     answer:
       "For an isolated leak in a galvanized line that is otherwise in serviceable condition, targeted repair can be appropriate. For older Spring Valley homes where the galvanized supply lines have been in place for 30 to 50 years and a first leak has developed, the underlying cause is system-wide internal corrosion rather than an isolated event. In these cases, replacing the galvanized system rather than making repeated spot repairs on a corroding line is typically the more durable and cost-effective long-term solution.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing serve all Spring Valley neighborhoods for leak detection?",
     answer:
       "Yes. Red Carpet Plumbing provides leak detection and repair throughout Spring Valley, including the Desert Inn and West Sahara corridors, Rainbow Boulevard area, Decatur Boulevard area, Tropicana corridor, and surrounding Spring Valley neighborhoods. Call (702) 567-9172 to confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day leak detection service in Spring Valley?",
     answer:
       "Same-day leak detection service is available in Spring Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides non-invasive leak detection and repair throughout Spring Valley, Nevada, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. From hidden galvanized pipe leaks and aging copper failures to slab leak detection and supply line repair, our licensed plumbers locate and fix Spring Valley leaks with minimal disruption to your home. NV Contractor License #0048585A.";
+  "Red Carpet Plumbing provides non-invasive leak detection and repair throughout Spring Valley, Nevada, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. From hidden galvanized pipe leaks and aging copper failures to slab leak detection and supply line repair, our licensed plumbers locate and fix Spring Valley leaks with minimal disruption to your home. NV Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Non-Invasive Leak Detection",
   "Galvanized Pipe, Slab Leaks, Supply Lines",
   "Transparent Pricing, No Hidden Fees",
@@ -204,12 +213,11 @@ const WHY_CHOOSE = [
   "Non-invasive detection equipment that locates leaks precisely before any repair work begins",
   "Galvanized pipe leak detection and assessment capability for older Spring Valley homes",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // ---------------------------------------------------------------------------
@@ -300,6 +308,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -331,18 +347,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SV_LEAK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SV_LEAK_FAQS);
 
 export default function SpringValleyLeakDetectionPage() {
   return (
@@ -679,33 +684,11 @@ export default function SpringValleyLeakDetectionPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Leak Detection and Repair
-                in Spring Valley
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SV_LEAK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Leak Detection and Repair in Spring Valley</>}
+          faqs={SV_LEAK_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 9: RELATED SERVICES */}
         <section className="bg-brand-surface-alt">
@@ -770,21 +753,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

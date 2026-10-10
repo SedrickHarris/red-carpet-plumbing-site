@@ -10,10 +10,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — rating (4.8 stars / 76 Google reviews)
-// and "Over 40 years" trust claims are source-site claims shown on this page.
-// License #0048585A, permit handling, and transparent-pricing are also
+// FLAG: VERIFY before publishing — "Over 40 years" trust claims are source-site claims shown on this page.
+// License #048585A, permit handling, and transparent-pricing are also
 // source-site claims. Confirm before launch.
 //
 // SCHEMA NOTE: Boulder City IS an incorporated city (not an unincorporated
@@ -55,54 +56,60 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const BC_DRAIN_FAQS = [
+const BC_DRAIN_FAQS: FaqItem[] = [
   {
     question: "What causes drains to clog faster in Boulder City?",
     answer:
       "Boulder City's historic homes, many built between the 1930s and 1960s, often still have original galvanized steel drain lines. Galvanized steel corrodes from the inside out under hard water conditions, creating a rough, pitted pipe interior that catches and holds grease, soap scum, and mineral deposits far more aggressively than copper or plastic lines. Boulder City also receives hard water from the Lake Mead supply, which carries approximately 280 parts per million of dissolved minerals. The combination of aged, corroded pipe interiors and hard water mineral bonding is why drain clogs in older Boulder City homes are more frequent and more stubborn than in newer construction.",
+    category: "causes-signs",
   },
   {
     question:
       "Is hydro jetting safe for the older drain pipes in Boulder City historic homes?",
     answer:
       "It depends on the condition of the pipe. Hydro jetting is highly effective for clearing mineral scale and grease from lines in good condition. For Boulder City homes with original galvanized drain lines that may be thinned or structurally compromised by decades of corrosion, we assess pipe condition before recommending high-pressure methods. A video camera inspection can help determine whether hydro jetting is the right approach for a specific line.",
+    category: "the-service",
   },
   {
     question: "How do I know if I need professional drain cleaning in Boulder City?",
     answer:
       "Call a plumber when multiple drains are slow at the same time, when you have a complete blockage, when drains produce sewage or sulfur odors, or when you hear gurgling sounds from toilets or other fixtures. Multiple affected drains usually indicate a main sewer line problem that requires professional clearing.",
+    category: "causes-signs",
   },
   {
     question: "How often should Boulder City homeowners have their drains cleaned?",
     answer:
       "Most Boulder City homeowners benefit from professional drain cleaning every one to two years. Homes in the historic downtown and original neighborhoods with aging galvanized drain lines and significant hard water mineral buildup may benefit from annual cleaning. Commercial properties with heavy drain use should be cleaned more frequently based on usage and drain condition.",
+    category: "timing-process",
   },
   {
     question: "Who issues permits for plumbing work in Boulder City?",
     answer:
-      "Boulder City is an incorporated city with its own building department. Plumbing permits in Boulder City are processed through the Boulder City Building Department. Red Carpet Plumbing holds Nevada Contractor License #0048585A and works within the Boulder City permit process for projects that require permits.",
+      "Boulder City is an incorporated city with its own building department. Plumbing permits in Boulder City are processed through the Boulder City Building Department. Red Carpet Plumbing holds Nevada Contractor License #048585A and works within the Boulder City permit process for projects that require permits.",
+    category: "trust",
   },
   {
     question: "How much does drain cleaning cost in Boulder City?",
     answer:
       "Drain cleaning costs vary based on the type of drain, the severity of the clog, and the method required. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
+    category: "cost",
   },
   {
     question: "Do you offer same-day drain cleaning service in Boulder City?",
     answer:
       "Same-day drain cleaning service is available in Boulder City, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides professional drain cleaning services for homes and businesses in Boulder City, Nevada. From kitchen and bathroom drains to main sewer line clearing and hydro jetting, our licensed plumbers diagnose the source of the problem and clear the blockage completely. Call (702) 567-9172 to schedule service. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides professional drain cleaning services for homes and businesses in Boulder City, Nevada. From kitchen and bathroom drains to main sewer line clearing and hydro jetting, our licensed plumbers diagnose the source of the problem and clear the blockage completely. Call (702) 567-9172 to schedule service. Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
 
 const TRUST_STRIP_ITEMS = [
-  "Licensed Plumbers, NV #0048585A",
+  "Licensed Plumbers, NV #048585A",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 Years Serving Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-Star Rating, 76 Google Reviews",
+  "4.8-Star Rating, 81 Google Reviews",
   "Transparent Pricing, No Hidden Fees",
 ];
 
@@ -281,6 +288,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "City",
@@ -308,18 +323,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: BC_DRAIN_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(BC_DRAIN_FAQS);
 
 export default function BoulderCityDrainCleaningPage() {
   return (
@@ -387,7 +391,7 @@ export default function BoulderCityDrainCleaningPage() {
                   diagnose the cause before recommending a solution.
                 </p>
                 <p>
-                  Nevada Contractor License #0048585A covers plumbing work
+                  Nevada Contractor License #048585A covers plumbing work
                   throughout Nevada including Boulder City. For a full range of
                   plumbing services in Boulder City, visit our{" "}
                   <Link
@@ -657,31 +661,11 @@ export default function BoulderCityDrainCleaningPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Drain Cleaning FAQs for Boulder City Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {BC_DRAIN_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Drain Cleaning FAQs for Boulder City Homeowners</>}
+          faqs={BC_DRAIN_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: RELATED SERVICES */}
         <section className="bg-white">
@@ -732,20 +716,5 @@ export default function BoulderCityDrainCleaningPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

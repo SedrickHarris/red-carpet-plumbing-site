@@ -11,6 +11,8 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear in rendered copy):
@@ -59,44 +61,51 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const ALIANTE_DRAIN_FAQS = [
+const ALIANTE_DRAIN_FAQS: FaqItem[] = [
   {
     question: "Why do drains clog more often in Aliante homes?",
     answer:
       "Most Aliante homes were built between 2000 and 2008 and have copper drain lines that have accumulated 16 to 25 years of hard water mineral deposits. Las Vegas Valley water from Lake Mead measures 17 to 24 grains per gallon of dissolved minerals. These deposits narrow the pipe interior and create surfaces that grease, hair, and soap scum bond to more aggressively over time, making clogs form faster in older pipes than in newer ones.",
+    category: "causes-signs",
   },
   {
     question: "Does hard water cause drain problems in North Las Vegas?",
     answer:
       "Yes. Hard water from the Lake Mead municipal supply leaves calcium and magnesium deposits inside drain pipe walls over time. These deposits narrow the pipe, slow water flow, and give household drain materials like grease and hair a rough surface to adhere to. Hard water mineral buildup is a primary driver of recurring drain clogs throughout the Las Vegas Valley, including the Aliante area.",
+    category: "causes-signs",
   },
   {
     question:
       "What is the difference between cable drain cleaning and hydro jetting?",
     answer:
       "Cable drain cleaning uses a mechanical cable to break through or pull out a specific clog. It is effective for localized solid blockages like hair clogs. Hydro jetting uses high-pressure water to scour the entire interior of the pipe, removing mineral scale, grease, and debris from the pipe walls rather than just clearing a path through the blockage. For Aliante homes with hard water mineral accumulation, hydro jetting provides a more thorough and longer-lasting result.",
+    category: "the-service",
   },
   {
     question:
       "When should I call a plumber for a drain problem in my Aliante home?",
     answer:
       "Call a plumber when multiple drains are slow or backing up at the same time, when a drain is completely blocked, when you notice sewage odor from drains, when toilets gurgle when other fixtures drain, or when a drain that was recently cleared becomes slow again within a few weeks. These signs often indicate a blockage in the main sewer line or a recurring buildup issue that requires professional clearing.",
+    category: "timing-process",
   },
   {
     question: "How long does professional drain cleaning take?",
     answer:
       "A single drain cleaning for a kitchen or bathroom drain typically takes one to two hours depending on the access and the severity of the blockage. Main sewer line cleaning takes longer, especially if hydro jetting or video camera inspection is needed. Red Carpet Plumbing will give you a time estimate based on the specific situation.",
+    category: "timing-process",
   },
   {
     question:
       "Does Red Carpet Plumbing serve the Aliante area for drain cleaning?",
     answer:
       "Yes. Red Carpet Plumbing provides professional drain cleaning for homes throughout the Aliante area of North Las Vegas, including the Aliante Parkway area, Ann Road Corridor, Deer Springs Way area, Elkhorn Road area, and surrounding northwest North Las Vegas neighborhoods. Call (702) 567-9172 to schedule service.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day drain cleaning service in the Aliante Area of North Las Vegas?",
     answer:
       "Same-day drain cleaning service is available in the Aliante Area of North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -239,7 +248,7 @@ const ALIANTE_DRAIN_RELATED = [
 // Hero trust strip.
 const HERO_TRUST_ITEMS = [
   // FLAG: source-site claim — verify before final launch.
-  "NV Licensed Plumbers, #0048585A",
+  "NV Licensed Plumbers, #048585A",
   "Kitchen, Bathroom, and Main Line Drain Cleaning",
   "Serving Aliante and North Las Vegas",
   // FLAG: source-site claim — verify before final launch.
@@ -331,7 +340,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Drain Cleaning in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides professional drain cleaning in the Aliante area of North Las Vegas, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Aliante homes. Licensed plumbers, NV License #0048585A.",
+    "Red Carpet Plumbing provides professional drain cleaning in the Aliante area of North Las Vegas, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Aliante homes. Licensed plumbers, NV License #048585A.",
   url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/drain-cleaning/",
   isPartOf: {
     "@type": "WebSite",
@@ -340,18 +349,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ALIANTE_DRAIN_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ALIANTE_DRAIN_FAQS);
 
 export default function AlianteDrainCleaningPage() {
   return (
@@ -386,7 +384,7 @@ export default function AlianteDrainCleaningPage() {
               <br /> in the Aliante Area of North Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides professional drain cleaning for homes throughout the Aliante area of North Las Vegas, NV. Whether you have a slow kitchen drain, a clogged bathroom sink, or a main sewer line backup, our licensed plumbers diagnose the problem, select the right clearing method, and restore full flow. Call (702) 567-9172. NV Contractor License #0048585A."
+          subheading="Red Carpet Plumbing provides professional drain cleaning for homes throughout the Aliante area of North Las Vegas, NV. Whether you have a slow kitchen drain, a clogged bathroom sink, or a main sewer line backup, our licensed plumbers diagnose the problem, select the right clearing method, and restore full flow. Call (702) 567-9172. NV Contractor License #048585A."
           trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -716,31 +714,11 @@ export default function AlianteDrainCleaningPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Drain Cleaning FAQs for Aliante Area Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ALIANTE_DRAIN_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Drain Cleaning FAQs for Aliante Area Homeowners</>}
+          faqs={ALIANTE_DRAIN_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -765,20 +743,5 @@ export default function AlianteDrainCleaningPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

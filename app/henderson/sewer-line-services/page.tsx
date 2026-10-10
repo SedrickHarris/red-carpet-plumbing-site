@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 — project-established value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating — project-established value;
+// - License #048585A, C-1 Plumbing and Heating — project-established value;
 //   confirm before launch.
 // - "Licensed and Insured Plumbers" trust strip claim — confirm documentation.
 // - "Transparent Pricing, No Hidden Fees" / "Upfront Pricing" — source-site
@@ -33,6 +33,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Sewer Line Services in Henderson, NV | Red Carpet Plumbing",
@@ -56,8 +58,8 @@ export const metadata: Metadata = {
 type LinkSeg = string | { href: string; text: string };
 
 const HERO_TRUST_ITEMS = [
-  // FLAG: VERIFY license #0048585A before publishing.
-  "NV Licensed Plumbers, #0048585A",
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed Plumbers, #048585A",
   "Serving Henderson and the Las Vegas Valley",
   "Residential and Commercial Sewer Service",
   // FLAG: VERIFY transparent pricing claim before publishing.
@@ -172,7 +174,7 @@ const HENDERSON_SEWER_STEPS = [
   },
 ];
 
-// FLAG: VERIFY before publishing — license #0048585A and transparent pricing are
+// FLAG: VERIFY before publishing — license #048585A and transparent pricing are
 // source-site claims.
 const WHY_CHOOSE_ITEMS = [
   "Licensed Nevada plumbers. Every sewer line service job in Henderson is handled by Nevada-licensed plumbing professionals.",
@@ -204,45 +206,52 @@ const COMMUNITIES: { name: string; href?: string }[] = [
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const HENDERSON_SEWER_FAQS = [
+const HENDERSON_SEWER_FAQS: FaqItem[] = [
   {
     question:
       "How do I know if I have a sewer line problem in my Henderson home?",
     answer:
       "Common signs of a sewer line problem in Henderson include multiple slow drains or backups throughout the home at the same time, sewage odor inside the home or yard, gurgling sounds from toilets or floor drains when other fixtures are in use, water backing up into tubs or floor drains when the toilet is flushed, wet or soggy spots in the yard along the sewer line path, and drain problems that return shortly after clearing. If you notice any of these signs, a sewer camera inspection is the most accurate way to diagnose the cause.",
+    category: "causes-signs",
   },
   {
     question:
       "Why are sewer line problems so common in Green Valley and Green Valley Ranch?",
     answer:
       "Homes built in Green Valley from roughly 1985 through the early 1990s now have sewer infrastructure that is 30 to 40 years old. Original sewer lines in these homes were commonly clay or cast iron, both of which are affected by Las Vegas hard water mineral buildup, soil movement from caliche and expansive clay, and root intrusion from mature mesquite and ornamental trees planted at the time of construction. Green Valley Ranch homes from the mid-1990s to mid-2000s are approaching their first service cycle. A sewer camera inspection helps identify developing issues before they become emergencies.",
+    category: "causes-signs",
   },
   {
     question: "What is a sewer camera inspection and do I need one?",
     answer:
       "A sewer camera inspection involves inserting a high-resolution waterproof camera into the sewer line through a cleanout access point to inspect the interior of the pipe in real time. The inspection identifies blockages, root intrusion, mineral scale, cracks, offset joints, pipe belly, and other structural issues without excavation. A camera inspection is recommended any time you have recurring backups, unexplained sewer odors, or a drain problem that has returned after clearing. It is also useful as a pre-purchase check for buyers evaluating older Henderson homes.",
+    category: "the-service",
   },
   {
     question: "Does Red Carpet Plumbing handle Henderson City sewer permits?",
     answer:
       "Yes. Sewer line repair and replacement projects in Henderson that require a City of Henderson permit are handled with permit application and inspection scheduling included. Henderson City permits are separate from Clark County unincorporated permits, and our plumbers coordinate the permitting process as part of the job.",
+    category: "trust",
   },
   {
     question:
       "What is trenchless sewer line repair and is it available in Henderson?",
     answer:
       "Trenchless sewer line repair uses methods like CIPP pipe lining and pipe bursting to repair or replace a damaged sewer line without excavating the full length of the pipe. CIPP lining inserts a resin-saturated liner into the existing pipe, which cures in place to form a new pipe within the old one. Pipe bursting pulls a new pipe through the old one while fracturing the original outward. Both methods preserve Henderson pavers, desert landscaping, and hardscape that would otherwise require expensive restoration after traditional excavation. Red Carpet Plumbing evaluates whether a line qualifies for trenchless repair based on camera inspection findings.",
+    category: "the-service",
   },
   {
     question:
       "Where does Red Carpet Plumbing provide sewer line services in Henderson?",
     answer:
       "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement throughout Henderson, NV, including Green Valley, Green Valley Ranch, Seven Hills, MacDonald Ranch, Anthem, Tuscany Village, Inspirada, Whitney Ranch, Lake Las Vegas, and Downtown Henderson. We also serve all neighboring Las Vegas Valley communities. Contact us to confirm coverage for your location.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day sewer line service in Henderson?",
     answer:
       "Same-day sewer line service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -359,18 +368,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: HENDERSON_SEWER_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(HENDERSON_SEWER_FAQS);
 
 function renderTail(tail: LinkSeg[]) {
   return tail.map((seg, i) =>
@@ -690,40 +688,18 @@ export default function HendersonSewerLinePage() {
         </section>
 
         {/* SECTION 11: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Sewer Line Services in Henderson,
-                NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {HENDERSON_SEWER_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Sewer Line Services in Henderson, NV</>}
+          faqs={HENDERSON_SEWER_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 12: FINAL CTA */}
         {/* FLAG: VERIFY — license number in the body is a source-site claim. */}
         <CTASection
           background="red"
           headline={<>Ready to Schedule Sewer Line Service<br />in Henderson?</>}
-          body="Red Carpet Plumbing is available for sewer line inspection, cleaning, repair, and replacement throughout Henderson and the Las Vegas Valley. Licensed plumbers, NV #0048585A."
+          body="Red Carpet Plumbing is available for sewer line inspection, cleaning, repair, and replacement throughout Henderson and the Las Vegas Valley. Licensed plumbers, NV #048585A."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",
@@ -760,21 +736,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

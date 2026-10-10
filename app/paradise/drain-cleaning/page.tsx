@@ -10,13 +10,14 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing — source-site / project claims surfaced in the
 // approved brief and shown on this page. Each instance carries an inline FLAG:
 //   - 24/7 emergency drain availability (hero sub-label) — source-site claim
-//   - 4.8-star rating, 76 Google reviews — verify before publishing
 //   - "Over 40 years" serving the area — verify before publishing
-// License #0048585A (C-1 Plumbing and Heating) is the established project value.
+// License #048585A (C-1 Plumbing and Heating) is the established project value.
 // Schema follows the brief: Service.areaServed uses Place -> AdministrativeArea
 // (Clark County) -> State (Nevada), NOT City, because Paradise is unincorporated
 // Clark County. No AggregateRating. No standalone LocalBusiness schema.
@@ -46,44 +47,51 @@ export const metadata: Metadata = {
 // match. Do not edit one without the other. FLAG comments live in this source
 // only and are NOT part of the visible/schema answer text.
 // ---------------------------------------------------------------------------
-const PARADISE_DRAIN_FAQS = [
+const PARADISE_DRAIN_FAQS: FaqItem[] = [
   {
     question: "What causes drains to clog faster in Paradise, NV?",
     answer:
       "Las Vegas Valley water carries 17 to 24 grains per gallon of dissolved minerals, which is among the highest in the United States. These minerals bond with grease and soap residue inside drain pipes, creating a dense scale that accumulates faster than in cities with soft water. Restaurant and commercial properties near the Strip add high-volume grease to the equation. Older cast iron and galvanized drain lines in mid-century residential neighborhoods also trap debris more readily due to corroded interior surfaces.",
+    category: "causes-signs",
   },
   {
     question:
       "Can I use store-bought drain cleaner for a clogged drain in Paradise?",
     answer:
       "Store-bought chemical drain cleaners may temporarily clear a minor clog, but they do not remove the mineral scale and bonded grease that cause recurring clogs in Las Vegas Valley drain lines. Repeated chemical use can also damage older cast iron and galvanized pipe interiors. For a clog that keeps coming back, professional clearing and a camera inspection identify the actual cause.",
+    category: "the-service",
   },
   {
     question:
       "What is hydro jetting and is it safe for older pipes in Paradise?",
     answer:
       "Hydro jetting uses high-pressure water to flush grease, mineral scale, and root debris from drain lines. It is highly effective for grease-heavy commercial drain lines and mineral scale buildup. For older cast iron or galvanized pipes, we inspect pipe condition before using hydro jetting. High-pressure methods are not appropriate for severely corroded or fragile older lines.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing clear restaurant and commercial grease drain lines near the Strip?",
     answer:
-      "Yes. Red Carpet Plumbing provides commercial drain clearing for restaurants, hotel kitchens, bars, and commercial food service properties throughout Paradise including the Strip corridor. Commercial grease drain lines require specialized clearing methods and regular maintenance. Red Carpet Plumbing holds Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+      "Yes. Red Carpet Plumbing provides commercial drain clearing for restaurants, hotel kitchens, bars, and commercial food service properties throughout Paradise including the Strip corridor. Commercial grease drain lines require specialized clearing methods and regular maintenance. Red Carpet Plumbing holds Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    category: "the-service",
   },
   {
     question: "When is a slow drain actually a sewer line problem?",
     answer:
       "If multiple drains in the home or building are slow or backing up at the same time, or if you see sewage backing up into floor drains or tubs when you flush a toilet, the problem is likely in the main sewer line rather than an individual drain. Main line backups require clearing from the cleanout. Red Carpet Plumbing provides sewer line services throughout Paradise and the Las Vegas Valley.",
+    category: "timing-process",
   },
   {
     question: "How do I request drain cleaning service in Paradise, NV?",
     answer:
       "Call Red Carpet Plumbing at (702) 567-9172 or submit a service request online at our contact page. For emergency drain backups in Paradise, calling directly is the fastest option.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day drain cleaning service in Paradise?",
     answer:
       "Same-day drain cleaning service is available in Paradise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -91,10 +99,9 @@ const HERO_SUBHEADING =
   "Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout Paradise, NV. Las Vegas Valley hard water causes mineral deposits to bond with grease and soap residue inside drain lines faster than in most cities. Whether you have a slow kitchen drain, a recurring bathroom clog, a restaurant grease line backup near the Strip, or a main line blockage, our licensed plumbers clear it completely. Call us or request service online.";
 
 const HERO_TRUST_ITEMS = [
-  "Licensed: Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+  "Licensed: Nevada Contractor License #048585A, C-1 Plumbing and Heating",
   "Residential and commercial drain cleaning in Paradise",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating, 76 Google reviews",
+  "4.8-star rating, 81 Google reviews",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Serving Paradise and the Las Vegas Valley for over 40 years",
 ];
@@ -275,7 +282,15 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+      name: "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+    },
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
     },
   },
   areaServed: {
@@ -306,18 +321,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: PARADISE_DRAIN_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(PARADISE_DRAIN_FAQS);
 
 export default function ParadiseDrainCleaningPage() {
   return (
@@ -707,50 +711,11 @@ export default function ParadiseDrainCleaningPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Drain Cleaning in Paradise, NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {PARADISE_DRAIN_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  {faq.question === "When is a slow drain actually a sewer line problem?" ? (
-                    <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                      If multiple drains in the home or building are slow or
-                      backing up at the same time, or if you see sewage backing up
-                      into floor drains or tubs when you flush a toilet, the
-                      problem is likely in the main sewer line rather than an
-                      individual drain. Main line backups require clearing from the
-                      cleanout. Red Carpet Plumbing provides{" "}
-                      <Link
-                        href="/paradise/sewer-line-services/"
-                        className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
-                      >
-                        sewer line services
-                      </Link>{" "}
-                      throughout Paradise and the Las Vegas Valley.
-                    </p>
-                  ) : (
-                    <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                      {faq.answer}
-                    </p>
-                  )}
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Drain Cleaning in Paradise, NV</>}
+          faqs={PARADISE_DRAIN_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -775,20 +740,5 @@ export default function ParadiseDrainCleaningPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

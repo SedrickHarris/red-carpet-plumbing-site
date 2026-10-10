@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172: project-established value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating: project-established value;
+// - License #048585A, C-1 Plumbing and Heating: project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees": source-site claim; confirm
 //   before launch.
@@ -36,19 +36,21 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  // FLAG: VERIFY license #0048585A in the description before publishing.
+  // FLAG: VERIFY license #048585A in the description before publishing.
   title: "Faucet and Sink Repair and Installation in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. NV #0048585A. Call (702) 567-9172.",
+    "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. NV #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/faucet-sink-repair-installation/",
   },
   openGraph: {
     title: "Faucet and Sink Repair and Installation in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. NV #0048585A. Call (702) 567-9172.",
+      "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. NV #048585A. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/faucet-sink-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -59,13 +61,12 @@ export const metadata: Metadata = {
 
 type LinkSeg = string | { href: string; text: string };
 
-// FLAG: VERIFY "4.8-star rated" before publishing. Visible text only, not in schema.
 const HERO_SUBHEADING =
   "Red Carpet Plumbing repairs and installs faucets and sinks for Henderson homes and businesses. Dripping faucets, low pressure, under-sink leaks, and new kitchen and bathroom fixtures. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.";
 
 const HERO_TRUST_ITEMS = [
-  // FLAG: VERIFY license #0048585A before publishing.
-  "NV Licensed, #0048585A",
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed, #048585A",
   "Faucet and Sink Repair and Installation",
   "Serving All Henderson Communities",
   // FLAG: VERIFY transparent pricing claim before publishing.
@@ -76,9 +77,9 @@ const HERO_TRUST_ITEMS = [
 const DIRECT_ANSWER = {
   heading: "Faucet and Sink Problems in Henderson, and How We Fix Them",
   p1: "A dripping faucet, weak flow from one tap, a stiff handle, a slow drain, or water under the sink usually has one specific cause. Red Carpet Plumbing finds it, repairs worn faucet parts or replaces the fixture, installs kitchen and bathroom sinks, and fixes under-sink leaks. Call (702) 567-9172 to schedule service.",
-  // FLAG: VERIFY license #0048585A before publishing.
+  // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
-  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#0048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
+  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
   p3: "Need faucet or sink service in Henderson? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get on the schedule.",
 };
 
@@ -190,8 +191,8 @@ const PROCESS_STEPS: { name: string; body: string }[] = [
 // Why choose.
 const WHY_CHOOSE_HEADING = "Why Henderson Homeowners Choose Red Carpet Plumbing";
 const WHY_CHOOSE_ITEMS = [
-  // FLAG: VERIFY license #0048585A before publishing.
-  "Licensed Nevada plumbers, NV License #0048585A, C-1 Plumbing and Heating",
+  // FLAG: VERIFY license #048585A before publishing.
+  "Licensed Nevada plumbers, NV License #048585A, C-1 Plumbing and Heating",
   // FLAG: VERIFY qualitative installation-care claim before publishing.
   "Careful fixture installation that protects your finishes and countertops",
   "Familiar with Henderson's original Green Valley homes and newer communities",
@@ -218,34 +219,41 @@ const AREA_CHIPS = [
 const AREAS_CROSS_LINKS: LinkSeg[] = ["We also provide faucet and sink repair and installation in ", { href: "/green-valley/faucet-sink-repair-installation/", text: "Green Valley" }, " and ", { href: "/las-vegas/faucet-sink-repair-installation/", text: "Las Vegas" }, ". For every service we offer in your community, visit our ", { href: "/henderson-plumbing-services/", text: "Henderson plumbing services" }, " page."];
 
 // FAQs. Single source for the visible accordion and the FAQPage schema.
-const FAQS: { question: string; answer: string }[] = [
+const FAQS: FaqItem[] = [
   {
     question: "Why is my faucet dripping?",
     answer: "A drip usually comes from a worn cartridge, washer, or seal inside the faucet. Hard water minerals speed up that wear. Most dripping faucets can be repaired by replacing the worn part, and a plumber can tell you whether repair or replacement makes more sense.",
+    category: "causes-signs",
   },
   {
     question: "Why is the water pressure low at only one faucet?",
     answer: "Low pressure at a single faucet most often means a clogged aerator or a partly closed or failing shut-off valve. Hard water minerals collect in the aerator and restrict flow. If other faucets are normal, the cause is local to that fixture.",
+    category: "causes-signs",
   },
   {
     question: "Should I repair or replace a leaky faucet?",
     answer: "Repair makes sense when the faucet is sound and only a cartridge, washer, or seal has worn out. Replacement is better when the faucet is corroded, the finish is failing, or the same faucet keeps failing. We explain both options before you decide.",
+    category: "the-service",
   },
   {
     question: "Can Henderson's hard water damage faucets?",
     answer: "Yes. Mineral buildup from Lake Mead water clogs aerators, wears out cartridges and washers, and can stiffen handles over time. Cleaning aerators and replacing worn parts early keeps a faucet working longer, and heavily scaled fixtures may be better replaced.",
+    category: "the-service",
   },
   {
     question: "Do you install kitchen and bathroom sinks in Henderson?",
     answer: "Yes. Red Carpet Plumbing installs kitchen and bathroom sinks, including undermount, drop-in, vessel, pedestal, and vanity-top styles, with drain and supply connections. We check the shut-off valves and supply lines during installation and replace them if needed.",
+    category: "the-service",
   },
   {
     question: "What causes leaks under the sink?",
     answer: "The most common causes are loose or worn supply line connections, failing shut-off valves, a leaking drain trap, and a leaking faucet base. Because a small leak can damage the cabinet over time, it is best to have it repaired early.",
+    category: "causes-signs",
   },
   {
     question: "Do you offer same-day faucet and sink repair in Henderson?",
     answer: "Same-day faucet and sink repair is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address. When you call, tell us what the fixture is doing, such as dripping, leaking, or draining slowly, so we can schedule the right visit.",
+    category: "timing-process",
   },
 ];
 
@@ -286,7 +294,7 @@ const webpageSchema = {
   name: "Faucet and Sink Repair and Installation in Henderson, NV | Red Carpet Plumbing",
   url: "https://redcarpetplumbing.com/henderson/faucet-sink-repair-installation/",
   description:
-    "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. NV #0048585A. Call (702) 567-9172.",
+    "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. NV #048585A. Call (702) 567-9172.",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",
@@ -325,15 +333,23 @@ const serviceSchema = {
   "@type": "Service",
   name: "Faucet and Sink Repair and Installation",
   serviceType: "Faucet and Sink Repair and Installation",
-  // FLAG: VERIFY license #0048585A in the description before publishing.
+  // FLAG: VERIFY license #048585A in the description before publishing.
   description:
-    "Red Carpet Plumbing provides dripping faucet repair, faucet replacement and installation, kitchen and bathroom sink installation, under-sink leak repair, and aerator, cartridge, and drain trap service for homes and businesses in Henderson, NV. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides dripping faucet repair, faucet replacement and installation, kitchen and bathroom sink installation, under-sink leak repair, and aerator, cartridge, and drain trap service for homes and businesses in Henderson, NV. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone before publishing.
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "City",
@@ -360,18 +376,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(FAQS);
 
 const LINK_CLASS =
   "font-semibold text-brand-dark underline hover:text-brand-dark/70";
@@ -687,32 +692,11 @@ export default function HendersonFaucetSinkPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Faucet and Sink Repair and Installation in Henderson, NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Faucet and Sink Repair and Installation in Henderson, NV</>}
+          faqs={FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: RELATED SERVICES */}
         <section className="bg-white">
@@ -781,21 +765,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

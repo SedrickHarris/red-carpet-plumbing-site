@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,12 +11,14 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
     "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs and replaces water supply pipes throughout Las Vegas and the Las Vegas Valley. Burst pipes, pinhole leaks, galvanized and polybutylene pipe replacement. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs and replaces water supply pipes throughout Las Vegas and the Las Vegas Valley. Burst pipes, pinhole leaks, galvanized and polybutylene pipe replacement. NV Licensed #048585A. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/water-pipe-repair-replacement/",
@@ -24,56 +27,65 @@ export const metadata: Metadata = {
     title:
       "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed water pipe repair and replacement throughout Las Vegas and the Las Vegas Valley. NV #0048585A. 4.8 stars, 76 reviews.",
+      "Licensed water pipe repair and replacement throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
   },
 };
 
-const WATER_PIPE_FAQS = [
+const WATER_PIPE_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a failing water pipe?",
     answer:
       "Common signs of a failing water pipe include unexplained drops in water pressure, discolored or rust-tinged water coming from fixtures, the sound of running water when no fixtures are in use, water stains on walls or ceilings, damp spots in the yard above buried lines, and a water bill that has increased without a change in usage. Pinhole leaks in copper pipe and joint failures in older galvanized or polybutylene systems may not be immediately visible. A licensed plumber can assess the pipe system and identify the source.",
+    category: "causes-signs",
   },
   {
     question: "How long do water pipes last?",
     answer:
       "Pipe lifespan varies by material. Copper pipes typically last thirty to fifty years, though Las Vegas hard water accelerates corrosion and can shorten this range. Galvanized steel pipe lasts approximately twenty to fifty years but corrodes from the inside out, reducing flow well before it fails completely. Polybutylene pipe, installed in many Las Vegas homes between approximately 1978 and 1995, is prone to degradation from chlorinated water and may fail unpredictably. PEX and CPVC pipes used in more recent construction are generally more durable under Las Vegas water conditions.",
+    category: "timing-process",
   },
   {
     question: "What causes pinhole leaks in copper pipes?",
     answer:
       "Pinhole leaks in copper pipe are caused by pitting corrosion, which occurs when the interior surface of the pipe develops small pits that eventually penetrate through the pipe wall. In Las Vegas, hard water mineral deposits, water chemistry, and chlorine in the municipal supply contribute to accelerated pitting corrosion in copper supply lines. Pinhole leaks typically appear first at the lowest pressure points in a run of pipe and, if unaddressed, will recur throughout the same pipe section over time.",
+    category: "causes-signs",
   },
   {
     question: "What is polybutylene pipe and why is it a problem?",
     answer:
       "Polybutylene is a plastic pipe material used in residential plumbing from approximately 1978 to 1995. It was widely installed in Las Vegas homes built during that period. Polybutylene degrades when exposed to chlorine and other oxidants in municipal water supplies, causing the pipe to become brittle and develop micro-fractures that can lead to sudden leaks. Unlike other pipe failures, polybutylene leaks can occur without warning and are often located inside walls or under slabs. If your Las Vegas home was built between 1978 and 1995 and has not been re-piped, a plumber can confirm whether polybutylene is present.",
+    category: "causes-signs",
   },
   {
     question: "Should I repair or replace old water pipes?",
     answer:
       "Spot repair is appropriate when damage is isolated to a single section or joint, the rest of the pipe system is in sound condition, and the pipe material is not inherently problematic. Full or partial replacement is the better choice when a home has polybutylene pipe throughout, when galvanized pipe has corroded to the point of restricted flow, when copper pipe has recurring pinhole leaks in multiple locations, or when the pipe system is approaching the end of its service life. A licensed plumber can assess the full system and recommend the most practical approach.",
+    category: "the-service",
   },
   {
     question: "Can Red Carpet Plumbing repair a burst pipe?",
     answer:
       "Yes. Red Carpet Plumbing handles emergency burst pipe repairs throughout the Las Vegas Valley. If a pipe has burst, shut off the main water supply to the home as quickly as possible and call Red Carpet Plumbing at (702) 567-9172. Burst pipe repair typically involves replacing the damaged section and inspecting adjacent pipe for signs of stress or corrosion that could cause additional failures.",
+    category: "emergency",
   },
   {
     question: "What is the difference between pipe repair and repiping?",
     answer:
       "Pipe repair addresses a specific section of damaged, cracked, or leaking pipe. Repiping replaces the entire supply pipe system in a home or building, typically because the existing pipe material is failing throughout or has reached end of life. Repiping is appropriate when a property has widespread polybutylene pipe, severely corroded galvanized pipe throughout, or recurring pinhole leaks in multiple areas. Red Carpet Plumbing provides both spot pipe repair and full repiping services throughout the Las Vegas Valley.",
+    category: "the-service",
   },
   {
     question:
       "What areas does Red Carpet Plumbing serve for water pipe repair?",
     answer:
       "Red Carpet Plumbing provides water pipe repair and replacement throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day water pipe repair service in Las Vegas?",
     answer:
       "Same-day water pipe repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -289,7 +301,7 @@ const serviceSchema = {
   name: "Water Pipe Repair and Replacement",
   serviceType: "Water Pipe Repair and Replacement",
   description:
-    "Red Carpet Plumbing repairs and replaces water supply pipes for homes and businesses throughout the Las Vegas Valley, including burst pipe repair, pinhole leak repair, galvanized pipe replacement, polybutylene pipe replacement, main water line repair, and full repiping. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing repairs and replaces water supply pipes for homes and businesses throughout the Las Vegas Valley, including burst pipe repair, pinhole leak repair, galvanized pipe replacement, polybutylene pipe replacement, main water line repair, and full repiping. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -299,17 +311,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -366,7 +379,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs and replaces water supply pipes throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs and replaces water supply pipes throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/water-pipe-repair-replacement/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -387,18 +400,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: WATER_PIPE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(WATER_PIPE_FAQS);
 
 export default function WaterPipeRepairReplacementPage() {
   return (
@@ -429,8 +431,8 @@ export default function WaterPipeRepairReplacementPage() {
           }
           subheading="Water supply pipe repair and replacement for homes and businesses throughout the Las Vegas Valley."
           trustItems={[
-            "Licensed Plumbers, NV #0048585A",
-            "4.8 Stars, 76 Google Reviews",
+            "Licensed Plumbers, NV #048585A",
+            "4.8 Stars, 81 Google Reviews",
             "24/7 Emergency Service",
             "Transparent Pricing, No Hidden Fees",
             "Over 40 Years in Las Vegas",
@@ -443,7 +445,7 @@ export default function WaterPipeRepairReplacementPage() {
             label: "Request Pipe Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
+          ctaNote="NV Licensed #048585A | 4.8 Stars, 81 Reviews"
           formSlot={
             <QuoteFormPlaceholder title="Get a Water Pipe Service Quote" />
           }
@@ -530,7 +532,11 @@ export default function WaterPipeRepairReplacementPage() {
 
         {/* SECTION 5: WHY WATER PIPES FAIL FASTER IN LAS VEGAS */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/water-pipe-repair-replacement/red-carpet-plumbing-water-pipe-repair-replacement-las-vegas.webp"
+              alt="Copper and white water pipe with a pressure regulator and gauge in a recessed wall box"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -564,12 +570,17 @@ export default function WaterPipeRepairReplacementPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: HOWTO PROCESS */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/repiping/red-carpet-plumbing-pex-repiping-installation-las-vegas.webp"
+              alt="Red and blue PEX and copper piping inside an opened wall beside a water heater"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -609,6 +620,7 @@ export default function WaterPipeRepairReplacementPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -624,7 +636,7 @@ export default function WaterPipeRepairReplacementPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing repairs and replaces water supply
                   pipes throughout the Las Vegas Valley. NV Contractor
-                  License #0048585A. Available 24/7 for burst pipes and
+                  License #048585A. Available 24/7 for burst pipes and
                   active leaks.
                 </p>
               </div>
@@ -734,31 +746,11 @@ export default function WaterPipeRepairReplacementPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Water Pipe Repair and Replacement Questions Answered
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {WATER_PIPE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Water Pipe Repair and Replacement Questions Answered</>}
+          faqs={WATER_PIPE_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -793,20 +785,5 @@ export default function WaterPipeRepairReplacementPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

@@ -120,3 +120,10 @@ Confirmation history: first confirmed for North Las Vegas Sewer Line Services (t
 - All service business layouts should use a two-column hero where appropriate: content on the left, contact or quote form on the right.
 - Service cards should include image placeholders as a standard.
 - Every client website repo should include relevant Site OS prompts and documents needed to build optimized websites and optimized website content.
+
+## Verified Business Facts
+
+- Phone: (702) 567-9172 (owner approved; the old number 444-5077 was removed)
+- License: Contractor Lic #048585A (owner approved; confirm on the Nevada State Contractors Board record before launch)
+- Rating: 4.8 stars, 81 reviews, Google Business Profile (owner confirmed; recheck before launch)
+- Years in business: "over 40 years" (owner approved)

@@ -9,10 +9,12 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing. "Emergency plumbing service available" and
 // "transparent pricing, no hidden fees" are source-site claims shown on this
-// page. License #0048585A is a verified business claim. Gas line scope (FLAG:
+// page. License #048585A is a verified business claim. Gas line scope (FLAG:
 // verify gas line scope before publishing) is carried forward from sibling
 // emergency pages.
 // SCHEMA NOTE: Lake Las Vegas is a master-planned community within the
@@ -49,7 +51,7 @@ export const metadata: Metadata = {
 
 // Hero trust strip. FLAG comments retained per established sibling pattern.
 const LLV_EMERGENCY_TRUST = [
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
   // FLAG: source-site claim -- verify before final launch.
   "Emergency plumbing service available",
   // FLAG: source-site claim -- verify before final launch.
@@ -99,7 +101,7 @@ const LLV_EMERGENCY_SCENARIOS: {
   {
     label: "Gas line emergencies",
     // FLAG: verify gas line scope before publishing.
-    body: "If you smell gas in your Lake Las Vegas home, leave the building immediately without operating any light switches or electrical devices. Call your gas utility from outside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #0048585A, C-1 Plumbing and Heating, which covers gas line work.",
+    body: "If you smell gas in your Lake Las Vegas home, leave the building immediately without operating any light switches or electrical devices. Call your gas utility from outside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #048585A, C-1 Plumbing and Heating, which covers gas line work.",
   },
 ];
 
@@ -168,46 +170,53 @@ const LLV_EMERGENCY_STEPS = [
 // ---------------------------------------------------------------------------
 // FAQ -- FAQPage schema source of truth.
 // ---------------------------------------------------------------------------
-const LLV_EMERGENCY_FAQS = [
+const LLV_EMERGENCY_FAQS: FaqItem[] = [
   {
     question:
       "Does Red Carpet Plumbing serve Lake Las Vegas for emergency plumbing?",
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service in Lake Las Vegas as part of its Henderson, NV service area. Lake Las Vegas is a master-planned resort community within the incorporated City of Henderson. Call (702) 567-9172 for emergency response.",
+    category: "service-area",
   },
   {
     question: "What counts as a plumbing emergency in Lake Las Vegas?",
     answer:
       "A plumbing emergency includes any situation that involves active water damage, loss of water supply, sewage backing up into the home, signs of a gas leak, water heater failure causing flooding, or a suspected slab leak with running water sounds or warm floor areas. Issues like slow drains or a dripping faucet can typically wait for a scheduled appointment.",
+    category: "emergency",
   },
   {
     question:
       "What should I do first when a pipe bursts in my Lake Las Vegas home?",
     answer:
       "Shut off the water at the main supply valve as quickly as possible. In most Lake Las Vegas homes, the main shutoff valve is located in a ground-level box near the front of the property or near the water meter at the street. Once the water is off, call Red Carpet Plumbing at (702) 567-9172.",
+    category: "emergency",
   },
   {
     question:
       "Why are Lake Las Vegas homes at risk for burst pipes and slab leaks?",
     answer:
       "Lake Las Vegas homes were primarily built between 2000 and 2010 using copper plumbing. The Las Vegas Valley water supply from Lake Mead measures 17 to 24 grains per gallon, which is considered very hard. Over 15 to 25 years, dissolved minerals corrode copper pipe walls, thinning them and increasing the risk of pin-hole leaks, burst pipes, and under-slab failures. Caliche soil and slab foundations add additional stress to buried lines.",
+    category: "emergency",
   },
   {
     // FLAG: VERIFY 24/7 availability before final launch.
     question: "Is there a 24-hour plumber available in Lake Las Vegas?",
     answer:
       "Red Carpet Plumbing provides emergency plumbing service for Lake Las Vegas and the Henderson area. Call (702) 567-9172 to reach a plumber.",
+    category: "emergency",
   },
   {
     question:
       "Who issues plumbing permits for emergency repairs in Lake Las Vegas?",
     answer:
-      "Plumbing permits for Lake Las Vegas properties are issued by the City of Henderson, which is the governing jurisdiction for the Lake Las Vegas community. Red Carpet Plumbing holds Nevada Contractor License #0048585A and works within City of Henderson permit and inspection requirements.",
+      "Plumbing permits for Lake Las Vegas properties are issued by the City of Henderson, which is the governing jurisdiction for the Lake Las Vegas community. Red Carpet Plumbing holds Nevada Contractor License #048585A and works within City of Henderson permit and inspection requirements.",
+    category: "emergency",
   },
   {
     question: "Do you offer same-day emergency plumbing service in Lake Las Vegas?",
     answer:
       "Same-day emergency plumbing service is available in Lake Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "emergency",
   },
 ];
 
@@ -296,7 +305,7 @@ const serviceSchema = {
   name: "Emergency Plumbing in Lake Las Vegas, Henderson, NV",
   serviceType: "Emergency Plumbing",
   description:
-    "Red Carpet Plumbing provides emergency plumbing service for homes and resort residential properties in Lake Las Vegas, Henderson, NV. Burst pipes, slab leaks, sewer backups, water heater failures, and gas line emergencies handled by licensed plumbers. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides emergency plumbing service for homes and resort residential properties in Lake Las Vegas, Henderson, NV. Burst pipes, slab leaks, sewer backups, water heater failures, and gas line emergencies handled by licensed plumbers. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -334,18 +343,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LLV_EMERGENCY_FAQS.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: f.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LLV_EMERGENCY_FAQS);
 
 export default function LakeLasVegasEmergencyPlumbingPage() {
   return (
@@ -588,31 +586,11 @@ export default function LakeLasVegasEmergencyPlumbingPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Emergency Plumbing Questions for Lake Las Vegas Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LLV_EMERGENCY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Emergency Plumbing Questions for Lake Las Vegas Homeowners</>}
+          faqs={LLV_EMERGENCY_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 9: RELATED SERVICES (rerouting cards) */}
         <section className="bg-brand-surface-alt">
@@ -690,21 +668,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

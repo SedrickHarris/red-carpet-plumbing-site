@@ -10,8 +10,10 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, emergency/24-7
+// FLAG: VERIFY before publishing — license #048585A, emergency/24-7
 // availability, transparent-pricing, and any rating/40-year claims are
 // source-site/project claims. This page uses the conservative wording from the
 // approved brief and does NOT assert rating, review count, or "40 years" here.
@@ -45,42 +47,49 @@ export const metadata: Metadata = {
 // FLAG: VERIFY — Q5 (transparent pricing) uses conservative wording per the
 // approved brief; confirm before any expansion.
 // ---------------------------------------------------------------------------
-const LV_DRAIN_FAQS = [
+const LV_DRAIN_FAQS: FaqItem[] = [
   {
     question: "What causes drains to clog faster in Las Vegas?",
     answer:
       "Las Vegas has some of the hardest water in the United States. Hard water leaves calcium and magnesium deposits inside pipe walls that narrow the pipe, slow water flow, and create rough surfaces that trap grease, soap scum, and debris. This is why Las Vegas drains tend to clog faster and more stubbornly than drains in cities with softer water.",
+    category: "causes-signs",
   },
   {
     question: "How do I know if I need professional drain cleaning in Las Vegas?",
     answer:
       "Call a plumber when multiple drains are slow at the same time, when you have a complete blockage, when drains produce sewage or sulfur odors, or when you hear gurgling sounds from toilets or other fixtures. Multiple affected drains usually indicate a main sewer line problem that requires professional clearing.",
+    category: "causes-signs",
   },
   {
     question: "Are chemical drain cleaners safe for Las Vegas pipes?",
     answer:
       "Chemical drain cleaners can damage pipe linings, especially in older galvanized or copper pipes common in Las Vegas homes. They typically dissolve only part of the clog and do not address mineral buildup or root intrusion. Professional drain cleaning removes the entire blockage and is safer for aging Las Vegas pipe systems.",
+    category: "the-service",
   },
   {
     question: "What is hydro jetting and when is it needed in Las Vegas?",
     answer:
       "Hydro jetting uses high-pressure water to scour the interior walls of drain and sewer lines, removing grease, mineral scale, and debris from the pipe walls rather than just clearing a path through the clog. It is recommended for recurring clogs, main sewer line cleaning, and lines with significant hard water mineral buildup, all common conditions in Las Vegas homes.",
+    category: "timing-process",
   },
   {
     question: "How much does drain cleaning cost in Las Vegas?",
     answer:
       "Drain cleaning costs vary based on the type of drain, the severity of the clog, and the method required to clear it. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
+    category: "cost",
   },
   {
     question:
       "Does Red Carpet Plumbing offer drain cleaning for commercial properties in Las Vegas?",
     answer:
       "Yes. Red Carpet Plumbing provides drain cleaning for residential and commercial properties throughout Las Vegas, including kitchen drains, floor drains, main sewer lines, and hydro jetting service for commercial facilities with heavy drain use.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day drain cleaning service in Las Vegas?",
     answer:
       "Same-day drain cleaning service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -169,7 +178,7 @@ const DRAIN_STEPS = [
 // claims per the approved brief.
 const WHY_CHOOSE = [
   "Local Las Vegas plumbing company familiar with hard water conditions and aging pipe systems throughout the city",
-  "Licensed plumbers (NV License #0048585A)",
+  "Licensed plumbers (NV License #048585A)",
   "Transparent pricing with no hidden fees",
   "Residential and commercial drain cleaning service throughout Las Vegas",
   "Hydro jetting available for stubborn or recurring clogs",
@@ -281,18 +290,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LV_DRAIN_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LV_DRAIN_FAQS);
 
 export default function LasVegasDrainCleaningPage() {
   return (
@@ -325,7 +323,7 @@ export default function LasVegasDrainCleaningPage() {
           }
           subheading="Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout Las Vegas, NV. Whether you are dealing with a slow kitchen drain, a clogged bathroom sink, a blocked main sewer line, or recurring drain problems caused by Las Vegas hard water and mineral buildup, our licensed plumbers clear drains completely. Call (702) 567-9172 to schedule service."
           trustItems={[
-            "NV Licensed Plumbers, #0048585A",
+            "NV Licensed Plumbers, #048585A",
             "Available for Emergency Drain Service",
             "Serving the Las Vegas Valley",
             "Transparent Pricing, No Hidden Fees",
@@ -611,32 +609,11 @@ export default function LasVegasDrainCleaningPage() {
         </section>
 
         {/* SECTION 11: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Drain Cleaning FAQs
-                <br className="hidden sm:block" /> for Las Vegas Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LV_DRAIN_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Drain Cleaning FAQs <br className="hidden sm:block" /> for Las Vegas Homeowners</>}
+          faqs={LV_DRAIN_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 12: FINAL CTA */}
         <CTASection
@@ -675,21 +652,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

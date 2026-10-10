@@ -10,10 +10,12 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
+// FLAG: VERIFY before publishing —
 // "Over 40 years," and "24/7 emergency service" trust claims, plus license
-// #0048585A and transparent-pricing, are source-site claims surfaced in the
+// #048585A and transparent-pricing, are source-site claims surfaced in the
 // approved brief and shown on this page. Confirm before final launch.
 // Schema follows the established site-wide service-location pattern (Plumber
 // provider; areaServed City + containedInPlace State Nevada, no sameAs; WebPage
@@ -48,54 +50,61 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const NLV_LEAK_FAQS = [
+const NLV_LEAK_FAQS: FaqItem[] = [
   {
     question:
       "How do I know if I have a hidden water leak in my North Las Vegas home?",
     answer:
       "The most common signs of a hidden water leak in a North Las Vegas home are an unexplained increase in your water bill, the sound of running water when all fixtures are off, warm or wet spots on floors or walls, discoloration or bubbling paint, a persistent musty odor, reduced water pressure, and unexplained cracks in walls or flooring. If you notice one or more of these signs, a professional leak detection inspection can locate the source.",
+    category: "causes-signs",
   },
   {
     question: "How can I check for a water leak myself in North Las Vegas?",
     answer:
       "Turn off all water fixtures and appliances in your home. Locate your water meter at the street and record the reading. Do not use any water for 30 minutes, then check the meter again. If the meter reading has changed, water is being used somewhere in the system, which indicates an active leak. This test confirms a leak is present but does not locate it. Call a licensed plumber for a professional inspection to find the source.",
+    category: "causes-signs",
   },
   {
     question: "Do galvanized pipes cause leaks in older North Las Vegas homes?",
     answer:
       "Yes. Many homes in central and southern North Las Vegas built from the 1960s through the 1980s were constructed with galvanized steel supply lines. Galvanized steel corrodes from the inside out under hard water conditions, gradually narrowing the pipe interior and developing leak points at joints and fittings as the material deteriorates. After 40 to 60 years of Las Vegas Valley hard water exposure, these lines are often well past their service life. Discolored water, severely reduced pressure, and recurring leaks along the same line are indicators that galvanized pipe replacement should be evaluated.",
+    category: "causes-signs",
   },
   {
     question:
       "What plumbing issues are common in Aliante homes in North Las Vegas?",
     answer:
       "Aliante homes were built primarily between 2000 and 2008, placing them at 16 to 25 years old. These homes are entering the first major plumbing service cycle. Common issues include water heaters reaching the end of their service life under Las Vegas hard water conditions, early signs of mineral corrosion in copper supply lines, aging pressure regulators, and first-generation fixture and fitting wear. A pinhole leak in an Aliante home is often an early indicator of pipe wall thinning that warrants a broader pipe condition assessment.",
+    category: "the-service",
   },
   {
     question: "How does non-invasive leak detection work in North Las Vegas?",
     answer:
       "Non-invasive leak detection uses acoustic sensors that amplify the sound of pressurized water escaping from pipes through walls, floors, and underground. This allows the plumber to pinpoint the leak location without opening large sections of the home. Pressure testing confirms which line is losing pressure, and thermal imaging identifies temperature differences caused by hot water leaks. Together these methods locate hidden leaks precisely before any repair begins.",
+    category: "the-service",
   },
   {
     question:
       "Can a small hidden leak cause serious damage in my North Las Vegas home?",
     answer:
       "Yes. A small hidden leak inside a wall can promote mold growth within 24 to 48 hours and can damage wood framing, drywall, insulation, and flooring over weeks and months without any visible sign above the surface. An underground supply line leak can waste hundreds of gallons per month and create soil saturation conditions near the foundation. Early detection and repair limits damage and reduces total repair cost.",
+    category: "causes-signs",
   },
   {
     question: "Do you offer same-day leak detection service in North Las Vegas?",
     answer:
       "Same-day leak detection service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
   "Hidden water leaks in North Las Vegas homes can cause serious damage long before they become visible. Red Carpet Plumbing locates leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging. Serving Aliante, central North Las Vegas, and all NLV communities.";
 
-// FLAG: VERIFY rating, "40 years," and 24/7 claims before publishing (see top).
+// FLAG: VERIFY "40 years," and 24/7 claims before publishing (see top).
 const HERO_TRUST_ITEMS = [
-  "4.8 stars, 76 Google reviews",
-  "NV Licensed #0048585A",
+  "4.8 stars, 81 Google reviews",
+  "NV Licensed #048585A",
   "Over 40 years serving the Las Vegas Valley",
   "Transparent pricing, no hidden fees",
   "Non-Invasive Detection",
@@ -287,6 +296,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "City",
@@ -312,18 +329,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: NLV_LEAK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(NLV_LEAK_FAQS);
 
 export default function NorthLasVegasLeakDetectionPage() {
   return (
@@ -685,33 +691,11 @@ export default function NorthLasVegasLeakDetectionPage() {
         </section>
 
         {/* SECTION 9 (FAQ) */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Leak Detection in North Las
-                Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {NLV_LEAK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Leak Detection in North Las Vegas</>}
+          faqs={NLV_LEAK_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -736,20 +720,5 @@ export default function NorthLasVegasLeakDetectionPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

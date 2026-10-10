@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 — project-established value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating — project-established value;
+// - License #048585A, C-1 Plumbing and Heating — project-established value;
 //   confirm before launch.
 // - "Emergency Gas Line Response Available" trust strip claim — confirm.
 // - "Transparent Pricing" / "Upfront Pricing, No Hidden Fees" — source-site
@@ -36,18 +36,20 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Gas Line Plumbing in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection in Henderson, NV. NV License #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection in Henderson, NV. NV License #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/gas-line-plumbing/",
   },
   openGraph: {
     title: "Gas Line Plumbing in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Licensed gas line repair, installation, inspection, and appliance hookup for Henderson homes and businesses. Serving Green Valley, Green Valley Ranch, Anthem, and all Henderson communities. NV License #0048585A.",
+      "Licensed gas line repair, installation, inspection, and appliance hookup for Henderson homes and businesses. Serving Green Valley, Green Valley Ranch, Anthem, and all Henderson communities. NV License #048585A.",
     url: "https://redcarpetplumbing.com/henderson/gas-line-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -59,8 +61,8 @@ export const metadata: Metadata = {
 type LinkSeg = string | { href: string; text: string };
 
 const HERO_TRUST_ITEMS = [
-  // FLAG: VERIFY license #0048585A before publishing.
-  "NV Licensed Gas Line Plumbers, #0048585A",
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed Gas Line Plumbers, #048585A",
   "Serving Henderson and the Las Vegas Valley",
   "Residential and Commercial Gas Line Service",
   // FLAG: VERIFY transparent pricing claim before publishing.
@@ -197,10 +199,10 @@ const HENDERSON_GAS_STEPS = [
   },
 ];
 
-// FLAG: VERIFY before publishing — license #0048585A and transparent pricing are
+// FLAG: VERIFY before publishing — license #048585A and transparent pricing are
 // source-site claims.
 const WHY_CHOOSE_ITEMS = [
-  "Licensed for gas line work in Nevada. Red Carpet Plumbing holds NV Contractor License #0048585A, C-1 Plumbing and Heating, which authorizes gas line repair and installation throughout Henderson.",
+  "Licensed for gas line work in Nevada. Red Carpet Plumbing holds NV Contractor License #048585A, C-1 Plumbing and Heating, which authorizes gas line repair and installation throughout Henderson.",
   "Henderson-specific knowledge. We understand the gas line conditions specific to original Green Valley homes, Henderson's extreme summer heat, CSST connector vulnerabilities, and the outdoor living addition requirements common in Henderson HOA communities.",
   "Safety-first process. We follow the correct safety protocol for gas line work, including Southwest Gas emergency coordination and final pressure testing on every job.",
   "Henderson City permits handled. Gas line work requiring a City of Henderson permit is coordinated with permit application and final inspection included.",
@@ -229,45 +231,52 @@ const COMMUNITIES: { name: string; href?: string }[] = [
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const HENDERSON_GAS_FAQS = [
+const HENDERSON_GAS_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a gas line problem in my Henderson home?",
     answer:
       "The most common sign of a gas line problem is a rotten egg or sulfur smell, which is the odorant added to natural gas so leaks can be detected. You may also hear a hissing or whistling sound near a gas appliance, meter, or line, notice dead or dying vegetation above a buried gas line, see a yellow or flickering flame on a gas appliance, or see an unexplained increase in your gas bill. If you smell gas, leave the building immediately and call Southwest Gas at 1-800-935-4748 from outside before calling a plumber.",
+    category: "causes-signs",
   },
   {
     question:
       "Should I call a plumber or Southwest Gas for a gas line problem in Henderson?",
     answer:
       "If you smell gas or suspect an active leak, call Southwest Gas at 1-800-935-4748 from outside your home first. Southwest Gas is responsible for the line up to your meter. Once the area is declared safe, call Red Carpet Plumbing at (702) 567-9172 to inspect, locate, and repair the gas line from the meter into your home or business. For non-emergency gas line work such as appliance hookups, inspections, or permitted extensions, call Red Carpet Plumbing directly.",
+    category: "the-service",
   },
   {
     question: "Does Red Carpet Plumbing handle gas line permits in Henderson?",
     answer:
       "Yes. New gas line installations and most gas line repairs in Henderson require a City of Henderson permit. Red Carpet Plumbing handles permit application and inspection coordination as part of the job. Henderson City permits are separate from Clark County unincorporated permits, and all gas line work must be performed by a Nevada-licensed contractor.",
+    category: "trust",
   },
   {
     question:
       "Can a plumber install a gas line for an outdoor kitchen or fire pit in Henderson?",
     answer:
       "Yes. Red Carpet Plumbing installs permitted gas line extensions for outdoor kitchens, built-in grills, fire pits, pool heaters, and patio heaters throughout Henderson. Outdoor gas line work requires a City of Henderson permit. We handle route planning, trenching, installation, permit coordination, and final pressure testing. Outdoor gas line extensions are a common request in Henderson's master-planned communities, including Green Valley, Green Valley Ranch, Anthem, Inspirada, and MacDonald Ranch.",
+    category: "the-service",
   },
   {
     question:
       "Why do gas lines need to be inspected in older Henderson homes?",
     answer:
       "Homes built in original Green Valley neighborhoods from roughly 1985 through the early 1990s now have gas supply systems that are 30 to 40 years old. Many were built with black iron pipe and threaded fittings that can loosen and dry out over decades of extreme heat cycles. Homes built with CSST gas line connectors have fittings that can be stressed by Las Vegas Valley attic heat. Annual gas line inspections help identify corroded fittings, loose connections, and aging pipe materials before they become safety concerns.",
+    category: "causes-signs",
   },
   {
     question:
       "Where does Red Carpet Plumbing provide gas line services in Henderson?",
     answer:
       "Red Carpet Plumbing provides gas line repair, installation, inspection, and appliance hookup throughout Henderson, NV, including Green Valley, Green Valley Ranch, Seven Hills, MacDonald Ranch, Anthem, Tuscany Village, Inspirada, Whitney Ranch, Lake Las Vegas, and Downtown Henderson. Contact us to confirm coverage for your specific location.",
+    category: "the-service",
   },
   {
     question: "Do you offer same-day gas line service in Henderson?",
     answer:
       "Same-day gas line service is available in Henderson, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -312,7 +321,7 @@ const webpageSchema = {
   name: "Gas Line Plumbing in Henderson, NV | Red Carpet Plumbing",
   url: "https://redcarpetplumbing.com/henderson/gas-line-plumbing/",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection in Henderson, NV. Serving Green Valley, Green Valley Ranch, Anthem, and all Henderson communities. NV License #0048585A.",
+    "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection in Henderson, NV. Serving Green Valley, Green Valley Ranch, Anthem, and all Henderson communities. NV License #048585A.",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",
@@ -352,7 +361,7 @@ const serviceSchema = {
   name: "Gas Line Plumbing in Henderson, NV",
   serviceType: "Gas Line Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and appliance hookup for homes and businesses throughout Henderson, NV. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and appliance hookup for homes and businesses throughout Henderson, NV. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -384,18 +393,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: HENDERSON_GAS_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(HENDERSON_GAS_FAQS);
 
 function renderTail(tail: LinkSeg[]) {
   return tail.map((seg, i) =>
@@ -746,39 +744,18 @@ export default function HendersonGasLinePage() {
         </section>
 
         {/* SECTION 12: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Gas Line Plumbing in Henderson, NV
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {HENDERSON_GAS_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Gas Line Plumbing in Henderson, NV</>}
+          faqs={HENDERSON_GAS_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 13: FINAL CTA */}
         {/* FLAG: VERIFY — license number in the body is a source-site claim. */}
         <CTASection
           background="red"
           headline={<>Ready to Schedule Gas Line Service<br />in Henderson?</>}
-          body="Red Carpet Plumbing is available for licensed gas line repair, installation, inspection, and appliance hookup throughout Henderson and the Las Vegas Valley. NV License #0048585A, C-1 Plumbing and Heating."
+          body="Red Carpet Plumbing is available for licensed gas line repair, installation, inspection, and appliance hookup throughout Henderson and the Las Vegas Valley. NV License #048585A, C-1 Plumbing and Heating."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",
@@ -815,21 +792,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

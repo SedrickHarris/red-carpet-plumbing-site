@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,12 +11,14 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
     "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals for kitchens throughout Las Vegas and the Las Vegas Valley. Jammed, leaking, or not working. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals for kitchens throughout Las Vegas and the Las Vegas Valley. Jammed, leaking, or not working. NV Licensed #048585A. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/garbage-disposal-repair-installation/",
@@ -24,57 +27,66 @@ export const metadata: Metadata = {
     title:
       "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed garbage disposal repair and installation throughout Las Vegas and the Las Vegas Valley. NV #0048585A. 4.8 stars, 76 reviews.",
+      "Licensed garbage disposal repair and installation throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
   },
 };
 
-const DISPOSAL_FAQS = [
+const DISPOSAL_FAQS: FaqItem[] = [
   {
     question: "Why is my garbage disposal humming but not spinning?",
     answer:
       "A humming disposal that will not spin has a jammed impeller. Something lodged between the impeller plate and the grinding ring is preventing the motor from turning. The motor strains, overheats, and trips the internal overload protector, which causes it to hum without grinding. In Las Vegas, hard water mineral deposits can also build up on impeller components and increase jam frequency. A plumber can safely clear the jam, test the motor, and confirm the unit is operating correctly.",
+    category: "causes-signs",
   },
   {
     question: "How do I reset a garbage disposal?",
     answer:
       "Most garbage disposals have a red or black reset button on the bottom of the unit under the sink. If the disposal stopped working suddenly, the motor may have overloaded and tripped the reset. Press the reset button firmly until you feel it click. Then run cold water and turn the disposal on. If it still does not work after resetting, the cause is likely a jam, a wiring issue, or a failing motor that requires a plumber to diagnose.",
+    category: "the-service",
   },
   {
     question:
       "When should I replace a garbage disposal instead of repairing it?",
     answer:
       "Replacement is usually the better choice when the disposal is leaking from the bottom housing, which typically means the internal seals have failed. Other replacement indicators include a unit that is eight to twelve years old with a failing motor, one that jams repeatedly despite normal use, or one that requires repairs that approach the cost of a new unit. Red Carpet Plumbing can assess your disposal and give you an honest recommendation on repair versus replacement.",
+    category: "timing-process",
   },
   {
     question: "What should not go into a garbage disposal?",
     answer:
       "Garbage disposals are not designed to handle grease or cooking oil, fibrous foods like celery and onion skins, starchy foods like potato peels and pasta, hard items like bones and fruit pits, eggshells in large quantities, or non-food items of any kind. In Las Vegas, grease is a particular concern because it combines with hard water calcium deposits to form thick buildup in discharge lines, increasing the risk of clogs and drain backups behind the disposal.",
+    category: "the-service",
   },
   {
     question: "How long do garbage disposals last?",
     answer:
       "The average garbage disposal lasts eight to twelve years with normal use. Units in Las Vegas homes may reach end-of-life sooner due to hard water mineral stress on internal components. Disposals in high-use households, investment properties, and short-term rentals typically have shorter lifespans than units in single-occupancy homes. If your disposal is approaching ten years old and starting to have problems, replacement is often more cost-effective than continued repair.",
+    category: "timing-process",
   },
   {
     question: "Can a plumber install a garbage disposal?",
     answer:
       "Yes. Red Carpet Plumbing installs garbage disposals for kitchen sinks throughout the Las Vegas Valley. Professional installation includes connecting the disposal to the drain assembly, dishwasher inlet if applicable, electrical connection point, and confirming all connections are leak-free before leaving. Licensed installation also protects the manufacturer warranty, which many brands require.",
+    category: "the-service",
   },
   {
     question: "Why is my garbage disposal leaking?",
     answer:
       "Garbage disposal leaks most commonly come from three locations: the sink flange at the top where the disposal meets the sink drain, the discharge tube on the side where water exits to the drain pipe, or the bottom of the housing where internal seals have failed. Leaks at the flange or discharge tube are usually repairable. Leaks from the bottom of the housing typically indicate failed internal seals and usually mean the unit needs replacement.",
+    category: "causes-signs",
   },
   {
     question:
       "What areas does Red Carpet Plumbing serve for garbage disposal repair?",
     answer:
       "Red Carpet Plumbing provides garbage disposal repair and installation throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day garbage disposal repair service in Las Vegas?",
     answer:
       "Same-day garbage disposal repair service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -293,7 +305,7 @@ const serviceSchema = {
   name: "Garbage Disposal Repair and Installation",
   serviceType: "Garbage Disposal Repair and Installation",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals for kitchens throughout the Las Vegas Valley. Services include jam clearing, leak repair, motor diagnosis, full replacement, and new installation. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals for kitchens throughout the Las Vegas Valley. Services include jam clearing, leak repair, motor diagnosis, full replacement, and new installation. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -303,17 +315,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -370,7 +383,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/garbage-disposal-repair-installation/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -391,18 +404,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: DISPOSAL_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(DISPOSAL_FAQS);
 
 export default function GarbageDisposalRepairInstallationPage() {
   return (
@@ -431,8 +433,8 @@ export default function GarbageDisposalRepairInstallationPage() {
           }
           subheading="Garbage disposal repair, replacement, and installation for kitchens throughout the Las Vegas Valley."
           trustItems={[
-            "Licensed Plumbers, NV #0048585A",
-            "4.8 Stars, 76 Google Reviews",
+            "Licensed Plumbers, NV #048585A",
+            "4.8 Stars, 81 Google Reviews",
             "24/7 Emergency Service",
             "Transparent Pricing, No Hidden Fees",
             "Over 40 Years in Las Vegas",
@@ -445,12 +447,14 @@ export default function GarbageDisposalRepairInstallationPage() {
             label: "Request Garbage Disposal Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
+          ctaNote="NV Licensed #048585A | 4.8 Stars, 81 Reviews"
           formSlot={<QuoteFormPlaceholder title="Get Garbage Disposal Help" />}
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-repair-installation-hero.webp",
             alt: "Modern garbage disposal installation in a Las Vegas kitchen",
+            // Square 1184x1184 source cropped to a wide band: keep the subject in frame.
+            position: "70% 65%",
           }}
         />
 
@@ -532,7 +536,11 @@ export default function GarbageDisposalRepairInstallationPage() {
 
         {/* SECTION 5: WHY GARBAGE DISPOSALS WEAR OUT FASTER IN LAS VEGAS */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-under-sink-leak-repair-card.webp"
+              alt="Under-sink cabinet with a P-trap and a small drip from the drain connection"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -566,12 +574,17 @@ export default function GarbageDisposalRepairInstallationPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: HOWTO PROCESS */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-drain-p-trap-repair-card.webp"
+              alt="Black P-trap and supply lines under a sink beside a tool bag"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -611,6 +624,7 @@ export default function GarbageDisposalRepairInstallationPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -626,7 +640,7 @@ export default function GarbageDisposalRepairInstallationPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing handles disposal jams, leaks,
                   replacements, and new installations throughout the Las
-                  Vegas Valley. NV Contractor License #0048585A.
+                  Vegas Valley. NV Contractor License #048585A.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">
@@ -736,31 +750,11 @@ export default function GarbageDisposalRepairInstallationPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Garbage Disposal Questions Answered
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {DISPOSAL_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Garbage Disposal Questions Answered</>}
+          faqs={DISPOSAL_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -795,20 +789,5 @@ export default function GarbageDisposalRepairInstallationPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

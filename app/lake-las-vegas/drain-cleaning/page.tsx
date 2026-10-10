@@ -9,10 +9,12 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing. The "24/7 plumbing support" and
 // "transparent pricing, no hidden fees" trust claims are source-site claims
-// shown on this page. License #0048585A is a verified business claim. Confirm
+// shown on this page. License #048585A is a verified business claim. Confirm
 // 24/7 availability and transparent pricing before final launch.
 // SCHEMA NOTE: Lake Las Vegas is a master-planned community within the
 // incorporated City of Henderson, so Service.areaServed uses the Green Valley
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
 
 // Hero trust strip. FLAG comments retained per established sibling pattern.
 const LLV_DRAIN_TRUST = [
-  "Nevada Contractor License #0048585A",
+  "Nevada Contractor License #048585A",
   // FLAG: VERIFY source-site claim.
   "24/7 plumbing support available",
   // FLAG: VERIFY source-site claim.
@@ -121,34 +123,41 @@ const LLV_DRAIN_STEPS = [
 // FAQ -- FAQPage schema source of truth. Visible accordion and faqSchema both
 // derive from this array (character-for-character).
 // ---------------------------------------------------------------------------
-const LLV_DRAIN_FAQS = [
+const LLV_DRAIN_FAQS: FaqItem[] = [
   {
-    q: "Does Red Carpet Plumbing serve Lake Las Vegas?",
-    a: "Yes. Red Carpet Plumbing serves Lake Las Vegas as part of its Henderson, NV service area. Lake Las Vegas is a master-planned resort community within the incorporated City of Henderson, and our licensed plumbers provide drain cleaning and other plumbing services throughout the area.",
+    question: "Does Red Carpet Plumbing serve Lake Las Vegas?",
+    answer: "Yes. Red Carpet Plumbing serves Lake Las Vegas as part of its Henderson, NV service area. Lake Las Vegas is a master-planned resort community within the incorporated City of Henderson, and our licensed plumbers provide drain cleaning and other plumbing services throughout the area.",
+    category: "service-area",
   },
   {
-    q: "What causes drain clogs in Lake Las Vegas homes?",
-    a: "The most common cause in Lake Las Vegas is mineral scale buildup from hard water. Lake Las Vegas homes are supplied by Lake Mead, which produces water measuring 17 to 24 grains per gallon. Over time, dissolved minerals deposit inside copper pipes and drain lines, narrowing the flow path. Grease, soap scum, and hair contribute to clogs in kitchen and bathroom drains as well.",
+    question: "What causes drain clogs in Lake Las Vegas homes?",
+    answer: "The most common cause in Lake Las Vegas is mineral scale buildup from hard water. Lake Las Vegas homes are supplied by Lake Mead, which produces water measuring 17 to 24 grains per gallon. Over time, dissolved minerals deposit inside copper pipes and drain lines, narrowing the flow path. Grease, soap scum, and hair contribute to clogs in kitchen and bathroom drains as well.",
+    category: "causes-signs",
   },
   {
-    q: "Is hydro jetting safe for the pipes in my Lake Las Vegas home?",
-    a: "Hydro jetting is generally safe for the copper plumbing found in most Lake Las Vegas homes, which were built between 2000 and 2010. A licensed plumber will inspect your pipes before recommending hydro jetting to confirm the lines are in suitable condition. For older or damaged pipes, a cable machine or alternative method may be recommended instead.",
+    question: "Is hydro jetting safe for the pipes in my Lake Las Vegas home?",
+    answer: "Hydro jetting is generally safe for the copper plumbing found in most Lake Las Vegas homes, which were built between 2000 and 2010. A licensed plumber will inspect your pipes before recommending hydro jetting to confirm the lines are in suitable condition. For older or damaged pipes, a cable machine or alternative method may be recommended instead.",
+    category: "the-service",
   },
   {
-    q: "How do I know if I need drain cleaning or a sewer line inspection?",
-    a: "If a single drain is slow or clogged, drain cleaning is usually the right starting point. If multiple drains are slow, you notice sewer odors, or drains back up when you run water elsewhere in the house, a main sewer line problem may be present. In those cases, a video camera inspection can help identify the issue before any cleaning or repair is done.",
+    question: "How do I know if I need drain cleaning or a sewer line inspection?",
+    answer: "If a single drain is slow or clogged, drain cleaning is usually the right starting point. If multiple drains are slow, you notice sewer odors, or drains back up when you run water elsewhere in the house, a main sewer line problem may be present. In those cases, a video camera inspection can help identify the issue before any cleaning or repair is done.",
+    category: "causes-signs",
   },
   {
-    q: "How often should I have my drains cleaned in a Lake Las Vegas home?",
-    a: "For most Lake Las Vegas homeowners, having drains professionally cleaned every one to two years is a reasonable maintenance schedule, particularly given the hard water conditions in the area. Kitchen drains and main sewer lines may benefit from more frequent attention depending on usage and prior clog history.",
+    question: "How often should I have my drains cleaned in a Lake Las Vegas home?",
+    answer: "For most Lake Las Vegas homeowners, having drains professionally cleaned every one to two years is a reasonable maintenance schedule, particularly given the hard water conditions in the area. Kitchen drains and main sewer lines may benefit from more frequent attention depending on usage and prior clog history.",
+    category: "timing-process",
   },
   {
-    q: "Who handles plumbing permits in Lake Las Vegas?",
-    a: "Plumbing permits in Lake Las Vegas are issued by the City of Henderson, which is the governing jurisdiction for the Lake Las Vegas community. Red Carpet Plumbing holds Nevada Contractor License #0048585A and works within all applicable City of Henderson permit and inspection requirements.",
+    question: "Who handles plumbing permits in Lake Las Vegas?",
+    answer: "Plumbing permits in Lake Las Vegas are issued by the City of Henderson, which is the governing jurisdiction for the Lake Las Vegas community. Red Carpet Plumbing holds Nevada Contractor License #048585A and works within all applicable City of Henderson permit and inspection requirements.",
+    category: "trust",
   },
   {
-    q: "Do you offer same-day drain cleaning service in Lake Las Vegas?",
-    a: "Same-day drain cleaning service is available in Lake Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    question: "Do you offer same-day drain cleaning service in Lake Las Vegas?",
+    answer: "Same-day drain cleaning service is available in Lake Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -234,7 +243,7 @@ const serviceSchema = {
   name: "Drain Cleaning in Lake Las Vegas, Henderson, NV",
   serviceType: "Drain Cleaning",
   description:
-    "Red Carpet Plumbing provides professional drain cleaning for homes and resort residential properties in Lake Las Vegas, Henderson, NV. Services include kitchen drain cleaning, bathroom drain cleaning, main sewer line cleaning, hydro jetting, and video camera drain inspection. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides professional drain cleaning for homes and resort residential properties in Lake Las Vegas, Henderson, NV. Services include kitchen drain cleaning, bathroom drain cleaning, main sewer line cleaning, hydro jetting, and video camera drain inspection. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -272,18 +281,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LLV_DRAIN_FAQS.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: f.a,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LLV_DRAIN_FAQS);
 
 export default function LakeLasVegasDrainCleaningPage() {
   return (
@@ -489,31 +487,11 @@ export default function LakeLasVegasDrainCleaningPage() {
         </section>
 
         {/* SECTION 7: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Drain Cleaning Questions for Lake Las Vegas Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LLV_DRAIN_FAQS.map((faq) => (
-                <details
-                  key={faq.q}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.q}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.a}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Drain Cleaning Questions for Lake Las Vegas Homeowners</>}
+          faqs={LLV_DRAIN_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 8: RELATED SERVICES (rerouting cards) */}
         <section className="bg-white">
@@ -591,21 +569,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

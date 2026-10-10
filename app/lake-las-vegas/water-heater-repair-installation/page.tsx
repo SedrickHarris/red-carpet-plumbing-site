@@ -9,10 +9,12 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // FLAG: VERIFY before publishing. "Emergency water heater service available"
 // and "transparent pricing, no hidden fees" are source-site claims shown on
-// this page. License #0048585A is a verified business claim. Gas line scope
+// this page. License #048585A is a verified business claim. Gas line scope
 // (FLAG: verify gas line scope before publishing) is carried forward from
 // sibling water heater pages.
 // SCHEMA NOTE: Lake Las Vegas is a master-planned community within the
@@ -53,7 +55,7 @@ export const metadata: Metadata = {
 
 // Hero trust strip. FLAG comments retained per established sibling pattern.
 const LLV_WH_TRUST = [
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
   // FLAG: source-site claim -- verify before final launch.
   "Emergency water heater service available",
   // FLAG: source-site claim -- verify before final launch.
@@ -128,7 +130,7 @@ const LLV_WH_SERVICES = [
   {
     label: "Gas and electric water heater service",
     // FLAG: verify gas line scope before publishing.
-    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   },
 ];
 
@@ -157,45 +159,52 @@ const LLV_WH_STEPS = [
 // ---------------------------------------------------------------------------
 // FAQ -- FAQPage schema source of truth.
 // ---------------------------------------------------------------------------
-const LLV_WH_FAQS = [
+const LLV_WH_FAQS: FaqItem[] = [
   {
     question: "How long does a water heater last in Lake Las Vegas?",
     answer:
       "In the Las Vegas Valley, most tank water heaters last 8 to 12 years due to hard water from the Lake Mead supply, which measures 17 to 24 grains per gallon. Lake Las Vegas homes were primarily built between 2000 and 2010, which means original water heaters in those homes are now 15 to 25 years old and well past their expected service life. If your unit is in that age range and showing problems, replacement is usually the right choice.",
+    category: "timing-process",
   },
   {
     question:
       "Why does hard water shorten water heater life in Lake Las Vegas?",
     answer:
       "Lake Las Vegas is served by Lake Mead, which delivers water measuring 17 to 24 grains per gallon. That level of hardness causes calcium and magnesium to deposit inside the water heater tank as sediment, reducing heating efficiency and causing the popping and rumbling sounds many homeowners report. Hard water also depletes the anode rod inside the tank much faster than the three to five year national average. A depleted anode rod leaves the steel tank unprotected from internal corrosion, accelerating failure.",
+    category: "causes-signs",
   },
   {
     question:
       "What is a thermal expansion tank and do I need one in Lake Las Vegas?",
     answer:
       "Most Lake Las Vegas homes operate on a closed-loop plumbing system because of backflow preventers installed at the street meter. When a water heater heats water, the expanded volume has nowhere to go in a closed system, which creates pressure spikes that stress the tank and its connections over time. Clark County plumbing code and most manufacturer warranties require a thermal expansion tank on closed-loop water heater installations. If your water heater was installed without one, Red Carpet Plumbing can add it during a service call.",
+    category: "the-service",
   },
   {
     question:
       "Is a tankless water heater a good choice for a Lake Las Vegas home?",
     answer:
       "Tankless water heaters work well in Lake Las Vegas homes, but they require annual descaling to remove mineral deposits from the heat exchanger caused by the area's hard water. A properly maintained tankless unit typically lasts 15 to 20 years, which is significantly longer than a tank unit under Las Vegas Valley hard water conditions. Whether tank or tankless is the better choice depends on your household's hot water demand, available space, and budget.",
+    category: "the-service",
   },
   {
     question: "Who handles water heater permits in Lake Las Vegas?",
     answer:
-      "Water heater installation permits in Lake Las Vegas are issued by the City of Henderson, which is the governing jurisdiction for the Lake Las Vegas community. All installations must meet Clark County plumbing code requirements, including seismic bracing and thermal expansion tank installation on closed-loop systems. Red Carpet Plumbing holds Nevada Contractor License #0048585A and handles all applicable permit and inspection requirements.",
+      "Water heater installation permits in Lake Las Vegas are issued by the City of Henderson, which is the governing jurisdiction for the Lake Las Vegas community. All installations must meet Clark County plumbing code requirements, including seismic bracing and thermal expansion tank installation on closed-loop systems. Red Carpet Plumbing holds Nevada Contractor License #048585A and handles all applicable permit and inspection requirements.",
+    category: "trust",
   },
   {
     question:
       "Does Red Carpet Plumbing serve Lake Las Vegas for water heater repair?",
     answer:
       "Yes. Red Carpet Plumbing provides water heater repair, replacement, and installation for homes throughout Lake Las Vegas as part of its Henderson, NV service area. Call (702) 567-9172 to schedule service.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day water heater repair service in Lake Las Vegas?",
     answer:
       "Same-day water heater repair service is available in Lake Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -283,7 +292,7 @@ const serviceSchema = {
   name: "Water Heater Repair and Installation in Lake Las Vegas, Henderson, NV",
   serviceType: "Water Heater Repair and Installation",
   description:
-    "Red Carpet Plumbing provides water heater repair and installation for homes in Lake Las Vegas, Henderson, NV. Tank water heater repair and replacement, tankless water heater installation, sediment flush and maintenance, anode rod replacement, and thermal expansion tank installation. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides water heater repair and installation for homes in Lake Las Vegas, Henderson, NV. Tank water heater repair and replacement, tankless water heater installation, sediment flush and maintenance, anode rod replacement, and thermal expansion tank installation. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -321,18 +330,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LLV_WH_FAQS.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: f.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LLV_WH_FAQS);
 
 export default function LakeLasVegasWaterHeaterPage() {
   return (
@@ -570,31 +568,11 @@ export default function LakeLasVegasWaterHeaterPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Water Heater Questions for Lake Las Vegas Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LLV_WH_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Water Heater Questions for Lake Las Vegas Homeowners</>}
+          faqs={LLV_WH_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 9: RELATED SERVICES (rerouting cards) */}
         <section className="bg-brand-surface-alt">
@@ -654,20 +632,5 @@ export default function LakeLasVegasWaterHeaterPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

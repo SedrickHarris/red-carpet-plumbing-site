@@ -18,14 +18,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Lake Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Plumbing services in Lake Las Vegas, NV. Water heater repair, slab leak detection, leak detection for luxury Henderson homes. NV #0048585A. (702) 567-9172.",
+    "Plumbing services in Lake Las Vegas, NV. Water heater repair, slab leak detection, leak detection for luxury Henderson homes. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/lake-las-vegas-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Lake Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Plumbing services in Lake Las Vegas, NV. Water heater repair, slab leak detection, leak detection for luxury Henderson homes. NV #0048585A. (702) 567-9172.",
+      "Plumbing services in Lake Las Vegas, NV. Water heater repair, slab leak detection, leak detection for luxury Henderson homes. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/lake-las-vegas-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -73,7 +73,7 @@ const LAKE_LAS_VEGAS_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed to work in Lake Las Vegas?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Lake Las Vegas and Henderson.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Lake Las Vegas and Henderson.",
     category: "trust",
   },
   {
@@ -227,8 +227,8 @@ const LAKE_LAS_VEGAS_AREAS = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
-  "4.8-star rating across 76 Google reviews",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
 ];
@@ -236,7 +236,7 @@ const TRUST_ITEMS = [
 const LAKE_LAS_VEGAS_CONTEXT = [
   {
     title: "What Is Lake Las Vegas?",
-    body: "Lake Las Vegas is a resort and residential community built around a 320-acre man-made lake in the eastern portion of Henderson, Nevada. Developed from the early 1990s through the mid-2000s, Lake Las Vegas was designed as a master-planned luxury destination, featuring waterfront residential properties, resort hotels, a Mediterranean-style village, golf courses, and gated communities. The community sits approximately 17 miles east of the Las Vegas Strip and is entirely within Henderson city limits. Homes in Lake Las Vegas range from high-end single-family residences to luxury townhomes and custom lakefront properties. Red Carpet Plumbing serves Lake Las Vegas as part of its Henderson service area, and Nevada Contractor License #0048585A covers plumbing work throughout Henderson including Lake Las Vegas.",
+    body: "Lake Las Vegas is a resort and residential community built around a 320-acre man-made lake in the eastern portion of Henderson, Nevada. Developed from the early 1990s through the mid-2000s, Lake Las Vegas was designed as a master-planned luxury destination, featuring waterfront residential properties, resort hotels, a Mediterranean-style village, golf courses, and gated communities. The community sits approximately 17 miles east of the Las Vegas Strip and is entirely within Henderson city limits. Homes in Lake Las Vegas range from high-end single-family residences to luxury townhomes and custom lakefront properties. Red Carpet Plumbing serves Lake Las Vegas as part of its Henderson service area, and Nevada Contractor License #048585A covers plumbing work throughout Henderson including Lake Las Vegas.",
   },
   {
     title: "Hard Water and Premium Plumbing Systems",
@@ -286,10 +286,11 @@ const plumberSchema = {
       closes: "16:30",
     },
   ],
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -297,7 +298,7 @@ const plumberSchema = {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
     name: "Nevada C-1 Plumbing and Heating Contractor License",
-    identifier: "0048585A",
+    identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
       name: "State of Nevada Contractors Board",
@@ -316,7 +317,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Plumbing Services in Lake Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed plumbing services in Lake Las Vegas, NV including water heater repair, slab leak detection, and leak detection. NV Licensed #0048585A.",
+    "Red Carpet Plumbing provides licensed plumbing services in Lake Las Vegas, NV including water heater repair, slab leak detection, and leak detection. NV Licensed #048585A.",
   url: "https://redcarpetplumbing.com/lake-las-vegas-plumbing-services/",
   isPartOf: {
     "@type": "WebSite",
@@ -359,8 +360,8 @@ const breadcrumbSchema = {
 const faqSchema = buildFaqPageSchema(LAKE_LAS_VEGAS_FAQS);
 
 const TRUST_STRIP_ITEMS = [
-"4.8 stars, 76 Google reviews",
-"NV Licensed #0048585A",
+"4.8 stars, 81 Google reviews",
+"NV Licensed #048585A",
 "Over 40 years serving Las Vegas Valley",
 "Transparent pricing, no hidden fees",
 ];
@@ -394,7 +395,7 @@ export default function LakeLasVegasPlumbingServicesPage() {
               <br /> in Lake Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides licensed plumbing services in Lake Las Vegas, Nevada. Lake Las Vegas is a luxury resort and residential community within Henderson, featuring premium homes and complex plumbing systems that require experienced licensed plumbers. Our licensed plumbers serve Lake Las Vegas homes and properties. NV Contractor License #0048585A."
+          subheading="Red Carpet Plumbing provides licensed plumbing services in Lake Las Vegas, Nevada. Lake Las Vegas is a luxury resort and residential community within Henderson, featuring premium homes and complex plumbing systems that require experienced licensed plumbers. Our licensed plumbers serve Lake Las Vegas homes and properties. NV Contractor License #048585A."
           trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -425,7 +426,7 @@ export default function LakeLasVegasPlumbingServicesPage() {
                 Vegas is a luxury master-planned community within the City of
                 Henderson, and Red Carpet Plumbing has been serving homes
                 throughout Henderson, including Lake Las Vegas, for over 40 years.
-                We hold Nevada Contractor License #0048585A under the C-1 Plumbing
+                We hold Nevada Contractor License #048585A under the C-1 Plumbing
                 and Heating classification. For full Henderson area plumbing
                 coverage, visit our{" "}
                 <Link
@@ -611,9 +612,9 @@ export default function LakeLasVegasPlumbingServicesPage() {
                 <li key={item} className="flex items-start gap-3">
                   <CheckMark />
                   <span className="text-base leading-7 text-brand-dark/85">
-                    {item === "4.8-star rating across 76 Google reviews" ? (
+                    {item === "4.8-star rating across 81 Google reviews" ? (
                       <>
-                        4.8-star rating across 76 Google reviews.{" "}
+                        4.8-star rating across 81 Google reviews.{" "}
                         <a
                           href="https://share.google/oY5LcfC0lhWJXVjJj"
                           target="_blank"

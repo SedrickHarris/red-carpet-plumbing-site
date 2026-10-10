@@ -1,7 +1,7 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 in serviceSchema.provider — project-established
 //   value; confirm before launch.
-// - License #0048585A, C-1 Plumbing and Heating — verified business claim.
+// - License #048585A, C-1 Plumbing and Heating — verified business claim.
 // - "Transparent pricing, no hidden fees" in the hero ctaNote and the Section 8
 //   checklist — source-site claim; confirm documentation before launch.
 // FLAG comments appear only in source. No FLAG text appears in any visible
@@ -46,6 +46,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
@@ -209,7 +211,7 @@ const NLV_TOILET_STEPS = [
 const NLV_TOILET_WHY = [
   "Local Las Vegas Valley plumbing company familiar with North Las Vegas housing stock and hard water conditions",
   "Transparent assessment of repair vs. replacement before any work is recommended",
-  "Licensed plumbers, NV License #0048585A, C-1 Plumbing and Heating",
+  "Licensed plumbers, NV License #048585A, C-1 Plumbing and Heating",
   "Transparent pricing with no hidden fees",
   "Toilet repair and installation service throughout North Las Vegas",
 ];
@@ -248,43 +250,50 @@ const NLV_TOILET_SUBAREAS = [
 // the Prompt 04 gap-fix revisions, tightened to the 30 to 60 word AEO and
 // voice-search band. FAQ 7 keeps its "subject to scheduling" qualifier.
 // ---------------------------------------------------------------------------
-const NLV_TOILET_FAQS = [
+const NLV_TOILET_FAQS: FaqItem[] = [
   {
     question: "Why does my toilet keep running in my North Las Vegas home?",
     answer:
       "A failing flapper valve, a worn fill valve, or a float set too high are the usual causes. Las Vegas Valley hard water accelerates wear on these rubber and plastic parts, so North Las Vegas toilets often need internal components replaced more often than in areas with softer water.",
+    category: "causes-signs",
   },
   {
     question: "Why is my toilet leaking at the base?",
     answer:
       "A leak at the base is almost always a failed wax ring, the seal between the toilet and the floor flange. North Las Vegas homes on slab foundations sit on caliche soil that shifts with temperature changes, which stresses that seal over time in older fixtures.",
+    category: "causes-signs",
   },
   {
     question: "How do I know if my toilet needs repair or full replacement?",
     answer:
       "Repair usually makes sense for running toilets, base leaks, weak flushes, and most clogs. Replacement is the better call for a cracked tank or bowl, repeated repairs on the same fixture, or an older pre-1992 model using far more water per flush than current models.",
+    category: "causes-signs",
   },
   {
     question: "Does hard water damage toilets in North Las Vegas?",
     answer:
       "Yes. North Las Vegas receives Lake Mead water at 17 to 24 grains per gallon, among the hardest municipal supplies in the country. It leaves mineral deposits inside siphon jets and wears out flapper and fill valves faster than softer water would.",
+    category: "the-service",
   },
   {
     question:
       "Are older North Las Vegas homes more likely to need toilet repair?",
     answer:
       "Central and southern North Las Vegas homes built from the 1960s through the 1980s often still run original tank components decades past their service life. Aliante-area homes, built mainly from 2000 to 2008, are now entering their first major plumbing service cycle.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing serve North Las Vegas for toilet repair and installation?",
     answer:
       "Yes. Red Carpet Plumbing provides toilet repair and installation throughout North Las Vegas, including the 89030, 89031, 89032, 89033, 89036, 89081, 89084, 89085, 89086, and 89087 ZIP codes. Call (702) 567-9172 to request service or confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day toilet repair service in North Las Vegas?",
     answer:
       "Same-day toilet repair service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability and get your address on the schedule.",
+    category: "timing-process",
   },
 ];
 
@@ -339,7 +348,7 @@ const serviceSchema = {
   name: "Toilet Repair and Installation",
   serviceType: "Toilet Repair and Installation",
   description:
-    "Red Carpet Plumbing provides toilet repair and installation for homes and businesses in North Las Vegas, NV, including running toilet repair, base leak repair, wax ring replacement, toilet clog clearing, toilet replacement, and new toilet installation. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides toilet repair and installation for homes and businesses in North Las Vegas, NV, including running toilet repair, base leak repair, wax ring replacement, toilet clog clearing, toilet replacement, and new toilet installation. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -378,18 +387,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: NLV_TOILET_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(NLV_TOILET_FAQS);
 
 const LINK_CLASS =
   "font-semibold text-brand-dark underline hover:text-brand-dark/70";
@@ -450,7 +448,7 @@ export default function NorthLasVegasToiletRepairInstallationPage() {
             href: "/contact/",
           }}
           // FLAG: VERIFY — transparent pricing is a source-site claim.
-          ctaNote="NV Licensed, #0048585A. Transparent pricing, no hidden fees."
+          ctaNote="NV Licensed, #048585A. Transparent pricing, no hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Toilet Repair Help" />}
           backgroundImage={{
             src: "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-hero.webp",
@@ -719,33 +717,11 @@ export default function NorthLasVegasToiletRepairInstallationPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Toilet Repair and
-                Installation in North Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {NLV_TOILET_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Toilet Repair and Installation in North Las Vegas</>}
+          faqs={NLV_TOILET_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -788,21 +764,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

@@ -10,9 +10,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", the
-// 4.8/76 rating, the gas-line scope, and every emergency-availability statement
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", the
+// 4.8/81 rating, the gas-line scope, and every emergency-availability statement
 // (source-site claim) are source-site/project claims. Each visible instance
 // carries an inline FLAG comment.
 //
@@ -56,54 +58,61 @@ export const metadata: Metadata = {
 // match. FLAG comments live in this source only and are NOT part of the
 // visible/schema answer text.
 // ---------------------------------------------------------------------------
-const SV_EMERGENCY_FAQS = [
+const SV_EMERGENCY_FAQS: FaqItem[] = [
   {
     question:
       "What should I do while waiting for an emergency plumber in Spring Valley?",
     answer:
       "Shut off the water at the nearest shutoff valve or at your main supply if a pipe has burst or a major leak is active. If you suspect a gas issue, leave the building and call your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
+    category: "emergency",
   },
   // FLAG: source-site claim (emergency availability) in this answer — verify before final launch.
   {
     question: "Is there a 24-hour plumber in Spring Valley, NV?",
     answer:
       "Red Carpet Plumbing provides emergency plumbing service in Spring Valley. Call (702) 567-9172 to reach our team.",
+    category: "emergency",
   },
   {
     question:
       "Are plumbing emergencies more common in older Spring Valley homes?",
     answer:
       "Yes. Homes in the Desert Inn and West Sahara corridors of northern Spring Valley were built primarily in the 1970s through 1990s and have plumbing systems that are now 30 to 50 years old. Galvanized steel supply lines from original construction corrode from the inside out under Las Vegas hard water conditions and can fail with little warning. Original copper lines from the same era have been thinned by decades of mineral corrosion. Older Spring Valley homes are among the higher-risk properties for plumbing emergencies in the Las Vegas Valley.",
+    category: "the-service",
   },
   {
     question:
       "What is Spring Valley, NV, and who handles plumbing permits there?",
     answer:
-      "Spring Valley is an unincorporated community in Clark County, Nevada. It is governed by Clark County rather than the City of Las Vegas. Plumbing permits and inspections in Spring Valley are handled through Clark County. Red Carpet Plumbing holds NV License #0048585A and works within the applicable Clark County permit process.",
+      "Spring Valley is an unincorporated community in Clark County, Nevada. It is governed by Clark County rather than the City of Las Vegas. Plumbing permits and inspections in Spring Valley are handled through Clark County. Red Carpet Plumbing holds NV License #048585A and works within the applicable Clark County permit process.",
+    category: "trust",
   },
   {
     question: "How much does emergency plumbing cost in Spring Valley?",
     answer:
       "Emergency plumbing costs vary based on the type of repair, the time of service, and the materials needed. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
+    category: "emergency",
   },
   {
     question:
       "Do you provide emergency plumbing for commercial properties in Spring Valley?",
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service for both residential and commercial properties throughout Spring Valley. Call (702) 567-9172 for commercial emergency response.",
+    category: "emergency",
   },
   {
     question: "Do you offer same-day emergency plumbing service in Spring Valley?",
     answer:
       "Same-day emergency plumbing service is available in Spring Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "emergency",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides emergency plumbing service for homes and businesses throughout Spring Valley, Nevada. Whether you are dealing with a burst pipe, sewer backup, slab leak, water heater failure, or gas line issue, our licensed plumbers are ready to help. Spring Valley is an unincorporated Clark County community and our Nevada Contractor License #0048585A covers plumbing work throughout Clark County. Call (702) 567-9172 now.";
+  "Red Carpet Plumbing provides emergency plumbing service for homes and businesses throughout Spring Valley, Nevada. Whether you are dealing with a burst pipe, sewer backup, slab leak, water heater failure, or gas line issue, our licensed plumbers are ready to help. Spring Valley is an unincorporated Clark County community and our Nevada Contractor License #048585A covers plumbing work throughout Clark County. Call (702) 567-9172 now.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed Plumbers, #0048585A",
+  "NV Licensed Plumbers, #048585A",
   // FLAG: source-site claim (emergency availability) — verify before final launch.
   "Emergency Plumbing Service Available",
   "Serving Spring Valley and Clark County",
@@ -147,7 +156,7 @@ const COMMON_PROBLEMS: {
   {
     // FLAG: verify gas line scope before publishing.
     label: "Gas line issues",
-    body: "If you smell gas in your Spring Valley home, leave the building immediately and call your gas company. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line issues under NV License #0048585A.",
+    body: "If you smell gas in your Spring Valley home, leave the building immediately and call your gas company. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line issues under NV License #048585A.",
   },
 ];
 
@@ -220,15 +229,14 @@ const EMERGENCY_STEPS = [
 const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with Spring Valley's older housing stock, Desert Inn and West Sahara corridor plumbing conditions, and Clark County permit requirements",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   // FLAG: source-site claim (emergency availability) — verify before final launch.
   "Emergency plumbing service available",
   "Transparent pricing with no hidden fees",
   "Residential and commercial emergency plumbing throughout Spring Valley",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // ---------------------------------------------------------------------------
@@ -319,6 +327,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -350,18 +366,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SV_EMERGENCY_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SV_EMERGENCY_FAQS);
 
 export default function SpringValleyEmergencyPlumbingPage() {
   return (
@@ -421,7 +426,7 @@ export default function SpringValleyEmergencyPlumbingPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Spring Valley, Nevada and the Las Vegas Valley. We hold
-                Nevada Contractor License #0048585A under the C-1 Plumbing and
+                Nevada Contractor License #048585A under the C-1 Plumbing and
                 Heating classification. Spring Valley is an unincorporated Clark
                 County community, and our license covers plumbing work throughout
                 Clark County, including Spring Valley. We have been serving the Las
@@ -667,33 +672,11 @@ export default function SpringValleyEmergencyPlumbingPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Emergency Plumbing in
-                Spring Valley
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SV_EMERGENCY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Emergency Plumbing in Spring Valley</>}
+          faqs={SV_EMERGENCY_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 9: RELATED SERVICES */}
         <section className="bg-white">
@@ -758,21 +741,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

@@ -10,11 +10,13 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
+// FLAG: VERIFY before publishing —
 // "Over 40 years," and "24/7 emergency service" trust claims are source-site
 // claims surfaced in the approved brief and shown on this page. License
-// #0048585A and transparent-pricing are also source-site claims. Confirm all
+// #048585A and transparent-pricing are also source-site claims. Confirm all
 // before final launch.
 // Schema follows the established site-wide service-location pattern (Plumber
 // provider; areaServed Place (Green Valley) + containedInPlace City (Henderson)
@@ -53,44 +55,51 @@ export const metadata: Metadata = {
 // from this single array. Character-for-character match required.
 // Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const GV_SLAB_FAQS = [
+const GV_SLAB_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a slab leak in a Green Valley home?",
     answer:
       "The most common signs of a slab leak in a Green Valley home are warm or hot spots on floors, the sound of running water when all fixtures are off, an unexplained increase in your water bill, damp or wet flooring without an obvious source, cracks appearing in walls or flooring, low water pressure throughout the home, and mold or mildew odor at floor level. These signs appear because the leak is beneath the slab and cannot be seen directly.",
+    category: "causes-signs",
   },
   {
     question: "Why are slab leaks common in Green Valley, Henderson?",
     answer:
       "Green Valley's slab leak risk is driven by aging copper and polybutylene pipes in the original neighborhoods, which have been exposed to Las Vegas Valley hard water for 30 to 45 years. Hard water mineral corrosion thins pipe walls continuously over that period. Caliche and expansive clay soil movement beneath Green Valley's slab foundations adds mechanical stress to those pipes. Closed-loop system pressure cycling accelerates pipe fatigue in pipes already compromised by corrosion. Original Green Valley homes represent the highest concentration of slab leak risk in Henderson.",
+    category: "causes-signs",
   },
   {
     question:
       "Are slab leaks more common in original Green Valley than in newer Henderson neighborhoods?",
     answer:
       "Yes. Green Valley's original neighborhoods, built from the late 1970s through the mid-1990s, have copper supply lines with 30 to 45 years of hard water mineral exposure, and some homes contain polybutylene pipe that is prone to sudden failure without warning. These conditions make original Green Valley homes significantly more susceptible to slab leaks than newer Henderson construction. Green Valley Ranch homes, built from the mid-1990s through the mid-2000s, carry a lower but still present risk as they reach 20 to 30 years of age.",
+    category: "service-area",
   },
   {
     question:
       "How is a slab leak detected in Green Valley without breaking up the floor?",
     answer:
       "Professional slab leak detection uses acoustic sensors that amplify the sound of pressurized water escaping beneath the slab, pressure testing to confirm and isolate water loss to a specific line, and thermal imaging to identify temperature differences caused by hot water leaks. These non-invasive methods locate the slab leak precisely before any concrete cutting begins.",
+    category: "the-service",
   },
   {
     question:
       "Should I choose pipe rerouting or spot repair for a slab leak in Green Valley?",
     answer:
       "For an isolated leak in a pipe that is otherwise in good condition, spot repair can be appropriate. For original Green Valley homes where copper or polybutylene lines have been thinned by 30 to 45 years of hard water corrosion, pipe rerouting is often the more durable long-term solution because it removes the aging pipe from beneath the slab entirely and eliminates the source of future slab leaks on that line. Red Carpet Plumbing assesses pipe condition and presents both options before any repair begins.",
+    category: "the-service",
   },
   {
     question: "How long does slab leak repair take in Green Valley?",
     answer:
       "Detection typically takes a few hours. Spot repair through concrete usually takes one to two days including concrete patching. Pipe rerouting typically takes one to three days depending on the plumbing layout and the length of line being bypassed. Epoxy lining timelines vary based on pipe length and configuration. Red Carpet Plumbing will provide a timeline estimate before work begins.",
+    category: "timing-process",
   },
   {
     question: "Do you offer same-day slab leak repair service in Green Valley?",
     answer:
       "Same-day slab leak repair service is available in Green Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -264,9 +273,9 @@ const GV_COMMUNITIES: { name: string; href?: string }[] = [
 
 const HERO_TRUST_ITEMS = [
   // FLAG: verify before publishing.
-  "4.8 stars, 76 Google reviews",
+  "4.8 stars, 81 Google reviews",
   // FLAG: verify before final launch.
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   // FLAG: verify before publishing.
   "Over 40 years serving the Las Vegas Valley",
   // FLAG: source-site claim — verify before final launch.
@@ -329,13 +338,21 @@ const serviceSchema = {
   name: "Slab Leak Detection and Repair in Green Valley",
   serviceType: "Slab Leak Detection and Repair",
   description:
-    "Red Carpet Plumbing provides slab leak detection and repair for homes in Green Valley, Henderson, NV using acoustic sensors, pressure testing, and thermal imaging. Repair options include spot repair through concrete, pipe rerouting, and epoxy pipe lining. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides slab leak detection and repair for homes in Green Valley, Henderson, NV using acoustic sensors, pressure testing, and thermal imaging. Repair options include spot repair through concrete, pipe rerouting, and epoxy pipe lining. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -367,18 +384,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: GV_SLAB_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(GV_SLAB_FAQS);
 
 export default function GreenValleySlabLeakPage() {
   return (
@@ -764,31 +770,11 @@ export default function GreenValleySlabLeakPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Slab Leak FAQs for Green Valley Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {GV_SLAB_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Slab Leak FAQs for Green Valley Homeowners</>}
+          faqs={GV_SLAB_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -813,20 +799,5 @@ export default function GreenValleySlabLeakPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

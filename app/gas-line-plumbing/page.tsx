@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,69 +11,80 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection throughout Las Vegas and the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection throughout Las Vegas and the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/gas-line-plumbing/",
   },
   openGraph: {
     title: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed gas line plumbers serving Las Vegas, Henderson, Summerlin, and the entire Las Vegas Valley. NV #0048585A. 4.8 stars, 76 reviews.",
+      "Licensed gas line plumbers serving Las Vegas, Henderson, Summerlin, and the entire Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
   },
 };
 
-const GAS_LINE_FAQS = [
+const GAS_LINE_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a gas line leak?",
     answer:
       "The most common sign is a rotten egg or sulfur smell, which is added to natural gas for safety. You may also hear a hissing or whistling sound near a gas appliance or line, notice dead or dying vegetation above a buried gas line, or see a spike in your gas bill without increased usage. If you suspect a leak, leave the building immediately and call Southwest Gas before calling a plumber.",
+    category: "causes-signs",
   },
   {
     question: "Who is licensed to repair gas lines in Nevada?",
     answer:
-      "In Nevada, gas line repair and installation must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, which authorizes gas line work. Always verify a contractor's license before allowing gas line work on your property.",
+      "In Nevada, gas line repair and installation must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, which authorizes gas line work. Always verify a contractor's license before allowing gas line work on your property.",
+    category: "trust",
   },
   {
     question:
       "Should I call a plumber or the gas company for a gas line problem?",
     answer:
       "If you smell gas or suspect an active leak, call Southwest Gas at 1-800-935-4748 from outside your home first. Once the area is cleared, call a licensed plumber like Red Carpet Plumbing for the inspection, diagnosis, and repair. The gas utility is responsible for the line up to your meter; you are responsible for everything from the meter into your home.",
+    category: "the-service",
   },
   {
     question:
       "Can a plumber install a gas line for a stove, dryer, or outdoor grill?",
     answer:
       "Yes. A licensed plumber can install, extend, or reconnect gas lines for appliances including gas stoves, dryers, water heaters, furnaces, and outdoor gas grills and fire pits. In Las Vegas, this work typically requires a permit. Red Carpet Plumbing handles the full process including installation and safety testing.",
+    category: "the-service",
   },
   {
     question: "How often should gas lines be inspected?",
     answer:
       "Annual gas line inspections are generally recommended for Las Vegas homes and businesses. Inspections help identify corroded fittings, aging pipe materials, loose connections, and pressure irregularities before they become safety hazards. Older homes, recently purchased properties, and homes with new appliance additions benefit most from regular inspections.",
+    category: "timing-process",
   },
   {
     question: "Why do gas lines fail in Las Vegas homes?",
     answer:
       "Gas lines in Las Vegas face stress from extreme summer heat, temperature swings, and desert soil conditions. Older homes often have aging black iron pipe with dried-out fittings. Flexible CSST connectors in attics and exposed areas are particularly vulnerable to heat stress. Caliche soil layers can also shift and stress buried lines over time.",
+    category: "causes-signs",
   },
   {
     question: "Does Red Carpet Plumbing handle gas line emergencies?",
     answer:
-      "Yes. Red Carpet Plumbing provides 24/7 emergency service for gas line issues throughout the Las Vegas Valley. If you smell gas, leave the property immediately, call Southwest Gas, and then call us once the area is declared safe. We are licensed for gas line work under NV #0048585A and serve Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, and surrounding communities.",
+      "Yes. Red Carpet Plumbing provides 24/7 emergency service for gas line issues throughout the Las Vegas Valley. If you smell gas, leave the property immediately, call Southwest Gas, and then call us once the area is declared safe. We are licensed for gas line work under NV #048585A and serve Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, and surrounding communities.",
+    category: "the-service",
   },
   {
     question:
       "What areas does Red Carpet Plumbing serve for gas line plumbing?",
     answer:
       "Red Carpet Plumbing provides gas line services throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day gas line service in Las Vegas?",
     answer:
       "Same-day gas line service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -289,7 +301,7 @@ const serviceSchema = {
   name: "Gas Line Plumbing",
   serviceType: "Gas Line Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and appliance hookup services for homes and businesses throughout the Las Vegas Valley. Nevada Contractor License #0048585A (C-1 Plumbing and Heating).",
+    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and appliance hookup services for homes and businesses throughout the Las Vegas Valley. Nevada Contractor License #048585A (C-1 Plumbing and Heating).",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -299,17 +311,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -366,7 +379,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/gas-line-plumbing/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -387,18 +400,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: GAS_LINE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(GAS_LINE_FAQS);
 
 export default function GasLinePlumbingPage() {
   return (
@@ -427,8 +429,8 @@ export default function GasLinePlumbingPage() {
           }
           subheading="Licensed gas line repair, installation, and inspection for Las Vegas homes and businesses."
           trustItems={[
-            "Licensed Gas Line Plumbers, NV #0048585A",
-            "4.8 Stars, 76 Google Reviews",
+            "Licensed Gas Line Plumbers, NV #048585A",
+            "4.8 Stars, 81 Google Reviews",
             "24/7 Emergency Service",
             "Transparent Pricing, No Hidden Fees",
             "Over 40 Years in Las Vegas",
@@ -441,7 +443,7 @@ export default function GasLinePlumbingPage() {
             label: "Request Gas Line Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
+          ctaNote="NV Licensed #048585A | 4.8 Stars, 81 Reviews"
           formSlot={<QuoteFormPlaceholder title="Get Gas Line Help" />}
           accentWidth="sm"
           backgroundImage={{
@@ -501,7 +503,7 @@ export default function GasLinePlumbingPage() {
                     services for residential and commercial properties
                     throughout the Las Vegas Valley. All gas line
                     work is performed under our NV Contractor License
-                    #0048585A.
+                    #048585A.
                   </p>
                 </div>
               </SectionRevealItem>
@@ -527,7 +529,11 @@ export default function GasLinePlumbingPage() {
 
         {/* SECTION 5: WHY LAS VEGAS GAS LINES NEED SPECIALIZED ATTENTION */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/gas-line-plumbing/red-carpet-plumbing-gas-line-plumbing-las-vegas.webp"
+              alt="Black iron gas line with a regulator and shutoff valve beside a tankless water heater"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -560,12 +566,17 @@ export default function GasLinePlumbingPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: HOWTO PROCESS */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-gas-line-leak-detection-card.webp"
+              alt="Gas regulator and shutoff valve with a handheld gas detector connected"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -604,6 +615,7 @@ export default function GasLinePlumbingPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -618,7 +630,7 @@ export default function GasLinePlumbingPage() {
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing is licensed for gas line work throughout
-                  the Las Vegas Valley. NV Contractor License #0048585A (C-1
+                  the Las Vegas Valley. NV Contractor License #048585A (C-1
                   Plumbing and Heating).
                 </p>
               </div>
@@ -728,31 +740,11 @@ export default function GasLinePlumbingPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Gas Line Plumbing Questions Answered
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {GAS_LINE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Gas Line Plumbing Questions Answered</>}
+          faqs={GAS_LINE_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -788,20 +780,5 @@ export default function GasLinePlumbingPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

@@ -18,14 +18,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Green Valley, NV | Red Carpet Plumbing",
   description:
-    "Plumbing services in Green Valley, NV. Slab leak detection, repiping, water heater repair for original and newer homes. NV #0048585A. (702) 567-9172.",
+    "Plumbing services in Green Valley, NV. Slab leak detection, repiping, water heater repair for original and newer homes. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/green-valley-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Green Valley, NV | Red Carpet Plumbing",
     description:
-      "Plumbing services in Green Valley, NV. Slab leak detection, repiping, water heater repair for original and newer homes. NV #0048585A. (702) 567-9172.",
+      "Plumbing services in Green Valley, NV. Slab leak detection, repiping, water heater repair for original and newer homes. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/green-valley-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -73,7 +73,7 @@ const GREEN_VALLEY_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed to work in Green Valley?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Green Valley and Henderson.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Green Valley and Henderson.",
     category: "trust",
   },
   {
@@ -198,8 +198,8 @@ const GREEN_VALLEY_AREAS = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
-  "4.8-star rating across 76 Google reviews",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
 ];
@@ -258,10 +258,11 @@ const plumberSchema = {
       closes: "16:30",
     },
   ],
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -269,7 +270,7 @@ const plumberSchema = {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
     name: "Nevada C-1 Plumbing and Heating Contractor License",
-    identifier: "0048585A",
+    identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
       name: "State of Nevada Contractors Board",
@@ -288,7 +289,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Plumbing Services in Green Valley, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed plumbing services in Green Valley, NV including slab leak detection, repiping, and water heater repair. NV Licensed #0048585A.",
+    "Red Carpet Plumbing provides licensed plumbing services in Green Valley, NV including slab leak detection, repiping, and water heater repair. NV Licensed #048585A.",
   url: "https://redcarpetplumbing.com/green-valley-plumbing-services/",
   isPartOf: {
     "@type": "WebSite",
@@ -331,8 +332,8 @@ const breadcrumbSchema = {
 const faqSchema = buildFaqPageSchema(GREEN_VALLEY_FAQS);
 
 const TRUST_STRIP_ITEMS = [
-"4.8 stars, 76 Google reviews",
-"NV Licensed #0048585A",
+"4.8 stars, 81 Google reviews",
+"NV Licensed #048585A",
 "Over 40 years serving Las Vegas Valley",
 "Transparent pricing, no hidden fees",
 ];
@@ -366,7 +367,7 @@ export default function GreenValleyPlumbingServicesPage() {
               <br /> in Green Valley, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides licensed plumbing services throughout Green Valley, Nevada. Green Valley is a master-planned community within Henderson, with original neighborhoods built from the late 1970s through the 1990s and Green Valley Ranch extending into the 2000s. Our licensed plumbers serve homes throughout Green Valley with experience in the aging plumbing challenges common in this area. NV Contractor License #0048585A."
+          subheading="Red Carpet Plumbing provides licensed plumbing services throughout Green Valley, Nevada. Green Valley is a master-planned community within Henderson, with original neighborhoods built from the late 1970s through the 1990s and Green Valley Ranch extending into the 2000s. Our licensed plumbers serve homes throughout Green Valley with experience in the aging plumbing challenges common in this area. NV Contractor License #048585A."
           trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -397,7 +398,7 @@ export default function GreenValleyPlumbingServicesPage() {
                 Green Valley is an established master-planned community within the
                 City of Henderson, and Red Carpet Plumbing has been serving homes
                 throughout the Henderson and Green Valley area for over 40 years.
-                We hold Nevada Contractor License #0048585A under the C-1 Plumbing
+                We hold Nevada Contractor License #048585A under the C-1 Plumbing
                 and Heating classification. For full Henderson area plumbing
                 coverage including Green Valley, visit our{" "}
                 <Link
@@ -582,9 +583,9 @@ export default function GreenValleyPlumbingServicesPage() {
                 <li key={item} className="flex items-start gap-3">
                   <CheckMark />
                   <span className="text-base leading-7 text-brand-dark/85">
-                    {item === "4.8-star rating across 76 Google reviews" ? (
+                    {item === "4.8-star rating across 81 Google reviews" ? (
                       <>
-                        4.8-star rating across 76 Google reviews.{" "}
+                        4.8-star rating across 81 Google reviews.{" "}
                         <a
                           href="https://share.google/oY5LcfC0lhWJXVjJj"
                           target="_blank"

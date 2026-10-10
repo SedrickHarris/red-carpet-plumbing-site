@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", and the
-// 4.8/76 rating are source-site/project claims. Each visible instance carries an
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", and the
+// 4.8/81 rating are source-site/project claims. Each visible instance carries an
 // inline FLAG comment.
 //
 // SCHEMA NOTE: Summerlin is a master-planned community spanning both the City of
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
   title:
     "Slab Leak Detection and Repair in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Slab leak detection and repair in Summerlin, NV. Non-invasive detection, all repair options explained. Licensed plumbers. NV #0048585A. (702) 567-9172.",
+    "Slab leak detection and repair in Summerlin, NV. Non-invasive detection, all repair options explained. Licensed plumbers. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/summerlin/slab-leak-detection-repair/",
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     title:
       "Slab Leak Detection and Repair in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Slab leak detection and repair in Summerlin, NV. Non-invasive detection, all repair options explained. Licensed plumbers. NV #0048585A. (702) 567-9172.",
+      "Slab leak detection and repair in Summerlin, NV. Non-invasive detection, all repair options explained. Licensed plumbers. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/slab-leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -49,50 +51,57 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const SUMMERLIN_SLAB_FAQS = [
+const SUMMERLIN_SLAB_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a slab leak in a Summerlin home?",
     answer:
       "The most common signs of a slab leak in a Summerlin home are warm or hot spots on floors, the sound of running water when all fixtures are off, an unexplained increase in your water bill, damp or wet flooring without an obvious source, cracks appearing in walls or flooring, low water pressure throughout the home, and mold or mildew odor at floor level. These signs appear because the leak is beneath the slab and cannot be seen directly.",
+    category: "causes-signs",
   },
   {
     question: "What causes slab leaks in Summerlin homes?",
     answer:
       "The primary causes in Summerlin are hard water mineral corrosion that has thinned copper pipe walls in original 1990s village homes over 25 to 35 years of exposure, caliche and expansive clay soil movement that stresses pipes beneath slab foundations, aging pipe materials in homes built before 2000, and pressure stress from closed-loop plumbing systems. The combination of these factors makes original Summerlin village homes, including those in The Hills, The Trails, The Arbors, and The Canyons, more vulnerable to slab leaks than newer Summerlin construction.",
+    category: "causes-signs",
   },
   {
     question: "How is a slab leak detected without breaking up the floor?",
     answer:
       "Professional slab leak detection uses acoustic sensors that amplify the sound of pressurized water escaping beneath the slab, pressure testing to confirm and isolate water loss to a specific line, and thermal imaging to identify temperature differences caused by hot water leaks. These non-invasive methods locate the leak precisely before any concrete cutting begins.",
+    category: "the-service",
   },
   {
     question: "What are my options for slab leak repair in Summerlin?",
     answer:
       "The three main options are spot repair through concrete, which involves cutting the slab at the leak location and repairing the damaged pipe section; pipe rerouting, which bypasses the damaged pipe entirely by running a new line through walls or above-slab pathways; and epoxy pipe lining, which seals cracks from the inside without excavation. The right option depends on the leak location, pipe age, pipe condition, and what is above the repair area.",
+    category: "the-service",
   },
   {
     question:
       "Should I choose pipe rerouting or spot repair for a slab leak in a Summerlin original village home?",
     answer:
       "For an isolated leak in a pipe that is otherwise in good condition, spot repair can be appropriate. For original Summerlin village homes where copper supply lines have been thinned by 25 to 35 years of hard water corrosion, pipe rerouting is often the more durable long-term solution because it removes the aging pipe from beneath the slab entirely and eliminates the source of future slab leaks on that line. Red Carpet Plumbing will assess your specific situation and explain both options before any work begins.",
+    category: "the-service",
   },
   {
     question: "Does slab leak repair in Summerlin require a permit?",
     answer:
-      "Slab leak repair involving concrete cutting and pipe repair or rerouting typically requires a permit in both the City of Las Vegas and unincorporated Clark County. Permit jurisdiction in Summerlin depends on which side of the city boundary the property sits. Red Carpet Plumbing holds NV License #0048585A and works within the applicable permit process for your address.",
+      "Slab leak repair involving concrete cutting and pipe repair or rerouting typically requires a permit in both the City of Las Vegas and unincorporated Clark County. Permit jurisdiction in Summerlin depends on which side of the city boundary the property sits. Red Carpet Plumbing holds NV License #048585A and works within the applicable permit process for your address.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day slab leak repair service in Summerlin?",
     answer:
       "Same-day slab leak repair service is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. We use acoustic sensors, pressure testing, and thermal imaging to locate slab leaks precisely before any repair begins, and we explain all repair options before starting work. NV Contractor License #0048585A.";
+  "Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. We use acoustic sensors, pressure testing, and thermal imaging to locate slab leaks precisely before any repair begins, and we explain all repair options before starting work. NV Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Non-Invasive Slab Leak Detection",
   "All Repair Options Explained",
   "Transparent Pricing, No Hidden Fees",
@@ -209,12 +218,11 @@ const WHY_CHOOSE = [
   "Non-invasive detection using acoustic sensors, pressure testing, and thermal imaging",
   "All repair options explained before work begins, with no pressure to choose a specific approach",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // ---------------------------------------------------------------------------
@@ -300,6 +308,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -331,18 +347,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SUMMERLIN_SLAB_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SUMMERLIN_SLAB_FAQS);
 
 export default function SummerlinSlabLeakPage() {
   return (
@@ -644,33 +649,11 @@ export default function SummerlinSlabLeakPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Slab Leak Detection and
-                Repair in Summerlin
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SUMMERLIN_SLAB_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Slab Leak Detection and Repair in Summerlin</>}
+          faqs={SUMMERLIN_SLAB_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 9: RELATED SERVICES */}
         <section className="bg-brand-surface-alt">
@@ -735,21 +718,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

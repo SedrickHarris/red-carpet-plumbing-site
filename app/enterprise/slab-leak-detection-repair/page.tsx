@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", and the
-// 4.8/76 rating are source-site/project claims. Each visible instance carries an
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", and the
+// 4.8/81 rating are source-site/project claims. Each visible instance carries an
 // inline FLAG comment.
 //
 // SCHEMA NOTE: Enterprise is an unincorporated Clark County community (not an
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
   title:
     "Slab Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Professional slab leak detection and repair in Enterprise, NV. Non-invasive detection using acoustic sensors, pressure testing, and thermal imaging. Serving Rhodes Ranch, Mountain's Edge, and all Enterprise communities. NV #0048585A.",
+    "Professional slab leak detection and repair in Enterprise, NV. Non-invasive detection using acoustic sensors, pressure testing, and thermal imaging. Serving Rhodes Ranch, Mountain's Edge, and all Enterprise communities. NV #048585A.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/enterprise/slab-leak-detection-repair/",
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
     title:
       "Slab Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing",
     description:
-      "Non-invasive slab leak detection and repair throughout Enterprise, NV. Rhodes Ranch, Mountain's Edge, Southwest Las Vegas. All repair options explained. NV #0048585A.",
+      "Non-invasive slab leak detection and repair throughout Enterprise, NV. Rhodes Ranch, Mountain's Edge, Southwest Las Vegas. All repair options explained. NV #048585A.",
     url: "https://redcarpetplumbing.com/enterprise/slab-leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -54,50 +56,57 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const ENT_SLAB_FAQS = [
+const ENT_SLAB_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a slab leak in an Enterprise, NV home?",
     answer:
       "The most common signs of a slab leak in an Enterprise home are warm or hot spots on floors, the sound of running water when all fixtures are off, an unexplained increase in your water bill, damp or wet flooring without an obvious source, cracks appearing in walls or flooring, low water pressure throughout the home, and mold or mildew odor at floor level. These signs appear because the leak is beneath the slab and cannot be seen directly. If you notice one or more of these signs, contact a licensed plumber for a non-invasive slab leak inspection.",
+    category: "causes-signs",
   },
   {
     question: "What causes slab leaks in Enterprise homes?",
     answer:
       "The primary causes in Enterprise are hard water mineral corrosion that has been thinning copper supply line walls in homes now 20 to 25 years old since original construction, caliche and expansive clay soil movement that stresses pipes beneath slab foundations, repeated pressure spikes from closed-loop plumbing systems, and age-related stress on pipe joints and under-slab connections. Enterprise homes in Rhodes Ranch and Mountain's Edge are entering the age range where these compounding factors produce the first under-slab failures.",
+    category: "causes-signs",
   },
   {
     question: "How is a slab leak detected without breaking up the floor?",
     answer:
       "Professional slab leak detection uses acoustic sensors that amplify the sound of pressurized water escaping beneath the slab, pressure testing to confirm and isolate water loss to a specific supply line, and thermal imaging to identify temperature differences caused by hot water leaks. These non-invasive methods locate the leak precisely before any concrete cutting begins.",
+    category: "the-service",
   },
   {
     question: "What are my options for slab leak repair in Enterprise?",
     answer:
       "The three main options are spot repair through concrete, which involves cutting the slab at the leak location and repairing the damaged pipe section; pipe rerouting, which bypasses the damaged pipe entirely by running a new line through walls or above-slab pathways; and epoxy pipe lining, which seals cracks from the inside without excavation. The right option depends on the leak location, pipe age, pipe condition, and what is above the repair area. Red Carpet Plumbing explains all three options before any work begins.",
+    category: "the-service",
   },
   {
     question:
       "Should I choose pipe rerouting or spot repair for a slab leak in my Enterprise home?",
     answer:
       "For an isolated leak in a pipe that is otherwise in good condition, spot repair can be appropriate. For Enterprise homes where the surrounding copper pipe has been assessed and shows signs of thinning from 20 to 25 years of hard water exposure, or where the first slab leak suggests other failure points may exist on the same aging line, pipe rerouting is often the more durable long-term solution because it removes the aging pipe from beneath the slab entirely. We assess the pipe condition and explain both options before any work begins.",
+    category: "the-service",
   },
   {
     question: "How long does slab leak repair take in Enterprise?",
     answer:
       "Detection typically takes a few hours. Spot repair through concrete usually takes one to two days including concrete patching. Pipe rerouting typically takes one to three days depending on the complexity of the plumbing layout. Epoxy lining timelines vary based on pipe length and configuration. Red Carpet Plumbing will give you a timeline estimate before work begins.",
+    category: "timing-process",
   },
   {
     question: "Do you offer same-day slab leak repair service in Enterprise?",
     answer:
       "Same-day slab leak repair service is available in Enterprise, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Enterprise, Nevada and the Southwest Las Vegas area. Enterprise homes in Rhodes Ranch, Mountain's Edge, and surrounding communities built in the late 1990s and early 2000s are now 20 to 25 years old, and the copper supply lines beneath their slab foundations have been continuously exposed to Las Vegas hard water since original construction. We use acoustic sensors, pressure testing, and thermal imaging to locate slab leaks precisely before any concrete cutting begins, and we explain all repair options before starting work. NV Contractor License #0048585A.";
+  "Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Enterprise, Nevada and the Southwest Las Vegas area. Enterprise homes in Rhodes Ranch, Mountain's Edge, and surrounding communities built in the late 1990s and early 2000s are now 20 to 25 years old, and the copper supply lines beneath their slab foundations have been continuously exposed to Las Vegas hard water since original construction. We use acoustic sensors, pressure testing, and thermal imaging to locate slab leaks precisely before any concrete cutting begins, and we explain all repair options before starting work. NV Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Non-Invasive Slab Leak Detection",
   "All Repair Options Explained",
   "Transparent Pricing, No Hidden Fees",
@@ -213,12 +222,11 @@ const WHY_CHOOSE = [
   "Non-invasive slab leak detection that locates the leak precisely before any concrete cutting begins",
   "All three repair options explained before work starts so you can make an informed decision",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // Section 7 — related services (built sibling routes).
@@ -308,6 +316,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -339,18 +355,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ENT_SLAB_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(ENT_SLAB_FAQS);
 
 export default function EnterpriseSlabLeakPage() {
   return (
@@ -676,31 +681,11 @@ export default function EnterpriseSlabLeakPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Slab Leak FAQs for Enterprise Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {ENT_SLAB_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Slab Leak FAQs for Enterprise Homeowners</>}
+          faqs={ENT_SLAB_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -739,21 +724,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

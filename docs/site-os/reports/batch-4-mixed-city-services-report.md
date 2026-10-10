@@ -98,7 +98,7 @@ Plan and rows 1 to 3 approved, row 4 excluded, WebPage schema follows the page n
       visible breadcrumb = ["Home","Las Vegas Plumbing Services","Water Pipe Repair and Replacement in Las Vegas, NV"]
       WebPage = {"name":"Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/las-vegas/water-pipe-repair-replacement/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing"
-      description="Water pipe repair and replacement in Las Vegas, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #0048585A. Call (702) 567-9172."
+      description="Water pipe repair and replacement in Las Vegas, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/las-vegas/water-pipe-repair-replacement/
       og:title="Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/las-vegas/water-pipe-repair-replacement/ robots=index, follow
       hero image file referenced: true; alt present: false
@@ -172,7 +172,7 @@ Plan and rows 1 to 3 approved, row 4 excluded, WebPage schema follows the page n
       visible breadcrumb = ["Home","North Las Vegas Plumbing Services","Garbage Disposal Repair and Installation in North Las Vegas, NV"]
       WebPage = {"name":"Garbage Disposal Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/north-las-vegas/garbage-disposal-repair-installation/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com/"}}
   [8] title="Garbage Disposal Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing"
-      description="Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. NV #0048585A. Call (702) 567-9172."
+      description="Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/north-las-vegas/garbage-disposal-repair-installation/
       og:title="Garbage Disposal Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/north-las-vegas/garbage-disposal-repair-installation/ robots=index, follow
       hero image file referenced: true; alt present: false
@@ -248,7 +248,7 @@ Plan and rows 1 to 3 approved, row 4 excluded, WebPage schema follows the page n
       visible breadcrumb = ["Home","Paradise Plumbing Services","Gas Line Plumbing in Paradise, NV"]
       WebPage = {"name":"Gas Line Plumbing in Paradise, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/paradise/gas-line-plumbing/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Gas Line Plumbing in Paradise, NV | Red Carpet Plumbing"
-      description="Gas line repair, installation, and inspection in Paradise, NV. Appliance hookups and commercial gas lines. NV #0048585A. Call (702) 567-9172."
+      description="Gas line repair, installation, and inspection in Paradise, NV. Appliance hookups and commercial gas lines. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/paradise/gas-line-plumbing/
       og:title="Gas Line Plumbing in Paradise, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/paradise/gas-line-plumbing/ robots=index, follow
       hero image file referenced: true; alt present: false
@@ -323,7 +323,7 @@ Plan and rows 1 to 3 approved, row 4 excluded, WebPage schema follows the page n
       visible breadcrumb = ["Home","Paradise Plumbing Services","Backflow Prevention Services in Paradise, NV"]
       WebPage = {"name":"Backflow Prevention Services in Paradise, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/paradise/backflow-prevention/","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com"}}
   [8] title="Backflow Prevention Services in Paradise, NV | Red Carpet Plumbing"
-      description="Backflow preventer installation, repair, and replacement in Paradise, NV. Irrigation and commercial devices. NV #0048585A. Call (702) 567-9172."
+      description="Backflow preventer installation, repair, and replacement in Paradise, NV. Irrigation and commercial devices. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/paradise/backflow-prevention/
       og:title="Backflow Prevention Services in Paradise, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/paradise/backflow-prevention/ robots=index, follow
       hero image file referenced: true; alt present: false

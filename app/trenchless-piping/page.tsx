@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -10,12 +11,14 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
     "Trenchless Piping Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides trenchless pipe repair and replacement for homes and businesses throughout Las Vegas. CIPP lining and pipe bursting without major excavation. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides trenchless pipe repair and replacement for homes and businesses throughout Las Vegas. CIPP lining and pipe bursting without major excavation. NV Licensed #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/trenchless-piping/",
   },
@@ -23,56 +26,65 @@ export const metadata: Metadata = {
     title:
       "Trenchless Piping Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed trenchless pipe repair and replacement throughout Las Vegas and the Las Vegas Valley. CIPP lining, pipe bursting. NV #0048585A. 4.8 stars, 76 reviews.",
+      "Licensed trenchless pipe repair and replacement throughout Las Vegas and the Las Vegas Valley. CIPP lining, pipe bursting. NV #048585A. 4.8 stars, 81 reviews.",
   },
 };
 
-const TRENCHLESS_FAQS = [
+const TRENCHLESS_FAQS: FaqItem[] = [
   {
     question: "What is trenchless pipe repair?",
     answer:
       "Trenchless pipe repair is a method of repairing or replacing underground pipes without digging a large excavation trench. Instead of removing the ground above the pipe to access it directly, trenchless methods work from small access points and repair or replace the pipe from within. The two primary trenchless methods are CIPP pipe lining, which installs a structural resin liner inside the existing pipe, and pipe bursting, which pulls new pipe through the old pipe while breaking it apart. Trenchless repair is particularly valuable in Las Vegas where caliche soil makes traditional excavation difficult and expensive.",
+    category: "the-service",
   },
   {
     question: "What is CIPP pipe lining?",
     answer:
       "CIPP stands for cured-in-place pipe. In CIPP lining, a flexible liner coated with structural resin is inserted into the damaged pipe and inflated against the pipe walls. The resin cures and hardens, creating a new pipe inside the old one. CIPP lining can repair cracks, corrosion, root intrusion, and minor joint offsets without excavation. When properly installed, a CIPP liner has a service life of fifty years or more. CIPP is suitable when the existing pipe retains its approximate shape and has not fully collapsed.",
+    category: "the-service",
   },
   {
     question: "What is pipe bursting?",
     answer:
       "Pipe bursting is a trenchless replacement method used when the existing pipe needs to be replaced rather than lined. A bursting head is pulled through the old pipe, breaking it outward into the surrounding soil, while simultaneously pulling new pipe material into place behind it. Pipe bursting replaces the full pipe without excavating the full length of the line. It requires access points at each end of the section being replaced and is suitable for clay, cast iron, and some older plastic pipe materials.",
+    category: "emergency",
   },
   {
     question: "Is trenchless pipe repair suitable for Las Vegas homes?",
     answer:
       "Yes, and Las Vegas conditions make trenchless methods particularly practical. The Las Vegas Valley has caliche soil, a dense calcium-rich hardpan that behaves like natural concrete and makes traditional excavation significantly more expensive and labor-intensive than in other markets. Many Las Vegas homes also have pavers, desert rock, stucco walls, and other hardscape that traditional excavation would destroy. Trenchless methods preserve landscaping and hardscape while repairing the pipe. However, not every pipe is a trenchless candidate. A camera inspection is required first to confirm the pipe's condition.",
+    category: "the-service",
   },
   {
     question: "Does trenchless pipe repair work under concrete slabs?",
     answer:
       "Yes. One of the primary advantages of trenchless methods in Las Vegas is the ability to repair or replace pipes running under concrete slabs, driveways, and patios without breaking through the surface. CIPP lining inserts through a small access point outside the slab. Pipe bursting can also work under slabs in many configurations. A camera inspection confirms pipe condition and access requirements before the method is selected.",
+    category: "the-service",
   },
   {
     question: "When is trenchless pipe repair not an option?",
     answer:
       "Trenchless methods are not suitable for every pipe condition. A severely collapsed pipe with no remaining internal shape cannot be lined with CIPP. Pipes with major offset joints or multiple structural failures over a long section may require partial or full traditional excavation. The decision is made after a video camera inspection confirms the pipe's condition and access points. Red Carpet Plumbing will recommend the most practical repair method after inspecting the line.",
+    category: "timing-process",
   },
   {
     question: "How long does trenchless pipe repair take?",
     answer:
       "A typical trenchless pipe repair project takes one to a few days depending on the length of pipe being treated, the method used, and access conditions. CIPP lining for a residential sewer line can often be completed in one day. Pipe bursting may take longer depending on the access setup and pipe length. A camera inspection and site assessment provide a more accurate timeline for your specific situation.",
+    category: "timing-process",
   },
   {
     question:
       "What areas does Red Carpet Plumbing serve for trenchless piping?",
     answer:
       "Red Carpet Plumbing provides trenchless piping services throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day trenchless piping service in Las Vegas?",
     answer:
       "Same-day trenchless piping service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -285,7 +297,7 @@ const serviceSchema = {
   name: "Trenchless Piping",
   serviceType: "Trenchless Pipe Repair",
   description:
-    "Red Carpet Plumbing provides trenchless piping services for homes and businesses throughout the Las Vegas Valley, including CIPP pipe lining, pipe bursting, trenchless sewer line repair, under-slab pipe repair, and lateral lining. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing provides trenchless piping services for homes and businesses throughout the Las Vegas Valley, including CIPP pipe lining, pipe bursting, trenchless sewer line repair, under-slab pipe repair, and lateral lining. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -295,17 +307,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -362,7 +375,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Trenchless Piping Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides trenchless pipe repair and replacement throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides trenchless pipe repair and replacement throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/trenchless-piping/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -383,18 +396,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: TRENCHLESS_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(TRENCHLESS_FAQS);
 
 export default function TrenchlessPipingPage() {
   return (
@@ -423,8 +425,8 @@ export default function TrenchlessPipingPage() {
           }
           subheading="Trenchless pipe repair and replacement for homes and businesses throughout the Las Vegas Valley, without major excavation."
           trustItems={[
-            "Licensed Plumbers, NV #0048585A",
-            "4.8 Stars, 76 Google Reviews",
+            "Licensed Plumbers, NV #048585A",
+            "4.8 Stars, 81 Google Reviews",
             "Residential and Commercial Service",
             "Transparent Pricing, No Hidden Fees",
             "Over 40 Years in Las Vegas",
@@ -437,7 +439,7 @@ export default function TrenchlessPipingPage() {
             label: "Request Trenchless Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
+          ctaNote="NV Licensed #048585A | 4.8 Stars, 81 Reviews"
           formSlot={
             <QuoteFormPlaceholder title="Get a Trenchless Piping Quote" />
           }
@@ -526,7 +528,11 @@ export default function TrenchlessPipingPage() {
 
         {/* SECTION 5: WHY TRENCHLESS PIPING MAKES SENSE IN LAS VEGAS */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/sewer-line-services/red-carpet-plumbing-trenchless-sewer-line-replacement-las-vegas.webp"
+              alt="Excavation pit with a new pipe section and tools beside a home's sewer cleanout"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -561,12 +567,17 @@ export default function TrenchlessPipingPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: HOWTO PROCESS */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-pipe-bursting-card.webp"
+              alt="Pipe bursting machine pulling a new blue pipe through an access pit"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -606,6 +617,7 @@ export default function TrenchlessPipingPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -621,7 +633,7 @@ export default function TrenchlessPipingPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing provides trenchless piping services
                   for homes and businesses throughout the Las Vegas Valley.
-                  No major excavation. NV Contractor License #0048585A.
+                  No major excavation. NV Contractor License #048585A.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">
@@ -731,31 +743,11 @@ export default function TrenchlessPipingPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Trenchless Piping Questions Answered
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {TRENCHLESS_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Trenchless Piping Questions Answered</>}
+          faqs={TRENCHLESS_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -790,20 +782,5 @@ export default function TrenchlessPipingPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

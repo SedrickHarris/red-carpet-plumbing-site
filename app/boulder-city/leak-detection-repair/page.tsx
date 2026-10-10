@@ -10,10 +10,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — rating (4.8 stars / 76 Google reviews)
-// and "Over 40 years" trust claims are source-site claims shown on this page.
-// License #0048585A, permit handling, and transparent-pricing are also
+// FLAG: VERIFY before publishing — "Over 40 years" trust claims are source-site claims shown on this page.
+// License #048585A, permit handling, and transparent-pricing are also
 // source-site claims. Confirm before launch.
 //
 // SCHEMA NOTE: Boulder City IS an incorporated city (not an unincorporated
@@ -60,52 +61,59 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const BC_LEAK_FAQS = [
+const BC_LEAK_FAQS: FaqItem[] = [
   {
     question:
       "How do I know if I have a hidden water leak in my Boulder City home?",
     answer:
       "The most common signs of a hidden water leak in a Boulder City home are an unexplained increase in your water bill, the sound of running water when all fixtures are off, warm or wet spots on floors or walls, discoloration or bubbling paint, a persistent musty odor, reduced water pressure, and unexplained cracks in walls or flooring. In older Boulder City homes with galvanized steel supply lines, rust-colored water from a tap can also indicate internal pipe failure. If you notice one or more of these signs, a professional leak detection inspection can locate the source before further damage occurs.",
+    category: "causes-signs",
   },
   {
     question: "How can I check for a water leak myself in Boulder City?",
     answer:
       "Turn off all water fixtures and appliances in your home. Locate your water meter at the street and check whether the dial or digital display is still moving. If the meter continues to advance with all water off, water is being used somewhere in your system, which indicates an active leak. This test confirms a leak is present but does not locate it. Call a licensed plumber for a professional inspection to find the source.",
+    category: "causes-signs",
   },
   {
     question: "What causes hidden pipe leaks in Boulder City homes?",
     answer:
       "The most common causes in Boulder City are galvanized steel supply line corrosion in homes built from the 1930s through the 1960s, hard water mineral corrosion from the Lake Mead supply that thins pipe walls over time, caliche and expansive clay soil movement beneath slab foundations that stresses pipe joints, and aging copper and early replacement pipe materials in homes updated in the 1960s and 1970s. Boulder City has some of the oldest residential plumbing in the Las Vegas region, which makes professional leak detection particularly important for historic homes.",
+    category: "causes-signs",
   },
   {
     question:
       "Does non-invasive leak detection work in Boulder City's older homes?",
     answer:
       "Yes. Red Carpet Plumbing uses acoustic sensors, pressure testing, and thermal imaging to locate hidden leaks without opening large sections of wall, floor, or concrete. These methods work effectively on galvanized steel, copper, and other pipe materials found in Boulder City homes regardless of age. Pinpointing the leak location before repair begins allows us to make targeted repairs rather than searching destructively through finished surfaces.",
+    category: "the-service",
   },
   {
     question:
       "Are galvanized pipe leaks different from copper pipe leaks in Boulder City?",
     answer:
       "Yes. Copper pipe leaks in hard water environments typically develop as pinhole leaks that start small and grow gradually over time. Galvanized steel pipe leaks can be more sudden, occurring when the corroded pipe wall finally fails after decades of internal corrosion. Galvanized supply lines in Boulder City homes built from the 1930s through the 1960s are now 60 to 90 years old. When a galvanized line develops a leak, the overall condition of the pipe throughout the system should be assessed, as widespread internal corrosion may indicate additional failures are likely.",
+    category: "the-service",
   },
   {
     question: "Who handles permits for plumbing repair work in Boulder City?",
     answer:
-      "Boulder City is an incorporated city with its own building department. Plumbing repair permits in Boulder City are processed through the Boulder City Building Department. Red Carpet Plumbing holds Nevada Contractor License #0048585A and handles the permit process for repair and replacement projects in Boulder City that require permits.",
+      "Boulder City is an incorporated city with its own building department. Plumbing repair permits in Boulder City are processed through the Boulder City Building Department. Red Carpet Plumbing holds Nevada Contractor License #048585A and handles the permit process for repair and replacement projects in Boulder City that require permits.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day leak detection service in Boulder City?",
     answer:
       "Same-day leak detection service is available in Boulder City, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides professional non-invasive leak detection and repair for homes and businesses in Boulder City, Nevada. Whether you have a hidden supply line leak, a slab leak, or a failing galvanized pipe in a historic home, our licensed plumbers locate the source without opening large sections of wall or floor before recommending the right repair. Call (702) 567-9172 to schedule an inspection. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides professional non-invasive leak detection and repair for homes and businesses in Boulder City, Nevada. Whether you have a hidden supply line leak, a slab leak, or a failing galvanized pipe in a historic home, our licensed plumbers locate the source without opening large sections of wall or floor before recommending the right repair. Call (702) 567-9172 to schedule an inspection. Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
 
 const TRUST_STRIP_ITEMS = [
-  "NV Licensed Plumbers, #0048585A",
+  "NV Licensed Plumbers, #048585A",
   "Non-Invasive Leak Detection",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 Years Serving Las Vegas Valley",
@@ -236,9 +244,8 @@ const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley, including Boulder City",
   "Non-invasive leak detection before any repair begins",
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "4.8-star rating across 81 Google reviews",
   "Experienced with galvanized pipe failures in Boulder City historic homes",
   "Boulder City permit process handled for projects that require permits",
   "Transparent pricing, no hidden fees",
@@ -330,6 +337,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "City",
@@ -357,18 +372,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: BC_LEAK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(BC_LEAK_FAQS);
 
 export default function BoulderCityLeakDetectionPage() {
   return (
@@ -669,7 +673,7 @@ export default function BoulderCityLeakDetectionPage() {
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Boulder City and the Las Vegas Valley. We hold Nevada
-                Contractor License #0048585A under the C-1 Plumbing and Heating
+                Contractor License #048585A under the C-1 Plumbing and Heating
                 classification. We have been serving the Las Vegas Valley,
                 including Boulder City, for over 40 years and are familiar with
                 the aging infrastructure and hard water conditions that affect
@@ -737,31 +741,11 @@ export default function BoulderCityLeakDetectionPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Leak Detection FAQs for Boulder City Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {BC_LEAK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Leak Detection FAQs for Boulder City Homeowners</>}
+          faqs={BC_LEAK_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: RELATED SERVICES */}
         <section className="bg-white">
@@ -830,21 +814,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

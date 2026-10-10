@@ -11,11 +11,13 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
+// FLAG: VERIFY before publishing —
 // "Over 40 years," and "24/7 emergency service" trust claims are source-site
 // claims surfaced in the approved brief and shown on this page. License
-// #0048585A and transparent-pricing are also source-site claims. Confirm all
+// #048585A and transparent-pricing are also source-site claims. Confirm all
 // before final launch.
 // Schema follows the established site-wide service-location pattern (Plumber
 // provider; areaServed Place (Green Valley) + containedInPlace City (Henderson)
@@ -53,42 +55,49 @@ export const metadata: Metadata = {
 // FAQ source of truth. Visible FAQ section AND FAQPage JSON-LD both derive
 // from this single array. Character-for-character match required.
 // ---------------------------------------------------------------------------
-const GV_REPIPE_FAQS = [
+const GV_REPIPE_FAQS: FaqItem[] = [
   {
     question: "What are the signs I need to repipe my Green Valley home?",
     answer:
       "Common signs include recurring leaks in multiple locations, rust-colored or discolored water from the taps, consistently low water pressure throughout the home, frequent pinhole leaks in copper pipes, known defective pipe materials such as polybutylene or Kitec, a home built before 1990 that still has original plumbing, or multiple slab leaks on the same plumbing system. When multiple signs appear together, repiping is typically the more practical long-term solution than continued repairs.",
+    category: "causes-signs",
   },
   {
     question: "What pipe materials fail in Green Valley homes?",
     answer:
       "Green Valley original homes built from the late 1970s through the mid-1990s may have polybutylene pipe that degrades in chlorinated water and can fail without warning, as well as aging copper pipe thinned by 30 to 45 years of hard water mineral corrosion. Green Valley Ranch condominiums and HOA communities built from the late 1990s through approximately 2005 may have Kitec pipe with brass fittings that corrode in mineral-rich Las Vegas Valley water. Kitec is identifiable by orange or blue flexible pipes with brass fittings.",
+    category: "the-service",
   },
   {
     question: "Do I need a permit to repipe my house in Green Valley?",
     answer:
       "Yes. A permit is required for whole-house repiping in Green Valley. Permits are pulled through the City of Henderson, which has jurisdiction over Green Valley. Repiping without a permit can create issues with home sales and insurance claims. Red Carpet Plumbing pulls the required permits and schedules the city inspection as part of the repiping project. A closed permit with final inspection sign-off is important documentation for Green Valley homeowners.",
+    category: "trust",
   },
   {
     question: "Are Green Valley homes good candidates for repiping?",
     answer:
       "Yes. Green Valley's original neighborhoods, built from the late 1970s through the mid-1990s, have the highest concentration of repiping candidates in Henderson. These homes have copper supply lines with 30 to 45 years of hard water mineral exposure and some contain polybutylene pipe. When original Green Valley homes begin developing recurring leaks or have had multiple slab leaks on the same line, repiping is often the more practical long-term solution than continued repairs.",
+    category: "the-service",
   },
   {
     question:
       "What is the difference between PEX and copper repiping in Green Valley?",
     answer:
       "PEX is flexible, resists hard water scale buildup, requires fewer fittings, and is faster to install with less drywall disruption. In Green Valley, PEX runs through attic spaces require proper insulation because attic temperatures can exceed 150 degrees Fahrenheit. Copper is a proven material that is durable, naturally resistant to bacteria growth, and provides excellent water quality. Red Carpet Plumbing can help you evaluate which material is the better fit for your specific home.",
+    category: "the-service",
   },
   {
     question: "How long does whole-house repiping take in Green Valley?",
     answer:
       "Most single-story Green Valley homes can be repiped in one to two days. Water is restored each evening on multi-day projects so the household is not without water overnight. Multi-story homes, condominiums, and larger properties take longer. Red Carpet Plumbing will provide a timeline estimate based on your home's size and plumbing layout before work begins.",
+    category: "timing-process",
   },
   {
     question: "Do you offer same-day repiping service in Green Valley?",
     answer:
       "Same-day repiping service is available in Green Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -267,9 +276,9 @@ const GV_COMMUNITIES: { name: string; href?: string }[] = [
 
 const HERO_TRUST_ITEMS = [
   // FLAG: verify before publishing.
-  "4.8 stars, 76 Google reviews",
+  "4.8 stars, 81 Google reviews",
   // FLAG: verify before final launch.
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   // FLAG: verify before publishing.
   "Over 40 years serving the Las Vegas Valley",
   "Permits pulled and inspections scheduled",
@@ -344,13 +353,21 @@ const serviceSchema = {
   name: "Repiping Services in Green Valley",
   serviceType: "Repiping",
   description:
-    "Whole-house and partial repiping services for homes in Green Valley, Henderson, NV. Polybutylene pipe replacement, Kitec pipe replacement, galvanized steel replacement, PEX repiping, and copper repiping. Nevada Contractor License #0048585A. Permits pulled and inspections scheduled.",
+    "Whole-house and partial repiping services for homes in Green Valley, Henderson, NV. Polybutylene pipe replacement, Kitec pipe replacement, galvanized steel replacement, PEX repiping, and copper repiping. Nevada Contractor License #048585A. Permits pulled and inspections scheduled.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -382,18 +399,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: GV_REPIPE_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(GV_REPIPE_FAQS);
 
 export default function GreenValleyRePipingPage() {
   return (
@@ -760,31 +766,11 @@ export default function GreenValleyRePipingPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Repiping FAQs for Green Valley Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {GV_REPIPE_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Repiping FAQs for Green Valley Homeowners</>}
+          faqs={GV_REPIPE_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -809,20 +795,5 @@ export default function GreenValleyRePipingPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

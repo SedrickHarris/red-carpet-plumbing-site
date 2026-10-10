@@ -9,8 +9,10 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, emergency-service
+// FLAG: VERIFY before publishing — license #048585A, emergency-service
 // availability, and transparent-pricing are source-site claims shown on this
 // page. Each carries an inline FLAG where it appears.
 //
@@ -53,53 +55,60 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const BC_EMERGENCY_FAQS = [
+const BC_EMERGENCY_FAQS: FaqItem[] = [
   {
     question:
       "What should I do while waiting for an emergency plumber in Boulder City?",
     answer:
       "Shut off the water at the nearest shutoff valve or at your main supply if a pipe has burst or a major leak is active. If you suspect a gas issue, leave the building and call your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
+    category: "emergency",
   },
   // FLAG: source-site claim (emergency availability) in this answer — verify before final launch.
   {
     question: "Is there a 24-hour plumber in Boulder City, NV?",
     answer:
       "Red Carpet Plumbing provides emergency plumbing service in Boulder City. Call (702) 567-9172 to reach our team.",
+    category: "emergency",
   },
   {
     question:
       "Why are plumbing emergencies more common in older Boulder City homes?",
     answer:
       "Boulder City was built in the early 1930s to house Hoover Dam workers and has some of the oldest residential housing in the Las Vegas region. Many homes in the historic downtown and surrounding neighborhoods were built between the 1930s and 1960s with galvanized steel supply lines that are now 60 to 90 years old. Galvanized steel corrodes from the inside out under Las Vegas Valley hard water conditions and can fail with little warning, making it a leading cause of plumbing emergencies in older Boulder City homes.",
+    category: "causes-signs",
   },
   {
     question: "Who handles plumbing permits in Boulder City?",
     answer:
-      "Boulder City is an incorporated city with its own building department. Plumbing permits in Boulder City are processed through the Boulder City Building Department, not Clark County. Red Carpet Plumbing holds Nevada Contractor License #0048585A and works within the Boulder City permit process for projects that require permits.",
+      "Boulder City is an incorporated city with its own building department. Plumbing permits in Boulder City are processed through the Boulder City Building Department, not Clark County. Red Carpet Plumbing holds Nevada Contractor License #048585A and works within the Boulder City permit process for projects that require permits.",
+    category: "trust",
   },
   {
     question: "How much does emergency plumbing cost in Boulder City?",
     answer:
       "Emergency plumbing costs vary based on the type of repair, the time of service, and the materials needed. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
+    category: "emergency",
   },
   {
     question:
       "Does Red Carpet Plumbing serve all Boulder City neighborhoods for emergency plumbing?",
     answer:
       "Yes. Red Carpet Plumbing provides emergency plumbing service throughout Boulder City including historic downtown, the King Street and Nevada Way corridors, and newer Boulder City neighborhoods. Call (702) 567-9172 to confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day emergency plumbing service in Boulder City?",
     answer:
       "Same-day emergency plumbing service is available in Boulder City, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "emergency",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides emergency plumbing service for homes and businesses in Boulder City, Nevada. Whether you are dealing with a burst pipe, galvanized line failure, sewer backup, water heater failure, or slab leak, our licensed plumbers are ready to help. Call (702) 567-9172 to reach a plumber now. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides emergency plumbing service for homes and businesses in Boulder City, Nevada. Whether you are dealing with a burst pipe, galvanized line failure, sewer backup, water heater failure, or slab leak, our licensed plumbers are ready to help. Call (702) 567-9172 to reach a plumber now. Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
 
 const TRUST_STRIP_ITEMS = [
-  "NV Licensed Plumbers, #0048585A",
+  "NV Licensed Plumbers, #048585A",
   // FLAG: source-site claim — verify before final launch.
   "Emergency Plumbing Service Available",
   "Serving Boulder City and the Las Vegas Valley",
@@ -144,7 +153,7 @@ const BC_EMERGENCY_PROBLEMS: {
   {
     label: "Gas line emergencies",
     // FLAG: verify gas line scope before publishing.
-    body: "If you smell gas in your Boulder City home, leave the building immediately and call your gas utility. Do not use electrical switches, open flames, or phones inside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #0048585A, C-1 Plumbing and Heating, which covers gas line work.",
+    body: "If you smell gas in your Boulder City home, leave the building immediately and call your gas utility. Do not use electrical switches, open flames, or phones inside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #048585A, C-1 Plumbing and Heating, which covers gas line work.",
   },
 ];
 
@@ -290,18 +299,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: BC_EMERGENCY_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(BC_EMERGENCY_FAQS);
 
 export default function BoulderCityEmergencyPlumbingPage() {
   return (
@@ -364,7 +362,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
                   city in Clark County with some of the oldest residential
                   housing in the Las Vegas region, including homes built in the
                   1930s and 1940s that still have original plumbing
-                  infrastructure. Our Nevada Contractor License #0048585A covers
+                  infrastructure. Our Nevada Contractor License #048585A covers
                   plumbing work throughout Nevada including Boulder City.
                 </p>
                 <p>
@@ -562,7 +560,7 @@ export default function BoulderCityEmergencyPlumbingPage() {
                   Plumbing work that requires a permit in Boulder City is
                   processed through the Boulder City Building Department, not Clark
                   County. Red Carpet Plumbing holds Nevada Contractor License
-                  #0048585A and works within the Boulder City permit process for
+                  #048585A and works within the Boulder City permit process for
                   projects that require permits.
                 </p>
               </article>
@@ -612,31 +610,11 @@ export default function BoulderCityEmergencyPlumbingPage() {
         </section>
 
         {/* SECTION 7: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Emergency Plumbing FAQs for Boulder City Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {BC_EMERGENCY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Emergency Plumbing FAQs for Boulder City Homeowners</>}
+          faqs={BC_EMERGENCY_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 8: FINAL CTA */}
         <CTASection
@@ -661,20 +639,5 @@ export default function BoulderCityEmergencyPlumbingPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

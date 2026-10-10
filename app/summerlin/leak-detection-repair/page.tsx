@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", the
-// 4.8/76 rating, and the gas-line leak detection scope are source-site/project
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", the
+// 4.8/81 rating, and the gas-line leak detection scope are source-site/project
 // claims. Each visible instance carries an inline FLAG comment.
 //
 // SCHEMA NOTE: Summerlin is a master-planned community spanning both the City of
@@ -25,14 +27,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Leak Detection and Repair in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Non-invasive leak detection and repair in Summerlin, NV. Hidden leaks, slab leaks, wall and ceiling leaks. Licensed plumbers. NV #0048585A. (702) 567-9172.",
+    "Non-invasive leak detection and repair in Summerlin, NV. Hidden leaks, slab leaks, wall and ceiling leaks. Licensed plumbers. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin/leak-detection-repair/",
   },
   openGraph: {
     title: "Leak Detection and Repair in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Non-invasive leak detection and repair in Summerlin, NV. Hidden leaks, slab leaks, wall and ceiling leaks. Licensed plumbers. NV #0048585A. (702) 567-9172.",
+      "Non-invasive leak detection and repair in Summerlin, NV. Hidden leaks, slab leaks, wall and ceiling leaks. Licensed plumbers. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -46,50 +48,57 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const SUMMERLIN_LEAK_FAQS = [
+const SUMMERLIN_LEAK_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a hidden water leak in a Summerlin home?",
     answer:
       "The most common signs are an unexplained increase in your water bill, the sound of running water when all fixtures are off, warm or wet spots on floors or walls, discoloration or bubbling paint, a persistent musty odor, reduced water pressure, and unexplained cracks in walls or flooring. In Summerlin, hidden leaks are most common in original village homes built in the 1990s where copper supply lines have been thinned by decades of hard water mineral corrosion.",
+    category: "causes-signs",
   },
   {
     question: "How do I check for a water leak using my meter in Summerlin?",
     answer:
       "Turn off all water fixtures and appliances in your home. Locate your water meter at the street and record the reading. Do not use any water for 30 minutes, then check the meter again. If the reading has changed, water is being used somewhere in the system, which indicates an active leak. This test confirms a leak is present but does not locate it. Call a licensed plumber for a professional inspection to find the source.",
+    category: "the-service",
   },
   {
     question: "What causes hidden pipe leaks in Summerlin homes?",
     answer:
       "The most common causes in Summerlin are hard water mineral corrosion inside copper supply lines that have been thinning since the original 1990s village construction, caliche and expansive clay soil movement beneath slab foundations that stresses underground pipes and connections, closed-loop pressure cycling that fatigues pipe joints over time, and aging pre-2000 plumbing in homes where the pipe systems have reached or are approaching end of typical service life.",
+    category: "causes-signs",
   },
   {
     question: "How does non-invasive leak detection work in Summerlin?",
     answer:
       "Non-invasive leak detection uses acoustic sensors that amplify the sound of pressurized water escaping from pipes through walls, floors, and underground. This allows the plumber to pinpoint the leak location without opening large sections of the home. Thermal imaging can also identify temperature differences caused by water escaping from hot water lines beneath slabs or inside walls. The result is a precise leak location before any disruption to your Summerlin home.",
+    category: "the-service",
   },
   {
     question: "Can a small hidden leak really cause serious damage?",
     answer:
       "Yes. A small hidden leak inside a wall can cause significant mold growth within 24 to 48 hours and can damage wood framing, drywall, insulation, and flooring over weeks and months without any visible sign. A slab leak can erode soil beneath the foundation and cause concrete cracking. Even a slow drip from an underground supply line can waste hundreds of gallons per month and create saturated soil conditions that affect the foundation.",
+    category: "causes-signs",
   },
   {
     question:
       "Does Red Carpet Plumbing serve all Summerlin villages for leak detection?",
     answer:
       "Yes. Red Carpet Plumbing provides leak detection and repair throughout Summerlin, including Summerlin North, Summerlin South, The Hills, The Trails, The Arbors, The Canyons, The Ridges, The Willows, The Gardens, and all Summerlin communities. Call (702) 567-9172 to confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day leak detection service in Summerlin?",
     answer:
       "Same-day leak detection service is available in Summerlin, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides non-invasive leak detection and repair throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. From hidden pipe leaks and wall leaks to slab leak detection and supply line repair, our licensed plumbers locate and fix Summerlin leaks with minimal disruption to your home. NV Contractor License #0048585A.";
+  "Red Carpet Plumbing provides non-invasive leak detection and repair throughout Summerlin, Nevada, including Summerlin North, Summerlin South, and all Summerlin villages. From hidden pipe leaks and wall leaks to slab leak detection and supply line repair, our licensed plumbers locate and fix Summerlin leaks with minimal disruption to your home. NV Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Non-Invasive Leak Detection",
   "Slab Leaks, Wall Leaks, Supply Lines",
   "Transparent Pricing, No Hidden Fees",
@@ -170,7 +179,7 @@ const LEAK_SERVICES: {
   {
     // FLAG: verify gas line leak detection scope before publishing.
     label: "Gas line leak detection",
-    body: "If you smell gas, leave the building immediately and call your gas utility. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under NV License #0048585A.",
+    body: "If you smell gas, leave the building immediately and call your gas utility. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under NV License #048585A.",
   },
 ];
 
@@ -199,13 +208,12 @@ const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with Summerlin's original village copper pipe systems, hard water conditions, and caliche soil leak risks",
   "Non-invasive leak detection equipment that locates leaks precisely before any repair work begins",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Residential leak detection throughout all Summerlin villages and Summerlin South",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // ---------------------------------------------------------------------------
@@ -291,6 +299,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -322,18 +338,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SUMMERLIN_LEAK_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SUMMERLIN_LEAK_FAQS);
 
 export default function SummerlinLeakDetectionPage() {
   return (
@@ -634,33 +639,11 @@ export default function SummerlinLeakDetectionPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Leak Detection and Repair
-                in Summerlin
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SUMMERLIN_LEAK_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Leak Detection and Repair in Summerlin</>}
+          faqs={SUMMERLIN_LEAK_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 9: RELATED SERVICES */}
         <section className="bg-brand-surface-alt">
@@ -725,21 +708,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

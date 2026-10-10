@@ -15,7 +15,7 @@ export function StickyMobileCTA() {
       href="tel:+17025679172"
       variant="primary"
       size="xl"
-      aria-label="Call Red Carpet Plumbing at 702 567 9172"
+      aria-label="Call Red Carpet Plumbing at (702) 567-9172"
       className="fixed inset-x-0 bottom-0 z-50 rounded-none! border-t border-brand-dark/10 focus-visible:outline-white motion-safe:active:scale-[0.99]! lg:hidden"
     >
       <span className="flex items-center justify-center gap-2">

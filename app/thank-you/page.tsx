@@ -30,12 +30,13 @@ export default function ThankYou() {
         <section className="relative isolate overflow-hidden bg-brand-charcoal">
           <div className="absolute inset-0 -z-10" aria-hidden="true">
             <Image
-              src="/images/company/thank-you/red-carpet-plumbing-las-vegas-service-request-thank-you.webp"
+              src="/images/company/vehicles/red-carpet-plumbing-las-vegas-service-van-front-three-quarter-medium.webp"
               alt=""
               fill
               priority
               sizes="100vw"
               className="object-cover"
+              style={{ objectPosition: "62% 50%" }}
             />
             {/* Same flat scrim value every other scrimmed section uses, so text
                 contrast here is predictable rather than image-dependent. */}

@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear as unverified claims in
@@ -20,7 +22,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 //   - 24/7 availability for sewer emergencies (Why-Choose bullet) — VERIFY.
 //   - Sewer line replacement permit/inspection claim (Section 4 card 5) — VERIFY
 //     against current business operations.
-//   - License #0048585A is a verified business claim.
+//   - License #048585A is a verified business claim.
 //
 // Las Vegas cluster pattern (matches app/las-vegas/drain-cleaning/page.tsx):
 // 5 separate JsonLd blocks in order WebPage -> BreadcrumbList -> Service ->
@@ -41,14 +43,14 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Sewer Line Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement in Las Vegas, NV. Camera inspection before repair. Licensed plumbers. NV #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement in Las Vegas, NV. Camera inspection before repair. Licensed plumbers. NV #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/sewer-line-services/",
   },
   openGraph: {
     title: "Sewer Line Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed sewer line inspection, cleaning, repair, and replacement in Las Vegas. Camera inspection before all repairs. Hydro jetting. Trenchless options. NV #0048585A.",
+      "Licensed sewer line inspection, cleaning, repair, and replacement in Las Vegas. Camera inspection before all repairs. Hydro jetting. Trenchless options. NV #048585A.",
     url: "https://redcarpetplumbing.com/las-vegas/sewer-line-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -64,41 +66,48 @@ type LinkSeg = string | { href: string; text: string };
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const LV_SEWER_FAQS = [
+const LV_SEWER_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a sewer line problem in Las Vegas?",
     answer:
       "The most common signs of a sewer line problem are multiple drains backing up or running slowly at the same time, gurgling sounds coming from drains or toilets after water use, sewage odor inside the home or near outdoor cleanouts, wet or sunken patches in the yard above the sewer line, and toilets that bubble when you run water elsewhere in the house. When more than one drain is affected, the problem is usually in the main sewer line rather than a branch drain.",
+    category: "causes-signs",
   },
   {
     question: "What causes sewer line damage in Las Vegas?",
     answer:
       "The most common causes of sewer line damage in Las Vegas are root intrusion from desert-adapted trees in established yards, hard water mineral buildup that narrows and roughens the pipe interior, caliche soil movement that shifts pipe joints and creates offsets, and aging cast iron or galvanized pipe in homes built between the 1970s and early 1990s. A camera inspection is the most accurate way to identify which cause is responsible for a specific sewer line problem.",
+    category: "causes-signs",
   },
   {
     question: "What is a sewer camera inspection?",
     answer:
       "A sewer camera inspection uses a waterproof camera attached to a flexible cable to view the interior of the sewer line from a cleanout or access point. The camera sends real-time video to a monitor, allowing us to see blockages, root intrusion, cracks, pipe offsets, collapsed sections, and mineral buildup that cannot be assessed from outside. We use camera inspection as the starting point for sewer line diagnostics so we can recommend the right repair method based on what is actually inside the pipe.",
+    category: "the-service",
   },
   {
     question: "Can a sewer line be repaired without digging?",
     answer:
       "In many cases, yes. Trenchless repair methods such as CIPP pipe lining and pipe bursting allow sewer line repair and replacement with minimal excavation. CIPP lining installs a structural resin liner inside the existing pipe from small access points, creating a new pipe within the old one without removing the soil above it. Pipe bursting pulls new pipe through the old line while fracturing it outward. Whether a trenchless method is appropriate depends on the condition of the existing pipe, the type of damage, and the pipe's location.",
+    category: "the-service",
   },
   {
     question: "What is hydro jetting a sewer line?",
     answer:
       "Hydro jetting uses a high-pressure water nozzle inserted into the sewer line to scour the interior pipe walls, removing grease, mineral scale, root tendrils, and debris. Unlike cable clearing, which punches a hole through a blockage, hydro jetting cleans the pipe walls from the inside. Hydro jetting is particularly effective for Las Vegas homes with hard water mineral buildup and for commercial properties with grease accumulation in kitchen drain lines.",
+    category: "the-service",
   },
   {
     question: "What happens if a sewer backup is not repaired?",
     answer:
       "Ignoring a sewer backup allows sewage to back up into the home or business, which creates a health hazard, damages flooring and walls, and can require extensive cleanup and remediation. A recurring sewer backup that is only partially cleared by cable cleaning will worsen over time, especially if the underlying cause is root intrusion, pipe damage, or a collapsed section. Addressing a sewer problem early, before a full backup occurs, is significantly less costly than emergency cleanup and repair after a sewage overflow.",
+    category: "timing-process",
   },
   {
     question: "Do you offer same-day sewer line service in Las Vegas?",
     answer:
       "Same-day sewer line service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -129,7 +138,7 @@ const LV_SEWER_STEPS = [
 // 24/7 availability are source-site claims. Confirm all before launch.
 const WHY_CHOOSE = [
   "Local Las Vegas plumbing company familiar with hard water conditions, caliche soil, and aging sewer pipe systems throughout the city",
-  "Licensed plumbers (NV License #0048585A)",
+  "Licensed plumbers (NV License #048585A)",
   "Camera inspection before all sewer line repair recommendations",
   "Full range of sewer services: cleaning, hydro jetting, repair, trenchless lining, and replacement",
   "Residential and commercial sewer line service throughout Las Vegas",
@@ -249,7 +258,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Sewer Line Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement in Las Vegas, NV. Licensed plumbers. Camera inspection before repair. NV #0048585A.",
+    "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement in Las Vegas, NV. Licensed plumbers. Camera inspection before repair. NV #048585A.",
   url: "https://redcarpetplumbing.com/las-vegas/sewer-line-services/",
   isPartOf: {
     "@type": "WebSite",
@@ -327,18 +336,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: LV_SEWER_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(LV_SEWER_FAQS);
 
 function renderTail(tail: LinkSeg[]) {
   return tail.map((seg, i) =>
@@ -388,7 +386,7 @@ export default function LasVegasSewerLinePage() {
           subheading="Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement for homes and businesses throughout Las Vegas. From recurring backups and slow drains to root intrusion, damaged lines, and complete sewer replacements, our licensed plumbers start with a camera inspection so you know exactly what you are dealing with before any work begins."
           trustItems={[
             // FLAG: VERIFY — license number is a source-site claim.
-            "NV Licensed Plumbers, #0048585A",
+            "NV Licensed Plumbers, #048585A",
             "Sewer Line Camera Inspection",
             "Serving Las Vegas and the Valley",
             "Transparent Pricing, No Hidden Fees",
@@ -648,32 +646,11 @@ export default function LasVegasSewerLinePage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Sewer Line Services in Las Vegas
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {LV_SEWER_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Sewer Line Services in Las Vegas</>}
+          faqs={LV_SEWER_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         {/* FLAG: VERIFY — license number and trust claims in the body are
@@ -681,7 +658,7 @@ export default function LasVegasSewerLinePage() {
         <CTASection
           background="red"
           headline={<>Ready to Schedule Sewer Line Service<br />in Las Vegas?</>}
-          body="Red Carpet Plumbing is available for sewer line inspection, cleaning, repair, and replacement throughout the Las Vegas Valley. Licensed plumbers, transparent pricing. NV #0048585A."
+          body="Red Carpet Plumbing is available for sewer line inspection, cleaning, repair, and replacement throughout the Las Vegas Valley. Licensed plumbers, transparent pricing. NV #048585A."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",
@@ -718,21 +695,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

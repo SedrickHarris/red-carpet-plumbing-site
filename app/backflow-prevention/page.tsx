@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSection } from "@/components/HeroSection";
+import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
@@ -15,12 +16,14 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
     "Backflow Prevention Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing installs, repairs, and services backflow prevention devices for homes and businesses throughout Las Vegas. Annual testing required by LVVWD. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing installs, repairs, and services backflow prevention devices for homes and businesses throughout Las Vegas. Annual testing required by LVVWD. NV Licensed #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/backflow-prevention/",
   },
@@ -28,57 +31,66 @@ export const metadata: Metadata = {
     title:
       "Backflow Prevention Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed backflow prevention installation and repair throughout Las Vegas and the Las Vegas Valley. NV #0048585A. 4.8 stars, 76 reviews.",
+      "Licensed backflow prevention installation and repair throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
   },
 };
 
-const BACKFLOW_FAQS = [
+const BACKFLOW_FAQS: FaqItem[] = [
   {
     question: "What is a backflow preventer?",
     answer:
       "A backflow preventer is a plumbing device installed on your water supply line to stop water from flowing backward into the public water supply. Backflow can occur when pressure drops or reverses in the supply line, potentially allowing contaminants, chemicals, or waste from irrigation systems, fire suppression lines, or commercial plumbing to enter clean drinking water. Backflow preventers are required on many residential and commercial properties in Las Vegas and throughout Clark County.",
+    category: "the-service",
   },
   {
     question: "Who is required to have a backflow preventer in Las Vegas?",
     answer:
       "The Las Vegas Valley Water District and local municipalities require backflow prevention devices on properties with irrigation systems, fire suppression connections, commercial plumbing, multi-unit buildings, and any connection that poses a cross-connection risk to the public water supply. Requirements vary by property type and connection. If you have received a notice from LVVWD or your local water authority about backflow compliance, a licensed plumber can assess your property and install the appropriate device.",
+    category: "trust",
   },
   {
     question:
       "How often do backflow preventers need to be tested in Nevada?",
     answer:
       "Annual testing is required for most backflow prevention assemblies in Las Vegas and surrounding municipalities. The Las Vegas Valley Water District requires annual testing for containment assemblies. The City of North Las Vegas operates a formal backflow program and notifies account holders when devices are due. Testing must be performed by a certified backflow tester and results submitted to the local water authority. Failing to test on schedule can result in notices of violation and risk water service disruption.",
+    category: "timing-process",
   },
   {
     question: "What happens if my backflow preventer fails a test?",
     answer:
       "A failed test means your backflow prevention device is not functioning correctly and is not protecting the water supply as required. Once a device fails, repair or replacement is typically required before the property can be brought back into compliance. A licensed plumber can assess whether the device can be repaired or needs to be replaced, and can coordinate the follow-up certification process.",
+    category: "timing-process",
   },
   {
     question: "What types of backflow preventers are used in Las Vegas?",
     answer:
       "Common backflow prevention devices in Las Vegas include reduced pressure zone (RPZ) assemblies, which provide the highest level of protection and are required for high-hazard connections. Double check valve assemblies (DCVA) are used for moderate-hazard applications. Pressure vacuum breakers (PVB) are commonly installed on residential irrigation systems. The appropriate device depends on the type of connection, the level of hazard, and the requirements of the local water authority.",
+    category: "the-service",
   },
   {
     question: "Does Red Carpet Plumbing install backflow preventers?",
     answer:
-      "Yes. Red Carpet Plumbing installs backflow prevention devices for residential and commercial properties throughout the Las Vegas Valley. Installations include irrigation system backflow preventers, commercial containment assemblies, and device replacements for failed or non-compliant units. Nevada Contractor License #0048585A (C-1 Plumbing and Heating) covers backflow device installation.",
+      "Yes. Red Carpet Plumbing installs backflow prevention devices for residential and commercial properties throughout the Las Vegas Valley. Installations include irrigation system backflow preventers, commercial containment assemblies, and device replacements for failed or non-compliant units. Nevada Contractor License #048585A (C-1 Plumbing and Heating) covers backflow device installation.",
+    category: "the-service",
   },
   {
     question: "Do I need a backflow preventer for my irrigation system?",
     answer:
       "Yes, in most cases. Residential irrigation systems in Las Vegas are among the most common applications requiring a backflow preventer because the irrigation line creates a direct cross-connection between the water supply and potentially contaminated soil or fertilizer. Pressure vacuum breakers are the most common backflow device installed on residential irrigation systems in Clark County. If your irrigation system does not have a backflow preventer, contact a licensed plumber to assess and install the appropriate device.",
+    category: "the-service",
   },
   {
     question:
       "What areas does Red Carpet Plumbing serve for backflow prevention?",
     answer:
       "Red Carpet Plumbing provides backflow prevention device installation, repair, and service throughout Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, Lake Las Vegas, and surrounding communities in the Las Vegas Valley.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day backflow prevention service in Las Vegas?",
     answer:
       "Same-day backflow prevention service is available in Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -292,7 +304,7 @@ const serviceSchema = {
   name: "Backflow Prevention",
   serviceType: "Backflow Prevention",
   description:
-    "Red Carpet Plumbing installs, repairs, and services backflow prevention devices for homes and businesses throughout the Las Vegas Valley, including irrigation system backflow preventers, RPZ assemblies, PVB and DCVA devices, and commercial containment backflow prevention. Nevada Contractor License #0048585A.",
+    "Red Carpet Plumbing installs, repairs, and services backflow prevention devices for homes and businesses throughout the Las Vegas Valley, including irrigation system backflow preventers, RPZ assemblies, PVB and DCVA devices, and commercial containment backflow prevention. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -302,17 +314,18 @@ const serviceSchema = {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
       name: "Nevada C-1 Plumbing and Heating Contractor License",
-      identifier: "0048585A",
+      identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
         name: "State of Nevada Contractors Board",
       },
     },
   },
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -369,7 +382,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Backflow Prevention Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing installs, repairs, and services backflow prevention devices for homes and businesses throughout the Las Vegas Valley. NV Licensed #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing installs, repairs, and services backflow prevention devices for homes and businesses throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/backflow-prevention/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -390,18 +403,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: BACKFLOW_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(BACKFLOW_FAQS);
 
 export default function BackflowPreventionPage() {
   return (
@@ -430,8 +432,8 @@ export default function BackflowPreventionPage() {
           }
           subheading="Backflow prevention device installation, repair, and service for homes and businesses throughout the Las Vegas Valley."
           trustItems={[
-            "Licensed Plumbers, NV #0048585A",
-            "4.8 Stars, 76 Google Reviews",
+            "Licensed Plumbers, NV #048585A",
+            "4.8 Stars, 81 Google Reviews",
             "Residential and Commercial Service",
             "Transparent Pricing, No Hidden Fees",
             "Over 40 Years in Las Vegas",
@@ -444,7 +446,7 @@ export default function BackflowPreventionPage() {
             label: "Request Backflow Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
+          ctaNote="NV Licensed #048585A | 4.8 Stars, 81 Reviews"
           formSlot={<QuoteFormPlaceholder title="Get Backflow Service Help" />}
           accentWidth="sm"
           backgroundImage={{
@@ -532,7 +534,11 @@ export default function BackflowPreventionPage() {
 
         {/* SECTION 5: BACKFLOW PREVENTION IN THE LAS VEGAS VALLEY */}
         <section className="bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/commercial-plumbing/red-carpet-plumbing-commercial-pipe-valve-detail-las-vegas.webp"
+              alt="Brass and copper valve assembly with gauges in a commercial mechanical room"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -567,12 +573,17 @@ export default function BackflowPreventionPage() {
                 ))}
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
         {/* SECTION 6: HOWTO PROCESS */}
         <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+            <SectionImageSplit
+              src="/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-pressure-regulator-inspection-card.webp"
+              alt="Outdoor water meter, valves and pressure regulator assembly beside a stucco wall"
+            >
             <SectionReveal>
               <SectionRevealItem>
                 <div className="text-left">
@@ -612,6 +623,7 @@ export default function BackflowPreventionPage() {
                 </ol>
               </SectionRevealItem>
             </SectionReveal>
+            </SectionImageSplit>
           </div>
         </section>
 
@@ -627,7 +639,7 @@ export default function BackflowPreventionPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing installs and repairs backflow prevention
                   devices for homes and businesses throughout the Las Vegas
-                  Valley. NV Contractor License #0048585A.
+                  Valley. NV Contractor License #048585A.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">
@@ -737,31 +749,11 @@ export default function BackflowPreventionPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Backflow Prevention Questions Answered
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {BACKFLOW_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Backflow Prevention Questions Answered</>}
+          faqs={BACKFLOW_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <section className="bg-brand-primary text-white">
@@ -797,20 +789,5 @@ export default function BackflowPreventionPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

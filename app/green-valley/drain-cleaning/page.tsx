@@ -10,11 +10,13 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — the rating (4.8 stars / 76 Google reviews),
+// FLAG: VERIFY before publishing —
 // "Over 40 years," and "24/7 emergency service" trust claims are source-site
 // claims surfaced in the approved brief and shown on this page. License
-// #0048585A and transparent-pricing are also source-site claims. Confirm all
+// #048585A and transparent-pricing are also source-site claims. Confirm all
 // before final launch.
 // Schema follows the established site-wide service-location pattern (Plumber
 // provider; areaServed Place (Green Valley) + containedInPlace City (Henderson)
@@ -56,41 +58,48 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const GV_DRAIN_FAQS = [
+const GV_DRAIN_FAQS: FaqItem[] = [
   {
     question: "Why do drains clog faster in Green Valley homes?",
     answer:
       "Drains in Green Valley homes clog faster because Las Vegas hard water leaves calcium and magnesium deposits inside pipe walls that narrow the pipe and create rough surfaces that trap grease and soap scum. In original Green Valley neighborhoods built from the late 1970s through mid-1990s, these deposits have been accumulating for 30 to 45 years, making drain clog formation faster and more stubborn than in newer construction. Green Valley receives the same Lake Mead municipal supply as the rest of the Las Vegas Valley, which carries 17 to 24 grains per gallon of dissolved minerals.",
+    category: "causes-signs",
   },
   {
     question: "Is hydro jetting safe for older Green Valley pipes?",
     answer:
       "Hydro jetting can be highly effective on Green Valley pipes in good condition, but for original Green Valley copper lines that have been under hard water stress for 30 to 45 years, we assess pipe condition before recommending high-pressure methods. A video camera inspection helps us determine whether the line can handle hydro jetting pressure or whether cable clearing is the safer approach. We do not apply hydro jetting to lines showing signs of significant corrosion or thinning.",
+    category: "the-service",
   },
   {
     question: "How do I know if I need professional drain cleaning in Green Valley?",
     answer:
       "Call a plumber when multiple drains are slow at the same time, when you have a complete blockage, when drains produce sewage or sulfur odors, or when you hear gurgling sounds from toilets or other fixtures. Multiple affected drains usually indicate a main sewer line problem that requires professional clearing rather than a store-bought solution.",
+    category: "causes-signs",
   },
   {
     question: "How often should Green Valley homeowners have their drains cleaned?",
     answer:
       "Most Green Valley homeowners benefit from professional drain cleaning every one to two years. Homes in original Green Valley neighborhoods with 30 to 45 year old copper pipes and accumulated hard water mineral buildup may benefit from annual cleaning. Green Valley Ranch homes are entering their first major service cycle and benefit from inspection and cleaning as lines reach the 20 to 30 year mark.",
+    category: "timing-process",
   },
   {
     question: "Does Red Carpet Plumbing serve Green Valley Ranch?",
     answer:
       "Yes. Red Carpet Plumbing provides drain cleaning throughout Green Valley, including Green Valley Ranch, as well as the surrounding Henderson communities. Green Valley is part of the incorporated City of Henderson, and we serve all Green Valley neighborhoods.",
+    category: "service-area",
   },
   {
     question: "How much does drain cleaning cost in Green Valley?",
     answer:
       "Drain cleaning costs vary based on the type of drain, the severity of the clog, and the method required to clear it. Red Carpet Plumbing provides transparent pricing before work begins. Call (702) 567-9172 for a quote.",
+    category: "cost",
   },
   {
     question: "Do you offer same-day drain cleaning service in Green Valley?",
     answer:
       "Same-day drain cleaning service is available in Green Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -242,9 +251,9 @@ const GV_COMMUNITIES: { name: string; href?: string }[] = [
 // Hero trust strip. FLAG comments retained per established sibling pattern.
 const HERO_TRUST_ITEMS = [
   // FLAG: verify before publishing.
-  "4.8 stars, 76 Google reviews",
+  "4.8 stars, 81 Google reviews",
   // FLAG: verify before final launch.
-  "NV Licensed Plumbers, #0048585A",
+  "NV Licensed Plumbers, #048585A",
   // FLAG: verify before publishing.
   "Over 40 years serving the Las Vegas Valley",
   // FLAG: source-site claim — verify before final launch.
@@ -265,13 +274,21 @@ const serviceSchema = {
   name: "Drain Cleaning in Green Valley",
   serviceType: "Drain Cleaning",
   description:
-    "Professional drain cleaning for homes and businesses in Green Valley, Henderson, NV. Kitchen drain cleaning, bathroom drain cleaning, main sewer line cleaning, hydro jetting, and video camera drain inspection. Nevada Contractor License #0048585A, C-1 Plumbing and Heating.",
+    "Professional drain cleaning for homes and businesses in Green Valley, Henderson, NV. Kitchen drain cleaning, bathroom drain cleaning, main sewer line cleaning, hydro jetting, and video camera drain inspection. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -342,18 +359,7 @@ const webpageSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: GV_DRAIN_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(GV_DRAIN_FAQS);
 
 export default function GreenValleyDrainCleaningPage() {
   return (
@@ -735,31 +741,11 @@ export default function GreenValleyDrainCleaningPage() {
         </section>
 
         {/* SECTION 9: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Drain Cleaning FAQs for Green Valley Homeowners
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {GV_DRAIN_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Drain Cleaning FAQs for Green Valley Homeowners</>}
+          faqs={GV_DRAIN_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 10: FINAL CTA */}
         <CTASection
@@ -784,20 +770,5 @@ export default function GreenValleyDrainCleaningPage() {
 
       <StickyMobileCTA />
     </>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-    </svg>
   );
 }

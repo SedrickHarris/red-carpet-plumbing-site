@@ -10,6 +10,8 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear as unverified claims in
@@ -17,7 +19,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 //   - telephone (+17025679172) in serviceSchema.provider — VERIFY before launch.
 //   - "Transparent Pricing, No Hidden Fees" trust strip item + ctaNote and the
 //     Why-Choose pricing bullet — source-site claims, VERIFY before launch.
-//   - License #0048585A is a verified business claim.
+//   - License #048585A is a verified business claim.
 //
 // Schema follows the established site-wide service-location pattern with the
 // P45 brief variant for the Service block (provider includes PostalAddress per
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
   title:
     "Toilet Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides toilet repair and installation in Green Valley, Henderson, NV. Running toilets, base leaks, wax ring replacement, clogs, and new installations. NV License #0048585A. (702) 567-9172.",
+    "Red Carpet Plumbing provides toilet repair and installation in Green Valley, Henderson, NV. Running toilets, base leaks, wax ring replacement, clogs, and new installations. NV License #048585A. (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/green-valley/toilet-repair-installation/",
@@ -67,7 +69,7 @@ export const metadata: Metadata = {
 // Trust strip (4 items) rendered as a red brand-primary band, matching the GV
 // cluster pattern.
 const GV_TOILET_TRUST = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Toilet Repair and Installation",
   "Serving Green Valley and Henderson",
   // FLAG: VERIFY — "Transparent Pricing, No Hidden Fees" is a source-site claim.
@@ -207,7 +209,7 @@ const GV_TOILET_STEPS = [
 const GV_TOILET_WHY = [
   "Local Las Vegas Valley plumbing company familiar with Green Valley homes and the hard water conditions that affect toilet components",
   "Transparent assessment of repair vs. replacement before any work is recommended",
-  "Licensed plumbers, NV License #0048585A, C-1 Plumbing and Heating",
+  "Licensed plumbers, NV License #048585A, C-1 Plumbing and Heating",
   "Transparent pricing with no hidden fees",
   "Toilet repair and installation service throughout Green Valley and Henderson",
 ];
@@ -229,42 +231,49 @@ const GV_TOILET_SUBAREAS = [
 // AND the FAQPage JSON-LD both derive from this single array, guaranteeing a
 // character-for-character match. Do not edit one without the other.
 // ---------------------------------------------------------------------------
-const GV_TOILET_FAQS = [
+const GV_TOILET_FAQS: FaqItem[] = [
   {
     question: "Why does my toilet keep running in my Green Valley home?",
     answer:
       "A running toilet in a Green Valley home is usually caused by a failing flapper valve, a worn fill valve that does not shut off after the tank refills, or a float set too high. Las Vegas Valley hard water accelerates wear on rubber flapper valves and fill valve seats, which means toilet internals in Green Valley homes may need replacement more frequently than in areas with softer water. A running toilet wastes a significant amount of water and should be repaired promptly.",
+    category: "causes-signs",
   },
   {
     question: "Why is my toilet leaking at the base?",
     answer:
       "A toilet leaking at the base is most often a failed wax ring, which is the seal between the toilet and the floor flange. In Green Valley homes built on slab foundations, seasonal ground movement in the caliche soil beneath the slab can stress the wax ring over time, accelerating failure in older fixtures. A base leak can also allow sewer gases into the home and should be repaired as soon as possible.",
+    category: "causes-signs",
   },
   {
     question: "How do I know if my toilet needs repair or full replacement?",
     answer:
       "Repair is usually the right choice for running toilets, base leaks, weak flushes caused by mineral buildup, and most clog situations. Replacement makes more sense when the toilet has a cracked tank or bowl, requires repeated repairs for the same problem, has severe mineral scale that cannot be cleared, or is an older pre-1992 model that uses significantly more water per flush than current high-efficiency models. A licensed plumber can assess the condition of your toilet and recommend the most practical option.",
+    category: "causes-signs",
   },
   {
     question: "Does hard water damage toilets in Green Valley?",
     answer:
       "Yes. Las Vegas Valley hard water at 17 to 24 grains per gallon leaves mineral deposits inside toilet siphon jets and rim holes over time, reducing flush strength. Hard water also accelerates wear on rubber flapper valves and fill valve seats. Toilets in Green Valley homes may develop weak flushes and running problems sooner than toilets in areas with softer water, particularly in original Green Valley homes where fixtures have been in service for 30 or more years.",
+    category: "the-service",
   },
   {
     question: "Can a toilet leak at the base indicate a slab leak?",
     answer:
       "A toilet leaking at the base is most commonly a wax ring failure rather than a slab leak. However, persistent moisture near the base of a toilet after a wax ring has been replaced, or water appearing on the floor without a clear connection to the toilet itself, can sometimes indicate a supply line or drain leak beneath the slab. If a base leak recurs after wax ring replacement or moisture appears in unexpected locations, a professional slab leak assessment is a reasonable next step.",
+    category: "the-service",
   },
   {
     question:
       "Does Red Carpet Plumbing serve Green Valley for toilet repair and installation?",
     answer:
-      "Yes. Red Carpet Plumbing provides toilet repair and installation throughout Green Valley and the Henderson area. Green Valley is a community within the incorporated City of Henderson, and our Nevada Contractor License #0048585A covers plumbing work throughout Henderson including Green Valley and surrounding neighborhoods. Call (702) 567-9172 to request service or confirm coverage for your address.",
+      "Yes. Red Carpet Plumbing provides toilet repair and installation throughout Green Valley and the Henderson area. Green Valley is a community within the incorporated City of Henderson, and our Nevada Contractor License #048585A covers plumbing work throughout Henderson including Green Valley and surrounding neighborhoods. Call (702) 567-9172 to request service or confirm coverage for your address.",
+    category: "service-area",
   },
   {
     question: "Do you offer same-day toilet repair service in Green Valley?",
     answer:
       "Same-day toilet repair service is available in Green Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
@@ -278,7 +287,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Toilet Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides toilet repair and installation for homes in Green Valley, Henderson, NV. Running toilets, base leaks, wax ring replacement, toilet clogs, and new toilet installation. Licensed plumbers. NV #0048585A.",
+    "Red Carpet Plumbing provides toilet repair and installation for homes in Green Valley, Henderson, NV. Running toilets, base leaks, wax ring replacement, toilet clogs, and new toilet installation. Licensed plumbers. NV #048585A.",
   url: "https://redcarpetplumbing.com/green-valley/toilet-repair-installation/",
   isPartOf: {
     "@type": "WebSite",
@@ -320,7 +329,7 @@ const serviceSchema = {
   name: "Toilet Repair and Installation in Green Valley",
   serviceType: "Toilet Repair and Installation",
   description:
-    "Toilet repair and installation for homes in Green Valley, Henderson, NV. Running toilet repair, base leak repair, wax ring replacement, toilet clog clearing, toilet replacement, and new toilet installation. Nevada Contractor License #0048585A.",
+    "Toilet repair and installation for homes in Green Valley, Henderson, NV. Running toilet repair, base leak repair, wax ring replacement, toilet clog clearing, toilet replacement, and new toilet installation. Nevada Contractor License #048585A.",
   areaServed: {
     "@type": "Place",
     name: "Green Valley, Nevada",
@@ -361,18 +370,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: GV_TOILET_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(GV_TOILET_FAQS);
 
 function renderTail(tail: LinkSeg[]) {
   return tail.map((seg, i) =>
@@ -432,7 +430,7 @@ export default function GreenValleyToiletPage() {
             href: "/contact/",
           }}
           // FLAG: VERIFY — transparent pricing is a source-site claim.
-          ctaNote="NV Licensed, #0048585A. Transparent pricing, no hidden fees."
+          ctaNote="NV Licensed, #048585A. Transparent pricing, no hidden fees."
           formSlot={<QuoteFormPlaceholder title="Get Toilet Repair Help" />}
           backgroundImage={{
             src: "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-hero.webp",
@@ -703,33 +701,11 @@ export default function GreenValleyToiletPage() {
         </section>
 
         {/* SECTION 10: FAQ */}
-        <section className="bg-brand-surface-alt">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Toilet Repair and Installation in
-                Green Valley
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {GV_TOILET_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Toilet Repair and Installation in Green Valley</>}
+          faqs={GV_TOILET_FAQS}
+          surface="alt"
+        />
 
         {/* SECTION 11: FINAL CTA */}
         <CTASection
@@ -772,21 +748,6 @@ function CheckMark() {
         strokeLinejoin="round"
         d="M5 12.5l4.5 4.5L19 7.5"
       />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

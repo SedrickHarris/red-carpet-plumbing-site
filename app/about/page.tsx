@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "About Red Carpet Plumbing | Las Vegas Plumbing Company",
   description:
-    "Red Carpet Plumbing is a local, family-owned Las Vegas plumbing company with over 40 years of experience. Licensed plumbers, 24/7 emergency service, transparent pricing. NV #0048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing is a local, family-owned Las Vegas plumbing company with over 40 years of experience. Licensed plumbers, 24/7 emergency service, transparent pricing. NV #048585A. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/about/",
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title:
       "About Red Carpet Plumbing | Las Vegas Plumbing Company",
     description:
-      "Local, family-owned Las Vegas plumbing company with over 40 years of experience. NV Licensed #0048585A. 4.8 stars, 76 reviews.",
+      "Local, family-owned Las Vegas plumbing company with over 40 years of experience. NV Licensed #048585A. 4.8 stars, 81 reviews.",
   },
 };
 
@@ -37,7 +37,7 @@ const ABOUT_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, which covers residential and commercial plumbing and heating work in Nevada. Licensed plumbers handle every job.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, which covers residential and commercial plumbing and heating work in Nevada. Licensed plumbers handle every job.",
     category: "trust",
   },
   {
@@ -80,7 +80,7 @@ const TRUST_PILLARS = [
   },
   {
     title: "Licensed Plumbers",
-    body: "Every job Red Carpet Plumbing takes on is handled by licensed plumbing professionals. NV Contractor License #0048585A (C-1 Plumbing and Heating).",
+    body: "Every job Red Carpet Plumbing takes on is handled by licensed plumbing professionals. NV Contractor License #048585A (C-1 Plumbing and Heating).",
   },
   {
     title: "24/7 Emergency Service",
@@ -115,7 +115,7 @@ const aboutPageSchema = {
   "@type": "AboutPage",
   name: "About Red Carpet Plumbing | Las Vegas Plumbing Company",
   description:
-    "Red Carpet Plumbing is a local, family-owned Las Vegas plumbing company with over 40 years of experience. Licensed plumbers, 24/7 emergency service, transparent pricing. NV #0048585A.",
+    "Red Carpet Plumbing is a local, family-owned Las Vegas plumbing company with over 40 years of experience. Licensed plumbers, 24/7 emergency service, transparent pricing. NV #048585A.",
   url: "https://redcarpetplumbing.com/about/",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -184,7 +184,7 @@ const plumberSchema = {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
     name: "Nevada C-1 Plumbing and Heating Contractor License",
-    identifier: "0048585A",
+    identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
       name: "State of Nevada Contractors Board",
@@ -196,13 +196,21 @@ const plumberSchema = {
     "https://www.instagram.com/redcarpetplumbing/",
     "https://x.com/redcarpetplumb",
   ],
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "81",
+    bestRating: "5",
+    worstRating: "1",
+  },
 };
 
 const TRUST_STRIP_ITEMS = [
 "Over 40 Years Serving Las Vegas",
 "Local, Family-Owned Business",
-"Licensed Plumbers, NV #0048585A",
-"4.8 Stars, 76 Google Reviews",
+"Licensed Plumbers, NV #048585A",
+"4.8 Stars, 81 Google Reviews",
 ];
 
 export default function AboutPage() {
@@ -239,11 +247,12 @@ export default function AboutPage() {
             label: "Request a Quote",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #0048585A | 4.8 Stars, 76 Reviews"
+          ctaNote="NV Licensed #048585A | 4.8 Stars, 81 Reviews"
           accentWidth="sm"
           backgroundImage={{
-            src: "/images/company/vehicles/branded-vehicle.webp",
-            alt: "Red Carpet Plumbing service vehicle in Las Vegas",
+            src: "/images/company/vehicles/red-carpet-plumbing-las-vegas-service-van-front-three-quarter-wide.webp",
+            position: "62% 31%",
+            alt: "Red Carpet Plumbing service van parked in Las Vegas, Nevada",
           }}
         />
 
@@ -253,7 +262,7 @@ export default function AboutPage() {
             <p className="text-lg leading-8 text-brand-dark/80">
               Red Carpet Plumbing is a local, family-owned plumbing company
               serving homes and businesses throughout the Las Vegas Valley. The
-              company holds Nevada Contractor License #0048585A under the C-1
+              company holds Nevada Contractor License #048585A under the C-1
               Plumbing and Heating classification, covering residential and
               commercial plumbing and heating work in Nevada. Services include
               emergency plumbing, drain cleaning, leak detection and repair,
@@ -492,13 +501,13 @@ export default function AboutPage() {
             <div className="mt-8 space-y-6">
               <p className="text-base leading-7 text-brand-dark/80 sm:text-lg">
                 Red Carpet Plumbing holds Nevada Contractor License
-                #0048585A under the C-1 Plumbing and Heating
+                #048585A under the C-1 Plumbing and Heating
                 classification, issued by the State of Nevada Contractors
                 Board. Every plumbing job is handled by licensed
                 professionals.
               </p>
               <p className="text-base leading-7 text-brand-dark/80 sm:text-lg">
-                Red Carpet Plumbing has earned a 4.8-star rating across 76
+                Red Carpet Plumbing has earned a 4.8-star rating across 81
                 Google reviews from customers throughout the Las Vegas
                 Valley.{" "}
                 <a
@@ -570,4 +579,3 @@ export default function AboutPage() {
     </>
   );
 }
-

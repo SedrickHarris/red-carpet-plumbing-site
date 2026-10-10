@@ -32,13 +32,15 @@ type HeroSectionProps = {
   secondaryCTA?: CTA;
   ctaNote?: ReactNode;
   formSlot?: ReactNode;
-  backgroundImage?: { src: string; alt: string };
+  // `position` is an optional CSS object-position (for example "65% 35%")
+  // for square or tall sources that are cropped to a wide band.
+  backgroundImage?: { src: string; alt: string; position?: string };
   // Optional multi-image background. When more than one entry is supplied the
   // hero crossfades between them; a single entry renders identically to
   // `backgroundImage` with no motion machinery. Mutually exclusive with
   // `backgroundImage` — if both are passed, this one wins. Only the homepage
   // uses it; every other page keeps passing the singular prop.
-  backgroundImages?: { src: string; alt: string }[];
+  backgroundImages?: { src: string; alt: string; position?: string }[];
   accentWidth?: "sm" | "md" | "lg";
   size?: "default" | "tall";
   // Back-compat: accepted but ignored. The split layout is now always 50/50.
@@ -175,6 +177,7 @@ export function HeroSection({
                   priority={slideIndex === 0}
                   sizes="100vw"
                   className="object-cover"
+                  style={{ objectPosition: slides[slideIndex].position }}
                 />
               </motion.div>
             </AnimatePresence>
@@ -186,6 +189,7 @@ export function HeroSection({
               priority
               sizes="100vw"
               className="object-cover"
+              style={{ objectPosition: slides[0].position }}
             />
           )}
           {/* One flat scrim rather than a gradient. The previous version ran

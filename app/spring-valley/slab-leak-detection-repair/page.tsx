@@ -9,9 +9,11 @@ import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FaqSection } from "@/components/FaqSection";
+import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
-// FLAG: VERIFY before publishing — license #0048585A, "over 40 years", and the
-// 4.8/76 rating are source-site/project claims. Each visible instance carries an
+// FLAG: VERIFY before publishing — license #048585A, "over 40 years", and the
+// 4.8/81 rating are source-site/project claims. Each visible instance carries an
 // inline FLAG comment.
 //
 // SCHEMA NOTE: Spring Valley is an unincorporated Clark County community; it is
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
   title:
     "Slab Leak Detection and Repair in Spring Valley, NV | Red Carpet Plumbing",
   description:
-    "Slab leak detection and repair in Spring Valley, NV. Non-invasive detection, all repair options explained. Galvanized pipe slab leaks. NV #0048585A. (702) 567-9172.",
+    "Slab leak detection and repair in Spring Valley, NV. Non-invasive detection, all repair options explained. Galvanized pipe slab leaks. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/spring-valley/slab-leak-detection-repair/",
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
     title:
       "Slab Leak Detection and Repair in Spring Valley, NV | Red Carpet Plumbing",
     description:
-      "Slab leak detection and repair in Spring Valley, NV. Non-invasive detection, all repair options explained. Galvanized pipe slab leaks. NV #0048585A. (702) 567-9172.",
+      "Slab leak detection and repair in Spring Valley, NV. Non-invasive detection, all repair options explained. Galvanized pipe slab leaks. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley/slab-leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -48,50 +50,57 @@ export const metadata: Metadata = {
 // both derive from this single array, guaranteeing a character-for-character
 // match.
 // ---------------------------------------------------------------------------
-const SV_SLAB_FAQS = [
+const SV_SLAB_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a slab leak in a Spring Valley home?",
     answer:
       "The most common signs of a slab leak in a Spring Valley home are warm or hot spots on floors, the sound of running water when all fixtures are off, an unexplained increase in your water bill, damp or wet flooring without an obvious source, cracks appearing in walls or flooring, low water pressure throughout the home, and mold or mildew odor at floor level. In older Desert Inn and West Sahara corridor homes with galvanized supply lines, a slab leak can develop and release significant water faster than a copper pinhole leak, making these warning signs important to act on promptly.",
+    category: "causes-signs",
   },
   {
     question: "What causes slab leaks in Spring Valley homes?",
     answer:
       "The primary causes in Spring Valley are galvanized steel supply line corrosion in older Desert Inn and West Sahara corridor homes built in the 1970s through 1990s, where decades of internal corrosion have thinned pipe walls to the point of failure; hard water mineral corrosion thinning copper supply lines in same-era homes over 30 to 45 years; caliche and expansive clay soil movement beneath slab foundations that stresses pipes over time; and closed-loop pressure cycling that adds fatigue stress to already-weakened pipe materials.",
+    category: "causes-signs",
   },
   {
     question: "How is a slab leak detected without breaking up the floor?",
     answer:
       "Professional slab leak detection uses acoustic sensors that amplify the sound of pressurized water escaping beneath the slab, pressure testing to confirm and isolate water loss to a specific line, and thermal imaging to identify temperature differences caused by hot water leaks. These non-invasive methods locate the leak precisely before any concrete cutting begins.",
+    category: "the-service",
   },
   {
     question: "What are my options for slab leak repair in Spring Valley?",
     answer:
       "The three main options are spot repair through concrete, which involves cutting the slab at the leak location and repairing the damaged pipe section; pipe rerouting, which bypasses the damaged pipe entirely by running a new line through walls or above-slab pathways; and epoxy pipe lining, which seals cracks from the inside without excavation. For older Spring Valley homes with galvanized supply lines, pipe rerouting is typically the more durable long-term solution because it removes the corroded galvanized line from beneath the slab entirely rather than leaving the remaining corroded pipe in place.",
+    category: "the-service",
   },
   {
     question:
       "Should I choose pipe rerouting or spot repair for a slab leak in an older Spring Valley home with galvanized pipes?",
     answer:
       "For older Spring Valley homes with galvanized supply lines that have been in place for 30 to 50 years, pipe rerouting is typically the more durable recommendation. When a galvanized line beneath the slab fails, the surrounding pipe shares the same corrosion history; a spot repair addresses the active leak but leaves the rest of the corroded system beneath the slab, where additional failures are likely. Pipe rerouting removes the galvanized line from beneath the foundation entirely and eliminates it as a source of future slab leaks. Red Carpet Plumbing will assess your specific situation and explain both options before any work begins.",
+    category: "the-service",
   },
   {
     question: "Does slab leak repair in Spring Valley require a permit?",
     answer:
-      "Slab leak repair involving concrete cutting and pipe repair or rerouting typically requires a permit. Spring Valley is an unincorporated community in Clark County, Nevada, so permits and inspections are handled through Clark County, not the City of Las Vegas. Red Carpet Plumbing holds NV License #0048585A and works within the applicable Clark County permit process for your address.",
+      "Slab leak repair involving concrete cutting and pipe repair or rerouting typically requires a permit. Spring Valley is an unincorporated community in Clark County, Nevada, so permits and inspections are handled through Clark County, not the City of Las Vegas. Red Carpet Plumbing holds NV License #048585A and works within the applicable Clark County permit process for your address.",
+    category: "trust",
   },
   {
     question: "Do you offer same-day slab leak repair service in Spring Valley?",
     answer:
       "Same-day slab leak repair service is available in Spring Valley, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "timing-process",
   },
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Spring Valley, Nevada, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. We use acoustic sensors, pressure testing, and thermal imaging to locate slab leaks precisely before any repair begins, and we explain all repair options before starting work. NV Contractor License #0048585A.";
+  "Red Carpet Plumbing provides non-invasive slab leak detection and repair throughout Spring Valley, Nevada, including the Desert Inn and West Sahara corridors and surrounding neighborhoods. We use acoustic sensors, pressure testing, and thermal imaging to locate slab leaks precisely before any repair begins, and we explain all repair options before starting work. NV Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed, #0048585A",
+  "NV Licensed, #048585A",
   "Non-Invasive Slab Leak Detection",
   "All Repair Options Explained",
   "Transparent Pricing, No Hidden Fees",
@@ -211,12 +220,11 @@ const WHY_CHOOSE = [
   "Non-invasive detection using acoustic sensors, pressure testing, and thermal imaging",
   "Honest repair option guidance that accounts for galvanized pipe condition, not a one-size-fits-all approach",
   // FLAG: VERIFY license number before publishing.
-  "Licensed plumbers, NV License #0048585A",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
-  // FLAG: VERIFY rating and review count before publishing.
-  "4.8-star rating across 76 Google reviews",
+  "4.8-star rating across 81 Google reviews",
 ];
 
 // ---------------------------------------------------------------------------
@@ -307,6 +315,14 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
+    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "81",
+      bestRating: "5",
+      worstRating: "1",
+    },
   },
   areaServed: {
     "@type": "Place",
@@ -338,18 +354,7 @@ const howToSchema = {
   })),
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: SV_SLAB_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = buildFaqPageSchema(SV_SLAB_FAQS);
 
 export default function SpringValleySlabLeakPage() {
   return (
@@ -684,33 +689,11 @@ export default function SpringValleySlabLeakPage() {
         </section>
 
         {/* SECTION 8: FAQ */}
-        <section className="bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
-            <div className="text-left">
-              <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-                Frequently Asked Questions
-                <br className="hidden sm:block" /> About Slab Leak Detection and
-                Repair in Spring Valley
-              </h2>
-            </div>
-            <div className="mt-12 space-y-4">
-              {SV_SLAB_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-2xl bg-brand-surface-alt p-6 shadow-sm ring-1 ring-brand-surface-alt open:border-l-4 open:border-brand-primary open:pl-4 sm:p-8"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-brand-dark sm:text-xl [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <FaqChevron />
-                  </summary>
-                  <p className="mt-4 text-base leading-7 text-brand-dark/80">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading={<>Frequently Asked Questions <br className="hidden sm:block" /> About Slab Leak Detection and Repair in Spring Valley</>}
+          faqs={SV_SLAB_FAQS}
+          surface="light"
+        />
 
         {/* SECTION 9: RELATED SERVICES */}
         <section className="bg-brand-surface-alt">
@@ -775,21 +758,6 @@ function CheckMark() {
       strokeWidth={2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-    </svg>
-  );
-}
-
-function FaqChevron() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 flex-none text-brand-muted transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
     </svg>
   );
 }

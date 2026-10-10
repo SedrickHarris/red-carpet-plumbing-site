@@ -15,7 +15,7 @@ Las Vegas, NV (Las Vegas Valley — Clark County)
 info@redcarpetplumbing.com
 
 ## Nevada Contractor License
-#0048585A — C-1 Plumbing and Heating
+#048585A — C-1 Plumbing and Heating
 
 ## Core Services (verified)
 Emergency Plumbing
@@ -67,11 +67,11 @@ Emergency plumbing requests
 
 ## Verified Business Claims
 Local, family-owned plumbing company
-Licensed plumbers (NV #0048585A)
+Licensed plumbers (NV #048585A)
 
 ## Claims Requiring Verification Before Publishing
 24/7 emergency availability
 Over 40 years serving Las Vegas
-4.8 stars, 76 Google reviews
+4.8 stars, 81 Google reviews
 Transparent pricing, no hidden fees
 Customer satisfaction guarantee

@@ -92,7 +92,7 @@ distinct elements containing 'test': 11
       visible breadcrumb = ["Home","Henderson Plumbing Services","Water Pipe Repair and Replacement in Henderson"]
       WebPage = {"name":"Water Pipe Repair and Replacement in Henderson, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/henderson/water-pipe-repair-replacement/","inLanguage":"en-US","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com/"}}
   [8] title="Water Pipe Repair and Replacement in Henderson, NV | Red Carpet Plumbing"
-      description="Water pipe repair and replacement in Henderson, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #0048585A. Call (702) 567-9172."
+      description="Water pipe repair and replacement in Henderson, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/henderson/water-pipe-repair-replacement/
       og:title="Water Pipe Repair and Replacement in Henderson, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/henderson/water-pipe-repair-replacement/ robots=index, follow
       hero image file referenced: true; alt present: false
@@ -157,7 +157,7 @@ distinct elements containing 'test': 11
       visible breadcrumb = ["Home","Henderson Plumbing Services","Toilet Repair and Installation in Henderson"]
       WebPage = {"name":"Toilet Repair and Installation in Henderson, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/henderson/toilet-repair-installation/","inLanguage":"en-US","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com/"}}
   [8] title="Toilet Repair and Installation in Henderson, NV | Red Carpet Plumbing"
-      description="Toilet repair and installation in Henderson, NV. Running toilets, base leaks, clogs, and replacements. NV #0048585A. Call (702) 567-9172."
+      description="Toilet repair and installation in Henderson, NV. Running toilets, base leaks, clogs, and replacements. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/henderson/toilet-repair-installation/
       og:title="Toilet Repair and Installation in Henderson, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/henderson/toilet-repair-installation/ robots=index, follow
       hero image file referenced: true; alt present: false
@@ -225,7 +225,7 @@ distinct elements containing 'test': 11
       visible breadcrumb = ["Home","Henderson Plumbing Services","Faucet and Sink Repair and Installation in Henderson"]
       WebPage = {"name":"Faucet and Sink Repair and Installation in Henderson, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/henderson/faucet-sink-repair-installation/","inLanguage":"en-US","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com/"}}
   [8] title="Faucet and Sink Repair and Installation in Henderson, NV | Red Carpet Plumbing"
-      description="Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. NV #0048585A. Call (702) 567-9172."
+      description="Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/henderson/faucet-sink-repair-installation/
       og:title="Faucet and Sink Repair and Installation in Henderson, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/henderson/faucet-sink-repair-installation/ robots=index, follow
       hero image file referenced: true; alt present: false
@@ -292,7 +292,7 @@ distinct elements containing 'test': 11
       visible breadcrumb = ["Home","Henderson Plumbing Services","Garbage Disposal Repair and Installation in Henderson"]
       WebPage = {"name":"Garbage Disposal Repair and Installation in Henderson, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/henderson/garbage-disposal-repair-installation/","inLanguage":"en-US","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com/"}}
   [8] title="Garbage Disposal Repair and Installation in Henderson, NV | Red Carpet Plumbing"
-      description="Garbage disposal repair and installation in Henderson, NV. Jams, leaks, humming, and replacements. NV #0048585A. Call (702) 567-9172."
+      description="Garbage disposal repair and installation in Henderson, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/henderson/garbage-disposal-repair-installation/
       og:title="Garbage Disposal Repair and Installation in Henderson, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/henderson/garbage-disposal-repair-installation/ robots=index, follow
       hero image file referenced: true; alt present: false
@@ -355,7 +355,7 @@ distinct elements containing 'test': 11
       visible breadcrumb = ["Home","Henderson Plumbing Services","Backflow Prevention Services in Henderson"]
       WebPage = {"name":"Backflow Prevention Services in Henderson, NV | Red Carpet Plumbing","url":"https://redcarpetplumbing.com/henderson/backflow-prevention/","inLanguage":"en-US","isPartOf":{"@type":"WebSite","name":"Red Carpet Plumbing","url":"https://redcarpetplumbing.com/"}}
   [8] title="Backflow Prevention Services in Henderson, NV | Red Carpet Plumbing"
-      description="Backflow preventer installation, repair, and replacement in Henderson, NV. Irrigation and commercial devices. NV #0048585A. Call (702) 567-9172."
+      description="Backflow preventer installation, repair, and replacement in Henderson, NV. Irrigation and commercial devices. NV #048585A. Call (702) 567-9172."
       canonical=https://redcarpetplumbing.com/henderson/backflow-prevention/
       og:title="Backflow Prevention Services in Henderson, NV | Red Carpet Plumbing" og:description matches desc: true og:url=https://redcarpetplumbing.com/henderson/backflow-prevention/ robots=index, follow
       hero image file referenced: true; alt present: false

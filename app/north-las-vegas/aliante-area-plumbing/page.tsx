@@ -18,7 +18,7 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Aliante, North Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Plumbing services in Aliante, North Las Vegas. Emergency plumbing, water heater repair, drain cleaning, leak detection. NV #0048585A. (702) 567-9172.",
+    "Plumbing services in Aliante, North Las Vegas. Emergency plumbing, water heater repair, drain cleaning, leak detection. NV #048585A. (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/aliante-area-plumbing/",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title:
       "Plumbing Services in the Aliante Area, North Las Vegas | Red Carpet Plumbing",
     description:
-      "Plumbing services in Aliante, North Las Vegas. Emergency plumbing, water heater repair, drain cleaning, leak detection. NV #0048585A. (702) 567-9172.",
+      "Plumbing services in Aliante, North Las Vegas. Emergency plumbing, water heater repair, drain cleaning, leak detection. NV #048585A. (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -72,7 +72,7 @@ const ALIANTE_FAQS: FaqItem[] = [
     question:
       "Is Red Carpet Plumbing licensed to work in the Aliante area of North Las Vegas?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #0048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including North Las Vegas and the Aliante area.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including North Las Vegas and the Aliante area.",
     category: "trust",
   },
   {
@@ -224,8 +224,8 @@ const ALIANTE_AREAS = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #0048585A, C-1 Plumbing and Heating",
-  "4.8-star rating across 76 Google reviews",
+  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
 ];
@@ -233,7 +233,7 @@ const TRUST_ITEMS = [
 const ALIANTE_CONTEXT = [
   {
     title: "What Is the Aliante Area?",
-    body: "Aliante is a large master-planned community in the northwest portion of North Las Vegas, Nevada. Development began in the late 1990s and continued through approximately 2010, with the majority of residential construction occurring between 2000 and 2008. The community features planned neighborhoods organized around the Aliante Nature Discovery Park, a 40-acre nature park that serves as the community's central amenity. Aliante is within North Las Vegas city limits and is served by North Las Vegas municipal utilities. Red Carpet Plumbing serves the Aliante community and surrounding northwest North Las Vegas neighborhoods, with Nevada Contractor License #0048585A covering plumbing work throughout North Las Vegas including Aliante.",
+    body: "Aliante is a large master-planned community in the northwest portion of North Las Vegas, Nevada. Development began in the late 1990s and continued through approximately 2010, with the majority of residential construction occurring between 2000 and 2008. The community features planned neighborhoods organized around the Aliante Nature Discovery Park, a 40-acre nature park that serves as the community's central amenity. Aliante is within North Las Vegas city limits and is served by North Las Vegas municipal utilities. Red Carpet Plumbing serves the Aliante community and surrounding northwest North Las Vegas neighborhoods, with Nevada Contractor License #048585A covering plumbing work throughout North Las Vegas including Aliante.",
   },
   {
     title: "Aliante Homes and the First Major Service Cycle",
@@ -283,10 +283,11 @@ const plumberSchema = {
       closes: "16:30",
     },
   ],
+  // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
-    reviewCount: "76",
+    reviewCount: "81",
     bestRating: "5",
     worstRating: "1",
   },
@@ -294,7 +295,7 @@ const plumberSchema = {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
     name: "Nevada C-1 Plumbing and Heating Contractor License",
-    identifier: "0048585A",
+    identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
       name: "State of Nevada Contractors Board",
@@ -313,7 +314,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Plumbing Services in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed plumbing services in the Aliante area of North Las Vegas including water heater repair, drain cleaning, and leak detection. NV Licensed #0048585A.",
+    "Red Carpet Plumbing provides licensed plumbing services in the Aliante area of North Las Vegas including water heater repair, drain cleaning, and leak detection. NV Licensed #048585A.",
   url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area-plumbing/",
   isPartOf: {
     "@type": "WebSite",
@@ -356,8 +357,8 @@ const breadcrumbSchema = {
 const faqSchema = buildFaqPageSchema(ALIANTE_FAQS);
 
 const TRUST_STRIP_ITEMS = [
-"4.8 stars, 76 Google reviews",
-"NV Licensed #0048585A",
+"4.8 stars, 81 Google reviews",
+"NV Licensed #048585A",
 "Over 40 years serving Las Vegas Valley",
 "Transparent pricing, no hidden fees",
 ];
@@ -391,7 +392,7 @@ export default function AlianteAreaPlumbingPage() {
               <br /> in the Aliante Area of North Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides licensed plumbing services throughout the Aliante master-planned community and surrounding North Las Vegas neighborhoods. Most Aliante homes were built between 2000 and 2008 and are entering the first major plumbing service cycle under Las Vegas Valley hard water conditions. NV Contractor License #0048585A."
+          subheading="Red Carpet Plumbing provides licensed plumbing services throughout the Aliante master-planned community and surrounding North Las Vegas neighborhoods. Most Aliante homes were built between 2000 and 2008 and are entering the first major plumbing service cycle under Las Vegas Valley hard water conditions. NV Contractor License #048585A."
           trustItems={TRUST_STRIP_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -422,7 +423,7 @@ export default function AlianteAreaPlumbingPage() {
                 community. Aliante is a master-planned community within the City
                 of North Las Vegas, and Red Carpet Plumbing has been serving
                 homes throughout North Las Vegas, including Aliante, for over 40
-                years. We hold Nevada Contractor License #0048585A under the C-1
+                years. We hold Nevada Contractor License #048585A under the C-1
                 Plumbing and Heating classification. For full North Las Vegas area
                 plumbing coverage, visit our{" "}
                 <Link
@@ -611,9 +612,9 @@ export default function AlianteAreaPlumbingPage() {
                 <li key={item} className="flex items-start gap-3">
                   <CheckMark />
                   <span className="text-base leading-7 text-brand-dark/85">
-                    {item === "4.8-star rating across 76 Google reviews" ? (
+                    {item === "4.8-star rating across 81 Google reviews" ? (
                       <>
-                        4.8-star rating across 76 Google reviews.{" "}
+                        4.8-star rating across 81 Google reviews.{" "}
                         <a
                           href="https://share.google/oY5LcfC0lhWJXVjJj"
                           target="_blank"
