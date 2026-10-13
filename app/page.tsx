@@ -254,14 +254,7 @@ const plumberSchema = {
     bestRating: "5",
     worstRating: "1",
   },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "07:30",
-      closes: "16:30",
-    },
-  ],
+  // Hours omitted from schema on this page because they are not shown in visible text. Contact and About show office hours.
   sameAs: [
     "https://share.google/oY5LcfC0lhWJXVjJj",
     "https://www.facebook.com/redcarpetplumbing/",
