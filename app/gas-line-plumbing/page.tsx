@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { OG_IMAGES } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
     title: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
     description:
       "Licensed gas line repair, installation, and inspection throughout Las Vegas and the Las Vegas Valley. Call (702) 567-9172.",
+    images: OG_IMAGES,
   },
 };
 

@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { OG_IMAGES } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title:
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
       "Garbage Disposal Repair and Installation in Las Vegas, NV",
     description:
       "Garbage disposal repair, replacement, and installation for Las Vegas kitchens. Jammed, leaking, or not working. Licensed plumbers. Call (702) 567-9172.",
+    images: OG_IMAGES,
   },
 };
 

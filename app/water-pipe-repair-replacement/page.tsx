@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { OG_IMAGES } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title:
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
       "Water Pipe Repair and Replacement in Las Vegas, NV",
     description:
       "Water supply pipe repair and replacement in Las Vegas and the Valley. Burst pipes, pinhole leaks, galvanized and polybutylene pipes. Call (702) 567-9172.",
+    images: OG_IMAGES,
   },
 };
 

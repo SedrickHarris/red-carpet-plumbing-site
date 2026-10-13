@@ -14,6 +14,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { OG_IMAGES } from "@/lib/social-image";
 
 // FLAG: VERIFY before publishing — "Over 40 years" trust claims are source-site claims shown on this page.
 // License #048585A, permit handling, and transparent-pricing are also
@@ -54,6 +55,7 @@ export const metadata: Metadata = {
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
     type: "website",
+    images: OG_IMAGES,
   },
   robots: { index: true, follow: true },
 };

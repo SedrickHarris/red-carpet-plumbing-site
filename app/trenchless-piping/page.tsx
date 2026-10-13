@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { OG_IMAGES } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title:
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
       "Trenchless Piping Services in Las Vegas, NV",
     description:
       "Trenchless pipe repair and replacement for Las Vegas homes and businesses. CIPP lining and pipe bursting without major excavation. Call (702) 567-9172.",
+    images: OG_IMAGES,
   },
 };
 

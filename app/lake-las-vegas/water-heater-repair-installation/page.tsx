@@ -12,6 +12,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { OG_IMAGES } from "@/lib/social-image";
 
 // FLAG: VERIFY before publishing. "Emergency water heater service available"
 // and "transparent pricing, no hidden fees" are source-site claims shown on
@@ -50,6 +51,7 @@ export const metadata: Metadata = {
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
     type: "website",
+    images: OG_IMAGES,
   },
   robots: { index: true, follow: true },
 };

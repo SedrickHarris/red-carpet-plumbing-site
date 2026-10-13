@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { OG_IMAGES } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title:
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
     url: "https://redcarpetplumbing.com/slab-leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 
