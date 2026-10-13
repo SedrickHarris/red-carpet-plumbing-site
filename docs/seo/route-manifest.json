@@ -92,7 +92,7 @@
       "sourceFile": "app/backflow-prevention/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Backflow Prevention Services in Las Vegas, NV | Red Carpet Plumbing",
+        "Backflow Prevention Services in Las Vegas, NV",
         "What Is Backflow?",
         "When Is a Backflow Preventer Required?",
         "Annual Testing Requirement in Las Vegas",
@@ -262,7 +262,7 @@
       "sourceFile": "app/boulder-city/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in Boulder City, NV | Red Carpet Plumbing"
+        "Leak Detection and Repair in Boulder City, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -304,7 +304,7 @@
       "sourceFile": "app/boulder-city/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in Boulder City, NV | Red Carpet Plumbing"
+        "Water Heater Repair and Installation in Boulder City, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -682,7 +682,7 @@
       "sourceFile": "app/enterprise/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing"
+        "Leak Detection and Repair in Enterprise, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -810,7 +810,7 @@
       "sourceFile": "app/enterprise/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Slab Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing"
+        "Slab Leak Detection and Repair in Enterprise, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -852,7 +852,7 @@
       "sourceFile": "app/enterprise/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in Enterprise, NV | Red Carpet Plumbing"
+        "Water Heater Repair and Installation in Enterprise, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -894,7 +894,7 @@
       "sourceFile": "app/faucet-sink-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+        "Faucet and Sink Repair and Installation in Las Vegas, NV",
         "Dripping or Leaking Faucet",
         "Low Water Pressure at the Faucet",
         "Faucet Handles Stiff or Difficult to Turn",
@@ -940,7 +940,7 @@
       "sourceFile": "app/garbage-disposal-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+        "Garbage Disposal Repair and Installation in Las Vegas, NV",
         "Disposal Hums But Will Not Spin",
         "Disposal Will Not Turn On",
         "Disposal Is Leaking",
@@ -1081,7 +1081,7 @@
       "sourceFile": "app/green-valley/drain-cleaning/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Drain Cleaning in Green Valley, Henderson, NV | Red Carpet Plumbing"
+        "Drain Cleaning in Green Valley, NV | Red Carpet Plumbing"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -1121,7 +1121,7 @@
       "sourceFile": "app/green-valley/emergency-plumbing/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Emergency Plumbing in Green Valley, Henderson, NV | Red Carpet Plumbing",
+        "Emergency Plumbing in Green Valley, NV | Red Carpet Plumbing",
         "Slab Leak Detection and Repair in Green Valley",
         "Leak Detection and Repair in Green Valley",
         "Water Heater Repair and Installation in Green Valley",
@@ -1166,7 +1166,7 @@
       "sourceFile": "app/green-valley/faucet-sink-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Faucet and Sink Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
+        "Faucet and Sink Repair and Installation in Green Valley, NV",
         "Hard Water Mineral Buildup",
         "Aging Fixtures and Supply Lines in Original Green Valley Neighborhoods",
         "Drain and P-Trap Deterioration"
@@ -1212,7 +1212,7 @@
       "sourceFile": "app/green-valley/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in Green Valley, Henderson, NV | Red Carpet Plumbing",
+        "Leak Detection and Repair in Green Valley, NV",
         "Acoustic Electronic Detection",
         "Pressure Testing",
         "Thermal Imaging",
@@ -1258,7 +1258,7 @@
       "sourceFile": "app/green-valley/repiping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Repiping Services in Green Valley, Henderson, NV | Red Carpet Plumbing",
+        "Repiping Services in Green Valley, NV | Red Carpet Plumbing",
         "Polybutylene and Aging Copper in Green Valley",
         "Kitec Pipe in Green Valley Ranch and Henderson Condominiums (Late 1990s to 2005)",
         "Hard Water Mineral Corrosion Across All Green Valley Homes",
@@ -1310,7 +1310,7 @@
       "sourceFile": "app/green-valley/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Slab Leak Detection and Repair in Green Valley, Henderson, NV | Red Carpet Plumbing",
+        "Slab Leak Detection and Repair in Green Valley, NV",
         "Acoustic Electronic Detection",
         "Pressure Testing",
         "Thermal Imaging",
@@ -1358,7 +1358,7 @@
       "sourceFile": "app/green-valley/toilet-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Toilet Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
+        "Toilet Repair and Installation in Green Valley, NV",
         "Hard Water Mineral Buildup",
         "Aging Fixtures in Original Green Valley Neighborhoods",
         "Wax Ring Wear and Slab Foundation Movement",
@@ -1406,7 +1406,7 @@
       "sourceFile": "app/green-valley/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing"
+        "Water Heater Repair and Installation in Green Valley, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -1496,7 +1496,7 @@
       "sourceFile": "app/henderson/backflow-prevention/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Backflow Prevention Services in Henderson, NV | Red Carpet Plumbing",
+        "Backflow Prevention Services in Henderson, NV",
         "Irrigation Systems and Cross-Connection Risk",
         "Commercial, Multi-Unit, and Fire Suppression Connections",
         "Notices, Testing, and Failed Devices",
@@ -1665,7 +1665,7 @@
       "sourceFile": "app/henderson/faucet-sink-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Faucet and Sink Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+        "Faucet and Sink Repair and Installation in Henderson, NV",
         "Lake Mead Hard Water and Cartridge Wear",
         "Remodeled and Newer Kitchens and Baths",
         "Aging Fixtures and Under-Sink Valves in Original Green Valley Homes",
@@ -1705,7 +1705,7 @@
       "sourceFile": "app/henderson/garbage-disposal-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Garbage Disposal Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+        "Garbage Disposal Repair and Installation in Henderson, NV",
         "Lake Mead Hard Water Scale on Internal Parts",
         "Grease and Food Waste in the Discharge Line",
         "Aging Units and Kitchen Remodels",
@@ -1793,7 +1793,7 @@
       "sourceFile": "app/henderson/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in Henderson, NV | Red Carpet Plumbing",
+        "Leak Detection and Repair in Henderson, NV",
         "Acoustic Electronic Detection",
         "Pressure Testing",
         "Thermal Imaging",
@@ -1942,7 +1942,7 @@
       "sourceFile": "app/henderson/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Slab Leak Detection and Repair in Henderson, NV | Red Carpet Plumbing",
+        "Slab Leak Detection and Repair in Henderson, NV",
         "Acoustic Electronic Detection",
         "Pressure Testing",
         "Thermal Imaging",
@@ -1993,7 +1993,7 @@
       "sourceFile": "app/henderson/toilet-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Toilet Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+        "Toilet Repair and Installation in Henderson, NV",
         "Lake Mead Hard Water Wear on Toilet Parts",
         "Original Green Valley Homes and Newer Communities",
         "Wax Ring Wear and Soil Movement",
@@ -2033,7 +2033,7 @@
       "sourceFile": "app/henderson/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in Henderson, NV | Red Carpet Plumbing"
+        "Water Heater Repair and Installation in Henderson, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -2073,7 +2073,7 @@
       "sourceFile": "app/henderson/water-pipe-repair-replacement/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Pipe Repair and Replacement in Henderson, NV | Red Carpet Plumbing",
+        "Water Pipe Repair and Replacement in Henderson, NV",
         "Original Green Valley Homes Are Now 30 to 40 Years Old",
         "Lake Mead Hard Water and Soil Movement",
         "Newer Henderson Communities",
@@ -2113,7 +2113,7 @@
       "sourceFile": "app/lake-las-vegas-plumbing-services/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Plumbing Services in Lake Las Vegas, NV | Red Carpet Plumbing",
+        "Plumbing Services in Lake Las Vegas, NV",
         "Sewer Line Services",
         "Repiping",
         "Water Heater Repair and Installation",
@@ -2162,7 +2162,7 @@
       "sourceFile": "app/lake-las-vegas/drain-cleaning/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Drain Cleaning in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+        "Drain Cleaning in Lake Las Vegas, NV | Red Carpet Plumbing",
         "Hard Water Mineral Scale",
         "Kitchen Grease and Food Debris",
         "Bathroom Soap Scum and Hair",
@@ -2208,7 +2208,7 @@
       "sourceFile": "app/lake-las-vegas/emergency-plumbing/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Emergency Plumbing in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+        "Emergency Plumbing in Lake Las Vegas, NV",
         "Drain Cleaning",
         "Slab Leak Detection and Repair",
         "Water Heater Repair and Installation",
@@ -2251,7 +2251,7 @@
       "sourceFile": "app/lake-las-vegas/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+        "Leak Detection and Repair in Lake Las Vegas, NV",
         "Acoustic Electronic Detection",
         "Pressure Testing",
         "Thermal Imaging",
@@ -2299,7 +2299,7 @@
       "sourceFile": "app/lake-las-vegas/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Slab Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+        "Slab Leak Detection and Repair in Lake Las Vegas, NV",
         "Acoustic Electronic Detection",
         "Pressure Testing",
         "Thermal Imaging",
@@ -2347,7 +2347,7 @@
       "sourceFile": "app/lake-las-vegas/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+        "Water Heater Repair and Installation in Lake Las Vegas, NV",
         "Emergency Plumbing",
         "Slab Leak Detection and Repair",
         "Drain Cleaning",
@@ -2437,7 +2437,7 @@
       "sourceFile": "app/las-vegas/backflow-prevention/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Backflow Prevention Services in Las Vegas, NV | Red Carpet Plumbing",
+        "Backflow Prevention Services in Las Vegas, NV",
         "What is backflow and why does it matter?",
         "When is a backflow preventer required in Las Vegas?",
         "Annual testing requirements in Las Vegas",
@@ -2613,7 +2613,7 @@
       "sourceFile": "app/las-vegas/faucet-sink-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+        "Faucet and Sink Repair and Installation in Las Vegas, NV",
         "Dripping or leaking faucet",
         "Low water pressure at the faucet",
         "Faucet handles stiff or difficult to turn",
@@ -2662,7 +2662,7 @@
       "sourceFile": "app/las-vegas/garbage-disposal-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+        "Garbage Disposal Repair and Installation in Las Vegas, NV",
         "Disposal hums but will not spin",
         "Disposal will not turn on",
         "Disposal is leaking",
@@ -2761,7 +2761,7 @@
       "sourceFile": "app/las-vegas/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing"
+        "Leak Detection and Repair in Las Vegas, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -2894,7 +2894,7 @@
       "sourceFile": "app/las-vegas/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Slab Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+        "Slab Leak Detection and Repair in Las Vegas, NV",
         "Acoustic Electronic Detection",
         "Pressure Testing",
         "Thermal Imaging",
@@ -2946,7 +2946,7 @@
       "sourceFile": "app/las-vegas/toilet-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+        "Toilet Repair and Installation in Las Vegas, NV",
         "Toilet running constantly",
         "Toilet leaking at the base",
         "Frequent clogs or weak flush",
@@ -2995,7 +2995,7 @@
       "sourceFile": "app/las-vegas/video-camera-plumbing-inspections/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Video Camera Plumbing Inspections in Las Vegas, NV | Red Carpet Plumbing",
+        "Video Camera Plumbing Inspections in Las Vegas, NV",
         "Recurring drain clogs that will not stay cleared",
         "Before buying a home in Las Vegas",
         "Confirm a line is clear after drain cleaning",
@@ -3044,7 +3044,7 @@
       "sourceFile": "app/las-vegas/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing"
+        "Water Heater Repair and Installation in Las Vegas, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -3082,7 +3082,7 @@
       "sourceFile": "app/las-vegas/water-pipe-repair-replacement/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
+        "Water Pipe Repair and Replacement in Las Vegas, NV",
         "Many Las Vegas Homes Are Decades Old",
         "Lake Mead Hard Water and Soil Movement",
         "Desert Heat on Exposed Plumbing",
@@ -3122,7 +3122,7 @@
       "sourceFile": "app/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+        "Leak Detection and Repair in Las Vegas, NV",
         "Electronic Leak Detection",
         "Wall and Ceiling Leak Detection",
         "Slab Leak Detection",
@@ -3168,7 +3168,7 @@
       "sourceFile": "app/north-las-vegas-plumbing-services/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Plumbing Services in North Las Vegas, NV | Red Carpet Plumbing",
+        "Plumbing Services in North Las Vegas, NV",
         "Sewer Line Services",
         "Repiping",
         "Water Heater Repair and Installation",
@@ -3216,8 +3216,7 @@
       "sourceFile": "app/north-las-vegas/aliante-area-plumbing/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Plumbing Services in Aliante, North Las Vegas, NV | Red Carpet Plumbing",
-        "Plumbing Services in the Aliante Area, North Las Vegas | Red Carpet Plumbing",
+        "Plumbing Services in Aliante, North Las Vegas",
         "Sewer Line Services",
         "Repiping",
         "Water Heater Repair and Installation",
@@ -3225,7 +3224,8 @@
         "Emergency Plumbing",
         "Drain Cleaning",
         "Leak Detection and Repair",
-        "Water Pipe Repair and Replacement"
+        "Water Pipe Repair and Replacement",
+        "Gas Line Plumbing"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -3265,8 +3265,7 @@
       "sourceFile": "app/north-las-vegas/aliante-area/drain-cleaning/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Drain Cleaning in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
-        "Drain Cleaning in the Aliante Area of North Las Vegas, NV",
+        "Drain Cleaning in Aliante, North Las Vegas",
         "Hard Water Mineral Buildup Inside Drain Lines",
         "Copper Pipe at the First Major Service Cycle",
         "Grease and Hair as Recurring Contributors",
@@ -3315,8 +3314,7 @@
       "sourceFile": "app/north-las-vegas/aliante-area/emergency-plumbing/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Emergency Plumbing in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
-        "Emergency Plumbing in the Aliante Area of North Las Vegas, NV",
+        "Emergency Plumbing in Aliante, North Las Vegas",
         "Copper Pipe and Hard Water Corrosion",
         "Slab Foundations and Caliche Soil Movement",
         "Water Heater Sediment Buildup",
@@ -3364,7 +3362,7 @@
       "sourceFile": "app/north-las-vegas/aliante-area/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
+        "Leak Detection and Repair in Aliante, North Las Vegas",
         "Hard Water Mineral Corrosion in First-Service-Cycle Copper",
         "Pinhole Leaks as an Early Warning Signal",
         "Caliche Soil Movement and Slab Foundation Stress",
@@ -3417,7 +3415,7 @@
       "sourceFile": "app/north-las-vegas/aliante-area/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Slab Leak Detection and Repair in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
+        "Slab Leak Detection and Repair in Aliante, North Las Vegas",
         "Acoustic Sensors",
         "Thermal Imaging",
         "Pressure Testing",
@@ -3470,8 +3468,7 @@
       "sourceFile": "app/north-las-vegas/aliante-area/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
-        "Water Heater Repair and Installation in the Aliante Area of North Las Vegas, NV",
+        "Water Heater Repair and Installation in Aliante, NV",
         "Original Units at or Past First Replacement Cycle",
         "Hard Water Mineral Buildup and Sediment",
         "Accelerated Anode Rod Depletion",
@@ -3520,7 +3517,7 @@
       "sourceFile": "app/north-las-vegas/commercial-plumbing/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Commercial Plumbing in North Las Vegas, NV | Red Carpet Plumbing"
+        "Commercial Plumbing in North Las Vegas, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -3601,7 +3598,7 @@
       "sourceFile": "app/north-las-vegas/emergency-plumbing/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Emergency Plumbing in North Las Vegas, NV | Red Carpet Plumbing"
+        "Emergency Plumbing in North Las Vegas, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -3640,7 +3637,7 @@
       "sourceFile": "app/north-las-vegas/garbage-disposal-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Garbage Disposal Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+        "Garbage Disposal Repair and Installation in North Las Vegas",
         "Hard Water Scale on Internal Parts",
         "Grease and Food Waste in the Discharge Line",
         "Two Housing Vintages, Two Wear Patterns",
@@ -3681,7 +3678,7 @@
       "sourceFile": "app/north-las-vegas/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in North Las Vegas, NV | Red Carpet Plumbing",
+        "Leak Detection and Repair in North Las Vegas, NV",
         "Acoustic Electronic Detection",
         "Pressure Testing",
         "Thermal Imaging",
@@ -3729,7 +3726,7 @@
       "sourceFile": "app/north-las-vegas/repiping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Repiping in North Las Vegas, NV | Red Carpet Plumbing"
+        "Repiping Services in North Las Vegas, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -3772,7 +3769,7 @@
       "sourceFile": "app/north-las-vegas/sewer-line-services/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Sewer Line Services in North Las Vegas, NV | Red Carpet Plumbing"
+        "Sewer Line Services in North Las Vegas, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -3815,7 +3812,7 @@
       "sourceFile": "app/north-las-vegas/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Slab Leak Detection and Repair in North Las Vegas, NV | Red Carpet Plumbing",
+        "Slab Leak Detection and Repair in North Las Vegas, NV",
         "Galvanized Steel Pipe in Older Central North Las Vegas",
         "Aliante and Mid-2000s Homes Entering Their First Service Cycle",
         "Hard Water Mineral Corrosion Throughout North Las Vegas",
@@ -3865,7 +3862,7 @@
       "sourceFile": "app/north-las-vegas/toilet-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Toilet Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+        "Toilet Repair and Installation in North Las Vegas, NV",
         "Hard Water Mineral Buildup",
         "Two Housing Vintages, Two Wear Patterns",
         "Wax Ring Wear and Caliche Soil Movement",
@@ -3912,7 +3909,7 @@
       "sourceFile": "app/north-las-vegas/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing"
+        "Water Heater Repair and Installation in North Las Vegas, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -3951,7 +3948,7 @@
       "sourceFile": "app/north-las-vegas/water-pipe-repair-replacement/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Pipe Repair and Replacement in North Las Vegas, NV | Red Carpet Plumbing"
+        "Water Pipe Repair and Replacement in North Las Vegas, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -4041,7 +4038,7 @@
       "sourceFile": "app/paradise/backflow-prevention/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Backflow Prevention Services in Paradise, NV | Red Carpet Plumbing",
+        "Backflow Prevention Services in Paradise, NV",
         "Commercial, Multi-Unit, and Fire Suppression Connections",
         "Irrigation Systems and Cross-Connection Risk",
         "Notices, Testing, and Failed Devices",
@@ -4264,7 +4261,7 @@
       "sourceFile": "app/paradise/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in Paradise, NV | Red Carpet Plumbing"
+        "Leak Detection and Repair in Paradise, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -4352,7 +4349,7 @@
       "sourceFile": "app/paradise/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in Paradise, NV | Red Carpet Plumbing"
+        "Water Heater Repair and Installation in Paradise, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -4398,7 +4395,7 @@
       "sourceFile": "app/plumbing-fixture-repair-replacement-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Plumbing Fixture Repair, Replacement and Installation in Las Vegas, NV | Red Carpet Plumbing",
+        "Plumbing Fixture Repair and Installation in Las Vegas, NV",
         "Low Water Pressure at Shower or Faucet",
         "Dripping or Leaking Fixture",
         "Temperature Instability in the Shower",
@@ -4544,7 +4541,7 @@
       "sourceFile": "app/service-areas/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Plumbing Service Areas in Las Vegas Valley | Red Carpet Plumbing"
+        "Plumbing Service Areas in Las Vegas Valley"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -4622,7 +4619,7 @@
       "sourceFile": "app/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Slab Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+        "Slab Leak Detection and Repair in Las Vegas, NV",
         "Slab Leak Detection",
         "Spot Repair Through Concrete",
         "Pipe Rerouting",
@@ -4716,7 +4713,7 @@
       "sourceFile": "app/spring-valley/commercial-plumbing/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Commercial Plumbing in Spring Valley, NV | Red Carpet Plumbing",
+        "Commercial Plumbing in Spring Valley, NV",
         "Business Owners and Operators",
         "Restaurants and Food Service Operations",
         "Property Managers and Multi-Unit Buildings",
@@ -4809,7 +4806,7 @@
       "sourceFile": "app/spring-valley/emergency-plumbing/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Emergency Plumbing in Spring Valley, NV | Red Carpet Plumbing"
+        "Emergency Plumbing in Spring Valley, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -4853,7 +4850,7 @@
       "sourceFile": "app/spring-valley/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in Spring Valley, NV | Red Carpet Plumbing"
+        "Leak Detection and Repair in Spring Valley, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -4946,7 +4943,7 @@
       "sourceFile": "app/spring-valley/sewer-line-services/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Sewer Line Services in Spring Valley, NV | Red Carpet Plumbing",
+        "Sewer Line Services in Spring Valley, NV",
         "Established Corridors With 30 to 50-Year-Old Plumbing Systems",
         "Caliche, Expansive Soil, and Pipe Belly",
         "Desert Tree Roots Near Aging Joints",
@@ -4987,7 +4984,7 @@
       "sourceFile": "app/spring-valley/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Slab Leak Detection and Repair in Spring Valley, NV | Red Carpet Plumbing"
+        "Slab Leak Detection and Repair in Spring Valley, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -5034,7 +5031,7 @@
       "sourceFile": "app/spring-valley/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in Spring Valley, NV | Red Carpet Plumbing"
+        "Water Heater Repair and Installation in Spring Valley, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -5213,7 +5210,7 @@
       "sourceFile": "app/summerlin/faucet-sink-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Faucet and Sink Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+        "Faucet and Sink Repair and Installation in Summerlin, NV",
         "Hard Water and Cartridge Wear",
         "Premium and Specialty Fixtures in Newer Homes",
         "Aging Fixtures and Under-Sink Valves in Original Villages",
@@ -5254,7 +5251,7 @@
       "sourceFile": "app/summerlin/garbage-disposal-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Garbage Disposal Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+        "Garbage Disposal Repair and Installation in Summerlin, NV",
         "Hard Water Scale on Internal Parts",
         "Grease and Food Waste in the Discharge Line",
         "Aging Units and Kitchen Upgrades",
@@ -5336,7 +5333,7 @@
       "sourceFile": "app/summerlin/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in Summerlin, NV | Red Carpet Plumbing"
+        "Leak Detection and Repair in Summerlin, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -5463,7 +5460,7 @@
       "sourceFile": "app/summerlin/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Slab Leak Detection and Repair in Summerlin, NV | Red Carpet Plumbing"
+        "Slab Leak Detection and Repair in Summerlin, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -5505,7 +5502,7 @@
       "sourceFile": "app/summerlin/toilet-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Toilet Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+        "Toilet Repair and Installation in Summerlin, NV",
         "Hard Water Wear on Toilet Parts",
         "Older Villages and Newer Homes Age Differently",
         "Wax Ring Wear and Soil Movement",
@@ -5546,7 +5543,7 @@
       "sourceFile": "app/summerlin/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in Summerlin, NV | Red Carpet Plumbing"
+        "Water Heater Repair and Installation in Summerlin, NV"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -5587,7 +5584,7 @@
       "sourceFile": "app/summerlin/water-pipe-repair-replacement/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Pipe Repair and Replacement in Summerlin, NV | Red Carpet Plumbing",
+        "Water Pipe Repair and Replacement in Summerlin, NV",
         "Original Villages Are Now 25 to 35 Years Old",
         "Hard Water and Soil Movement",
         "Newer Summerlin South Homes",
@@ -5661,7 +5658,7 @@
       "sourceFile": "app/toilet-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+        "Toilet Repair and Installation in Las Vegas, NV",
         "Toilet Running Constantly",
         "Toilet Leaking at the Base",
         "Frequent Clogs That Won",
@@ -5707,7 +5704,7 @@
       "sourceFile": "app/trenchless-piping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Trenchless Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+        "Trenchless Piping Services in Las Vegas, NV",
         "Recurring Sewer Backups After Repeated Cleaning",
         "Cracked, Corroded, or Root-Intruded Sewer Lines",
         "Pipe Replacement Without Digging Up Landscaping",
@@ -5752,7 +5749,7 @@
       "sourceFile": "app/video-camera-plumbing-inspections/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Video Camera Plumbing Inspections in Las Vegas, NV | Red Carpet Plumbing",
+        "Video Camera Plumbing Inspections in Las Vegas, NV",
         "Recurring Drain Clogs That Won",
         "Before Buying a Home",
         "Confirm a Line Is Clear After Drain Cleaning",
@@ -5798,7 +5795,7 @@
       "sourceFile": "app/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+        "Water Heater Repair and Installation in Las Vegas, NV",
         "Water Heater Repair",
         "Water Heater Replacement",
         "Tankless Water Heater Installation",
@@ -5844,7 +5841,7 @@
       "sourceFile": "app/water-meter-pressure-regulator-services/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Meter and Pressure Regulator Services in Las Vegas, NV | Red Carpet Plumbing",
+        "Water Meter and Pressure Regulator Services in Las Vegas, NV",
         "Fluctuating or Erratic Water Pressure",
         "Banging or Knocking Pipes (Water Hammer)",
         "Consistently High Water Pressure Throughout the Home",
@@ -5890,7 +5887,7 @@
       "sourceFile": "app/water-pipe-repair-replacement/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
+        "Water Pipe Repair and Replacement in Las Vegas, NV",
         "Unexplained Drop in Water Pressure",
         "Discolored or Rust-Tinged Water",
         "Sound of Running Water When Nothing Is On",
