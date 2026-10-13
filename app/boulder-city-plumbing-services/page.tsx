@@ -70,7 +70,7 @@ const BOULDER_CITY_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed to work in Boulder City, NV?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Boulder City.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Boulder City.",
     category: "trust",
   },
   {
@@ -212,7 +212,7 @@ const BOULDER_CITY_AREAS = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
@@ -229,7 +229,7 @@ const BOULDER_CITY_CONTEXT = [
   },
   {
     title: "A Smaller Market with Distinct Service Needs",
-    body: "Boulder City has a smaller population than other Las Vegas Valley communities, and as an incorporated city with its own building department, it operates its own permitting requirements. Plumbing contractors must be licensed under Nevada's C-1 Plumbing and Heating classification to work in Boulder City, and permits are required for most significant plumbing work. Red Carpet Plumbing holds Nevada Contractor License #048585A and has been serving the Las Vegas Valley, including Boulder City, for over 40 years.",
+    body: "Boulder City has a smaller population than other Las Vegas Valley communities, and as an incorporated city with its own building department, it operates its own permitting requirements. Plumbing work in Boulder City must be performed by a licensed contractor, and permits are required for most significant plumbing work. Red Carpet Plumbing holds Nevada Contractor License #048585A and has been serving the Las Vegas Valley, including Boulder City, for over 40 years.",
   },
 ];
 
@@ -278,7 +278,7 @@ const plumberSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    name: "Nevada Contractor License",
     identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
@@ -398,8 +398,7 @@ export default function BoulderCityPlumbingServicesPage() {
                 Las Vegas region, and plumbing service there requires
                 understanding of aging infrastructure and the hard water
                 conditions of the Lake Mead supply. We hold Nevada Contractor
-                License #048585A under the C-1 Plumbing and Heating
-                classification and have been serving the Las Vegas Valley,
+                License #048585A and have been serving the Las Vegas Valley,
                 including Boulder City, for over 40 years.
               </p>
             </div>

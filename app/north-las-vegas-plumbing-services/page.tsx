@@ -79,7 +79,7 @@ const NORTH_LAS_VEGAS_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed to work in North Las Vegas, NV?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including North Las Vegas.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including North Las Vegas.",
     category: "trust",
   },
   {
@@ -223,7 +223,7 @@ const NORTH_LAS_VEGAS_AREAS = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
@@ -240,7 +240,7 @@ const NORTH_LAS_VEGAS_CONTEXT = [
   },
   {
     title: "Commercial and Industrial Plumbing in North Las Vegas",
-    body: "North Las Vegas has a significant industrial and commercial base along the Interstate 15 corridor, Craig Road, Cheyenne Avenue, and the Losee Road area. Warehouses, distribution centers, manufacturing facilities, and commercial businesses in these corridors require licensed commercial plumbing services including floor drain maintenance, high-capacity water heater systems, backflow prevention, and plumbing system inspection for lease turnovers and tenant improvements. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, covering commercial plumbing work throughout North Las Vegas.",
+    body: "North Las Vegas has a significant industrial and commercial base along the Interstate 15 corridor, Craig Road, Cheyenne Avenue, and the Losee Road area. Warehouses, distribution centers, manufacturing facilities, and commercial businesses in these corridors require licensed commercial plumbing services including floor drain maintenance, high-capacity water heater systems, backflow prevention, and plumbing system inspection for lease turnovers and tenant improvements. Red Carpet Plumbing holds Nevada Contractor License #048585A.",
   },
 ];
 
@@ -286,7 +286,7 @@ const plumberSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    name: "Nevada Contractor License",
     identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
@@ -402,8 +402,7 @@ export default function NorthLasVegasPlumbingServicesPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving North Las Vegas, Nevada and surrounding communities. We
-                hold Nevada Contractor License #048585A under the C-1 Plumbing
-                and Heating classification and have been serving the Las Vegas
+                hold Nevada Contractor License #048585A and have been serving the Las Vegas
                 Valley, including North Las Vegas, for over 40 years. Our
                 licensed plumbers handle residential and commercial plumbing for
                 homeowners, businesses, property managers, and industrial

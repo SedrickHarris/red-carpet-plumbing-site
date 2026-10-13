@@ -245,7 +245,7 @@ const serviceSchema = {
   name: "Drain Cleaning in Lake Las Vegas, Henderson, NV",
   serviceType: "Drain Cleaning",
   description:
-    "Red Carpet Plumbing provides professional drain cleaning for homes and resort residential properties in Lake Las Vegas, Henderson, NV. Services include kitchen drain cleaning, bathroom drain cleaning, main sewer line cleaning, hydro jetting, and video camera drain inspection. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides professional drain cleaning for homes and resort residential properties in Lake Las Vegas, Henderson, NV. Services include kitchen drain cleaning, bathroom drain cleaning, main sewer line cleaning, hydro jetting, and video camera drain inspection. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",

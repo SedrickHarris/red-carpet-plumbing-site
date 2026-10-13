@@ -339,7 +339,7 @@ const serviceSchema = {
   name: "Water Heater Repair and Installation in Green Valley",
   serviceType: "Water Heater Repair and Installation",
   description:
-    "Red Carpet Plumbing repairs and installs water heaters for homes and businesses in Green Valley, Henderson, NV. Tank water heater repair and replacement, tankless water heater installation, flush and maintenance, anode rod replacement, and thermal expansion tank installation. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing repairs and installs water heaters for homes and businesses in Green Valley, Henderson, NV. Tank water heater repair and replacement, tankless water heater installation, flush and maintenance, anode rod replacement, and thermal expansion tank installation. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",

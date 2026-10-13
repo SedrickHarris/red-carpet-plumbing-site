@@ -428,8 +428,7 @@ export default function SpringValleyEmergencyPlumbingPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Spring Valley, Nevada and the Las Vegas Valley. We hold
-                Nevada Contractor License #048585A under the C-1 Plumbing and
-                Heating classification. Spring Valley is an unincorporated Clark
+                Nevada Contractor License #048585A. Spring Valley is an unincorporated Clark
                 County community, and our license covers plumbing work throughout
                 Clark County, including Spring Valley. We have been serving the Las
                 Vegas Valley for over 40 years.

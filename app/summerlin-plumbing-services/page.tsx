@@ -70,7 +70,7 @@ const SUMMERLIN_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed to work in Summerlin, NV?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Summerlin.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Summerlin.",
     category: "trust",
   },
   {
@@ -220,7 +220,7 @@ const SUMMERLIN_COMMUNITIES = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
@@ -289,7 +289,7 @@ const plumberSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    name: "Nevada Contractor License",
     identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
@@ -405,8 +405,7 @@ export default function SummerlinPlumbingServicesPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Summerlin, Nevada and surrounding Las Vegas Valley
-                communities. We hold Nevada Contractor License #048585A under
-                the C-1 Plumbing and Heating classification and have been serving
+                communities. We hold Nevada Contractor License #048585A and have been serving
                 the Las Vegas Valley, including Summerlin, for over 40 years. Our
                 licensed plumbers provide residential plumbing service for
                 homeowners throughout all Summerlin villages from the original

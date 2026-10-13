@@ -19,8 +19,8 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // Active FLAGs for this page (source-only; none appear as unverified claims in
 // rendered copy beyond those noted):
 //   - telephone (+17025679172) in serviceSchema.provider — VERIFY before launch.
-//   - License #048585A + C-1 Plumbing and Heating classification — verified
-//     business claim, but confirm the C-1 gas authorization language at launch.
+//   - License #048585A — verified
+//     business claim, but confirm the license wording for gas line work at launch.
 //   - "Transparent Pricing, No Hidden Fees" trust items + Why-Choose bullet —
 //     source-site claims, VERIFY.
 //   - 24/7 availability for gas line emergencies (Why-Choose, Section 4
@@ -77,7 +77,7 @@ const LV_GAS_LINE_FAQS: FaqItem[] = [
   {
     question: "Who is licensed to repair gas lines in Las Vegas and Nevada?",
     answer:
-      "In Nevada, gas line repair and installation must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, which authorizes gas line work throughout Clark County and the Las Vegas Valley. Always verify a contractor's license before allowing gas line work on your property. The Nevada State Contractors Board website allows you to search active license records.",
+      "In Nevada, gas line repair and installation must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #048585A. Always verify a contractor's license before allowing gas line work on your property. The Nevada State Contractors Board website allows you to search active license records.",
     category: "trust",
   },
   {
@@ -104,7 +104,7 @@ const LV_GAS_LINE_FAQS: FaqItem[] = [
     question:
       "Does Red Carpet Plumbing handle gas line emergencies in Las Vegas?",
     answer:
-      "Yes. Red Carpet Plumbing provides emergency gas line service throughout Las Vegas. If you smell gas or suspect an active leak, leave the building immediately and call 911 and Southwest Gas first. Once the utility clears the area, call us at (702) 567-9172 and we will dispatch a licensed plumber for the inspection, repair, and safety verification. We are licensed for gas line work under NV C-1 License #048585A and serve Las Vegas, Henderson, Summerlin, Paradise, and surrounding communities.",
+      "Yes. Red Carpet Plumbing provides emergency gas line service throughout Las Vegas. If you smell gas or suspect an active leak, leave the building immediately and call 911 and Southwest Gas first. Once the utility clears the area, call us at (702) 567-9172 and we will dispatch a licensed plumber for the inspection, repair, and safety verification. We are licensed for gas line work under NV License #048585A and serve Las Vegas, Henderson, Summerlin, Paradise, and surrounding communities.",
     category: "the-service",
   },
   {
@@ -138,12 +138,12 @@ const LV_GAS_LINE_STEPS = [
   },
 ];
 
-// FLAG: VERIFY before publishing — license number, C-1 classification,
+// FLAG: VERIFY before publishing — license number,
 // transparent pricing, and 24/7 availability are source-site claims. Confirm
 // all before launch.
 const WHY_CHOOSE = [
   "Local Las Vegas plumbing company familiar with CSST heat stress, caliche soil conditions, and aging gas line systems in Las Vegas homes",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating classification, authorizing gas line work throughout Clark County",
+  "Nevada Contractor License #048585A",
   "Residential and commercial gas line service throughout Las Vegas",
   "Full range of gas line services: inspection, repair, replacement, appliance hookup, permitted extensions, and emergency response",
   "Transparent pricing with no hidden fees",
@@ -153,7 +153,6 @@ const WHY_CHOOSE = [
 // Red brand-primary trust band (Section 2).
 const LV_GAS_TRUST_STRIP = [
   "NV Licensed Gas Line Plumbers, #048585A",
-  "C-1 Plumbing and Heating License",
   "Serving Las Vegas and the Valley",
   "Transparent Pricing, No Hidden Fees",
 ];
@@ -325,7 +324,7 @@ const serviceSchema = {
   name: "Gas Line Plumbing in Las Vegas",
   serviceType: "Gas Line Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, pressure testing, appliance hookup, and emergency service for residential and commercial properties in Las Vegas, NV. NV C-1 Plumbing and Heating License #048585A.",
+    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, pressure testing, appliance hookup, and emergency service for residential and commercial properties in Las Vegas, NV. NV License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -409,7 +408,7 @@ export default function LasVegasGasLinePage() {
               <br /> in Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and emergency service for homes and businesses throughout Las Vegas. Our plumbers hold Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, which authorizes gas line work throughout Clark County and the Las Vegas Valley."
+          subheading="Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and emergency service for homes and businesses throughout Las Vegas. Our plumbers hold Nevada Contractor License #048585A."
           trustItems={LV_GAS_TRUST_STRIP}
           primaryCTA={{
             label: "Call (702) 567-9172",
@@ -419,8 +418,8 @@ export default function LasVegasGasLinePage() {
             label: "Request Gas Line Service",
             href: "/contact/",
           }}
-          // FLAG: VERIFY — license number / C-1 classification are source-site claims.
-          ctaNote="Licensed gas line plumbers. NV C-1 License #048585A."
+          // FLAG: VERIFY — license number is a source-site claim.
+          ctaNote="Gas line plumbing service. NV License #048585A."
           formSlot={<QuoteFormPlaceholder title="Get Gas Line Help" />}
           backgroundImage={{
             src: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-plumbing-hero.webp",
@@ -559,8 +558,7 @@ export default function LasVegasGasLinePage() {
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing is licensed for gas line work throughout the
-                  Las Vegas Valley. NV Contractor License #048585A, C-1 Plumbing
-                  and Heating.
+                  Las Vegas Valley. NV Contractor License #048585A.
                 </p>
                 {/* FLAG: VERIFY — 24/7 availability is a source-site claim. */}
                 <p className="mt-3 text-sm font-medium text-white/70">
@@ -680,7 +678,7 @@ export default function LasVegasGasLinePage() {
         <CTASection
           background="red"
           headline={<>Ready to Schedule Gas Line Service<br />in Las Vegas?</>}
-          body="Red Carpet Plumbing provides licensed gas line inspection, repair, installation, and emergency service throughout the Las Vegas Valley. NV License #048585A, C-1 Plumbing and Heating."
+          body="Red Carpet Plumbing provides licensed gas line inspection, repair, installation, and emergency service throughout the Las Vegas Valley. NV License #048585A."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

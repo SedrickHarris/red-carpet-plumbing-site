@@ -62,14 +62,14 @@ const SV_COMMERCIAL_FAQS: FaqItem[] = [
     question:
       "What commercial plumbing services are available in Spring Valley, NV?",
     answer:
-      "Red Carpet Plumbing provides commercial plumbing repair, installation, and maintenance throughout Spring Valley including commercial drain cleaning and hydro jetting, grease trap and floor drain service, commercial water heater repair and installation, commercial leak detection and repair, commercial sewer line services, backflow prevention installation and testing, commercial pipe repair and repiping, and emergency commercial plumbing response. All work is performed under Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+      "Red Carpet Plumbing provides commercial plumbing repair, installation, and maintenance throughout Spring Valley including commercial drain cleaning and hydro jetting, grease trap and floor drain service, commercial water heater repair and installation, commercial leak detection and repair, commercial sewer line services, backflow prevention installation and testing, commercial pipe repair and repiping, and emergency commercial plumbing response. All work is performed under Nevada Contractor License #048585A.",
     category: "the-service",
   },
   {
     question:
       "Do I need a licensed plumber for commercial plumbing work in Spring Valley?",
     answer:
-      "Yes. Commercial plumbing work in Spring Valley requires a licensed Nevada contractor. Spring Valley is an unincorporated Clark County community, and Clark County is the permit jurisdiction for commercial plumbing here. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, which covers commercial plumbing repair and installation throughout Spring Valley. Most commercial plumbing projects in Spring Valley require Clark County permits. Always verify a contractor's license number before hiring for commercial work.",
+      "Yes. Commercial plumbing work in Spring Valley requires a licensed Nevada contractor. Spring Valley is an unincorporated Clark County community, and Clark County is the permit jurisdiction for commercial plumbing here. Red Carpet Plumbing holds Nevada Contractor License #048585A. Most commercial plumbing projects in Spring Valley require Clark County permits. Always verify a contractor's license number before hiring for commercial work.",
     category: "trust",
   },
   {
@@ -110,10 +110,10 @@ const SV_COMMERCIAL_FAQS: FaqItem[] = [
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides licensed commercial plumbing services for businesses, restaurants, property managers, and HOA communities throughout Spring Valley, Nevada. Spring Valley is an unincorporated Clark County community with a dense concentration of commercial corridors along Spring Valley Parkway, Rainbow Boulevard, Tropicana Avenue, and the West Sahara and Desert Inn corridors. All commercial work is performed under Nevada Contractor License #048585A, C-1 Plumbing and Heating. Clark County permits are coordinated for applicable projects.";
+  "Red Carpet Plumbing provides licensed commercial plumbing services for businesses, restaurants, property managers, and HOA communities throughout Spring Valley, Nevada. Spring Valley is an unincorporated Clark County community with a dense concentration of commercial corridors along Spring Valley Parkway, Rainbow Boulevard, Tropicana Avenue, and the West Sahara and Desert Inn corridors. All commercial work is performed under Nevada Contractor License #048585A. Clark County permits are coordinated for applicable projects.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed #048585A, C-1 Plumbing and Heating",
+  "NV Licensed #048585A",
   "4.8 Stars, 81 Google Reviews",
   // FLAG: VERIFY "Over 40 years" before publishing.
   "Over 40 Years Serving the Las Vegas Valley",
@@ -124,7 +124,7 @@ const HERO_TRUST_ITEMS = [
 ];
 
 const WHO_WE_SERVE_INTRO =
-  "Red Carpet Plumbing provides commercial plumbing services throughout Spring Valley for a range of business types and property operators. Our Nevada C-1 Plumbing and Heating license covers commercial plumbing repair and installation throughout Spring Valley and Clark County. Spring Valley is an unincorporated Clark County community, and Clark County is the permit jurisdiction for commercial plumbing work here, not the City of Las Vegas.";
+  "Red Carpet Plumbing provides commercial plumbing services throughout Spring Valley for a range of business types and property operators. Spring Valley is an unincorporated Clark County community, and Clark County is the permit jurisdiction for commercial plumbing work here, not the City of Las Vegas.";
 
 const WHO_WE_SERVE = [
   {
@@ -249,7 +249,7 @@ const COMMERCIAL_FACTORS = [
   },
   {
     title: "Clark County Permits and Licensed Contractor Requirements",
-    body: "Commercial plumbing work in Spring Valley falls under Clark County jurisdiction, not the City of Las Vegas. Most commercial plumbing projects in Spring Valley require Clark County permits and must be performed by a licensed Nevada contractor. Nevada C-1 Plumbing and Heating licensees are authorized for commercial plumbing work throughout Clark County. Red Carpet Plumbing holds NV Contractor License #048585A and handles permit coordination for applicable commercial projects in Spring Valley. Working with an unlicensed contractor on commercial plumbing work in Clark County can result in failed inspections and compliance issues.",
+    body: "Commercial plumbing work in Spring Valley falls under Clark County jurisdiction, not the City of Las Vegas. Most commercial plumbing projects in Spring Valley require Clark County permits and must be performed by a licensed Nevada contractor. Red Carpet Plumbing holds NV Contractor License #048585A and handles permit coordination for applicable commercial projects in Spring Valley. Working with an unlicensed contractor on commercial plumbing work in Clark County can result in failed inspections and compliance issues.",
   },
   {
     title: "Hard Water Demand on Commercial Systems",
@@ -305,7 +305,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Commercial Plumbing in Spring Valley, NV",
   description:
-    "Red Carpet Plumbing provides licensed commercial plumbing in Spring Valley, NV. Businesses, restaurants, property managers, HOA communities. NV License #048585A, C-1. Clark County permits coordinated.",
+    "Red Carpet Plumbing provides licensed commercial plumbing in Spring Valley, NV. Businesses, restaurants, property managers, HOA communities. NV License #048585A. Clark County permits coordinated.",
   url: "https://redcarpetplumbing.com/spring-valley/commercial-plumbing/",
   isPartOf: {
     "@type": "WebSite",
@@ -345,7 +345,7 @@ const serviceSchema = {
   name: "Commercial Plumbing in Spring Valley, NV",
   serviceType: "Commercial Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance throughout Spring Valley, NV. Services include commercial drain cleaning, grease trap service, water heater repair, leak detection, sewer line services, backflow prevention, pipe repair, and emergency commercial response. NV License #048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance throughout Spring Valley, NV. Services include commercial drain cleaning, grease trap service, water heater repair, leak detection, sewer line services, backflow prevention, pipe repair, and emergency commercial response. NV License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -432,7 +432,7 @@ export default function SpringValleyCommercialPlumbingPage() {
             label: "Request Commercial Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #048585A, C-1 Plumbing and Heating. Clark County permits coordinated."
+          ctaNote="NV Licensed #048585A. Clark County permits coordinated."
           formSlot={<QuoteFormPlaceholder title="Get Commercial Plumbing Help" />}
           accentWidth="sm"
           backgroundImage={{
@@ -659,7 +659,7 @@ export default function SpringValleyCommercialPlumbingPage() {
         <CTASection
           background="red"
           headline={<>Licensed Commercial Plumbing<br />Throughout Spring Valley, NV</>}
-          body="Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Spring Valley. NV Contractor License #048585A, C-1 Plumbing and Heating. Clark County permits coordinated."
+          body="Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Spring Valley. NV Contractor License #048585A. Clark County permits coordinated."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

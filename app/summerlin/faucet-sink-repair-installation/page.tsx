@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172: project-established value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating: project-established value;
+// - License #048585A: project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees": source-site claim; confirm
 //   before launch.
@@ -81,7 +81,7 @@ const DIRECT_ANSWER = {
   p1: "A dripping faucet, low pressure at one tap, a stiff handle, a slow drain, or a leak under the sink usually has a specific cause that a plumber can find and fix. Red Carpet Plumbing repairs worn faucet parts, replaces faucets, installs kitchen and bathroom sinks, and fixes under-sink leaks. Call (702) 567-9172 to schedule service.",
   // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
-  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
+  p2: "Red Carpet Plumbing is a Nevada licensed plumbing contractor (#048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
   p3: "Need faucet or sink service in Summerlin? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get on the schedule.",
 };
 
@@ -193,7 +193,7 @@ const PROCESS_STEPS: { name: string; body: string }[] = [
 const WHY_CHOOSE_HEADING = "Why Summerlin Homeowners Choose Red Carpet Plumbing";
 const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY license #048585A before publishing.
-  "Licensed Nevada plumbers, NV License #048585A, C-1 Plumbing and Heating",
+  "Licensed Nevada plumbers, NV License #048585A",
   // FLAG: VERIFY qualitative installation-care claim before publishing.
   "Careful fixture installation that protects your finishes and countertops",
   "Familiar with Summerlin's mix of older villages and newer builds",

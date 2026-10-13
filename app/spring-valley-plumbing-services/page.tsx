@@ -75,7 +75,7 @@ const SPRING_VALLEY_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed to work in Spring Valley, NV?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Spring Valley.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Spring Valley.",
     category: "trust",
   },
   {
@@ -224,7 +224,7 @@ const SPRING_VALLEY_AREAS = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
@@ -293,7 +293,7 @@ const plumberSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    name: "Nevada Contractor License",
     identifier: "048585A",
     issuedBy: {
       "@type": "Organization",

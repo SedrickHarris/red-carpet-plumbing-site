@@ -75,7 +75,7 @@ const GREEN_VALLEY_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed to work in Green Valley?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Green Valley and Henderson.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Green Valley and Henderson.",
     category: "trust",
   },
   {
@@ -200,7 +200,7 @@ const GREEN_VALLEY_AREAS = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
@@ -271,7 +271,7 @@ const plumberSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    name: "Nevada Contractor License",
     identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
@@ -400,8 +400,7 @@ export default function GreenValleyPlumbingServicesPage() {
                 Green Valley is an established master-planned community within the
                 City of Henderson, and Red Carpet Plumbing has been serving homes
                 throughout the Henderson and Green Valley area for over 40 years.
-                We hold Nevada Contractor License #048585A under the C-1 Plumbing
-                and Heating classification. For full Henderson area plumbing
+                We hold Nevada Contractor License #048585A. For full Henderson area plumbing
                 coverage including Green Valley, visit our{" "}
                 <Link
                   href="/henderson-plumbing-services/"

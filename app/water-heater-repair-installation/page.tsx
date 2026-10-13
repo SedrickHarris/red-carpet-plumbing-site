@@ -177,7 +177,7 @@ const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
   {
     title: "Gas Water Heater Service",
     description:
-      "Red Carpet Plumbing services gas water heaters including conventional tank units and gas tankless models. We diagnose and repair pilot light failures, thermocouple issues, gas valve problems, and venting concerns. All gas line work is performed under our NV Contractor License #048585A (C-1 Plumbing and Heating).",
+      "Red Carpet Plumbing services gas water heaters including conventional tank units and gas tankless models. We diagnose and repair pilot light failures, thermocouple issues, gas valve problems, and venting concerns. All gas line work is performed under our NV Contractor License #048585A.",
     href: "/water-heater-repair-installation/gas/",
     image:
       "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-gas-water-heater-service-card.webp",
@@ -309,7 +309,7 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada C-1 Plumbing and Heating Contractor License",
+      name: "Nevada Contractor License",
       identifier: "048585A",
       issuedBy: {
         "@type": "Organization",

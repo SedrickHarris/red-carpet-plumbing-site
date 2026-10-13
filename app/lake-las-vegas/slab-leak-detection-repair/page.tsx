@@ -308,7 +308,7 @@ const serviceSchema = {
   name: "Slab Leak Detection and Repair in Lake Las Vegas, Henderson, NV",
   serviceType: "Slab Leak Detection and Repair",
   description:
-    "Non-invasive slab leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging locate leaks precisely before any concrete cutting. Spot repair, pipe rerouting, and epoxy pipe lining options explained. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    "Non-invasive slab leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging locate leaks precisely before any concrete cutting. Spot repair, pipe rerouting, and epoxy pipe lining options explained. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",

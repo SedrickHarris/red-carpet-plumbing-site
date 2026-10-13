@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172: project-established value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating: project-established value;
+// - License #048585A: project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees": source-site claim; confirm
 //   before launch.
@@ -74,7 +74,7 @@ const DIRECT_ANSWER = {
   p1: "A garbage disposal that hums but will not spin, will not turn on, leaks, jams often, or makes grinding noises can often be cleared, reset, or repaired. When the motor has failed or the housing is cracked, replacement is the better choice. Red Carpet Plumbing diagnoses the problem and completes the repair or installation. Call (702) 567-9172 to schedule service.",
   // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
-  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
+  p2: "Red Carpet Plumbing is a Nevada licensed plumbing contractor (#048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
   p3: "Need garbage disposal service in North Las Vegas? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get on the schedule.",
 };
 
@@ -185,7 +185,7 @@ const PROCESS_STEPS: { name: string; body: string }[] = [
 const WHY_CHOOSE_HEADING = "Why North Las Vegas Homeowners Choose Red Carpet Plumbing";
 const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY license #048585A before publishing.
-  "Licensed Nevada plumbers, NV License #048585A, C-1 Plumbing and Heating",
+  "Licensed Nevada plumbers, NV License #048585A",
   "Honest repair or replace assessment before any work is recommended",
   "Familiar with North Las Vegas housing from established neighborhoods to Aliante",
   "Clear options explained before work begins",

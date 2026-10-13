@@ -58,14 +58,14 @@ const HENDERSON_COMMERCIAL_FAQS: FaqItem[] = [
   {
     question: "What commercial plumbing services are available in Henderson, NV?",
     answer:
-      "Red Carpet Plumbing provides commercial plumbing repair, installation, and maintenance throughout Henderson including commercial drain cleaning and hydro jetting, grease trap and floor drain service, commercial water heater repair and installation, commercial leak detection, commercial sewer line services, backflow prevention installation and testing, and commercial pipe repair and repiping. All work is performed under Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+      "Red Carpet Plumbing provides commercial plumbing repair, installation, and maintenance throughout Henderson including commercial drain cleaning and hydro jetting, grease trap and floor drain service, commercial water heater repair and installation, commercial leak detection, commercial sewer line services, backflow prevention installation and testing, and commercial pipe repair and repiping. All work is performed under Nevada Contractor License #048585A.",
     category: "the-service",
   },
   {
     question:
       "Do I need a licensed plumber for commercial plumbing work in Henderson?",
     answer:
-      "Yes. Commercial plumbing work in Nevada must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, which covers commercial plumbing repair and installation throughout Henderson. Henderson requires permits for most commercial plumbing work. Always verify a contractor's license number before hiring for commercial jobs.",
+      "Yes. Commercial plumbing work in Nevada must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #048585A. Henderson requires permits for most commercial plumbing work. Always verify a contractor's license number before hiring for commercial jobs.",
     category: "trust",
   },
   {
@@ -103,10 +103,10 @@ const HENDERSON_COMMERCIAL_FAQS: FaqItem[] = [
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson. All commercial work is performed under Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson. All commercial work is performed under Nevada Contractor License #048585A.";
 
 const HERO_TRUST_ITEMS = [
-  "NV Licensed #048585A, C-1 Plumbing and Heating",
+  "NV Licensed #048585A",
   "4.8 Stars, 81 Google Reviews",
   // FLAG: VERIFY "Over 40 years" before publishing.
   "Over 40 Years Serving the Las Vegas Valley",
@@ -136,7 +136,7 @@ const WHO_WE_SERVE = [
 ];
 
 const WHO_WE_SERVE_INTRO =
-  "Red Carpet Plumbing provides commercial plumbing services throughout Henderson for a range of business types and property operators. Our Nevada C-1 license covers commercial plumbing repair and installation throughout Henderson and Clark County.";
+  "Red Carpet Plumbing provides commercial plumbing services throughout Henderson for a range of business types and property operators.";
 
 // Section 3 service cards link to their built service routes (built={true} so
 // the card title and Learn More render as live links). All eight targets
@@ -240,7 +240,7 @@ const COMMERCIAL_CONTEXT = [
   },
   {
     title: "Henderson Permit Requirements for Commercial Plumbing",
-    body: "Most commercial plumbing work in Henderson requires permits and must be performed by a licensed contractor. Nevada C-1 Plumbing and Heating licensees are authorized for commercial plumbing work throughout Henderson. Red Carpet Plumbing holds NV Contractor License #048585A and handles permit coordination for applicable commercial projects in Henderson. Working with an unlicensed contractor on commercial plumbing can result in failed inspections, code violations, and liability exposure.",
+    body: "Most commercial plumbing work in Henderson requires permits and must be performed by a licensed contractor. Red Carpet Plumbing holds NV Contractor License #048585A and handles permit coordination for applicable commercial projects in Henderson. Working with an unlicensed contractor on commercial plumbing can result in failed inspections, code violations, and liability exposure.",
   },
   {
     title: "Hard Water Impact on Henderson Commercial Systems",
@@ -343,7 +343,7 @@ const serviceSchema = {
   name: "Commercial Plumbing",
   serviceType: "Commercial Plumbing",
   description:
-    "Licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson, NV. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    "Licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson, NV. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -424,7 +424,7 @@ export default function HendersonCommercialPlumbingPage() {
             label: "Request Commercial Service",
             href: "/contact/",
           }}
-          ctaNote="NV Licensed #048585A, C-1 Plumbing and Heating. Permits coordinated."
+          ctaNote="NV Licensed #048585A. Permits coordinated."
           formSlot={<QuoteFormPlaceholder title="Get Commercial Plumbing Help" />}
           accentWidth="sm"
           backgroundImage={{
@@ -701,7 +701,7 @@ export default function HendersonCommercialPlumbingPage() {
         <CTASection
           background="red"
           headline={<>Licensed Commercial Plumbing<br />Throughout Henderson, NV</>}
-          body="Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson. NV Contractor License #048585A, C-1 Plumbing and Heating."
+          body="Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and HOA communities throughout Henderson. NV Contractor License #048585A."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

@@ -92,7 +92,7 @@ const HOMEPAGE_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed in Nevada?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. You can verify contractor license status through the Nevada Contractors Board website.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, issued by the State of Nevada Contractors Board. You can verify contractor license status through the Nevada Contractors Board website.",
     category: "trust",
   },
   {
@@ -216,7 +216,7 @@ const WHY_CHOOSE_REASONS = [
   },
   {
     title: "Licensed Plumbers",
-    body: "Every job Red Carpet Plumbing takes on is handled by licensed plumbing professionals. NV Contractor License #048585A (C-1 Plumbing and Heating).",
+    body: "Every job Red Carpet Plumbing takes on is handled by licensed plumbing professionals. NV Contractor License #048585A.",
   },
   {
     title: "24/7 Emergency Service",
@@ -281,7 +281,7 @@ const plumberSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    name: "Nevada Contractor License",
     identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
@@ -408,7 +408,7 @@ export default function Home() {
                 repiping, sewer line services, gas line plumbing, and
                 commercial plumbing throughout Las Vegas, Henderson, North
                 Las Vegas, and the Las Vegas Valley. Nevada Contractor License
-                #048585A, C-1 Plumbing and Heating. To schedule service or
+                #048585A. To schedule service or
                 request emergency plumbing help, call{" "}
                 <a
                   href="tel:+17025679172"

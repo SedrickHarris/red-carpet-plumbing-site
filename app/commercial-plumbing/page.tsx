@@ -39,13 +39,13 @@ const COMMERCIAL_FAQS: FaqItem[] = [
     question:
       "Do I need a licensed plumber for commercial plumbing work in Nevada?",
     answer:
-      "Yes. Commercial plumbing work in Nevada must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, which covers commercial plumbing repair and installation. Clark County also requires permits for most commercial plumbing work. Always verify a contractor's license before hiring for commercial jobs.",
+      "Yes. Commercial plumbing work in Nevada must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #048585A. Clark County also requires permits for most commercial plumbing work. Always verify a contractor's license before hiring for commercial jobs.",
     category: "trust",
   },
   {
     question: "Can a residential plumber handle commercial plumbing?",
     answer:
-      "A licensed plumber with a Nevada C-1 Plumbing and Heating license can perform both residential and commercial plumbing work. Red Carpet Plumbing serves both residential customers and commercial clients including businesses, restaurants, and property managers throughout the Las Vegas Valley.",
+      "Commercial plumbing work requires a licensed contractor. Red Carpet Plumbing serves both residential customers and commercial clients including businesses, restaurants, and property managers throughout the Las Vegas Valley.",
     category: "the-service",
   },
   {
@@ -208,7 +208,7 @@ const LV_COMMERCIAL_FACTORS = [
   },
   {
     title: "Clark County Permits and Licensed Contractor Requirements",
-    body: "Most commercial plumbing work in Las Vegas and Clark County requires permits and must be performed by a licensed contractor. Nevada C-1 Plumbing and Heating licensees are authorized for commercial plumbing work. Red Carpet Plumbing holds NV Contractor License #048585A and handles permit coordination for applicable commercial projects. Working with an unlicensed contractor on commercial plumbing can result in failed inspections and compliance issues.",
+    body: "Most commercial plumbing work in Las Vegas and Clark County requires permits and must be performed by a licensed contractor. Red Carpet Plumbing holds NV Contractor License #048585A and handles permit coordination for applicable commercial projects. Working with an unlicensed contractor on commercial plumbing can result in failed inspections and compliance issues.",
   },
   {
     title: "High-Demand Systems in a Desert Climate",
@@ -305,7 +305,7 @@ const serviceSchema = {
   name: "Commercial Plumbing",
   serviceType: "Commercial Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and multi-unit buildings throughout the Las Vegas Valley. Nevada Contractor License #048585A (C-1 Plumbing and Heating).",
+    "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, property managers, and multi-unit buildings throughout the Las Vegas Valley. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -314,7 +314,7 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada C-1 Plumbing and Heating Contractor License",
+      name: "Nevada Contractor License",
       identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
@@ -502,9 +502,7 @@ export default function CommercialPlumbingPage() {
                 Red Carpet Plumbing provides licensed commercial plumbing
                 repair, installation, and maintenance for businesses,
                 restaurants, property managers, and multi-unit buildings
-                throughout the Las Vegas Valley. Nevada
-                Contractor License #048585A (C-1 Plumbing and Heating) covers
-                commercial plumbing work.
+                throughout the Las Vegas Valley. Red Carpet Plumbing holds Nevada Contractor License #048585A.
               </p>
             </div>
 
@@ -671,7 +669,7 @@ export default function CommercialPlumbingPage() {
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing serves businesses, restaurants, and
                   property managers throughout the Las Vegas Valley. NV
-                  Contractor License #048585A (C-1 Plumbing and Heating).
+                  Contractor License #048585A.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">

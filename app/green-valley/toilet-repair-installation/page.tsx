@@ -211,7 +211,7 @@ const GV_TOILET_STEPS = [
 const GV_TOILET_WHY = [
   "Local Las Vegas Valley plumbing company familiar with Green Valley homes and the hard water conditions that affect toilet components",
   "Transparent assessment of repair vs. replacement before any work is recommended",
-  "Licensed plumbers, NV License #048585A, C-1 Plumbing and Heating",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Toilet repair and installation service throughout Green Valley and Henderson",
 ];

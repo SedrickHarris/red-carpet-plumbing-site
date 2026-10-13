@@ -76,7 +76,7 @@ const HENDERSON_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed to work in Henderson, NV?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Henderson.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Henderson.",
     category: "trust",
   },
   {
@@ -222,7 +222,7 @@ const HENDERSON_COMMUNITIES = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
@@ -285,7 +285,7 @@ const plumberSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    name: "Nevada Contractor License",
     identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
@@ -401,8 +401,7 @@ export default function HendersonPlumbingServicesPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Henderson, Nevada and surrounding communities. We hold
-                Nevada Contractor License #048585A under the C-1 Plumbing and
-                Heating classification and have been serving the Las Vegas
+                Nevada Contractor License #048585A and have been serving the Las Vegas
                 Valley, including Henderson, for over 40 years. Our licensed
                 plumbers provide residential and commercial plumbing for
                 homeowners, businesses, property managers, and real estate

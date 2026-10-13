@@ -109,7 +109,7 @@ const BC_WH_FAQS: FaqItem[] = [
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides water heater repair and installation throughout Boulder City, Nevada. From tank water heater repair and replacement to tankless installation and annual sediment flushing, our licensed plumbers service Boulder City homes with code-compliant water heater work. Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides water heater repair and installation throughout Boulder City, Nevada. From tank water heater repair and replacement to tankless installation and annual sediment flushing, our licensed plumbers service Boulder City homes with code-compliant water heater work. Nevada Contractor License #048585A.";
 
 const TRUST_STRIP_ITEMS = [
   "NV Licensed, #048585A",
@@ -226,7 +226,7 @@ const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Boulder City code-compliant seismic bracing and expansion tank installation",
   "Tank and tankless water heater service throughout Boulder City",
@@ -617,9 +617,7 @@ export default function BoulderCityWaterHeaterPage() {
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Boulder City and the Las Vegas Valley. We hold Nevada
-                Contractor License #048585A under the C-1 Plumbing and Heating
-                classification, covering residential and commercial plumbing work
-                throughout Nevada including Boulder City.
+                Contractor License #048585A.
               </p>
             </div>
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
