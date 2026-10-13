@@ -4,12 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Button } from "@/components/Button";
-
-// TODO: Replace with confirmed third-party CRM webhook URL before launch.
-// Architecture decision (confirmed): Native Next.js form POST to third-party CRM webhook.
-// Payload shape is defined below. One edit here updates all pages.
-// Request the third-party CRM webhook URL from the project owner before going live.
-const CONTACT_WEBHOOK_URL = "";
+import { useTurnstile } from "@/components/useTurnstile";
+import { LEAD_ENDPOINT } from "@/lib/lead-endpoint";
 
 const DEFAULT_SERVICES = [
   "Emergency Plumbing",
@@ -64,6 +60,10 @@ export function ContactFormPlaceholder({
   const [state, setState] = useState<FormState>("idle");
   const [errors, setErrors] = useState<FieldErrors>({});
   const successRef = useRef<HTMLDivElement | null>(null);
+  const [tokenPending, setTokenPending] = useState(false);
+  const { setForm, setContainer, read, start, reset } = useTurnstile({
+    onToken: () => setTokenPending(false),
+  });
 
   useEffect(() => {
     if (state === "success" && successRef.current) {
@@ -123,15 +123,17 @@ export function ContactFormPlaceholder({
     }
     setErrors({});
 
-    if (!CONTACT_WEBHOOK_URL) {
-      if (process.env.NODE_ENV !== "production") {
-        console.error(
-          "CONTACT_WEBHOOK_URL is not configured. Submission aborted.",
-        );
-      }
+    const check = read();
+    if (check.status === "unavailable") {
       setState("error");
       return;
     }
+    if (!check.token) {
+      start();
+      setTokenPending(true);
+      return;
+    }
+    setTokenPending(false);
 
     setState("submitting");
 
@@ -144,21 +146,24 @@ export function ContactFormPlaceholder({
       address: (data.get("address") as string) ?? "",
       message: (data.get("message") as string) ?? "",
       submittedAt: new Date().toISOString(),
+      turnstileToken: check.token,
       page: "/contact/",
     };
 
     try {
-      const response = await fetch(CONTACT_WEBHOOK_URL, {
+      const response = await fetch(LEAD_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
       if (!response.ok) {
+        reset();
         setState("error");
         return;
       }
       setState("success");
     } catch {
+      reset();
       setState("error");
     }
   }
@@ -219,6 +224,7 @@ export function ContactFormPlaceholder({
 
   return (
     <form
+      ref={setForm}
       onSubmit={handleSubmit}
       noValidate
       className="relative w-full min-w-0 rounded-2xl bg-white p-6 text-brand-dark shadow-lg ring-1 ring-brand-surface-alt sm:p-8"
@@ -409,21 +415,30 @@ export function ContactFormPlaceholder({
           being contacted about your service request.
         </p>
 
-        <Button
-          type="submit"
-          variant="primary"
-          size="lg"
-          fullWidth
-          busy={isSubmitting}
-          busyLabel="Sending..."
-          className="mt-2"
-        >
-          {submitLabel}
-        </Button>
+        <div>
+          <div ref={setContainer} />
+          <Button
+            type="submit"
+            variant="primary"
+            size="lg"
+            fullWidth
+            busy={isSubmitting}
+            busyLabel="Sending..."
+            className="mt-2"
+          >
+            {submitLabel}
+          </Button>
+        </div>
 
         {state === "error" ? (
           <p role="alert" className="mt-3 text-sm text-red-600">
             Something went wrong. Please call us directly at (702) 567-9172.
+          </p>
+        ) : null}
+
+        {tokenPending && state !== "error" ? (
+          <p role="alert" className="mt-3 text-sm text-red-600">
+            One moment while we finish a quick check. Please submit the form again.
           </p>
         ) : null}
       </div>
