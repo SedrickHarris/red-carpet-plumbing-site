@@ -66,7 +66,7 @@ const SUMMERLIN_EMERGENCY_FAQS: FaqItem[] = [
     question:
       "What should I do while waiting for an emergency plumber in Summerlin, NV?",
     answer:
-      "Shut off the water supply to the affected area or the main shutoff valve if needed. For a burst pipe, locate the main shutoff near the front of the property or in a ground-level box near the street. Turn off the water heater if the water supply is off. Do not use any drains or toilets during a sewer backup. For a tankless water heater failure with flooding, shut off the water supply to the unit. If you smell gas, leave the building immediately and call your gas utility before calling us.",
+      "Shut off the water supply to the affected area or the main shutoff valve if needed. For a burst pipe, locate the main shutoff near the front of the property or in a ground-level box near the street. Turn off the water heater if the water supply is off. Do not use any drains or toilets during a sewer backup. For a tankless water heater failure with flooding, shut off the water supply to the unit. If you smell gas, leave the building immediately and call 911 and your gas utility before calling us.",
     category: "emergency",
   },
   // FLAG: 24/7 availability claim in this answer — source-site — verify before final launch.
@@ -130,7 +130,7 @@ const HERO_CTA_NOTE = "Available 24 hours a day, 7 days a week";
 const EMERGENCY_TYPES = [
   "Burst or ruptured pipe causing active water flow",
   "Sewer backup or sewage overflow inside the building",
-  "Gas line odor or suspected gas leak (leave the building, call your gas utility first)",
+  "Gas line odor or suspected gas leak (leave the building, call 911 and your gas utility first)",
   "Complete loss of water supply",
   "Water heater failure causing flooding or no hot water",
   "Flooded bathroom, kitchen, or utility area",
@@ -143,7 +143,7 @@ const EMERGENCY_SERVICES = [
   "Burst pipe repair and water shutoff assistance",
   "Sewer backup clearing and sewer line inspection",
   "Emergency water heater repair and replacement (tank and tankless)",
-  "Gas line inspection and repair (leave building and call gas utility for active gas odors first)",
+  "Gas line inspection and repair (leave building and call 911 and the gas utility for active gas odors first)",
   "Slab leak detection and emergency repair",
   "Emergency drain clearing and main line backup response",
   "Leak detection and emergency pipe repair",

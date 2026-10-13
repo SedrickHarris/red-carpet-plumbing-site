@@ -61,7 +61,7 @@ const BC_EMERGENCY_FAQS: FaqItem[] = [
     question:
       "What should I do while waiting for an emergency plumber in Boulder City?",
     answer:
-      "Shut off the water at the nearest shutoff valve or at your main supply if a pipe has burst or a major leak is active. If you suspect a gas issue, leave the building and call your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
+      "Shut off the water at the nearest shutoff valve or at your main supply if a pipe has burst or a major leak is active. If you suspect a gas issue, leave the building and call 911 and your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
     category: "emergency",
   },
   // FLAG: source-site claim (emergency availability) in this answer — verify before final launch.
@@ -154,7 +154,7 @@ const BC_EMERGENCY_PROBLEMS: {
   {
     label: "Gas line emergencies",
     // FLAG: verify gas line scope before publishing.
-    body: "If you smell gas in your Boulder City home, leave the building immediately and call your gas utility. Do not use electrical switches, open flames, or phones inside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #048585A, C-1 Plumbing and Heating, which covers gas line work.",
+    body: "If you smell gas in your Boulder City home, leave the building immediately and call 911 and your gas utility. Do not use electrical switches, open flames, or phones inside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #048585A, C-1 Plumbing and Heating, which covers gas line work.",
   },
 ];
 
@@ -166,7 +166,7 @@ const EMERGENCY_STEPS = [
   },
   {
     name: "For Gas Issues, Evacuate and Call the Utility",
-    body: "If you smell gas, leave the building immediately without using any electrical switches or open flames. Call your gas utility from outside. Do not re-enter until the area has been declared safe. Then call Red Carpet Plumbing at (702) 567-9172 for gas line inspection and repair.",
+    body: "If you smell gas, leave the building immediately without using any electrical switches or open flames. Call 911 and your gas utility from outside. Do not re-enter until the area has been declared safe. Then call Red Carpet Plumbing at (702) 567-9172 for gas line inspection and repair.",
   },
   {
     name: "Limit Secondary Damage",

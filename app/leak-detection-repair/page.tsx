@@ -149,7 +149,7 @@ const LEAK_SERVICES: ServiceTypeCard[] = [
   {
     title: "Gas Line Leak Detection",
     description:
-      "If you smell gas in or around your home, leave immediately and call your gas utility before calling a plumber. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under our NV Contractor License #048585A (C-1 Plumbing and Heating). We detect gas line leaks using pressure testing and gas-specific detection equipment.",
+      "If you smell gas in or around your home, leave immediately and call 911 and your gas utility before calling a plumber. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under our NV Contractor License #048585A (C-1 Plumbing and Heating). We detect gas line leaks using pressure testing and gas-specific detection equipment.",
     href: "/leak-detection-repair/gas-line/",
     image:
       "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-gas-line-leak-detection-card.webp",

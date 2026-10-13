@@ -6,8 +6,8 @@
 // - "Transparent Pricing" / "Upfront Pricing, No Hidden Fees" — source-site
 //   claims; confirm before launch.
 // - Emergency availability (Section 5 emergency card) — source-site claim.
-// - Southwest Gas number 1-800-935-4748 — publicly listed; verify current
-//   accuracy before launch.
+// - 911 and Southwest Gas number 877-860-6020, from swgas.com/en/contact-us
+//   (checked 2026-10-12); owner to re-verify before launch.
 // FLAG comments appear only in source. No FLAG text appears in any visible
 // string or schema text.
 //
@@ -78,8 +78,8 @@ const SAFETY_CALLOUT = {
   steps: [
     "Do not turn any electrical switches on or off. Do not use a phone inside the building.",
     "Leave the building immediately. Leave the door open as you exit.",
-    // FLAG: VERIFY Southwest Gas number 1-800-935-4748 before publishing.
-    "Move away from the building and call Southwest Gas at 1-800-935-4748 from a safe location.",
+    // FLAG: VERIFY 911 and Southwest Gas 877-860-6020 against swgas.com/en/contact-us before publishing.
+    "Move away from the building and call 911 and Southwest Gas at 877-860-6020 from a safe location.",
     "Do not re-enter the building until Southwest Gas has cleared the area.",
     // FLAG: VERIFY telephone before publishing.
     "Once the area is declared safe, call Red Carpet Plumbing at (702) 567-9172 to inspect and repair the gas line.",
@@ -184,8 +184,8 @@ const WARNING_SIGNS_NOTE =
 const HENDERSON_GAS_STEPS = [
   {
     name: "Call and describe the situation",
-    // FLAG: VERIFY telephone and Southwest Gas number before publishing.
-    body: "Call Red Carpet Plumbing at (702) 567-9172. If you smell gas or suspect an active leak, leave the property, call Southwest Gas at 1-800-935-4748 first, and call us once the area is declared safe. For non-emergency service including installation, hookup, or inspection, describe what you need and we will schedule a licensed plumber.",
+    // FLAG: VERIFY telephone before publishing. FLAG: VERIFY 911 and Southwest Gas 877-860-6020 against swgas.com/en/contact-us before publishing.
+    body: "Call Red Carpet Plumbing at (702) 567-9172. If you smell gas or suspect an active leak, leave the property, call 911 and Southwest Gas at 877-860-6020 first, and call us once the area is declared safe. For non-emergency service including installation, hookup, or inspection, describe what you need and we will schedule a licensed plumber.",
   },
   {
     name: "Licensed inspection and diagnosis",
@@ -206,7 +206,7 @@ const HENDERSON_GAS_STEPS = [
 const WHY_CHOOSE_ITEMS = [
   "Licensed for gas line work in Nevada. Red Carpet Plumbing holds NV Contractor License #048585A, C-1 Plumbing and Heating, which authorizes gas line repair and installation throughout Henderson.",
   "Henderson-specific knowledge. We understand the gas line conditions specific to original Green Valley homes, Henderson's extreme summer heat, CSST connector vulnerabilities, and the outdoor living addition requirements common in Henderson HOA communities.",
-  "Safety-first process. We follow the correct safety protocol for gas line work, including Southwest Gas emergency coordination and final pressure testing on every job.",
+  "Safety-first process. We follow the correct safety protocol for gas line work, including not starting gas leak work until the utility has cleared the area, and final pressure testing on every job.",
   "Henderson City permits handled. Gas line work requiring a City of Henderson permit is coordinated with permit application and final inspection included.",
   "Transparent pricing. We explain the scope and cost of the work before it begins.",
   "Residential and commercial service. We provide gas line services for Henderson homeowners, businesses, and commercial properties throughout the city.",
@@ -237,14 +237,14 @@ const HENDERSON_GAS_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a gas line problem in my Henderson home?",
     answer:
-      "The most common sign of a gas line problem is a rotten egg or sulfur smell, which is the odorant added to natural gas so leaks can be detected. You may also hear a hissing or whistling sound near a gas appliance, meter, or line, notice dead or dying vegetation above a buried gas line, see a yellow or flickering flame on a gas appliance, or see an unexplained increase in your gas bill. If you smell gas, leave the building immediately and call Southwest Gas at 1-800-935-4748 from outside before calling a plumber.",
+      "The most common sign of a gas line problem is a rotten egg or sulfur smell, which is the odorant added to natural gas so leaks can be detected. You may also hear a hissing or whistling sound near a gas appliance, meter, or line, notice dead or dying vegetation above a buried gas line, see a yellow or flickering flame on a gas appliance, or see an unexplained increase in your gas bill. If you smell gas, leave the building immediately and call 911 and Southwest Gas at 877-860-6020 from outside before calling a plumber.",
     category: "causes-signs",
   },
   {
     question:
       "Should I call a plumber or Southwest Gas for a gas line problem in Henderson?",
     answer:
-      "If you smell gas or suspect an active leak, call Southwest Gas at 1-800-935-4748 from outside your home first. Southwest Gas is responsible for the line up to your meter. Once the area is declared safe, call Red Carpet Plumbing at (702) 567-9172 to inspect, locate, and repair the gas line from the meter into your home or business. For non-emergency gas line work such as appliance hookups, inspections, or permitted extensions, call Red Carpet Plumbing directly.",
+      "If you smell gas or suspect an active leak, call 911 and Southwest Gas at 877-860-6020 from outside your home first. Southwest Gas is responsible for the line up to your meter. Once the area is declared safe, call Red Carpet Plumbing at (702) 567-9172 to inspect, locate, and repair the gas line from the meter into your home or business. For non-emergency gas line work such as appliance hookups, inspections, or permitted extensions, call Red Carpet Plumbing directly.",
     category: "the-service",
   },
   {

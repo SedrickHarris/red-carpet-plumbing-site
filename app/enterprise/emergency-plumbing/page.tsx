@@ -62,7 +62,7 @@ const ENT_EMERGENCY_FAQS: FaqItem[] = [
     question:
       "What should I do while waiting for an emergency plumber in Enterprise?",
     answer:
-      "Shut off the water at the nearest shutoff valve or at your main supply if a pipe has burst or a major leak is active. If you suspect a gas issue, leave the building and call your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
+      "Shut off the water at the nearest shutoff valve or at your main supply if a pipe has burst or a major leak is active. If you suspect a gas issue, leave the building and call 911 and your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
     category: "emergency",
   },
   // FLAG: source-site claim (emergency availability) in this answer — verify before final launch.
@@ -154,7 +154,7 @@ const COMMON_PROBLEMS: {
   {
     // FLAG: verify gas line scope before publishing.
     label: "Gas line issues",
-    body: "If you smell gas in your Enterprise home, leave the building immediately and call your gas company. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line issues under NV License #048585A.",
+    body: "If you smell gas in your Enterprise home, leave the building immediately and call 911 and your gas company. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line issues under NV License #048585A.",
   },
 ];
 
@@ -194,7 +194,7 @@ const EMERGENCY_SERVICES: {
   // FLAG: verify gas line scope before publishing.
   {
     before:
-      "Gas line emergency response (leave building and call gas company first)",
+      "Gas line emergency response (leave building and call 911 and the gas company first)",
   },
   { before: "Commercial emergency plumbing response throughout Enterprise" },
 ];
@@ -207,7 +207,7 @@ const WHAT_TO_DO = [
   },
   {
     label: "If you smell gas, leave immediately",
-    body: "Do not use any electrical switches, open flames, or anything that could cause a spark. Leave the building, move away from the property, and call your gas company from a safe location. Call Red Carpet Plumbing after the gas company has assessed the situation.",
+    body: "Do not use any electrical switches, open flames, or anything that could cause a spark. Leave the building, move away from the property, and call 911 and your gas company from a safe location. Call Red Carpet Plumbing after the gas company has assessed the situation.",
   },
   {
     label: "Do not use electricity near standing water",

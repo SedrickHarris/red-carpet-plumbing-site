@@ -7,7 +7,7 @@
 // - "4.8-star rated" in the hero subheading: visible text only, matching the
 //   sibling pages. Deliberately NOT expressed as rating or review schema: no
 //   verified review count or source has been provided.
-// - Southwest Gas number 1-800-935-4748 and the gas utility responsibility note
+// - 911 and Southwest Gas number 877-860-6020 and the gas utility responsibility note
 //   (reused from the Henderson gas page), the pressure test on every connection
 //   claims, and the permit sentences (services card, FAQs, process step).
 // FLAG comments appear only in source. No FLAG text appears in any visible
@@ -82,8 +82,8 @@ const SAFETY_PANEL = {
   steps: [
     "Do not turn any electrical switches on or off. Do not use a phone inside the building.",
     "Leave the building immediately. Leave the door open as you exit.",
-    // FLAG: VERIFY Southwest Gas number and gas utility responsibility note before publishing.
-    "Move away from the building and call Southwest Gas at 1-800-935-4748 from a safe location.",
+    // FLAG: VERIFY 911 and Southwest Gas 877-860-6020 against swgas.com/en/contact-us before publishing.
+    "Move away from the building and call 911 and Southwest Gas at 877-860-6020 from a safe location.",
     "Do not re-enter the building until Southwest Gas has cleared the area.",
     "Once the area is declared safe, call Red Carpet Plumbing at (702) 567-9172 to inspect and repair the gas line.",
   ],
@@ -94,7 +94,7 @@ const SAFETY_PANEL = {
 // Direct answer.
 const DIRECT_ANSWER = {
   heading: "Gas Line Services in Summerlin, and What to Do First",
-  p1: "A gas smell, a hissing sound near a gas line, a gas appliance that burns poorly, or a gas bill that climbs without a change in use can point to a gas line problem. If you smell gas, leave the building and call Southwest Gas first. Once the area is cleared, Red Carpet Plumbing inspects, repairs, and pressure tests the gas line from the meter into your home or business.",
+  p1: "A gas smell, a hissing sound near a gas line, a gas appliance that burns poorly, or a gas bill that climbs without a change in use can point to a gas line problem. If you smell gas, leave the building and call 911 and Southwest Gas first. Once the area is cleared, Red Carpet Plumbing inspects, repairs, and pressure tests the gas line from the meter into your home or business.",
   // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
   p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
@@ -103,7 +103,7 @@ const DIRECT_ANSWER = {
 
 // Problems list.
 const PROBLEMS_HEADING = "Warning Signs of a Gas Line Problem in Summerlin";
-const PROBLEMS_INTRO = "If you notice any of the following, treat it seriously. A smell of gas means leave first, then call Southwest Gas.";
+const PROBLEMS_INTRO = "If you notice any of the following, treat it seriously. A smell of gas means leave first, then call 911 and Southwest Gas.";
 const PROBLEMS = [
   "Smell of rotten eggs or sulfur near a gas appliance, meter, or along a buried line path",
   "Hissing or whistling sound near a gas appliance, connection, or meter",
@@ -186,7 +186,7 @@ const DECISION_BLOCKS: { title: string; body: string }[] = [
 // Mid-page CTA band (charcoal).
 const MID_CTA = {
   headline: "Gas Line Question at Your Summerlin Property?",
-  body: "Red Carpet Plumbing handles gas line inspection, repair, installation, and appliance hookups throughout Summerlin. If you smell gas, leave and call Southwest Gas first. For everything else, call now or request service online.",
+  body: "Red Carpet Plumbing handles gas line inspection, repair, installation, and appliance hookups throughout Summerlin. If you smell gas, leave and call 911 and Southwest Gas first. For everything else, call now or request service online.",
 };
 
 // Process. Single source for the visible steps and the HowTo schema.
@@ -195,7 +195,7 @@ const PROCESS_INTRO = "This is our standard process for gas line service in Summ
 const PROCESS_STEPS: { name: string; body: string }[] = [
   {
     name: "If you smell gas, leave first.",
-    body: "If you smell gas, leave the building and call Southwest Gas from outside before you call us. For other gas line concerns, call (702) 567-9172 and describe what you are seeing.",
+    body: "If you smell gas, leave the building and call 911 and Southwest Gas from outside before you call us. For other gas line concerns, call (702) 567-9172 and describe what you are seeing.",
   },
   // FLAG: VERIFY pressure testing claim before publishing.
   {
@@ -247,15 +247,15 @@ const AREAS_CROSS_LINKS: LinkSeg[] = ["We also provide gas line plumbing in ", {
 
 // FAQs. Single source for the visible accordion and the FAQPage schema.
 const FAQS: FaqItem[] = [
-  // FLAG: VERIFY Southwest Gas number and gas utility responsibility note before publishing.
+  // FLAG: VERIFY 911 and Southwest Gas 877-860-6020 against swgas.com/en/contact-us before publishing.
   {
     question: "Should I call a plumber or Southwest Gas for a gas line problem in Summerlin?",
-    answer: "If you smell gas, leave the building and call Southwest Gas from a safe location first. Southwest Gas is responsible for the line up to your meter. Once the area is cleared, call Red Carpet Plumbing to inspect and repair the gas line from the meter into your home or business.",
+    answer: "If you smell gas, leave the building and call 911 and Southwest Gas from a safe location first. Southwest Gas is responsible for the line up to your meter. Once the area is cleared, call Red Carpet Plumbing to inspect and repair the gas line from the meter into your home or business.",
     category: "the-service",
   },
   {
     question: "How do I know if I have a gas leak?",
-    answer: "Common signs are a rotten egg smell, a hissing sound near a gas line, dead vegetation above a buried line, a yellow or flickering appliance flame, and an unexplained rise in your gas bill. Never test for a leak with a flame. If you suspect a leak, leave and call Southwest Gas.",
+    answer: "Common signs are a rotten egg smell, a hissing sound near a gas line, dead vegetation above a buried line, a yellow or flickering appliance flame, and an unexplained rise in your gas bill. Never test for a leak with a flame. If you suspect a leak, leave and call 911 and Southwest Gas.",
     category: "causes-signs",
   },
   {
