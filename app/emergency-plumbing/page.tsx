@@ -73,7 +73,7 @@ const EMERGENCY_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing handle gas line emergencies?",
     answer:
-      "Yes. Red Carpet Plumbing is licensed for gas line work under NV Contractor License #048585A (C-1 Plumbing and Heating). If you smell gas, leave the building immediately and call your gas utility first, then call us for gas line inspection and repair after the area is declared safe.",
+      "Yes. Red Carpet Plumbing is licensed for gas line work under NV Contractor License #048585A (C-1 Plumbing and Heating). If you smell gas, leave the building immediately and call 911 and your gas utility first, then call us for gas line inspection and repair after the area is declared safe.",
     category: "the-service",
   },
   {
@@ -156,7 +156,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
   {
     title: "Gas Line Emergency",
     description:
-      "If you smell gas, leave the building immediately without operating any light switches or electrical devices. Call your gas utility from outside, then call a licensed plumber for gas line inspection and repair. Red Carpet Plumbing is licensed for gas line work under NV #048585A (C-1 Plumbing and Heating).",
+      "If you smell gas, leave the building immediately without operating any light switches or electrical devices. Call 911 and your gas utility from outside, then call a licensed plumber for gas line inspection and repair. Red Carpet Plumbing is licensed for gas line work under NV #048585A (C-1 Plumbing and Heating).",
     href: "/emergency-plumbing/gas-line/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-gas-line-emergency-card.webp",
@@ -217,7 +217,7 @@ const EMERGENCY_STEPS = [
   },
   {
     title: "For Gas Emergencies, Leave Immediately",
-    body: "If you smell gas, do not operate any light switches, appliances, or devices. Leave the building immediately, leave doors open if safe to do so, and call your gas utility from outside. Call Red Carpet Plumbing after the gas utility has made the area safe.",
+    body: "If you smell gas, do not operate any light switches, appliances, or devices. Leave the building immediately, leave doors open if safe to do so, and call 911 and your gas utility from outside. Call Red Carpet Plumbing after the gas utility has made the area safe.",
   },
   {
     title: "Turn Off Electricity Near Flooded Areas",

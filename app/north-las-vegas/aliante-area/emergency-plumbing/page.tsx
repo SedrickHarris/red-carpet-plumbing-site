@@ -87,7 +87,7 @@ const ALIANTE_EMERGENCY_PROBLEMS = [
   },
   {
     label: "Gas line concerns",
-    body: "If you smell gas or suspect a gas line issue, leave the building immediately. Gas line work requires a licensed plumber.",
+    body: "If you smell gas or suspect a gas line issue, leave the building immediately and call 911. Gas line work requires a licensed plumber.",
   },
   {
     label: "Major drain overflows",
@@ -120,7 +120,7 @@ const EMERGENCY_STEPS = [
   },
   {
     name: "For Gas Emergencies, Leave Immediately",
-    body: "If you smell gas, do not operate any light switches, appliances, or devices. Leave the building immediately, leave doors open if it is safe to do so, and call your gas utility from outside. Contact Red Carpet Plumbing after the gas utility has confirmed the area is safe.",
+    body: "If you smell gas, do not operate any light switches, appliances, or devices. Leave the building immediately, leave doors open if it is safe to do so, and call 911 and your gas utility from outside. Contact Red Carpet Plumbing after the gas utility has confirmed the area is safe.",
   },
   {
     name: "Document the Damage",

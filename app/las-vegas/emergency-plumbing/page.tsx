@@ -58,7 +58,7 @@ const LAS_VEGAS_EMERGENCY_FAQS: FaqItem[] = [
     question:
       "What should I do while waiting for an emergency plumber in Las Vegas?",
     answer:
-      "Shut off the water supply at the nearest valve or at your main shutoff if a pipe has burst or a major leak is active. If there is a gas issue, leave the building and call your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
+      "Shut off the water supply at the nearest valve or at your main shutoff if a pipe has burst or a major leak is active. If there is a gas issue, leave the building and call 911 and your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
     category: "emergency",
   },
   {
@@ -122,7 +122,7 @@ const LAS_VEGAS_EMERGENCY_PROBLEMS = [
   },
   {
     label: "Gas line issues",
-    body: "If you smell gas or suspect a gas line problem, leave the area and call immediately. Gas line work requires a licensed plumber.",
+    body: "If you smell gas or suspect a gas line problem, leave the area and call 911 immediately. Gas line work requires a licensed plumber.",
   },
   {
     label: "Major drain clogs and overflows",

@@ -161,7 +161,7 @@ const LV_LEAK_SERVICES: {
   },
   {
     label: "Gas line leak detection",
-    body: "If you smell gas, leave the building immediately and call your gas utility. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under NV License #048585A.",
+    body: "If you smell gas, leave the building immediately and call 911 and your gas utility. After the utility has assessed the situation, Red Carpet Plumbing can inspect and repair gas line leaks under NV License #048585A.",
   },
   {
     label: "Water supply line repair",

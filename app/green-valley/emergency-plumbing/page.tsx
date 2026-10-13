@@ -105,7 +105,7 @@ const GV_EMERGENCY_SCENARIOS: {
   {
     label: "Gas line emergencies",
     // FLAG: verify gas line scope before publishing.
-    body: "If you smell gas in your Green Valley home, leave the building immediately, do not operate any electrical switches, and call Southwest Gas at 1-800-654-2765 from outside. Once the area is cleared, call Red Carpet Plumbing at (702) 567-9172 for gas line inspection and repair.",
+    body: "If you smell gas in your Green Valley home, leave the building immediately, do not operate any electrical switches, and call 911 and Southwest Gas at 877-860-6020 from outside. Once the area is cleared, call Red Carpet Plumbing at (702) 567-9172 for gas line inspection and repair.",
   },
 ];
 
@@ -122,7 +122,7 @@ const GV_EMERGENCY_SERVICES = [
   "Supply line failure repair at fixtures and appliances",
   "Fixture leak containment and repair",
   // FLAG: verify gas line scope before publishing.
-  "Gas line emergency response (leave building and call gas company first)",
+  "Gas line emergency response (leave building and call 911 and the gas company first)",
   "Emergency drain clearing and main line backup response",
 ];
 

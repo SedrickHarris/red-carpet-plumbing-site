@@ -103,7 +103,7 @@ const LLV_EMERGENCY_SCENARIOS: {
   {
     label: "Gas line emergencies",
     // FLAG: verify gas line scope before publishing.
-    body: "If you smell gas in your Lake Las Vegas home, leave the building immediately without operating any light switches or electrical devices. Call your gas utility from outside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #048585A, C-1 Plumbing and Heating, which covers gas line work.",
+    body: "If you smell gas in your Lake Las Vegas home, leave the building immediately without operating any light switches or electrical devices. Call 911 and your gas utility from outside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #048585A, C-1 Plumbing and Heating, which covers gas line work.",
   },
 ];
 
@@ -117,7 +117,7 @@ const LLV_EMERGENCY_WHAT_TO_DO = [
   },
   {
     label: "If you smell gas, leave immediately",
-    body: "Do not use any electrical switches, open flames, or anything that could cause a spark. Leave the building, move away from the property, and call your gas company from a safe location. Call Red Carpet Plumbing after the gas company has assessed the situation.",
+    body: "Do not use any electrical switches, open flames, or anything that could cause a spark. Leave the building, move away from the property, and call 911 and your gas company from a safe location. Call Red Carpet Plumbing after the gas company has assessed the situation.",
   },
   {
     label: "Do not use electricity near standing water",
@@ -143,7 +143,7 @@ const LLV_EMERGENCY_SERVICES = [
   "Supply line failure repair at fixtures and appliances",
   "Fixture leak containment and repair",
   // FLAG: verify gas line scope before publishing.
-  "Gas line emergency response (leave building and call gas company first)",
+  "Gas line emergency response (leave building and call 911 and the gas company first)",
   "Emergency drain clearing and main line backup response",
 ];
 

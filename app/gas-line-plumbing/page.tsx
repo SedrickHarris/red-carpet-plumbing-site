@@ -32,7 +32,7 @@ const GAS_LINE_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a gas line leak?",
     answer:
-      "The most common sign is a rotten egg or sulfur smell, which is added to natural gas for safety. You may also hear a hissing or whistling sound near a gas appliance or line, notice dead or dying vegetation above a buried gas line, or see a spike in your gas bill without increased usage. If you suspect a leak, leave the building immediately and call Southwest Gas before calling a plumber.",
+      "The most common sign is a rotten egg or sulfur smell, which is added to natural gas for safety. You may also hear a hissing or whistling sound near a gas appliance or line, notice dead or dying vegetation above a buried gas line, or see a spike in your gas bill without increased usage. If you suspect a leak, leave the building immediately and call 911 and Southwest Gas before calling a plumber.",
     category: "causes-signs",
   },
   {
@@ -45,7 +45,7 @@ const GAS_LINE_FAQS: FaqItem[] = [
     question:
       "Should I call a plumber or the gas company for a gas line problem?",
     answer:
-      "If you smell gas or suspect an active leak, call Southwest Gas at 1-800-935-4748 from outside your home first. Once the area is cleared, call a licensed plumber like Red Carpet Plumbing for the inspection, diagnosis, and repair. The gas utility is responsible for the line up to your meter; you are responsible for everything from the meter into your home.",
+      "If you smell gas or suspect an active leak, call 911 and Southwest Gas at 877-860-6020 from outside your home first. Once the area is cleared, call a licensed plumber like Red Carpet Plumbing for the inspection, diagnosis, and repair. The gas utility is responsible for the line up to your meter; you are responsible for everything from the meter into your home.",
     category: "the-service",
   },
   {
@@ -70,7 +70,7 @@ const GAS_LINE_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing handle gas line emergencies?",
     answer:
-      "Yes. Red Carpet Plumbing provides 24/7 emergency service for gas line issues throughout the Las Vegas Valley. If you smell gas, leave the property immediately, call Southwest Gas, and then call us once the area is declared safe. We are licensed for gas line work under NV #048585A and serve Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, and surrounding communities.",
+      "Yes. Red Carpet Plumbing provides 24/7 emergency service for gas line issues throughout the Las Vegas Valley. If you smell gas, leave the property immediately, call 911 and Southwest Gas, and then call us once the area is declared safe. We are licensed for gas line work under NV #048585A and serve Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, and surrounding communities.",
     category: "the-service",
   },
   {
@@ -216,7 +216,7 @@ const LV_GAS_LINE_FACTORS = [
 const GAS_LINE_STEPS = [
   {
     name: "Call and Describe the Issue",
-    body: "Call Red Carpet Plumbing at (702) 567-9172 and describe what you are experiencing. If you smell gas or suspect an active leak, leave the property, call Southwest Gas first, and then call us once the area is declared safe.",
+    body: "Call Red Carpet Plumbing at (702) 567-9172 and describe what you are experiencing. If you smell gas or suspect an active leak, leave the property, call 911 and Southwest Gas first, and then call us once the area is declared safe.",
   },
   {
     name: "Licensed Inspection and Diagnosis",
@@ -464,8 +464,8 @@ export default function GasLinePlumbingPage() {
 
             <div className="mt-8 rounded-2xl border-l-4 border-brand-primary bg-brand-surface-alt p-6 sm:p-8">
               <p className="text-base font-semibold leading-7 text-brand-dark sm:text-lg">
-                If you smell gas, leave immediately and call Southwest Gas at
-                1-800-935-4748 from outside. Once the area is declared safe,
+                If you smell gas, leave immediately and call 911 and Southwest Gas at
+                877-860-6020 from outside. Once the area is declared safe,
                 call Red Carpet Plumbing for a licensed gas line inspection.
               </p>
             </div>

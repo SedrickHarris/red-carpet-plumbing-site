@@ -54,7 +54,7 @@ const HENDERSON_EMERGENCY_FAQS: FaqItem[] = [
     question:
       "What should I do while waiting for an emergency plumber in Henderson?",
     answer:
-      "Shut off the water at the nearest shutoff valve or at your main supply if a pipe has burst or a major leak is active. If you suspect a gas issue, leave the building and call your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
+      "Shut off the water at the nearest shutoff valve or at your main supply if a pipe has burst or a major leak is active. If you suspect a gas issue, leave the building and call 911 and your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
     category: "emergency",
   },
   {
@@ -118,7 +118,7 @@ const HENDERSON_EMERGENCY_PROBLEMS = [
   },
   {
     label: "Gas line emergencies",
-    body: "If you smell gas or suspect a gas line problem, leave the building immediately. Gas line emergencies require a licensed plumber.",
+    body: "If you smell gas or suspect a gas line problem, leave the building immediately and call 911. Gas line emergencies require a licensed plumber.",
   },
   {
     label: "Major drain clogs and overflows",

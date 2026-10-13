@@ -71,7 +71,7 @@ const LV_GAS_LINE_FAQS: FaqItem[] = [
   {
     question: "What are the signs of a gas line leak in Las Vegas?",
     answer:
-      "The most common sign of a gas line leak is a rotten egg or sulfur smell near a gas appliance, line, or meter. Mercaptan is added to natural gas specifically so leaks can be detected by smell. Other signs include a hissing or whistling sound near a gas line or connection, dead or dying patches of vegetation above a buried gas line, and an unexplained spike in your monthly gas bill. If you smell gas, leave the building immediately and call Southwest Gas before calling a plumber.",
+      "The most common sign of a gas line leak is a rotten egg or sulfur smell near a gas appliance, line, or meter. Mercaptan is added to natural gas specifically so leaks can be detected by smell. Other signs include a hissing or whistling sound near a gas line or connection, dead or dying patches of vegetation above a buried gas line, and an unexplained spike in your monthly gas bill. If you smell gas, leave the building immediately and call 911 and Southwest Gas before calling a plumber.",
     category: "causes-signs",
   },
   {
@@ -84,7 +84,7 @@ const LV_GAS_LINE_FAQS: FaqItem[] = [
     question:
       "Should I call the gas company or a plumber for a gas line problem in Las Vegas?",
     answer:
-      "If you smell gas or suspect an active leak, call Southwest Gas at 1-800-935-4748 from outside your home first. Southwest Gas is responsible for the gas line from the street up to and including your meter. Once they clear the area and confirm it is safe, call a licensed plumber like Red Carpet Plumbing for the inspection, repair, and safety test on the lines from the meter into your home and throughout the property.",
+      "If you smell gas or suspect an active leak, call 911 and Southwest Gas at 877-860-6020 from outside your home first. Southwest Gas is responsible for the gas line from the street up to and including your meter. Once they clear the area and confirm it is safe, call a licensed plumber like Red Carpet Plumbing for the inspection, repair, and safety test on the lines from the meter into your home and throughout the property.",
     category: "the-service",
   },
   {
@@ -104,7 +104,7 @@ const LV_GAS_LINE_FAQS: FaqItem[] = [
     question:
       "Does Red Carpet Plumbing handle gas line emergencies in Las Vegas?",
     answer:
-      "Yes. Red Carpet Plumbing provides emergency gas line service throughout Las Vegas. If you smell gas or suspect an active leak, leave the building immediately and call Southwest Gas first. Once the utility clears the area, call us at (702) 567-9172 and we will dispatch a licensed plumber for the inspection, repair, and safety verification. We are licensed for gas line work under NV C-1 License #048585A and serve Las Vegas, Henderson, Summerlin, Paradise, and surrounding communities.",
+      "Yes. Red Carpet Plumbing provides emergency gas line service throughout Las Vegas. If you smell gas or suspect an active leak, leave the building immediately and call 911 and Southwest Gas first. Once the utility clears the area, call us at (702) 567-9172 and we will dispatch a licensed plumber for the inspection, repair, and safety verification. We are licensed for gas line work under NV C-1 License #048585A and serve Las Vegas, Henderson, Summerlin, Paradise, and surrounding communities.",
     category: "the-service",
   },
   {
@@ -122,7 +122,7 @@ const LV_GAS_LINE_FAQS: FaqItem[] = [
 const LV_GAS_LINE_STEPS = [
   {
     name: "Call and describe the issue",
-    body: "Call Red Carpet Plumbing at (702) 567-9172 and describe what you are experiencing. If you smell gas or suspect an active leak, leave the property immediately, call Southwest Gas first, and then call us once the area is declared safe. For non-emergency service, describe the appliance, installation, or inspection you need.",
+    body: "Call Red Carpet Plumbing at (702) 567-9172 and describe what you are experiencing. If you smell gas or suspect an active leak, leave the property immediately, call 911 and Southwest Gas first, and then call us once the area is declared safe. For non-emergency service, describe the appliance, installation, or inspection you need.",
   },
   {
     name: "Licensed inspection and diagnosis",
@@ -232,7 +232,7 @@ const LV_GAS_SERVICES: { title: string; body: string; tail?: LinkSeg[] }[] = [
   {
     // FLAG: VERIFY — 24/7 emergency availability is a source-site claim.
     title: "Emergency Gas Line Service",
-    body: "For gas line emergencies, call (702) 567-9172. If you smell gas or suspect an active leak, leave the building immediately and call Southwest Gas before calling us. Once the utility clears the area, we respond to perform the inspection, repair, and safety test.",
+    body: "For gas line emergencies, call (702) 567-9172. If you smell gas or suspect an active leak, leave the building immediately and call 911 and Southwest Gas before calling us. Once the utility clears the area, we respond to perform the inspection, repair, and safety test.",
     tail: [
       " For all plumbing emergencies in Las Vegas, see our ",
       {
