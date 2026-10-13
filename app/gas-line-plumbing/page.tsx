@@ -38,7 +38,7 @@ const GAS_LINE_FAQS: FaqItem[] = [
   {
     question: "Who is licensed to repair gas lines in Nevada?",
     answer:
-      "In Nevada, gas line repair and installation must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, which authorizes gas line work. Always verify a contractor's license before allowing gas line work on your property.",
+      "In Nevada, gas line repair and installation must be performed by a licensed contractor. Red Carpet Plumbing holds Nevada Contractor License #048585A. Always verify a contractor's license before allowing gas line work on your property.",
     category: "trust",
   },
   {
@@ -301,7 +301,7 @@ const serviceSchema = {
   name: "Gas Line Plumbing",
   serviceType: "Gas Line Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and appliance hookup services for homes and businesses throughout the Las Vegas Valley. Nevada Contractor License #048585A (C-1 Plumbing and Heating).",
+    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and appliance hookup services for homes and businesses throughout the Las Vegas Valley. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -310,7 +310,7 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada C-1 Plumbing and Heating Contractor License",
+      name: "Nevada Contractor License",
       identifier: "048585A",
       issuedBy: {
         "@type": "Organization",
@@ -630,8 +630,7 @@ export default function GasLinePlumbingPage() {
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
                   Red Carpet Plumbing is licensed for gas line work throughout
-                  the Las Vegas Valley. NV Contractor License #048585A (C-1
-                  Plumbing and Heating).
+                  the Las Vegas Valley. NV Contractor License #048585A.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4">

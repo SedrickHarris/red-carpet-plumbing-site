@@ -74,7 +74,7 @@ const ALIANTE_FAQS: FaqItem[] = [
     question:
       "Is Red Carpet Plumbing licensed to work in the Aliante area of North Las Vegas?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including North Las Vegas and the Aliante area.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including North Las Vegas and the Aliante area.",
     category: "trust",
   },
   {
@@ -226,7 +226,7 @@ const ALIANTE_AREAS = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
@@ -296,7 +296,7 @@ const plumberSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    name: "Nevada Contractor License",
     identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
@@ -425,8 +425,7 @@ export default function AlianteAreaPlumbingPage() {
                 community. Aliante is a master-planned community within the City
                 of North Las Vegas, and Red Carpet Plumbing has been serving
                 homes throughout North Las Vegas, including Aliante, for over 40
-                years. We hold Nevada Contractor License #048585A under the C-1
-                Plumbing and Heating classification. For full North Las Vegas area
+                years. We hold Nevada Contractor License #048585A. For full North Las Vegas area
                 plumbing coverage, visit our{" "}
                 <Link
                   href="/north-las-vegas-plumbing-services/"

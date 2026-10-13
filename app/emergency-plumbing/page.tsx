@@ -73,7 +73,7 @@ const EMERGENCY_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing handle gas line emergencies?",
     answer:
-      "Yes. Red Carpet Plumbing is licensed for gas line work under NV Contractor License #048585A (C-1 Plumbing and Heating). If you smell gas, leave the building immediately and call 911 and your gas utility first, then call us for gas line inspection and repair after the area is declared safe.",
+      "Yes. Red Carpet Plumbing is licensed for gas line work under NV Contractor License #048585A. If you smell gas, leave the building immediately and call 911 and your gas utility first, then call us for gas line inspection and repair after the area is declared safe.",
     category: "the-service",
   },
   {
@@ -156,7 +156,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
   {
     title: "Gas Line Emergency",
     description:
-      "If you smell gas, leave the building immediately without operating any light switches or electrical devices. Call 911 and your gas utility from outside, then call a licensed plumber for gas line inspection and repair. Red Carpet Plumbing is licensed for gas line work under NV #048585A (C-1 Plumbing and Heating).",
+      "If you smell gas, leave the building immediately without operating any light switches or electrical devices. Call 911 and your gas utility from outside, then call a licensed plumber for gas line inspection and repair. Red Carpet Plumbing is licensed for gas line work under NV #048585A.",
     href: "/emergency-plumbing/gas-line/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-gas-line-emergency-card.webp",
@@ -305,7 +305,7 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada C-1 Plumbing and Heating Contractor License",
+      name: "Nevada Contractor License",
       identifier: "048585A",
       issuedBy: {
         "@type": "Organization",

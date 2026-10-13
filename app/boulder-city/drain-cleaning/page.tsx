@@ -104,7 +104,7 @@ const BC_DRAIN_FAQS: FaqItem[] = [
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides professional drain cleaning services for homes and businesses in Boulder City, Nevada. From kitchen and bathroom drains to main sewer line clearing and hydro jetting, our licensed plumbers diagnose the source of the problem and clear the blockage completely. Call (702) 567-9172 to schedule service. Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides professional drain cleaning services for homes and businesses in Boulder City, Nevada. From kitchen and bathroom drains to main sewer line clearing and hydro jetting, our licensed plumbers diagnose the source of the problem and clear the blockage completely. Call (702) 567-9172 to schedule service. Nevada Contractor License #048585A.";
 
 const TRUST_STRIP_ITEMS = [
   "Licensed Plumbers, NV #048585A",

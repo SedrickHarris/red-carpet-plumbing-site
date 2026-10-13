@@ -186,7 +186,7 @@ const ALIANTE_LEAK_SIGNS = [
 const ALIANTE_LEAK_WHY = [
   "Local Las Vegas Valley plumbing company familiar with Aliante area homes and the first-service-cycle plumbing conditions common in 2000 to 2008 construction",
   "Non-invasive detection methods that locate leaks before any surface is opened",
-  "Licensed plumbers, NV License #048585A, C-1 Plumbing and Heating",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Detection and repair for copper supply lines, underground lines, wall and ceiling leaks, and slab leaks",
   "Residential plumbing service throughout Aliante and North Las Vegas",

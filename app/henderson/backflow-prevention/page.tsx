@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172: project-established value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating: project-established value;
+// - License #048585A: project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees": source-site claim; confirm
 //   before launch.
@@ -9,7 +9,7 @@
 //   verified review count or source has been provided.
 // - Backflow tester certification is NOT confirmed. This page never claims Red
 //   Carpet Plumbing performs annual backflow testing. Also verify the
-//   documentation step, FAQ 3 "next steps" wording, the C-1 installation
+//   documentation step, FAQ 3 "next steps" wording, the installation
 //   authority, and the irrigation, RPZ, DCVA and pressure vacuum breaker
 //   statements.
 // FLAG comments appear only in source. No FLAG text appears in any visible
@@ -93,7 +93,7 @@ const DIRECT_ANSWER = {
   p1: "A backflow preventer protects the public water supply by stopping water from flowing backward into it. Henderson properties with irrigation systems, fire suppression connections, or commercial plumbing commonly need one. Red Carpet Plumbing assesses your property, then installs, repairs, or replaces the device. Call (702) 567-9172 to schedule an assessment.",
   // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
-  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain what your property needs before work begins and provide transparent pricing with no hidden fees.",
+  p2: "Red Carpet Plumbing is a Nevada licensed plumbing contractor (#048585A). We explain what your property needs before work begins and provide transparent pricing with no hidden fees.",
   p3: "Need backflow service in Henderson? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get on the schedule.",
 };
 
@@ -209,7 +209,7 @@ const PROCESS_STEPS: { name: string; body: string }[] = [
 const WHY_CHOOSE_HEADING = "Why Henderson Property Owners Choose Red Carpet Plumbing";
 const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY license #048585A before publishing.
-  "Licensed Nevada plumbers, NV License #048585A, C-1 Plumbing and Heating",
+  "Licensed Nevada plumbers, NV License #048585A",
   "Residential and commercial backflow device installation, repair, and replacement",
   "Familiar with Henderson's irrigated communities and commercial properties",
   "Clear options explained before work begins",

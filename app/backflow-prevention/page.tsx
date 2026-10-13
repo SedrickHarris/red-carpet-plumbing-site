@@ -70,7 +70,7 @@ const BACKFLOW_FAQS: FaqItem[] = [
   {
     question: "Does Red Carpet Plumbing install backflow preventers?",
     answer:
-      "Yes. Red Carpet Plumbing installs backflow prevention devices for residential and commercial properties throughout the Las Vegas Valley. Installations include irrigation system backflow preventers, commercial containment assemblies, and device replacements for failed or non-compliant units. Nevada Contractor License #048585A (C-1 Plumbing and Heating) covers backflow device installation.",
+      "Yes. Red Carpet Plumbing installs backflow prevention devices for residential and commercial properties throughout the Las Vegas Valley. Installations include irrigation system backflow preventers, commercial containment assemblies, and device replacements for failed or non-compliant units. Red Carpet Plumbing holds Nevada Contractor License #048585A.",
     category: "the-service",
   },
   {
@@ -313,7 +313,7 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada C-1 Plumbing and Heating Contractor License",
+      name: "Nevada Contractor License",
       identifier: "048585A",
       issuedBy: {
         "@type": "Organization",

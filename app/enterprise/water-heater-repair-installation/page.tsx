@@ -409,8 +409,7 @@ export default function EnterpriseWaterHeaterPage() {
               <p className="mt-4 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Enterprise, Nevada and the Las Vegas Valley. We hold
-                Nevada Contractor License #048585A under the C-1 Plumbing and
-                Heating classification. We have been serving the Las Vegas
+                Nevada Contractor License #048585A. We have been serving the Las Vegas
                 Valley, including Enterprise, for over 40 years.
               </p>
               <p className="mt-4 text-base leading-7 text-brand-dark/80">

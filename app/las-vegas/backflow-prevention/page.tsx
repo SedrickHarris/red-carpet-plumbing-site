@@ -34,8 +34,8 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 //     service is advertised. FLAG comments mark each annual-testing reference.
 //   - "Transparent Pricing, No Hidden Fees" trust items + Why-Choose bullet —
 //     source-site claims, VERIFY.
-//   - License #048585A / C-1 classification — verified business claim; C-1
-//     authorizes device installation (distinct from tester certification).
+//   - License #048585A — verified business claim; confirm the
+//     installation wording (distinct from tester certification).
 //
 // Las Vegas cluster pattern: 5 separate JsonLd blocks WebPage -> BreadcrumbList
 // -> Service -> HowTo -> FAQPage. areaServed `City` (Las Vegas) -> `State`
@@ -154,13 +154,13 @@ const LV_BACKFLOW_STEPS = [
   },
 ];
 
-// FLAG: VERIFY before publishing — license number, C-1 classification, and
+// FLAG: VERIFY before publishing — license number, and
 // transparent pricing are source-site claims. The Why-Choose list claims
 // installation/assessment/repair/replacement only (no annual testing); confirm
 // tester certification before advertising annual testing as a service.
 const WHY_CHOOSE = [
   "Local Las Vegas plumbing company familiar with LVVWD backflow compliance requirements and Clark County cross-connection control rules",
-  "Licensed plumbers (NV License #048585A, C-1 Plumbing and Heating) authorized for backflow device installation",
+  "Licensed plumbers (NV License #048585A)",
   "Residential and commercial backflow prevention service throughout Las Vegas",
   "Full service: assessment, installation (PVB, DCVA, RPZ), repair, replacement, and compliance documentation",
   "Transparent pricing with no hidden fees",

@@ -18,7 +18,7 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // approved brief and shown on this page. Each instance carries an inline FLAG:
 //   - 24/7 emergency water heater availability (hero sub-label) — source-site
 //   - "Over 40 years" serving the area — verify before publishing
-// License #048585A (C-1 Plumbing and Heating) is the established project value.
+// License #048585A is the established project value.
 // Schema follows the brief: Service.areaServed uses Place -> AdministrativeArea
 // (Clark County) -> State (Nevada), NOT City, because Paradise is unincorporated
 // Clark County. No AggregateRating. No standalone LocalBusiness schema.
@@ -102,7 +102,7 @@ const HERO_SUBHEADING =
   "Red Carpet Plumbing provides water heater repair and installation for homes and businesses throughout Paradise, NV. Las Vegas Valley hard water is among the most demanding in the country for water heater performance, causing sediment to accumulate faster and anode rods to deplete sooner than in most cities. When your water heater stops producing hot water, makes unusual noises, produces rust-colored water, or has reached the end of its service life, call us for an honest assessment and clear options.";
 
 const HERO_TRUST_ITEMS = [
-  "Licensed: Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Licensed: Nevada Contractor License #048585A",
   "Residential and commercial water heater service in Paradise",
   "All installations to current Clark County plumbing code",
   "4.8-star rating, 81 Google reviews",
@@ -155,7 +155,7 @@ const WATER_HEATER_SERVICES = [
   },
   {
     label: "Gas and Electric Water Heater Service",
-    body: "We service both gas and electric tank and tankless water heaters. All gas line work is performed under Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    body: "We service both gas and electric tank and tankless water heaters. All gas line work is performed under Nevada Contractor License #048585A.",
   },
 ];
 
@@ -285,7 +285,7 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+      name: "Nevada Contractor License #048585A",
     },
     // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
     aggregateRating: {

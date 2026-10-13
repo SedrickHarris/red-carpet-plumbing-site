@@ -106,7 +106,7 @@ const BC_EMERGENCY_FAQS: FaqItem[] = [
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides emergency plumbing service for homes and businesses in Boulder City, Nevada. Whether you are dealing with a burst pipe, galvanized line failure, sewer backup, water heater failure, or slab leak, our licensed plumbers are ready to help. Call (702) 567-9172 to reach a plumber now. Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides emergency plumbing service for homes and businesses in Boulder City, Nevada. Whether you are dealing with a burst pipe, galvanized line failure, sewer backup, water heater failure, or slab leak, our licensed plumbers are ready to help. Call (702) 567-9172 to reach a plumber now. Nevada Contractor License #048585A.";
 
 const TRUST_STRIP_ITEMS = [
   "NV Licensed Plumbers, #048585A",
@@ -154,7 +154,7 @@ const BC_EMERGENCY_PROBLEMS: {
   {
     label: "Gas line emergencies",
     // FLAG: verify gas line scope before publishing.
-    body: "If you smell gas in your Boulder City home, leave the building immediately and call 911 and your gas utility. Do not use electrical switches, open flames, or phones inside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #048585A, C-1 Plumbing and Heating, which covers gas line work.",
+    body: "If you smell gas in your Boulder City home, leave the building immediately and call 911 and your gas utility. Do not use electrical switches, open flames, or phones inside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #048585A.",
   },
 ];
 

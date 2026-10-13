@@ -76,7 +76,7 @@ const ENTERPRISE_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed to work in Enterprise, NV?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Enterprise.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Enterprise.",
     category: "trust",
   },
   {
@@ -225,7 +225,7 @@ const ENTERPRISE_AREAS = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
@@ -242,7 +242,7 @@ const ENTERPRISE_CONTEXT = [
   },
   {
     title: "Commercial Plumbing Along the 215 Beltway",
-    body: "The 215 Beltway corridor through Enterprise and the Southwest Las Vegas area contains a significant concentration of commercial parks, warehouse and distribution facilities, retail developments, and light industrial properties. These properties require licensed commercial plumbing services including water heater systems, backflow prevention devices, floor drain maintenance, and supply line service. Red Carpet Plumbing provides licensed commercial plumbing throughout Enterprise and the Southwest Las Vegas commercial corridor under Nevada Contractor License #048585A, C-1 Plumbing and Heating classification.",
+    body: "The 215 Beltway corridor through Enterprise and the Southwest Las Vegas area contains a significant concentration of commercial parks, warehouse and distribution facilities, retail developments, and light industrial properties. These properties require licensed commercial plumbing services including water heater systems, backflow prevention devices, floor drain maintenance, and supply line service. Red Carpet Plumbing provides licensed commercial plumbing throughout Enterprise and the Southwest Las Vegas commercial corridor under Nevada Contractor License #048585A.",
   },
 ];
 
@@ -294,7 +294,7 @@ const plumberSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    name: "Nevada Contractor License",
     identifier: "048585A",
     issuedBy: {
       "@type": "Organization",

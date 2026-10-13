@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 };
 
 const NLV_SLAB_TRUST = [
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "Non-Invasive Slab Leak Detection",
   "All Repair Options Explained",
   "Serving North Las Vegas and the Las Vegas Valley",
@@ -307,7 +307,7 @@ const serviceSchema = {
   name: "Slab Leak Detection and Repair in North Las Vegas, NV",
   serviceType: "Slab Leak Detection and Repair",
   description:
-    "Red Carpet Plumbing provides non-invasive slab leak detection and repair for homes in North Las Vegas, NV. Acoustic sensors, pressure testing, and thermal imaging locate leaks without demolition. Repair options include spot repair, pipe rerouting, and epoxy pipe lining. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides non-invasive slab leak detection and repair for homes in North Las Vegas, NV. Acoustic sensors, pressure testing, and thermal imaging locate leaks without demolition. Repair options include spot repair, pipe rerouting, and epoxy pipe lining. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",

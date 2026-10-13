@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 
 // Hero trust strip
 const GV_EMERGENCY_TRUST = [
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   // FLAG: source-site claim -- verify before final launch.
   "Emergency plumbing service available",
   // FLAG: source-site claim -- verify before final launch.
@@ -307,7 +307,7 @@ const serviceSchema = {
   name: "Emergency Plumbing in Green Valley, Henderson, NV",
   serviceType: "Emergency Plumbing",
   description:
-    "Red Carpet Plumbing provides emergency plumbing service for homes in Green Valley, Henderson, NV. Burst pipes, slab leaks, Kitec pipe failures, sewer backups, water heater failures, and gas line emergencies handled by licensed plumbers. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides emergency plumbing service for homes in Green Valley, Henderson, NV. Burst pipes, slab leaks, Kitec pipe failures, sewer backups, water heater failures, and gas line emergencies handled by licensed plumbers. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",

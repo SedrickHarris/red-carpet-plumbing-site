@@ -20,7 +20,7 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // project (license #048585A, 24/7 availability, 4.8/81 rating, 40+ years),
 // but this page deliberately uses the conservative wording from the approved
 // brief and does NOT assert rating, review count, or "40 years" here.
-//   - NV License #048585A (C-1 Plumbing and Heating)
+//   - NV License #048585A
 //   - Emergency / 24-7 availability
 //   - Transparent pricing, no hidden fees
 

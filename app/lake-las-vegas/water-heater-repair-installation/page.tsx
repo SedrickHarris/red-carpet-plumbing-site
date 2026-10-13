@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 
 // Hero trust strip. FLAG comments retained per established sibling pattern.
 const LLV_WH_TRUST = [
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   // FLAG: source-site claim -- verify before final launch.
   "Emergency water heater service available",
   // FLAG: source-site claim -- verify before final launch.
@@ -131,7 +131,7 @@ const LLV_WH_SERVICES = [
   {
     label: "Gas and electric water heater service",
     // FLAG: verify gas line scope before publishing.
-    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    body: "We service both gas and electric water heaters including tank and tankless models. All gas line work is performed under Nevada Contractor License #048585A.",
   },
 ];
 
@@ -293,7 +293,7 @@ const serviceSchema = {
   name: "Water Heater Repair and Installation in Lake Las Vegas, Henderson, NV",
   serviceType: "Water Heater Repair and Installation",
   description:
-    "Red Carpet Plumbing provides water heater repair and installation for homes in Lake Las Vegas, Henderson, NV. Tank water heater repair and replacement, tankless water heater installation, sediment flush and maintenance, anode rod replacement, and thermal expansion tank installation. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides water heater repair and installation for homes in Lake Las Vegas, Henderson, NV. Tank water heater repair and replacement, tankless water heater installation, sediment flush and maintenance, anode rod replacement, and thermal expansion tank installation. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",

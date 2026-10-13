@@ -1,7 +1,7 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 in serviceSchema.provider — project-established
 //   value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating — verified business claim.
+// - License #048585A — verified business claim.
 // - "Transparent pricing, no hidden fees" in the hero ctaNote and the Section 8
 //   checklist — source-site claim; confirm documentation before launch.
 // FLAG comments appear only in source. No FLAG text appears in any visible
@@ -213,7 +213,7 @@ const NLV_TOILET_STEPS = [
 const NLV_TOILET_WHY = [
   "Local Las Vegas Valley plumbing company familiar with North Las Vegas housing stock and hard water conditions",
   "Transparent assessment of repair vs. replacement before any work is recommended",
-  "Licensed plumbers, NV License #048585A, C-1 Plumbing and Heating",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Toilet repair and installation service throughout North Las Vegas",
 ];

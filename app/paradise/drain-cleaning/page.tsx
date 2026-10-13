@@ -18,7 +18,7 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // approved brief and shown on this page. Each instance carries an inline FLAG:
 //   - 24/7 emergency drain availability (hero sub-label) — source-site claim
 //   - "Over 40 years" serving the area — verify before publishing
-// License #048585A (C-1 Plumbing and Heating) is the established project value.
+// License #048585A is the established project value.
 // Schema follows the brief: Service.areaServed uses Place -> AdministrativeArea
 // (Clark County) -> State (Nevada), NOT City, because Paradise is unincorporated
 // Clark County. No AggregateRating. No standalone LocalBusiness schema.
@@ -73,7 +73,7 @@ const PARADISE_DRAIN_FAQS: FaqItem[] = [
     question:
       "Does Red Carpet Plumbing clear restaurant and commercial grease drain lines near the Strip?",
     answer:
-      "Yes. Red Carpet Plumbing provides commercial drain clearing for restaurants, hotel kitchens, bars, and commercial food service properties throughout Paradise including the Strip corridor. Commercial grease drain lines require specialized clearing methods and regular maintenance. Red Carpet Plumbing holds Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+      "Yes. Red Carpet Plumbing provides commercial drain clearing for restaurants, hotel kitchens, bars, and commercial food service properties throughout Paradise including the Strip corridor. Commercial grease drain lines require specialized clearing methods and regular maintenance. Red Carpet Plumbing holds Nevada Contractor License #048585A.",
     category: "the-service",
   },
   {
@@ -100,7 +100,7 @@ const HERO_SUBHEADING =
   "Red Carpet Plumbing provides professional drain cleaning for homes and businesses throughout Paradise, NV. Las Vegas Valley hard water causes mineral deposits to bond with grease and soap residue inside drain lines faster than in most cities. Whether you have a slow kitchen drain, a recurring bathroom clog, a restaurant grease line backup near the Strip, or a main line blockage, our licensed plumbers clear it completely. Call us or request service online.";
 
 const HERO_TRUST_ITEMS = [
-  "Licensed: Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Licensed: Nevada Contractor License #048585A",
   "Residential and commercial drain cleaning in Paradise",
   "4.8-star rating, 81 Google reviews",
   // FLAG: VERIFY "over 40 years" before publishing.
@@ -283,7 +283,7 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+      name: "Nevada Contractor License #048585A",
     },
     // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
     aggregateRating: {

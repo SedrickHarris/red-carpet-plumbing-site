@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172: project-established value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating: project-established value;
+// - License #048585A: project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees": source-site claim; confirm
 //   before launch.
@@ -100,7 +100,7 @@ const DIRECT_ANSWER = {
   p1: "A gas smell, a hissing sound near a gas line, a gas appliance that burns poorly, or a gas bill that climbs without a change in use can point to a gas line problem. If you smell gas, leave the building and call 911 and Southwest Gas first. Once the area is cleared, Red Carpet Plumbing inspects, repairs, and pressure tests the gas line from the meter into your Paradise home or business.",
   // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
-  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
+  p2: "Red Carpet Plumbing is a Nevada licensed plumbing contractor (#048585A). We explain your options before work begins and provide transparent pricing with no hidden fees.",
   p3: "Need gas line service in Paradise? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get on the schedule.",
 };
 
@@ -224,7 +224,7 @@ const PROCESS_STEPS: { name: string; body: string }[] = [
 const WHY_CHOOSE_HEADING = "Why Paradise Property Owners Choose Red Carpet Plumbing";
 const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY license #048585A before publishing.
-  "Licensed Nevada plumbers, NV License #048585A, C-1 Plumbing and Heating",
+  "Licensed Nevada plumbers, NV License #048585A",
   // FLAG: VERIFY pressure testing claim before publishing.
   "Safety-first process with pressure testing on completed gas line work",
   "Service for older homes, multi-unit buildings, and commercial properties in Paradise",

@@ -37,7 +37,7 @@ const ABOUT_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, which covers residential and commercial plumbing and heating work in Nevada. Licensed plumbers handle every job.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A. Licensed plumbers handle every job.",
     category: "trust",
   },
   {
@@ -80,7 +80,7 @@ const TRUST_PILLARS = [
   },
   {
     title: "Licensed Plumbers",
-    body: "Every job Red Carpet Plumbing takes on is handled by licensed plumbing professionals. NV Contractor License #048585A (C-1 Plumbing and Heating).",
+    body: "Every job Red Carpet Plumbing takes on is handled by licensed plumbing professionals. NV Contractor License #048585A.",
   },
   {
     title: "24/7 Emergency Service",
@@ -183,7 +183,7 @@ const plumberSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    name: "Nevada Contractor License",
     identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
@@ -262,9 +262,7 @@ export default function AboutPage() {
             <p className="text-lg leading-8 text-brand-dark/80">
               Red Carpet Plumbing is a local, family-owned plumbing company
               serving homes and businesses throughout the Las Vegas Valley. The
-              company holds Nevada Contractor License #048585A under the C-1
-              Plumbing and Heating classification, covering residential and
-              commercial plumbing and heating work in Nevada. Services include
+              company holds Nevada Contractor License #048585A. Services include
               emergency plumbing, drain cleaning, leak detection and repair,
               water heater repair and installation, slab leak detection and
               repair, sewer line services, repiping, gas line plumbing, and
@@ -501,8 +499,7 @@ export default function AboutPage() {
             <div className="mt-8 space-y-6">
               <p className="text-base leading-7 text-brand-dark/80 sm:text-lg">
                 Red Carpet Plumbing holds Nevada Contractor License
-                #048585A under the C-1 Plumbing and Heating
-                classification, issued by the State of Nevada Contractors
+                #048585A, issued by the State of Nevada Contractors
                 Board. Every plumbing job is handled by licensed
                 professionals.
               </p>

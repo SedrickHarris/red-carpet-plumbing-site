@@ -104,7 +104,7 @@ const ENTERPRISE_REPIPE_FAQS: FaqItem[] = [
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides whole-house and partial repiping services throughout Enterprise, Nevada and the Southwest Las Vegas area. Whether your home has first-service-cycle copper supply lines showing signs of hard water wear, Kitec plumbing with failing brass fittings, or polybutylene pipe that has degraded over time, our licensed plumbers evaluate the full system and recommend the right solution. Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides whole-house and partial repiping services throughout Enterprise, Nevada and the Southwest Las Vegas area. Whether your home has first-service-cycle copper supply lines showing signs of hard water wear, Kitec plumbing with failing brass fittings, or polybutylene pipe that has degraded over time, our licensed plumbers evaluate the full system and recommend the right solution. Nevada Contractor License #048585A.";
 
 const TRUST_STRIP_ITEMS = [
   "Licensed Plumbers, NV #048585A",
@@ -196,7 +196,7 @@ const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Clark County permits pulled and inspections scheduled",
   "Transparent pricing, no hidden fees",
@@ -744,9 +744,7 @@ export default function EnterpriseRePipingPage() {
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Enterprise and the Southwest Las Vegas area. We hold
-                Nevada Contractor License #048585A under the C-1 Plumbing and
-                Heating classification, covering residential and commercial
-                plumbing work throughout Clark County including Enterprise.
+                Nevada Contractor License #048585A.
               </p>
             </div>
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">

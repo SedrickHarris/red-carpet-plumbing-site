@@ -204,7 +204,7 @@ const ALIANTE_SLAB_WHY = [
   "Local Las Vegas Valley plumbing company familiar with Aliante area homes and the first-service-cycle copper plumbing conditions common in 2000 to 2008 construction",
   "Non-invasive detection methods that locate slab leaks before any concrete cutting begins",
   "All repair options explained clearly before any work starts",
-  "Licensed plumbers, NV License #048585A, C-1 Plumbing and Heating",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Slab leak detection and repair service throughout Aliante and North Las Vegas",
 ];

@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 — project-established value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating — project-established value;
+// - License #048585A — project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees" — source-site claim, present in
 //   the approved Section 8 copy; confirm documentation.
@@ -89,7 +89,7 @@ const DIRECT_ANSWER_BODY =
   "Recurring leaks, low water pressure, or known problem pipe materials like polybutylene or Kitec are common reasons North Las Vegas homeowners consider repiping. Red Carpet Plumbing assesses your plumbing system, explains whether a whole-house or partial repipe fits your situation, and completes the work with PEX or copper. Call (702) 567-9172 to schedule an assessment.";
 
 const TRUST_BODY =
-  "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A) rated 4.8 stars. Every repiping job includes a full system assessment, an upfront explanation of your material and approach options, and transparent pricing with no hidden fees.";
+  "Red Carpet Plumbing is a Nevada licensed plumbing contractor (#048585A) rated 4.8 stars. Every repiping job includes a full system assessment, an upfront explanation of your material and approach options, and transparent pricing with no hidden fees.";
 
 // Note: this page says "same-day evaluations", while FAQ 9 says "same-day
 // repiping service". Both are approved as written and are deliberately NOT

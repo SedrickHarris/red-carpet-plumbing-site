@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 — project-established value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating — project-established value;
+// - License #048585A — project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees" — source-site claim, present in
 //   the approved Section 8 copy; confirm documentation.
@@ -86,7 +86,7 @@ const REPAIR_VS_REPLACEMENT_BODY =
   "Spot repair is the right fix when the damage is limited to one section or joint and the rest of the pipe system is sound. Full or partial replacement is the better choice when a home has polybutylene pipe, galvanized pipe that has corroded enough to restrict flow, or copper pipe with recurring pinhole leaks in more than one location. Red Carpet Plumbing inspects the full system and explains which option fits your home before any work begins.";
 
 const TRUST_BODY =
-  "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A) rated 4.8 stars. Every water pipe job includes a full inspection, an upfront explanation of your repair or replacement options, and transparent pricing with no hidden fees.";
+  "Red Carpet Plumbing is a Nevada licensed plumbing contractor (#048585A) rated 4.8 stars. Every water pipe job includes a full inspection, an upfront explanation of your repair or replacement options, and transparent pricing with no hidden fees.";
 
 const URGENCY_BODY =
   "Need water pipe repair in North Las Vegas? Same-day service is available, subject to scheduling. Call (702) 567-9172 to reach Red Carpet Plumbing and get an inspection scheduled.";

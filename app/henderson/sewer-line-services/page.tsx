@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 — project-established value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating — project-established value;
+// - License #048585A — project-established value;
 //   confirm before launch.
 // - "Licensed and Insured Plumbers" trust strip claim — confirm documentation.
 // - "Transparent Pricing, No Hidden Fees" / "Upfront Pricing" — source-site

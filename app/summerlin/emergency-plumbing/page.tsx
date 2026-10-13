@@ -20,7 +20,7 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 //   - 24/7 emergency availability (hero trust item + hero sub-label + Step 1 +
 //     mid-page CTA + FAQ Q2 + final CTA) — source-site claim
 //   - "Over 40 years" serving the area — verify before publishing
-// License #048585A (C-1 Plumbing and Heating) is the established project value.
+// License #048585A is the established project value.
 // Schema follows the brief: Service.areaServed uses Place -> AdministrativeArea
 // (Clark County) -> State (Nevada) per guardrail 7. NOTE: Summerlin spans BOTH
 // the City of Las Vegas and unincorporated Clark County; the visible copy
@@ -115,7 +115,7 @@ const HERO_SUBHEADING =
   "Red Carpet Plumbing provides 24/7 emergency plumbing service throughout Summerlin, NV. Whether you have a burst pipe in one of the original 1990s villages, a slab leak in an older western Summerlin home, or a tankless water heater failure in a newer Summerlin South property, our licensed plumbers respond promptly. Call us any time, day or night.";
 
 const HERO_TRUST_ITEMS = [
-  "Licensed: Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Licensed: Nevada Contractor License #048585A",
   // FLAG: source-site claim (24/7 availability) — verify before final launch.
   "Available 24/7 for plumbing emergencies",
   "4.8-star rating, 81 Google reviews",
@@ -280,7 +280,7 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+      name: "Nevada Contractor License #048585A",
     },
     // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
     aggregateRating: {

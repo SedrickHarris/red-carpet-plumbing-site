@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 — project-established value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating — project-established value;
+// - License #048585A — project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees" — source-site claim, present in
 //   the approved Section 4 and Section 8 copy; confirm documentation.
@@ -80,7 +80,7 @@ const NLV_CONTEXT_BODY =
   "Many North Las Vegas neighborhoods have older clay or cast iron sewer lines that are more prone to root intrusion, cracking, and joint separation over time. Desert soil conditions can also shift and settle around buried lines. Red Carpet Plumbing's licensed plumbers inspect the full line with a camera before recommending a repair, replacement, or trenchless option, so you know exactly what you're dealing with before any work begins.";
 
 const TRUST_BODY =
-  "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A) rated 4.8 stars. Every sewer line job includes a camera inspection, an upfront explanation of your options, and transparent pricing with no hidden fees.";
+  "Red Carpet Plumbing is a Nevada licensed plumbing contractor (#048585A) rated 4.8 stars. Every sewer line job includes a camera inspection, an upfront explanation of your options, and transparent pricing with no hidden fees.";
 
 const URGENCY_BODY =
   "Need sewer line service in North Las Vegas? Same-day service is available, subject to scheduling. Call (702) 567-9172 to reach Red Carpet Plumbing and get an inspection scheduled.";
@@ -157,7 +157,7 @@ const NLV_SEWER_FAQS: FaqItem[] = [
   {
     question: "Are you licensed to do sewer line work in Nevada?",
     answer:
-      "Red Carpet Plumbing holds Nevada C-1 Plumbing and Heating Contractor License #048585A and performs all sewer line work with licensed plumbers.",
+      "Red Carpet Plumbing holds Nevada Contractor License #048585A and performs all sewer line work with licensed plumbers.",
     category: "trust",
   },
   {

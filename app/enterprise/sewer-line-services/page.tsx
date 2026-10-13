@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172: project-established value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating: project-established value;
+// - License #048585A: project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees": source-site claim; confirm
 //   before launch.
@@ -89,7 +89,7 @@ const DIRECT_ANSWER = {
   p1: "Slow drains in several fixtures, sewage odors, and repeat backups are common signs of a sewer line problem in Enterprise homes and businesses. Red Carpet Plumbing finds the cause with a camera inspection, then cleans, repairs, relines, or replaces the line, including trenchless options that limit digging. Call (702) 567-9172 to schedule an inspection.",
   // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
-  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain your options after the camera inspection and provide transparent pricing with no hidden fees.",
+  p2: "Red Carpet Plumbing is a Nevada licensed plumbing contractor (#048585A). We explain your options after the camera inspection and provide transparent pricing with no hidden fees.",
   p3: "Need sewer line service in Enterprise? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get an inspection on the schedule.",
 };
 
@@ -186,7 +186,7 @@ const PROCESS_STEPS: { name: string; body: string }[] = [
 const WHY_CHOOSE_HEADING = "Why Enterprise Property Owners Choose Red Carpet Plumbing";
 const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY license #048585A before publishing.
-  "Licensed Nevada plumbers, NV License #048585A, C-1 Plumbing and Heating",
+  "Licensed Nevada plumbers, NV License #048585A",
   "Camera inspection first, so every recommendation is based on what is actually in your line",
   "Service for both homes and commercial properties in Enterprise and along the 215 Beltway corridor",
   "Clear options explained before work begins, including trenchless repair where it fits",

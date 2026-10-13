@@ -112,7 +112,7 @@ const BC_LEAK_FAQS: FaqItem[] = [
 ];
 
 const HERO_SUBHEADING =
-  "Red Carpet Plumbing provides professional non-invasive leak detection and repair for homes and businesses in Boulder City, Nevada. Whether you have a hidden supply line leak, a slab leak, or a failing galvanized pipe in a historic home, our licensed plumbers locate the source without opening large sections of wall or floor before recommending the right repair. Call (702) 567-9172 to schedule an inspection. Nevada Contractor License #048585A, C-1 Plumbing and Heating.";
+  "Red Carpet Plumbing provides professional non-invasive leak detection and repair for homes and businesses in Boulder City, Nevada. Whether you have a hidden supply line leak, a slab leak, or a failing galvanized pipe in a historic home, our licensed plumbers locate the source without opening large sections of wall or floor before recommending the right repair. Call (702) 567-9172 to schedule an inspection. Nevada Contractor License #048585A.";
 
 const TRUST_STRIP_ITEMS = [
   "NV Licensed Plumbers, #048585A",
@@ -246,7 +246,7 @@ const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY "over 40 years" before publishing.
   "Over 40 years serving the Las Vegas Valley, including Boulder City",
   "Non-invasive leak detection before any repair begins",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Experienced with galvanized pipe failures in Boulder City historic homes",
   "Boulder City permit process handled for projects that require permits",
@@ -681,8 +681,7 @@ export default function BoulderCityLeakDetectionPage() {
               <p className="mt-6 text-lg leading-8 text-brand-dark/80">
                 Red Carpet Plumbing is a local, family-owned plumbing company
                 serving Boulder City and the Las Vegas Valley. We hold Nevada
-                Contractor License #048585A under the C-1 Plumbing and Heating
-                classification. We have been serving the Las Vegas Valley,
+                Contractor License #048585A. We have been serving the Las Vegas Valley,
                 including Boulder City, for over 40 years and are familiar with
                 the aging infrastructure and hard water conditions that affect
                 this community.

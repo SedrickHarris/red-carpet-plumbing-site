@@ -63,7 +63,7 @@ const PARADISE_FAQS: FaqItem[] = [
     question:
       "Does Red Carpet Plumbing handle commercial plumbing near the Las Vegas Strip?",
     answer:
-      "Yes. Red Carpet Plumbing provides commercial plumbing services for businesses, restaurants, and commercial properties throughout Paradise and the Las Vegas Strip corridor. Our license covers commercial plumbing under Nevada Contractor License #048585A, C-1 Plumbing and Heating classification.",
+      "Yes. Red Carpet Plumbing provides commercial plumbing services for businesses, restaurants, and commercial properties throughout Paradise and the Las Vegas Strip corridor. Red Carpet Plumbing holds Nevada Contractor License #048585A.",
     category: "the-service",
   },
   {
@@ -76,7 +76,7 @@ const PARADISE_FAQS: FaqItem[] = [
   {
     question: "Is Red Carpet Plumbing licensed to work in Paradise, NV?",
     answer:
-      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A under the C-1 Plumbing and Heating classification, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Paradise.",
+      "Yes. Red Carpet Plumbing holds Nevada Contractor License #048585A, issued by the State of Nevada Contractors Board. This license covers plumbing work throughout Nevada including Paradise.",
     category: "trust",
   },
   {
@@ -223,7 +223,7 @@ const PARADISE_AREAS = [
 const TRUST_ITEMS = [
   "Over 40 years serving the Las Vegas Valley",
   "Local, family-owned, not a national franchise",
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   "4.8-star rating across 81 Google reviews",
   "Transparent pricing, no hidden fees",
   "24/7 emergency plumbing service",
@@ -292,7 +292,7 @@ const plumberSchema = {
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",
-    name: "Nevada C-1 Plumbing and Heating Contractor License",
+    name: "Nevada Contractor License",
     identifier: "048585A",
     issuedBy: {
       "@type": "Organization",
@@ -411,9 +411,7 @@ export default function ParadisePlumbingServicesPage() {
                 Paradise is an unincorporated Clark County community that
                 includes the Las Vegas Strip corridor and surrounding
                 residential and commercial areas. We hold Nevada Contractor
-                License #048585A under the C-1 Plumbing and Heating
-                classification, covering plumbing work throughout Clark County
-                including Paradise, and have been serving this area for over 40
+                License #048585A and have been serving this area for over 40
                 years.
               </p>
             </div>

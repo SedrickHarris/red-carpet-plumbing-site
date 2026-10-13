@@ -188,7 +188,7 @@ const GV_FAUCET_SINK_WHY = [
   "Local Las Vegas Valley plumbing company familiar with Green Valley homes and the hard water conditions that accelerate faucet and fixture wear",
   "Transparent assessment of repair vs. replacement before any work is recommended",
   "Supply line and shut-off valve inspection included as part of every faucet service in original Green Valley homes",
-  "Licensed plumbers, NV License #048585A, C-1 Plumbing and Heating",
+  "Licensed plumbers, NV License #048585A",
   "Transparent pricing with no hidden fees",
   "Faucet and sink service throughout Green Valley and Henderson",
 ];

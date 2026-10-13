@@ -18,7 +18,7 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // approved brief and shown on this page. Each instance carries an inline FLAG:
 //   - 24/7 emergency leak availability (hero sub-label) — source-site claim
 //   - "Over 40 years" serving the area — verify before publishing
-// License #048585A (C-1 Plumbing and Heating) is the established project value.
+// License #048585A is the established project value.
 // Schema follows the brief: Service.areaServed uses Place -> AdministrativeArea
 // (Clark County) -> State (Nevada), NOT City, because Paradise is unincorporated
 // Clark County. No AggregateRating. No standalone LocalBusiness schema.
@@ -109,7 +109,7 @@ const HERO_SUBHEADING =
   "Red Carpet Plumbing provides non-invasive leak detection and repair for homes and businesses throughout Paradise, NV. Hidden water leaks in Paradise properties are often caused by hard water mineral corrosion, caliche soil movement beneath slab foundations, and aging copper or galvanized supply lines in the area's mid-century residential neighborhoods. Our licensed plumbers use professional detection equipment to locate leaks without unnecessary demolition, then repair them correctly. Call us or request service online.";
 
 const HERO_TRUST_ITEMS = [
-  "Licensed: Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Licensed: Nevada Contractor License #048585A",
   "Non-invasive leak detection for homes and businesses in Paradise",
   "4.8-star rating, 81 Google reviews",
   // FLAG: VERIFY "over 40 years" before publishing.
@@ -317,7 +317,7 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+      name: "Nevada Contractor License #048585A",
     },
     // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
     aggregateRating: {

@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172 — project-established value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating — project-established value;
+// - License #048585A — project-established value;
 //   confirm before launch.
 // - "Emergency Gas Line Response Available" trust strip claim — confirm.
 // - "Transparent Pricing" / "Upfront Pricing, No Hidden Fees" — source-site
@@ -204,7 +204,7 @@ const HENDERSON_GAS_STEPS = [
 // FLAG: VERIFY before publishing — license #048585A and transparent pricing are
 // source-site claims.
 const WHY_CHOOSE_ITEMS = [
-  "Licensed for gas line work in Nevada. Red Carpet Plumbing holds NV Contractor License #048585A, C-1 Plumbing and Heating, which authorizes gas line repair and installation throughout Henderson.",
+  "Licensed for gas line work in Nevada. Red Carpet Plumbing holds NV Contractor License #048585A.",
   "Henderson-specific knowledge. We understand the gas line conditions specific to original Green Valley homes, Henderson's extreme summer heat, CSST connector vulnerabilities, and the outdoor living addition requirements common in Henderson HOA communities.",
   "Safety-first process. We follow the correct safety protocol for gas line work, including not starting gas leak work until the utility has cleared the area, and final pressure testing on every job.",
   "Henderson City permits handled. Gas line work requiring a City of Henderson permit is coordinated with permit application and final inspection included.",
@@ -363,7 +363,7 @@ const serviceSchema = {
   name: "Gas Line Plumbing in Henderson, NV",
   serviceType: "Gas Line Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and appliance hookup for homes and businesses throughout Henderson, NV. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and appliance hookup for homes and businesses throughout Henderson, NV. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -763,7 +763,7 @@ export default function HendersonGasLinePage() {
         <CTASection
           background="red"
           headline={<>Ready to Schedule Gas Line Service<br />in Henderson?</>}
-          body="Red Carpet Plumbing is available for licensed gas line repair, installation, inspection, and appliance hookup throughout Henderson and the Las Vegas Valley. NV License #048585A, C-1 Plumbing and Heating."
+          body="Red Carpet Plumbing is available for licensed gas line repair, installation, inspection, and appliance hookup throughout Henderson and the Las Vegas Valley. NV License #048585A."
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

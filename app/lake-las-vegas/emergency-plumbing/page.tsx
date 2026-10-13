@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 
 // Hero trust strip. FLAG comments retained per established sibling pattern.
 const LLV_EMERGENCY_TRUST = [
-  "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Nevada Contractor License #048585A",
   // FLAG: source-site claim -- verify before final launch.
   "Emergency plumbing service available",
   // FLAG: source-site claim -- verify before final launch.
@@ -103,7 +103,7 @@ const LLV_EMERGENCY_SCENARIOS: {
   {
     label: "Gas line emergencies",
     // FLAG: verify gas line scope before publishing.
-    body: "If you smell gas in your Lake Las Vegas home, leave the building immediately without operating any light switches or electrical devices. Call 911 and your gas utility from outside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #048585A, C-1 Plumbing and Heating, which covers gas line work.",
+    body: "If you smell gas in your Lake Las Vegas home, leave the building immediately without operating any light switches or electrical devices. Call 911 and your gas utility from outside the building. After the area is declared safe, call Red Carpet Plumbing at (702) 567-9172. Red Carpet Plumbing holds NV License #048585A.",
   },
 ];
 
@@ -307,7 +307,7 @@ const serviceSchema = {
   name: "Emergency Plumbing in Lake Las Vegas, Henderson, NV",
   serviceType: "Emergency Plumbing",
   description:
-    "Red Carpet Plumbing provides emergency plumbing service for homes and resort residential properties in Lake Las Vegas, Henderson, NV. Burst pipes, slab leaks, sewer backups, water heater failures, and gas line emergencies handled by licensed plumbers. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    "Red Carpet Plumbing provides emergency plumbing service for homes and resort residential properties in Lake Las Vegas, Henderson, NV. Burst pipes, slab leaks, sewer backups, water heater failures, and gas line emergencies handled by licensed plumbers. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",

@@ -1,6 +1,6 @@
 // FLAG: VERIFY before publishing:
 // - Telephone +17025679172: project-established value; confirm before launch.
-// - License #048585A, C-1 Plumbing and Heating: project-established value;
+// - License #048585A: project-established value;
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees": source-site claim; confirm
 //   before launch.
@@ -81,7 +81,7 @@ const DIRECT_ANSWER = {
   p1: "Low water pressure, rusty or discolored water, water stains, and a water meter that moves when everything is off are common signs of a failing water pipe in Henderson homes. Red Carpet Plumbing finds where the pipe is failing, then repairs the damaged section, replaces it, or recommends repiping when the problem is widespread. Call (702) 567-9172 to schedule an assessment.",
   // FLAG: VERIFY license #048585A before publishing.
   // FLAG: VERIFY transparent pricing claim before publishing.
-  p2: "Red Carpet Plumbing is a Nevada C-1 licensed plumbing contractor (#048585A). We explain repair and replacement options before work begins and provide transparent pricing with no hidden fees.",
+  p2: "Red Carpet Plumbing is a Nevada licensed plumbing contractor (#048585A). We explain repair and replacement options before work begins and provide transparent pricing with no hidden fees.",
   p3: "Need water pipe service in Henderson? Same-day service is available, subject to scheduling. Call (702) 567-9172 to get on the schedule.",
 };
 
@@ -196,7 +196,7 @@ const PROCESS_STEPS: { name: string; body: string }[] = [
 const WHY_CHOOSE_HEADING = "Why Henderson Homeowners Choose Red Carpet Plumbing";
 const WHY_CHOOSE_ITEMS = [
   // FLAG: VERIFY license #048585A before publishing.
-  "Licensed Nevada plumbers, NV License #048585A, C-1 Plumbing and Heating",
+  "Licensed Nevada plumbers, NV License #048585A",
   "Honest repair or replace assessment before any work is recommended",
   "Familiar with Henderson's original Green Valley homes and newer communities",
   "Clear options explained before work begins",

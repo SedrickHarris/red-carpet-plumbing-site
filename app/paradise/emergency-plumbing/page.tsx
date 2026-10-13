@@ -20,7 +20,7 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 //   - 24/7 emergency availability (hero trust item + hero sub-label + Step 1 +
 //     mid-page CTA + FAQ Q2 + final CTA) — source-site claim
 //   - "Over 40 years" serving the area — verify before publishing
-// License #048585A (C-1 Plumbing and Heating) is the established project value.
+// License #048585A is the established project value.
 // Schema follows the brief: Service.areaServed uses Place -> AdministrativeArea
 // (Clark County) -> State (Nevada), NOT City, because Paradise is unincorporated
 // Clark County. No AggregateRating. No sameAs.
@@ -82,7 +82,7 @@ const PARADISE_EMERGENCY_FAQS: FaqItem[] = [
     question:
       "Does Red Carpet Plumbing handle commercial plumbing emergencies near the Las Vegas Strip?",
     answer:
-      "Yes. Red Carpet Plumbing provides commercial emergency plumbing for businesses, restaurants, and commercial properties throughout Paradise including the Strip corridor. Our license covers commercial plumbing under Nevada Contractor License #048585A, C-1 Plumbing and Heating classification.",
+      "Yes. Red Carpet Plumbing provides commercial emergency plumbing for businesses, restaurants, and commercial properties throughout Paradise including the Strip corridor. Red Carpet Plumbing holds Nevada Contractor License #048585A.",
     category: "the-service",
   },
   {
@@ -103,7 +103,7 @@ const HERO_SUBHEADING =
   "Red Carpet Plumbing provides 24/7 emergency plumbing service throughout Paradise, NV and the surrounding Las Vegas Valley. Whether you have a burst pipe near the Strip, a sewer backup at a residential property near UNLV, or a water heater failure anywhere in the Paradise area, our licensed plumbers respond promptly. Call us any time.";
 
 const HERO_TRUST_ITEMS = [
-  "Licensed: Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+  "Licensed: Nevada Contractor License #048585A",
   // FLAG: source-site claim (24/7 availability) — verify before final launch.
   "Available 24/7 for plumbing emergencies",
   "4.8-star rating, 81 Google reviews",
@@ -261,7 +261,7 @@ const serviceSchema = {
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Nevada Contractor License #048585A, C-1 Plumbing and Heating",
+      name: "Nevada Contractor License #048585A",
     },
     // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
     aggregateRating: {
@@ -499,8 +499,7 @@ export default function ParadiseEmergencyPlumbingPage() {
                       >
                         commercial plumbing
                       </Link>{" "}
-                      under Nevada Contractor License #048585A, C-1
-                      classification.
+                      under Nevada Contractor License #048585A.
                     </p>
                   </article>
 

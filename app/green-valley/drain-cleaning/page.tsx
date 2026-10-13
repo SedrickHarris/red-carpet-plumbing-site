@@ -275,7 +275,7 @@ const serviceSchema = {
   name: "Drain Cleaning in Green Valley",
   serviceType: "Drain Cleaning",
   description:
-    "Professional drain cleaning for homes and businesses in Green Valley, Henderson, NV. Kitchen drain cleaning, bathroom drain cleaning, main sewer line cleaning, hydro jetting, and video camera drain inspection. Nevada Contractor License #048585A, C-1 Plumbing and Heating.",
+    "Professional drain cleaning for homes and businesses in Green Valley, Henderson, NV. Kitchen drain cleaning, bathroom drain cleaning, main sewer line cleaning, hydro jetting, and video camera drain inspection. Nevada Contractor License #048585A.",
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
