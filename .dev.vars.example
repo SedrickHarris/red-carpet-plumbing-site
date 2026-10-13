@@ -1,0 +1,14 @@
+# Server-side values for the lead Function. Local use with wrangler pages dev.
+# Copy this file to .dev.vars and fill in values. Never commit .dev.vars.
+CRM_API_BASE_URL=
+CRM_API_VERSION=
+CRM_API_TOKEN=
+CRM_LOCATION_ID=
+CRM_FIELD_CONTACT_METHOD=
+CRM_FIELD_SOURCE_PAGE=
+CRM_FIELD_MARKET=
+CRM_FIELD_FORM_TYPE=
+CRM_FIELD_SERVICE=
+CRM_FIELD_MESSAGE=
+LEAD_ALLOWED_ORIGINS=
+TURNSTILE_SECRET_KEY=
