@@ -30,20 +30,20 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+    "Leak Detection and Repair in Lake Las Vegas, NV",
   // FLAG: approved brief description (~250 chars) exceeds the site's ≤160
   // meta-description standard; kept as approved pending a trim decision.
   description:
-    "Non-invasive leak detection and repair in Lake Las Vegas, Henderson, NV. Red Carpet Plumbing locates hidden water leaks using acoustic sensors, pressure testing, and thermal imaging for Lake Las Vegas resort residential homes. Call (702) 567-9172.",
+    "Non-invasive leak detection and repair in Lake Las Vegas, Henderson with acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/lake-las-vegas/leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+      "Leak Detection and Repair in Lake Las Vegas, NV",
     description:
-      "Non-invasive leak detection for Lake Las Vegas homes. Acoustic sensors, pressure testing, thermal imaging. Copper pipe mineral corrosion expertise. Call (702) 567-9172.",
+      "Non-invasive leak detection and repair in Lake Las Vegas, Henderson with acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/lake-las-vegas/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -264,7 +264,7 @@ const LLV_LEAK_REROUTING = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+  name: "Leak Detection and Repair in Lake Las Vegas, NV",
   description:
     "Non-invasive leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging locate hidden leaks without demolition. Licensed plumbers. Nevada Contractor License #048585A.",
   url: "https://redcarpetplumbing.com/lake-las-vegas/leak-detection-repair/",

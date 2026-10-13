@@ -20,14 +20,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Spring Valley, NV | Red Carpet Plumbing",
   description:
-    "Plumbing services in Spring Valley, NV. Emergency plumbing, water heater repair for Desert Inn and West Sahara area homes. NV #048585A. (702) 567-9172.",
+    "Plumbing services in Spring Valley, NV. Emergency plumbing, water heater repair for Desert Inn and West Sahara area homes. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/spring-valley-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Spring Valley, NV | Red Carpet Plumbing",
     description:
-      "Plumbing services in Spring Valley, NV. Emergency plumbing, water heater repair for Desert Inn and West Sahara area homes. NV #048585A. (702) 567-9172.",
+      "Plumbing services in Spring Valley, NV. Emergency plumbing, water heater repair for Desert Inn and West Sahara area homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

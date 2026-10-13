@@ -33,20 +33,20 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Slab Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+    "Slab Leak Detection and Repair in Lake Las Vegas, NV",
   // FLAG: approved brief description (~235 chars) exceeds the site's ≤160
   // meta-description standard; kept as approved pending a trim decision.
   description:
-    "Non-invasive slab leak detection and repair in Lake Las Vegas, Henderson, NV. Red Carpet Plumbing uses acoustic sensors, pressure testing, and thermal imaging. All repair options explained. Licensed plumbers. Call (702) 567-9172.",
+    "Non-invasive slab leak detection and repair in Lake Las Vegas, Henderson. Acoustic sensors, pressure testing, thermal imaging. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/lake-las-vegas/slab-leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Slab Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+      "Slab Leak Detection and Repair in Lake Las Vegas, NV",
     description:
-      "Non-invasive slab leak detection for Lake Las Vegas homes. Acoustic sensors, pressure testing, thermal imaging. Spot repair, pipe rerouting, and epoxy lining options explained. Licensed plumbers.",
+      "Non-invasive slab leak detection and repair in Lake Las Vegas, Henderson. Acoustic sensors, pressure testing, thermal imaging. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/lake-las-vegas/slab-leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -266,7 +266,7 @@ const LLV_SLAB_REROUTING = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Slab Leak Detection and Repair in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+  name: "Slab Leak Detection and Repair in Lake Las Vegas, NV",
   description:
     "Non-invasive slab leak detection and repair for homes in Lake Las Vegas, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging. Spot repair, pipe rerouting, and epoxy lining options explained. Nevada Contractor License #048585A.",
   url: "https://redcarpetplumbing.com/lake-las-vegas/slab-leak-detection-repair/",

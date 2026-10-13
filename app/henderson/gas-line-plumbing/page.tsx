@@ -44,14 +44,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Gas Line Plumbing in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection in Henderson, NV. NV License #048585A. Call (702) 567-9172.",
+    "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection in Henderson, NV. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/gas-line-plumbing/",
   },
   openGraph: {
     title: "Gas Line Plumbing in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Licensed gas line repair, installation, inspection, and appliance hookup for Henderson homes and businesses. Serving Green Valley, Green Valley Ranch, Anthem, and all Henderson communities. NV License #048585A.",
+      "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection in Henderson, NV. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/gas-line-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

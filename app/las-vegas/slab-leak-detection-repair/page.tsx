@@ -25,18 +25,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Slab Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+    "Slab Leak Detection and Repair in Las Vegas, NV",
   description:
-    "Professional slab leak detection and repair in Las Vegas, NV. Red Carpet Plumbing locates slab leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging. Serving older Las Vegas neighborhoods and the greater Las Vegas Valley.",
+    "Slab leak detection and repair in Las Vegas, NV. Non-invasive acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/las-vegas/slab-leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Slab Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+      "Slab Leak Detection and Repair in Las Vegas, NV",
     description:
-      "Non-invasive slab leak detection and repair throughout Las Vegas, NV. Acoustic sensors, pressure testing, thermal imaging, and all repair options explained.",
+      "Slab leak detection and repair in Las Vegas, NV. Non-invasive acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/slab-leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -218,7 +218,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Slab Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Slab Leak Detection and Repair in Las Vegas, NV",
   description:
     "Professional slab leak detection and repair in Las Vegas, NV. Red Carpet Plumbing locates slab leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging.",
   url: "https://redcarpetplumbing.com/las-vegas/slab-leak-detection-repair/",

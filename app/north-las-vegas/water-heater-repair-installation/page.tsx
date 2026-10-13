@@ -28,18 +28,18 @@ export const metadata: Metadata = {
   // exceeds the site's ≤160 meta-description standard; see report. Kept as
   // approved pending a trim decision.
   title:
-    "Water Heater Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in North Las Vegas, NV",
   description:
-    "Red Carpet Plumbing repairs and installs water heaters throughout North Las Vegas, NV, including the Aliante area. Tank and tankless water heaters, hard water maintenance, commercial high-capacity systems, and Clark County code installations. Licensed plumbers. Call (702) 567-9172.",
+    "Water heater repair and installation in North Las Vegas, NV, including Aliante. Tank, tankless, and commercial systems. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+      "Water Heater Repair and Installation in North Las Vegas, NV",
     description:
-      "Water heater repair and installation in North Las Vegas from licensed local plumbers. Aliante area, Craig Road corridor, and all North Las Vegas neighborhoods. Call Red Carpet Plumbing.",
+      "Water heater repair and installation in North Las Vegas, NV, including Aliante. Tank, tankless, and commercial systems. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -248,7 +248,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in North Las Vegas, NV",
   description:
     "Red Carpet Plumbing repairs and installs water heaters throughout North Las Vegas, NV, including the Aliante area. Tank and tankless water heaters, hard water maintenance, commercial systems, and Clark County code installations. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/north-las-vegas/water-heater-repair-installation/",

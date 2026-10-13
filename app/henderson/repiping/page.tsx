@@ -28,14 +28,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Repiping Services in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Professional repiping services in Henderson, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe throughout Henderson. Serving Green Valley, Lake Las Vegas, and all Henderson communities. Permits pulled.",
+    "Repiping in Henderson, NV. Polybutylene, Kitec, galvanized, aging copper pipe replacement. Serving Green Valley and Lake Las Vegas. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Whole-house and partial repiping throughout Henderson, NV. Green Valley polybutylene and copper replacement. Green Valley Ranch Kitec replacement. Permits pulled. Licensed plumbers.",
+      "Repiping in Henderson, NV. Polybutylene, Kitec, galvanized, aging copper pipe replacement. Serving Green Valley and Lake Las Vegas. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

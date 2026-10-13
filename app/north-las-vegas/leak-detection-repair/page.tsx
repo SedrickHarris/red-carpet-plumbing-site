@@ -26,18 +26,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Leak Detection and Repair in North Las Vegas, NV | Red Carpet Plumbing",
+    "Leak Detection and Repair in North Las Vegas, NV",
   description:
-    "Professional leak detection and repair in North Las Vegas, NV. Red Carpet Plumbing locates hidden water leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging. Serving Aliante, central North Las Vegas, and all NLV communities.",
+    "Non-invasive leak detection and repair in North Las Vegas, NV with acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Leak Detection and Repair in North Las Vegas, NV | Red Carpet Plumbing",
+      "Leak Detection and Repair in North Las Vegas, NV",
     description:
-      "Non-invasive leak detection and repair throughout North Las Vegas, NV. Acoustic sensors, pressure testing, and thermal imaging. Aliante and older NLV neighborhoods included.",
+      "Non-invasive leak detection and repair in North Las Vegas, NV with acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -248,7 +248,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Leak Detection and Repair in North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Leak Detection and Repair in North Las Vegas, NV",
   description:
     "Professional leak detection and repair in North Las Vegas, NV. Red Carpet Plumbing locates hidden water leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging.",
   url: "https://redcarpetplumbing.com/north-las-vegas/leak-detection-repair/",

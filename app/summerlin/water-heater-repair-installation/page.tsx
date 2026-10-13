@@ -28,21 +28,21 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Water Heater Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in Summerlin, NV",
   // FLAG: this description is the approved brief string (~165 chars). It edges
   // past the site's <=160 meta-description standard; kept verbatim because page
   // metadata is approval-gated. Trim pending explicit approval.
   description:
-    "Water heater repair and installation in Summerlin, NV. Tank and tankless water heaters, descaling, thermal expansion tanks, seismic bracing. NV #048585A. (702) 567-9172.",
+    "Water heater repair and installation in Summerlin, NV. Tank and tankless, descaling, thermal expansion tanks, seismic bracing. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/summerlin/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+      "Water Heater Repair and Installation in Summerlin, NV",
     description:
-      "Water heater repair and installation in Summerlin, NV. Tank and tankless water heaters, descaling, thermal expansion tanks, seismic bracing. NV #048585A. (702) 567-9172.",
+      "Water heater repair and installation in Summerlin, NV. Tank and tankless, descaling, thermal expansion tanks, seismic bracing. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -257,7 +257,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in Summerlin, NV",
   description:
     "Red Carpet Plumbing provides water heater repair and installation in Summerlin, NV. Tank and tankless water heaters, descaling, thermal expansion tanks, seismic bracing. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/summerlin/water-heater-repair-installation/",

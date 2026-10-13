@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   // approved pending a trim decision.
   title: "Drain Cleaning in North Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides professional drain cleaning in North Las Vegas, NV, including the Aliante area. Kitchen drains, bathroom drains, main sewer lines, hydro jetting, and commercial floor drains. Licensed plumbers. Call (702) 567-9172.",
+    "Drain cleaning in North Las Vegas, NV, including Aliante. Kitchen drains, main sewer lines, hydro jetting, commercial floor drains. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/north-las-vegas/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in North Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Professional drain cleaning in North Las Vegas from licensed local plumbers. Aliante area, Craig Road corridor, and all North Las Vegas neighborhoods served. Call Red Carpet Plumbing.",
+      "Drain cleaning in North Las Vegas, NV, including Aliante. Kitchen drains, main sewer lines, hydro jetting, commercial floor drains. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

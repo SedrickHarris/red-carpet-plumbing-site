@@ -34,14 +34,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Drain Cleaning in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Professional drain cleaning in Enterprise, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Enterprise homes and businesses. Rhodes Ranch, Mountain's Edge, Southwest Las Vegas. NV #048585A. (702) 567-9172.",
+    "Drain cleaning in Enterprise, NV. Kitchen drains, bathroom drains, main sewer lines, hydro jetting. Rhodes Ranch and Mountain's Edge. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/enterprise/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in Enterprise, NV | Red Carpet Plumbing",
     description:
-      "Professional drain cleaning throughout Enterprise, NV. Kitchen drains, bathroom drains, main sewer lines, hydro jetting. Rhodes Ranch, Mountain's Edge, 215 Beltway. NV #048585A.",
+      "Drain cleaning in Enterprise, NV. Kitchen drains, bathroom drains, main sewer lines, hydro jetting. Rhodes Ranch and Mountain's Edge. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/enterprise/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

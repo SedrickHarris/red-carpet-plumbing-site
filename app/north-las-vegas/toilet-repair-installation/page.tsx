@@ -53,18 +53,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Toilet Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+    "Toilet Repair and Installation in North Las Vegas, NV",
   description:
-    "Red Carpet Plumbing provides toilet repair and installation throughout North Las Vegas, NV, including 89030, 89031, 89084, and surrounding ZIPs. Running toilets, base leaks, clogs, and new installations. Licensed plumbers. Call (702) 567-9172.",
+    "Toilet repair and installation in North Las Vegas, NV, including 89030, 89031, and 89084. Running toilets, base leaks, clogs. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/toilet-repair-installation/",
   },
   openGraph: {
     title:
-      "Toilet Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+      "Toilet Repair and Installation in North Las Vegas, NV",
     description:
-      "Red Carpet Plumbing provides toilet repair and installation throughout North Las Vegas, NV, including 89030, 89031, 89084, and surrounding ZIPs. Running toilets, base leaks, clogs, and new installations. Licensed plumbers. Call (702) 567-9172.",
+      "Toilet repair and installation in North Las Vegas, NV, including 89030, 89031, and 89084. Running toilets, base leaks, clogs. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/toilet-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -308,9 +308,9 @@ const NLV_TOILET_FAQS: FaqItem[] = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Toilet Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Toilet Repair and Installation in North Las Vegas, NV",
   description:
-    "Red Carpet Plumbing provides toilet repair and installation throughout North Las Vegas, NV, including 89030, 89031, 89084, and surrounding ZIPs. Running toilets, base leaks, clogs, and new installations. Licensed plumbers. Call (702) 567-9172.",
+    "Toilet repair and installation in North Las Vegas, NV, including 89030, 89031, and 89084. Running toilets, base leaks, clogs. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/north-las-vegas/toilet-repair-installation/",
   isPartOf: {
     "@type": "WebSite",

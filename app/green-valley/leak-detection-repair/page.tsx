@@ -33,21 +33,21 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Leak Detection and Repair in Green Valley, Henderson, NV | Red Carpet Plumbing",
+    "Leak Detection and Repair in Green Valley, NV",
   // FLAG: description below is the approved brief string (~205 chars). It
   // exceeds the site's ≤160 meta-description standard; kept as approved pending
   // a trim decision. See build report.
   description:
-    "Non-invasive leak detection and repair in Green Valley, Henderson, NV. Red Carpet Plumbing locates hidden water leaks using acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
+    "Non-invasive leak detection and repair in Green Valley, Henderson with acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/green-valley/leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Leak Detection and Repair in Green Valley, Henderson, NV | Red Carpet Plumbing",
+      "Leak Detection and Repair in Green Valley, NV",
     description:
-      "Non-invasive leak detection for Green Valley and Green Valley Ranch homes. Acoustic sensors, pressure testing, thermal imaging. Original copper and polybutylene pipe expertise. Call (702) 567-9172.",
+      "Non-invasive leak detection and repair in Green Valley, Henderson with acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/green-valley/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -309,7 +309,7 @@ const HERO_TRUST_ITEMS = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Leak Detection and Repair in Green Valley, Henderson, NV | Red Carpet Plumbing",
+  name: "Leak Detection and Repair in Green Valley, NV",
   description:
     "Red Carpet Plumbing provides non-invasive leak detection and repair for homes in Green Valley, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging locate hidden leaks without demolition. Original Green Valley copper and polybutylene pipe expertise.",
   url: "https://redcarpetplumbing.com/green-valley/leak-detection-repair/",

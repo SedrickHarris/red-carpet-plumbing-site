@@ -28,21 +28,21 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Slab Leak Detection and Repair in Green Valley, Henderson, NV | Red Carpet Plumbing",
+    "Slab Leak Detection and Repair in Green Valley, NV",
   // FLAG: description below is the approved brief string (~178 chars). It
   // exceeds the site's ≤160 meta-description standard; kept as approved pending
   // a trim decision. See build report.
   description:
-    "Non-invasive slab leak detection and repair in Green Valley, Henderson, NV. Acoustic sensors, pressure testing, thermal imaging. All repair options explained. Call (702) 567-9172.",
+    "Non-invasive slab leak detection and repair in Green Valley, Henderson. Acoustic sensors, pressure testing, thermal imaging. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/green-valley/slab-leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Slab Leak Detection and Repair in Green Valley, Henderson, NV | Red Carpet Plumbing",
+      "Slab Leak Detection and Repair in Green Valley, NV",
     description:
-      "Licensed slab leak detection and repair for original Green Valley and Green Valley Ranch homes. Non-invasive methods, all repair options explained. Call (702) 567-9172.",
+      "Non-invasive slab leak detection and repair in Green Valley, Henderson. Acoustic sensors, pressure testing, thermal imaging. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/green-valley/slab-leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -297,7 +297,7 @@ const HERO_TRUST_ITEMS = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Slab Leak Detection and Repair in Green Valley, Henderson, NV | Red Carpet Plumbing",
+  name: "Slab Leak Detection and Repair in Green Valley, NV",
   description:
     "Red Carpet Plumbing provides non-invasive slab leak detection and repair for homes in Green Valley, Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging. All repair options explained. Original Green Valley copper and polybutylene pipe expertise.",
   url: "https://redcarpetplumbing.com/green-valley/slab-leak-detection-repair/",

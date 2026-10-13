@@ -32,20 +32,20 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // by the user before build.
 
 export const metadata: Metadata = {
-  title: "Drain Cleaning in Green Valley, Henderson, NV | Red Carpet Plumbing",
+  title: "Drain Cleaning in Green Valley, NV | Red Carpet Plumbing",
   // FLAG: description below is the approved brief string (~213 chars). It
   // exceeds the site's ≤160 meta-description standard; kept as approved pending
   // a trim decision. See build report.
   description:
-    "Professional drain cleaning in Green Valley, Henderson, NV. Red Carpet Plumbing clears kitchen drains, bathroom drains, and main sewer lines for original Green Valley and Green Valley Ranch homes. Call (702) 567-9172.",
+    "Drain cleaning in Green Valley, Henderson. Kitchen, bathroom, and main sewer drains for Green Valley and Green Valley Ranch homes. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/green-valley/drain-cleaning/",
   },
   openGraph: {
     title:
-      "Drain Cleaning in Green Valley, Henderson, NV | Red Carpet Plumbing",
+      "Drain Cleaning in Green Valley, NV | Red Carpet Plumbing",
     description:
-      "Licensed drain cleaning for Green Valley and Green Valley Ranch homes. Original copper lines, hard water mineral buildup, and first-service-cycle pipes. Call (702) 567-9172.",
+      "Drain cleaning in Green Valley, Henderson. Kitchen, bathroom, and main sewer drains for Green Valley and Green Valley Ranch homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/green-valley/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -349,7 +349,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Drain Cleaning in Green Valley, Henderson, NV | Red Carpet Plumbing",
+  name: "Drain Cleaning in Green Valley, NV | Red Carpet Plumbing",
   description:
     "Red Carpet Plumbing provides professional drain cleaning for homes in Green Valley, Henderson, NV. Original Green Valley copper lines, Green Valley Ranch first-service cycle, and hard water mineral buildup. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/green-valley/drain-cleaning/",

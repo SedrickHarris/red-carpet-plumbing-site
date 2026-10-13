@@ -17,14 +17,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Drain Cleaning in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides professional drain cleaning in Las Vegas and the Las Vegas Valley. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+    "Drain cleaning in Las Vegas and the Valley. Kitchen and bathroom drains, main sewer lines, hydro jetting. Licensed, 4.8-star rated. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Red Carpet Plumbing provides professional drain cleaning in Las Vegas and the Las Vegas Valley. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+      "Drain cleaning in Las Vegas and the Valley. Kitchen and bathroom drains, main sewer lines, hydro jetting. Licensed, 4.8-star rated. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     type: "website",

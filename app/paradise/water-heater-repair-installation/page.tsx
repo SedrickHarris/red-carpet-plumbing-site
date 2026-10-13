@@ -25,18 +25,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Water Heater Repair and Installation in Paradise, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in Paradise, NV",
   description:
-    "Water heater repair and installation in Paradise, NV. Hard water sediment, anode rod service, tankless installation, and Clark County code-compliant work. Call (702) 567-9172.",
+    "Water heater repair and installation in Paradise, NV. Hard water sediment, anode rod service, and tankless installation. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/paradise/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in Paradise, NV | Red Carpet Plumbing",
+      "Water Heater Repair and Installation in Paradise, NV",
     description:
-      "Water heater repair, replacement, and tankless installation in Paradise, NV. Licensed plumbers, Clark County code-compliant. Call (702) 567-9172.",
+      "Water heater repair and installation in Paradise, NV. Hard water sediment, anode rod service, and tankless installation. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/paradise/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -227,9 +227,9 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in Paradise, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in Paradise, NV",
   description:
-    "Water heater repair and installation in Paradise, NV. Hard water sediment, anode rod service, tankless installation, and Clark County code-compliant work. Call (702) 567-9172.",
+    "Water heater repair and installation in Paradise, NV. Hard water sediment, anode rod service, and tankless installation. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/paradise/water-heater-repair-installation/",
   isPartOf: {
     "@type": "WebSite",

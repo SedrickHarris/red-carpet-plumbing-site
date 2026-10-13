@@ -42,16 +42,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   // FLAG: VERIFY license #048585A in the description before publishing.
-  title: "Toilet Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+  title: "Toilet Repair and Installation in Summerlin, NV",
   description:
-    "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. NV #048585A. Call (702) 567-9172.",
+    "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin/toilet-repair-installation/",
   },
   openGraph: {
-    title: "Toilet Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+    title: "Toilet Repair and Installation in Summerlin, NV",
     description:
-      "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. NV #048585A. Call (702) 567-9172.",
+      "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/toilet-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -291,9 +291,9 @@ const FINAL_CTA = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Toilet Repair and Installation in Summerlin, NV | Red Carpet Plumbing",
+  name: "Toilet Repair and Installation in Summerlin, NV",
   description:
-    "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. NV #048585A. Call (702) 567-9172.",
+    "Toilet repair and installation in Summerlin, NV. Running toilets, base leaks, clogs, and replacements. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/summerlin/toilet-repair-installation/",
   isPartOf: {
     "@type": "WebSite",

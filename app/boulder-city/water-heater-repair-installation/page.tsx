@@ -34,18 +34,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Water Heater Repair and Installation in Boulder City, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in Boulder City, NV",
   description:
-    "Red Carpet Plumbing provides water heater repair and installation in Boulder City, NV. Tank and tankless water heaters, sediment flushing, anode rod replacement, thermal expansion tanks. Boulder City code-compliant installations. Licensed plumbers. Call (702) 567-9172.",
+    "Water heater repair and installation in Boulder City, NV. Tank and tankless, sediment flushing, anode rods, expansion tanks. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/boulder-city/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in Boulder City, NV | Red Carpet Plumbing",
+      "Water Heater Repair and Installation in Boulder City, NV",
     description:
-      "Tank and tankless water heater repair, replacement, and installation in Boulder City, NV. Hard water sediment flushing, anode rod replacement, seismic bracing. Boulder City code-compliant. Licensed plumbers.",
+      "Water heater repair and installation in Boulder City, NV. Tank and tankless, sediment flushing, anode rods, expansion tanks. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/boulder-city/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -271,7 +271,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in Boulder City, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in Boulder City, NV",
   description:
     "Red Carpet Plumbing provides water heater repair and installation in Boulder City, NV. Tank and tankless water heaters, sediment flushing, anode rod replacement, thermal expansion tanks, and Boulder City code-compliant seismic bracing.",
   url: "https://redcarpetplumbing.com/boulder-city/water-heater-repair-installation/",

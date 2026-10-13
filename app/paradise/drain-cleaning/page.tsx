@@ -26,14 +26,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Drain Cleaning in Paradise, NV | Red Carpet Plumbing",
   description:
-    "Professional drain cleaning in Paradise, NV. Hard water mineral buildup, grease clogs, restaurant drain service, and main line backups. Red Carpet Plumbing. Call (702) 567-9172.",
+    "Drain cleaning in Paradise, NV. Hard water buildup, grease clogs, restaurant drain service, and main line backups. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/paradise/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in Paradise, NV | Red Carpet Plumbing",
     description:
-      "Drain cleaning for homes and businesses in Paradise, NV. Hard water clogs, grease drain service, hydro jetting, and main line clearing. Call (702) 567-9172.",
+      "Drain cleaning in Paradise, NV. Hard water buildup, grease clogs, restaurant drain service, and main line backups. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/paradise/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -227,7 +227,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Drain Cleaning in Paradise, NV | Red Carpet Plumbing",
   description:
-    "Professional drain cleaning in Paradise, NV. Hard water mineral buildup, grease clogs, restaurant drain service, and main line backups. Red Carpet Plumbing. Call (702) 567-9172.",
+    "Drain cleaning in Paradise, NV. Hard water buildup, grease clogs, restaurant drain service, and main line backups. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/paradise/drain-cleaning/",
   isPartOf: {
     "@type": "WebSite",

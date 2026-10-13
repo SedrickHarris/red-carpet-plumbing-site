@@ -20,14 +20,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Plumbing services in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, water heater repair. NV #048585A. (702) 567-9172.",
+    "Plumbing services in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, water heater repair. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Plumbing services in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, water heater repair. NV #048585A. (702) 567-9172.",
+      "Plumbing services in Henderson, NV including Green Valley and Lake Las Vegas. Emergency plumbing, water heater repair. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

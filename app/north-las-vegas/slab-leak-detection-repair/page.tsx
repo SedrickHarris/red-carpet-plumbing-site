@@ -28,16 +28,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // low-res hero.webp), matching app/las-vegas/slab-leak-detection-repair.
 
 export const metadata: Metadata = {
-  title: "Slab Leak Detection and Repair in North Las Vegas, NV | Red Carpet Plumbing",
+  title: "Slab Leak Detection and Repair in North Las Vegas, NV",
   description:
-    "Slab leak detection and repair in North Las Vegas, NV. Red Carpet Plumbing uses acoustic sensors, pressure testing, and thermal imaging to locate slab leaks in older galvanized and Aliante-era copper pipe homes. Call (702) 567-9172.",
+    "Slab leak detection and repair in North Las Vegas, NV for older galvanized and Aliante-era copper pipe homes. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/north-las-vegas/slab-leak-detection-repair/",
   },
   openGraph: {
-    title: "Slab Leak Detection and Repair in North Las Vegas, NV | Red Carpet Plumbing",
+    title: "Slab Leak Detection and Repair in North Las Vegas, NV",
     description:
-      "Licensed slab leak detection and repair throughout North Las Vegas, NV. Galvanized pipe and copper line expertise. Acoustic sensors, pressure testing, thermal imaging. Call (702) 567-9172.",
+      "Slab leak detection and repair in North Las Vegas, NV for older galvanized and Aliante-era copper pipe homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/slab-leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -280,7 +280,7 @@ const NLV_SLAB_FAQS: FaqItem[] = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Slab Leak Detection and Repair in North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Slab Leak Detection and Repair in North Las Vegas, NV",
   description:
     "Red Carpet Plumbing provides non-invasive slab leak detection and repair for homes in North Las Vegas, NV. Acoustic sensors, pressure testing, and thermal imaging. Galvanized pipe and copper line expertise. Nevada Contractor License #048585A.",
   url: "https://redcarpetplumbing.com/north-las-vegas/slab-leak-detection-repair/",

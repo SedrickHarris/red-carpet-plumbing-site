@@ -28,18 +28,18 @@ export const metadata: Metadata = {
   // exceeds the site's ≤160 meta-description standard; see report. Kept as
   // approved pending a trim decision.
   title:
-    "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing repairs and installs water heaters throughout Las Vegas, NV. Tank and tankless water heaters, hard water sediment flushing, anode rod replacement, and Clark County code installations. Licensed plumbers. Call (702) 567-9172.",
+    "Water heater repair and installation in Las Vegas, NV. Tank and tankless, sediment flushing, anode rods, Clark County code. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/las-vegas/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+      "Water Heater Repair and Installation in Las Vegas, NV",
     description:
-      "Water heater repair and installation in Las Vegas from licensed local plumbers. Hard water experts. Tank, tankless, flush, and full replacement. Call Red Carpet Plumbing.",
+      "Water heater repair and installation in Las Vegas, NV. Tank and tankless, sediment flushing, anode rods, Clark County code. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -231,7 +231,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in Las Vegas, NV",
   description:
     "Red Carpet Plumbing repairs and installs water heaters throughout Las Vegas, NV. Tank and tankless water heaters, hard water sediment flushing, anode rod replacement, and Clark County code installations. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/las-vegas/water-heater-repair-installation/",

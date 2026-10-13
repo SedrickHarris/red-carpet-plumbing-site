@@ -16,18 +16,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Water Meter and Pressure Regulator Services in Las Vegas, NV | Red Carpet Plumbing",
+    "Water Meter and Pressure Regulator Services in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement for homes throughout Las Vegas. High water pressure and PRV failure are common in the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
+    "Pressure regulator inspection, repair, and replacement for Las Vegas homes. High pressure and PRV failure are common in the Valley. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/water-meter-pressure-regulator-services/",
   },
   openGraph: {
     title:
-      "Water Meter and Pressure Regulator Services in Las Vegas, NV | Red Carpet Plumbing",
+      "Water Meter and Pressure Regulator Services in Las Vegas, NV",
     description:
-      "Licensed pressure regulator repair and replacement throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
+      "Pressure regulator inspection, repair, and replacement for Las Vegas homes. High pressure and PRV failure are common in the Valley. Call (702) 567-9172.",
   },
 };
 
@@ -380,7 +380,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Meter and Pressure Regulator Services in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Water Meter and Pressure Regulator Services in Las Vegas, NV",
   description:
     "Red Carpet Plumbing provides pressure regulator inspection, repair, and replacement throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/water-meter-pressure-regulator-services/",

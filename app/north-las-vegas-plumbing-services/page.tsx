@@ -18,17 +18,17 @@ import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  title: "Plumbing Services in North Las Vegas, NV | Red Carpet Plumbing",
+  title: "Plumbing Services in North Las Vegas, NV",
   description:
-    "Plumbing services in North Las Vegas, NV including the Aliante area. Emergency plumbing, water heater repair, drain cleaning. NV #048585A. (702) 567-9172.",
+    "Plumbing services in North Las Vegas, NV including the Aliante area. Emergency plumbing, water heater repair, drain cleaning. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas-plumbing-services/",
   },
   openGraph: {
-    title: "Plumbing Services in North Las Vegas, NV | Red Carpet Plumbing",
+    title: "Plumbing Services in North Las Vegas, NV",
     description:
-      "Plumbing services in North Las Vegas, NV including the Aliante area. Emergency plumbing, water heater repair, drain cleaning. NV #048585A. (702) 567-9172.",
+      "Plumbing services in North Las Vegas, NV including the Aliante area. Emergency plumbing, water heater repair, drain cleaning. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -304,7 +304,7 @@ const plumberSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Plumbing Services in North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Plumbing Services in North Las Vegas, NV",
   description:
     "Red Carpet Plumbing provides licensed residential and commercial plumbing services throughout North Las Vegas, NV including the Aliante area. NV Licensed #048585A.",
   url: "https://redcarpetplumbing.com/north-las-vegas-plumbing-services/",

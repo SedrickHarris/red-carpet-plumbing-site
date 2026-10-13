@@ -32,20 +32,20 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Water Heater Repair and Installation in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in Lake Las Vegas, NV",
   // FLAG: approved brief description (~210 chars) exceeds the site's ≤160
   // meta-description standard; kept as approved pending a trim decision.
   description:
-    "Water heater repair and installation in Lake Las Vegas, Henderson, NV. Red Carpet Plumbing services tank and tankless water heaters for Lake Las Vegas resort residential homes. Clark County code. Call (702) 567-9172.",
+    "Water heater repair and installation in Lake Las Vegas, Henderson. Tank and tankless units for resort residential homes. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/lake-las-vegas/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+      "Water Heater Repair and Installation in Lake Las Vegas, NV",
     description:
-      "Licensed water heater repair and installation for Lake Las Vegas homes. Hard water sediment flushing, anode rod replacement, thermal expansion tanks, seismic bracing. Clark County code-compliant. Call (702) 567-9172.",
+      "Water heater repair and installation in Lake Las Vegas, Henderson. Tank and tankless units for resort residential homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/lake-las-vegas/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -251,7 +251,7 @@ const LLV_WH_REROUTING = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in Lake Las Vegas, NV",
   description:
     "Red Carpet Plumbing provides water heater repair and installation for homes in Lake Las Vegas, Henderson, NV. Tank and tankless water heaters, hard water maintenance, and Clark County code-compliant installations. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/lake-las-vegas/water-heater-repair-installation/",

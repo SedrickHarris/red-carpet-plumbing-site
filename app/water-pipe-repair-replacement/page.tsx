@@ -16,18 +16,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
+    "Water Pipe Repair and Replacement in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing repairs and replaces water supply pipes throughout Las Vegas and the Las Vegas Valley. Burst pipes, pinhole leaks, galvanized and polybutylene pipe replacement. NV Licensed #048585A. Call (702) 567-9172.",
+    "Water supply pipe repair and replacement in Las Vegas and the Valley. Burst pipes, pinhole leaks, galvanized and polybutylene pipes. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/water-pipe-repair-replacement/",
   },
   openGraph: {
     title:
-      "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
+      "Water Pipe Repair and Replacement in Las Vegas, NV",
     description:
-      "Licensed water pipe repair and replacement throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
+      "Water supply pipe repair and replacement in Las Vegas and the Valley. Burst pipes, pinhole leaks, galvanized and polybutylene pipes. Call (702) 567-9172.",
   },
 };
 
@@ -377,7 +377,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Pipe Repair and Replacement in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Water Pipe Repair and Replacement in Las Vegas, NV",
   description:
     "Red Carpet Plumbing repairs and replaces water supply pipes throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/water-pipe-repair-replacement/",

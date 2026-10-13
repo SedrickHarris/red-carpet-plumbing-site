@@ -41,18 +41,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Faucet and Sink Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
+    "Faucet and Sink Repair and Installation in Green Valley, NV",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks in Green Valley, Henderson, NV. Dripping faucets, low pressure, under-sink leaks, and new sink installation. NV License #048585A. (702) 567-9172.",
+    "Faucet and sink repair, replacement, and installation in Green Valley, Henderson. Dripping faucets, low pressure, under-sink leaks. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/green-valley/faucet-sink-repair-installation/",
   },
   openGraph: {
     title:
-      "Faucet and Sink Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
+      "Faucet and Sink Repair and Installation in Green Valley, NV",
     description:
-      "Licensed faucet and sink repair and installation for Green Valley homes. Dripping faucets, cartridge service, sink installs, and under-sink leak repair. Henderson, NV. Call (702) 567-9172.",
+      "Faucet and sink repair, replacement, and installation in Green Valley, Henderson. Dripping faucets, low pressure, under-sink leaks. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/green-valley/faucet-sink-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -265,7 +265,7 @@ const GV_FAUCET_SINK_FAQS: FaqItem[] = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Faucet and Sink Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
+  name: "Faucet and Sink Repair and Installation in Green Valley, NV",
   description:
     "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks for homes in Green Valley, Henderson, NV. Dripping faucets, low pressure, under-sink leaks, and new sink installation. Licensed plumbers. NV #048585A.",
   url: "https://redcarpetplumbing.com/green-valley/faucet-sink-repair-installation/",

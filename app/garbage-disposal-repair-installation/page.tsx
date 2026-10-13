@@ -16,18 +16,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+    "Garbage Disposal Repair and Installation in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals for kitchens throughout Las Vegas and the Las Vegas Valley. Jammed, leaking, or not working. NV Licensed #048585A. Call (702) 567-9172.",
+    "Garbage disposal repair, replacement, and installation for Las Vegas kitchens. Jammed, leaking, or not working. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/garbage-disposal-repair-installation/",
   },
   openGraph: {
     title:
-      "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+      "Garbage Disposal Repair and Installation in Las Vegas, NV",
     description:
-      "Licensed garbage disposal repair and installation throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
+      "Garbage disposal repair, replacement, and installation for Las Vegas kitchens. Jammed, leaking, or not working. Licensed plumbers. Call (702) 567-9172.",
   },
 };
 
@@ -381,7 +381,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Garbage Disposal Repair and Installation in Las Vegas, NV",
   description:
     "Red Carpet Plumbing repairs, replaces, and installs garbage disposals throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/garbage-disposal-repair-installation/",

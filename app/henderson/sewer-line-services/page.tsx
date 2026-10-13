@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sewer Line Services in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Licensed sewer line inspection, cleaning, repair, and replacement for Henderson homes and businesses. Serving Green Valley, Green Valley Ranch, Anthem, and all Henderson communities. Call (702) 567-9172.",
+      "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement in Henderson, NV. Licensed plumbers. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/sewer-line-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

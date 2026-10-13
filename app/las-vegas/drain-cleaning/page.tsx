@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   // approved pending a trim decision.
   title: "Drain Cleaning in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides professional drain cleaning in Las Vegas, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting. Las Vegas hard water and aging pipes are the leading causes of drain clogs. Licensed plumbers. Call (702) 567-9172.",
+    "Drain cleaning in Las Vegas, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Professional drain cleaning in Las Vegas from licensed local plumbers. Hard water, grease buildup, and aging pipes cleared completely. Call Red Carpet Plumbing.",
+      "Drain cleaning in Las Vegas, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting. Licensed plumbers. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

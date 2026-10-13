@@ -33,14 +33,14 @@ export const metadata: Metadata = {
   // the site's <=160 meta-description standard; kept verbatim because page
   // metadata is approval-gated. Trim pending explicit approval.
   description:
-    "Licensed commercial plumbing in Paradise, NV. Restaurant drain service, grease trap clearing, backflow prevention, water heater service, and commercial leak detection near the Las Vegas Strip. NV License #048585A. Call (702) 567-9172.",
+    "Licensed commercial plumbing in Paradise, NV. Restaurant drains, grease traps, backflow prevention, leak detection near the Strip. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/paradise/commercial-plumbing/",
   },
   openGraph: {
     title: "Commercial Plumbing in Paradise, NV | Red Carpet Plumbing",
     description:
-      "Licensed C-1 commercial plumbing for businesses, restaurants, and property managers in Paradise, NV. Near the Las Vegas Strip. Call (702) 567-9172.",
+      "Licensed commercial plumbing in Paradise, NV. Restaurant drains, grease traps, backflow prevention, leak detection near the Strip. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/paradise/commercial-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -291,7 +291,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Commercial Plumbing in Paradise, NV | Red Carpet Plumbing",
   description:
-    "Licensed commercial plumbing in Paradise, NV. Restaurant drain service, grease trap clearing, backflow prevention, water heater service, and commercial leak detection near the Las Vegas Strip. NV License #048585A. Call (702) 567-9172.",
+    "Licensed commercial plumbing in Paradise, NV. Restaurant drains, grease traps, backflow prevention, leak detection near the Strip. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/paradise/commercial-plumbing/",
   isPartOf: {
     "@type": "WebSite",

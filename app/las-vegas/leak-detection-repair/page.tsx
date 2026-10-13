@@ -26,16 +26,16 @@ export const metadata: Metadata = {
   // FLAG: description below is the approved brief string (~280 chars). It
   // exceeds the site's ≤160 meta-description standard; see report. Kept as
   // approved pending a trim decision.
-  title: "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Leak Detection and Repair in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing provides professional leak detection and repair in Las Vegas, NV. Hidden leaks, slab leaks, wall leaks, and underground lines located with acoustic sensors and electronic detection equipment. No unnecessary demolition. Licensed plumbers. Call (702) 567-9172.",
+    "Leak detection and repair in Las Vegas, NV. Hidden, slab, wall, and underground leaks located with acoustic and electronic equipment. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/leak-detection-repair/",
   },
   openGraph: {
-    title: "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+    title: "Leak Detection and Repair in Las Vegas, NV",
     description:
-      "Professional leak detection in Las Vegas from licensed local plumbers. Hidden leaks located precisely without unnecessary demolition. Call Red Carpet Plumbing.",
+      "Leak detection and repair in Las Vegas, NV. Hidden, slab, wall, and underground leaks located with acoustic and electronic equipment. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -244,7 +244,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Leak Detection and Repair in Las Vegas, NV",
   description:
     "Red Carpet Plumbing provides professional leak detection and repair in Las Vegas, NV. Hidden leaks, slab leaks, wall leaks, and underground lines located with acoustic sensors and electronic detection equipment.",
   url: "https://redcarpetplumbing.com/las-vegas/leak-detection-repair/",

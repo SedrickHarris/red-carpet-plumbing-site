@@ -20,14 +20,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Paradise, NV | Red Carpet Plumbing",
   description:
-    "Plumbing services in Paradise, NV near the Las Vegas Strip. Emergency plumbing, drain cleaning, water heater repair. NV #048585A. (702) 567-9172.",
+    "Plumbing services in Paradise, NV near the Las Vegas Strip. Emergency plumbing, drain cleaning, water heater repair. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/paradise-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Paradise, NV | Red Carpet Plumbing",
     description:
-      "Plumbing services in Paradise, NV near the Las Vegas Strip. Emergency plumbing, drain cleaning, water heater repair. NV #048585A. (702) 567-9172.",
+      "Plumbing services in Paradise, NV near the Las Vegas Strip. Emergency plumbing, drain cleaning, water heater repair. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/paradise-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

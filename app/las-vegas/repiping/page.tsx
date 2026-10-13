@@ -28,14 +28,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Professional repiping services in Las Vegas, NV. Red Carpet Plumbing replaces polybutylene, Kitec, galvanized, and aging copper pipe throughout Las Vegas. PEX and copper repiping. Permits pulled and inspections scheduled.",
+    "Repiping in Las Vegas, NV. Polybutylene, Kitec, galvanized, and aging copper pipe replaced with PEX or copper. Permits pulled. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Whole-house and partial repiping throughout Las Vegas, NV. Polybutylene, Kitec, galvanized, and copper pipe replacement. Permits pulled. Licensed plumbers.",
+      "Repiping in Las Vegas, NV. Polybutylene, Kitec, galvanized, and aging copper pipe replaced with PEX or copper. Permits pulled. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

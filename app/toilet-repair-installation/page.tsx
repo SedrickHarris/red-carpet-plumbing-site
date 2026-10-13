@@ -16,18 +16,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+    "Toilet Repair and Installation in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout Las Vegas and the Las Vegas Valley. Running toilets, base leaks, clogs, and new installations. NV Licensed #048585A. Call (702) 567-9172.",
+    "Toilet repair, replacement, and installation in Las Vegas and the Valley. Running toilets, base leaks, clogs, new installs. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/toilet-repair-installation/",
   },
   openGraph: {
     title:
-      "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+      "Toilet Repair and Installation in Las Vegas, NV",
     description:
-      "Licensed toilet repair and installation throughout Las Vegas and the Las Vegas Valley. Running toilets, leaks, clogs, and new installs. NV #048585A. 4.8 stars, 81 reviews.",
+      "Toilet repair, replacement, and installation in Las Vegas and the Valley. Running toilets, base leaks, clogs, new installs. Call (702) 567-9172.",
   },
 };
 
@@ -380,7 +380,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Toilet Repair and Installation in Las Vegas, NV",
   description:
     "Red Carpet Plumbing repairs, replaces, and installs toilets throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/toilet-repair-installation/",

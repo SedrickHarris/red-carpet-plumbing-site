@@ -32,14 +32,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Commercial Plumbing in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Licensed commercial plumbing services in Las Vegas, NV. Red Carpet Plumbing serves businesses, restaurants, property managers, and multi-unit buildings throughout Las Vegas. NV Licensed #048585A. Call (702) 567-9172.",
+    "Licensed commercial plumbing in Las Vegas, NV for businesses, restaurants, property managers, and multi-unit buildings. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/commercial-plumbing/",
   },
   openGraph: {
     title: "Commercial Plumbing in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed commercial plumbers for businesses, restaurants, property managers, and multi-unit buildings throughout Las Vegas, NV. NV #048585A.",
+      "Licensed commercial plumbing in Las Vegas, NV for businesses, restaurants, property managers, and multi-unit buildings. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/commercial-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

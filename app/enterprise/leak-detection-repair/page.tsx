@@ -32,16 +32,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // Spring Valley / older North Las Vegas story, not Enterprise's newer copper.
 
 export const metadata: Metadata = {
-  title: "Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing",
+  title: "Leak Detection and Repair in Enterprise, NV",
   description:
-    "Professional non-invasive leak detection and repair in Enterprise, NV. Red Carpet Plumbing locates hidden water leaks using acoustic sensors, pressure testing, and thermal imaging. Rhodes Ranch, Mountain's Edge, Southwest Las Vegas. NV #048585A.",
+    "Non-invasive leak detection and repair in Enterprise, NV with acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/enterprise/leak-detection-repair/",
   },
   openGraph: {
-    title: "Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing",
+    title: "Leak Detection and Repair in Enterprise, NV",
     description:
-      "Non-invasive leak detection throughout Enterprise, NV. Acoustic sensors, pressure testing, thermal imaging. Rhodes Ranch, Mountain's Edge. Licensed plumbers. NV #048585A.",
+      "Non-invasive leak detection and repair in Enterprise, NV with acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/enterprise/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -282,7 +282,7 @@ const ENTERPRISE_AREAS = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing",
+  name: "Leak Detection and Repair in Enterprise, NV",
   description:
     "Red Carpet Plumbing provides non-invasive leak detection and repair in Enterprise, NV using acoustic sensors, pressure testing, and thermal imaging.",
   url: "https://redcarpetplumbing.com/enterprise/leak-detection-repair/",

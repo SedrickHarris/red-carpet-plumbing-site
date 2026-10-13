@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "From emergency calls to water heater repair and drain cleaning, Red Carpet Plumbing provides comprehensive plumbing services for homes and businesses throughout Las Vegas and the Las Vegas Valley.",
+      "Red Carpet Plumbing offers emergency plumbing, drain cleaning, leak detection, water heater repair, slab leak service, repiping, and more in Las Vegas, NV.",
     url: "https://redcarpetplumbing.com/plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

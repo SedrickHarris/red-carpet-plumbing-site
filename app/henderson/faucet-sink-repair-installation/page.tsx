@@ -43,16 +43,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   // FLAG: VERIFY license #048585A in the description before publishing.
-  title: "Faucet and Sink Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+  title: "Faucet and Sink Repair and Installation in Henderson, NV",
   description:
-    "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. NV #048585A. Call (702) 567-9172.",
+    "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/faucet-sink-repair-installation/",
   },
   openGraph: {
-    title: "Faucet and Sink Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+    title: "Faucet and Sink Repair and Installation in Henderson, NV",
     description:
-      "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. NV #048585A. Call (702) 567-9172.",
+      "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/faucet-sink-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -293,10 +293,10 @@ const FINAL_CTA = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Faucet and Sink Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+  name: "Faucet and Sink Repair and Installation in Henderson, NV",
   url: "https://redcarpetplumbing.com/henderson/faucet-sink-repair-installation/",
   description:
-    "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. NV #048585A. Call (702) 567-9172.",
+    "Faucet and sink repair and installation in Henderson, NV. Leaks, drips, low pressure, and new fixtures. Call (702) 567-9172.",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",

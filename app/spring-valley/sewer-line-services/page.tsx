@@ -51,16 +51,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   // FLAG: VERIFY license #048585A in the description before publishing.
-  title: "Sewer Line Services in Spring Valley, NV | Red Carpet Plumbing",
+  title: "Sewer Line Services in Spring Valley, NV",
   description:
-    "Sewer line inspection, cleaning, repair, and replacement in Spring Valley, NV. Camera inspections and trenchless options. NV #048585A. Call (702) 567-9172.",
+    "Sewer line inspection, cleaning, repair, and replacement in Spring Valley, NV. Camera inspections and trenchless options. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/spring-valley/sewer-line-services/",
   },
   openGraph: {
-    title: "Sewer Line Services in Spring Valley, NV | Red Carpet Plumbing",
+    title: "Sewer Line Services in Spring Valley, NV",
     description:
-      "Sewer line inspection, cleaning, repair, and replacement in Spring Valley, NV. Camera inspections and trenchless options. NV #048585A. Call (702) 567-9172.",
+      "Sewer line inspection, cleaning, repair, and replacement in Spring Valley, NV. Camera inspections and trenchless options. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley/sewer-line-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -286,9 +286,9 @@ const FINAL_CTA = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Sewer Line Services in Spring Valley, NV | Red Carpet Plumbing",
+  name: "Sewer Line Services in Spring Valley, NV",
   description:
-    "Sewer line inspection, cleaning, repair, and replacement in Spring Valley, NV. Camera inspections and trenchless options. NV #048585A. Call (702) 567-9172.",
+    "Sewer line inspection, cleaning, repair, and replacement in Spring Valley, NV. Camera inspections and trenchless options. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/spring-valley/sewer-line-services/",
   isPartOf: {
     "@type": "WebSite",

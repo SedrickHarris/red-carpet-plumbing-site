@@ -29,14 +29,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Drain Cleaning in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Professional drain cleaning in Summerlin, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Summerlin homes. NV #048585A. (702) 567-9172.",
+    "Drain cleaning in Summerlin, NV. Kitchen drains, bathroom drains, main sewer lines, hydro jetting for Summerlin homes. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Professional drain cleaning in Summerlin, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Summerlin homes. NV #048585A. (702) 567-9172.",
+      "Drain cleaning in Summerlin, NV. Kitchen drains, bathroom drains, main sewer lines, hydro jetting for Summerlin homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

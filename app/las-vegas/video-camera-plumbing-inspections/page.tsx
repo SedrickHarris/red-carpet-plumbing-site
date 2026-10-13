@@ -41,18 +41,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Video Camera Plumbing Inspections in Las Vegas, NV | Red Carpet Plumbing",
+    "Video Camera Plumbing Inspections in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing performs sewer and drain camera inspections in Las Vegas, NV. Root intrusion, pipe belly detection, pre-purchase inspections, post-cleaning confirmation. NV #048585A. Call (702) 567-9172.",
+    "Sewer and drain camera inspections in Las Vegas, NV. Root intrusion, pipe bellies, pre-purchase inspections, post-cleaning checks. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/las-vegas/video-camera-plumbing-inspections/",
   },
   openGraph: {
     title:
-      "Video Camera Plumbing Inspections in Las Vegas, NV | Red Carpet Plumbing",
+      "Video Camera Plumbing Inspections in Las Vegas, NV",
     description:
-      "Licensed sewer and drain camera inspections in Las Vegas. Caliche pipe belly detection, root intrusion, pre-purchase inspections. NV #048585A.",
+      "Sewer and drain camera inspections in Las Vegas, NV. Root intrusion, pipe bellies, pre-purchase inspections, post-cleaning checks. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/video-camera-plumbing-inspections/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -315,7 +315,7 @@ const LV_CAMERA_SERVICES: { title: string; body: string; tail?: LinkSeg[] }[] = 
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Video Camera Plumbing Inspections in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Video Camera Plumbing Inspections in Las Vegas, NV",
   description:
     "Red Carpet Plumbing performs sewer and drain camera inspections in Las Vegas, NV. Root intrusion, pipe belly detection, pre-purchase inspections, post-cleaning confirmation. NV #048585A.",
   url: "https://redcarpetplumbing.com/las-vegas/video-camera-plumbing-inspections/",

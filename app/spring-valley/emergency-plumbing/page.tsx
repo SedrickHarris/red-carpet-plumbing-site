@@ -32,18 +32,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // No AggregateRating/Review. No sameAs.
 
 export const metadata: Metadata = {
-  title: "Emergency Plumbing in Spring Valley, NV | Red Carpet Plumbing",
+  title: "Emergency Plumbing in Spring Valley, NV",
   // FLAG: this description is the approved brief string (~180 chars). It exceeds
   // the site's <=160 meta-description standard; kept verbatim because page
   // metadata is approval-gated. Trim pending explicit approval.
   description:
-    "Emergency plumbing in Spring Valley, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers serving Spring Valley and Clark County. Call (702) 567-9172.",
+    "Emergency plumbing in Spring Valley, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/spring-valley/emergency-plumbing/",
   },
   openGraph: {
-    title: "Emergency Plumbing in Spring Valley, NV | Red Carpet Plumbing",
+    title: "Emergency Plumbing in Spring Valley, NV",
     description:
       "Emergency plumbing in Spring Valley, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley/emergency-plumbing/",
@@ -280,7 +280,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Emergency Plumbing in Spring Valley, NV | Red Carpet Plumbing",
+  name: "Emergency Plumbing in Spring Valley, NV",
   description:
     "Red Carpet Plumbing provides emergency plumbing service in Spring Valley, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/spring-valley/emergency-plumbing/",

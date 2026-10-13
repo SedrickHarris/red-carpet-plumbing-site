@@ -55,16 +55,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   // FLAG: VERIFY license #048585A in the description before publishing.
-  title: "Backflow Prevention Services in Henderson, NV | Red Carpet Plumbing",
+  title: "Backflow Prevention Services in Henderson, NV",
   description:
-    "Backflow preventer installation, repair, and replacement in Henderson, NV. Irrigation and commercial devices. NV #048585A. Call (702) 567-9172.",
+    "Backflow preventer installation, repair, and replacement in Henderson, NV. Irrigation and commercial devices. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/backflow-prevention/",
   },
   openGraph: {
-    title: "Backflow Prevention Services in Henderson, NV | Red Carpet Plumbing",
+    title: "Backflow Prevention Services in Henderson, NV",
     description:
-      "Backflow preventer installation, repair, and replacement in Henderson, NV. Irrigation and commercial devices. NV #048585A. Call (702) 567-9172.",
+      "Backflow preventer installation, repair, and replacement in Henderson, NV. Irrigation and commercial devices. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/backflow-prevention/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -308,10 +308,10 @@ const FINAL_CTA = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Backflow Prevention Services in Henderson, NV | Red Carpet Plumbing",
+  name: "Backflow Prevention Services in Henderson, NV",
   url: "https://redcarpetplumbing.com/henderson/backflow-prevention/",
   description:
-    "Backflow preventer installation, repair, and replacement in Henderson, NV. Irrigation and commercial devices. NV #048585A. Call (702) 567-9172.",
+    "Backflow preventer installation, repair, and replacement in Henderson, NV. Irrigation and commercial devices. Call (702) 567-9172.",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",

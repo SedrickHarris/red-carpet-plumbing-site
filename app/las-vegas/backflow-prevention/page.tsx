@@ -50,17 +50,17 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // ---------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: "Backflow Prevention Services in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Backflow Prevention Services in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing installs, repairs, and services backflow prevention devices for homes and businesses in Las Vegas, NV. LVVWD compliance. Irrigation PVB installation. NV #048585A. Call (702) 567-9172.",
+    "Backflow prevention device installation, repair, and service in Las Vegas, NV. LVVWD compliance and irrigation PVB installation. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/backflow-prevention/",
   },
   openGraph: {
     title:
-      "Backflow Prevention Services in Las Vegas, NV | Red Carpet Plumbing",
+      "Backflow Prevention Services in Las Vegas, NV",
     description:
-      "Licensed backflow prevention installation and repair in Las Vegas. LVVWD compliance, irrigation PVB, RPZ, DCVA. NV C-1 License #048585A.",
+      "Backflow prevention device installation, repair, and service in Las Vegas, NV. LVVWD compliance and irrigation PVB installation. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/backflow-prevention/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -308,7 +308,7 @@ const LV_BACKFLOW_SERVICES: { title: string; body: string; tail?: LinkSeg[] }[] 
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Backflow Prevention Services in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Backflow Prevention Services in Las Vegas, NV",
   description:
     "Red Carpet Plumbing installs, repairs, and services backflow prevention devices for homes and businesses in Las Vegas, NV. LVVWD compliance. Irrigation PVB installation. NV #048585A.",
   url: "https://redcarpetplumbing.com/las-vegas/backflow-prevention/",

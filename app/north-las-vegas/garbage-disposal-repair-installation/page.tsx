@@ -45,16 +45,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   // FLAG: VERIFY license #048585A in the description before publishing.
-  title: "Garbage Disposal Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+  title: "Garbage Disposal Repair and Installation in North Las Vegas",
   description:
-    "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172.",
+    "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/north-las-vegas/garbage-disposal-repair-installation/",
   },
   openGraph: {
-    title: "Garbage Disposal Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+    title: "Garbage Disposal Repair and Installation in North Las Vegas",
     description:
-      "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172.",
+      "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/garbage-disposal-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -291,9 +291,9 @@ const FINAL_CTA = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Garbage Disposal Repair and Installation in North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Garbage Disposal Repair and Installation in North Las Vegas",
   description:
-    "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172.",
+    "Garbage disposal repair and installation in North Las Vegas, NV. Jams, leaks, humming, and replacements. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/north-las-vegas/garbage-disposal-repair-installation/",
   isPartOf: {
     "@type": "WebSite",

@@ -30,14 +30,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Emergency Plumber in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Need an emergency plumber in Summerlin, NV? Red Carpet Plumbing provides 24/7 emergency plumbing for Summerlin homes, from original 1990s villages to Summerlin South. Call (702) 567-9172.",
+    "Need an emergency plumber in Summerlin, NV? 24/7 emergency plumbing for Summerlin homes, from 1990s villages to Summerlin South. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin/emergency-plumbing/",
   },
   openGraph: {
     title: "Emergency Plumber in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "24/7 emergency plumbing in Summerlin, NV. Burst pipes, slab leaks, water heater failures, and major leaks. Licensed plumbers. Call (702) 567-9172.",
+      "Need an emergency plumber in Summerlin, NV? 24/7 emergency plumbing for Summerlin homes, from 1990s villages to Summerlin South. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -224,7 +224,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Emergency Plumber in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Need an emergency plumber in Summerlin, NV? Red Carpet Plumbing provides 24/7 emergency plumbing for Summerlin homes, from original 1990s villages to Summerlin South. Call (702) 567-9172.",
+    "Need an emergency plumber in Summerlin, NV? 24/7 emergency plumbing for Summerlin homes, from 1990s villages to Summerlin South. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/summerlin/emergency-plumbing/",
   isPartOf: {
     "@type": "WebSite",

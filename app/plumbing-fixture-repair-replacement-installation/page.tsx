@@ -16,18 +16,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Plumbing Fixture Repair, Replacement and Installation in Las Vegas, NV | Red Carpet Plumbing",
+    "Plumbing Fixture Repair and Installation in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs plumbing fixtures for homes and businesses throughout Las Vegas. Faucets, shower valves, showerheads, bathtub fixtures, and more. NV Licensed #048585A. Call (702) 567-9172.",
+    "Plumbing fixture repair, replacement, and installation in Las Vegas. Faucets, shower valves, showerheads, and bathtub fixtures. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/plumbing-fixture-repair-replacement-installation/",
   },
   openGraph: {
     title:
-      "Plumbing Fixture Repair, Replacement and Installation in Las Vegas, NV | Red Carpet Plumbing",
+      "Plumbing Fixture Repair and Installation in Las Vegas, NV",
     description:
-      "Licensed plumbing fixture repair and installation throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
+      "Plumbing fixture repair, replacement, and installation in Las Vegas. Faucets, shower valves, showerheads, and bathtub fixtures. Call (702) 567-9172.",
   },
 };
 
@@ -380,7 +380,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Plumbing Fixture Repair, Replacement and Installation in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Plumbing Fixture Repair and Installation in Las Vegas, NV",
   description:
     "Red Carpet Plumbing repairs, replaces, and installs plumbing fixtures throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/plumbing-fixture-repair-replacement-installation/",

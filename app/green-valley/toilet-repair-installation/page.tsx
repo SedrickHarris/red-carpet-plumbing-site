@@ -48,18 +48,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Toilet Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
+    "Toilet Repair and Installation in Green Valley, NV",
   description:
-    "Red Carpet Plumbing provides toilet repair and installation in Green Valley, Henderson, NV. Running toilets, base leaks, wax ring replacement, clogs, and new installations. NV License #048585A. (702) 567-9172.",
+    "Toilet repair and installation in Green Valley, Henderson. Running toilets, base leaks, wax ring replacement, clogs, new installs. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/green-valley/toilet-repair-installation/",
   },
   openGraph: {
     title:
-      "Toilet Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
+      "Toilet Repair and Installation in Green Valley, NV",
     description:
-      "Licensed toilet repair and installation for Green Valley homes. Running toilets, base leaks, clog clearing, replacement, and new installations. Henderson, NV. Call (702) 567-9172.",
+      "Toilet repair and installation in Green Valley, Henderson. Running toilets, base leaks, wax ring replacement, clogs, new installs. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/green-valley/toilet-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -287,7 +287,7 @@ const GV_TOILET_FAQS: FaqItem[] = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Toilet Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
+  name: "Toilet Repair and Installation in Green Valley, NV",
   description:
     "Red Carpet Plumbing provides toilet repair and installation for homes in Green Valley, Henderson, NV. Running toilets, base leaks, wax ring replacement, toilet clogs, and new toilet installation. Licensed plumbers. NV #048585A.",
   url: "https://redcarpetplumbing.com/green-valley/toilet-repair-installation/",

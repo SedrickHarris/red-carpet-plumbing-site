@@ -38,18 +38,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // used for newer communities.
 
 export const metadata: Metadata = {
-  title: "Leak Detection and Repair in Boulder City, NV | Red Carpet Plumbing",
+  title: "Leak Detection and Repair in Boulder City, NV",
   description:
-    "Red Carpet Plumbing provides non-invasive leak detection and repair in Boulder City, NV. Galvanized pipe leaks, slab leaks, and hidden supply line leaks in historic and newer homes. Licensed plumbers. Call (702) 567-9172.",
+    "Non-invasive leak detection and repair in Boulder City, NV. Galvanized pipe leaks, slab leaks, and hidden supply line leaks. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/boulder-city/leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Leak Detection and Repair in Boulder City, NV | Red Carpet Plumbing",
+      "Leak Detection and Repair in Boulder City, NV",
     description:
-      "Non-invasive leak detection and repair in Boulder City from licensed local plumbers. Galvanized pipe leaks, slab leaks, and hidden supply line leaks for historic and newer homes.",
+      "Non-invasive leak detection and repair in Boulder City, NV. Galvanized pipe leaks, slab leaks, and hidden supply line leaks. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/boulder-city/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -290,7 +290,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Leak Detection and Repair in Boulder City, NV | Red Carpet Plumbing",
+  name: "Leak Detection and Repair in Boulder City, NV",
   description:
     "Red Carpet Plumbing provides non-invasive leak detection and repair in Boulder City, NV. Galvanized pipe leaks, slab leaks, and hidden supply line leaks for historic and newer homes. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/boulder-city/leak-detection-repair/",

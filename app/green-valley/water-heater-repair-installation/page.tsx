@@ -34,21 +34,21 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Water Heater Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in Green Valley, NV",
   // FLAG: description below is the approved brief string (~205 chars). It
   // exceeds the site's ≤160 meta-description standard; kept as approved pending
   // a trim decision. See build report.
   description:
-    "Water heater repair and installation in Green Valley, Henderson, NV. Red Carpet Plumbing services original Green Valley and Green Valley Ranch homes. Tank and tankless. Clark County code. Call (702) 567-9172.",
+    "Water heater repair and installation in Green Valley, Henderson. Tank and tankless for Green Valley and Green Valley Ranch homes. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/green-valley/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
+      "Water Heater Repair and Installation in Green Valley, NV",
     description:
-      "Licensed water heater repair and installation for Green Valley and Green Valley Ranch homes. Hard water maintenance, seismic bracing, thermal expansion tanks. Call (702) 567-9172.",
+      "Water heater repair and installation in Green Valley, Henderson. Tank and tankless for Green Valley and Green Valley Ranch homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/green-valley/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -297,7 +297,7 @@ const HERO_TRUST_ITEMS = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in Green Valley, Henderson, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in Green Valley, NV",
   description:
     "Red Carpet Plumbing repairs and installs water heaters for homes in Green Valley, Henderson, NV. Original Green Valley aging copper systems, Green Valley Ranch second-cycle replacement, hard water maintenance, and Clark County code installations.",
   url: "https://redcarpetplumbing.com/green-valley/water-heater-repair-installation/",

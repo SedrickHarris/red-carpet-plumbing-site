@@ -28,14 +28,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Drain Cleaning in Spring Valley, NV | Red Carpet Plumbing",
   description:
-    "Professional drain cleaning in Spring Valley, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Spring Valley homes. NV #048585A. (702) 567-9172.",
+    "Drain cleaning in Spring Valley, NV. Kitchen drains, bathroom drains, main sewer lines, hydro jetting for Spring Valley homes. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/spring-valley/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in Spring Valley, NV | Red Carpet Plumbing",
     description:
-      "Professional drain cleaning in Spring Valley, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Spring Valley homes. NV #048585A. (702) 567-9172.",
+      "Drain cleaning in Spring Valley, NV. Kitchen drains, bathroom drains, main sewer lines, hydro jetting for Spring Valley homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

@@ -36,14 +36,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Drain Cleaning in Boulder City, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides professional drain cleaning in Boulder City, NV. Galvanized pipe buildup, hard water scale, grease clogs, and main sewer line clearing for historic and newer homes. Licensed plumbers. Call (702) 567-9172.",
+    "Drain cleaning in Boulder City, NV. Galvanized pipe buildup, hard water scale, grease clogs, main line clearing. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/boulder-city/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in Boulder City, NV | Red Carpet Plumbing",
     description:
-      "Professional drain cleaning in Boulder City from licensed local plumbers. Galvanized drain pipe buildup, hard water mineral scale, grease clogs, and sewer line clearing for historic and newer homes.",
+      "Drain cleaning in Boulder City, NV. Galvanized pipe buildup, hard water scale, grease clogs, main line clearing. Licensed plumbers. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/boulder-city/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

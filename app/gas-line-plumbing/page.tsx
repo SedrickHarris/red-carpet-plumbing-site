@@ -17,14 +17,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, and inspection throughout Las Vegas and the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
+    "Licensed gas line repair, installation, and inspection throughout Las Vegas and the Las Vegas Valley. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/gas-line-plumbing/",
   },
   openGraph: {
     title: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed gas line plumbers serving Las Vegas, Henderson, Summerlin, and the entire Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
+      "Licensed gas line repair, installation, and inspection throughout Las Vegas and the Las Vegas Valley. Call (702) 567-9172.",
   },
 };
 

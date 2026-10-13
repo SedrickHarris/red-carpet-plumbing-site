@@ -16,18 +16,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Video Camera Plumbing Inspections in Las Vegas, NV | Red Carpet Plumbing",
+    "Video Camera Plumbing Inspections in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing performs video camera plumbing inspections for homes and businesses throughout Las Vegas. Root intrusion, pipe bellies, blockages, and pre-purchase inspections. NV Licensed #048585A. Call (702) 567-9172.",
+    "Video camera plumbing inspections for Las Vegas homes and businesses. Root intrusion, pipe bellies, blockages, pre-purchase checks. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/video-camera-plumbing-inspections/",
   },
   openGraph: {
     title:
-      "Video Camera Plumbing Inspections in Las Vegas, NV | Red Carpet Plumbing",
+      "Video Camera Plumbing Inspections in Las Vegas, NV",
     description:
-      "Licensed video camera plumbing inspections throughout Las Vegas and the Las Vegas Valley. Root intrusion, pipe bellies, pre-purchase. NV #048585A. 4.8 stars, 81 reviews.",
+      "Video camera plumbing inspections for Las Vegas homes and businesses. Root intrusion, pipe bellies, blockages, pre-purchase checks. Call (702) 567-9172.",
   },
 };
 
@@ -381,7 +381,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Video Camera Plumbing Inspections in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Video Camera Plumbing Inspections in Las Vegas, NV",
   description:
     "Red Carpet Plumbing performs video camera plumbing inspections for homes and businesses throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/video-camera-plumbing-inspections/",

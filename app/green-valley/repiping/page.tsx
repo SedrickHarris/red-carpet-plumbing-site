@@ -30,20 +30,20 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // rerouting and related-services links to /green-valley/repiping/ are active.
 
 export const metadata: Metadata = {
-  title: "Repiping Services in Green Valley, Henderson, NV | Red Carpet Plumbing",
+  title: "Repiping Services in Green Valley, NV | Red Carpet Plumbing",
   // FLAG: description below is the approved brief string (~172 chars). It
   // exceeds the site's ≤160 meta-description standard; kept as approved pending
   // a trim decision. See build report.
   description:
-    "Whole-house and partial repiping in Green Valley, Henderson, NV. Polybutylene, Kitec, and aging copper pipe replacement. PEX and copper. Permits pulled. Call (702) 567-9172.",
+    "Whole-house and partial repiping in Green Valley, Henderson. Polybutylene, Kitec, and aging copper replaced with PEX or copper. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/green-valley/repiping/",
   },
   openGraph: {
     title:
-      "Repiping Services in Green Valley, Henderson, NV | Red Carpet Plumbing",
+      "Repiping Services in Green Valley, NV | Red Carpet Plumbing",
     description:
-      "Licensed repiping for original Green Valley and Green Valley Ranch homes. Polybutylene, Kitec, aging copper replacement. PEX and copper installations. Permits pulled. Call (702) 567-9172.",
+      "Whole-house and partial repiping in Green Valley, Henderson. Polybutylene, Kitec, and aging copper replaced with PEX or copper. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/green-valley/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -312,7 +312,7 @@ const REPAIR_VS_REPIPE_DIRECT =
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Repiping Services in Green Valley, Henderson, NV | Red Carpet Plumbing",
+  name: "Repiping Services in Green Valley, NV | Red Carpet Plumbing",
   description:
     "Red Carpet Plumbing provides whole-house and partial repiping services for homes in Green Valley, Henderson, NV. Polybutylene, Kitec, galvanized, and aging copper pipe replacement. PEX and copper installations. Permits pulled.",
   url: "https://redcarpetplumbing.com/green-valley/repiping/",

@@ -35,14 +35,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Emergency Plumbing in Boulder City, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides emergency plumbing service in Boulder City, NV. Burst pipes, galvanized pipe failures, sewer backups, water heater failures, and slab leaks in historic and newer homes. Licensed plumbers. Call (702) 567-9172.",
+    "Emergency plumbing in Boulder City, NV. Burst pipes, galvanized pipe failures, sewer backups, water heater failures. Licensed. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/boulder-city/emergency-plumbing/",
   },
   openGraph: {
     title: "Emergency Plumbing in Boulder City, NV | Red Carpet Plumbing",
     description:
-      "Emergency plumbing in Boulder City from licensed local plumbers. Galvanized pipe failures, burst pipes, sewer backups, water heater failures. Historic and newer homes. Call Red Carpet Plumbing.",
+      "Emergency plumbing in Boulder City, NV. Burst pipes, galvanized pipe failures, sewer backups, water heater failures. Licensed. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/boulder-city/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

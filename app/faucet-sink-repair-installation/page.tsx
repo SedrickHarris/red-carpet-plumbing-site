@@ -16,18 +16,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+    "Faucet and Sink Repair and Installation in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks for kitchens, bathrooms, and utility areas throughout Las Vegas. Dripping faucets, low pressure, sink installs. NV Licensed #048585A. Call (702) 567-9172.",
+    "Faucet and sink repair and installation for Las Vegas kitchens and bathrooms. Dripping faucets, low pressure. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/faucet-sink-repair-installation/",
   },
   openGraph: {
     title:
-      "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+      "Faucet and Sink Repair and Installation in Las Vegas, NV",
     description:
-      "Licensed faucet and sink repair and installation throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
+      "Faucet and sink repair and installation for Las Vegas kitchens and bathrooms. Dripping faucets, low pressure. Licensed plumbers. Call (702) 567-9172.",
   },
 };
 
@@ -381,7 +381,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Faucet and Sink Repair and Installation in Las Vegas, NV",
   description:
     "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/faucet-sink-repair-installation/",

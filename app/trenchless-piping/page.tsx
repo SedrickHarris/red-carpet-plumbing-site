@@ -16,17 +16,17 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Trenchless Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+    "Trenchless Piping Services in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing provides trenchless pipe repair and replacement for homes and businesses throughout Las Vegas. CIPP lining and pipe bursting without major excavation. NV Licensed #048585A. Call (702) 567-9172.",
+    "Trenchless pipe repair and replacement for Las Vegas homes and businesses. CIPP lining and pipe bursting without major excavation. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/trenchless-piping/",
   },
   openGraph: {
     title:
-      "Trenchless Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+      "Trenchless Piping Services in Las Vegas, NV",
     description:
-      "Licensed trenchless pipe repair and replacement throughout Las Vegas and the Las Vegas Valley. CIPP lining, pipe bursting. NV #048585A. 4.8 stars, 81 reviews.",
+      "Trenchless pipe repair and replacement for Las Vegas homes and businesses. CIPP lining and pipe bursting without major excavation. Call (702) 567-9172.",
   },
 };
 
@@ -373,7 +373,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Trenchless Piping Services in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Trenchless Piping Services in Las Vegas, NV",
   description:
     "Red Carpet Plumbing provides trenchless pipe repair and replacement throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/trenchless-piping/",

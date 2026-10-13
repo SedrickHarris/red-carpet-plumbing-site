@@ -38,17 +38,17 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Drain Cleaning in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
+    "Drain Cleaning in Aliante, North Las Vegas",
   description:
-    "Slow or clogged drain in the Aliante area of North Las Vegas? Red Carpet Plumbing provides professional drain cleaning for Aliante homes. Call (702) 567-9172.",
+    "Slow or clogged drain in the Aliante area of North Las Vegas? Professional drain cleaning for Aliante homes. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/aliante-area/drain-cleaning/",
   },
   openGraph: {
-    title: "Drain Cleaning in the Aliante Area of North Las Vegas, NV",
+    title: "Drain Cleaning in Aliante, North Las Vegas",
     description:
-      "Red Carpet Plumbing provides professional drain cleaning in the Aliante area of North Las Vegas. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Aliante homes.",
+      "Slow or clogged drain in the Aliante area of North Las Vegas? Professional drain cleaning for Aliante homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -339,7 +339,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Drain Cleaning in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Drain Cleaning in Aliante, North Las Vegas",
   description:
     "Red Carpet Plumbing provides professional drain cleaning in the Aliante area of North Las Vegas, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting for Aliante homes. Licensed plumbers, NV License #048585A.",
   url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/drain-cleaning/",

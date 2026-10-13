@@ -44,18 +44,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+    "Faucet and Sink Repair and Installation in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks throughout Las Vegas, NV. Dripping faucets, low pressure, under-sink leaks, sink installation. NV #048585A. Call (702) 567-9172.",
+    "Faucet and sink repair, replacement, and installation in Las Vegas, NV. Dripping faucets, low pressure, under-sink leaks. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/las-vegas/faucet-sink-repair-installation/",
   },
   openGraph: {
     title:
-      "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+      "Faucet and Sink Repair and Installation in Las Vegas, NV",
     description:
-      "Licensed faucet and sink repair and installation in Las Vegas. Dripping faucets, aerator service, cartridge replacement, sink installs. Hard water specialists. NV #048585A.",
+      "Faucet and sink repair, replacement, and installation in Las Vegas, NV. Dripping faucets, low pressure, under-sink leaks. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/faucet-sink-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -302,7 +302,7 @@ const LV_FAUCET_SERVICES: { title: string; body: string; tail?: LinkSeg[] }[] = 
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Faucet and Sink Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Faucet and Sink Repair and Installation in Las Vegas, NV",
   description:
     "Red Carpet Plumbing repairs, replaces, and installs faucets and sinks throughout Las Vegas, NV. Dripping faucets, low pressure, under-sink leaks, sink installation. NV #048585A.",
   url: "https://redcarpetplumbing.com/las-vegas/faucet-sink-repair-installation/",

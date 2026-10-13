@@ -32,14 +32,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Commercial Plumbing in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Licensed commercial plumbing services in Enterprise, NV. Red Carpet Plumbing serves businesses, commercial parks, and property managers throughout the Southwest Las Vegas 215 Beltway corridor. NV Licensed #048585A, C-1. Call (702) 567-9172.",
+    "Licensed commercial plumbing in Enterprise, NV for businesses, commercial parks, and property managers near the 215 Beltway. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/enterprise/commercial-plumbing/",
   },
   openGraph: {
     title: "Commercial Plumbing in Enterprise, NV | Red Carpet Plumbing",
     description:
-      "Licensed commercial plumbing for Enterprise businesses, commercial parks, warehouses, and property managers. Southwest Las Vegas 215 Beltway corridor. NV Licensed #048585A, C-1 Plumbing and Heating.",
+      "Licensed commercial plumbing in Enterprise, NV for businesses, commercial parks, and property managers near the 215 Beltway. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/enterprise/commercial-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

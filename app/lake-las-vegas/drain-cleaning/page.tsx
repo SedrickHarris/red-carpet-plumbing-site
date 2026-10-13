@@ -27,19 +27,19 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // Lake Las Vegas is never described as a city or as unincorporated.
 
 export const metadata: Metadata = {
-  title: "Drain Cleaning in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+  title: "Drain Cleaning in Lake Las Vegas, NV | Red Carpet Plumbing",
   // FLAG: approved brief description (~205 chars) exceeds the site's ≤160
   // meta-description standard; kept as approved pending a trim decision.
   description:
-    "Professional drain cleaning in Lake Las Vegas, Henderson, NV. Red Carpet Plumbing clears kitchen drains, bathroom drains, and main sewer lines for Lake Las Vegas resort residential homes. Call (702) 567-9172.",
+    "Drain cleaning in Lake Las Vegas, Henderson. Kitchen, bathroom, and main sewer line drains for resort residential homes. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/lake-las-vegas/drain-cleaning/",
   },
   openGraph: {
     title:
-      "Drain Cleaning in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+      "Drain Cleaning in Lake Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed drain cleaning for Lake Las Vegas homes and resort residential properties. Hard water mineral scale, copper pipe buildup, and main sewer line cleaning. Call (702) 567-9172.",
+      "Drain cleaning in Lake Las Vegas, Henderson. Kitchen, bathroom, and main sewer line drains for resort residential homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/lake-las-vegas/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -203,7 +203,7 @@ const LLV_DRAIN_REROUTING = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Drain Cleaning in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+  name: "Drain Cleaning in Lake Las Vegas, NV | Red Carpet Plumbing",
   description:
     "Red Carpet Plumbing provides professional drain cleaning for homes in Lake Las Vegas, Henderson, NV. Kitchen drains, bathroom drains, main sewer line cleaning, and hydro jetting for Lake Las Vegas resort residential properties. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/lake-las-vegas/drain-cleaning/",

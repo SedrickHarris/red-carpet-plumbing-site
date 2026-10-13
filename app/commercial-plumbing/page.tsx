@@ -17,14 +17,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Commercial Plumbing in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses and property managers throughout Las Vegas and the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
+    "Licensed commercial plumbing repair, installation, and maintenance for businesses and property managers in Las Vegas, NV. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/commercial-plumbing/",
   },
   openGraph: {
     title: "Commercial Plumbing in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed commercial plumbers serving businesses, restaurants, and property managers throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
+      "Licensed commercial plumbing repair, installation, and maintenance for businesses and property managers in Las Vegas, NV. Call (702) 567-9172.",
   },
 };
 
