@@ -37,14 +37,13 @@
         "Plumber",
         "PostalAddress",
         "AggregateRating",
-        "OpeningHoursSpecification",
         "EducationalOccupationalCredential",
         "Organization",
         "WebSite",
         "WebPage",
         "Service"
       ],
-      "wordEstimate": 622
+      "wordEstimate": 642
     },
     {
       "route": "/about",
@@ -1026,7 +1025,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 360
+      "wordEstimate": 361
     },
     {
       "route": "/green-valley-plumbing-services",
@@ -1160,7 +1159,7 @@
         "FAQPage",
         "AggregateRating"
       ],
-      "wordEstimate": 646
+      "wordEstimate": 648
     },
     {
       "route": "/green-valley/faucet-sink-repair-installation",
@@ -1787,7 +1786,7 @@
         "Review",
         "AggregateRating"
       ],
-      "wordEstimate": 1002
+      "wordEstimate": 1012
     },
     {
       "route": "/henderson/leak-detection-repair",
@@ -2245,7 +2244,7 @@
         "FAQPage",
         "AggregateRating"
       ],
-      "wordEstimate": 753
+      "wordEstimate": 755
     },
     {
       "route": "/lake-las-vegas/leak-detection-repair",
@@ -4217,7 +4216,7 @@
         "HowToStep",
         "FAQPage"
       ],
-      "wordEstimate": 1283
+      "wordEstimate": 1286
     },
     {
       "route": "/paradise/gas-line-plumbing",
@@ -4258,7 +4257,7 @@
         "FAQPage",
         "Review"
       ],
-      "wordEstimate": 1000
+      "wordEstimate": 999
     },
     {
       "route": "/paradise/leak-detection-repair",
@@ -5207,7 +5206,7 @@
         "FAQPage",
         "LocalBusiness"
       ],
-      "wordEstimate": 1423
+      "wordEstimate": 1426
     },
     {
       "route": "/summerlin/faucet-sink-repair-installation",
@@ -5330,7 +5329,7 @@
         "FAQPage",
         "Review"
       ],
-      "wordEstimate": 947
+      "wordEstimate": 946
     },
     {
       "route": "/summerlin/leak-detection-repair",
