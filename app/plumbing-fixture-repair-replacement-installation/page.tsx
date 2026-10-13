@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { OG_IMAGES } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title:
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
       "Plumbing Fixture Repair and Installation in Las Vegas, NV",
     description:
       "Plumbing fixture repair, replacement, and installation in Las Vegas. Faucets, shower valves, showerheads, and bathtub fixtures. Call (702) 567-9172.",
+    images: OG_IMAGES,
   },
 };
 

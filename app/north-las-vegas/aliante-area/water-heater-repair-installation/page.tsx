@@ -14,6 +14,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { OG_IMAGES } from "@/lib/social-image";
 
 // ---------------------------------------------------------------------------
 // Active FLAGs for this page (source-only; none appear in rendered copy):
@@ -61,6 +62,7 @@ export const metadata: Metadata = {
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
     type: "website",
+    images: OG_IMAGES,
   },
   robots: { index: true, follow: true },
 };

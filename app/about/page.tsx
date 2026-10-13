@@ -10,6 +10,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { OG_IMAGES } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title:
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
       "About Red Carpet Plumbing | Las Vegas Plumbing Company",
     description:
       "Local, family-owned Las Vegas plumbing company with over 40 years of experience. Licensed plumbers and 24/7 emergency service. Call (702) 567-9172.",
+    images: OG_IMAGES,
   },
 };
 

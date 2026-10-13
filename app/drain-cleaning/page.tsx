@@ -13,6 +13,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { OG_IMAGES } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title: "Drain Cleaning in Las Vegas, NV | Red Carpet Plumbing",
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
     url: "https://redcarpetplumbing.com/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 

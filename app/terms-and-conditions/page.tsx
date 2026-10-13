@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/JsonLd";
 import { LegalDocument, type LegalSection } from "@/components/LegalDocument";
+import { OG_IMAGES } from "@/lib/social-image";
 
 const TITLE = "Terms and Conditions | Red Carpet Plumbing";
 const DESCRIPTION =
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
     type: "website",
+    images: OG_IMAGES,
   },
   robots: { index: true, follow: true },
 };
