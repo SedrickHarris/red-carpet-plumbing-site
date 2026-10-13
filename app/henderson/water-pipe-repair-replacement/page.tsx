@@ -43,16 +43,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   // FLAG: VERIFY license #048585A in the description before publishing.
-  title: "Water Pipe Repair and Replacement in Henderson, NV | Red Carpet Plumbing",
+  title: "Water Pipe Repair and Replacement in Henderson, NV",
   description:
-    "Water pipe repair and replacement in Henderson, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #048585A. Call (702) 567-9172.",
+    "Water pipe repair and replacement in Henderson, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/water-pipe-repair-replacement/",
   },
   openGraph: {
-    title: "Water Pipe Repair and Replacement in Henderson, NV | Red Carpet Plumbing",
+    title: "Water Pipe Repair and Replacement in Henderson, NV",
     description:
-      "Water pipe repair and replacement in Henderson, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #048585A. Call (702) 567-9172.",
+      "Water pipe repair and replacement in Henderson, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/water-pipe-repair-replacement/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -296,10 +296,10 @@ const FINAL_CTA = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Pipe Repair and Replacement in Henderson, NV | Red Carpet Plumbing",
+  name: "Water Pipe Repair and Replacement in Henderson, NV",
   url: "https://redcarpetplumbing.com/henderson/water-pipe-repair-replacement/",
   description:
-    "Water pipe repair and replacement in Henderson, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. NV #048585A. Call (702) 567-9172.",
+    "Water pipe repair and replacement in Henderson, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. Call (702) 567-9172.",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",

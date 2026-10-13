@@ -35,14 +35,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Repiping Services in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides whole-house and partial repiping in Enterprise, NV. Copper, Kitec, and polybutylene replacement for Rhodes Ranch and Mountain's Edge homes. Clark County permits pulled. Licensed plumbers. Call (702) 567-9172.",
+    "Whole-house and partial repiping in Enterprise, NV. Copper, Kitec, and polybutylene replacement for Rhodes Ranch and Mountain's Edge. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/enterprise/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Enterprise, NV | Red Carpet Plumbing",
     description:
-      "Whole-house and partial repiping throughout Enterprise, NV. First-service-cycle copper replacement, Kitec replacement, and polybutylene replacement for Southwest Las Vegas homes. Clark County permits pulled. Licensed plumbers.",
+      "Whole-house and partial repiping in Enterprise, NV. Copper, Kitec, and polybutylene replacement for Rhodes Ranch and Mountain's Edge. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/enterprise/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

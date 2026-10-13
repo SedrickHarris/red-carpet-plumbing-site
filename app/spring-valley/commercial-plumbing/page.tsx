@@ -32,17 +32,17 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // any visible/schema string.
 
 export const metadata: Metadata = {
-  title: "Commercial Plumbing in Spring Valley, NV | Red Carpet Plumbing",
+  title: "Commercial Plumbing in Spring Valley, NV",
   description:
-    "Licensed commercial plumbing in Spring Valley, NV. Red Carpet Plumbing serves businesses, restaurants, property managers, and HOA communities throughout Spring Valley. NV License #048585A, C-1 Plumbing and Heating. Clark County permits coordinated.",
+    "Licensed commercial plumbing in Spring Valley, NV for businesses, restaurants, property managers, and HOA communities. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/spring-valley/commercial-plumbing/",
   },
   openGraph: {
-    title: "Commercial Plumbing in Spring Valley, NV | Red Carpet Plumbing",
+    title: "Commercial Plumbing in Spring Valley, NV",
     description:
-      "Licensed commercial plumbing throughout Spring Valley, NV. Businesses, restaurants, property managers, HOA communities. NV License #048585A, C-1. Clark County permits coordinated.",
+      "Licensed commercial plumbing in Spring Valley, NV for businesses, restaurants, property managers, and HOA communities. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley/commercial-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -303,7 +303,7 @@ const SV_COMMERCIAL_AREAS = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Commercial Plumbing in Spring Valley, NV | Red Carpet Plumbing",
+  name: "Commercial Plumbing in Spring Valley, NV",
   description:
     "Red Carpet Plumbing provides licensed commercial plumbing in Spring Valley, NV. Businesses, restaurants, property managers, HOA communities. NV License #048585A, C-1. Clark County permits coordinated.",
   url: "https://redcarpetplumbing.com/spring-valley/commercial-plumbing/",

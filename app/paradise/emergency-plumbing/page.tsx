@@ -28,14 +28,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Emergency Plumber in Paradise, NV | Red Carpet Plumbing",
   description:
-    "Need an emergency plumber in Paradise, NV? Red Carpet Plumbing provides 24/7 emergency plumbing service near the Las Vegas Strip and throughout Paradise. Call (702) 567-9172.",
+    "Need an emergency plumber in Paradise, NV? 24/7 emergency plumbing near the Las Vegas Strip and throughout Paradise. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/paradise/emergency-plumbing/",
   },
   openGraph: {
     title: "Emergency Plumber in Paradise, NV | Red Carpet Plumbing",
     description:
-      "24/7 emergency plumbing in Paradise, NV. Burst pipes, sewer backups, water heater failures, and major leaks. Red Carpet Plumbing. Call (702) 567-9172.",
+      "Need an emergency plumber in Paradise, NV? 24/7 emergency plumbing near the Las Vegas Strip and throughout Paradise. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/paradise/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -205,7 +205,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Emergency Plumber in Paradise, NV | Red Carpet Plumbing",
   description:
-    "Need an emergency plumber in Paradise, NV? Red Carpet Plumbing provides 24/7 emergency plumbing service near the Las Vegas Strip and throughout Paradise. Call (702) 567-9172.",
+    "Need an emergency plumber in Paradise, NV? 24/7 emergency plumbing near the Las Vegas Strip and throughout Paradise. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/paradise/emergency-plumbing/",
   isPartOf: {
     "@type": "WebSite",

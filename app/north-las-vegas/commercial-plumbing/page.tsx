@@ -59,17 +59,17 @@ import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  title: "Commercial Plumbing in North Las Vegas, NV | Red Carpet Plumbing",
+  title: "Commercial Plumbing in North Las Vegas, NV",
   description:
-    "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance throughout North Las Vegas, NV, including 89030, 89031, 89084, and surrounding ZIPs. 24/7 emergency response. Call (702) 567-9172.",
+    "Licensed commercial plumbing repair, installation, and maintenance in North Las Vegas, NV, including 89030, 89031, and 89084. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/commercial-plumbing/",
   },
   openGraph: {
-    title: "Commercial Plumbing in North Las Vegas, NV | Red Carpet Plumbing",
+    title: "Commercial Plumbing in North Las Vegas, NV",
     description:
-      "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance throughout North Las Vegas, NV, including 89030, 89031, 89084, and surrounding ZIPs. 24/7 emergency response. Call (702) 567-9172.",
+      "Licensed commercial plumbing repair, installation, and maintenance in North Las Vegas, NV, including 89030, 89031, and 89084. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/commercial-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -235,10 +235,10 @@ const LINK_CLASS =
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Commercial Plumbing in North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Commercial Plumbing in North Las Vegas, NV",
   url: "https://redcarpetplumbing.com/north-las-vegas/commercial-plumbing/",
   description:
-    "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance throughout North Las Vegas, NV, including 89030, 89031, 89084, and surrounding ZIPs. 24/7 emergency response. Call (702) 567-9172.",
+    "Licensed commercial plumbing repair, installation, and maintenance in North Las Vegas, NV, including 89030, 89031, and 89084. Call (702) 567-9172.",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",

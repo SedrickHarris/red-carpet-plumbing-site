@@ -24,17 +24,17 @@ export const metadata: Metadata = {
   // FLAG: description below is the approved brief string (~240 chars). It
   // exceeds the site's ≤160 meta-description standard; see report. Kept as
   // approved pending a trim decision.
-  title: "Emergency Plumbing in North Las Vegas, NV | Red Carpet Plumbing",
+  title: "Emergency Plumbing in North Las Vegas, NV",
   description:
-    "Red Carpet Plumbing provides emergency plumbing service in North Las Vegas, NV, including the Aliante area and surrounding neighborhoods. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers. Call (702) 567-9172.",
+    "Emergency plumbing in North Las Vegas, NV, including Aliante. Burst pipes, slab leaks, sewer backups, water heater failures. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/emergency-plumbing/",
   },
   openGraph: {
-    title: "Emergency Plumbing in North Las Vegas, NV | Red Carpet Plumbing",
+    title: "Emergency Plumbing in North Las Vegas, NV",
     description:
-      "Emergency plumbing in North Las Vegas from licensed local plumbers. Aliante area, Craig Road corridor, and all North Las Vegas communities. Call Red Carpet Plumbing.",
+      "Emergency plumbing in North Las Vegas, NV, including Aliante. Burst pipes, slab leaks, sewer backups, water heater failures. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -200,7 +200,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Emergency Plumbing in North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Emergency Plumbing in North Las Vegas, NV",
   description:
     "Red Carpet Plumbing provides emergency plumbing service in North Las Vegas, NV, including the Aliante area. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/north-las-vegas/emergency-plumbing/",

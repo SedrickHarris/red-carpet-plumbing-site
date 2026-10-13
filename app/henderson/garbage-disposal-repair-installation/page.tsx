@@ -42,16 +42,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   // FLAG: VERIFY license #048585A in the description before publishing.
-  title: "Garbage Disposal Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+  title: "Garbage Disposal Repair and Installation in Henderson, NV",
   description:
-    "Garbage disposal repair and installation in Henderson, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172.",
+    "Garbage disposal repair and installation in Henderson, NV. Jams, leaks, humming, and replacements. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/garbage-disposal-repair-installation/",
   },
   openGraph: {
-    title: "Garbage Disposal Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+    title: "Garbage Disposal Repair and Installation in Henderson, NV",
     description:
-      "Garbage disposal repair and installation in Henderson, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172.",
+      "Garbage disposal repair and installation in Henderson, NV. Jams, leaks, humming, and replacements. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/garbage-disposal-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -286,10 +286,10 @@ const FINAL_CTA = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Garbage Disposal Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+  name: "Garbage Disposal Repair and Installation in Henderson, NV",
   url: "https://redcarpetplumbing.com/henderson/garbage-disposal-repair-installation/",
   description:
-    "Garbage disposal repair and installation in Henderson, NV. Jams, leaks, humming, and replacements. NV #048585A. Call (702) 567-9172.",
+    "Garbage disposal repair and installation in Henderson, NV. Jams, leaks, humming, and replacements. Call (702) 567-9172.",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",

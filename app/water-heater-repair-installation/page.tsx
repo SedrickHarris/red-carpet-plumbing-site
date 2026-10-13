@@ -16,18 +16,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing repairs and installs water heaters throughout Las Vegas and the Las Vegas Valley. Tank and tankless water heaters, licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+    "Water heater repair and installation in Las Vegas and the Valley. Tank and tankless units. Licensed, 4.8-star rated. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+      "Water Heater Repair and Installation in Las Vegas, NV",
     description:
-      "Red Carpet Plumbing repairs and installs water heaters throughout Las Vegas and the Las Vegas Valley. Tank and tankless water heaters, licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+      "Water heater repair and installation in Las Vegas and the Valley. Tank and tankless units. Licensed, 4.8-star rated. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     type: "website",
@@ -376,7 +376,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in Las Vegas, NV",
   description:
     "Red Carpet Plumbing repairs and installs water heaters throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/water-heater-repair-installation/",

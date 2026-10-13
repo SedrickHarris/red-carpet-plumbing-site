@@ -30,14 +30,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Repiping Services in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Professional repiping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled. NV #048585A. (702) 567-9172.",
+    "Professional repiping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Professional repiping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled. NV #048585A. (702) 567-9172.",
+      "Professional repiping in Summerlin, NV. Copper, polybutylene, Kitec, and PEX repiping for Summerlin homes. Permits pulled. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

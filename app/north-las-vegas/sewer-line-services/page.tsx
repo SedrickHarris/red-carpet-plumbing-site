@@ -44,17 +44,17 @@ import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  title: "Sewer Line Services in North Las Vegas, NV | Red Carpet Plumbing",
+  title: "Sewer Line Services in North Las Vegas, NV",
   description:
-    "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement throughout North Las Vegas, NV, including 89030, 89031, 89084, and surrounding ZIPs. Licensed plumbers. Call (702) 567-9172.",
+    "Sewer line inspection, cleaning, repair, and replacement in North Las Vegas, NV, including 89030, 89031, and 89084. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/sewer-line-services/",
   },
   openGraph: {
-    title: "Sewer Line Services in North Las Vegas, NV | Red Carpet Plumbing",
+    title: "Sewer Line Services in North Las Vegas, NV",
     description:
-      "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement throughout North Las Vegas, NV, including 89030, 89031, 89084, and surrounding ZIPs. Licensed plumbers. Call (702) 567-9172.",
+      "Sewer line inspection, cleaning, repair, and replacement in North Las Vegas, NV, including 89030, 89031, and 89084. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/sewer-line-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -203,10 +203,10 @@ const LINK_CLASS =
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Sewer Line Services in North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Sewer Line Services in North Las Vegas, NV",
   url: "https://redcarpetplumbing.com/north-las-vegas/sewer-line-services/",
   description:
-    "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement throughout North Las Vegas, NV, including 89030, 89031, 89084, and surrounding ZIPs. Licensed plumbers. Call (702) 567-9172.",
+    "Sewer line inspection, cleaning, repair, and replacement in North Las Vegas, NV, including 89030, 89031, and 89084. Call (702) 567-9172.",
   inLanguage: "en-US",
   isPartOf: {
     "@type": "WebSite",

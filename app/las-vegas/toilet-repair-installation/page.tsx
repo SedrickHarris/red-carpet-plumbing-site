@@ -43,18 +43,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // ---------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Toilet Repair and Installation in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs toilets throughout Las Vegas, NV. Running toilets, base leaks, wax ring replacement, clogs, and new installations. NV #048585A. Call (702) 567-9172.",
+    "Toilet repair, replacement, and installation in Las Vegas, NV. Running toilets, base leaks, wax ring replacement, clogs. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/las-vegas/toilet-repair-installation/",
   },
   openGraph: {
     title:
-      "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+      "Toilet Repair and Installation in Las Vegas, NV",
     description:
-      "Licensed toilet repair and installation in Las Vegas. Running toilets, base leaks, wax ring replacement, hard water buildup, new installs. NV #048585A.",
+      "Toilet repair, replacement, and installation in Las Vegas, NV. Running toilets, base leaks, wax ring replacement, clogs. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/toilet-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -287,7 +287,7 @@ const LV_TOILET_SERVICES: { title: string; body: string; tail?: LinkSeg[] }[] =
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Toilet Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Toilet Repair and Installation in Las Vegas, NV",
   description:
     "Red Carpet Plumbing repairs, replaces, and installs toilets throughout Las Vegas, NV. Running toilets, base leaks, wax ring replacement, clogs, and new installations. NV #048585A.",
   url: "https://redcarpetplumbing.com/las-vegas/toilet-repair-installation/",

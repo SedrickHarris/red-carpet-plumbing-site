@@ -24,16 +24,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // Clark County. No AggregateRating. No standalone LocalBusiness schema.
 
 export const metadata: Metadata = {
-  title: "Leak Detection and Repair in Paradise, NV | Red Carpet Plumbing",
+  title: "Leak Detection and Repair in Paradise, NV",
   description:
-    "Non-invasive leak detection and repair in Paradise, NV. Hidden pipe leaks, slab leaks, aging plumbing near UNLV, and hard water corrosion. Red Carpet Plumbing. Call (702) 567-9172.",
+    "Non-invasive leak detection and repair in Paradise, NV. Hidden pipe leaks, slab leaks, and aging plumbing near UNLV. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/paradise/leak-detection-repair/",
   },
   openGraph: {
-    title: "Leak Detection and Repair in Paradise, NV | Red Carpet Plumbing",
+    title: "Leak Detection and Repair in Paradise, NV",
     description:
-      "Non-invasive leak detection for homes and businesses in Paradise, NV. Hidden leaks, slab leaks, aging pipe corrosion. Licensed plumbers. Call (702) 567-9172.",
+      "Non-invasive leak detection and repair in Paradise, NV. Hidden pipe leaks, slab leaks, and aging plumbing near UNLV. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/paradise/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -259,9 +259,9 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Leak Detection and Repair in Paradise, NV | Red Carpet Plumbing",
+  name: "Leak Detection and Repair in Paradise, NV",
   description:
-    "Non-invasive leak detection and repair in Paradise, NV. Hidden pipe leaks, slab leaks, aging plumbing near UNLV, and hard water corrosion. Red Carpet Plumbing. Call (702) 567-9172.",
+    "Non-invasive leak detection and repair in Paradise, NV. Hidden pipe leaks, slab leaks, and aging plumbing near UNLV. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/paradise/leak-detection-repair/",
   isPartOf: {
     "@type": "WebSite",

@@ -50,20 +50,20 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Leak Detection and Repair in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
+    "Leak Detection and Repair in Aliante, North Las Vegas",
   // NOTE: approved description exceeds the ~160 char SEO target (~234 chars).
   // Used verbatim per the approved brief; flag for trim consideration at launch.
   description:
-    "Red Carpet Plumbing provides non-invasive leak detection and repair in the Aliante area of North Las Vegas, NV. Acoustic sensor detection, thermal imaging, and pressure testing for copper pipe leaks. NV License #048585A. (702) 567-9172.",
+    "Non-invasive leak detection and repair in Aliante, North Las Vegas. Acoustic sensors, thermal imaging, and pressure testing. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/aliante-area/leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Leak Detection and Repair in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
+      "Leak Detection and Repair in Aliante, North Las Vegas",
     description:
-      "Non-invasive leak detection for Aliante area homes in North Las Vegas. Copper pipe leaks, underground supply lines, wall and ceiling leaks, and slab leak detection. Licensed plumbers. Call (702) 567-9172.",
+      "Non-invasive leak detection and repair in Aliante, North Las Vegas. Acoustic sensors, thermal imaging, and pressure testing. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -308,7 +308,7 @@ const ALIANTE_LEAK_FAQS: FaqItem[] = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Leak Detection and Repair in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Leak Detection and Repair in Aliante, North Las Vegas",
   description:
     "Red Carpet Plumbing provides professional leak detection and repair in the Aliante area of North Las Vegas, NV. Non-invasive acoustic sensor detection, thermal imaging, pressure testing, and copper pipe leak repair for Aliante homes. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/leak-detection-repair/",

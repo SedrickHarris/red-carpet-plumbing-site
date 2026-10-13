@@ -28,18 +28,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Slab Leak Detection and Repair in Summerlin, NV | Red Carpet Plumbing",
+    "Slab Leak Detection and Repair in Summerlin, NV",
   description:
-    "Slab leak detection and repair in Summerlin, NV. Non-invasive detection, all repair options explained. Licensed plumbers. NV #048585A. (702) 567-9172.",
+    "Slab leak detection and repair in Summerlin, NV. Non-invasive detection, all repair options explained. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/summerlin/slab-leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Slab Leak Detection and Repair in Summerlin, NV | Red Carpet Plumbing",
+      "Slab Leak Detection and Repair in Summerlin, NV",
     description:
-      "Slab leak detection and repair in Summerlin, NV. Non-invasive detection, all repair options explained. Licensed plumbers. NV #048585A. (702) 567-9172.",
+      "Slab leak detection and repair in Summerlin, NV. Non-invasive detection, all repair options explained. Licensed plumbers. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin/slab-leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -261,7 +261,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Slab Leak Detection and Repair in Summerlin, NV | Red Carpet Plumbing",
+  name: "Slab Leak Detection and Repair in Summerlin, NV",
   description:
     "Red Carpet Plumbing provides slab leak detection and repair in Summerlin, NV. Non-invasive detection, all repair options explained. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/summerlin/slab-leak-detection-repair/",

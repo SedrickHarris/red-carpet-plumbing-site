@@ -26,18 +26,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // Plumber (name, url, telephone). No AggregateRating/Review. No sameAs.
 
 export const metadata: Metadata = {
-  title: "Leak Detection and Repair in Spring Valley, NV | Red Carpet Plumbing",
+  title: "Leak Detection and Repair in Spring Valley, NV",
   description:
-    "Non-invasive leak detection and repair in Spring Valley, NV. Hidden leaks, galvanized pipe leaks, slab leaks. Licensed plumbers. NV #048585A. (702) 567-9172.",
+    "Non-invasive leak detection and repair in Spring Valley, NV. Hidden, galvanized pipe, and slab leaks. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/spring-valley/leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Leak Detection and Repair in Spring Valley, NV | Red Carpet Plumbing",
+      "Leak Detection and Repair in Spring Valley, NV",
     description:
-      "Non-invasive leak detection and repair in Spring Valley, NV. Hidden leaks, galvanized pipe leaks, slab leaks. Licensed plumbers. NV #048585A. (702) 567-9172.",
+      "Non-invasive leak detection and repair in Spring Valley, NV. Hidden, galvanized pipe, and slab leaks. Licensed plumbers. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -261,7 +261,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Leak Detection and Repair in Spring Valley, NV | Red Carpet Plumbing",
+  name: "Leak Detection and Repair in Spring Valley, NV",
   description:
     "Red Carpet Plumbing provides non-invasive leak detection and repair in Spring Valley, NV. Hidden leaks, galvanized pipe leaks, slab leaks. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/spring-valley/leak-detection-repair/",

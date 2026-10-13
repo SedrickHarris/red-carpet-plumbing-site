@@ -29,20 +29,20 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Emergency Plumbing in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+    "Emergency Plumbing in Lake Las Vegas, NV",
   // FLAG: approved brief description (~215 chars) exceeds the site's ≤160
   // meta-description standard; kept as approved pending a trim decision.
   description:
-    "Emergency plumbing service in Lake Las Vegas, Henderson, NV. Red Carpet Plumbing handles burst pipes, slab leaks, sewer backups, and water heater failures for Lake Las Vegas resort residential homes. Call (702) 567-9172.",
+    "Emergency plumbing in Lake Las Vegas, Henderson. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/lake-las-vegas/emergency-plumbing/",
   },
   openGraph: {
     title:
-      "Emergency Plumbing in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+      "Emergency Plumbing in Lake Las Vegas, NV",
     description:
-      "Licensed emergency plumbers serving Lake Las Vegas and Henderson, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Call (702) 567-9172.",
+      "Emergency plumbing in Lake Las Vegas, Henderson. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/lake-las-vegas/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -265,7 +265,7 @@ const LLV_EMERGENCY_REROUTING = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Emergency Plumbing in Lake Las Vegas, Henderson, NV | Red Carpet Plumbing",
+  name: "Emergency Plumbing in Lake Las Vegas, NV",
   description:
     "Red Carpet Plumbing provides emergency plumbing service for homes in Lake Las Vegas, Henderson, NV. Burst pipes, slab leaks, sewer backups, and water heater failures handled by licensed plumbers.",
   url: "https://redcarpetplumbing.com/lake-las-vegas/emergency-plumbing/",

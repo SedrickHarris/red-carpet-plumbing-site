@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Plumbing Company in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Local Las Vegas plumbers available for emergency plumbing, drain cleaning, water heater repair, leak detection, slab leak repair, and more. Serving the full Las Vegas Valley. Call (702) 567-9172.",
+      "Local, family-owned Las Vegas plumbing company. Emergency plumbing, drain cleaning, water heater repair, slab leak repair, and more. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/",
     siteName: "Red Carpet Plumbing",
     type: "website",

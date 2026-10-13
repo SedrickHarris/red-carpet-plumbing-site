@@ -20,14 +20,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Summerlin, NV | Red Carpet Plumbing",
   description:
-    "Plumbing services in Summerlin, NV. Emergency plumbing, water heater repair, slab leak detection, repiping for Summerlin homes. NV #048585A. (702) 567-9172.",
+    "Plumbing services in Summerlin, NV. Emergency plumbing, water heater repair, slab leak detection, repiping for Summerlin homes. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/summerlin-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Summerlin, NV | Red Carpet Plumbing",
     description:
-      "Plumbing services in Summerlin, NV. Emergency plumbing, water heater repair, slab leak detection, repiping for Summerlin homes. NV #048585A. (702) 567-9172.",
+      "Plumbing services in Summerlin, NV. Emergency plumbing, water heater repair, slab leak detection, repiping for Summerlin homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/summerlin-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

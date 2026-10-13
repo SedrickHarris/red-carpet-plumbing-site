@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   // approved pending a trim decision.
   title: "Drain Cleaning in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides professional drain cleaning in Henderson, NV, including Green Valley and Lake Las Vegas. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting. Licensed plumbers. Call (702) 567-9172.",
+    "Drain cleaning in Henderson, NV, including Green Valley and Lake Las Vegas. Kitchen drains, main sewer lines, and hydro jetting. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/drain-cleaning/",
   },
   openGraph: {
     title: "Drain Cleaning in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Professional drain cleaning in Henderson from licensed local plumbers. Green Valley, Lake Las Vegas, and all Henderson communities served. Call Red Carpet Plumbing.",
+      "Drain cleaning in Henderson, NV, including Green Valley and Lake Las Vegas. Kitchen drains, main sewer lines, and hydro jetting. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/drain-cleaning/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

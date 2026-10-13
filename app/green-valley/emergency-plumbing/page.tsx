@@ -30,16 +30,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // Green Valley is never described as a city or as unincorporated.
 
 export const metadata: Metadata = {
-  title: "Emergency Plumbing in Green Valley, Henderson, NV | Red Carpet Plumbing",
+  title: "Emergency Plumbing in Green Valley, NV | Red Carpet Plumbing",
   description:
-    "Emergency plumbing service in Green Valley, Henderson, NV. Red Carpet Plumbing handles burst pipes, slab leaks, sewer backups, and water heater failures for Green Valley homes. Call (702) 567-9172.",
+    "Emergency plumbing in Green Valley, Henderson. Burst pipes, slab leaks, sewer backups, water heater failures for Green Valley homes. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/green-valley/emergency-plumbing/",
   },
   openGraph: {
-    title: "Emergency Plumbing in Green Valley, Henderson, NV | Red Carpet Plumbing",
+    title: "Emergency Plumbing in Green Valley, NV | Red Carpet Plumbing",
     description:
-      "Licensed emergency plumbers serving Green Valley and Henderson, NV. Burst pipes, slab leaks, Kitec pipe failures, sewer backups. Call (702) 567-9172.",
+      "Emergency plumbing in Green Valley, Henderson. Burst pipes, slab leaks, sewer backups, water heater failures for Green Valley homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/green-valley/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -265,7 +265,7 @@ const GV_EMERGENCY_FAQS: FaqItem[] = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Emergency Plumbing in Green Valley, Henderson, NV | Red Carpet Plumbing",
+  name: "Emergency Plumbing in Green Valley, NV | Red Carpet Plumbing",
   description:
     "Red Carpet Plumbing provides emergency plumbing service for homes in Green Valley, Henderson, NV. Burst pipes, slab leaks, sewer backups, and water heater failures handled by licensed plumbers.",
   url: "https://redcarpetplumbing.com/green-valley/emergency-plumbing/",

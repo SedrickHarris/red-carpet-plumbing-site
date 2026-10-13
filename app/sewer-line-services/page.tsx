@@ -17,14 +17,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Sewer Line Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement throughout Las Vegas and the Las Vegas Valley. Trenchless options available. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+    "Sewer line inspection, cleaning, repair, and replacement in Las Vegas and the Valley. Trenchless options. Licensed, 4.8-star rated. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/sewer-line-services/",
   },
   openGraph: {
     title: "Sewer Line Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+      "Sewer line inspection, cleaning, repair, and replacement in Las Vegas and the Valley. Trenchless options. Licensed, 4.8-star rated. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/sewer-line-services/",
     siteName: "Red Carpet Plumbing",
     type: "website",

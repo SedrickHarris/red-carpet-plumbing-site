@@ -15,16 +15,16 @@ import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  title: "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Leak Detection and Repair in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing provides professional leak detection and repair throughout Las Vegas and the Las Vegas Valley. Hidden leaks, slab leaks, wall leaks, underground lines. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+    "Leak detection and repair in Las Vegas and the Valley. Hidden, slab, wall, and underground leaks. Licensed, 4.8-star rated. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/leak-detection-repair/",
   },
   openGraph: {
-    title: "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+    title: "Leak Detection and Repair in Las Vegas, NV",
     description:
-      "Red Carpet Plumbing provides professional leak detection and repair throughout Las Vegas and the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+      "Leak detection and repair in Las Vegas and the Valley. Hidden, slab, wall, and underground leaks. Licensed, 4.8-star rated. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     type: "website",
@@ -366,7 +366,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Leak Detection and Repair in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Leak Detection and Repair in Las Vegas, NV",
   description:
     "Red Carpet Plumbing provides professional leak detection and repair throughout the Las Vegas Valley. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/leak-detection-repair/",

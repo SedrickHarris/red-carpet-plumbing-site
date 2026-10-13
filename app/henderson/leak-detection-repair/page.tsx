@@ -29,16 +29,16 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 // was avoided. See build report.
 
 export const metadata: Metadata = {
-  title: "Leak Detection and Repair in Henderson, NV | Red Carpet Plumbing",
+  title: "Leak Detection and Repair in Henderson, NV",
   description:
-    "Professional leak detection and repair in Henderson, NV. Red Carpet Plumbing locates hidden water leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging. Serving Green Valley, Lake Las Vegas, and all Henderson communities.",
+    "Non-invasive leak detection and repair in Henderson, NV with acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/leak-detection-repair/",
   },
   openGraph: {
-    title: "Leak Detection and Repair in Henderson, NV | Red Carpet Plumbing",
+    title: "Leak Detection and Repair in Henderson, NV",
     description:
-      "Non-invasive leak detection and repair throughout Henderson, NV. Acoustic sensors, pressure testing, and thermal imaging. Green Valley and Lake Las Vegas included.",
+      "Non-invasive leak detection and repair in Henderson, NV with acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -247,7 +247,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Leak Detection and Repair in Henderson, NV | Red Carpet Plumbing",
+  name: "Leak Detection and Repair in Henderson, NV",
   description:
     "Professional leak detection and repair in Henderson, NV. Red Carpet Plumbing locates hidden water leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging.",
   url: "https://redcarpetplumbing.com/henderson/leak-detection-repair/",

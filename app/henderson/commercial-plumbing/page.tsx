@@ -32,14 +32,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Commercial Plumbing in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Licensed commercial plumbing services in Henderson, NV. Red Carpet Plumbing serves businesses, restaurants, property managers, and HOA communities throughout Henderson. NV Licensed #048585A. Call (702) 567-9172.",
+    "Licensed commercial plumbing in Henderson, NV for businesses, restaurants, property managers, and HOA communities. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/commercial-plumbing/",
   },
   openGraph: {
     title: "Commercial Plumbing in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Licensed commercial plumbers for businesses, restaurants, property managers, and HOA communities throughout Henderson, NV. NV #048585A.",
+      "Licensed commercial plumbing in Henderson, NV for businesses, restaurants, property managers, and HOA communities. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/commercial-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

@@ -16,17 +16,17 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Plumbing Service Areas in Las Vegas Valley | Red Carpet Plumbing",
+    "Plumbing Service Areas in Las Vegas Valley",
   description:
-    "Red Carpet Plumbing serves Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Paradise, Boulder City, Green Valley, Lake Las Vegas, and the Las Vegas Valley.",
+    "Plumbing service in Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Enterprise, Paradise, Boulder City, Green Valley, and Lake Las Vegas.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/service-areas/",
   },
   openGraph: {
     title:
-      "Plumbing Service Areas in Las Vegas Valley | Red Carpet Plumbing",
+      "Plumbing Service Areas in Las Vegas Valley",
     description:
-      "Red Carpet Plumbing provides plumbing services throughout the Las Vegas Valley including Las Vegas, Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley, Enterprise, Boulder City, Green Valley, and Lake Las Vegas.",
+      "Plumbing service in Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Enterprise, Paradise, Boulder City, Green Valley, and Lake Las Vegas.",
     url: "https://redcarpetplumbing.com/service-areas/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -261,10 +261,10 @@ const WHY_CHOOSE_LABELS = [
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Plumbing Service Areas in Las Vegas Valley | Red Carpet Plumbing",
+  name: "Plumbing Service Areas in Las Vegas Valley",
   url: "https://redcarpetplumbing.com/service-areas/",
   description:
-    "Red Carpet Plumbing serves Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Paradise, Boulder City, Green Valley, Lake Las Vegas, and the Las Vegas Valley.",
+    "Plumbing service in Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Enterprise, Paradise, Boulder City, Green Valley, and Lake Las Vegas.",
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [

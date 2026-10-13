@@ -18,16 +18,16 @@ import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  title: "Plumbing Services in Lake Las Vegas, NV | Red Carpet Plumbing",
+  title: "Plumbing Services in Lake Las Vegas, NV",
   description:
-    "Plumbing services in Lake Las Vegas, NV. Water heater repair, slab leak detection, leak detection for luxury Henderson homes. NV #048585A. (702) 567-9172.",
+    "Plumbing services in Lake Las Vegas, NV. Water heater repair, slab leak detection, leak detection for luxury Henderson homes. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/lake-las-vegas-plumbing-services/",
   },
   openGraph: {
-    title: "Plumbing Services in Lake Las Vegas, NV | Red Carpet Plumbing",
+    title: "Plumbing Services in Lake Las Vegas, NV",
     description:
-      "Plumbing services in Lake Las Vegas, NV. Water heater repair, slab leak detection, leak detection for luxury Henderson homes. NV #048585A. (702) 567-9172.",
+      "Plumbing services in Lake Las Vegas, NV. Water heater repair, slab leak detection, leak detection for luxury Henderson homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/lake-las-vegas-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -317,7 +317,7 @@ const plumberSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Plumbing Services in Lake Las Vegas, NV | Red Carpet Plumbing",
+  name: "Plumbing Services in Lake Las Vegas, NV",
   description:
     "Red Carpet Plumbing provides licensed plumbing services in Lake Las Vegas, NV including water heater repair, slab leak detection, and leak detection. NV Licensed #048585A.",
   url: "https://redcarpetplumbing.com/lake-las-vegas-plumbing-services/",

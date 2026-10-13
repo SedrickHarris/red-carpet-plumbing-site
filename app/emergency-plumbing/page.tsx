@@ -18,14 +18,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Emergency Plumber in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides 24/7 emergency plumbing in Las Vegas and the Las Vegas Valley. Burst pipes, sewer backups, water heater failures, and more. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+    "24/7 emergency plumbing in Las Vegas and the Valley. Burst pipes, sewer backups, water heater failures. Licensed, 4.8-star rated. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/emergency-plumbing/",
   },
   openGraph: {
     title: "Emergency Plumber in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Red Carpet Plumbing provides 24/7 emergency plumbing in Las Vegas and the Las Vegas Valley. Burst pipes, sewer backups, water heater failures, and more. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+      "24/7 emergency plumbing in Las Vegas and the Valley. Burst pipes, sewer backups, water heater failures. Licensed, 4.8-star rated. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     type: "website",

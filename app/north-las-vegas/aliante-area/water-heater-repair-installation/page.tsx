@@ -45,18 +45,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Water Heater Repair and Installation in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in Aliante, NV",
   description:
-    "Water heater repair and installation in the Aliante area of North Las Vegas. Tank, tankless, expansion tanks, seismic bracing. Licensed plumbers. Call (702) 567-9172.",
+    "Water heater repair and installation in the Aliante area of North Las Vegas. Tank, tankless, expansion tanks, seismic bracing. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/aliante-area/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in the Aliante Area of North Las Vegas, NV",
+      "Water Heater Repair and Installation in Aliante, NV",
     description:
-      "Red Carpet Plumbing provides water heater repair, replacement, and tankless installation in the Aliante area of North Las Vegas. Aliante homes built 2000-2008 are at or past first replacement cycle. Licensed plumbers, NV #048585A.",
+      "Water heater repair and installation in the Aliante area of North Las Vegas. Tank, tankless, expansion tanks, seismic bracing. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -360,7 +360,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in Aliante, NV",
   description:
     "Red Carpet Plumbing provides water heater repair and installation in the Aliante area of North Las Vegas, NV. Tank water heaters, tankless installation, anode rod replacement, thermal expansion tanks, and code-compliant service for Aliante homes. Licensed plumbers, NV License #048585A.",
   url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/water-heater-repair-installation/",

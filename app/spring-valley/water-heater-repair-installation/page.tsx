@@ -27,18 +27,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Water Heater Repair and Installation in Spring Valley, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in Spring Valley, NV",
   description:
-    "Water heater repair and installation in Spring Valley, NV. Tank and tankless water heaters, thermal expansion tanks, seismic bracing. NV #048585A. (702) 567-9172.",
+    "Water heater repair and installation in Spring Valley, NV. Tank and tankless, thermal expansion tanks, seismic bracing. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/spring-valley/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in Spring Valley, NV | Red Carpet Plumbing",
+      "Water Heater Repair and Installation in Spring Valley, NV",
     description:
-      "Water heater repair and installation in Spring Valley, NV. Tank and tankless water heaters, thermal expansion tanks, seismic bracing. NV #048585A. (702) 567-9172.",
+      "Water heater repair and installation in Spring Valley, NV. Tank and tankless, thermal expansion tanks, seismic bracing. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -252,7 +252,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in Spring Valley, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in Spring Valley, NV",
   description:
     "Red Carpet Plumbing provides water heater repair and installation in Spring Valley, NV. Tank and tankless water heaters, thermal expansion tanks, seismic bracing. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/spring-valley/water-heater-repair-installation/",

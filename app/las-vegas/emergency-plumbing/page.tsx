@@ -30,14 +30,14 @@ export const metadata: Metadata = {
   // approved pending a trim decision.
   title: "Emergency Plumbing in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides emergency plumbing service in Las Vegas, NV. Burst pipes, sewer backups, water heater failures, slab leaks, and gas line emergencies. Licensed plumbers. Call (702) 567-9172.",
+    "Emergency plumbing in Las Vegas, NV. Burst pipes, sewer backups, water heater failures, slab leaks, and gas line emergencies. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/emergency-plumbing/",
   },
   openGraph: {
     title: "Emergency Plumbing in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Emergency plumbing in Las Vegas from licensed local plumbers. Call Red Carpet Plumbing for burst pipes, sewer backups, leaks, and urgent plumbing problems.",
+      "Emergency plumbing in Las Vegas, NV. Burst pipes, sewer backups, water heater failures, slab leaks, and gas line emergencies. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

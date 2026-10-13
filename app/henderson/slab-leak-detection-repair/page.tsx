@@ -26,18 +26,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Slab Leak Detection and Repair in Henderson, NV | Red Carpet Plumbing",
+    "Slab Leak Detection and Repair in Henderson, NV",
   description:
-    "Professional slab leak detection and repair in Henderson, NV. Red Carpet Plumbing locates slab leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging. Serving Green Valley, Lake Las Vegas, and all Henderson communities.",
+    "Slab leak detection and repair in Henderson, NV. Non-invasive acoustic sensors, pressure testing, thermal imaging. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/henderson/slab-leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Slab Leak Detection and Repair in Henderson, NV | Red Carpet Plumbing",
+      "Slab Leak Detection and Repair in Henderson, NV",
     description:
-      "Non-invasive slab leak detection and repair throughout Henderson, NV. Serving Green Valley, Lake Las Vegas, and all Henderson communities.",
+      "Slab leak detection and repair in Henderson, NV. Non-invasive acoustic sensors, pressure testing, thermal imaging. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/slab-leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -209,9 +209,9 @@ const COMMUNITIES: { name: string; href?: string }[] = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Slab Leak Detection and Repair in Henderson, NV | Red Carpet Plumbing",
+  name: "Slab Leak Detection and Repair in Henderson, NV",
   description:
-    "Professional slab leak detection and repair in Henderson, NV. Red Carpet Plumbing locates slab leaks non-invasively using acoustic sensors, pressure testing, and thermal imaging. Serving Green Valley, Lake Las Vegas, and all Henderson communities.",
+    "Slab leak detection and repair in Henderson, NV. Non-invasive acoustic sensors, pressure testing, thermal imaging. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/henderson/slab-leak-detection-repair/",
   isPartOf: {
     "@type": "WebSite",

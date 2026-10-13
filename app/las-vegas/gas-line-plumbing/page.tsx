@@ -44,14 +44,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and emergency service in Las Vegas, NV. NV C-1 License #048585A. Call (702) 567-9172.",
+    "Licensed gas line repair, installation, inspection, and emergency service in Las Vegas, NV. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/gas-line-plumbing/",
   },
   openGraph: {
     title: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Licensed gas line repair, installation, and inspection in Las Vegas. CSST, black iron pipe, appliance hookup, permitted outdoor extensions. NV C-1 License #048585A.",
+      "Licensed gas line repair, installation, inspection, and emergency service in Las Vegas, NV. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/gas-line-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -284,7 +284,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides licensed gas line repair, installation, inspection, and emergency service in Las Vegas, NV. NV C-1 License #048585A. Call (702) 567-9172.",
+    "Licensed gas line repair, installation, inspection, and emergency service in Las Vegas, NV. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/las-vegas/gas-line-plumbing/",
   isPartOf: {
     "@type": "WebSite",

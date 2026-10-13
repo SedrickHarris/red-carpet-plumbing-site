@@ -30,14 +30,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Repiping Services in Spring Valley, NV | Red Carpet Plumbing",
   description:
-    "Professional repiping services in Spring Valley, NV. Red Carpet Plumbing replaces galvanized, polybutylene, Kitec, and aging copper pipe throughout Spring Valley. PEX and copper repiping. Permits pulled through Clark County. Licensed plumbers.",
+    "Repiping in Spring Valley, NV. Galvanized, polybutylene, Kitec, and aging copper pipe replaced with PEX or copper. Permits pulled. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/spring-valley/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Spring Valley, NV | Red Carpet Plumbing",
     description:
-      "Whole-house and partial repiping throughout Spring Valley, NV. Galvanized, polybutylene, Kitec, and copper pipe replacement. Clark County permits pulled. Licensed plumbers.",
+      "Repiping in Spring Valley, NV. Galvanized, polybutylene, Kitec, and aging copper pipe replaced with PEX or copper. Permits pulled. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/spring-valley/repiping/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

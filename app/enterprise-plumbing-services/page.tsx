@@ -20,14 +20,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Plumbing Services in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Plumbing services in Enterprise, NV and Southwest Las Vegas. Emergency plumbing, drain cleaning, water heater repair. NV #048585A. (702) 567-9172.",
+    "Plumbing services in Enterprise, NV and Southwest Las Vegas. Emergency plumbing, drain cleaning, water heater repair. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/enterprise-plumbing-services/",
   },
   openGraph: {
     title: "Plumbing Services in Enterprise, NV | Red Carpet Plumbing",
     description:
-      "Plumbing services in Enterprise, NV and Southwest Las Vegas. Emergency plumbing, drain cleaning, water heater repair. NV #048585A. (702) 567-9172.",
+      "Plumbing services in Enterprise, NV and Southwest Las Vegas. Emergency plumbing, drain cleaning, water heater repair. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/enterprise-plumbing-services/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

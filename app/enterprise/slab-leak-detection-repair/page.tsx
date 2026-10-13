@@ -33,18 +33,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Slab Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing",
+    "Slab Leak Detection and Repair in Enterprise, NV",
   description:
-    "Professional slab leak detection and repair in Enterprise, NV. Non-invasive detection using acoustic sensors, pressure testing, and thermal imaging. Serving Rhodes Ranch, Mountain's Edge, and all Enterprise communities. NV #048585A.",
+    "Non-invasive slab leak detection and repair in Enterprise, NV. Acoustic sensors, pressure testing, thermal imaging. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/enterprise/slab-leak-detection-repair/",
   },
   openGraph: {
     title:
-      "Slab Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing",
+      "Slab Leak Detection and Repair in Enterprise, NV",
     description:
-      "Non-invasive slab leak detection and repair throughout Enterprise, NV. Rhodes Ranch, Mountain's Edge, Southwest Las Vegas. All repair options explained. NV #048585A.",
+      "Non-invasive slab leak detection and repair in Enterprise, NV. Acoustic sensors, pressure testing, thermal imaging. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/enterprise/slab-leak-detection-repair/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -269,7 +269,7 @@ const ENTERPRISE_AREAS = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Slab Leak Detection and Repair in Enterprise, NV | Red Carpet Plumbing",
+  name: "Slab Leak Detection and Repair in Enterprise, NV",
   description:
     "Red Carpet Plumbing provides non-invasive slab leak detection and repair in Enterprise, NV using acoustic sensors, pressure testing, and thermal imaging.",
   url: "https://redcarpetplumbing.com/enterprise/slab-leak-detection-repair/",

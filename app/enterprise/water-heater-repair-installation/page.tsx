@@ -33,18 +33,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Water Heater Repair and Installation in Enterprise, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in Enterprise, NV",
   description:
-    "Water heater repair and installation in Enterprise, NV. Red Carpet Plumbing serves Rhodes Ranch, Mountain's Edge, and all Enterprise communities. Tank and tankless water heaters. Clark County code-compliant installation. NV #048585A. (702) 567-9172.",
+    "Water heater repair and installation in Enterprise, NV. Tank and tankless units for Rhodes Ranch and Mountain's Edge homes. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/enterprise/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in Enterprise, NV | Red Carpet Plumbing",
+      "Water Heater Repair and Installation in Enterprise, NV",
     description:
-      "Water heater repair and replacement throughout Enterprise, NV. Rhodes Ranch, Mountain's Edge, Southwest Las Vegas. Tank and tankless. Clark County code. NV #048585A.",
+      "Water heater repair and installation in Enterprise, NV. Tank and tankless units for Rhodes Ranch and Mountain's Edge homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/enterprise/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -259,7 +259,7 @@ const ENTERPRISE_AREAS = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in Enterprise, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in Enterprise, NV",
   description:
     "Red Carpet Plumbing provides water heater repair and installation in Enterprise, NV. Tank and tankless water heaters. Clark County code-compliant installation. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/enterprise/water-heater-repair-installation/",

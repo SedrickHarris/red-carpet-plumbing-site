@@ -48,14 +48,14 @@ export const metadata: Metadata = {
   // FLAG: VERIFY license #048585A in the description before publishing.
   title: "Gas Line Plumbing in Paradise, NV | Red Carpet Plumbing",
   description:
-    "Gas line repair, installation, and inspection in Paradise, NV. Appliance hookups and commercial gas lines. NV #048585A. Call (702) 567-9172.",
+    "Gas line repair, installation, and inspection in Paradise, NV. Appliance hookups and commercial gas lines. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/paradise/gas-line-plumbing/",
   },
   openGraph: {
     title: "Gas Line Plumbing in Paradise, NV | Red Carpet Plumbing",
     description:
-      "Gas line repair, installation, and inspection in Paradise, NV. Appliance hookups and commercial gas lines. NV #048585A. Call (702) 567-9172.",
+      "Gas line repair, installation, and inspection in Paradise, NV. Appliance hookups and commercial gas lines. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/paradise/gas-line-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -323,7 +323,7 @@ const webpageSchema = {
   "@type": "WebPage",
   name: "Gas Line Plumbing in Paradise, NV | Red Carpet Plumbing",
   description:
-    "Gas line repair, installation, and inspection in Paradise, NV. Appliance hookups and commercial gas lines. NV #048585A. Call (702) 567-9172.",
+    "Gas line repair, installation, and inspection in Paradise, NV. Appliance hookups and commercial gas lines. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/paradise/gas-line-plumbing/",
   isPartOf: {
     "@type": "WebSite",

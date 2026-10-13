@@ -17,14 +17,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides whole-house and partial repiping in Las Vegas and the Las Vegas Valley. PEX and copper repiping, polybutylene and Kitec replacement. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+    "Whole-house and partial repiping in Las Vegas and the Valley. PEX and copper, Kitec replacement. Licensed, 4.8-star rated. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/repiping/",
   },
   openGraph: {
     title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
     description:
-      "Red Carpet Plumbing provides whole-house and partial repiping in Las Vegas and the Las Vegas Valley. PEX and copper repiping, polybutylene and Kitec replacement. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.",
+      "Whole-house and partial repiping in Las Vegas and the Valley. PEX and copper, Kitec replacement. Licensed, 4.8-star rated. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/repiping/",
     siteName: "Red Carpet Plumbing",
     type: "website",

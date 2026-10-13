@@ -14,14 +14,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Contact a Las Vegas Plumber | Red Carpet Plumbing",
   description:
-    "Contact Red Carpet Plumbing to request plumbing service in Las Vegas and the Las Vegas Valley. Call or submit a service request for residential and commercial plumbing.",
+    "Contact Red Carpet Plumbing for residential and commercial plumbing in Las Vegas. Call (702) 567-9172 or submit a service request online.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/contact/",
   },
   openGraph: {
     title: "Contact a Las Vegas Plumber | Red Carpet Plumbing",
     description:
-      "Request plumbing service, ask about service areas, or get a quote from Red Carpet Plumbing. Serving Las Vegas, Henderson, North Las Vegas, Summerlin, and the Las Vegas Valley.",
+      "Contact Red Carpet Plumbing for residential and commercial plumbing in Las Vegas. Call (702) 567-9172 or submit a service request online.",
     url: "https://redcarpetplumbing.com/contact/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

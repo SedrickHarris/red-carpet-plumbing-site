@@ -43,18 +43,18 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+    "Garbage Disposal Repair and Installation in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing repairs, replaces, and installs garbage disposals throughout Las Vegas, NV. Jammed, leaking, or not working. Discharge line cleaning. NV #048585A. Call (702) 567-9172.",
+    "Garbage disposal repair, replacement, and installation in Las Vegas, NV. Jammed, leaking, or not working. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/las-vegas/garbage-disposal-repair-installation/",
   },
   openGraph: {
     title:
-      "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+      "Garbage Disposal Repair and Installation in Las Vegas, NV",
     description:
-      "Licensed garbage disposal repair and installation in Las Vegas. Jam clearing, leak repair, motor diagnosis, replacement, and discharge line cleaning. Hard water specialists. NV #048585A.",
+      "Garbage disposal repair, replacement, and installation in Las Vegas, NV. Jammed, leaking, or not working. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/garbage-disposal-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -311,7 +311,7 @@ const LV_DISPOSAL_SERVICES: { title: string; body: string; tail?: LinkSeg[] }[] 
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Garbage Disposal Repair and Installation in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Garbage Disposal Repair and Installation in Las Vegas, NV",
   description:
     "Red Carpet Plumbing repairs, replaces, and installs garbage disposals throughout Las Vegas, NV. Jammed, leaking, or not working. Discharge line cleaning. NV #048585A.",
   url: "https://redcarpetplumbing.com/las-vegas/garbage-disposal-repair-installation/",

@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   // approved pending a trim decision.
   title: "Emergency Plumbing in Henderson, NV | Red Carpet Plumbing",
   description:
-    "Red Carpet Plumbing provides emergency plumbing service in Henderson, NV, including Green Valley and Lake Las Vegas. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers. Call (702) 567-9172.",
+    "Emergency plumbing in Henderson, NV, including Green Valley and Lake Las Vegas. Burst pipes, slab leaks, sewer backups. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/henderson/emergency-plumbing/",
   },
   openGraph: {
     title: "Emergency Plumbing in Henderson, NV | Red Carpet Plumbing",
     description:
-      "Emergency plumbing in Henderson from licensed local plumbers. Green Valley, Lake Las Vegas, and all Henderson communities. Call Red Carpet Plumbing.",
+      "Emergency plumbing in Henderson, NV, including Green Valley and Lake Las Vegas. Burst pipes, slab leaks, sewer backups. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

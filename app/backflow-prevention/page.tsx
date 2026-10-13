@@ -21,17 +21,17 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Backflow Prevention Services in Las Vegas, NV | Red Carpet Plumbing",
+    "Backflow Prevention Services in Las Vegas, NV",
   description:
-    "Red Carpet Plumbing installs, repairs, and services backflow prevention devices for homes and businesses throughout Las Vegas. Annual testing required by LVVWD. NV Licensed #048585A. Call (702) 567-9172.",
+    "Backflow prevention device installation, repair, and testing for Las Vegas homes and businesses. Annual testing required by LVVWD. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/backflow-prevention/",
   },
   openGraph: {
     title:
-      "Backflow Prevention Services in Las Vegas, NV | Red Carpet Plumbing",
+      "Backflow Prevention Services in Las Vegas, NV",
     description:
-      "Licensed backflow prevention installation and repair throughout Las Vegas and the Las Vegas Valley. NV #048585A. 4.8 stars, 81 reviews.",
+      "Backflow prevention device installation, repair, and testing for Las Vegas homes and businesses. Annual testing required by LVVWD. Call (702) 567-9172.",
   },
 };
 
@@ -380,7 +380,7 @@ const howToSchema = {
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Backflow Prevention Services in Las Vegas, NV | Red Carpet Plumbing",
+  name: "Backflow Prevention Services in Las Vegas, NV",
   description:
     "Red Carpet Plumbing installs, repairs, and services backflow prevention devices for homes and businesses throughout the Las Vegas Valley. NV Licensed #048585A. Call (702) 567-9172.",
   url: "https://redcarpetplumbing.com/backflow-prevention/",

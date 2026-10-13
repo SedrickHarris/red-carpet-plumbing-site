@@ -28,18 +28,18 @@ export const metadata: Metadata = {
   // exceeds the site's ≤160 meta-description standard; see report. Kept as
   // approved pending a trim decision.
   title:
-    "Water Heater Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+    "Water Heater Repair and Installation in Henderson, NV",
   description:
-    "Red Carpet Plumbing repairs and installs water heaters throughout Henderson, NV, including Green Valley and Lake Las Vegas. Tank and tankless water heaters, hard water maintenance, and Clark County code installations. Licensed plumbers. Call (702) 567-9172.",
+    "Water heater repair and installation in Henderson, including Green Valley and Lake Las Vegas. Tank, tankless, hard water maintenance. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/henderson/water-heater-repair-installation/",
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+      "Water Heater Repair and Installation in Henderson, NV",
     description:
-      "Water heater repair and installation in Henderson from licensed local plumbers. Green Valley, Lake Las Vegas, and all Henderson communities. Call Red Carpet Plumbing.",
+      "Water heater repair and installation in Henderson, including Green Valley and Lake Las Vegas. Tank, tankless, hard water maintenance. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/henderson/water-heater-repair-installation/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -240,7 +240,7 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Water Heater Repair and Installation in Henderson, NV | Red Carpet Plumbing",
+  name: "Water Heater Repair and Installation in Henderson, NV",
   description:
     "Red Carpet Plumbing repairs and installs water heaters throughout Henderson, NV, including Green Valley and Lake Las Vegas. Tank and tankless water heaters, hard water maintenance, and Clark County code installations. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/henderson/water-heater-repair-installation/",

@@ -35,17 +35,17 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 
 export const metadata: Metadata = {
   title:
-    "Emergency Plumbing in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
+    "Emergency Plumbing in Aliante, North Las Vegas",
   description:
-    "Need emergency plumbing in the Aliante area of North Las Vegas? Red Carpet Plumbing provides licensed emergency plumbing service for Aliante homes. Call (702) 567-9172.",
+    "Need emergency plumbing in the Aliante area of North Las Vegas? Licensed emergency plumbers for Aliante homes. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/aliante-area/emergency-plumbing/",
   },
   openGraph: {
-    title: "Emergency Plumbing in the Aliante Area of North Las Vegas, NV",
+    title: "Emergency Plumbing in Aliante, North Las Vegas",
     description:
-      "Red Carpet Plumbing provides emergency plumbing service in Aliante, North Las Vegas. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers.",
+      "Need emergency plumbing in the Aliante area of North Las Vegas? Licensed emergency plumbers for Aliante homes. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -264,7 +264,7 @@ const ALIANTE_EMERGENCY_FAQS: FaqItem[] = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Emergency Plumbing in the Aliante Area of North Las Vegas, NV | Red Carpet Plumbing",
+  name: "Emergency Plumbing in Aliante, North Las Vegas",
   description:
     "Red Carpet Plumbing provides emergency plumbing service in the Aliante area of North Las Vegas, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers, NV License #048585A.",
   url: "https://redcarpetplumbing.com/north-las-vegas/aliante-area/emergency-plumbing/",

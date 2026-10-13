@@ -35,14 +35,14 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "Emergency Plumbing in Enterprise, NV | Red Carpet Plumbing",
   description:
-    "Emergency plumbing in Enterprise, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Red Carpet Plumbing serves Enterprise, Rhodes Ranch, Mountain's Edge, and Southwest Las Vegas. Licensed plumbers. Call (702) 567-9172.",
+    "Emergency plumbing in Enterprise, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Rhodes Ranch and Mountain's Edge. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/enterprise/emergency-plumbing/",
   },
   openGraph: {
     title: "Emergency Plumbing in Enterprise, NV | Red Carpet Plumbing",
     description:
-      "Emergency plumbing in Enterprise, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers. Call (702) 567-9172.",
+      "Emergency plumbing in Enterprise, NV. Burst pipes, slab leaks, sewer backups, water heater failures. Rhodes Ranch and Mountain's Edge. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/enterprise/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
