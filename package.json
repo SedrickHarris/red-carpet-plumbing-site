@@ -6,6 +6,7 @@
     "dev": "next dev",
     "prebuild": "node seo-automation/scripts/scan-routes.mjs",
     "build": "next build",
+    "postbuild": "node scripts/check-sitemap-sync.mjs",
     "start": "next start",
     "lint": "eslint",
     "lead:dev": "node scripts/lead-dev.mjs"
