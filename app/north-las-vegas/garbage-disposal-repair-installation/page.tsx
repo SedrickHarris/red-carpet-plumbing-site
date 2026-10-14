@@ -16,13 +16,16 @@
 // North Las Vegas service-location schema pattern (matches the North Las Vegas
 // toilet page): Plumber provider with telephone; areaServed is an ARRAY of a City
 // node with containedInPlace State plus ten PostalCodeSpecification nodes built
-// from NLV_ZIPS (the client-confirmed set). No social profile links, no credential node, no
-// rating or review schema.
-//
-// Hero trust items match the approved set used on sibling service pages. Items are copied verbatim, with location lines excluded.
+// from NLV_ZIPS (the client-confirmed set). No social profile links, no credential node.
 // 5 separate JsonLd blocks in order WebPage, BreadcrumbList, Service, HowTo,
 // FAQPage. HowTo and FAQPage derive from the same consts that render visibly,
 // so schema text and page text cannot drift apart.
+//
+// AggregateRating is approved on this page because the 4.8 star, 81 Google
+// Business Profile review rating is visibly shown in the hero trust items.
+// Owner confirmed. Recheck the review count before launch.
+//
+// Hero trust items match the approved set used on sibling service pages. Items are copied verbatim, with location lines excluded.
 //
 // Hero uses the shared Garbage Disposal Repair and Installation service hero asset, also used by the core
 // page and the other city variants. No city-specific image exists.
@@ -77,6 +80,8 @@ const HERO_TRUST_ITEMS = [
   "Garbage Disposal Repair and Installation",
   // FLAG: VERIFY transparent pricing claim before publishing.
   "Transparent Pricing, No Hidden Fees",
+  // FLAG: VERIFY 81 review count against the Google Business Profile before launch.
+  "4.8 stars, 81 Google reviews",
 ];
 
 // Direct answer.
