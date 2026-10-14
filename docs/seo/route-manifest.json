@@ -1,5 +1,5 @@
 {
-  "routeCount": 135,
+  "routeCount": 136,
   "routes": [
     {
       "route": "/",
@@ -4613,6 +4613,26 @@
         "WebSite"
       ],
       "wordEstimate": 593
+    },
+    {
+      "route": "/sitemap",
+      "sourceFile": "app/sitemap/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [
+        "Sitemap"
+      ],
+      "possibleH2s": [
+        "Plumbing Services by City"
+      ],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "WebPage",
+        "BreadcrumbList",
+        "ListItem",
+        "Service"
+      ],
+      "wordEstimate": 126
     },
     {
       "route": "/slab-leak-detection-repair",
