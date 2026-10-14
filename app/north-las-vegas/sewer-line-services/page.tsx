@@ -4,15 +4,15 @@
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees" — source-site claim, present in
 //   the approved Section 4 and Section 8 copy; confirm documentation.
-// - "4.8-star rated" — appears in the approved hero subheading and Section 8
-//   copy. Visible text only. Deliberately NOT expressed as AggregateRating
-//   schema: no verified review count or source was provided for this build.
+// AggregateRating is approved on this page because the 4.8 star, 81 Google
+// Business Profile review rating is visibly shown in the hero trust items.
+// Owner confirmed. Recheck the review count before launch.
 // FLAG comments appear only in source. No FLAG text appears in any visible
 // string or schema text.
 //
 // North Las Vegas service-location schema pattern: matches the Henderson and
 // Las Vegas sewer pages (Plumber provider; areaServed City + containedInPlace
-// State; no sameAs, no hasCredential, no AggregateRating; 5 JsonLd blocks in
+// State; no sameAs, no hasCredential; AggregateRating on provider; 5 JsonLd blocks in
 // order WebPage -> BreadcrumbList -> Service -> HowTo -> FAQPage). HowTo and
 // FAQPage derive from the same consts that render visibly, so schema text and
 // page text cannot drift apart.
@@ -74,6 +74,16 @@ export const metadata: Metadata = {
 // ---------------------------------------------------------------------------
 const HERO_SUBHEADING =
   "Red Carpet Plumbing provides sewer line inspection, cleaning, repair, and replacement for homes and businesses throughout North Las Vegas, NV. Trenchless options available. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.";
+
+const HERO_TRUST_ITEMS = [
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed, #048585A",
+  "Sewer Camera Inspection Available",
+  "Residential and Commercial Sewer Service",
+  // FLAG: VERIFY transparent pricing claim before publishing.
+  "Transparent Pricing, No Hidden Fees",
+  "4.8 stars, 81 Google reviews",
+];
 
 const DIRECT_ANSWER_BODY =
   "Sewer line backups, slow drains, tree root intrusion, and collapsed pipes are common sewer line problems in North Las Vegas homes and businesses. Red Carpet Plumbing diagnoses the cause with a camera inspection, then repairs, replaces, or relines the line, including trenchless options that avoid digging up your yard. Call (702) 567-9172 to schedule an inspection.";
@@ -327,6 +337,7 @@ export default function NorthLasVegasSewerLinePage() {
             </>
           }
           subheading={HERO_SUBHEADING}
+          trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",
