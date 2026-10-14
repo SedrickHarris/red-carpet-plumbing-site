@@ -22,10 +22,27 @@ const CORE_ROUTES = [
 
 // Last commit date per source file. lastModified reflects the page file only,
 // not shared components such as HeroSection or SiteHeader, so it is a
-// conservative signal: a shared change does not bump every page. The date is
-// omitted when git cannot answer (no git binary, shallow clone, untracked
-// file). It is never replaced with the build time, which would change every
-// URL on every build.
+// conservative signal: a shared change does not bump every page.
+//
+// A shallow clone (common in CI, including some Cloudflare Pages setups) has
+// only the newest commits, so `git log` would report that one commit date for
+// every file. That is wrong, so a shallow clone, or a failed shallow check,
+// means no URL gets a lastModified. A date is also omitted for a single file
+// git cannot answer for (untracked file). It is never replaced with the build
+// time or the date of HEAD, which would change every URL on every build.
+function isShallowRepository(): boolean {
+  try {
+    return (
+      execFileSync("git", ["rev-parse", "--is-shallow-repository"], {
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      }).trim() !== "false"
+    );
+  } catch {
+    return true;
+  }
+}
+
 const dateCache = new Map<string, string | undefined>();
 
 function lastCommitDate(sourceFile: string): string | undefined {
@@ -64,6 +81,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries = routeManifest.routes
     .filter((r) => !EXCLUDED_ROUTES.has(r.route))
     .sort((a, b) => sortRoutes(a.route, b.route));
+
+  if (isShallowRepository()) {
+    console.warn(
+      "sitemap: the repository is a shallow clone or its history is unavailable, " +
+        "so sitemap lastmod dates are omitted.",
+    );
+    return entries.map((r) => ({ url: toUrl(r.route) }));
+  }
 
   const result: MetadataRoute.Sitemap = entries.map((r) => {
     const lastModified = lastCommitDate(r.sourceFile);
