@@ -16,9 +16,10 @@
 // North Las Vegas service-location schema pattern (matches the North Las Vegas
 // toilet page): Plumber provider with telephone; areaServed is an ARRAY of a City
 // node with containedInPlace State plus ten PostalCodeSpecification nodes built
-// from NLV_ZIPS (the client-confirmed set). Hero omits trustItems, matching the
-// North Las Vegas cluster. No social profile links, no credential node, no
+// from NLV_ZIPS (the client-confirmed set). No social profile links, no credential node, no
 // rating or review schema.
+//
+// Hero trust items match the approved set used on sibling service pages. Items are copied verbatim, with location lines excluded.
 // 5 separate JsonLd blocks in order WebPage, BreadcrumbList, Service, HowTo,
 // FAQPage. HowTo and FAQPage derive from the same consts that render visibly,
 // so schema text and page text cannot drift apart.
@@ -69,6 +70,14 @@ type LinkSeg = string | { href: string; text: string };
 
 const HERO_SUBHEADING =
   "Red Carpet Plumbing repairs and installs garbage disposals for homes and businesses throughout North Las Vegas, NV. Jams, leaks, humming units, units that will not turn on, and replacements. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.";
+
+const HERO_TRUST_ITEMS = [
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed Plumbers, #048585A",
+  "Garbage Disposal Repair and Installation",
+  // FLAG: VERIFY transparent pricing claim before publishing.
+  "Transparent Pricing, No Hidden Fees",
+];
 
 // Direct answer.
 const DIRECT_ANSWER = {
@@ -433,6 +442,7 @@ export default function NorthLasVegasGarbageDisposalPage() {
             </>
           }
           subheading={HERO_SUBHEADING}
+          trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
             label: "Call Now: (702) 567-9172",
             href: "tel:+17025679172",

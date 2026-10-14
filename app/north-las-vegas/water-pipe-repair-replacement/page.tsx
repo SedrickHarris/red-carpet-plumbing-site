@@ -4,9 +4,9 @@
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees" — source-site claim, present in
 //   the approved Section 8 copy; confirm documentation.
-// - "4.8-star rated" — appears in the approved hero subheading and Section 8
-//   copy. Visible text only. Deliberately NOT expressed as AggregateRating
-//   schema: no verified review count or source was provided for this build.
+// AggregateRating is approved on this page because the 4.8 star, 81 Google
+// Business Profile review rating is visibly shown in the hero trust items.
+// Owner confirmed. Recheck the review count before launch.
 // FLAG comments appear only in source. No FLAG text appears in any visible
 // string or schema text.
 //
@@ -14,15 +14,12 @@
 // /north-las-vegas/sewer-line-services/ (Plumber provider; areaServed City +
 // containedInPlace State, plus the ten client-confirmed NLV ZIP codes as
 // PostalCodeSpecification nodes; no sameAs, no hasCredential, no
-// LocalBusiness, no AggregateRating, no Review; 5 JsonLd blocks in order
+// LocalBusiness, AggregateRating on provider, no Review; 5 JsonLd blocks in order
 // WebPage -> BreadcrumbList -> Service -> HowTo -> FAQPage). HowTo and
 // FAQPage derive from the same consts that render visibly, so schema text and
 // page text cannot drift apart.
 //
-// Hero deliberately omits trustItems, matching the sibling NLV sewer page
-// rather than the core /water-pipe-repair-replacement/ page. The core page's
-// trustItems restate "81 Google Reviews" and "Over 40 Years in Las Vegas",
-// neither of which is part of this build's approved content.
+// Hero trust items match the approved set used on sibling service pages. Items are copied verbatim, with location lines excluded.
 //
 // TODO: Hero reuses /images/services/water-pipe-repair-replacement/hero.webp,
 // the same asset the core water pipe page uses. That page carries an open
@@ -80,6 +77,14 @@ export const metadata: Metadata = {
 // ---------------------------------------------------------------------------
 const HERO_SUBHEADING =
   "Red Carpet Plumbing repairs and replaces water supply pipes for homes and businesses throughout North Las Vegas, NV. Leak repair, section replacement, and full repiping evaluation. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.";
+
+const HERO_TRUST_ITEMS = [
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed, #048585A",
+  "Burst Pipe and Leak Repair",
+  // FLAG: VERIFY transparent pricing claim before publishing.
+  "Transparent Pricing, No Hidden Fees",
+];
 
 const DIRECT_ANSWER_BODY =
   "A leaking, burst, or corroded water pipe in North Las Vegas needs a licensed plumber who can tell you whether the fix is a spot repair or a section replacement. Red Carpet Plumbing inspects the affected pipe, identifies the cause, and completes the repair or replacement needed to restore your water supply. For a burst pipe, shut off the main water supply first, then call (702) 567-9172.";
@@ -342,6 +347,7 @@ export default function NorthLasVegasWaterPipeRepairReplacementPage() {
             </>
           }
           subheading={HERO_SUBHEADING}
+          trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

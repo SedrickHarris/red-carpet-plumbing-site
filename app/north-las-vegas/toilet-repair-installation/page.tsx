@@ -20,10 +20,7 @@
 // NLV_TOILET_STEPS, and the visible FAQ accordion and FAQPage schema both
 // derive from NLV_TOILET_FAQS, so neither pair can drift apart.
 //
-// Hero omits trustItems, matching the North Las Vegas cluster convention
-// (repiping, sewer line services, water pipe repair and replacement) rather
-// than the Green Valley convention, which renders a trust strip with a
-// star-rating claim.
+// Hero trust items match the approved set used on sibling service pages. Items are copied verbatim, with location lines excluded.
 //
 // Hero image: /images/services/toilet-repair-installation/hero.webp is the only
 // asset available for this service and is the same one the Green Valley toilet
@@ -408,6 +405,14 @@ function renderTail(tail: LinkSeg[]) {
   );
 }
 
+const HERO_TRUST_ITEMS = [
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed, #048585A",
+  "Toilet Repair and Installation",
+  // FLAG: VERIFY transparent pricing claim before publishing.
+  "Transparent Pricing, No Hidden Fees",
+];
+
 export default function NorthLasVegasToiletRepairInstallationPage() {
   return (
     <>
@@ -443,6 +448,7 @@ export default function NorthLasVegasToiletRepairInstallationPage() {
             </>
           }
           subheading="Red Carpet Plumbing provides toilet repair and installation for homes and businesses throughout North Las Vegas, NV. Running toilets, base leaks, clogs, toilet replacement, and new toilet installation. Licensed plumbers. Call (702) 567-9172."
+          trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",
