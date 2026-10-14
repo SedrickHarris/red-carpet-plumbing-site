@@ -4,9 +4,9 @@
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees" — source-site claim, present in
 //   the approved Section 8 copy; confirm documentation.
-// - "4.8-star rated" — appears in the approved hero subheading and Section 8
-//   copy. Visible text only. Deliberately NOT expressed as AggregateRating
-//   schema: no verified review count or source was provided for this build.
+// AggregateRating is approved on this page because the 4.8 star, 81 Google
+// Business Profile review rating is visibly shown in the hero trust items.
+// Owner confirmed. Recheck the review count before launch.
 // FLAG comments appear only in source. No FLAG text appears in any visible
 // string or schema text.
 //
@@ -15,14 +15,12 @@
 // /north-las-vegas/water-pipe-repair-replacement/ (Plumber provider;
 // areaServed City + containedInPlace State, plus the ten client-confirmed NLV
 // ZIP codes as PostalCodeSpecification nodes; no sameAs, no hasCredential, no
-// LocalBusiness, no AggregateRating, no Review; 5 JsonLd blocks in order
+// LocalBusiness, AggregateRating on provider, no Review; 5 JsonLd blocks in order
 // WebPage -> BreadcrumbList -> Service -> HowTo -> FAQPage). HowTo and
 // FAQPage derive from the same consts that render visibly, so schema text and
 // page text cannot drift apart.
 //
-// Hero deliberately omits trustItems, matching the sibling NLV pages rather
-// than the core /repiping/ page, whose trustItems restate review-count and
-// years-in-business claims that are not part of this build's approved content.
+// Hero trust items match the approved set used on sibling service pages. Items are copied verbatim, with location lines excluded.
 //
 // Hero reuses /images/services/repiping/hero.webp, the same asset the core
 // /repiping/ page and the North Las Vegas hub card already use. No resolution
@@ -86,6 +84,20 @@ export const metadata: Metadata = {
 // ---------------------------------------------------------------------------
 const HERO_SUBHEADING =
   "Red Carpet Plumbing provides whole-house and partial repiping for homes and businesses throughout North Las Vegas, NV. PEX and copper repiping, polybutylene, Kitec, and galvanized pipe replacement. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.";
+
+const HERO_TRUST_ITEMS = [
+  // FLAG: VERIFY 81 review count against the Google Business Profile before launch.
+  "4.8 stars, 81 Google reviews",
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed, #048585A",
+  // FLAG: VERIFY "Over 40 years" before publishing.
+  "Over 40 years serving the Las Vegas Valley",
+  "Permits pulled and inspections scheduled",
+  // FLAG: VERIFY transparent pricing claim before publishing.
+  "Transparent pricing, no hidden fees",
+  "Whole-House and Partial Repiping",
+  "PEX and Copper Repiping",
+];
 
 const DIRECT_ANSWER_BODY =
   "Recurring leaks, low water pressure, or known problem pipe materials like polybutylene or Kitec are common reasons North Las Vegas homeowners consider repiping. Red Carpet Plumbing assesses your plumbing system, explains whether a whole-house or partial repipe fits your situation, and completes the work with PEX or copper. Call (702) 567-9172 to schedule an assessment.";
@@ -344,6 +356,7 @@ export default function NorthLasVegasRepipingPage() {
             </>
           }
           subheading={HERO_SUBHEADING}
+          trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",

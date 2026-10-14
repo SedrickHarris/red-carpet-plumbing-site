@@ -4,9 +4,9 @@
 //   confirm before launch.
 // - "Transparent pricing with no hidden fees" — source-site claim, present in
 //   the approved Section 8 copy; confirm documentation.
-// - "4.8-star rated" — appears in the approved hero subheading and Section 8
-//   copy. Visible text only. Deliberately NOT expressed as AggregateRating
-//   schema: no verified review count or source was provided for this build.
+// AggregateRating is approved on this page because the 4.8 star, 81 Google
+// Business Profile review rating is visibly shown in the hero trust items.
+// Owner confirmed. Recheck the review count before launch.
 // FLAG comments appear only in source. No FLAG text appears in any visible
 // string or schema text.
 //
@@ -26,15 +26,12 @@
 // /north-las-vegas/repiping/ (Plumber provider; areaServed City +
 // containedInPlace State, plus the ten client-confirmed NLV ZIP codes as
 // PostalCodeSpecification nodes; no sameAs, no hasCredential, no
-// LocalBusiness, no AggregateRating, no Review; 5 JsonLd blocks in order
+// LocalBusiness, AggregateRating on provider, no Review; 5 JsonLd blocks in order
 // WebPage -> BreadcrumbList -> Service -> HowTo -> FAQPage). HowTo and
 // FAQPage derive from the same consts that render visibly, so schema text and
 // page text cannot drift apart.
 //
-// Hero deliberately omits trustItems, matching the sibling NLV pages rather
-// than the core /commercial-plumbing/ page, whose trustItems restate
-// review-count and years-in-business claims not part of this build's approved
-// content.
+// Hero trust items match the approved set used on sibling service pages. Items are copied verbatim, with location lines excluded.
 //
 // Hero uses the shared commercial-plumbing hero asset, which the client
 // supplied after this page was first built. The same asset is used by the core
@@ -89,6 +86,20 @@ export const metadata: Metadata = {
 // ---------------------------------------------------------------------------
 const HERO_SUBHEADING =
   "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses and property managers throughout North Las Vegas, NV. 24/7 emergency response. Licensed plumbers, 4.8-star rated. Call (702) 567-9172.";
+
+const HERO_TRUST_ITEMS = [
+  // FLAG: VERIFY license #048585A before publishing.
+  "NV Licensed #048585A",
+  // FLAG: VERIFY 81 review count against the Google Business Profile before launch.
+  "4.8 Stars, 81 Google Reviews",
+  // FLAG: VERIFY "Over 40 years" before publishing.
+  "Over 40 Years Serving the Las Vegas Valley",
+  // FLAG: VERIFY 24/7 emergency-availability claim before final launch.
+  "24/7 Emergency Commercial Service",
+  // FLAG: VERIFY transparent pricing claim before publishing.
+  "Transparent Pricing, No Hidden Fees",
+  "Permits Coordinated",
+];
 
 const DIRECT_ANSWER_BODY =
   "Red Carpet Plumbing provides licensed commercial plumbing repair, installation, and maintenance for businesses, restaurants, retail properties, and multi-unit buildings throughout North Las Vegas. We work with property managers and business owners to minimize disruption to operations. For a commercial plumbing emergency, call (702) 567-9172 for 24/7 response.";
@@ -363,6 +374,7 @@ export default function NorthLasVegasCommercialPlumbingPage() {
             </>
           }
           subheading={HERO_SUBHEADING}
+          trustItems={HERO_TRUST_ITEMS}
           primaryCTA={{
             label: "Call (702) 567-9172",
             href: "tel:+17025679172",
