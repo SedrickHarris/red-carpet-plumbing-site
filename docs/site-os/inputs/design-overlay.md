@@ -18,9 +18,9 @@ trust block right. Stack single column on mobile with content above form.
 
 H1 format: "[Service] in Las Vegas" or "Las Vegas [Service]". Direct and indexable.
 
-Trust strip below hero: 3-5 signals in one horizontal row.
-Years in business, review count, license or insurance, response time, guarantee.
-Icon plus short label only. No prose.
+Hero trust list: 3-7 trust facts passed to HeroSection through the trustItems prop and shown as a vertical icon list inside the hero. Do not add a standalone trust band below the hero.
+Years in business, review count, license or insurance, and response time.
+Icon plus short label only. No prose. Use only verified, owner-approved facts.
 
 ## Trust and Conversion
 

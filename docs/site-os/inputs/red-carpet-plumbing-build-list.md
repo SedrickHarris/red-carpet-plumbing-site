@@ -105,12 +105,14 @@ Recommended sections:
    - Click-to-call button
    - Request service button
 
-2. Trust strip
+2. Hero trust list (rendered inside the hero through trustItems, no standalone band)
    - Licensed and insured, if verified
    - Local Las Vegas plumber
    - Residential and commercial service
    - Emergency availability, if true
    - Upfront pricing, if true
+
+   These are candidate facts only. The approved trustItems arrays live in each page's source and must be copied from sibling pages, never rewritten from this list.
 
 3. Core services preview
    - Emergency Plumbing
