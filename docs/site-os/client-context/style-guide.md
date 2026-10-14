@@ -171,6 +171,10 @@ For service business pages, use a two-column hero where appropriate:
 - Left column: headline, short value proposition, trust bullets, CTAs
 - Right column: contact card, quote form, emergency CTA card, or service image
 
+Trust facts are passed to `HeroSection` through the `trustItems` prop and render as a vertical icon list inside the hero, using the hero's staggered fade-up with reduced-motion support.
+
+Do not add a standalone trust band below the hero. It was removed on purpose after causing a scrollbar and clipping problem and duplicating the hero's trust facts.
+
 This pattern should be used on:
 
 - Homepage
@@ -507,7 +511,7 @@ Recommended icon direction:
 
 Icon use cases:
 
-- Trust strips
+- Hero trust lists
 - Service cards
 - Process steps
 - FAQ support
@@ -643,7 +647,6 @@ Suggested reusable components:
 - SectionHeading
 - ServiceCard
 - LocationCard
-- TrustStrip
 - CTASection
 - FAQSection
 - Breadcrumbs
