@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       "Water Pipe Repair and Replacement in Las Vegas, NV",
     description:
       "Water supply pipe repair and replacement in Las Vegas and the Valley. Burst pipes, pinhole leaks, galvanized and polybutylene pipes. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/water-pipe-repair-replacement/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };

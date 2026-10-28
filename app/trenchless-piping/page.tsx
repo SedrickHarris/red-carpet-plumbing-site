@@ -28,6 +28,9 @@ export const metadata: Metadata = {
       "Trenchless Piping Services in Las Vegas, NV",
     description:
       "Trenchless pipe repair and replacement for Las Vegas homes and businesses. CIPP lining and pipe bursting without major excavation. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/trenchless-piping/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };

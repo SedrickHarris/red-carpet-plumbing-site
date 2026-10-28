@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       "Video Camera Plumbing Inspections in Las Vegas, NV",
     description:
       "Video camera plumbing inspections for Las Vegas homes and businesses. Root intrusion, pipe bellies, blockages, pre-purchase checks. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/video-camera-plumbing-inspections/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };
