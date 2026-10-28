@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       "Faucet and Sink Repair and Installation in Las Vegas, NV",
     description:
       "Faucet and sink repair and installation for Las Vegas kitchens and bathrooms. Dripping faucets, low pressure. Licensed plumbers. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/faucet-sink-repair-installation/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };

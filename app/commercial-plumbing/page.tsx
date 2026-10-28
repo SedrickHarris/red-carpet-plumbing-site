@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     title: "Commercial Plumbing in Las Vegas, NV | Red Carpet Plumbing",
     description:
       "Licensed commercial plumbing repair, installation, and maintenance for businesses and property managers in Las Vegas, NV. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/commercial-plumbing/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };

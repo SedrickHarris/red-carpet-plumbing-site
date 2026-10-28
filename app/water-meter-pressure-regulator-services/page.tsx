@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       "Water Meter and Pressure Regulator Services in Las Vegas, NV",
     description:
       "Pressure regulator inspection, repair, and replacement for Las Vegas homes. High pressure and PRV failure are common in the Valley. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/water-meter-pressure-regulator-services/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };

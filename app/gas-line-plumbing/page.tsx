@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     title: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
     description:
       "Licensed gas line repair, installation, and inspection throughout Las Vegas and the Las Vegas Valley. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/gas-line-plumbing/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };

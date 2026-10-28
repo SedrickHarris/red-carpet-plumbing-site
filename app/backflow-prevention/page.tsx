@@ -33,6 +33,9 @@ export const metadata: Metadata = {
       "Backflow Prevention Services in Las Vegas, NV",
     description:
       "Backflow prevention device installation, repair, and testing for Las Vegas homes and businesses. Annual testing required by LVVWD. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/backflow-prevention/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };

@@ -25,6 +25,9 @@ export const metadata: Metadata = {
       "About Red Carpet Plumbing | Las Vegas Plumbing Company",
     description:
       "Local, family-owned Las Vegas plumbing company with over 40 years of experience. Licensed plumbers and 24/7 emergency service. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/about/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };

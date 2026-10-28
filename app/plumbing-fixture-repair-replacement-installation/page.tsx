@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       "Plumbing Fixture Repair and Installation in Las Vegas, NV",
     description:
       "Plumbing fixture repair, replacement, and installation in Las Vegas. Faucets, shower valves, showerheads, and bathtub fixtures. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/plumbing-fixture-repair-replacement-installation/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };

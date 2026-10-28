@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       "Toilet Repair and Installation in Las Vegas, NV",
     description:
       "Toilet repair, replacement, and installation in Las Vegas and the Valley. Running toilets, base leaks, clogs, new installs. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/toilet-repair-installation/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };

@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       "Garbage Disposal Repair and Installation in Las Vegas, NV",
     description:
       "Garbage disposal repair, replacement, and installation for Las Vegas kitchens. Jammed, leaking, or not working. Licensed plumbers. Call (702) 567-9172.",
+    url: "https://redcarpetplumbing.com/garbage-disposal-repair-installation/",
+    siteName: "Red Carpet Plumbing",
+    type: "website",
     images: OG_IMAGES,
   },
 };
