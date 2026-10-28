@@ -1,0 +1,94 @@
+# Cloudflare Pages redirects for Red Carpet Plumbing
+# Source: AI Crawl Control 404 export, 2026-10-28
+# Pages defaults to 302 when no status is given, so every rule states 301.
+# Both the no-slash and trailing-slash form of each old URL are listed.
+
+# core
+/contact-us /contact/ 301
+/contact-us/ /contact/ 301
+/contact-us-2 /contact/ 301
+/contact-us-2/ /contact/ 301
+/about-us /about/ 301
+/about-us/ /about/ 301
+/home-2 / 301
+/home-2/ / 301
+/home / 301
+/home/ / 301
+# city
+/las-vegas /las-vegas-plumbing-services/ 301
+/las-vegas/ /las-vegas-plumbing-services/ 301
+/henderson-plumbing /henderson-plumbing-services/ 301
+/henderson-plumbing/ /henderson-plumbing-services/ 301
+/north-las-vegas-plumbing /north-las-vegas-plumbing-services/ 301
+/north-las-vegas-plumbing/ /north-las-vegas-plumbing-services/ 301
+/paradise-plumbing /paradise-plumbing-services/ 301
+/paradise-plumbing/ /paradise-plumbing-services/ 301
+/summerlin-plumbing /summerlin-plumbing-services/ 301
+/summerlin-plumbing/ /summerlin-plumbing-services/ 301
+/spring-valley-plumbing /spring-valley-plumbing-services/ 301
+/spring-valley-plumbing/ /spring-valley-plumbing-services/ 301
+/enterprise-plumbing /enterprise-plumbing-services/ 301
+/enterprise-plumbing/ /enterprise-plumbing-services/ 301
+/boulder-city-plumbing /boulder-city-plumbing-services/ 301
+/boulder-city-plumbing/ /boulder-city-plumbing-services/ 301
+/green-valley-plumbing /green-valley-plumbing-services/ 301
+/green-valley-plumbing/ /green-valley-plumbing-services/ 301
+/lake-las-vegas-plumbing /lake-las-vegas-plumbing-services/ 301
+/lake-las-vegas-plumbing/ /lake-las-vegas-plumbing-services/ 301
+/lake-las-vegas /lake-las-vegas-plumbing-services/ 301
+/lake-las-vegas/ /lake-las-vegas-plumbing-services/ 301
+# area-fallback
+/railroad-pass-plumbing /service-areas/ 301
+/railroad-pass-plumbing/ /service-areas/ 301
+/the-lakes-plumbing /service-areas/ 301
+/the-lakes-plumbing/ /service-areas/ 301
+/sunrise-manor-plumbing /service-areas/ 301
+/sunrise-manor-plumbing/ /service-areas/ 301
+# service
+/natural-gas-line-plumbing-services /gas-line-plumbing/ 301
+/natural-gas-line-plumbing-services/ /gas-line-plumbing/ 301
+/garbage-disposal-plumbing-services /garbage-disposal-repair-installation/ 301
+/garbage-disposal-plumbing-services/ /garbage-disposal-repair-installation/ 301
+/backflow-prevention-services /backflow-prevention/ 301
+/backflow-prevention-services/ /backflow-prevention/ 301
+/slab-leak-detection-repair-plumbing /slab-leak-detection-repair/ 301
+/slab-leak-detection-repair-plumbing/ /slab-leak-detection-repair/ 301
+/re-piping-plumbing-services /repiping/ 301
+/re-piping-plumbing-services/ /repiping/ 301
+/faucet-sink-repair-replacement-installation /faucet-sink-repair-installation/ 301
+/faucet-sink-repair-replacement-installation/ /faucet-sink-repair-installation/ 301
+/water-heater-repair-replacement-installation /water-heater-repair-installation/ 301
+/water-heater-repair-replacement-installation/ /water-heater-repair-installation/ 301
+/water-pipe-repair-replacement-installation /water-pipe-repair-replacement/ 301
+/water-pipe-repair-replacement-installation/ /water-pipe-repair-replacement/ 301
+/plumbing-video-camera-inspections /video-camera-plumbing-inspections/ 301
+/plumbing-video-camera-inspections/ /video-camera-plumbing-inspections/ 301
+# service-fallback
+/water-leak-clog-plumbing /plumbing-services/ 301
+/water-leak-clog-plumbing/ /plumbing-services/ 301
+/how-to-unclog-a-toilet /toilet-repair-installation/ 301
+/how-to-unclog-a-toilet/ /toilet-repair-installation/ 301
+# drain-sub
+/drain-cleaning/kitchen /drain-cleaning/ 301
+/drain-cleaning/kitchen/ /drain-cleaning/ 301
+/drain-cleaning/bathroom /drain-cleaning/ 301
+/drain-cleaning/bathroom/ /drain-cleaning/ 301
+/drain-cleaning/floor-drain /drain-cleaning/ 301
+/drain-cleaning/floor-drain/ /drain-cleaning/ 301
+/drain-cleaning/hydro-jetting /drain-cleaning/ 301
+/drain-cleaning/hydro-jetting/ /drain-cleaning/ 301
+/drain-cleaning/shower-tub /drain-cleaning/ 301
+/drain-cleaning/shower-tub/ /drain-cleaning/ 301
+/drain-cleaning/laundry /drain-cleaning/ 301
+/drain-cleaning/laundry/ /drain-cleaning/ 301
+/drain-cleaning/main-sewer-line /sewer-line-services/ 301
+/drain-cleaning/main-sewer-line/ /sewer-line-services/ 301
+/drain-cleaning/video-camera-inspection /video-camera-plumbing-inspections/ 301
+/drain-cleaning/video-camera-inspection/ /video-camera-plumbing-inspections/ 301
+# sitemap
+/sitemap_index.xml /sitemap.xml 301
+/sitemaps.xml /sitemap.xml 301
+/sitemap.txt /sitemap.xml 301
+/sitemap.xml.gz /sitemap.xml 301
+/category-sitemap.xml /sitemap.xml 301
+/page-sitemap.xml /sitemap.xml 301
