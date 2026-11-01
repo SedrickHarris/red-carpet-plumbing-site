@@ -15,7 +15,6 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
-import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
 import { EMERGENCY_HOURS_AVAILABLE } from "@/lib/emergency-hours";
 
 export const metadata: Metadata = {
@@ -316,8 +315,6 @@ const serviceSchema = {
         name: "State of Nevada Contractors Board",
       },
     },
-    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
-    aggregateRating: GOOGLE_AGGREGATE_RATING,
   },
   hoursAvailable: EMERGENCY_HOURS_AVAILABLE,
   areaServed: [

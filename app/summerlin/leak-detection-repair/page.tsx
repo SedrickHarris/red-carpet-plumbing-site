@@ -14,7 +14,6 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
-import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
 
 // FLAG: VERIFY before publishing — license #048585A, "over 40 years", the
 // 4.8/81 rating, and the gas-line leak detection scope are source-site/project
@@ -304,8 +303,6 @@ const serviceSchema = {
     url: "https://redcarpetplumbing.com",
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
-    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
-    aggregateRating: GOOGLE_AGGREGATE_RATING,
   },
   areaServed: {
     "@type": "Place",

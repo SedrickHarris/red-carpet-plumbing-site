@@ -14,7 +14,6 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
-import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
 
 // FLAG: VERIFY before publishing — source-site / project claims surfaced in the
 // approved brief and shown on this page. Each instance carries an inline FLAG:
@@ -288,8 +287,6 @@ const serviceSchema = {
       credentialCategory: "license",
       name: "Nevada Contractor License #048585A",
     },
-    // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
-    aggregateRating: GOOGLE_AGGREGATE_RATING,
   },
   areaServed: {
     "@type": "Place",
