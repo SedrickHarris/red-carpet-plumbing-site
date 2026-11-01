@@ -20,14 +20,14 @@ import { OG_IMAGES } from "@/lib/social-image";
 import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
 
 export const metadata: Metadata = {
-  title: "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Las Vegas Plumbing Services | Red Carpet Plumbing",
   description:
     "Plumbing services in Las Vegas, NV. Emergency plumbing, drain cleaning, water heater repair, slab leak detection. Licensed. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas-plumbing-services/",
   },
   openGraph: {
-    title: "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
+    title: "Las Vegas Plumbing Services | Red Carpet Plumbing",
     description:
       "Plumbing services in Las Vegas, NV. Emergency plumbing, drain cleaning, water heater repair, slab leak detection. Licensed. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas-plumbing-services/",

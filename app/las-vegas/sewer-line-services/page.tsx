@@ -44,14 +44,14 @@ import { OG_IMAGES } from "@/lib/social-image";
 // ---------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: "Sewer Line Services in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Las Vegas Sewer Line Services | Red Carpet Plumbing",
   description:
     "Sewer line inspection, cleaning, repair, and replacement in Las Vegas, NV. Camera inspection before repair. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/sewer-line-services/",
   },
   openGraph: {
-    title: "Sewer Line Services in Las Vegas, NV | Red Carpet Plumbing",
+    title: "Las Vegas Sewer Line Services | Red Carpet Plumbing",
     description:
       "Sewer line inspection, cleaning, repair, and replacement in Las Vegas, NV. Camera inspection before repair. Licensed plumbers. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/sewer-line-services/",

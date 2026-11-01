@@ -42,7 +42,7 @@ import { OG_IMAGES } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title:
-    "Video Camera Plumbing Inspections in Las Vegas, NV",
+    "Las Vegas Video Camera Plumbing Inspections",
   description:
     "Sewer and drain camera inspections in Las Vegas, NV. Root intrusion, pipe bellies, pre-purchase inspections, post-cleaning checks. Call (702) 567-9172.",
   alternates: {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Video Camera Plumbing Inspections in Las Vegas, NV",
+      "Las Vegas Video Camera Plumbing Inspections",
     description:
       "Sewer and drain camera inspections in Las Vegas, NV. Root intrusion, pipe bellies, pre-purchase inspections, post-cleaning checks. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/video-camera-plumbing-inspections/",

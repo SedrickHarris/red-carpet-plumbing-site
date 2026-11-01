@@ -43,14 +43,14 @@ import { OG_IMAGES } from "@/lib/social-image";
 // ---------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Las Vegas Gas Line Plumbing | Red Carpet Plumbing",
   description:
     "Licensed gas line repair, installation, inspection, and emergency service in Las Vegas, NV. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/gas-line-plumbing/",
   },
   openGraph: {
-    title: "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
+    title: "Las Vegas Gas Line Plumbing | Red Carpet Plumbing",
     description:
       "Licensed gas line repair, installation, inspection, and emergency service in Las Vegas, NV. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/gas-line-plumbing/",

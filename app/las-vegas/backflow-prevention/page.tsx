@@ -51,7 +51,7 @@ import { OG_IMAGES } from "@/lib/social-image";
 // ---------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: "Backflow Prevention Services in Las Vegas, NV",
+  title: "Las Vegas Backflow Prevention Services | Red Carpet Plumbing",
   description:
     "Backflow prevention device installation, repair, and service in Las Vegas, NV. LVVWD compliance and irrigation PVB installation. Call (702) 567-9172.",
   alternates: {
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Backflow Prevention Services in Las Vegas, NV",
+      "Las Vegas Backflow Prevention Services | Red Carpet Plumbing",
     description:
       "Backflow prevention device installation, repair, and service in Las Vegas, NV. LVVWD compliance and irrigation PVB installation. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/backflow-prevention/",

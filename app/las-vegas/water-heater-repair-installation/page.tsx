@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   // exceeds the site's ≤160 meta-description standard; see report. Kept as
   // approved pending a trim decision.
   title:
-    "Water Heater Repair and Installation in Las Vegas, NV",
+    "Las Vegas Water Heater Repair and Installation",
   description:
     "Water heater repair and installation in Las Vegas, NV. Tank and tankless, sediment flushing, anode rods, Clark County code. Call (702) 567-9172.",
   alternates: {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Water Heater Repair and Installation in Las Vegas, NV",
+      "Las Vegas Water Heater Repair and Installation",
     description:
       "Water heater repair and installation in Las Vegas, NV. Tank and tankless, sediment flushing, anode rods, Clark County code. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/water-heater-repair-installation/",

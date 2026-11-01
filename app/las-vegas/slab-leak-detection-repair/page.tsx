@@ -27,7 +27,7 @@ import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
 
 export const metadata: Metadata = {
   title:
-    "Slab Leak Detection and Repair in Las Vegas, NV",
+    "Las Vegas Slab Leak Detection and Repair",
   description:
     "Slab leak detection and repair in Las Vegas, NV. Non-invasive acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
   alternates: {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Slab Leak Detection and Repair in Las Vegas, NV",
+      "Las Vegas Slab Leak Detection and Repair",
     description:
       "Slab leak detection and repair in Las Vegas, NV. Non-invasive acoustic sensors, pressure testing, and thermal imaging. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/slab-leak-detection-repair/",

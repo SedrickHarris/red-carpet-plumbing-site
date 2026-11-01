@@ -44,7 +44,7 @@ import { OG_IMAGES } from "@/lib/social-image";
 // ---------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: "Toilet Repair and Installation in Las Vegas, NV",
+  title: "Las Vegas Toilet Repair and Installation",
   description:
     "Toilet repair, replacement, and installation in Las Vegas, NV. Running toilets, base leaks, wax ring replacement, clogs. Call (702) 567-9172.",
   alternates: {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Toilet Repair and Installation in Las Vegas, NV",
+      "Las Vegas Toilet Repair and Installation",
     description:
       "Toilet repair, replacement, and installation in Las Vegas, NV. Running toilets, base leaks, wax ring replacement, clogs. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/toilet-repair-installation/",

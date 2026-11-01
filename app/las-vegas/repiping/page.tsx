@@ -28,14 +28,14 @@ import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
 // AggregateRating (Guardrail 4) and hasCredential, matching siblings P13/P14.
 
 export const metadata: Metadata = {
-  title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Las Vegas Repiping Services | Red Carpet Plumbing",
   description:
     "Repiping in Las Vegas, NV. Polybutylene, Kitec, galvanized, and aging copper pipe replaced with PEX or copper. Permits pulled. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/repiping/",
   },
   openGraph: {
-    title: "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
+    title: "Las Vegas Repiping Services | Red Carpet Plumbing",
     description:
       "Repiping in Las Vegas, NV. Polybutylene, Kitec, galvanized, and aging copper pipe replaced with PEX or copper. Permits pulled. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/repiping/",

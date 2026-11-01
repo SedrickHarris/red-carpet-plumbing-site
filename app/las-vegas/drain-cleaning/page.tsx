@@ -25,14 +25,14 @@ export const metadata: Metadata = {
   // FLAG: description below is the approved brief string (~270 chars). It
   // exceeds the site's ≤160 meta-description standard; see report. Kept as
   // approved pending a trim decision.
-  title: "Drain Cleaning in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Las Vegas Drain Cleaning | Red Carpet Plumbing",
   description:
     "Drain cleaning in Las Vegas, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting. Licensed plumbers. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/drain-cleaning/",
   },
   openGraph: {
-    title: "Drain Cleaning in Las Vegas, NV | Red Carpet Plumbing",
+    title: "Las Vegas Drain Cleaning | Red Carpet Plumbing",
     description:
       "Drain cleaning in Las Vegas, NV. Kitchen drains, bathroom drains, main sewer lines, and hydro jetting. Licensed plumbers. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/drain-cleaning/",

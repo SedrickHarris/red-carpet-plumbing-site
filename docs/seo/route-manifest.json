@@ -2368,7 +2368,7 @@
       "sourceFile": "app/las-vegas-plumbing-services/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
+        "Las Vegas Plumbing Services | Red Carpet Plumbing",
         "Sewer Line Services",
         "Repiping",
         "Water Heater Repair and Installation",
@@ -2414,7 +2414,7 @@
       "sourceFile": "app/las-vegas/backflow-prevention/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Backflow Prevention Services in Las Vegas, NV",
+        "Las Vegas Backflow Prevention Services | Red Carpet Plumbing",
         "What is backflow and why does it matter?",
         "When is a backflow preventer required in Las Vegas?",
         "Annual testing requirements in Las Vegas",
@@ -2463,7 +2463,7 @@
       "sourceFile": "app/las-vegas/commercial-plumbing/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Commercial Plumbing in Las Vegas, NV | Red Carpet Plumbing",
+        "Las Vegas Commercial Plumbing | Red Carpet Plumbing",
         "Business Owners and Operators",
         "Restaurants and Hospitality Operations",
         "Property Managers and Multi-Unit Buildings",
@@ -2513,7 +2513,7 @@
       "sourceFile": "app/las-vegas/drain-cleaning/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Drain Cleaning in Las Vegas, NV | Red Carpet Plumbing"
+        "Las Vegas Drain Cleaning | Red Carpet Plumbing"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -2590,7 +2590,7 @@
       "sourceFile": "app/las-vegas/faucet-sink-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Faucet and Sink Repair and Installation in Las Vegas, NV",
+        "Las Vegas Faucet and Sink Repair and Installation",
         "Dripping or leaking faucet",
         "Low water pressure at the faucet",
         "Faucet handles stiff or difficult to turn",
@@ -2639,7 +2639,7 @@
       "sourceFile": "app/las-vegas/garbage-disposal-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Garbage Disposal Repair and Installation in Las Vegas, NV",
+        "Las Vegas Garbage Disposal Repair and Installation",
         "Disposal hums but will not spin",
         "Disposal will not turn on",
         "Disposal is leaking",
@@ -2689,7 +2689,7 @@
       "sourceFile": "app/las-vegas/gas-line-plumbing/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Gas Line Plumbing in Las Vegas, NV | Red Carpet Plumbing",
+        "Las Vegas Gas Line Plumbing | Red Carpet Plumbing",
         "Desert heat and CSST connector stress",
         "Aging black iron pipe in older Las Vegas homes",
         "Caliche soil and buried gas line joint stress",
@@ -2738,7 +2738,7 @@
       "sourceFile": "app/las-vegas/leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Leak Detection and Repair in Las Vegas, NV"
+        "Las Vegas Leak Detection and Repair | Red Carpet Plumbing"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -2777,7 +2777,7 @@
       "sourceFile": "app/las-vegas/repiping/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Repiping Services in Las Vegas, NV | Red Carpet Plumbing",
+        "Las Vegas Repiping Services | Red Carpet Plumbing",
         "Polybutylene Pipe (Homes Built 1975 to 1995)",
         "Kitec Pipe (Homes Built Late 1990s to 2005)",
         "Galvanized Steel Pipe (Homes Built Before 1975)",
@@ -2831,7 +2831,7 @@
       "sourceFile": "app/las-vegas/sewer-line-services/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Sewer Line Services in Las Vegas, NV | Red Carpet Plumbing"
+        "Las Vegas Sewer Line Services | Red Carpet Plumbing"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -2871,7 +2871,7 @@
       "sourceFile": "app/las-vegas/slab-leak-detection-repair/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Slab Leak Detection and Repair in Las Vegas, NV",
+        "Las Vegas Slab Leak Detection and Repair",
         "Acoustic Electronic Detection",
         "Pressure Testing",
         "Thermal Imaging",
@@ -2922,7 +2922,7 @@
       "sourceFile": "app/las-vegas/toilet-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Toilet Repair and Installation in Las Vegas, NV",
+        "Las Vegas Toilet Repair and Installation",
         "Toilet running constantly",
         "Toilet leaking at the base",
         "Frequent clogs or weak flush",
@@ -2971,7 +2971,7 @@
       "sourceFile": "app/las-vegas/video-camera-plumbing-inspections/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Video Camera Plumbing Inspections in Las Vegas, NV",
+        "Las Vegas Video Camera Plumbing Inspections",
         "Recurring drain clogs that will not stay cleared",
         "Before buying a home in Las Vegas",
         "Confirm a line is clear after drain cleaning",
@@ -3020,7 +3020,7 @@
       "sourceFile": "app/las-vegas/water-heater-repair-installation/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Heater Repair and Installation in Las Vegas, NV"
+        "Las Vegas Water Heater Repair and Installation"
       ],
       "possibleH1s": [],
       "possibleH2s": [
@@ -3058,7 +3058,7 @@
       "sourceFile": "app/las-vegas/water-pipe-repair-replacement/page.tsx",
       "routerType": "app",
       "possibleTitles": [
-        "Water Pipe Repair and Replacement in Las Vegas, NV",
+        "Las Vegas Water Pipe Repair and Replacement",
         "Many Las Vegas Homes Are Decades Old",
         "Lake Mead Hard Water and Soil Movement",
         "Desert Heat on Exposed Plumbing",

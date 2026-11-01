@@ -44,7 +44,7 @@ import { OG_IMAGES } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title:
-    "Garbage Disposal Repair and Installation in Las Vegas, NV",
+    "Las Vegas Garbage Disposal Repair and Installation",
   description:
     "Garbage disposal repair, replacement, and installation in Las Vegas, NV. Jammed, leaking, or not working. Call (702) 567-9172.",
   alternates: {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Garbage Disposal Repair and Installation in Las Vegas, NV",
+      "Las Vegas Garbage Disposal Repair and Installation",
     description:
       "Garbage disposal repair, replacement, and installation in Las Vegas, NV. Jammed, leaking, or not working. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/garbage-disposal-repair-installation/",

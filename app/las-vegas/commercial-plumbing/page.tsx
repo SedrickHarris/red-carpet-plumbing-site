@@ -32,14 +32,14 @@ import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
 // and hasCredential.
 
 export const metadata: Metadata = {
-  title: "Commercial Plumbing in Las Vegas, NV | Red Carpet Plumbing",
+  title: "Las Vegas Commercial Plumbing | Red Carpet Plumbing",
   description:
     "Licensed commercial plumbing in Las Vegas, NV for businesses, restaurants, property managers, and multi-unit buildings. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/commercial-plumbing/",
   },
   openGraph: {
-    title: "Commercial Plumbing in Las Vegas, NV | Red Carpet Plumbing",
+    title: "Las Vegas Commercial Plumbing | Red Carpet Plumbing",
     description:
       "Licensed commercial plumbing in Las Vegas, NV for businesses, restaurants, property managers, and multi-unit buildings. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/commercial-plumbing/",

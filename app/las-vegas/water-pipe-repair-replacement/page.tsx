@@ -46,14 +46,14 @@ import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
 
 export const metadata: Metadata = {
   // FLAG: VERIFY license #048585A in the description before publishing.
-  title: "Water Pipe Repair and Replacement in Las Vegas, NV",
+  title: "Las Vegas Water Pipe Repair and Replacement",
   description:
     "Water pipe repair and replacement in Las Vegas, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. Call (702) 567-9172.",
   alternates: {
     canonical: "https://redcarpetplumbing.com/las-vegas/water-pipe-repair-replacement/",
   },
   openGraph: {
-    title: "Water Pipe Repair and Replacement in Las Vegas, NV",
+    title: "Las Vegas Water Pipe Repair and Replacement",
     description:
       "Water pipe repair and replacement in Las Vegas, NV. Burst pipes, pinhole leaks, low pressure, and main line repair. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/water-pipe-repair-replacement/",

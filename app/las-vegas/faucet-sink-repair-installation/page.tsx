@@ -45,7 +45,7 @@ import { OG_IMAGES } from "@/lib/social-image";
 
 export const metadata: Metadata = {
   title:
-    "Faucet and Sink Repair and Installation in Las Vegas, NV",
+    "Las Vegas Faucet and Sink Repair and Installation",
   description:
     "Faucet and sink repair, replacement, and installation in Las Vegas, NV. Dripping faucets, low pressure, under-sink leaks. Call (702) 567-9172.",
   alternates: {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Faucet and Sink Repair and Installation in Las Vegas, NV",
+      "Las Vegas Faucet and Sink Repair and Installation",
     description:
       "Faucet and sink repair, replacement, and installation in Las Vegas, NV. Dripping faucets, low pressure, under-sink leaks. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/las-vegas/faucet-sink-repair-installation/",
