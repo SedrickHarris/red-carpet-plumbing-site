@@ -130,6 +130,7 @@ Confirmation history: first confirmed for North Las Vegas Sewer Line Services (t
 - Emergency service: 24/7 (owner-confirmed, Nov 1, 2026).
 - Office hours verified against Google Business Profile (Nov 1, 2026): Monday to Friday, 7:30 AM to 4:30 PM, Saturday and Sunday closed.
 - Google rating: 4.8 stars from 81 Google reviews (verified on Google Business Profile, Nov 1, 2026). Refresh before each publish.
+- AggregateRating schema is approved with these values (4.8, 81) on pages that visibly show the rating (owner-confirmed, Nov 1, 2026).
 - sameAs profile links in schema are owner-approved (owner-confirmed, Nov 1, 2026). Current list: https://share.google/oY5LcfC0lhWJXVjJj, https://www.facebook.com/redcarpetplumbing/, https://www.instagram.com/redcarpetplumbing/, https://x.com/redcarpetplumb
 - Customer Satisfaction Guarantee and "stands behind every service" copy: approved as currently written (owner-confirmed, Nov 1, 2026).
 - "Transparent pricing", "no hidden fees", "upfront pricing": approved as currently written (owner-confirmed, Nov 1, 2026).
