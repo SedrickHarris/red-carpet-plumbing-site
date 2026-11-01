@@ -14,6 +14,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { EMERGENCY_HOURS_AVAILABLE } from "@/lib/emergency-hours";
 
 // FLAG: VERIFY before publishing. "Emergency plumbing service available" and
 // "transparent pricing, no hidden fees" are source-site claims shown on this
@@ -310,6 +311,7 @@ const serviceSchema = {
   serviceType: "Emergency Plumbing",
   description:
     "Red Carpet Plumbing provides emergency plumbing service for homes and resort residential properties in Lake Las Vegas, Henderson, NV. Burst pipes, slab leaks, sewer backups, water heater failures, and gas line emergencies handled by licensed plumbers. Nevada Contractor License #048585A.",
+  hoursAvailable: EMERGENCY_HOURS_AVAILABLE,
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",

@@ -15,6 +15,8 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
+import { EMERGENCY_HOURS_AVAILABLE } from "@/lib/emergency-hours";
 
 // FLAG: VERIFY before publishing — source-site / project claims surfaced in the
 // approved brief and shown on this page. Each instance carries an inline FLAG:
@@ -126,7 +128,7 @@ const HERO_TRUST_ITEMS = [
 ];
 
 // FLAG: source-site claim (24/7 availability) — verify before final launch.
-const HERO_CTA_NOTE = "Available 24 hours a day, 7 days a week";
+const HERO_CTA_NOTE = "24/7 emergency service";
 
 // Section 2 — visible <ul>, AEO featured-snippet target.
 const EMERGENCY_TYPES = [
@@ -266,6 +268,7 @@ const serviceSchema = {
   serviceType: "Emergency Plumbing",
   description:
     "24/7 emergency plumbing service in Summerlin, NV. Burst pipes, sewer backups, water heater failures, slab leaks, gas line concerns, and major leaks handled by licensed plumbers.",
+  hoursAvailable: EMERGENCY_HOURS_AVAILABLE,
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -285,13 +288,7 @@ const serviceSchema = {
       name: "Nevada Contractor License #048585A",
     },
     // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "81",
-      bestRating: "5",
-      worstRating: "1",
-    },
+    aggregateRating: GOOGLE_AGGREGATE_RATING,
   },
   areaServed: {
     "@type": "Place",

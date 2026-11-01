@@ -44,6 +44,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
 
 export const metadata: Metadata = {
   title:
@@ -273,13 +274,7 @@ const serviceSchema = {
     // FLAG: VERIFY telephone before publishing.
     telephone: "+17025679172",
     // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "81",
-      bestRating: "5",
-      worstRating: "1",
-    },
+    aggregateRating: GOOGLE_AGGREGATE_RATING,
   },
   areaServed: [
     {

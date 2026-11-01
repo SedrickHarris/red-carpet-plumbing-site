@@ -124,6 +124,12 @@ Confirmation history: first confirmed for North Las Vegas Sewer Line Services (t
 ## Verified Business Facts
 
 - Phone: (702) 567-9172 (owner approved; the old number 444-5077 was removed)
-- License: Contractor Lic #048585A (owner approved; confirm on the Nevada State Contractors Board record before launch)
-- Rating: 4.8 stars, 81 reviews, Google Business Profile (owner confirmed; recheck before launch)
-- Years in business: "over 40 years" (owner approved)
+- Address: 3330 W. Hacienda Ave Ste. 405, Las Vegas, NV 89118. Email: info@redcarpetplumbing.com
+- License: Nevada Contractor License #048585A (owner-confirmed, Nov 1, 2026)
+- In business since 1983 (owner-confirmed, Nov 1, 2026). "Over 40 years in business" is approved copy.
+- Emergency service: 24/7 (owner-confirmed, Nov 1, 2026).
+- Office hours verified against Google Business Profile (Nov 1, 2026): Monday to Friday, 7:30 AM to 4:30 PM, Saturday and Sunday closed.
+- Google rating: 4.8 stars from 81 Google reviews (verified on Google Business Profile, Nov 1, 2026). Refresh before each publish.
+- sameAs profile links in schema are owner-approved (owner-confirmed, Nov 1, 2026). Current list: https://share.google/oY5LcfC0lhWJXVjJj, https://www.facebook.com/redcarpetplumbing/, https://www.instagram.com/redcarpetplumbing/, https://x.com/redcarpetplumb
+- Customer Satisfaction Guarantee and "stands behind every service" copy: approved as currently written (owner-confirmed, Nov 1, 2026).
+- "Transparent pricing", "no hidden fees", "upfront pricing": approved as currently written (owner-confirmed, Nov 1, 2026).

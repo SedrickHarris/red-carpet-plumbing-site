@@ -337,13 +337,16 @@ export default function ContactPage() {
                 </dt>
                 <dd className="mt-3 text-base text-brand-dark/80">
                   <span className="block">
-                    Monday through Friday: 7:30 AM to 4:30 PM
+                    Office hours: Monday to Friday, 7:30 AM to 4:30 PM
                   </span>
                   <span className="mt-1 block">
                     Saturday and Sunday: Closed
                   </span>
                   <span className="mt-2 block">
-                    24/7 emergency service available, call{" "}
+                    Emergency service: 24/7
+                  </span>
+                  <span className="mt-1 block">
+                    Call{" "}
                     <a
                       href="tel:+17025679172"
                       className="font-medium text-brand-dark hover:text-brand-dark/70"

@@ -15,6 +15,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { EMERGENCY_HOURS_AVAILABLE } from "@/lib/emergency-hours";
 
 // FLAG: VERIFY before publishing — the following are source-site / project
 // claims surfaced in the build brief. They are confirmed elsewhere in the
@@ -235,6 +236,7 @@ const serviceSchema = {
   serviceType: "Emergency Plumbing",
   description:
     "Red Carpet Plumbing provides emergency plumbing service for homes and businesses in Las Vegas, NV, including burst pipe repair, sewer backup clearing, water heater emergency service, slab leak repair, and gas line emergency service.",
+  hoursAvailable: EMERGENCY_HOURS_AVAILABLE,
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",

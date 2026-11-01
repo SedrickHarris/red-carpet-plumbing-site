@@ -15,6 +15,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { EMERGENCY_HOURS_AVAILABLE } from "@/lib/emergency-hours";
 
 // FLAG: VERIFY before publishing — license #048585A, 24/7 availability,
 // transparent-pricing, gas-line scope, and any rating/40-year claims are
@@ -245,6 +246,7 @@ const serviceSchema = {
   serviceType: "Emergency Plumbing",
   description:
     "Red Carpet Plumbing provides emergency plumbing service for homes and businesses in North Las Vegas, NV, including burst pipe repair, slab leak detection and repair, sewer backup clearing, water heater emergency service, and commercial plumbing emergency response.",
+  hoursAvailable: EMERGENCY_HOURS_AVAILABLE,
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",

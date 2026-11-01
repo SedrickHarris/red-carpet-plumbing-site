@@ -13,6 +13,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { EMERGENCY_HOURS_AVAILABLE } from "@/lib/emergency-hours";
 
 // FLAG: VERIFY before publishing — license #048585A, emergency-service
 // availability, and transparent-pricing are source-site claims shown on this
@@ -269,6 +270,7 @@ const serviceSchema = {
   serviceType: "Emergency Plumbing",
   description:
     "Red Carpet Plumbing provides emergency plumbing service for homes and businesses in Boulder City, NV, including burst pipes, galvanized pipe failures, sewer backups, water heater failures, and slab leaks.",
+  hoursAvailable: EMERGENCY_HOURS_AVAILABLE,
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",

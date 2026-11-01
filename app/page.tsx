@@ -13,6 +13,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
+import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
 
 export const metadata: Metadata = {
   title: "Plumbing Company in Las Vegas, NV | Red Carpet Plumbing",
@@ -247,13 +248,7 @@ const plumberSchema = {
     addressCountry: "US",
   },
   // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    reviewCount: "81",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  aggregateRating: GOOGLE_AGGREGATE_RATING,
   // Hours omitted from schema on this page because they are not shown in visible text. Contact and About show office hours.
   sameAs: [
     "https://share.google/oY5LcfC0lhWJXVjJj",
@@ -476,7 +471,7 @@ export default function Home() {
                   Call Now: (702) 567-9172
                 </Button>
                 <p className="text-sm text-white/60">
-                  Available 24 hours a day, 7 days a week
+                  24/7 emergency service
                 </p>
               </div>
             </div>

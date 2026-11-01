@@ -36,14 +36,13 @@
       "schemaTypeHints": [
         "Plumber",
         "PostalAddress",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebSite",
         "WebPage",
         "Service"
       ],
-      "wordEstimate": 638
+      "wordEstimate": 634
     },
     {
       "route": "/about",
@@ -82,10 +81,9 @@
         "OpeningHoursSpecification",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "Service"
       ],
-      "wordEstimate": 732
+      "wordEstimate": 733
     },
     {
       "route": "/backflow-prevention",
@@ -122,7 +120,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -130,7 +127,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 413
+      "wordEstimate": 414
     },
     {
       "route": "/boulder-city-plumbing-services",
@@ -167,7 +164,6 @@
         "PostalAddress",
         "City",
         "OpeningHoursSpecification",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebPage",
@@ -177,7 +173,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 664
+      "wordEstimate": 665
     },
     {
       "route": "/boulder-city/drain-cleaning",
@@ -210,13 +206,13 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 1070
     },
@@ -289,13 +285,13 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 1066
     },
@@ -329,13 +325,13 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 952
     },
@@ -375,7 +371,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -383,7 +378,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 416
+      "wordEstimate": 417
     },
     {
       "route": "/contact",
@@ -414,7 +409,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 318
+      "wordEstimate": 319
     },
     {
       "route": "/drain-cleaning",
@@ -452,7 +447,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -460,7 +454,7 @@
         "WebPage",
         "WebSite"
       ],
-      "wordEstimate": 520
+      "wordEstimate": 521
     },
     {
       "route": "/emergency-plumbing",
@@ -495,7 +489,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -503,7 +496,7 @@
         "WebPage",
         "WebSite"
       ],
-      "wordEstimate": 475
+      "wordEstimate": 478
     },
     {
       "route": "/enterprise-plumbing-services",
@@ -541,7 +534,6 @@
         "Place",
         "AdministrativeArea",
         "OpeningHoursSpecification",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebPage",
@@ -551,7 +543,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 748
+      "wordEstimate": 749
     },
     {
       "route": "/enterprise/commercial-plumbing",
@@ -582,14 +574,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 769
     },
@@ -623,14 +615,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 806
     },
@@ -666,14 +658,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 901
     },
@@ -709,14 +701,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 901
     },
@@ -753,14 +745,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 1592
     },
@@ -794,7 +786,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -836,14 +827,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 861
     },
@@ -878,14 +869,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 888
     },
@@ -925,7 +916,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -933,7 +923,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 393
+      "wordEstimate": 394
     },
     {
       "route": "/garbage-disposal-repair-installation",
@@ -971,7 +961,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -979,7 +968,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 369
+      "wordEstimate": 370
     },
     {
       "route": "/gas-line-plumbing",
@@ -1017,7 +1006,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -1025,7 +1013,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 357
+      "wordEstimate": 358
     },
     {
       "route": "/green-valley-plumbing-services",
@@ -1064,7 +1052,6 @@
         "Place",
         "City",
         "OpeningHoursSpecification",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebPage",
@@ -1074,7 +1061,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 768
+      "wordEstimate": 769
     },
     {
       "route": "/green-valley/drain-cleaning",
@@ -1102,7 +1089,6 @@
       "schemaTypeHints": [
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "City",
         "State",
@@ -1112,7 +1098,8 @@
         "HowToStep",
         "WebPage",
         "WebSite",
-        "FAQPage"
+        "FAQPage",
+        "AggregateRating"
       ],
       "wordEstimate": 1115
     },
@@ -1243,13 +1230,13 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "City",
         "State",
         "HowTo",
         "HowToStep",
-        "FAQPage"
+        "FAQPage",
+        "AggregateRating"
       ],
       "wordEstimate": 1144
     },
@@ -1295,13 +1282,13 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "City",
         "State",
         "HowTo",
         "HowToStep",
-        "FAQPage"
+        "FAQPage",
+        "AggregateRating"
       ],
       "wordEstimate": 1204
     },
@@ -1343,13 +1330,13 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "City",
         "State",
         "HowTo",
         "HowToStep",
-        "FAQPage"
+        "FAQPage",
+        "AggregateRating"
       ],
       "wordEstimate": 1007
     },
@@ -1432,13 +1419,13 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "City",
         "State",
         "HowTo",
         "HowToStep",
-        "FAQPage"
+        "FAQPage",
+        "AggregateRating"
       ],
       "wordEstimate": 1313
     },
@@ -1479,7 +1466,6 @@
         "PostalAddress",
         "City",
         "OpeningHoursSpecification",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebPage",
@@ -1489,7 +1475,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 679
+      "wordEstimate": 680
     },
     {
       "route": "/henderson/backflow-prevention",
@@ -1521,7 +1507,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
@@ -1570,13 +1555,13 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 650
     },
@@ -1690,7 +1675,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
@@ -1730,7 +1714,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
@@ -1826,7 +1809,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
@@ -1881,12 +1863,12 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
         "HowToStep",
-        "FAQPage"
+        "FAQPage",
+        "AggregateRating"
       ],
       "wordEstimate": 1113
     },
@@ -1979,7 +1961,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
@@ -2018,7 +1999,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
@@ -2098,7 +2078,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
@@ -2145,7 +2124,6 @@
         "Place",
         "City",
         "OpeningHoursSpecification",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebPage",
@@ -2155,7 +2133,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 754
+      "wordEstimate": 755
     },
     {
       "route": "/lake-las-vegas/drain-cleaning",
@@ -2420,7 +2398,6 @@
         "PostalAddress",
         "City",
         "OpeningHoursSpecification",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebPage",
@@ -2430,7 +2407,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 633
+      "wordEstimate": 634
     },
     {
       "route": "/las-vegas/backflow-prevention",
@@ -2521,13 +2498,13 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 672
     },
@@ -2840,12 +2817,12 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
         "HowToStep",
-        "FAQPage"
+        "FAQPage",
+        "AggregateRating"
       ],
       "wordEstimate": 1121
     },
@@ -2932,7 +2909,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
@@ -3107,7 +3083,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
@@ -3153,7 +3128,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -3161,7 +3135,7 @@
         "WebPage",
         "WebSite"
       ],
-      "wordEstimate": 538
+      "wordEstimate": 539
     },
     {
       "route": "/north-las-vegas-plumbing-services",
@@ -3199,7 +3173,6 @@
         "PostalAddress",
         "City",
         "OpeningHoursSpecification",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebPage",
@@ -3209,7 +3182,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 696
+      "wordEstimate": 697
     },
     {
       "route": "/north-las-vegas/aliante-area-plumbing",
@@ -3248,7 +3221,6 @@
         "Place",
         "City",
         "OpeningHoursSpecification",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebPage",
@@ -3258,7 +3230,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 703
+      "wordEstimate": 704
     },
     {
       "route": "/north-las-vegas/aliante-area/drain-cleaning",
@@ -3542,7 +3514,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "PostalCodeSpecification",
@@ -3550,7 +3521,8 @@
         "HowToStep",
         "FAQPage",
         "LocalBusiness",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 989
     },
@@ -3662,14 +3634,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "PostalCodeSpecification",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 886
     },
@@ -3711,7 +3683,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "HowTo",
@@ -3752,7 +3723,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "PostalCodeSpecification",
@@ -3760,7 +3730,8 @@
         "HowToStep",
         "FAQPage",
         "LocalBusiness",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 1106
     },
@@ -3797,13 +3768,13 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "PostalCodeSpecification",
         "HowTo",
         "HowToStep",
-        "FAQPage"
+        "FAQPage",
+        "AggregateRating"
       ],
       "wordEstimate": 867
     },
@@ -3973,7 +3944,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "City",
         "State",
         "PostalCodeSpecification",
@@ -3981,7 +3951,8 @@
         "HowToStep",
         "FAQPage",
         "LocalBusiness",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 932
     },
@@ -4021,7 +3992,6 @@
         "Place",
         "AdministrativeArea",
         "OpeningHoursSpecification",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebPage",
@@ -4031,7 +4001,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 700
+      "wordEstimate": 701
     },
     {
       "route": "/paradise/backflow-prevention",
@@ -4063,7 +4033,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -4114,7 +4083,6 @@
         "Service",
         "Plumber",
         "PostalAddress",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -4122,9 +4090,10 @@
         "HowToStep",
         "FAQPage",
         "LocalBusiness",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
-      "wordEstimate": 531
+      "wordEstimate": 532
     },
     {
       "route": "/paradise/drain-cleaning",
@@ -4158,16 +4127,16 @@
         "Plumber",
         "PostalAddress",
         "EducationalOccupationalCredential",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "LocalBusiness"
+        "LocalBusiness",
+        "AggregateRating"
       ],
-      "wordEstimate": 1135
+      "wordEstimate": 1136
     },
     {
       "route": "/paradise/emergency-plumbing",
@@ -4205,15 +4174,15 @@
         "Plumber",
         "PostalAddress",
         "EducationalOccupationalCredential",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
-        "FAQPage"
+        "FAQPage",
+        "AggregateRating"
       ],
-      "wordEstimate": 1276
+      "wordEstimate": 1272
     },
     {
       "route": "/paradise/gas-line-plumbing",
@@ -4245,7 +4214,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -4292,16 +4260,16 @@
         "Plumber",
         "PostalAddress",
         "EducationalOccupationalCredential",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "LocalBusiness"
+        "LocalBusiness",
+        "AggregateRating"
       ],
-      "wordEstimate": 1294
+      "wordEstimate": 1295
     },
     {
       "route": "/paradise/sewer-line-services",
@@ -4333,7 +4301,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -4379,16 +4346,16 @@
         "Plumber",
         "PostalAddress",
         "EducationalOccupationalCredential",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "LocalBusiness"
+        "LocalBusiness",
+        "AggregateRating"
       ],
-      "wordEstimate": 1094
+      "wordEstimate": 1095
     },
     {
       "route": "/plumbing-fixture-repair-replacement-installation",
@@ -4426,7 +4393,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -4434,7 +4400,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 385
+      "wordEstimate": 386
     },
     {
       "route": "/plumbing-services",
@@ -4526,7 +4492,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -4534,7 +4499,7 @@
         "WebPage",
         "WebSite"
       ],
-      "wordEstimate": 615
+      "wordEstimate": 616
     },
     {
       "route": "/service-areas",
@@ -4604,7 +4569,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -4612,7 +4576,7 @@
         "WebPage",
         "WebSite"
       ],
-      "wordEstimate": 593
+      "wordEstimate": 594
     },
     {
       "route": "/sitemap",
@@ -4670,7 +4634,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -4678,7 +4641,7 @@
         "WebPage",
         "WebSite"
       ],
-      "wordEstimate": 600
+      "wordEstimate": 601
     },
     {
       "route": "/spring-valley-plumbing-services",
@@ -4716,7 +4679,6 @@
         "Place",
         "AdministrativeArea",
         "OpeningHoursSpecification",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebPage",
@@ -4726,7 +4688,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 764
+      "wordEstimate": 765
     },
     {
       "route": "/spring-valley/commercial-plumbing",
@@ -4766,14 +4728,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 714
     },
@@ -4810,14 +4772,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 741
     },
@@ -4854,14 +4816,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 558
     },
@@ -4901,14 +4863,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 978
     },
@@ -4947,14 +4909,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 1096
     },
@@ -4988,7 +4950,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -5035,14 +4996,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 846
     },
@@ -5080,14 +5041,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 787
     },
@@ -5127,7 +5088,6 @@
         "Place",
         "AdministrativeArea",
         "OpeningHoursSpecification",
-        "AggregateRating",
         "EducationalOccupationalCredential",
         "Organization",
         "WebPage",
@@ -5137,7 +5097,7 @@
         "FAQPage",
         "Service"
       ],
-      "wordEstimate": 647
+      "wordEstimate": 648
     },
     {
       "route": "/summerlin/drain-cleaning",
@@ -5168,14 +5128,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 654
     },
@@ -5214,16 +5174,16 @@
         "Plumber",
         "PostalAddress",
         "EducationalOccupationalCredential",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "LocalBusiness"
+        "LocalBusiness",
+        "AggregateRating"
       ],
-      "wordEstimate": 1418
+      "wordEstimate": 1414
     },
     {
       "route": "/summerlin/faucet-sink-repair-installation",
@@ -5255,7 +5215,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -5296,7 +5255,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -5337,7 +5295,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -5379,14 +5336,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 874
     },
@@ -5423,14 +5380,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 911
     },
@@ -5464,7 +5421,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -5506,14 +5462,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 807
     },
@@ -5547,7 +5503,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -5588,14 +5543,14 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
         "HowTo",
         "HowToStep",
         "FAQPage",
-        "Review"
+        "Review",
+        "AggregateRating"
       ],
       "wordEstimate": 575
     },
@@ -5629,7 +5584,6 @@
         "ListItem",
         "Service",
         "Plumber",
-        "AggregateRating",
         "Place",
         "AdministrativeArea",
         "State",
@@ -5709,7 +5663,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -5717,7 +5670,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 393
+      "wordEstimate": 394
     },
     {
       "route": "/trenchless-piping",
@@ -5754,7 +5707,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -5762,7 +5714,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 392
+      "wordEstimate": 393
     },
     {
       "route": "/video-camera-plumbing-inspections",
@@ -5800,7 +5752,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -5808,7 +5759,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 391
+      "wordEstimate": 392
     },
     {
       "route": "/water-heater-repair-installation",
@@ -5846,7 +5797,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -5854,7 +5804,7 @@
         "WebPage",
         "WebSite"
       ],
-      "wordEstimate": 582
+      "wordEstimate": 583
     },
     {
       "route": "/water-meter-pressure-regulator-services",
@@ -5892,7 +5842,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -5900,7 +5849,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 391
+      "wordEstimate": 392
     },
     {
       "route": "/water-pipe-repair-replacement",
@@ -5938,7 +5887,6 @@
         "Plumber",
         "EducationalOccupationalCredential",
         "Organization",
-        "AggregateRating",
         "BreadcrumbList",
         "ListItem",
         "HowTo",
@@ -5946,7 +5894,7 @@
         "WebPage",
         "Review"
       ],
-      "wordEstimate": 396
+      "wordEstimate": 397
     }
   ],
   "warnings": []

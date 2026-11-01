@@ -15,6 +15,8 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
+import { EMERGENCY_HOURS_AVAILABLE } from "@/lib/emergency-hours";
 
 // FLAG: VERIFY before publishing — license #048585A, "over 40 years", the
 // 4.8/81 rating, the gas-line scope, and every emergency-availability statement
@@ -350,6 +352,7 @@ const serviceSchema = {
   serviceType: "Emergency Plumbing",
   description:
     "Red Carpet Plumbing provides emergency plumbing service for homes and businesses in Enterprise, NV, including burst pipe repair, water heater emergency service, slab leak detection and repair, pressure regulator replacement, sewer backup clearing, and commercial emergency plumbing response.",
+  hoursAvailable: EMERGENCY_HOURS_AVAILABLE,
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
@@ -357,13 +360,7 @@ const serviceSchema = {
     // FLAG: VERIFY telephone (carried forward from existing pages).
     telephone: "+17025679172",
     // Source: Google Business Profile, 81 reviews, 4.8. Recheck before launch.
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "81",
-      bestRating: "5",
-      worstRating: "1",
-    },
+    aggregateRating: GOOGLE_AGGREGATE_RATING,
   },
   areaServed: {
     "@type": "Place",

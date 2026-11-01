@@ -16,6 +16,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { EMERGENCY_HOURS_AVAILABLE } from "@/lib/emergency-hours";
 
 // FLAG: VERIFY before publishing. Active FLAGs on this page:
 //   - 24/7 emergency availability (source-site claim; confirm operational hours
@@ -315,6 +316,7 @@ const serviceSchema = {
   serviceType: "Emergency Plumbing",
   description:
     "Red Carpet Plumbing provides emergency plumbing service for homes in the Aliante area of North Las Vegas, NV, including burst pipe repair, slab leak detection and repair, sewer backup clearing, water heater emergency service, gas line emergencies, and emergency drain clearing.",
+  hoursAvailable: EMERGENCY_HOURS_AVAILABLE,
   provider: {
     "@type": "Plumber",
     name: "Red Carpet Plumbing",
