@@ -67,11 +67,15 @@ Emergency plumbing requests
 
 ## Verified Business Claims
 Local, family-owned plumbing company
-Licensed plumbers (NV #048585A)
+Licensed plumbers (NV #048585A) (owner-confirmed, Nov 1, 2026)
+24/7 emergency service (owner-confirmed, Nov 1, 2026)
+Office hours: Monday to Friday, 7:30 AM to 4:30 PM, Saturday and Sunday closed (verified on Google Business Profile, owner-confirmed, Nov 1, 2026)
+In business since 1983; "Over 40 years serving Las Vegas" approved (owner-confirmed, Nov 1, 2026)
+4.8 stars from 81 Google reviews (verified on Google Business Profile, owner-confirmed, Nov 1, 2026). Refresh before each publish.
+AggregateRating schema approved with these values on pages that visibly show the rating (owner-confirmed, Nov 1, 2026)
+Existing sameAs links in schema approved (owner-confirmed, Nov 1, 2026)
+Transparent pricing, no hidden fees, upfront pricing (owner-confirmed, Nov 1, 2026)
+Customer satisfaction guarantee and "stands behind every service" (owner-confirmed, Nov 1, 2026)
 
 ## Claims Requiring Verification Before Publishing
-24/7 emergency availability
-Over 40 years serving Las Vegas
-4.8 stars, 81 Google reviews
-Transparent pricing, no hidden fees
-Customer satisfaction guarantee
+None at this time.
