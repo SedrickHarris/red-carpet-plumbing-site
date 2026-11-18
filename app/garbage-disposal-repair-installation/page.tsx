@@ -241,16 +241,16 @@ const DISPOSAL_STEPS = [
 
 const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
   { name: "Las Vegas", href: "/las-vegas/garbage-disposal-repair-installation/" },
-  { name: "Henderson" },
-  { name: "North Las Vegas" },
-  { name: "Aliante Area" },
-  { name: "Summerlin" },
-  { name: "Paradise" },
-  { name: "Spring Valley" },
-  { name: "Enterprise" },
-  { name: "Boulder City" },
-  { name: "Green Valley" },
-  { name: "Lake Las Vegas" },
+  { name: "Henderson", href: "/henderson/garbage-disposal-repair-installation/" },
+  { name: "North Las Vegas", href: "/north-las-vegas/garbage-disposal-repair-installation/" },
+  { name: "Aliante Area", href: "/north-las-vegas/aliante-area-plumbing/" },
+  { name: "Summerlin", href: "/summerlin/garbage-disposal-repair-installation/" },
+  { name: "Paradise", href: "/paradise-plumbing-services/" },
+  { name: "Spring Valley", href: "/spring-valley-plumbing-services/" },
+  { name: "Enterprise", href: "/enterprise-plumbing-services/" },
+  { name: "Boulder City", href: "/boulder-city-plumbing-services/" },
+  { name: "Green Valley", href: "/green-valley-plumbing-services/" },
+  { name: "Lake Las Vegas", href: "/lake-las-vegas-plumbing-services/" },
 ];
 
 type RelatedService = {

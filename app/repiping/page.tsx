@@ -227,15 +227,15 @@ const REPIPING_STEPS = [
 const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
   { name: "Las Vegas", href: "/las-vegas/repiping/" },
   { name: "Henderson", href: "/henderson/repiping/" },
-  { name: "North Las Vegas" },
-  { name: "Aliante Area" },
+  { name: "North Las Vegas", href: "/north-las-vegas/repiping/" },
+  { name: "Aliante Area", href: "/north-las-vegas/aliante-area-plumbing/" },
   { name: "Summerlin", href: "/summerlin/repiping/" },
-  { name: "Paradise" },
+  { name: "Paradise", href: "/paradise-plumbing-services/" },
   { name: "Spring Valley", href: "/spring-valley/repiping/" },
   { name: "Enterprise", href: "/enterprise/repiping/" },
-  { name: "Boulder City" },
+  { name: "Boulder City", href: "/boulder-city-plumbing-services/" },
   { name: "Green Valley", href: "/green-valley/repiping/" },
-  { name: "Lake Las Vegas" },
+  { name: "Lake Las Vegas", href: "/lake-las-vegas-plumbing-services/" },
 ];
 
 type RelatedService = {

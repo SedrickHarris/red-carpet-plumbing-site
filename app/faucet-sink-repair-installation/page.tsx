@@ -241,16 +241,16 @@ const FAUCET_SINK_STEPS = [
 
 const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
   { name: "Las Vegas", href: "/las-vegas/faucet-sink-repair-installation/" },
-  { name: "Henderson" },
-  { name: "North Las Vegas" },
-  { name: "Aliante Area" },
-  { name: "Summerlin" },
-  { name: "Paradise" },
-  { name: "Spring Valley" },
-  { name: "Enterprise" },
-  { name: "Boulder City" },
+  { name: "Henderson", href: "/henderson/faucet-sink-repair-installation/" },
+  { name: "North Las Vegas", href: "/north-las-vegas-plumbing-services/" },
+  { name: "Aliante Area", href: "/north-las-vegas/aliante-area-plumbing/" },
+  { name: "Summerlin", href: "/summerlin/faucet-sink-repair-installation/" },
+  { name: "Paradise", href: "/paradise-plumbing-services/" },
+  { name: "Spring Valley", href: "/spring-valley-plumbing-services/" },
+  { name: "Enterprise", href: "/enterprise-plumbing-services/" },
+  { name: "Boulder City", href: "/boulder-city-plumbing-services/" },
   { name: "Green Valley", href: "/green-valley/faucet-sink-repair-installation/" },
-  { name: "Lake Las Vegas" },
+  { name: "Lake Las Vegas", href: "/lake-las-vegas-plumbing-services/" },
 ];
 
 type RelatedService = {

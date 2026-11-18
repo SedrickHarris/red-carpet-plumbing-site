@@ -243,15 +243,15 @@ const COMMERCIAL_STEPS = [
 const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
   { name: "Las Vegas", href: "/las-vegas/commercial-plumbing/" },
   { name: "Henderson", href: "/henderson/commercial-plumbing/" },
-  { name: "North Las Vegas" },
-  { name: "Aliante Area" },
-  { name: "Summerlin" },
+  { name: "North Las Vegas", href: "/north-las-vegas/commercial-plumbing/" },
+  { name: "Aliante Area", href: "/north-las-vegas/aliante-area-plumbing/" },
+  { name: "Summerlin", href: "/summerlin-plumbing-services/" },
   { name: "Paradise", href: "/paradise/commercial-plumbing/" },
   { name: "Spring Valley", href: "/spring-valley/commercial-plumbing/" },
   { name: "Enterprise", href: "/enterprise/commercial-plumbing/" },
-  { name: "Boulder City" },
-  { name: "Green Valley" },
-  { name: "Lake Las Vegas" },
+  { name: "Boulder City", href: "/boulder-city-plumbing-services/" },
+  { name: "Green Valley", href: "/green-valley-plumbing-services/" },
+  { name: "Lake Las Vegas", href: "/lake-las-vegas-plumbing-services/" },
 ];
 
 type RelatedService = {

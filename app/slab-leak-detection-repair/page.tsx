@@ -233,10 +233,10 @@ const SERVICE_AREA_LINKS: { name: string; href?: string }[] = [
   { name: "North Las Vegas", href: "/north-las-vegas/slab-leak-detection-repair/" },
   { name: "Aliante Area", href: "/north-las-vegas/aliante-area/slab-leak-detection-repair/" },
   { name: "Summerlin", href: "/summerlin/slab-leak-detection-repair/" },
-  { name: "Paradise" },
+  { name: "Paradise", href: "/paradise-plumbing-services/" },
   { name: "Spring Valley", href: "/spring-valley/slab-leak-detection-repair/" },
   { name: "Enterprise", href: "/enterprise/slab-leak-detection-repair/" },
-  { name: "Boulder City" },
+  { name: "Boulder City", href: "/boulder-city-plumbing-services/" },
   { name: "Green Valley", href: "/green-valley/slab-leak-detection-repair/" },
   { name: "Lake Las Vegas", href: "/lake-las-vegas/slab-leak-detection-repair/" },
 ];
