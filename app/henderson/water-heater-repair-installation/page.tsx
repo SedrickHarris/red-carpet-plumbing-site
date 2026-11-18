@@ -599,6 +599,14 @@ export default function HendersonWaterHeaterPage() {
                 Ranch, Lake Las Vegas, Seven Hills, MacDonald Ranch, Anthem,
                 Tuscany Village, Inspirada, Whitney Ranch, and surrounding
                 Henderson neighborhoods.
+                For full Henderson plumbing coverage, see our{" "}
+                <Link
+                  href="/henderson-plumbing-services/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Henderson plumbing services
+                </Link>{" "}
+                page.
               </p>
             </div>
 

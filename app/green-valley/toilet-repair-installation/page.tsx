@@ -695,6 +695,14 @@ export default function GreenValleyToiletPage() {
                   Henderson plumbing services
                 </Link>
                 .
+                For Henderson toilet repair and installation, visit our{" "}
+                <Link
+                  href="/henderson/toilet-repair-installation/"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
+                >
+                  Henderson toilet repair page
+                </Link>
+                .
               </p>
             </div>
             <ul className="mt-8 flex flex-wrap gap-3">

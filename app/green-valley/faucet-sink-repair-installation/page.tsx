@@ -657,6 +657,14 @@ export default function GreenValleyFaucetSinkPage() {
                   toilet repair and installation in Green Valley
                 </Link>{" "}
                 page.
+                For Henderson faucet and sink repair and installation, visit our{" "}
+                <Link
+                  href="/henderson/faucet-sink-repair-installation/"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
+                >
+                  Henderson faucet and sink page
+                </Link>
+                .
               </p>
             </div>
             <ul className="mt-8 flex flex-wrap gap-3">

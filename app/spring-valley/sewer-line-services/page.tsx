@@ -208,7 +208,7 @@ const AREA_CHIPS = [
   "Western Spring Valley",
   "Eastern Spring Valley",
 ];
-const AREAS_CROSS_LINKS: LinkSeg[] = ["We also provide sewer line services in ", { href: "/summerlin/sewer-line-services/", text: "Summerlin" }, " and ", { href: "/enterprise/sewer-line-services/", text: "Enterprise" }, ". For every service we offer in your community, visit our ", { href: "/spring-valley-plumbing-services/", text: "Spring Valley plumbing services" }, " page."];
+const AREAS_CROSS_LINKS: LinkSeg[] = ["We also provide sewer line services in ", { href: "/summerlin/sewer-line-services/", text: "Summerlin" }, " and ", { href: "/enterprise/sewer-line-services/", text: "Enterprise" }, ". For every service we offer in your community, visit our ", { href: "/spring-valley-plumbing-services/", text: "Spring Valley plumbing services" }, " page. For Las Vegas sewer line services, visit our ", { href: "/las-vegas/sewer-line-services/", text: "Las Vegas sewer line services page" }, "."];
 
 // Section 9: FAQs. Single source for the visible accordion and the FAQPage schema.
 const FAQS: FaqItem[] = [
