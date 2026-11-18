@@ -997,3 +997,94 @@ FLAG: VERIFY items: not added to existing content (out of scope for this build)
 - **Two earlier flags are now resolved.** The "18 new customer-facing alt strings, none owner-approved" flag raised in the Zero Placeholder Cards entry, and the follow-up item repeating it in the alt text entry, are both settled. Those 18 strings were themselves rewritten during the alt text pass, so what is approved is the text now in the tree.
 - **Scope of the approval as recorded here: all 173 card image alt strings**, every one of which was authored or rewritten during that pass. Approval was given on the pass as a whole rather than string by string.
 - **Still open, and not covered by this approval:** the `HeroSection` dead `alt` prop decision and its 38 discarded strings, and the CIPP card and photo mismatch on `sewer-line-services`. Both are listed in the entry above. Neither is a copy question.
+
+---
+
+## 2026-10-07 to 2026-10-09 - Pages Built Since the Last Entry
+
+- **The route count went from 115 to 136.** `docs/seo/route-manifest.json` listed 115 routes at the parent of `ea1dded` and lists 136 now. Twenty-one page files were added in this period: 18 service-location pages on 2026-10-07, the privacy policy and terms pages on 2026-10-09, and `/sitemap/` on 2026-10-13 (see the next entry).
+- **18 service-location pages built on 2026-10-07, in four commits.** `ea1dded` added sewer line services for Summerlin, Spring Valley, Enterprise and Paradise. `ec7ace3` added Summerlin water pipe, gas line, toilet, faucet and sink, and garbage disposal. `762e971` added Henderson water pipe, toilet, faucet and sink, garbage disposal, and backflow prevention. `4972312` added Paradise gas line and backflow, Las Vegas water pipe, and North Las Vegas garbage disposal.
+- **City hub and cluster links were repointed to the new pages in four follow-up commits:** `110a861` (sewer line services), `16d6444` (Summerlin), `baabb7d` (Henderson), `eb6f44e` (Paradise, Las Vegas and North Las Vegas).
+- **The toilet pages in this batch are the Henderson and Summerlin ones.** The core toilet page and the other city toilet pages were added before this period (core page `7cca40b`, 2026-06-01).
+- **Privacy policy and terms pages built (`41ac980`, 2026-10-09).** Routes `/privacy-policy/` and `/terms-and-conditions/`, a legal footer nav, and a consent line on the quote form. This resolves the 2026-07-25 launch blocker that `/privacy-policy/` was linked from both forms but had no route. The build report is `docs/site-os/reports/privacy-terms-report.md`.
+- **Commits:** `ea1dded`, `110a861`, `ec7ace3`, `16d6444`, `762e971`, `baabb7d`, `4972312`, `eb6f44e`, `41ac980`.
+
+---
+
+## 2026-10-09 to 2026-10-13 - Launch Hardening: Forms, Share Image, Sitemap, Metadata Lengths, Licence Wording, Trust Items
+
+- **Lead forms wired through a Cloudflare Pages Function with Turnstile (`c7d04f7`, 2026-10-13).** Local dev helper `scripts/lead-dev.mjs`; environment scaffolding in `1099918`. Reports: `docs/site-os/reports/crm-form-wiring-report.md` and `docs/site-os/reports/env-scaffolding-report.md`. This supersedes the 2026-07-25 launch blocker about empty form webhooks.
+- **Social share image and Twitter card metadata added sitewide (`2d0ba11`, 142 files).** The image is produced by `scripts/generate-social-share-image.mjs`.
+- **Sitemap rebuilt from the route manifest (`9e32b1d`).** `lastmod` comes from git, a postbuild check (`scripts/check-sitemap-sync.mjs`) fails the build if the sitemap and built pages disagree, and `/api/` is blocked in `public/robots.txt`. `a3c323c` omits `lastmod` when git history is shallow.
+- **HTML sitemap built at `/sitemap/` with a footer link (`06e6cd5`).** Page data lives in `lib/sitemap-page-data.ts`.
+- **Titles and meta descriptions shortened to search-result lengths (`4b454e2`, 2026-10-12, 132 files).** The manifest was regenerated in `89bd5a4`. The plan, report and approved CSV are in `348a338`.
+- **C-1 classification wording removed from page copy and schema (`920600e`, 96 files).** Follow-ups: manifest regenerated (`f97812f`), report added (`37550bb`), business context record updated (`8807417`).
+- **Hero trust items added to North Las Vegas service pages.** `9d3e4f3` (sewer line services), `e7e1fa0` (five North Las Vegas service pages) and `ce98985` (rating item on garbage disposal). The audit is in `5995454`. Stale TrustStrip references were removed from docs in `d6f97ad` and `c2f3857`.
+- **Gas-leak copy and homepage hours schema fixed.** `a41cbca` added 911 to the gas-leak call instructions and corrected the Southwest Gas number (21 files). `588257e` removed homepage hours schema that was not shown in visible text. The report is `docs/site-os/reports/launch-blockers-gas-copy-and-hours-schema.md` (`8569e5a`).
+- **Image and asset work, 2026-10-09:** `7282b30` (image audit fixes, public asset cleanup, 165 files), `d0fb4af`, `96ec068`, `9610d02`, `949fb8d`, `e20ce2a`.
+- **Commits:** `c7d04f7`, `1099918`, `2d0ba11`, `9e32b1d`, `a3c323c`, `06e6cd5`, `4b454e2`, `89bd5a4`, `348a338`, `920600e`, `f97812f`, `37550bb`, `8807417`, `9d3e4f3`, `e7e1fa0`, `ce98985`, `5995454`, `d6f97ad`, `c2f3857`, `a41cbca`, `588257e`, `8569e5a`, `7282b30`, `d0fb4af`, `96ec068`, `9610d02`, `949fb8d`, `e20ce2a`.
+
+---
+
+## 2026-10-28 to 2026-11-01 - Hosting, og:url, 301 Redirects, Owner-Confirmed Business Facts
+
+- **Pages.dev hosts are served with a noindex header (`d5b647f`, `public/_headers`).** The noindex and pages.dev audit reports were tracked in `7808917`.
+- **og:url, og:site_name and og:type added to 12 service pages (`3cbe495`).**
+- **301 redirects for old URLs added in `public/_redirects` (`08bd0b9`).** The file holds 82 rules. Each states 301 explicitly, and both the slash and no-slash form of each old URL are listed. The file header records the source as the AI Crawl Control 404 export of 2026-10-28.
+- **Office hours and 24/7 emergency service are now labelled separately (`d8ac33f`, 2026-11-01).** Adds `lib/emergency-hours.ts` (`EMERGENCY_HOURS_AVAILABLE`) and records the 1983 founding year.
+- **Fifteen city page titles made unique, and the verified AggregateRating confirmed in place (`0e40dda`).** `6d546ee` removed the nested provider aggregateRating and emits the rating as numbers (82 files).
+- **Owner-confirmed business facts recorded in docs (`d71908b`, `bb79340`).** `docs/site-os/client-context/red-carpet-plumbing-project-context.md` and `docs/seo/business-context.md` record, as owner-confirmed on 2026-11-01: licence number, 1983 founding year, 24/7 emergency service, office hours, and a Google rating of 4.8 from 81 reviews.
+- **Effect on earlier open items.** The 2026-07-25 "VERIFY items carried forward" (rating and review count, 24/7 availability, over 40 years, licence number) are now owner-confirmed. The review count is 81, not the 76 in that entry.
+- **Commits:** `d5b647f`, `7808917`, `3cbe495`, `08bd0b9`, `d8ac33f`, `0e40dda`, `6d546ee`, `d71908b`, `bb79340`.
+
+---
+
+## 2026-11-18 - Internal Linking Series, Including the North Las Vegas Emergency Update
+
+- **North Las Vegas emergency plumbing page updated (`29cc1bb`).** Copy, FAQs and internal links on `/north-las-vegas/emergency-plumbing/` (one file, 154 insertions and 43 deletions).
+- **Internal linking audit (`585e825`).** `docs/site-os/reports/internal-linking-audit-report.md` lists 93 opportunities, IL-001 to IL-093.
+- **Batch 1 (`4fa3349`): 123 `href` additions to `SERVICE_AREA_LINKS` on 14 core service pages.** Report: `internal-linking-batch-1-service-area-links-report.md`.
+- **Batch 2 (`4be2470`): 5 FAQ answers gained a `link` field via `FaqItem.link`.** The FAQPage answer text is byte-identical before and after and equals the visible answer.
+- **Batch 3 (`ba87b8a`): 21 hub and cross-city sentences on Las Vegas and North Las Vegas service pages** (11 hub, 10 cross-city, 17 pages). **Batch 4 (`952427b`): 8 sentences** (3 hub, 5 cross-city, 8 pages) on Henderson, Green Valley, Spring Valley and Summerlin service pages. Together 29 sentences.
+- **Batch 5 (`876e410`): 1 FAQ link on `/sewer-line-services/`.** "Sewer camera inspection" now links to `/video-camera-plumbing-inspections/`.
+- **Rules the series followed.** Every link target exists in the route manifest (Batch 1: 34 unique targets, 34 pass, none is `/thank-you/`). The manifest holds no internal link to `/thank-you/`. FAQ links do not change FAQPage schema text.
+- **Two risks recorded in the reports.** The sub-service cards on `/sewer-line-services/` render through `ServiceCard` with `built={false}`: they are plain text with no link, so nothing crawlable points at routes that are not built. Tier 2 neighborhood names appear in body and FAQ copy, but no Tier 2 route exists yet, so those mentions are not linkable.
+- **Commits:** `29cc1bb`, `585e825`, `4fa3349`, `4be2470`, `ba87b8a`, `952427b`, `876e410`.
+
+---
+
+## 2026-11-18 - Attribution Change and History Rewrite
+
+- **Git history was rewritten once to remove AI-tool trailers from commit messages (278 commits at the time) and force-pushed.** Commit hashes changed.
+- **Effect on this log: none of the 41 hashes cited in earlier entries is reachable from `main` any more.** Find those commits by subject line instead.
+- **Commit attribution settings (the project agent settings file).** `799674d` was the first version of the file and turned the default attribution off (279 commits through that point: 278 rewritten plus this one). `c7ad2be` set the custom commit and pull request attribution to Sirius Systems Digital Marketing.
+- **Commits:** `799674d`, `c7ad2be`.
+
+---
+
+## 2026-11-18 - Update Accuracy Audit and Audit Fixes 1, 2 and 4
+
+- **Update Accuracy Audit found no Critical or High issues.** Cited from the audit report (kept local, not committed). Its Medium and Low findings drove the fixes below.
+- **Fix 1 (`b97cfab`): hero quote-form title changed from H3 to H2 on 131 pages.** A new `components/FormHeadingLevelContext.tsx` holds a context and a small `FormHeading` component. `HeroSection` provides the level and `QuoteFormPlaceholder` and `ContactFormPlaceholder` read it, so the 131 page files did not change. A form outside a hero keeps H3. The H2 variant carries Tailwind important utilities because the global `h1, h2` rule would otherwise change its font, weight, line height and letter spacing. Pages with a skipped heading level went from 132 to 1.
+- **Fix 2 (`9bca790`): dead `alt` strings removed from `HeroSection` image props.** `alt` is out of the hero image type and out of 142 hero image objects on 132 pages. Hero images are decorative on purpose: they render `alt=""` inside an `aria-hidden` wrapper. This resolves the 2026-09-03 follow-up about the discarded hero alt strings (counted as 38 then; a scan of every hero block found 142). Rendered DOM, visible text, JSON-LD, headings and img attributes were unchanged on all 139 built pages. The page data sent to the browser no longer carries the removed strings.
+- **Fix 4 (`49b4865`): 24/7 wording in eight emergency FAQ answers and a shorter North Las Vegas title.** Las Vegas, Henderson, Enterprise, Boulder City, Spring Valley, Lake Las Vegas, Green Valley and Aliante now answer "Is there a 24-hour plumber" with the approved 24/7 wording, in the visible FAQ and the FAQPage JSON-LD alike. The question wording is unchanged on purpose because it mirrors search queries. The North Las Vegas emergency title went from 66 to 58 characters and its description from 152 to 149. The project context file records the approved wording.
+- **Validation after each fix:** lint 0 errors, `tsc --noEmit` clean, build 137 pages, 135 sitemap URLs, 2 noindex.
+- **Commits:** `b97cfab`, `9bca790`, `49b4865`.
+
+---
+
+## 2026-11-18 - Docs Sync
+
+- **`docs/site-os/page-inventory.md` replaced.** The old file was dated 2026-05-25 and listed 9 routes. The new one is generated by `scripts/gen-page-inventory.mjs` from the route manifest and the built `out/` folder: 136 routes, 137 built pages, 135 sitemap URLs, 2 noindex pages. It also lists the build-list routes with no page yet.
+- **This log gained the entries above,** and `docs/site-os/changelog/project-changelog.md` now points readers here and to the inventory.
+
+---
+
+## Open Items After This Entry
+
+- **Fix 1b:** `/thank-you/` goes from H1 to H3 on "Plumbing Services", "Service Areas" and "Get In Touch".
+- **Fix 2b:** 31 image paths carry two different card alt strings across pages. These are card alts approved on 2026-09-03, so changing them needs a decision.
+- **Low hygiene items:** `/sitemap/` has no contextual inbound link and lists `/` and `/contact/` twice; 4 public images are unreferenced; about 32 MB of QA screenshots and about 13 MB of `private-assets/` are tracked.
+- **Still open from earlier entries:** the CIPP card and photo mismatch on `/sewer-line-services/`.
+- **Not rechecked from the 2026-07-25 entry:** the H1 break convention, the red homepage emergency band, the removed homepage Leak Detection card, and the hub pill width.
+- **Build-list routes with no page:** listed in `docs/site-os/page-inventory.md` under "Approved in Build List, Not Built".

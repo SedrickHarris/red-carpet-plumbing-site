@@ -1,150 +1,239 @@
 # Red Carpet Plumbing Page Inventory
 
+- **Generated:** 2026-11-18
+- **Sources:** `docs/seo/route-manifest.json` (routes and source files) and `out/` (titles, indexability, sitemap)
+- **Branch head when generated:** `49b4865 fix: answer 24-hour plumber FAQs with 24/7 wording and shorten NLV emergency title`
+- **Regenerate:** run `npm run build`, then `node scripts/gen-page-inventory.mjs`. The file is overwritten; do not hand-edit it.
+
 ## Inventory Summary
 
-| Metric | Value |
+| Type | Routes |
 |---|---|
-| Total created routes | 9 (8 committed + 1 staged/uncommitted) |
-| Total core pages | 2 (Homepage, Contact) |
-| Total hub pages | 2 (Plumbing Services Hub, Service Areas Hub) |
-| Total service pages | 5 (Emergency Plumbing, Drain Cleaning, Water Heater Repair and Installation, Leak Detection and Repair, Slab Leak Detection and Repair) |
-| Total utility / system pages | 1 (root layout only; no custom 404 yet) |
-| Total planned or referenced future pages | 17 service / hub routes + 4 service-location routes documented in source = 21 future routes referenced |
-| Date generated | 2026-05-25 |
-| Current branch | `main` |
-| Current HEAD commit | `f8b669e feat: add leak detection service page` |
-| Working tree | 1 uncommitted new file (`app/slab-leak-detection-repair/page.tsx`); 70 pre-existing untracked `docs/site-os/qa/` artifacts; no other changes |
+| Core pages (`/`, `/about/`, `/contact/`) | 3 |
+| Hub pages (`/plumbing-services/`, `/service-areas/`) | 2 |
+| City hub pages (`/{city}-plumbing-services/`) | 10 |
+| Core service pages (`/{service}/`) | 18 |
+| Service-location pages (`/{city}/{service}/`) | 93 |
+| Aliante area hub (`/north-las-vegas/aliante-area-plumbing/`) | 1 |
+| Aliante area service pages (`/north-las-vegas/aliante-area/{service}/`) | 5 |
+| Legal pages | 2 |
+| Utility pages (`/sitemap/`, `/thank-you/`) | 2 |
+| **Total routes in manifest** | **136** |
 
-## Created Pages
+| Build check | Value |
+|---|---|
+| Manifest routes | 136 (`routeCount` 136) |
+| Total built pages (manifest routes plus the not-found page) | 137 |
+| Sitemap URLs (`out/sitemap.xml`) | 135 |
+| Noindex pages | 2 (`/thank-you/`, `/_not-found/`) |
 
-| Page | Route | File Path | Type | Status | Batch | Commit | Schema | Hero Image | Phone CTA | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Homepage | `/` | `app/page.tsx` | Core | Created | Batch 1 | `75bad19` | Yes (page-specific) | Yes (homepage hero) | Disabled Call Now spans (no phone) | Forward links to service routes not yet built when first shipped; most now live. `metadataBase` in root layout still points to `.pages.dev` |
-| Contact | `/contact/` | `app/contact/page.tsx` | Core | Created | Batch 2 | `43a71d0` | Yes (WebPage + ContactPage / LocalBusiness pattern) | Yes (contact hero) | Disabled Call Now spans (no phone) | Contains TODO-BATCH-NEXT for unbuilt service-card forward links (line 435). Contact form endpoint is a placeholder, no real submit handler. No real address / phone / email yet |
-| Plumbing Services Hub | `/plumbing-services/` | `app/plumbing-services/page.tsx` | Hub | Created | Batch 2 | `41c89f7` | Yes (WebPage + ItemList / CollectionPage pattern) | Yes (hub hero) | Disabled Call Now spans (no phone) | 17 service entries with TODO-BATCH-NEXT markers (lines 117-270). 5 are now live (Emergency, Drain Cleaning, Water Heater, Leak Detection, Slab Leak); 12 remain forward links. Additional TODOs for `/contact/`, `/emergency-plumbing/`, `/commercial-plumbing/`, `/service-areas/` (lines 399, 456, 565, 589, 666) — note that `/contact/`, `/emergency-plumbing/`, and `/service-areas/` are now live; comments are stale |
-| Service Areas Hub | `/service-areas/` | `app/service-areas/page.tsx` | Hub | Created | Batch 2 | `80afc9c` | Yes (WebPage + ItemList / CollectionPage pattern) | Yes (hub hero) | Disabled Call Now spans (no phone) | All service-area child routes (per-city pages) are forward links (line 464). Multiple TODO-BATCH-NEXT for `/contact/`, `/emergency-plumbing/`, and service routes (lines 402, 486, 595, 643, 737) — `/contact/` and `/emergency-plumbing/` are now live; comments are stale |
-| Emergency Plumbing | `/emergency-plumbing/` | `app/emergency-plumbing/page.tsx` | Service | Created | Batch 3, Page 1 | `56d601c` | Yes (WebPage + embedded BreadcrumbList, Service, FAQPage) | Yes (service hero) | Disabled Call Now spans (no phone) | TODO-BATCH-NEXT at line 556 (service route forwards) + 573 (service-location TODO block). Phone number + Service `telephone` schema field both omitted pending client confirmation |
-| Drain Cleaning | `/drain-cleaning/` | `app/drain-cleaning/page.tsx` | Service | Created | Batch 3, Page 2 | `15fb2ca` | Yes (WebPage + embedded BreadcrumbList, Service, FAQPage) | Yes (service hero) | Disabled Call Now spans (no phone) | Forward links to `/sewer-line-services/`, `/video-camera-plumbing-inspections/`, `/leak-detection-repair/` (line 529). `/leak-detection-repair/` now live; comment is partially stale. Service-location TODO block at line 546 |
-| Water Heater Repair and Installation | `/water-heater-repair-installation/` | `app/water-heater-repair-installation/page.tsx` | Service | Created | Batch 3, Page 3 | `41d50f7` | Yes (WebPage + embedded BreadcrumbList, Service, FAQPage) | Yes (service hero, D6 Option 6A: 350×350 hero.webp accepted as-is with TODO for higher-res replacement) | Disabled Call Now spans (no phone) | Forward links to `/leak-detection-repair/`, `/plumbing-fixture-repair-replacement-installation/`, `/water-meter-pressure-regulator-services/` (line 573). `/leak-detection-repair/` now live; comment is partially stale. Service-location TODO block at line 590. Hero image is low-resolution and tagged for asset swap |
-| Leak Detection and Repair | `/leak-detection-repair/` | `app/leak-detection-repair/page.tsx` | Service | Created | Batch 3, Page 4 | `f8b669e` | Yes (WebPage + embedded BreadcrumbList, Service, FAQPage) | Yes (service hero, 1600×1600 healthy) | Disabled Call Now spans (no phone) | Forward link to `/slab-leak-detection-repair/` inline in Process Step 5 (line 561) — now live, comment is stale. Forward links to `/slab-leak-detection-repair/`, `/water-pipe-repair-replacement/`, `/video-camera-plumbing-inspections/` in related services (line 606). Service-location TODO block at line 623 |
-| Slab Leak Detection and Repair | `/slab-leak-detection-repair/` | `app/slab-leak-detection-repair/page.tsx` | Service | Created (uncommitted, untracked) | Batch 3, Page 5 | Needs confirmation (commit pending) | Yes (WebPage + embedded BreadcrumbList, Service, FAQPage) | Yes (D6 Option 6B: card.webp 1184×1184 used as hero background; hero.webp 592×592 not used). TODO to swap in a dedicated higher-resolution slab leak hero asset when available | Disabled Call Now spans (no phone) | Forward links to `/water-pipe-repair-replacement/` (lines 580, 633) and `/repiping/` (lines 588, 634), rendered both inline in Process Step 5 and in Related Services. Service-location TODO block at line 651 listing 4 future routes |
-| Emergency Plumbing in Las Vegas | `/las-vegas/emergency-plumbing/` | `app/las-vegas/emergency-plumbing/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 1 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Yes (reuses `/images/services/emergency-plumbing/hero.webp`) | Active `tel:+17025679172` CTA | Beyond-Elite L5. FLAG/VERIFY comments preserved for rating, 40-year, and 24/7 claims (page uses conservative wording vs. the committed Batch 4 hubs, which assert them). Related-service links point to core routes; `/las-vegas/[service]/` children are TODO-BATCH-5. Meta description is ~200 chars and exceeds the site ≤160 standard (flagged). NOTE: this inventory file is broadly stale (dated 2026-05-25, omits all 11 Batch 4 location hubs) and needs a separate reconciliation pass |
-| Emergency Plumbing in Henderson | `/henderson/emergency-plumbing/` | `app/henderson/emergency-plumbing/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 2 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Yes (reuses `/images/services/emergency-plumbing/hero.webp`) | Active `tel:+17025679172` CTA | Beyond-Elite L5. Henderson-specific (slab leaks lead; Green Valley/caliche context). Live hub links to Green Valley + Lake Las Vegas. FLAG/VERIFY comments preserved for rating, 40-year, 24/7, gas-line scope. Related-service links point to core routes; `/henderson/[service]/` children are TODO-BATCH-5. Meta description ~220 chars, exceeds the site ≤160 standard (flagged) |
-| Emergency Plumbing in North Las Vegas | `/north-las-vegas/emergency-plumbing/` | `app/north-las-vegas/emergency-plumbing/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 3 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Yes (reuses `/images/services/emergency-plumbing/hero.webp`) | Active `tel:+17025679172` CTA | Beyond-Elite L5. NLV-specific (two housing vintages: older galvanized central + Aliante 2000-2008; commercial/industrial corridor). Live link to Aliante area hub. FLAG/VERIFY comments preserved for rating, 40-year, 24/7, gas-line scope. Related-service links point to core routes; `/north-las-vegas/[service]/` children are TODO-BATCH-5. Meta description ~240 chars, exceeds the site ≤160 standard (flagged) |
-| Drain Cleaning in Las Vegas | `/las-vegas/drain-cleaning/` | `app/las-vegas/drain-cleaning/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 4 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Yes (reuses `/images/services/drain-cleaning/hero.webp`) | Active `tel:+17025679172` CTA | Beyond-Elite L5. LV-specific hard-water clog narrative + hydro jetting. Live inline links to core sewer-line-services and video-camera-plumbing-inspections; related link to live /las-vegas/emergency-plumbing/. FLAG/VERIFY comments preserved for rating, 40-year, 24/7, gas-line scope. Other related links point to core routes; `/las-vegas/[service]/` children are TODO-BATCH-5. Meta description ~270 chars, exceeds the site ≤160 standard (flagged) |
-| Drain Cleaning in Henderson | `/henderson/drain-cleaning/` | `app/henderson/drain-cleaning/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 5 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Yes (reuses `/images/services/drain-cleaning/hero.webp`) | Active `tel:+17025679172` CTA | Beyond-Elite L5. Henderson-specific two-phase Green Valley narrative (original copper/polybutylene vs. Green Valley Ranch); hydro-jetting pipe-condition caveat. Live links to Green Valley + Lake Las Vegas hubs, /henderson/emergency-plumbing/, core sewer-line + video-camera. FLAG/VERIFY comments preserved. Other related links point to core routes; `/henderson/[service]/` children are TODO-BATCH-5. Meta description ~230 chars, exceeds the site ≤160 standard (flagged) |
-| Drain Cleaning in North Las Vegas | `/north-las-vegas/drain-cleaning/` | `app/north-las-vegas/drain-cleaning/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 6 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Yes (reuses `/images/services/drain-cleaning/hero.webp`) | Active `tel:+17025679172` CTA | Beyond-Elite L5. NLV-specific three-angle anchor: galvanized corrosion in older central NLV + Aliante copper first-service-cycle + commercial/industrial floor drains (Craig Road/Cheyenne/Losee). Live links to /north-las-vegas/emergency-plumbing/, Aliante hub, core sewer-line + video-camera. FLAG/VERIFY comments preserved. Other related links point to core routes; `/north-las-vegas/[service]/` children are TODO-BATCH-5. Meta description ~240 chars, exceeds the site ≤160 standard (flagged) |
-| Water Heater Repair and Installation in Las Vegas | `/las-vegas/water-heater-repair-installation/` | `app/las-vegas/water-heater-repair-installation/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 7 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Uses `card.webp` as hero (hero.webp is the low-res 350x350 Batch 3 asset; TODO higher-res hero) | Active `tel:+17025679172` CTA | Beyond-Elite L5. Four LV anchors: hard water 17-24 gpg, anode rod depletion, closed-loop/thermal expansion tank, Clark County seismic bracing. Visible signs-need-service list. Live related links to /las-vegas/emergency-plumbing/ + /las-vegas/drain-cleaning/; inline /repiping/ link in aging-units cause. FLAG/VERIFY preserved. Other related links point to core routes; `/las-vegas/[service]/` children are TODO-BATCH-5. Meta description ~270 chars, exceeds the site ≤160 standard (flagged) |
-| Water Heater Repair and Installation in Henderson | `/henderson/water-heater-repair-installation/` | `app/henderson/water-heater-repair-installation/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 8 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Uses `card.webp` as hero (hero.webp low-res; TODO higher-res) | Active `tel:+17025679172` CTA | Beyond-Elite L5. Henderson two-phase Green Valley WH aging (original 1980s-90s + Green Valley Ranch second cycle) + Clark County seismic bracing + thermal expansion tank + anode rod. Visible signs list. Live links to /henderson/emergency-plumbing/, /henderson/drain-cleaning/, Green Valley + Lake Las Vegas hubs. FLAG/VERIFY preserved. Other related links point to core routes; `/henderson/[service]/` children are TODO-BATCH-5. Meta description ~250 chars, exceeds the site ≤160 standard (flagged) |
-| Water Heater Repair and Installation in North Las Vegas | `/north-las-vegas/water-heater-repair-installation/` | `app/north-las-vegas/water-heater-repair-installation/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 9 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Uses `card.webp` as hero (hero.webp low-res; TODO higher-res) | Active `tel:+17025679172` CTA | Beyond-Elite L5. NLV three-segment WH anchor: Aliante 2000-2008 first replacement cycle + older central galvanized supply impact + commercial/industrial high-capacity (Craig Road/Cheyenne/Losee). Clark County seismic bracing + thermal expansion tank + anode rod. Visible signs list. FLAG/VERIFY preserved incl. commercial WH scope. Live links to /north-las-vegas/emergency-plumbing/, /north-las-vegas/drain-cleaning/, Aliante hub. Other related links point to core routes; `/north-las-vegas/[service]/` children are TODO-BATCH-5. Meta description ~280 chars, exceeds the site ≤160 standard (flagged) |
-| Leak Detection and Repair in Las Vegas | `/las-vegas/leak-detection-repair/` | `app/las-vegas/leak-detection-repair/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 10 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Yes (reuses `/images/services/leak-detection-repair/hero.webp`) | Active `tel:+17025679172` CTA | Beyond-Elite L5. Four LV leak-cause anchors (hard water 17-24 gpg, caliche/clay soil, aging pre-2000 plumbing, desert tree roots). Visible warning-signs list; meter-check FAQ (Q2). Non-invasive language in hero/mid-CTA/final CTA. Live inline links to core slab-leak-detection-repair + video-camera; related links to live /las-vegas/ emergency/drain/water-heater. FLAG/VERIFY preserved (gas-line, commercial). TODO-BATCH-5: cross-link /las-vegas/slab-leak-detection-repair/ when built. Meta description ~280 chars, exceeds the site ≤160 standard (flagged) |
-| Leak Detection and Repair in Henderson | `/henderson/leak-detection-repair/` | `app/henderson/leak-detection-repair/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 11 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Yes (reuses `/images/services/leak-detection-repair/hero.webp`) | Active `tel:+17025679172` CTA | Beyond-Elite L5. Four Henderson leak-cause anchors (Green Valley copper 30-40yr + polybutylene, hard water 17-24 gpg, caliche soil, closed-loop pressure). Visible warning-signs list; meter-check FAQ. Non-invasive language. Live GV/LLV hub links + core slab + core leak; related links to live Henderson emergency/drain/WH. **Brief deviations:** schema uses site-wide shape not brief's publisher/LocalBusiness/Q491269/single-block (Q491269 omitted vs site-wide Q491204); HowTo added; core /leak-detection-repair/ NOT edited (no Henderson inbound link / TODO clear) per brief file scope; shows rating/40yr/24-7 trust items (FLAG) vs conservative siblings. Meta description ~285 chars, exceeds ≤160 (flagged) |
-| Leak Detection and Repair in North Las Vegas | `/north-las-vegas/leak-detection-repair/` | `app/north-las-vegas/leak-detection-repair/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 12 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Yes (reuses `/images/services/leak-detection-repair/hero.webp`) | Active `tel:+17025679172` CTA | Beyond-Elite L5. NLV dual-vintage leak-cause anchors (galvanized steel in older central NLV 40-60yr + Aliante 2000-2008 copper first service cycle + hard water 17-24 gpg + caliche/closed-loop). Visible warning-signs list; meter-check FAQ (Q2), galvanized FAQ (Q3), Aliante FAQ (Q4). Non-invasive language. Live Aliante hub link + core slab + core leak; related links to live NLV emergency/drain/WH. **Brief deviations:** schema uses site-wide shape per standing guardrail (Plumber provider, areaServed City + State, no sameAs Q494541; HowTo added); core /leak-detection-repair/ NOT edited (no NLV inbound link / TODO clear) per brief file scope; shows rating/40yr/24-7 trust items (FLAG) vs conservative Pages 1-10, consistent with Page 11. Meta description ~290 chars, exceeds ≤160 (flagged) |
-| Slab Leak Detection and Repair in Las Vegas | `/las-vegas/slab-leak-detection-repair/` | `app/las-vegas/slab-leak-detection-repair/page.tsx` | Service-Location | Created (uncommitted, untracked) | Batch 5, Page 13 | Pending (Prompt 07 QA gate) | Yes (WebPage + BreadcrumbList + Service + HowTo + FAQPage) | Uses `card.webp` as hero (hero.webp low-res 18KB; TODO higher-res) | Active `tel:+17025679172` CTA | Beyond-Elite L5. Four LV slab-cause anchors (hard water 280 ppm copper corrosion, caliche/clay soil, aging copper/polybutylene pre-2000, closed-loop pressure). New Repair Options section (spot repair / pipe rerouting / epoxy lining, definition-first H3s). Slab-specific warning-signs list; 6 FAQs incl. reroute-vs-spot (Q5) + duration (Q6). Neighborhood grid (Desert Inn/West Sahara, Desert Shores, Sunrise Manor, Whitney, Winchester, SW LV). Live links: core slab + LV leak (S3), water-pipe-repair-replacement (spot card), repiping (reroute card; **TODO-BATCH-5** fallback to core `/repiping/` until `/las-vegas/repiping/` P15), LV emergency (mid CTA), LV plumbing services + Henderson slab (S8; **TODO-BATCH-5** fallback to core `/slab-leak-detection-repair/` until P14), LV water-heater + LV drain (related). Schema uses site-wide pattern per standing guardrail (Plumber provider, City + State, no sameAs; separate BreadcrumbList block, not brief's WebPage-nested variant). Shows rating/40yr/24-7 trust items (FLAG) consistent with P11-P12. Meta description ~300 chars, exceeds ≤160 (flagged) |
+## All Routes
 
-### Utility / System Pages
+Titles are read from the built HTML, so title length reflects what search engines receive. Rows are in route order.
 
-| Page | File Path | Notes |
-|---|---|---|
-| Root layout | `app/layout.tsx` | Global metadata, font setup, applies to all routes. `metadataBase` still points to `https://red-carpet-plumbing-site.pages.dev` — needs swap to `https://redcarpetplumbing.com` before launch |
-| `_not-found` | (Next.js auto-generated) | No custom `app/not-found.tsx` yet. Next.js renders the default 404 page. Custom 404 may be worth adding before launch |
-| Favicon / app icons | `app/favicon.ico` + `app/icon-*.png` | Already shipped (commit `337aa6a`) |
-
-## Planned or Referenced Future Pages
-
-### Service Pages (referenced via TODO-BATCH-NEXT in source)
-
-| Planned Page | Route | Source | Status | Notes |
+| Route | Type | Source file | Indexable | Title length |
 |---|---|---|---|---|
-| Sewer Line Services | `/sewer-line-services/` | `app/plumbing-services/page.tsx:162`, `app/drain-cleaning/page.tsx:529` | Planned | Referenced as forward link from Drain Cleaning related-services |
-| Repiping | `/repiping/` | `app/plumbing-services/page.tsx:171`, `app/slab-leak-detection-repair/page.tsx:588, 634` | Planned | Referenced inline in Slab Leak Process Step 5 and Related Services |
-| Water Pipe Repair and Replacement | `/water-pipe-repair-replacement/` | `app/plumbing-services/page.tsx:180`, `app/leak-detection-repair/page.tsx:606`, `app/slab-leak-detection-repair/page.tsx:580, 633` | Planned | Referenced inline in Slab Leak Process Step 5 and as forward link in Related Services on Leak Detection and Slab Leak pages |
-| Gas Line Plumbing | `/gas-line-plumbing/` | `app/plumbing-services/page.tsx:189` | Planned | Referenced from Plumbing Services Hub |
-| Commercial Plumbing | `/commercial-plumbing/` | `app/plumbing-services/page.tsx:198, 565` | Planned | Referenced from Plumbing Services Hub |
-| Toilet Repair and Installation | `/toilet-repair-installation/` | `app/plumbing-services/page.tsx:207` | Planned | Referenced from Plumbing Services Hub |
-| Faucet and Sink Repair and Installation | `/faucet-sink-repair-installation/` | `app/plumbing-services/page.tsx:216` | Planned | Referenced from Plumbing Services Hub |
-| Garbage Disposal Repair and Installation | `/garbage-disposal-repair-installation/` | `app/plumbing-services/page.tsx:225` | Planned | Referenced from Plumbing Services Hub |
-| Backflow Prevention | `/backflow-prevention/` | `app/plumbing-services/page.tsx:234` | Planned | Referenced from Plumbing Services Hub |
-| Video Camera Plumbing Inspections | `/video-camera-plumbing-inspections/` | `app/plumbing-services/page.tsx:243`, `app/drain-cleaning/page.tsx:529`, `app/leak-detection-repair/page.tsx:606` | Planned | Referenced from Plumbing Services Hub and as forward link from Drain Cleaning + Leak Detection |
-| Plumbing Fixture Repair, Replacement, Installation | `/plumbing-fixture-repair-replacement-installation/` | `app/plumbing-services/page.tsx:252`, `app/water-heater-repair-installation/page.tsx:573` | Planned | Referenced from Plumbing Services Hub and as forward link from Water Heater |
-| Trenchless Piping | `/trenchless-piping/` | `app/plumbing-services/page.tsx:261` | Planned | Referenced from Plumbing Services Hub |
-| Water Meter and Pressure Regulator Services | `/water-meter-pressure-regulator-services/` | `app/plumbing-services/page.tsx:270`, `app/water-heater-repair-installation/page.tsx:573` | Planned | Referenced from Plumbing Services Hub and as forward link from Water Heater |
+| `/` | Core | `app/page.tsx` | yes | 55 |
+| `/about/` | Core | `app/about/page.tsx` | yes | 54 |
+| `/backflow-prevention/` | Core service | `app/backflow-prevention/page.tsx` | yes | 45 |
+| `/boulder-city-plumbing-services/` | City hub | `app/boulder-city-plumbing-services/page.tsx` | yes | 59 |
+| `/boulder-city/drain-cleaning/` | Service-location | `app/boulder-city/drain-cleaning/page.tsx` | yes | 56 |
+| `/boulder-city/emergency-plumbing/` | Service-location | `app/boulder-city/emergency-plumbing/page.tsx` | yes | 60 |
+| `/boulder-city/leak-detection-repair/` | Service-location | `app/boulder-city/leak-detection-repair/page.tsx` | yes | 45 |
+| `/boulder-city/water-heater-repair-installation/` | Service-location | `app/boulder-city/water-heater-repair-installation/page.tsx` | yes | 56 |
+| `/commercial-plumbing/` | Core service | `app/commercial-plumbing/page.tsx` | yes | 58 |
+| `/contact/` | Core | `app/contact/page.tsx` | yes | 49 |
+| `/drain-cleaning/` | Core service | `app/drain-cleaning/page.tsx` | yes | 53 |
+| `/emergency-plumbing/` | Core service | `app/emergency-plumbing/page.tsx` | yes | 56 |
+| `/enterprise-plumbing-services/` | City hub | `app/enterprise-plumbing-services/page.tsx` | yes | 57 |
+| `/enterprise/commercial-plumbing/` | Service-location | `app/enterprise/commercial-plumbing/page.tsx` | yes | 59 |
+| `/enterprise/drain-cleaning/` | Service-location | `app/enterprise/drain-cleaning/page.tsx` | yes | 54 |
+| `/enterprise/emergency-plumbing/` | Service-location | `app/enterprise/emergency-plumbing/page.tsx` | yes | 58 |
+| `/enterprise/leak-detection-repair/` | Service-location | `app/enterprise/leak-detection-repair/page.tsx` | yes | 43 |
+| `/enterprise/repiping/` | Service-location | `app/enterprise/repiping/page.tsx` | yes | 57 |
+| `/enterprise/sewer-line-services/` | Service-location | `app/enterprise/sewer-line-services/page.tsx` | yes | 59 |
+| `/enterprise/slab-leak-detection-repair/` | Service-location | `app/enterprise/slab-leak-detection-repair/page.tsx` | yes | 48 |
+| `/enterprise/water-heater-repair-installation/` | Service-location | `app/enterprise/water-heater-repair-installation/page.tsx` | yes | 54 |
+| `/faucet-sink-repair-installation/` | Core service | `app/faucet-sink-repair-installation/page.tsx` | yes | 56 |
+| `/garbage-disposal-repair-installation/` | Core service | `app/garbage-disposal-repair-installation/page.tsx` | yes | 57 |
+| `/gas-line-plumbing/` | Core service | `app/gas-line-plumbing/page.tsx` | yes | 56 |
+| `/green-valley-plumbing-services/` | City hub | `app/green-valley-plumbing-services/page.tsx` | yes | 59 |
+| `/green-valley/drain-cleaning/` | Service-location | `app/green-valley/drain-cleaning/page.tsx` | yes | 56 |
+| `/green-valley/emergency-plumbing/` | Service-location | `app/green-valley/emergency-plumbing/page.tsx` | yes | 60 |
+| `/green-valley/faucet-sink-repair-installation/` | Service-location | `app/green-valley/faucet-sink-repair-installation/page.tsx` | yes | 59 |
+| `/green-valley/leak-detection-repair/` | Service-location | `app/green-valley/leak-detection-repair/page.tsx` | yes | 45 |
+| `/green-valley/repiping/` | Service-location | `app/green-valley/repiping/page.tsx` | yes | 59 |
+| `/green-valley/slab-leak-detection-repair/` | Service-location | `app/green-valley/slab-leak-detection-repair/page.tsx` | yes | 50 |
+| `/green-valley/toilet-repair-installation/` | Service-location | `app/green-valley/toilet-repair-installation/page.tsx` | yes | 50 |
+| `/green-valley/water-heater-repair-installation/` | Service-location | `app/green-valley/water-heater-repair-installation/page.tsx` | yes | 56 |
+| `/henderson-plumbing-services/` | City hub | `app/henderson-plumbing-services/page.tsx` | yes | 56 |
+| `/henderson/backflow-prevention/` | Service-location | `app/henderson/backflow-prevention/page.tsx` | yes | 45 |
+| `/henderson/commercial-plumbing/` | Service-location | `app/henderson/commercial-plumbing/page.tsx` | yes | 58 |
+| `/henderson/drain-cleaning/` | Service-location | `app/henderson/drain-cleaning/page.tsx` | yes | 53 |
+| `/henderson/emergency-plumbing/` | Service-location | `app/henderson/emergency-plumbing/page.tsx` | yes | 57 |
+| `/henderson/faucet-sink-repair-installation/` | Service-location | `app/henderson/faucet-sink-repair-installation/page.tsx` | yes | 56 |
+| `/henderson/garbage-disposal-repair-installation/` | Service-location | `app/henderson/garbage-disposal-repair-installation/page.tsx` | yes | 57 |
+| `/henderson/gas-line-plumbing/` | Service-location | `app/henderson/gas-line-plumbing/page.tsx` | yes | 56 |
+| `/henderson/leak-detection-repair/` | Service-location | `app/henderson/leak-detection-repair/page.tsx` | yes | 42 |
+| `/henderson/repiping/` | Service-location | `app/henderson/repiping/page.tsx` | yes | 56 |
+| `/henderson/sewer-line-services/` | Service-location | `app/henderson/sewer-line-services/page.tsx` | yes | 58 |
+| `/henderson/slab-leak-detection-repair/` | Service-location | `app/henderson/slab-leak-detection-repair/page.tsx` | yes | 47 |
+| `/henderson/toilet-repair-installation/` | Service-location | `app/henderson/toilet-repair-installation/page.tsx` | yes | 47 |
+| `/henderson/water-heater-repair-installation/` | Service-location | `app/henderson/water-heater-repair-installation/page.tsx` | yes | 53 |
+| `/henderson/water-pipe-repair-replacement/` | Service-location | `app/henderson/water-pipe-repair-replacement/page.tsx` | yes | 50 |
+| `/lake-las-vegas-plumbing-services/` | City hub | `app/lake-las-vegas-plumbing-services/page.tsx` | yes | 39 |
+| `/lake-las-vegas/drain-cleaning/` | Service-location | `app/lake-las-vegas/drain-cleaning/page.tsx` | yes | 58 |
+| `/lake-las-vegas/emergency-plumbing/` | Service-location | `app/lake-las-vegas/emergency-plumbing/page.tsx` | yes | 40 |
+| `/lake-las-vegas/leak-detection-repair/` | Service-location | `app/lake-las-vegas/leak-detection-repair/page.tsx` | yes | 47 |
+| `/lake-las-vegas/slab-leak-detection-repair/` | Service-location | `app/lake-las-vegas/slab-leak-detection-repair/page.tsx` | yes | 52 |
+| `/lake-las-vegas/water-heater-repair-installation/` | Service-location | `app/lake-las-vegas/water-heater-repair-installation/page.tsx` | yes | 58 |
+| `/las-vegas-plumbing-services/` | City hub | `app/las-vegas-plumbing-services/page.tsx` | yes | 49 |
+| `/las-vegas/backflow-prevention/` | Service-location | `app/las-vegas/backflow-prevention/page.tsx` | yes | 60 |
+| `/las-vegas/commercial-plumbing/` | Service-location | `app/las-vegas/commercial-plumbing/page.tsx` | yes | 51 |
+| `/las-vegas/drain-cleaning/` | Service-location | `app/las-vegas/drain-cleaning/page.tsx` | yes | 46 |
+| `/las-vegas/emergency-plumbing/` | Service-location | `app/las-vegas/emergency-plumbing/page.tsx` | yes | 57 |
+| `/las-vegas/faucet-sink-repair-installation/` | Service-location | `app/las-vegas/faucet-sink-repair-installation/page.tsx` | yes | 49 |
+| `/las-vegas/garbage-disposal-repair-installation/` | Service-location | `app/las-vegas/garbage-disposal-repair-installation/page.tsx` | yes | 50 |
+| `/las-vegas/gas-line-plumbing/` | Service-location | `app/las-vegas/gas-line-plumbing/page.tsx` | yes | 49 |
+| `/las-vegas/leak-detection-repair/` | Service-location | `app/las-vegas/leak-detection-repair/page.tsx` | yes | 57 |
+| `/las-vegas/repiping/` | Service-location | `app/las-vegas/repiping/page.tsx` | yes | 49 |
+| `/las-vegas/sewer-line-services/` | Service-location | `app/las-vegas/sewer-line-services/page.tsx` | yes | 51 |
+| `/las-vegas/slab-leak-detection-repair/` | Service-location | `app/las-vegas/slab-leak-detection-repair/page.tsx` | yes | 40 |
+| `/las-vegas/toilet-repair-installation/` | Service-location | `app/las-vegas/toilet-repair-installation/page.tsx` | yes | 40 |
+| `/las-vegas/video-camera-plumbing-inspections/` | Service-location | `app/las-vegas/video-camera-plumbing-inspections/page.tsx` | yes | 43 |
+| `/las-vegas/water-heater-repair-installation/` | Service-location | `app/las-vegas/water-heater-repair-installation/page.tsx` | yes | 46 |
+| `/las-vegas/water-pipe-repair-replacement/` | Service-location | `app/las-vegas/water-pipe-repair-replacement/page.tsx` | yes | 43 |
+| `/leak-detection-repair/` | Core service | `app/leak-detection-repair/page.tsx` | yes | 42 |
+| `/north-las-vegas-plumbing-services/` | City hub | `app/north-las-vegas-plumbing-services/page.tsx` | yes | 40 |
+| `/north-las-vegas/aliante-area-plumbing/` | Aliante hub | `app/north-las-vegas/aliante-area-plumbing/page.tsx` | yes | 45 |
+| `/north-las-vegas/aliante-area/drain-cleaning/` | Aliante service | `app/north-las-vegas/aliante-area/drain-cleaning/page.tsx` | yes | 42 |
+| `/north-las-vegas/aliante-area/emergency-plumbing/` | Aliante service | `app/north-las-vegas/aliante-area/emergency-plumbing/page.tsx` | yes | 46 |
+| `/north-las-vegas/aliante-area/leak-detection-repair/` | Aliante service | `app/north-las-vegas/aliante-area/leak-detection-repair/page.tsx` | yes | 53 |
+| `/north-las-vegas/aliante-area/slab-leak-detection-repair/` | Aliante service | `app/north-las-vegas/aliante-area/slab-leak-detection-repair/page.tsx` | yes | 58 |
+| `/north-las-vegas/aliante-area/water-heater-repair-installation/` | Aliante service | `app/north-las-vegas/aliante-area/water-heater-repair-installation/page.tsx` | yes | 51 |
+| `/north-las-vegas/commercial-plumbing/` | Service-location | `app/north-las-vegas/commercial-plumbing/page.tsx` | yes | 42 |
+| `/north-las-vegas/drain-cleaning/` | Service-location | `app/north-las-vegas/drain-cleaning/page.tsx` | yes | 59 |
+| `/north-las-vegas/emergency-plumbing/` | Service-location | `app/north-las-vegas/emergency-plumbing/page.tsx` | yes | 58 |
+| `/north-las-vegas/garbage-disposal-repair-installation/` | Service-location | `app/north-las-vegas/garbage-disposal-repair-installation/page.tsx` | yes | 59 |
+| `/north-las-vegas/leak-detection-repair/` | Service-location | `app/north-las-vegas/leak-detection-repair/page.tsx` | yes | 48 |
+| `/north-las-vegas/repiping/` | Service-location | `app/north-las-vegas/repiping/page.tsx` | yes | 40 |
+| `/north-las-vegas/sewer-line-services/` | Service-location | `app/north-las-vegas/sewer-line-services/page.tsx` | yes | 42 |
+| `/north-las-vegas/slab-leak-detection-repair/` | Service-location | `app/north-las-vegas/slab-leak-detection-repair/page.tsx` | yes | 53 |
+| `/north-las-vegas/toilet-repair-installation/` | Service-location | `app/north-las-vegas/toilet-repair-installation/page.tsx` | yes | 53 |
+| `/north-las-vegas/water-heater-repair-installation/` | Service-location | `app/north-las-vegas/water-heater-repair-installation/page.tsx` | yes | 59 |
+| `/north-las-vegas/water-pipe-repair-replacement/` | Service-location | `app/north-las-vegas/water-pipe-repair-replacement/page.tsx` | yes | 56 |
+| `/paradise-plumbing-services/` | City hub | `app/paradise-plumbing-services/page.tsx` | yes | 55 |
+| `/paradise/backflow-prevention/` | Service-location | `app/paradise/backflow-prevention/page.tsx` | yes | 44 |
+| `/paradise/commercial-plumbing/` | Service-location | `app/paradise/commercial-plumbing/page.tsx` | yes | 57 |
+| `/paradise/drain-cleaning/` | Service-location | `app/paradise/drain-cleaning/page.tsx` | yes | 52 |
+| `/paradise/emergency-plumbing/` | Service-location | `app/paradise/emergency-plumbing/page.tsx` | yes | 55 |
+| `/paradise/gas-line-plumbing/` | Service-location | `app/paradise/gas-line-plumbing/page.tsx` | yes | 55 |
+| `/paradise/leak-detection-repair/` | Service-location | `app/paradise/leak-detection-repair/page.tsx` | yes | 41 |
+| `/paradise/sewer-line-services/` | Service-location | `app/paradise/sewer-line-services/page.tsx` | yes | 57 |
+| `/paradise/water-heater-repair-installation/` | Service-location | `app/paradise/water-heater-repair-installation/page.tsx` | yes | 52 |
+| `/plumbing-fixture-repair-replacement-installation/` | Core service | `app/plumbing-fixture-repair-replacement-installation/page.tsx` | yes | 57 |
+| `/plumbing-services/` | Hub | `app/plumbing-services/page.tsx` | yes | 56 |
+| `/privacy-policy/` | Legal | `app/privacy-policy/page.tsx` | yes | 36 |
+| `/repiping/` | Core service | `app/repiping/page.tsx` | yes | 56 |
+| `/service-areas/` | Hub | `app/service-areas/page.tsx` | yes | 42 |
+| `/sewer-line-services/` | Core service | `app/sewer-line-services/page.tsx` | yes | 58 |
+| `/sitemap/` | Utility | `app/sitemap/page.tsx` | yes | 29 |
+| `/slab-leak-detection-repair/` | Core service | `app/slab-leak-detection-repair/page.tsx` | yes | 47 |
+| `/spring-valley-plumbing-services/` | City hub | `app/spring-valley-plumbing-services/page.tsx` | yes | 60 |
+| `/spring-valley/commercial-plumbing/` | Service-location | `app/spring-valley/commercial-plumbing/page.tsx` | yes | 40 |
+| `/spring-valley/drain-cleaning/` | Service-location | `app/spring-valley/drain-cleaning/page.tsx` | yes | 57 |
+| `/spring-valley/emergency-plumbing/` | Service-location | `app/spring-valley/emergency-plumbing/page.tsx` | yes | 39 |
+| `/spring-valley/leak-detection-repair/` | Service-location | `app/spring-valley/leak-detection-repair/page.tsx` | yes | 46 |
+| `/spring-valley/repiping/` | Service-location | `app/spring-valley/repiping/page.tsx` | yes | 60 |
+| `/spring-valley/sewer-line-services/` | Service-location | `app/spring-valley/sewer-line-services/page.tsx` | yes | 40 |
+| `/spring-valley/slab-leak-detection-repair/` | Service-location | `app/spring-valley/slab-leak-detection-repair/page.tsx` | yes | 51 |
+| `/spring-valley/water-heater-repair-installation/` | Service-location | `app/spring-valley/water-heater-repair-installation/page.tsx` | yes | 57 |
+| `/summerlin-plumbing-services/` | City hub | `app/summerlin-plumbing-services/page.tsx` | yes | 56 |
+| `/summerlin/drain-cleaning/` | Service-location | `app/summerlin/drain-cleaning/page.tsx` | yes | 53 |
+| `/summerlin/emergency-plumbing/` | Service-location | `app/summerlin/emergency-plumbing/page.tsx` | yes | 56 |
+| `/summerlin/faucet-sink-repair-installation/` | Service-location | `app/summerlin/faucet-sink-repair-installation/page.tsx` | yes | 56 |
+| `/summerlin/garbage-disposal-repair-installation/` | Service-location | `app/summerlin/garbage-disposal-repair-installation/page.tsx` | yes | 57 |
+| `/summerlin/gas-line-plumbing/` | Service-location | `app/summerlin/gas-line-plumbing/page.tsx` | yes | 56 |
+| `/summerlin/leak-detection-repair/` | Service-location | `app/summerlin/leak-detection-repair/page.tsx` | yes | 42 |
+| `/summerlin/repiping/` | Service-location | `app/summerlin/repiping/page.tsx` | yes | 56 |
+| `/summerlin/sewer-line-services/` | Service-location | `app/summerlin/sewer-line-services/page.tsx` | yes | 58 |
+| `/summerlin/slab-leak-detection-repair/` | Service-location | `app/summerlin/slab-leak-detection-repair/page.tsx` | yes | 47 |
+| `/summerlin/toilet-repair-installation/` | Service-location | `app/summerlin/toilet-repair-installation/page.tsx` | yes | 47 |
+| `/summerlin/water-heater-repair-installation/` | Service-location | `app/summerlin/water-heater-repair-installation/page.tsx` | yes | 53 |
+| `/summerlin/water-pipe-repair-replacement/` | Service-location | `app/summerlin/water-pipe-repair-replacement/page.tsx` | yes | 50 |
+| `/terms-and-conditions/` | Legal | `app/terms-and-conditions/page.tsx` | yes | 42 |
+| `/thank-you/` | Utility | `app/thank-you/page.tsx` | no | 31 |
+| `/toilet-repair-installation/` | Core service | `app/toilet-repair-installation/page.tsx` | yes | 47 |
+| `/trenchless-piping/` | Core service | `app/trenchless-piping/page.tsx` | yes | 43 |
+| `/video-camera-plumbing-inspections/` | Core service | `app/video-camera-plumbing-inspections/page.tsx` | yes | 50 |
+| `/water-heater-repair-installation/` | Core service | `app/water-heater-repair-installation/page.tsx` | yes | 53 |
+| `/water-meter-pressure-regulator-services/` | Core service | `app/water-meter-pressure-regulator-services/page.tsx` | yes | 60 |
+| `/water-pipe-repair-replacement/` | Core service | `app/water-pipe-repair-replacement/page.tsx` | yes | 50 |
 
-### Service-Location Pages (referenced via TODO-BATCH-NEXT comment blocks)
+## Approved in Build List, Not Built
 
-Each service page documents per-city slab/leak/etc. routes via a JSX comment block. Currently captured:
+Routes named in `docs/site-os/inputs/red-carpet-plumbing-build-list.md` that have no route in the manifest. 43 routes.
 
-| Planned Page | Route | Source | Status | Notes |
-|---|---|---|---|---|
-| Slab Leak Detection in Las Vegas | `/las-vegas-slab-leak-detection-repair/` | `app/slab-leak-detection-repair/page.tsx:652` | Planned | Comment-only, not rendered |
-| Slab Leak Detection in Henderson | `/henderson-slab-leak-detection-repair/` | `app/slab-leak-detection-repair/page.tsx:653` | Planned | Comment-only, not rendered |
-| Slab Leak Detection in North Las Vegas | `/north-las-vegas-slab-leak-detection-repair/` | `app/slab-leak-detection-repair/page.tsx:654` | Planned | Comment-only, not rendered |
-| Slab Leak Detection in Summerlin | `/summerlin-slab-leak-detection-repair/` | `app/slab-leak-detection-repair/page.tsx:655` | Planned | Comment-only, not rendered |
+### Service-location combinations listed as link targets (6)
 
-Note: The other service pages (Emergency Plumbing, Drain Cleaning, Water Heater, Leak Detection) also contain analogous service-location TODO comment blocks documenting per-city future routes for those services (Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Enterprise, Green Valley, etc.). Treat the full per-city × per-service matrix as a future build batch.
+- `/enterprise/water-pipe-repair-replacement/`
+- `/enterprise/gas-line-plumbing/`
+- `/north-las-vegas/backflow-prevention/`
+- `/henderson/video-camera-plumbing-inspections/`
+- `/north-las-vegas/video-camera-plumbing-inspections/`
+- `/summerlin/video-camera-plumbing-inspections/`
 
-### Other Planned Pages
+### Neighborhood hubs (13)
 
-| Planned Page | Route | Source | Status | Notes |
-|---|---|---|---|---|
-| Custom 404 / Not Found | `app/not-found.tsx` | (none yet) | Planned | Next.js currently renders the default `_not-found` page. A branded 404 is a recommended launch-prep task |
-| Per-city Service Areas children | `/las-vegas/`, `/henderson/`, `/north-las-vegas/`, etc. | `app/service-areas/page.tsx:464` | Planned | Service Areas Hub already renders forward links to each city page |
+- `/henderson/seven-hills-plumbing/`
+- `/paradise/south-strip-plumbing/`
+- `/paradise/airport-corridor-plumbing/`
+- `/summerlin/summerlin-north-plumbing/`
+- `/summerlin/summerlin-south-plumbing/`
+- `/spring-valley/desert-inn-west-sahara-plumbing/`
+- `/enterprise/southwest-las-vegas-plumbing/`
+- `/enterprise/commercial-parks-plumbing/`
+- `/las-vegas/whitney-plumbing/`
+- `/las-vegas/winchester-plumbing/`
+- `/las-vegas/sunrise-manor-plumbing/`
+- `/las-vegas/desert-shores-plumbing/`
+- `/las-vegas/tropicana-area-plumbing/`
 
-## Known Global Launch Blockers
+### Tier 2 neighborhood service-location pages (24)
 
-| # | Blocker | Surface |
-|---|---|---|
-| 1 | Phone number unconfirmed across the entire site | All disabled `Call Now` spans (header desktop + header mobile + every service page hero secondary CTA + every service page final CTA). Per page count: typically 4 disabled spans (2 inherited from `SiteHeader` + 2 on the page itself) |
-| 2 | Service JSON-LD `provider.telephone` omitted on every service page | `app/emergency-plumbing/page.tsx`, `app/drain-cleaning/page.tsx`, `app/water-heater-repair-installation/page.tsx`, `app/leak-detection-repair/page.tsx`, `app/slab-leak-detection-repair/page.tsx`. Each has `// FLAG: ADD telephone field to Service provider once phone number is confirmed` source comments |
-| 3 | `metadataBase` in `app/layout.tsx` still points to `red-carpet-plumbing-site.pages.dev` | Must swap to `https://redcarpetplumbing.com` before production launch so OG / Twitter card URLs resolve correctly |
-| 4 | Contact form endpoint is a placeholder | `components/QuoteFormPlaceholder.tsx` and `components/ContactFormPlaceholder.tsx` ship as no-op silent submit handlers. No real backend / email service wired. Will fail silently in production |
-| 5 | RESOLVED: "Transparent Pricing", "no hidden fees", "upfront pricing" claims are owner-confirmed (Nov 1, 2026) | Every service page trust strip. The old source comments (`// SOURCE-SITE CLAIM: verify ...`, `// FLAG: VERIFY TRANSPARENT PRICING CLAIM BEFORE PUBLISH`) can be removed in a cleanup pass |
-| 6 | Unverified "Customer Satisfaction Focus" trust strip claim | Every service page trust strip. Source comment: `// FLAG: VERIFY CUSTOMER SATISFACTION FOCUS CLAIM BEFORE PUBLISH` |
-| 7 | Unconfirmed service-specific equipment / methods / scope claims | `app/water-heater-repair-installation/page.tsx`, `app/leak-detection-repair/page.tsx`, `app/slab-leak-detection-repair/page.tsx` — each has FLAG comments for confirmation before launch |
-| 8 | Low-resolution hero images on 2 service pages | Water Heater (`hero.webp` 350×350) accepted as-is per D6 Option 6A with TODO. Slab Leak hero substituted with `card.webp` (1184×1184) per D6 Option 6B with TODO. Both need dedicated high-resolution hero assets |
-| 9 | Forward links pointing to unbuilt routes (live 404s) | Plumbing Services Hub (~12 service entries still 404), Service Areas Hub (per-city pages 404), and inline Process Step links: `/water-pipe-repair-replacement/`, `/repiping/`, `/sewer-line-services/`, `/video-camera-plumbing-inspections/` |
-| 10 | No custom 404 page | Next.js renders the default `_not-found` page. A branded `app/not-found.tsx` is recommended before launch |
-| 11 | Stale TODO-BATCH-NEXT comments | Several TODO comments reference routes that have since been built (`/contact/`, `/emergency-plumbing/`, `/service-areas/`, `/leak-detection-repair/`, `/slab-leak-detection-repair/`). Comments do not affect runtime but should be cleaned in a future maintenance pass |
-| 12 | `docs/site-os/qa/` artifacts not yet cleaned or moved | 70 untracked QA scripts, audit `.md` files, and screenshots in `docs/site-os/qa/`. Intentionally untracked through Batch 3; decision needed on whether to keep, move, or delete before launch |
-| 13 | `Images/` raw working folder still gitignored | Per project rules. Decision needed on dedupe and final asset structure before launch |
+- `/las-vegas/whitney/drain-cleaning/`
+- `/las-vegas/whitney/water-heater-repair-installation/`
+- `/las-vegas/whitney/leak-detection-repair/`
+- `/las-vegas/winchester/drain-cleaning/`
+- `/las-vegas/winchester/water-heater-repair-installation/`
+- `/las-vegas/winchester/leak-detection-repair/`
+- `/henderson/seven-hills/drain-cleaning/`
+- `/henderson/seven-hills/water-heater-repair-installation/`
+- `/henderson/seven-hills/leak-detection-repair/`
+- `/spring-valley/desert-inn-west-sahara/drain-cleaning/`
+- `/spring-valley/desert-inn-west-sahara/water-heater-repair-installation/`
+- `/spring-valley/desert-inn-west-sahara/leak-detection-repair/`
+- `/las-vegas/sunrise-manor/drain-cleaning/`
+- `/las-vegas/sunrise-manor/water-heater-repair-installation/`
+- `/las-vegas/sunrise-manor/leak-detection-repair/`
+- `/las-vegas/desert-shores/drain-cleaning/`
+- `/las-vegas/desert-shores/water-heater-repair-installation/`
+- `/las-vegas/desert-shores/leak-detection-repair/`
+- `/las-vegas/tropicana-area/drain-cleaning/`
+- `/las-vegas/tropicana-area/water-heater-repair-installation/`
+- `/las-vegas/tropicana-area/leak-detection-repair/`
+- `/enterprise/southwest-las-vegas/drain-cleaning/`
+- `/enterprise/southwest-las-vegas/water-heater-repair-installation/`
+- `/enterprise/southwest-las-vegas/leak-detection-repair/`
 
-## Recommended Next Build Order
+## Unclear in Build List
 
-Based on current TODO-BATCH-NEXT references, internal-link frequency, and remaining service coverage:
+Routes the build list marks as conditional ("Possible Future Pages", build only if demand appears).
 
-### Batch 4 candidates (highest internal-link reference count)
+- `/las-vegas/downtown-las-vegas-commercial-plumbing/`
+- `/paradise/south-strip-commercial-plumbing/`
+- `/paradise/airport-corridor-commercial-plumbing/`
 
-1. **Sewer Line Services** (`/sewer-line-services/`) — referenced as forward link from Drain Cleaning and Plumbing Services Hub. Natural plumbing-emergency adjacency.
-2. **Video Camera Plumbing Inspections** (`/video-camera-plumbing-inspections/`) — referenced from Plumbing Services Hub, Drain Cleaning, and Leak Detection. Bridges drain + leak service lines.
-3. **Water Pipe Repair and Replacement** (`/water-pipe-repair-replacement/`) — referenced from Plumbing Services Hub, Leak Detection, and Slab Leak (inline in Process Step 5). Closes Slab Leak forward-link gap.
-4. **Repiping** (`/repiping/`) — referenced from Plumbing Services Hub and Slab Leak (inline in Process Step 5). Closes the other Slab Leak forward-link gap.
+## Cards Without Routes
 
-### Batch 5 candidates (high-value standalone services)
-
-5. **Gas Line Plumbing** (`/gas-line-plumbing/`)
-6. **Toilet Repair and Installation** (`/toilet-repair-installation/`)
-7. **Faucet and Sink Repair and Installation** (`/faucet-sink-repair-installation/`)
-8. **Garbage Disposal Repair and Installation** (`/garbage-disposal-repair-installation/`)
-
-### Batch 6 candidates (specialty / commercial)
-
-9. **Commercial Plumbing** (`/commercial-plumbing/`)
-10. **Backflow Prevention** (`/backflow-prevention/`)
-11. **Trenchless Piping** (`/trenchless-piping/`)
-12. **Water Meter and Pressure Regulator Services** (`/water-meter-pressure-regulator-services/`)
-13. **Plumbing Fixture Repair, Replacement, Installation** (`/plumbing-fixture-repair-replacement-installation/`)
-
-### Batch 7+ (service-location pages)
-
-14. Per-city × per-service matrix (Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Enterprise, Green Valley × the 5 currently shipped services as the priority subset, expanding to the full service catalog over time).
-
-### Launch prep / cleanup
-
-- Commit the Slab Leak Detection and Repair page (already built; awaiting commit direction).
-- Add `app/not-found.tsx` branded 404.
-- Resolve client-confirmation FLAGs (phone, equipment claims, trust strip claims).
-- Swap `metadataBase` to production domain.
-- Wire form submit handlers to a real backend.
-- Sweep stale TODO-BATCH-NEXT comments where routes have since been built.
-- Decide on `docs/site-os/qa/` artifacts (keep / move / delete).
-- Decide on `Images/` working folder structure and unignore the approved final asset set.
+Sub-service cards on 25 service pages use `ServiceCard` with `built={false}`. They render the title as plain text with no link, because their routes are not built. Examples include the "Types of service" cards on `/sewer-line-services/`.
