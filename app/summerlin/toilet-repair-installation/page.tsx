@@ -436,7 +436,6 @@ export default function SummerlinToiletPage() {
           formSlot={<QuoteFormPlaceholder title="Get Toilet Repair Help" />}
           backgroundImage={{
             src: "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-hero.webp",
-            alt: "Toilet Repair and Installation in Summerlin, NV",
           }}
         />
 

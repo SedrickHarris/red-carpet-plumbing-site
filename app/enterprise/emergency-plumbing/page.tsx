@@ -434,7 +434,6 @@ export default function EnterpriseEmergencyPlumbingPage() {
           formSlot={<QuoteFormPlaceholder title="Get Emergency Plumbing Help" />}
           backgroundImage={{
             src: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-hero.webp",
-            alt: "Emergency plumbing service in Enterprise, NV",
           }}
         />
 

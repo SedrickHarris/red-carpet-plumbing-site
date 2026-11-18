@@ -453,7 +453,6 @@ export default function LasVegasBackflowPreventionPage() {
           formSlot={<QuoteFormPlaceholder title="Get Backflow Prevention Help" />}
           backgroundImage={{
             src: "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-prevention-hero.webp",
-            alt: "Backflow prevention device installation and service in Las Vegas, NV",
           }}
         />
 

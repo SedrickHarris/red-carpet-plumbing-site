@@ -431,7 +431,6 @@ export default function SpringValleySewerLinePage() {
           formSlot={<QuoteFormPlaceholder title="Get Sewer Line Help" />}
           backgroundImage={{
             src: "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-hero.webp",
-            alt: "Sewer line services in Spring Valley, NV",
           }}
         />
 

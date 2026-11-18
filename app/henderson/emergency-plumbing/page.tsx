@@ -327,7 +327,6 @@ export default function HendersonEmergencyPlumbingPage() {
           formSlot={<QuoteFormPlaceholder title="Get Emergency Plumbing Help" />}
           backgroundImage={{
             src: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-hero.webp",
-            alt: "Emergency plumber responding to a burst pipe in Henderson, NV",
           }}
         />
 

@@ -349,7 +349,6 @@ export default function BoulderCityEmergencyPlumbingPage() {
           formSlot={<QuoteFormPlaceholder title="Get Emergency Plumbing Help" />}
           backgroundImage={{
             src: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-hero.webp",
-            alt: "emergency plumbing service in Boulder City, NV",
           }}
         />
 

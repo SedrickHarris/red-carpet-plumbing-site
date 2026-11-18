@@ -430,7 +430,6 @@ export default function WaterHeaterRepairInstallationPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-hero.webp",
-            alt: "Red Carpet Plumbing water heater repair and installation in Las Vegas, NV",
           }}
         />
 

@@ -345,7 +345,6 @@ export default function LasVegasDrainCleaningPage() {
           formSlot={<QuoteFormPlaceholder title="Get Drain Cleaning Help" />}
           backgroundImage={{
             src: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-hero.webp",
-            alt: "Professional drain cleaning service in Las Vegas, NV",
           }}
         />
 

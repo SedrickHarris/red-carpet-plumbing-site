@@ -405,7 +405,6 @@ export default function AlianteAreaPlumbingPage() {
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
             src: "/images/locations/aliante-area/red-carpet-plumbing-aliante-north-las-vegas-nv-location-hero.webp",
-            alt: "Red Carpet Plumbing plumbing services in the Aliante area of North Las Vegas, NV",
           }}
         />
 

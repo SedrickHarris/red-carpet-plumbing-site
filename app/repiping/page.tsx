@@ -419,7 +419,6 @@ export default function RePipingServicesPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
-            alt: "Red Carpet Plumbing repiping technician in Las Vegas, NV",
           }}
         />
 

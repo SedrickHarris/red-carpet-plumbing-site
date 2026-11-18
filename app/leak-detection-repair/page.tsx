@@ -420,7 +420,6 @@ export default function LeakDetectionAndRepairPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-hero.webp",
-            alt: "Red Carpet Plumbing leak detection service in Las Vegas, NV",
           }}
         />
 

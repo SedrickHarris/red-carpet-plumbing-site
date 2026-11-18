@@ -450,7 +450,6 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-plumbing-fixture-repair-replacement-installation-hero.webp",
-            alt: "Professional plumbing fixture installation and repair",
           }}
         />
 

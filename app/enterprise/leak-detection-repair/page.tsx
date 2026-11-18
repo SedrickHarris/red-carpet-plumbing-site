@@ -409,7 +409,6 @@ export default function EnterpriseLeakDetectionPage() {
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
             src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-hero.webp",
-            alt: "Leak detection and repair in Enterprise, NV",
           }}
         />
 

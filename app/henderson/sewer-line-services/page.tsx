@@ -433,7 +433,6 @@ export default function HendersonSewerLinePage() {
           formSlot={<QuoteFormPlaceholder title="Get Sewer Line Help" />}
           backgroundImage={{
             src: "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-hero.webp",
-            alt: "Red Carpet Plumbing sewer line services in Henderson, NV",
           }}
         />
 

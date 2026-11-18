@@ -405,7 +405,6 @@ export default function AlianteEmergencyPlumbingPage() {
           }
           backgroundImage={{
             src: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-hero.webp",
-            alt: "Emergency plumbing service in the Aliante area of North Las Vegas, NV",
           }}
         />
 

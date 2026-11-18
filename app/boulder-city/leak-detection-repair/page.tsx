@@ -413,7 +413,6 @@ export default function BoulderCityLeakDetectionPage() {
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
             src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-hero.webp",
-            alt: "non-invasive leak detection and repair in Boulder City, NV",
           }}
         />
 

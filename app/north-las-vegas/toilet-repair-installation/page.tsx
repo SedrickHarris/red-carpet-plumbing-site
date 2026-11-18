@@ -462,7 +462,6 @@ export default function NorthLasVegasToiletRepairInstallationPage() {
           formSlot={<QuoteFormPlaceholder title="Get Toilet Repair Help" />}
           backgroundImage={{
             src: "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-hero.webp",
-            alt: "Toilet repair and installation in North Las Vegas, NV",
           }}
         />
 

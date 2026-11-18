@@ -427,7 +427,6 @@ export default function GreenValleyWaterHeaterPage() {
           formSlot={<QuoteFormPlaceholder title="Get Water Heater Help" />}
           backgroundImage={{
             src: "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-hero.webp",
-            alt: "water heater repair and installation in Green Valley, Henderson, NV",
           }}
         />
 

@@ -394,7 +394,6 @@ export default function GreenValleyEmergencyPlumbingPage() {
           }
           backgroundImage={{
             src: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-hero.webp",
-            alt: "emergency plumbing service in Green Valley, Henderson, NV",
           }}
         />
 

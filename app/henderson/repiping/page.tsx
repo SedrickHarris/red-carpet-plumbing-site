@@ -382,7 +382,6 @@ export default function HendersonRePipingPage() {
           formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           backgroundImage={{
             src: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
-            alt: "repiping service in Henderson, NV",
           }}
         />
 

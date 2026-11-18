@@ -423,7 +423,6 @@ export default function DrainCleaningPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-hero.webp",
-            alt: "Red Carpet Plumbing drain cleaning technician in Las Vegas, NV",
           }}
         />
 

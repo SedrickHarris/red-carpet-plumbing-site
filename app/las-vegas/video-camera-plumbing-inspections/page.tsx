@@ -462,7 +462,6 @@ export default function LasVegasVideoCameraInspectionPage() {
           }
           backgroundImage={{
             src: "/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-video-camera-plumbing-inspections-primary-hero.webp",
-            alt: "Video camera plumbing inspection service in Las Vegas, NV",
           }}
         />
 

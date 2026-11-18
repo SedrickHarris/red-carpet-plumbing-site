@@ -445,7 +445,6 @@ export default function GasLinePlumbingPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-plumbing-hero.webp",
-            alt: "Professional gas line installation in progress in Las Vegas",
           }}
         />
 

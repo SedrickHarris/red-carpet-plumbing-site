@@ -393,7 +393,6 @@ export default function LakeLasVegasSlabLeakPage() {
           formSlot={<QuoteFormPlaceholder title="Get Slab Leak Help" />}
           backgroundImage={{
             src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-hero.webp",
-            alt: "slab leak detection and repair in Lake Las Vegas, Henderson, NV",
           }}
         />
 

@@ -452,7 +452,6 @@ export default function WaterMeterPressureRegulatorServicesPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-water-meter-pressure-regulator-services-primary-hero.webp",
-            alt: "Licensed technician servicing a water meter and pressure regulator",
           }}
         />
 

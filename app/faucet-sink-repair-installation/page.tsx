@@ -449,7 +449,6 @@ export default function FaucetSinkRepairInstallationPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-sink-repair-hero.webp",
-            alt: "Faucet and sink repair, replacement, and installation services",
             // Square 1184x1184 source cropped to a wide band: keep the subject in frame.
             position: "65% 35%",
           }}

@@ -385,7 +385,6 @@ export default function LasVegasPlumbingServicesPage() {
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
             src: "/images/locations/las-vegas/red-carpet-plumbing-las-vegas-nv-skyline-location-hero.webp",
-            alt: "Licensed plumbers serving Las Vegas, NV",
           }}
         />
 

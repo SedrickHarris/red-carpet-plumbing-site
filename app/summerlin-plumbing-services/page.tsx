@@ -388,7 +388,6 @@ export default function SummerlinPlumbingServicesPage() {
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
             src: "/images/locations/summerlin/red-carpet-plumbing-summerlin-nv-red-rock-canyon-location-hero.webp",
-            alt: "Licensed plumbers serving Summerlin, NV",
           }}
         />
 

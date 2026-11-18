@@ -393,7 +393,6 @@ export default function EnterprisePlumbingServicesPage() {
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
             src: "/images/locations/enterprise/red-carpet-plumbing-enterprise-nv-exploration-peak-location-hero.webp",
-            alt: "Red Carpet Plumbing plumbing services in Enterprise, NV",
           }}
         />
 

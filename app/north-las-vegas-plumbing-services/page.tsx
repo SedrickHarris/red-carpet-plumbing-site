@@ -385,7 +385,6 @@ export default function NorthLasVegasPlumbingServicesPage() {
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
             src: "/images/locations/north-las-vegas/red-carpet-plumbing-north-las-vegas-nv-neighborhood-location-hero.webp",
-            alt: "Red Carpet Plumbing plumbing services in North Las Vegas, NV",
           }}
         />
 

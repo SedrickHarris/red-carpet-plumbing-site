@@ -396,7 +396,6 @@ export default function PlumbingServicesPage() {
           }}
           backgroundImage={{
             src: "/images/locations/las-vegas/red-carpet-plumbing-las-vegas-nv-skyline-location-hero.webp",
-            alt: "Plumbing services in Las Vegas, NV",
           }}
           formSlot={
             <div>

@@ -377,7 +377,6 @@ export default function BoulderCityPlumbingServicesPage() {
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
             src: "/images/locations/boulder-city/red-carpet-plumbing-boulder-city-nv-downtown-location-hero.webp",
-            alt: "Red Carpet Plumbing plumbing services in Boulder City, NV",
           }}
         />
 

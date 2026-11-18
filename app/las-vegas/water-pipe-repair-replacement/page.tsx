@@ -438,7 +438,6 @@ export default function LasVegasWaterPipePage() {
           formSlot={<QuoteFormPlaceholder title="Get Water Pipe Help" />}
           backgroundImage={{
             src: "/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-water-pipe-repair-replacement-primary-hero.webp",
-            alt: "Water Pipe Repair and Replacement in Las Vegas, NV",
           }}
         />
 

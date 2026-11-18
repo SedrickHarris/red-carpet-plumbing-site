@@ -466,7 +466,6 @@ export default function ParadiseGasLinePage() {
           formSlot={<QuoteFormPlaceholder title="Get Gas Line Help" />}
           backgroundImage={{
             src: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-plumbing-hero.webp",
-            alt: "Gas Line Plumbing in Paradise, NV",
           }}
         />
 

@@ -400,7 +400,6 @@ export default function GreenValleyDrainCleaningPage() {
           formSlot={<QuoteFormPlaceholder title="Get Drain Cleaning Help" />}
           backgroundImage={{
             src: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-hero.webp",
-            alt: "drain cleaning service in Green Valley, Henderson, NV",
           }}
         />
 

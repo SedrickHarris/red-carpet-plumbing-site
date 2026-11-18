@@ -456,31 +456,24 @@ export default function CommercialPlumbingPage() {
           backgroundImages={[
             {
               src: "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
-              alt: "Red Carpet Plumbing commercial plumbing in Las Vegas, NV",
             },
             {
               src: "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-kitchen-plumbing-las-vegas.webp",
-              alt: "Red Carpet Plumbing commercial kitchen plumbing service in Las Vegas, NV",
             },
             {
               src: "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-mechanical-room-plumbing-las-vegas.webp",
-              alt: "Red Carpet Plumbing commercial mechanical room plumbing in Las Vegas, NV",
             },
             {
               src: "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-pipe-valve-detail-las-vegas.webp",
-              alt: "Red Carpet Plumbing commercial pipe and valve detail in Las Vegas, NV",
             },
             {
               src: "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-restroom-plumbing-las-vegas.webp",
-              alt: "Red Carpet Plumbing commercial restroom plumbing in Las Vegas, NV",
             },
             {
               src: "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-water-heater-plumbing-las-vegas.webp",
-              alt: "Red Carpet Plumbing commercial water heater plumbing in Las Vegas, NV",
             },
             {
               src: "/images/services/commercial-plumbing/red-carpet-plumbing-multi-unit-property-plumbing-las-vegas.webp",
-              alt: "Red Carpet Plumbing multi-unit property plumbing in Las Vegas, NV",
             },
           ]}
         />

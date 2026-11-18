@@ -377,7 +377,6 @@ export default function EnterpriseCommercialPlumbingPage() {
           }
           backgroundImage={{
             src: "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
-            alt: "Red Carpet Plumbing commercial plumbing in Enterprise, NV",
           }}
         />
 

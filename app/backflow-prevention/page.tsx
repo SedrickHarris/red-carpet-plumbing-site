@@ -448,7 +448,6 @@ export default function BackflowPreventionPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-prevention-hero.webp",
-            alt: "Professional backflow prevention device installation",
           }}
         />
 

@@ -252,7 +252,6 @@ export default function AboutPage() {
           backgroundImage={{
             src: "/images/company/vehicles/red-carpet-plumbing-las-vegas-service-van-front-three-quarter-wide.webp",
             position: "62% 31%",
-            alt: "Red Carpet Plumbing service van parked in Las Vegas, Nevada",
           }}
         />
 

@@ -421,7 +421,6 @@ export default function SewerLineServicesPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-hero.webp",
-            alt: "Red Carpet Plumbing sewer line services in Las Vegas, NV",
           }}
         />
 

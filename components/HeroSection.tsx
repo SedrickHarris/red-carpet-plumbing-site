@@ -34,15 +34,18 @@ type HeroSectionProps = {
   secondaryCTA?: CTA;
   ctaNote?: ReactNode;
   formSlot?: ReactNode;
+  // Hero images are decorative. They render alt="" inside an aria-hidden
+  // wrapper behind a scrim, so they take no alt text here. Content-bearing
+  // images belong in cards, where alt text is required.
   // `position` is an optional CSS object-position (for example "65% 35%")
   // for square or tall sources that are cropped to a wide band.
-  backgroundImage?: { src: string; alt: string; position?: string };
+  backgroundImage?: { src: string; position?: string };
   // Optional multi-image background. When more than one entry is supplied the
   // hero crossfades between them; a single entry renders identically to
   // `backgroundImage` with no motion machinery. Mutually exclusive with
   // `backgroundImage` — if both are passed, this one wins. Only the homepage
   // uses it; every other page keeps passing the singular prop.
-  backgroundImages?: { src: string; alt: string; position?: string }[];
+  backgroundImages?: { src: string; position?: string }[];
   accentWidth?: "sm" | "md" | "lg";
   size?: "default" | "tall";
   // Back-compat: accepted but ignored. The split layout is now always 50/50.

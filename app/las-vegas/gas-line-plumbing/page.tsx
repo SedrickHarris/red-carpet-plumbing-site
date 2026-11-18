@@ -425,7 +425,6 @@ export default function LasVegasGasLinePage() {
           formSlot={<QuoteFormPlaceholder title="Get Gas Line Help" />}
           backgroundImage={{
             src: "/images/services/gas-line-plumbing/red-carpet-plumbing-las-vegas-gas-line-plumbing-hero.webp",
-            alt: "Licensed gas line plumbing service in Las Vegas, NV",
           }}
         />
 

@@ -384,7 +384,6 @@ export default function HendersonPlumbingServicesPage() {
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
             src: "/images/locations/henderson/red-carpet-plumbing-henderson-nv-water-street-district-location-hero.webp",
-            alt: "Licensed plumbers serving Henderson, NV",
           }}
         />
 

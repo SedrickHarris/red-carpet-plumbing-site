@@ -367,24 +367,19 @@ export default function Home() {
             {
               src: "/images/company/vehicles/red-carpet-plumbing-las-vegas-service-van-front-three-quarter-medium.webp",
               position: "62% 50%",
-              alt: "Red Carpet Plumbing service van parked in Las Vegas, Nevada",
             },
             {
               src: "/images/homepage/red-carpet-plumbing-las-vegas-commercial-plumbing-services-hero.webp",
-              alt: "Red Carpet Plumbing commercial plumbing services in Las Vegas, NV",
             },
             {
               src: "/images/homepage/red-carpet-plumbing-las-vegas-emergency-plumbing-leak-hero.webp",
-              alt: "Red Carpet Plumbing emergency plumbing leak repair in Las Vegas, NV",
             },
             {
               src: "/images/company/vehicles/red-carpet-plumbing-las-vegas-service-van-front-three-quarter-close.webp",
               position: "62% 60%",
-              alt: "Red Carpet Plumbing service van with branded wrap parked in Las Vegas, Nevada",
             },
             {
               src: "/images/homepage/red-carpet-plumbing-las-vegas-sewer-drain-services-hero.webp",
-              alt: "Red Carpet Plumbing sewer and drain services in Las Vegas, NV",
             },
           ]}
         />

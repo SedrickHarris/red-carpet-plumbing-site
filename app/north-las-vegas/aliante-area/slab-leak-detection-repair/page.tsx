@@ -477,7 +477,6 @@ export default function AlianteSlabLeakPage() {
           formSlot={<QuoteFormPlaceholder title="Get Slab Leak Help" />}
           backgroundImage={{
             src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-hero.webp",
-            alt: "Slab leak detection and repair in the Aliante area of North Las Vegas, NV",
           }}
         />
 

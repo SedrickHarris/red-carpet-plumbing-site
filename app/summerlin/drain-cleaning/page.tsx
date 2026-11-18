@@ -362,7 +362,6 @@ export default function SummerlinDrainCleaningPage() {
           formSlot={<QuoteFormPlaceholder title="Get Drain Cleaning Help" />}
           backgroundImage={{
             src: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-hero.webp",
-            alt: "Licensed drain cleaning plumbers serving Summerlin, NV",
           }}
         />
 

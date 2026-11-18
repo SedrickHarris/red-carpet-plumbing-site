@@ -380,7 +380,6 @@ export default function GreenValleyPlumbingServicesPage() {
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
             src: "/images/locations/green-valley/red-carpet-plumbing-green-valley-nv-neighborhood-location-hero.webp",
-            alt: "Red Carpet Plumbing plumbing services in Green Valley, NV",
           }}
         />
 

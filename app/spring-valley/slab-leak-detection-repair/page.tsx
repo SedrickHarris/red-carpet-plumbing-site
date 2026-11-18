@@ -395,7 +395,6 @@ export default function SpringValleySlabLeakPage() {
           formSlot={<QuoteFormPlaceholder title="Get Slab Leak Help" />}
           backgroundImage={{
             src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-hero.webp",
-            alt: "Slab leak detection and repair in Spring Valley, NV",
           }}
         />
 

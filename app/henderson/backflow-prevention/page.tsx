@@ -450,7 +450,6 @@ export default function HendersonBackflowPage() {
           formSlot={<QuoteFormPlaceholder title="Get Backflow Help" />}
           backgroundImage={{
             src: "/images/services/backflow-prevention/red-carpet-plumbing-las-vegas-backflow-prevention-hero.webp",
-            alt: "Backflow Prevention Services in Henderson, NV",
           }}
         />
 

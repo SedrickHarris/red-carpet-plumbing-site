@@ -402,7 +402,6 @@ export default function AlianteDrainCleaningPage() {
           formSlot={<QuoteFormPlaceholder title="Get Drain Cleaning Help" />}
           backgroundImage={{
             src: "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-hero.webp",
-            alt: "drain cleaning service in the Aliante area of North Las Vegas, NV",
           }}
         />
 

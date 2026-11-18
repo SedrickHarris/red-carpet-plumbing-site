@@ -392,7 +392,6 @@ export default function SpringValleyPlumbingServicesPage() {
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
             src: "/images/locations/spring-valley/red-carpet-plumbing-spring-valley-nv-desert-breeze-location-hero.webp",
-            alt: "Licensed plumbers serving Spring Valley, NV",
           }}
         />
 

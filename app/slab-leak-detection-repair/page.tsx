@@ -422,7 +422,6 @@ export default function SlabLeakDetectionAndRepairPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-hero.webp",
-            alt: "Red Carpet Plumbing slab leak detection and repair in Las Vegas, NV",
           }}
         />
 

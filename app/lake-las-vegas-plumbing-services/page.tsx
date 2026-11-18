@@ -408,7 +408,6 @@ export default function LakeLasVegasPlumbingServicesPage() {
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
             src: "/images/locations/lake-las-vegas/red-carpet-plumbing-lake-las-vegas-nv-waterfront-location-hero.webp",
-            alt: "Red Carpet Plumbing plumbing services in Lake Las Vegas, NV",
           }}
         />
 

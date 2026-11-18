@@ -443,7 +443,6 @@ export default function TrenchlessPipingPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/trenchless-piping/red-carpet-plumbing-las-vegas-trenchless-pipe-replacement-hero.webp",
-            alt: "Small excavation site for trenchless piping service in Las Vegas",
           }}
         />
 

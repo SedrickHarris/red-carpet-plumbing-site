@@ -449,7 +449,6 @@ export default function GarbageDisposalRepairInstallationPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-repair-installation-hero.webp",
-            alt: "Modern garbage disposal installation in a Las Vegas kitchen",
             // Square 1184x1184 source cropped to a wide band: keep the subject in frame.
             position: "70% 65%",
           }}

@@ -415,7 +415,6 @@ export default function ServiceAreasPage() {
           }
           backgroundImage={{
             src: "/images/locations/las-vegas/red-carpet-plumbing-las-vegas-nv-skyline-location-hero.webp",
-            alt: "View of the Las Vegas Strip from above",
           }}
         />
 

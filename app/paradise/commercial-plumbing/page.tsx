@@ -431,7 +431,6 @@ export default function ParadiseCommercialPlumbingPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/commercial-plumbing/red-carpet-plumbing-las-vegas-commercial-plumbing-system-hero.webp",
-            alt: "Red Carpet Plumbing commercial plumbing in Paradise, NV",
           }}
         />
 

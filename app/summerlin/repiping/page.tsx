@@ -373,7 +373,6 @@ export default function SummerlinRePipingPage() {
           formSlot={<QuoteFormPlaceholder title="Get Repiping Help" />}
           backgroundImage={{
             src: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
-            alt: "Repiping services in Summerlin, NV",
           }}
         />
 

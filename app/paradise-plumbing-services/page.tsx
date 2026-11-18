@@ -391,7 +391,6 @@ export default function ParadisePlumbingServicesPage() {
           formSlot={<QuoteFormPlaceholder />}
           backgroundImage={{
             src: "/images/locations/paradise/red-carpet-plumbing-paradise-nv-las-vegas-strip-location-hero.webp",
-            alt: "Red Carpet Plumbing plumbing services in Paradise, NV",
           }}
         />
 

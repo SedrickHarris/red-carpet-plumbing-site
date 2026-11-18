@@ -427,7 +427,6 @@ export default function EmergencyPlumbingPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-hero.webp",
-            alt: "Red Carpet Plumbing emergency plumber responding to a call in Las Vegas, NV",
           }}
         />
 

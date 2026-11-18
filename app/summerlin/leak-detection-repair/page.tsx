@@ -379,7 +379,6 @@ export default function SummerlinLeakDetectionPage() {
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
             src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-hero.webp",
-            alt: "Non-invasive leak detection and repair in Summerlin, NV",
           }}
         />
 

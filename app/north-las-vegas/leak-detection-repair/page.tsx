@@ -369,7 +369,6 @@ export default function NorthLasVegasLeakDetectionPage() {
           formSlot={<QuoteFormPlaceholder title="Get Leak Detection Help" />}
           backgroundImage={{
             src: "/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-hero.webp",
-            alt: "Professional leak detection service in North Las Vegas, NV",
           }}
         />
 

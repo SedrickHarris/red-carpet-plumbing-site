@@ -383,7 +383,6 @@ export default function EnterpriseRePipingPage() {
           formSlot={<QuoteFormPlaceholder title="Get a Repiping Assessment" />}
           backgroundImage={{
             src: "/images/services/repiping/red-carpet-plumbing-las-vegas-repiping-services-hero.webp",
-            alt: "repiping services in Enterprise, NV",
           }}
         />
 

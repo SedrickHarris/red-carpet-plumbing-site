@@ -450,7 +450,6 @@ export default function ToiletRepairInstallationPage() {
           accentWidth="sm"
           backgroundImage={{
             src: "/images/services/toilet-repair-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-hero.webp",
-            alt: "Stylish modern toilet installation in a Las Vegas bathroom",
           }}
         />
 

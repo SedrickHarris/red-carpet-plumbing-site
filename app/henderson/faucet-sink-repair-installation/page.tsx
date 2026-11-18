@@ -435,7 +435,6 @@ export default function HendersonFaucetSinkPage() {
           formSlot={<QuoteFormPlaceholder title="Get Faucet and Sink Help" />}
           backgroundImage={{
             src: "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-faucet-sink-repair-hero.webp",
-            alt: "Faucet and Sink Repair and Installation in Henderson, NV",
           }}
         />
 

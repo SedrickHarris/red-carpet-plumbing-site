@@ -428,7 +428,6 @@ export default function HendersonGarbageDisposalPage() {
           formSlot={<QuoteFormPlaceholder title="Get Garbage Disposal Help" />}
           backgroundImage={{
             src: "/images/services/garbage-disposal-repair-installation/red-carpet-plumbing-las-vegas-garbage-disposal-repair-installation-hero.webp",
-            alt: "Garbage Disposal Repair and Installation in Henderson, NV",
           }}
         />
 
