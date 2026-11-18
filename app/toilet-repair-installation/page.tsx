@@ -78,6 +78,7 @@ const TOILET_FAQS: FaqItem[] = [
     question: "What should I do if my toilet is overflowing?",
     answer:
       "If your toilet is overflowing and will not stop, locate the shutoff valve at the base of the toilet and turn it clockwise to stop the water supply. If the valve is inaccessible or not working, turn off the main water supply to the home. Do not continue to flush. Call Red Carpet Plumbing at (702) 567-9172. An overflowing toilet that cannot be stopped with the shutoff valve may indicate a main sewer line problem.",
+    link: { phrase: "sewer line", href: "/sewer-line-services/" },
     category: "the-service",
   },
   {

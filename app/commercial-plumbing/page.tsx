@@ -58,6 +58,7 @@ const COMMERCIAL_FAQS: FaqItem[] = [
       "What are the most common commercial plumbing problems in Las Vegas?",
     answer:
       "Common commercial plumbing problems in Las Vegas include grease buildup and drain clogs in restaurant kitchens, high-demand water heater failures, backflow preventer issues in commercial irrigation and fire suppression systems, aging supply lines in older commercial buildings, and slab leaks in single-story commercial properties built on desert soil.",
+    link: { phrase: "slab leaks", href: "/slab-leak-detection-repair/" },
     category: "the-service",
   },
   {

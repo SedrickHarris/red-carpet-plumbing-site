@@ -80,6 +80,7 @@ const HENDERSON_COMMERCIAL_FAQS: FaqItem[] = [
     question: "What are the most common commercial plumbing problems in Henderson?",
     answer:
       "Common commercial plumbing problems in Henderson include grease buildup and drain clogs in restaurant kitchen drain lines, commercial water heater failures accelerated by hard water mineral scale, backflow preventer issues in HOA irrigation systems and commercial fire suppression connections, aging supply lines in older commercial buildings and Green Valley Ranch properties, and slab leaks in single-story commercial buildings on Henderson's caliche-rich soil.",
+    link: { phrase: "slab leaks", href: "/henderson/slab-leak-detection-repair/" },
     category: "the-service",
   },
   // FLAG: 24/7 emergency-availability claim in this answer — verify before final launch.

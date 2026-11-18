@@ -196,6 +196,7 @@ const NLV_COMMERCIAL_FAQS: FaqItem[] = [
       "What are common commercial plumbing problems for North Las Vegas businesses?",
     answer:
       "Common commercial plumbing problems include grease buildup and drain clogs in restaurant kitchens, high-demand water heater failures, backflow preventer issues, aging supply lines in older commercial buildings, and slab leaks in single-story commercial properties.",
+    link: { phrase: "slab leaks", href: "/north-las-vegas/slab-leak-detection-repair/" },
     category: "the-service",
   },
   {
