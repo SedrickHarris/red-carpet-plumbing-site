@@ -62,6 +62,7 @@ const SEWER_LINE_FAQS: FaqItem[] = [
     question: "How do I know if I need sewer line repair or replacement?",
     answer:
       "A sewer camera inspection is the most reliable way to determine whether repair or replacement is appropriate. Lines with localized damage in otherwise sound pipe can often be repaired. Lines with extensive corrosion, multiple damage points, severe structural deterioration, or complete collapse typically require replacement. Red Carpet Plumbing will show you the camera footage and explain what it means before recommending a course of action.",
+    link: { phrase: "sewer camera inspection", href: "/video-camera-plumbing-inspections/" },
     category: "causes-signs",
   },
   {
