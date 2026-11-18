@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { ItemIcon } from "@/components/ItemIcon";
@@ -17,26 +18,23 @@ import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
 import { EMERGENCY_HOURS_AVAILABLE } from "@/lib/emergency-hours";
 
-// FLAG: VERIFY before publishing — license #048585A, 24/7 availability,
-// transparent-pricing, gas-line scope, and any rating/40-year claims are
-// source-site/project claims. This page uses the conservative wording from the
-// approved brief and does NOT assert rating, review count, or "40 years" here.
+// Owner-confirmed Nov 1, 2026 (see client-context project context): license
+// #048585A, 24/7 emergency service, transparent pricing. Same-day claims must
+// keep the "subject to scheduling" qualifier. No financing is offered. This
+// page does not assert rating, review count, or "40 years".
 
 export const metadata: Metadata = {
-  // FLAG: description below is the approved brief string (~240 chars). It
-  // exceeds the site's ≤160 meta-description standard; see report. Kept as
-  // approved pending a trim decision.
-  title: "Emergency Plumbing in North Las Vegas, NV",
+  title: "24 Hour Emergency Plumber in North Las Vegas | Red Carpet Plumbing",
   description:
-    "Emergency plumbing in North Las Vegas, NV, including Aliante. Burst pipes, slab leaks, sewer backups, water heater failures. Call (702) 567-9172.",
+    "24 hour emergency plumber in North Las Vegas, NV, including Aliante. Burst pipes, sewer backups, slab leaks, water heater failures. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/emergency-plumbing/",
   },
   openGraph: {
-    title: "Emergency Plumbing in North Las Vegas, NV",
+    title: "24 Hour Emergency Plumber in North Las Vegas | Red Carpet Plumbing",
     description:
-      "Emergency plumbing in North Las Vegas, NV, including Aliante. Burst pipes, slab leaks, sewer backups, water heater failures. Call (702) 567-9172.",
+      "24 hour emergency plumber in North Las Vegas, NV, including Aliante. Burst pipes, sewer backups, slab leaks, water heater failures. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",
@@ -50,8 +48,8 @@ export const metadata: Metadata = {
 // FAQ source of truth. The visible FAQ section AND the FAQPage JSON-LD schema
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
-// FLAG: VERIFY — Q2 (24-hour availability) and Q5 (transparent pricing) use
-// conservative wording per the approved brief; confirm before any expansion.
+// 24 hour emergency availability and transparent pricing are owner-confirmed
+// (Nov 1, 2026). Keep same-day wording qualified with "subject to scheduling".
 // ---------------------------------------------------------------------------
 const NLV_EMERGENCY_FAQS: FaqItem[] = [
   {
@@ -64,7 +62,20 @@ const NLV_EMERGENCY_FAQS: FaqItem[] = [
   {
     question: "Is there a 24-hour plumber in North Las Vegas, NV?",
     answer:
-      "Red Carpet Plumbing provides emergency plumbing service in North Las Vegas. Call (702) 567-9172 to reach our team.",
+      "Yes. Red Carpet Plumbing provides 24 hour emergency plumbing service in North Las Vegas, NV, 7 days a week, for homes and businesses. Call (702) 567-9172 to request emergency service.",
+    category: "emergency",
+  },
+  {
+    question:
+      "Which plumber handles sewage coming up through the drains as an emergency in North Las Vegas?",
+    answer:
+      "Red Carpet Plumbing handles sewer backups as emergencies in North Las Vegas. Stop using water in the home and call (702) 567-9172. A licensed plumber can clear the backup and evaluate the sewer line.",
+    category: "emergency",
+  },
+  {
+    question: "What should I do if a pipe bursts in my North Las Vegas home?",
+    answer:
+      "Shut off the water at the nearest shutoff valve or your main supply, then call (702) 567-9172 for emergency plumbing service. Stay clear of standing water near outlets and appliances until the water is off and the area is safe.",
     category: "emergency",
   },
   {
@@ -90,13 +101,20 @@ const NLV_EMERGENCY_FAQS: FaqItem[] = [
     question:
       "Do you offer emergency plumbing for commercial properties in North Las Vegas?",
     answer:
-      "Yes. Red Carpet Plumbing provides emergency plumbing service for residential and commercial properties throughout North Las Vegas, including businesses and facilities along Craig Road, Cheyenne Avenue, and the Losee Road industrial corridor.",
+      "Yes. Red Carpet Plumbing provides emergency plumbing service for residential and commercial properties throughout North Las Vegas, including restaurants and other businesses and facilities along Craig Road, Cheyenne Avenue, and the Losee Road industrial corridor.",
     category: "emergency",
   },
   {
     question: "Do you offer same-day emergency plumbing service in North Las Vegas?",
     answer:
       "Same-day emergency plumbing service is available in North Las Vegas, subject to scheduling. Call (702) 567-9172 to check same-day availability for your address.",
+    category: "emergency",
+  },
+  {
+    question:
+      "Do you provide emergency plumbing in Las Vegas as well as North Las Vegas?",
+    answer:
+      "Yes. Red Carpet Plumbing provides emergency plumbing service throughout Las Vegas and the Las Vegas Valley, including North Las Vegas. Call (702) 567-9172 to request emergency service for your address.",
     category: "emergency",
   },
 ];
@@ -106,22 +124,89 @@ const NLV_EMERGENCY_FAQS: FaqItem[] = [
 // are the North Las Vegas differentiators. The build brief used " -- "
 // separators; rendered with the label and a period per the project
 // no-double-hyphen copy rule. Apostrophes are safe in these string literals.
-const NLV_EMERGENCY_PROBLEMS = [
+const PROBLEM_LINK_CLASS =
+  "font-semibold text-brand-dark underline hover:text-brand-dark/70";
+
+const NLV_EMERGENCY_PROBLEMS: { label: string; body: ReactNode }[] = [
   {
     label: "Aging galvanized and copper lines in older central neighborhoods",
     body: "Homes built in the central and southern portions of North Las Vegas from the 1960s through the 1980s often still have original galvanized steel supply lines. These lines corrode from the inside out under Las Vegas Valley hard water conditions, reducing water pressure, discoloring water, and eventually failing. Copper lines from this era have been thinned by decades of mineral exposure. A line failure in one of these homes can cause significant water damage quickly.",
   },
   {
     label: "Aliante-area homes reaching the first major service cycle",
-    body: "Homes built in the Aliante master-planned community between 2000 and 2008 are now 16 to 25 years old. This age range is when original water heaters, supply line connections, and pressure regulators begin showing wear from North Las Vegas hard water. A water heater failure or supply line leak in an Aliante home is a genuine plumbing emergency.",
+    body: (
+      <>
+        Homes built in the{" "}
+        <Link
+          href="/north-las-vegas/aliante-area/emergency-plumbing/"
+          className={PROBLEM_LINK_CLASS}
+        >
+          Aliante
+        </Link>{" "}
+        master-planned community between 2000 and 2008 are now 16 to 25 years
+        old. This age range is when original{" "}
+        <Link
+          href="/north-las-vegas/water-heater-repair-installation/"
+          className={PROBLEM_LINK_CLASS}
+        >
+          water heaters
+        </Link>
+        , supply line connections, and pressure regulators begin showing wear
+        from North Las Vegas hard water. A water heater failure or supply line
+        leak in an Aliante home is a genuine plumbing emergency.
+      </>
+    ),
   },
   {
     label: "Slab leaks throughout North Las Vegas",
-    body: "Slab foundations and caliche soil conditions throughout North Las Vegas create the same under-slab pipe stress found across the Las Vegas Valley. Slab leaks can be silent for months before causing visible damage. When they do surface, the situation requires prompt attention.",
+    body: (
+      <>
+        Slab foundations and caliche soil conditions throughout North Las Vegas
+        create the same under-slab pipe stress found across the Las Vegas
+        Valley.{" "}
+        <Link
+          href="/north-las-vegas/slab-leak-detection-repair/"
+          className={PROBLEM_LINK_CLASS}
+        >
+          Slab leaks
+        </Link>{" "}
+        can be silent for months before causing visible damage. When they do
+        surface, the situation requires prompt attention.
+      </>
+    ),
   },
   {
-    label: "Sewer line backups",
-    body: "Sewage backing up into drains, toilets, or tubs is a health hazard requiring immediate service.",
+    label: "Burst pipes and active water leaks",
+    body: (
+      <>
+        A{" "}
+        <Link
+          href="/north-las-vegas/water-pipe-repair-replacement/"
+          className={PROBLEM_LINK_CLASS}
+        >
+          burst pipe
+        </Link>{" "}
+        can flood a home in minutes. If you can do so safely, shut off the
+        water at the nearest shutoff valve or at your main supply, then call an
+        emergency plumber right away.
+      </>
+    ),
+  },
+  {
+    label: "Sewer backups and sewage coming up through drains",
+    body: (
+      <>
+        Sewage coming up through drains, toilets, or tubs is a health hazard
+        requiring immediate service. Stop using water in the home and call for{" "}
+        <Link
+          href="/north-las-vegas/sewer-line-services/"
+          className={PROBLEM_LINK_CLASS}
+        >
+          emergency sewer backup service
+        </Link>{" "}
+        right away.
+      </>
+    ),
   },
   {
     label: "Gas line emergencies",
@@ -129,27 +214,43 @@ const NLV_EMERGENCY_PROBLEMS = [
   },
   {
     label: "Commercial and industrial plumbing emergencies",
-    body: "Businesses and facilities along the Craig Road corridor, Cheyenne Avenue, and the Losee Road industrial area face plumbing emergencies that require licensed commercial response, including floor drain failures, high-capacity water heater breakdowns, and main line issues.",
+    body: (
+      <>
+        Businesses and facilities along the Craig Road corridor, Cheyenne
+        Avenue, and the Losee Road industrial area face plumbing emergencies
+        that require{" "}
+        <Link
+          href="/north-las-vegas/commercial-plumbing/"
+          className={PROBLEM_LINK_CLASS}
+        >
+          licensed commercial response
+        </Link>
+        , including restaurant and commercial kitchen drain failures, floor
+        drain failures, high-capacity water heater breakdowns, and main line
+        issues.
+      </>
+    ),
   },
 ];
 
 // FLAG: VERIFY gas line scope before publishing.
 const NLV_EMERGENCY_SERVICES = [
-  "Burst pipe repair and water line repair",
-  "Sewer backup clearing and sewer line service",
+  "Emergency burst pipe repair and water line repair",
+  "Emergency sewer backup clearing and sewer line service",
   "Water heater emergency repair and replacement",
   "Slab leak detection and repair in North Las Vegas",
   "Gas line inspection and emergency repair",
   "Emergency drain clearing",
   "Toilet overflow and clog repair",
   "Water shutoff valve repair and replacement",
-  "Commercial and industrial plumbing emergency response",
+  "Same-day emergency plumbing service, subject to scheduling",
+  "Commercial, restaurant, and industrial plumbing emergency response",
 ];
 
 const EMERGENCY_STEPS = [
   {
     name: "Call Red Carpet Plumbing",
-    body: "Call (702) 567-9172. Describe what is happening and your North Las Vegas address. We will assess the urgency and dispatch a licensed plumber.",
+    body: "Call (702) 567-9172, day or night. Describe what is happening and your North Las Vegas address. We will assess the urgency and dispatch a licensed plumber.",
   },
   {
     name: "Plumber arrives and assesses",
@@ -165,13 +266,11 @@ const EMERGENCY_STEPS = [
   },
 ];
 
-// FLAG: VERIFY — license number and transparent-pricing items are source-site
-// claims per the approved brief.
 const WHY_CHOOSE = [
   "Local Las Vegas Valley plumbing company familiar with North Las Vegas neighborhoods, including Aliante and older central areas",
-  "Licensed plumbers (NV License #048585A)",
+  "Licensed Nevada plumbers (NV License #048585A)",
   "Transparent pricing with no hidden fees",
-  "Residential and commercial emergency service throughout North Las Vegas",
+  "24 hour residential and commercial emergency plumbing throughout North Las Vegas",
   "Familiar with North Las Vegas plumbing conditions: aging galvanized lines, hard water, slab construction, and caliche soil movement",
 ];
 
@@ -193,8 +292,9 @@ const RELATED_SERVICES = [
     href: "/north-las-vegas/water-heater-repair-installation/",
   },
   { label: "Slab Leak Detection and Repair", href: "/north-las-vegas/slab-leak-detection-repair/" },
-  { label: "Commercial Plumbing", href: "/commercial-plumbing/" },
-  { label: "Emergency Plumbing in Las Vegas", href: "/las-vegas/emergency-plumbing/" },
+  { label: "Sewer Line Services", href: "/north-las-vegas/sewer-line-services/" },
+  { label: "Commercial Plumbing", href: "/north-las-vegas/commercial-plumbing/" },
+  { label: "Emergency Plumber in Las Vegas, NV", href: "/las-vegas/emergency-plumbing/" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -203,9 +303,9 @@ const RELATED_SERVICES = [
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Emergency Plumbing in North Las Vegas, NV",
+  name: "24 Hour Emergency Plumber in North Las Vegas, NV",
   description:
-    "Red Carpet Plumbing provides emergency plumbing service in North Las Vegas, NV, including the Aliante area. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers.",
+    "Red Carpet Plumbing provides 24 hour emergency plumbing service in North Las Vegas, NV, including the Aliante area. Burst pipes, slab leaks, sewer backups, water heater failures. Licensed plumbers.",
   url: "https://redcarpetplumbing.com/north-las-vegas/emergency-plumbing/",
   isPartOf: {
     "@type": "WebSite",
@@ -245,7 +345,7 @@ const serviceSchema = {
   name: "Emergency Plumbing in North Las Vegas",
   serviceType: "Emergency Plumbing",
   description:
-    "Red Carpet Plumbing provides emergency plumbing service for homes and businesses in North Las Vegas, NV, including burst pipe repair, slab leak detection and repair, sewer backup clearing, water heater emergency service, and commercial plumbing emergency response.",
+    "Red Carpet Plumbing provides 24 hour emergency plumbing service for homes and businesses in North Las Vegas, NV, including burst pipe repair, slab leak detection and repair, sewer backup clearing, water heater emergency service, and commercial plumbing emergency response.",
   hoursAvailable: EMERGENCY_HOURS_AVAILABLE,
   provider: {
     "@type": "Plumber",
@@ -305,15 +405,15 @@ export default function NorthLasVegasEmergencyPlumbingPage() {
           headingLevel="h1"
           headline={
             <>
-              Emergency Plumbing
+              Emergency Plumber
               <br /> in North Las Vegas, NV
             </>
           }
-          subheading="Red Carpet Plumbing provides emergency plumbing service for homes and businesses throughout North Las Vegas, NV, including the Aliante area, central North Las Vegas, and the Craig Road and Cheyenne Avenue corridors. Whether you are dealing with a burst pipe, sewer backup, slab leak, water heater failure, or gas line issue, our licensed plumbers are ready to help. Call (702) 567-9172 now."
+          subheading="Red Carpet Plumbing is an emergency plumber serving homes and businesses throughout North Las Vegas, NV, including the Aliante area, central North Las Vegas, and the Craig Road and Cheyenne Avenue corridors. Emergency plumbing service is available 24 hours a day, 7 days a week. Whether you are dealing with a burst pipe, sewer backup, slab leak, water heater failure, or gas line issue, our licensed plumbers are ready to help. Call (702) 567-9172 now."
           trustItems={[
             "NV Licensed Plumbers, #048585A",
-            "Emergency Plumbing Service Available",
-            "Serving North Las Vegas and the Las Vegas Valley",
+            "24 Hour Emergency Plumber in North Las Vegas",
+            "Serving North Las Vegas and Las Vegas, NV",
             "Transparent Pricing, No Hidden Fees",
           ]}
           primaryCTA={{
@@ -346,10 +446,19 @@ export default function NorthLasVegasEmergencyPlumbingPage() {
                 line issues are the most common situations requiring immediate
                 professional attention. If you are unsure whether your situation
                 is an emergency, call a licensed plumber rather than waiting.
+                Red Carpet Plumbing provides emergency plumbing service in North
+                Las Vegas 24 hours a day, 7 days a week.
               </p>
               <p className="mt-4 text-base leading-7 text-brand-dark/70">
                 This page covers emergency plumbing specific to North Las Vegas.
-                For a broader overview, see our{" "}
+                Need an emergency plumber elsewhere in the valley? See our{" "}
+                <Link
+                  href="/las-vegas/emergency-plumbing/"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
+                >
+                  emergency plumber in Las Vegas
+                </Link>{" "}
+                page, or our general{" "}
                 <Link
                   href="/emergency-plumbing/"
                   className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
@@ -416,8 +525,9 @@ export default function NorthLasVegasEmergencyPlumbingPage() {
                   Have a Plumbing Emergency in North Las Vegas Right Now?
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-white/90">
-                  Do not wait on an active leak or backup. Call Red Carpet
-                  Plumbing and speak with a licensed plumber about your North Las
+                  Do not wait on an active leak or backup. Emergency plumbing
+                  service is available 24 hours a day, 7 days a week. Call Red
+                  Carpet Plumbing and speak with a licensed plumber about your North Las
                   Vegas emergency.
                 </p>
               </div>
@@ -525,8 +635,9 @@ export default function NorthLasVegasEmergencyPlumbingPage() {
                 Red Carpet Plumbing responds to plumbing emergencies throughout
                 North Las Vegas, NV, including the Aliante area, central North
                 Las Vegas, the Craig Road corridor, the Cheyenne area, the Carey
-                area, Losee Road, and surrounding neighborhoods. We also serve
-                the broader Las Vegas Valley.
+                area, Losee Road, and surrounding neighborhoods. We also provide
+                emergency plumbing across Las Vegas and the broader Las Vegas
+                Valley.
               </p>
             </div>
 
