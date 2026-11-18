@@ -565,6 +565,22 @@ export default function NorthLasVegasRepipingPage() {
                   North Las Vegas Aliante Area
                 </Link>
                 .
+                For the full list of plumbing services available in North Las Vegas, visit our{" "}
+                <Link
+                  href="/north-las-vegas-plumbing-services/"
+                  className={LINK_CLASS}
+                >
+                  North Las Vegas plumbing services
+                </Link>{" "}
+                hub.
+                For Las Vegas repiping service, visit our{" "}
+                <Link
+                  href="/las-vegas/repiping/"
+                  className={LINK_CLASS}
+                >
+                  Las Vegas repiping page
+                </Link>
+                .
               </p>
             </div>
           </div>

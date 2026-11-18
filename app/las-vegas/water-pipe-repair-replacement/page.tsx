@@ -222,7 +222,7 @@ const AREA_CHIPS = [
   "Southwest Las Vegas",
   "Eastern Las Vegas",
 ];
-const AREAS_CROSS_LINKS: LinkSeg[] = ["We also provide water pipe repair and replacement in ", { href: "/north-las-vegas/water-pipe-repair-replacement/", text: "North Las Vegas" }, " and ", { href: "/summerlin/water-pipe-repair-replacement/", text: "Summerlin" }, ". For every service we offer in your community, visit our ", { href: "/las-vegas-plumbing-services/", text: "Las Vegas plumbing services" }, " page."];
+const AREAS_CROSS_LINKS: LinkSeg[] = ["We also provide water pipe repair and replacement in ", { href: "/north-las-vegas/water-pipe-repair-replacement/", text: "North Las Vegas" }, " and ", { href: "/summerlin/water-pipe-repair-replacement/", text: "Summerlin" }, ". For every service we offer in your community, visit our ", { href: "/las-vegas-plumbing-services/", text: "Las Vegas plumbing services" }, " page. For Henderson water pipe repair and replacement, visit our ", { href: "/henderson/water-pipe-repair-replacement/", text: "Henderson water pipe repair page" }, "."];
 
 // FAQs. Single source for the visible accordion and the FAQPage schema.
 const FAQS: FaqItem[] = [

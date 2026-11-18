@@ -659,6 +659,14 @@ export default function LasVegasToiletPage() {
                   Las Vegas plumbing services
                 </Link>{" "}
                 hub.
+                For Henderson toilet repair and installation, visit our{" "}
+                <Link
+                  href="/henderson/toilet-repair-installation/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Henderson toilet repair page
+                </Link>
+                .
               </p>
             </div>
 

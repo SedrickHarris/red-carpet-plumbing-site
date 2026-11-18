@@ -707,6 +707,14 @@ export default function NorthLasVegasToiletRepairInstallationPage() {
                   North Las Vegas plumbing services
                 </Link>{" "}
                 hub.
+                For Las Vegas toilet repair and installation, visit our{" "}
+                <Link
+                  href="/las-vegas/toilet-repair-installation/"
+                  className={LINK_CLASS}
+                >
+                  Las Vegas toilet repair page
+                </Link>
+                .
               </p>
             </div>
             <ul className="mt-8 flex flex-wrap gap-3">

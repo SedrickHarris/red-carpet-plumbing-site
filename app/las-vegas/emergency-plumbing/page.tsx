@@ -522,6 +522,14 @@ export default function LasVegasEmergencyPlumbingPage() {
                 Las Vegas and the surrounding Las Vegas Valley. We also serve
                 Henderson, North Las Vegas, Paradise, Summerlin, Spring Valley,
                 Enterprise, Boulder City, Green Valley, and Lake Las Vegas.
+                For all Las Vegas plumbing services, visit our{" "}
+                <Link
+                  href="/las-vegas-plumbing-services/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Las Vegas plumbing services
+                </Link>{" "}
+                hub.
               </p>
             </div>
             <div className="mt-10 text-left">

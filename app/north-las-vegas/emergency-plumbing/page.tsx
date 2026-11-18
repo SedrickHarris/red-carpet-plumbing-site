@@ -638,6 +638,14 @@ export default function NorthLasVegasEmergencyPlumbingPage() {
                 area, Losee Road, and surrounding neighborhoods. We also provide
                 emergency plumbing across Las Vegas and the broader Las Vegas
                 Valley.
+                For the full list of plumbing services available in North Las Vegas, visit our{" "}
+                <Link
+                  href="/north-las-vegas-plumbing-services/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  North Las Vegas plumbing services
+                </Link>{" "}
+                hub.
               </p>
             </div>
 

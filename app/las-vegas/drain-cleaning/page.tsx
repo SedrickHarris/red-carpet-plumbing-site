@@ -565,6 +565,14 @@ export default function LasVegasDrainCleaningPage() {
                 provide drain cleaning throughout the Las Vegas Valley, including
                 Henderson, North Las Vegas, Summerlin, Paradise, Spring Valley,
                 and Enterprise.
+                For all Las Vegas plumbing services, visit our{" "}
+                <Link
+                  href="/las-vegas-plumbing-services/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Las Vegas plumbing services
+                </Link>{" "}
+                hub.
               </p>
             </div>
 

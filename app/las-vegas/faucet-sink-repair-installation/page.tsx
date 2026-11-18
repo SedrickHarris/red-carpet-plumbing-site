@@ -676,6 +676,14 @@ export default function LasVegasFaucetSinkPage() {
                   Las Vegas plumbing services
                 </Link>{" "}
                 hub.
+                For Henderson faucet and sink repair and installation, visit our{" "}
+                <Link
+                  href="/henderson/faucet-sink-repair-installation/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Henderson faucet and sink page
+                </Link>
+                .
               </p>
             </div>
 

@@ -543,6 +543,22 @@ export default function NorthLasVegasWaterPipeRepairReplacementPage() {
                   North Las Vegas Aliante Area
                 </Link>
                 .
+                For the full list of plumbing services available in North Las Vegas, visit our{" "}
+                <Link
+                  href="/north-las-vegas-plumbing-services/"
+                  className={LINK_CLASS}
+                >
+                  North Las Vegas plumbing services
+                </Link>{" "}
+                hub.
+                For Las Vegas water pipe repair and replacement, visit our{" "}
+                <Link
+                  href="/las-vegas/water-pipe-repair-replacement/"
+                  className={LINK_CLASS}
+                >
+                  Las Vegas water pipe repair page
+                </Link>
+                .
               </p>
             </div>
           </div>

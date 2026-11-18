@@ -698,6 +698,14 @@ export default function LasVegasGarbageDisposalPage() {
                   Las Vegas plumbing services
                 </Link>{" "}
                 hub.
+                For Henderson garbage disposal repair and installation, visit our{" "}
+                <Link
+                  href="/henderson/garbage-disposal-repair-installation/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Henderson garbage disposal page
+                </Link>
+                .
               </p>
             </div>
 

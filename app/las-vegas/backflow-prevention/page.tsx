@@ -700,6 +700,14 @@ export default function LasVegasBackflowPreventionPage() {
                   Las Vegas plumbing services
                 </Link>{" "}
                 hub.
+                For Henderson backflow prevention service, visit our{" "}
+                <Link
+                  href="/henderson/backflow-prevention/"
+                  className="font-semibold text-white underline underline-offset-4 hover:text-white/80"
+                >
+                  Henderson backflow prevention page
+                </Link>
+                .
               </p>
             </div>
 
