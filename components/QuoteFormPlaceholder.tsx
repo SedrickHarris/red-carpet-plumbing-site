@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Button } from "@/components/Button";
+import { FormHeading } from "@/components/FormHeadingLevelContext";
 import { useTurnstile } from "@/components/useTurnstile";
 import { LEAD_ENDPOINT } from "@/lib/lead-endpoint";
 
@@ -200,9 +201,9 @@ export function QuoteFormPlaceholder({
             />
           </svg>
         </div>
-        <h3 className="mt-6 text-center text-2xl font-semibold tracking-tight">
+        <FormHeading className="mt-6 text-center text-2xl font-semibold tracking-tight">
           Request Received
-        </h3>
+        </FormHeading>
         <p className="mt-3 text-center text-base text-brand-dark/80">
           Thank you. Red Carpet Plumbing will be in touch shortly. For immediate
           assistance call (702) 567-9172.
@@ -238,9 +239,9 @@ export function QuoteFormPlaceholder({
       aria-labelledby="quote-form-title"
     >
       <div aria-hidden="true" className="absolute left-0 top-0 h-1 w-16 rounded-r-full bg-brand-primary" />
-      <h3 id="quote-form-title" className="text-2xl font-bold tracking-tight">
+      <FormHeading id="quote-form-title" className="text-2xl font-bold tracking-tight">
         {title}
-      </h3>
+      </FormHeading>
       {subheading ? (
         <p className="mt-2 text-sm text-brand-muted">{subheading}</p>
       ) : null}

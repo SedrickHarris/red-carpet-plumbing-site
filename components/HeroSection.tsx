@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import { Button } from "@/components/Button";
 import { ItemIcon } from "@/components/ItemIcon";
+import { FormHeadingLevelContext } from "@/components/FormHeadingLevelContext";
 
 // How long each background slide holds before crossfading, in ms. Only applies
 // when `backgroundImages` carries more than one entry.
@@ -312,7 +313,12 @@ export function HeroSection({
 
         {hasSplit ? (
           <div className="w-full min-w-0 lg:max-w-xl lg:justify-self-end">
-            {formSlot}
+            {/* A form here sits one level below the hero headline. */}
+            <FormHeadingLevelContext.Provider
+              value={headingLevel === "h1" ? "h2" : "h3"}
+            >
+              {formSlot}
+            </FormHeadingLevelContext.Provider>
           </div>
         ) : null}
       </div>
