@@ -71,11 +71,11 @@ const SV_EMERGENCY_FAQS: FaqItem[] = [
       "Shut off the water at the nearest shutoff valve or at your main supply if a pipe has burst or a major leak is active. If you suspect a gas issue, leave the building and call 911 and your gas company. Do not use electrical switches near standing water. Call Red Carpet Plumbing at (702) 567-9172 to speak with a plumber while you wait.",
     category: "emergency",
   },
-  // FLAG: source-site claim (emergency availability) in this answer — verify before final launch.
+  // 24/7 emergency availability approved by Sedrick 2026-11-18.
   {
     question: "Is there a 24-hour plumber in Spring Valley, NV?",
     answer:
-      "Red Carpet Plumbing provides emergency plumbing service in Spring Valley. Call (702) 567-9172 to reach our team.",
+      "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service in Spring Valley, NV. Call (702) 567-9172 at any time for emergency response.",
     category: "emergency",
   },
   {

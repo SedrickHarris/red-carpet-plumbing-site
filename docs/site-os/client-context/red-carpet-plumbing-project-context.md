@@ -91,9 +91,9 @@ Client-confirmed. Safe for display copy and schema `areaServed` use.
 
 Client-confirmed. Safe for display copy use with the stated qualifier — do not drop the qualifier.
 
-**All services, all service areas (company-wide):** Same-day service is available, subject to scheduling. This applies to every plumbing service and every Tier 1/Tier 2 service area on this site, not only North Las Vegas or sewer line services. Use hedged phrasing ("subject to availability" / "subject to scheduling") on every page — never an unqualified same-day guarantee, and never "emergency" or "24/7" language unless that is separately confirmed for that specific service/page.
+**All services, all service areas (company-wide):** Same-day service is available, subject to scheduling. This applies to every plumbing service and every Tier 1/Tier 2 service area on this site, not only North Las Vegas or sewer line services. Use hedged phrasing ("subject to availability" / "subject to scheduling") on every page — never an unqualified same-day guarantee. 24/7 emergency plumbing service is approved for emergency plumbing pages across the Tier 1 service areas (approved by Sedrick 2026-11-18). Do not add emergency or 24/7 claims to non-emergency pages without separate approval.
 
-Confirmation history: first confirmed for North Las Vegas Sewer Line Services (this session), then confirmed as a company-wide, all-services claim (this session). Apply to all existing and future service and service-location pages using the FAQ template in `docs/site-os/master-prompts/prompts/` content-update guidance — see the same-day rollout build prompt.
+Confirmation history: first confirmed for North Las Vegas Sewer Line Services (this session), then confirmed as a company-wide, all-services claim (this session). Apply to all existing and future service and service-location pages using the FAQ template in `docs/site-os/master-prompts/prompts/` content-update guidance — see the same-day rollout build prompt. 24/7 emergency wording for emergency plumbing pages approved by Sedrick 2026-11-18 (consistent with the owner confirmation of Nov 1, 2026).
 
 ## Tier 2 Neighborhood Targets
 

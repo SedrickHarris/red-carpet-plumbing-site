@@ -228,9 +228,9 @@ const GV_EMERGENCY_FAQS: FaqItem[] = [
   },
   {
     question: "Is there a 24-hour plumber available in Green Valley?",
-    // FLAG: VERIFY 24/7 availability before final launch.
+    // 24/7 emergency availability approved by Sedrick 2026-11-18.
     answer:
-      "Red Carpet Plumbing provides emergency plumbing service for Green Valley and the Henderson area. Call (702) 567-9172 to reach a plumber.",
+      "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service for Green Valley and the Henderson area. Call (702) 567-9172 at any time for emergency response.",
     category: "emergency",
   },
   {

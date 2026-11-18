@@ -49,8 +49,7 @@ export const metadata: Metadata = {
 // FAQ source of truth. The visible FAQ section AND the FAQPage JSON-LD schema
 // both derive from this single array, guaranteeing a character-for-character
 // match. Do not edit one without the other.
-// FLAG: VERIFY — Q2 (24-hour availability) and Q4 (transparent pricing) use
-// conservative wording per the approved brief; confirm before any expansion.
+// 24/7 emergency availability approved by Sedrick 2026-11-18. Transparent pricing wording unchanged.
 // ---------------------------------------------------------------------------
 const HENDERSON_EMERGENCY_FAQS: FaqItem[] = [
   {
@@ -63,7 +62,7 @@ const HENDERSON_EMERGENCY_FAQS: FaqItem[] = [
   {
     question: "Is there a 24-hour plumber in Henderson, NV?",
     answer:
-      "Red Carpet Plumbing provides emergency plumbing service in Henderson. Call (702) 567-9172 to reach our team.",
+      "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service in Henderson, NV. Call (702) 567-9172 at any time for emergency response.",
     category: "emergency",
   },
   {

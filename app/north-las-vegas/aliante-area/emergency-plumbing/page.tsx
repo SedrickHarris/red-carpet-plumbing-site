@@ -226,10 +226,10 @@ const ALIANTE_EMERGENCY_FAQS: FaqItem[] = [
     category: "the-service",
   },
   {
-    // FLAG: VERIFY 24/7 availability before publishing.
+    // 24/7 emergency availability approved by Sedrick 2026-11-18.
     question: "Is there an emergency plumber available in the Aliante area?",
     answer:
-      "Red Carpet Plumbing provides emergency plumbing service for homes in the Aliante area of North Las Vegas. Call (702) 567-9172 to reach our team and describe your situation.",
+      "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service for homes in the Aliante area of North Las Vegas. Call (702) 567-9172 at any time for emergency response.",
     category: "emergency",
   },
   {

@@ -24,17 +24,17 @@ import { EMERGENCY_HOURS_AVAILABLE } from "@/lib/emergency-hours";
 // page does not assert rating, review count, or "40 years".
 
 export const metadata: Metadata = {
-  title: "24 Hour Emergency Plumber in North Las Vegas | Red Carpet Plumbing",
+  title: "Emergency Plumber in North Las Vegas | Red Carpet Plumbing",
   description:
-    "24 hour emergency plumber in North Las Vegas, NV, including Aliante. Burst pipes, sewer backups, slab leaks, water heater failures. Call (702) 567-9172.",
+    "24/7 emergency plumber in North Las Vegas, NV, including Aliante. Burst pipes, sewer backups, slab leaks, water heater failures. Call (702) 567-9172.",
   alternates: {
     canonical:
       "https://redcarpetplumbing.com/north-las-vegas/emergency-plumbing/",
   },
   openGraph: {
-    title: "24 Hour Emergency Plumber in North Las Vegas | Red Carpet Plumbing",
+    title: "Emergency Plumber in North Las Vegas | Red Carpet Plumbing",
     description:
-      "24 hour emergency plumber in North Las Vegas, NV, including Aliante. Burst pipes, sewer backups, slab leaks, water heater failures. Call (702) 567-9172.",
+      "24/7 emergency plumber in North Las Vegas, NV, including Aliante. Burst pipes, sewer backups, slab leaks, water heater failures. Call (702) 567-9172.",
     url: "https://redcarpetplumbing.com/north-las-vegas/emergency-plumbing/",
     siteName: "Red Carpet Plumbing",
     locale: "en_US",

@@ -204,10 +204,10 @@ const LLV_EMERGENCY_FAQS: FaqItem[] = [
     category: "emergency",
   },
   {
-    // FLAG: VERIFY 24/7 availability before final launch.
+    // 24/7 emergency availability approved by Sedrick 2026-11-18.
     question: "Is there a 24-hour plumber available in Lake Las Vegas?",
     answer:
-      "Red Carpet Plumbing provides emergency plumbing service for Lake Las Vegas and the Henderson area. Call (702) 567-9172 to reach a plumber.",
+      "Yes. Red Carpet Plumbing provides 24/7 emergency plumbing service for Lake Las Vegas and the Henderson area. Call (702) 567-9172 at any time for emergency response.",
     category: "emergency",
   },
   {
