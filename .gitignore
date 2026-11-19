@@ -65,3 +65,9 @@ logs/
 # --- Project-specific (temporary) ---
 # Raw asset dump pending dedupe and split between public/images and docs/site-os/inputs.
 /Images/
+
+# --- QA review screenshots (large, regenerable) ---
+# Reports in docs/site-os/qa/ may cite these, but the images themselves stay local.
+docs/site-os/qa/*.png
+docs/site-os/qa/*.jpg
+docs/site-os/qa/*.pdf

@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-09
 
-These three files are in `public/images/company/vehicles/`. They are not referenced anywhere in the site code and must stay unreferenced. Do not use them unless the owner approves a crop or a retake.
+These three files are in `private-assets/held-back-images/`. They are not referenced anywhere in the site code and must stay unreferenced. Do not use them unless the owner approves a crop or a retake.
 
 | File | Reason held back |
 |:-|:-|
