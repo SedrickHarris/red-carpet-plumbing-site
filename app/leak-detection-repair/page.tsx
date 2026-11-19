@@ -14,6 +14,8 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { ReviewCarousel } from "@/components/ReviewCarousel";
+import { getReviewsByIds, REVIEW_SET_LEAK_DETECTION } from "@/lib/reviews";
 
 export const metadata: Metadata = {
   title: "Leak Detection and Repair in Las Vegas, NV",
@@ -726,6 +728,13 @@ export default function LeakDetectionAndRepairPage() {
             </SectionReveal>
           </div>
         </section>
+
+        {/* REVIEWS: topic-matched customer reviews */}
+        <ReviewCarousel
+          reviews={getReviewsByIds(REVIEW_SET_LEAK_DETECTION)}
+          heading="What Customers Say About Leak Repairs"
+          subcopy="Selected reviews customers posted on Google, shown as written."
+        />
 
         {/* SECTION 10: FAQ */}
         <FaqSection

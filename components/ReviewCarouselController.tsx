@@ -70,10 +70,16 @@ const CONTROL_CLASS =
 type ReviewCarouselControllerProps = {
   // One server-rendered node per review, in display order.
   slides: ReactNode[];
+  // When false the carousel never advances on its own and the Pause / Play
+  // button is omitted, because nothing moves that a visitor could pause.
+  autoAdvance?: boolean;
+  ariaLabel?: string;
 };
 
 export function ReviewCarouselController({
   slides,
+  autoAdvance = true,
+  ariaLabel = "Customer reviews from Google",
 }: ReviewCarouselControllerProps) {
   const total = slides.length;
   const hydrated = useHydrated();
@@ -91,7 +97,7 @@ export function ReviewCarouselController({
 
   // null means the visitor has not chosen. Reduced motion then starts paused.
   const [userPaused, setUserPaused] = useState<boolean | null>(null);
-  const paused = userPaused ?? reducedMotion;
+  const paused = !autoAdvance || (userPaused ?? reducedMotion);
 
   const [hovering, setHovering] = useState(false);
   const [focusWithin, setFocusWithin] = useState(false);
@@ -125,6 +131,18 @@ export function ReviewCarouselController({
 
   const goTo = (next: number) => setRawPage((next + pageCount) % pageCount);
 
+  // Controls are pointless when everything fits on one page. CSS decides, so
+  // the server HTML and the hydrated page agree at every width: 1 review never
+  // needs controls, 2 fit one page from md up, 3 fit one page from lg up.
+  const controlsHiddenClass =
+    total <= 1
+      ? "max-sm:hidden sm:hidden"
+      : total <= 2
+        ? "md:hidden"
+        : total <= 3
+          ? "lg:hidden"
+          : "";
+
   const first = page * pageSize + 1;
   const last = Math.min((page + 1) * pageSize, total);
 
@@ -133,7 +151,7 @@ export function ReviewCarouselController({
       ref={regionRef}
       role="region"
       aria-roledescription="carousel"
-      aria-label="Customer reviews from Google"
+      aria-label={ariaLabel}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
       onFocus={() => setFocusWithin(true)}
@@ -175,7 +193,9 @@ export function ReviewCarouselController({
         })}
       </div>
 
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+      <div
+        className={`mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between ${controlsHiddenClass}`.trim()}
+      >
         <div className="flex flex-wrap items-center gap-3">
           <button
             type="button"
@@ -211,6 +231,7 @@ export function ReviewCarouselController({
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 3l5 5-5 5" />
             </svg>
           </button>
+          {autoAdvance ? (
           <button
             type="button"
             className={CONTROL_CLASS}
@@ -222,6 +243,7 @@ export function ReviewCarouselController({
           >
             {paused ? "Play" : "Pause"}
           </button>
+          ) : null}
           <p className="text-sm text-brand-muted">
             {`Showing ${first} to ${last} of ${total}`}
           </p>

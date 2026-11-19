@@ -132,3 +132,23 @@ export const reviews: Review[] = [
 export const carouselReviews: Review[] = reviews
   .filter((r) => r.carouselOrder !== undefined)
   .sort((a, b) => (a.carouselOrder as number) - (b.carouselOrder as number));
+
+// Returns reviews in the order given. Throws at build time when an id is
+// missing from the data or listed twice, so a page can never ship a wrong set.
+export function getReviewsByIds(ids: string[]): Review[] {
+  const seen = new Set<string>();
+  return ids.map((id) => {
+    if (seen.has(id)) throw new Error(`getReviewsByIds: duplicate review id "${id}"`);
+    seen.add(id);
+    const review = reviews.find((r) => r.id === id);
+    if (!review) throw new Error(`getReviewsByIds: unknown review id "${id}"`);
+    return review;
+  });
+}
+
+// Topic page sets. These pages use name-free reviews only.
+export const REVIEW_SET_CONTACT = ["tim-h", "monica-p", "william-b"];
+export const REVIEW_SET_ABOUT = ["jackie-m", "john-r", "rondaelizabeth1", "kimberly-g", "marcel-k", "claudia-h"];
+export const REVIEW_SET_WATER_HEATER = ["chrissy-t", "victoria-k", "brooke-h", "yolanda-d", "tom-p"];
+export const REVIEW_SET_EMERGENCY = ["jessica-r", "steve-b", "tasha-r", "patrick-j", "diane-c"];
+export const REVIEW_SET_LEAK_DETECTION = ["lou-r", "gina-y", "gabriel-h-barbershop", "jessica-r", "tom-p"];

@@ -1,26 +1,41 @@
 import Link from "next/link";
 import { ReviewCard } from "@/components/ReviewCard";
 import { ReviewCarouselController } from "@/components/ReviewCarouselController";
-import { carouselReviews } from "@/lib/reviews";
+import type { Review } from "@/lib/reviews";
 
-// Homepage review section. The cards render on the server, so every review is
-// in the HTML on first load. Only the controls and timer are client code.
-export function ReviewCarousel() {
+type ReviewCarouselProps = {
+  reviews: Review[];
+  heading: string;
+  subcopy: string;
+  autoAdvance?: boolean;
+  ariaLabel?: string;
+};
+
+// Review section used on the homepage and on topic pages. The cards render on
+// the server, so every review is in the HTML on first load. Only the controls
+// and timer are client code. The "Read all reviews" link is on every use.
+export function ReviewCarousel({
+  reviews,
+  heading,
+  subcopy,
+  autoAdvance = true,
+  ariaLabel,
+}: ReviewCarouselProps) {
   return (
     <section className="bg-brand-surface-warm">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
         <div className="max-w-3xl text-left">
           <h2 className="text-3xl tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
-            What Las Vegas Customers Say About Red Carpet Plumbing
+            {heading}
           </h2>
-          <p className="mt-6 text-lg leading-8 text-brand-dark/80">
-            Selected reviews customers posted on Google, shown as written.
-          </p>
+          <p className="mt-6 text-lg leading-8 text-brand-dark/80">{subcopy}</p>
         </div>
 
         <div className="mt-12">
           <ReviewCarouselController
-            slides={carouselReviews.map((review) => (
+            autoAdvance={autoAdvance}
+            ariaLabel={ariaLabel}
+            slides={reviews.map((review) => (
               <ReviewCard key={review.id} review={review} />
             ))}
           />

@@ -15,6 +15,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
+import { carouselReviews } from "@/lib/reviews";
 
 export const metadata: Metadata = {
   title: "Plumbing Company in Las Vegas, NV | Red Carpet Plumbing",
@@ -700,7 +701,11 @@ export default function Home() {
         </section>
 
         {/* SECTION 7.5: CUSTOMER REVIEWS CAROUSEL */}
-        <ReviewCarousel />
+        <ReviewCarousel
+          reviews={carouselReviews}
+          heading="What Las Vegas Customers Say About Red Carpet Plumbing"
+          subcopy="Selected reviews customers posted on Google, shown as written."
+        />
 
         {/* SECTION 8: FAQ */}
         <FaqSection

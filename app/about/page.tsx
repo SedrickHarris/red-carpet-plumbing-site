@@ -12,6 +12,8 @@ import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
 import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
+import { ReviewCarousel } from "@/components/ReviewCarousel";
+import { getReviewsByIds, REVIEW_SET_ABOUT } from "@/lib/reviews";
 
 export const metadata: Metadata = {
   title:
@@ -542,6 +544,13 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        {/* REVIEWS: topic-matched customer reviews */}
+        <ReviewCarousel
+          reviews={getReviewsByIds(REVIEW_SET_ABOUT)}
+          heading="What Customers Say About Working With Us"
+          subcopy="Selected reviews customers posted on Google, shown as written."
+        />
 
         {/* SECTION 8: FAQS */}
         <FaqSection

@@ -16,6 +16,8 @@ import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
 import { EMERGENCY_HOURS_AVAILABLE } from "@/lib/emergency-hours";
+import { ReviewCarousel } from "@/components/ReviewCarousel";
+import { getReviewsByIds, REVIEW_SET_EMERGENCY } from "@/lib/reviews";
 
 export const metadata: Metadata = {
   title: "Emergency Plumber in Las Vegas, NV | Red Carpet Plumbing",
@@ -725,6 +727,13 @@ export default function EmergencyPlumbingPage() {
             </SectionReveal>
           </div>
         </section>
+
+        {/* REVIEWS: topic-matched customer reviews */}
+        <ReviewCarousel
+          reviews={getReviewsByIds(REVIEW_SET_EMERGENCY)}
+          heading="What Customers Say About Fast Response"
+          subcopy="Selected reviews customers posted on Google, shown as written."
+        />
 
         {/* SECTION 10: FAQ */}
         <FaqSection

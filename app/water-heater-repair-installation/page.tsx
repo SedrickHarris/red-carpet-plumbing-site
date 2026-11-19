@@ -14,6 +14,8 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { ReviewCarousel } from "@/components/ReviewCarousel";
+import { getReviewsByIds, REVIEW_SET_WATER_HEATER } from "@/lib/reviews";
 
 export const metadata: Metadata = {
   title:
@@ -750,6 +752,13 @@ export default function WaterHeaterRepairInstallationPage() {
             </SectionReveal>
           </div>
         </section>
+
+        {/* REVIEWS: topic-matched customer reviews */}
+        <ReviewCarousel
+          reviews={getReviewsByIds(REVIEW_SET_WATER_HEATER)}
+          heading="What Customers Say About Water Heater Service"
+          subcopy="Selected reviews customers posted on Google, shown as written."
+        />
 
         {/* SECTION 10: FAQ */}
         <FaqSection
