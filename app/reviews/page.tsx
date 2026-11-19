@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/Button";
+import { HeroSection } from "@/components/HeroSection";
 import { JsonLd } from "@/components/JsonLd";
 import { ReviewCard } from "@/components/ReviewCard";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -94,37 +95,38 @@ export default function ReviewsPage() {
       <JsonLd data={webPageSchema} />
       <SiteHeader />
       <main id="main" className="flex-1 bg-white">
+        <HeroSection
+          breadcrumbs={
+            <Breadcrumbs
+              trail={[{ label: "Home", href: "/" }, { label: "Reviews" }]}
+              variant="dark"
+            />
+          }
+          headingLevel="h1"
+          headline="Red Carpet Plumbing Reviews in Las Vegas, NV"
+          subheading="These are reviews Las Vegas customers have posted about Red Carpet Plumbing on Google. They are shown here as written, with spelling and punctuation left as the customer wrote them. We show selected five-star reviews on this page. You can read every review, including all ratings, on our Google Business Profile."
+          accentWidth="sm"
+          backgroundImage={{
+            src: "/images/reviews/red-carpet-plumbing-las-vegas-customer-reviews-hero-16x9.webp",
+          }}
+        />
+
         <div className="bg-brand-surface-warm">
-          <Breadcrumbs
-            trail={[{ label: "Home", href: "/" }, { label: "Reviews" }]}
-          />
-          <div className="mx-auto max-w-7xl px-4 pb-12 pt-4 sm:px-6 lg:px-10 xl:px-12">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl tracking-tight text-brand-dark sm:text-5xl">
-                Red Carpet Plumbing Reviews in Las Vegas, NV
-              </h1>
-              <p className="mt-6 text-base leading-7 text-brand-dark/80 sm:text-lg sm:leading-8">
-                These are reviews Las Vegas customers have posted about Red
-                Carpet Plumbing on Google. They are shown here as written, with
-                spelling and punctuation left as the customer wrote them. We
-                show selected five-star reviews on this page. You can read every
-                review, including all ratings, on our Google Business Profile.
+          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-10 xl:px-12">
+            {GOOGLE_PROFILE_URL ? (
+              <p className="max-w-3xl">
+                <a
+                  href={GOOGLE_PROFILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={TEXT_LINK_CLASS}
+                  aria-label="See all reviews on Google (opens in a new tab)"
+                >
+                  See all reviews on Google
+                </a>
               </p>
-              {GOOGLE_PROFILE_URL ? (
-                <p className="mt-4">
-                  <a
-                    href={GOOGLE_PROFILE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={TEXT_LINK_CLASS}
-                    aria-label="See all reviews on Google (opens in a new tab)"
-                  >
-                    See all reviews on Google
-                  </a>
-                </p>
-              ) : null}
-            </div>
-            <div className="mt-8 max-w-3xl rounded-r-xl border-l-4 border-brand-primary bg-white p-6 sm:p-8">
+            ) : null}
+            <div className="mt-6 max-w-3xl rounded-r-xl border-l-4 border-brand-primary bg-white p-6 sm:p-8">
               <p className="text-base leading-7 text-brand-dark/80">
                 Red Carpet Plumbing is a licensed plumbing company serving Las
                 Vegas, NV. Customers who review the company on Google describe
