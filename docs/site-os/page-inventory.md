@@ -1,8 +1,8 @@
 # Red Carpet Plumbing Page Inventory
 
-- **Generated:** 2026-11-18
+- **Generated:** 2026-11-19
 - **Sources:** `docs/seo/route-manifest.json` (routes and source files) and `out/` (titles, indexability, sitemap)
-- **Branch head when generated:** `49b4865 fix: answer 24-hour plumber FAQs with 24/7 wording and shorten NLV emergency title`
+- **Branch head when generated:** `19a2212 fix(images): unify card alt text so each image path has one alt sitewide`
 - **Regenerate:** run `npm run build`, then `node scripts/gen-page-inventory.mjs`. The file is overwritten; do not hand-edit it.
 
 ## Inventory Summary

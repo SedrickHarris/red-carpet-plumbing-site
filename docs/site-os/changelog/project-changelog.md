@@ -14,3 +14,6 @@
 
 - For work after initial setup, see `docs/site-os/implementation-log.md`.
 - For the current list of routes, see `docs/site-os/page-inventory.md`.
+- 2026-11-18: repo hygiene, removed unused `public/` files and untracked QA screenshots (`9ca7907`).
+- 2026-11-18: `/thank-you/` footer headings changed to H2 to remove a skipped heading level (`3ed0445`).
+- 2026-11-18: one alt string per image path sitewide (`19a2212`).
