@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/Button";
@@ -173,10 +174,25 @@ export default function ReviewsPage() {
         ) : null}
 
         {GOOGLE_REVIEW_URL ? (
-          <section className="bg-white">
+          <section className="relative isolate overflow-hidden bg-brand-charcoal text-white">
+            {/* Background photo is decorative: empty alt inside an aria-hidden
+                wrapper behind the sitewide /65 scrim, matching the homepage
+                photo sections. Below the fold, so no priority. */}
+            <div className="absolute inset-0 -z-10" aria-hidden="true">
+              <Image
+                src="/images/reviews/red-carpet-plumbing-google-review-final-cta-background-las-vegas-16x9.webp"
+                alt=""
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-brand-charcoal/65" />
+            </div>
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 xl:px-12">
-              <h2 className={H2_CLASS}>Leave a Google Review</h2>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-brand-dark/80">
+              <h2 className="text-3xl tracking-tight text-white sm:text-4xl">
+                Leave a Google Review
+              </h2>
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-white/90">
                 Worked with Red Carpet Plumbing? Your review helps other Las
                 Vegas homeowners choose a plumber.
               </p>
@@ -186,7 +202,7 @@ export default function ReviewsPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Leave a Google review (opens in a new tab)"
-                  className="inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
+                  className="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-brand-charcoal shadow-sm transition-colors hover:bg-brand-surface-alt focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   Leave a Google review
                 </a>
