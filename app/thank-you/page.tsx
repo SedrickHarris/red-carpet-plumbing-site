@@ -91,7 +91,7 @@ export default function ThankYou() {
         </section>
       </main>
 
-      <SiteFooter />
+      <SiteFooter headingLevel="h2" />
     </>
   );
 }

@@ -61,7 +61,24 @@ function FooterItem({ link }: { link: FooterLink }) {
   );
 }
 
-export function SiteFooter() {
+type SiteFooterProps = {
+  // Level of the three column headings. Pages that have an h2 above the footer
+  // keep the default h3. A page with no h2 of its own (for example a short
+  // confirmation page) passes "h2" so the outline does not skip from h1 to h3.
+  headingLevel?: "h2" | "h3";
+};
+
+export function SiteFooter({ headingLevel = "h3" }: SiteFooterProps) {
+  const Heading = headingLevel;
+  // globals.css gives bare h1 and h2 the display font, a 1.1 line height and a
+  // tighter letter spacing, and gives h3 weight 600. Those rules are unlayered,
+  // so they beat normal Tailwind utilities. The important utilities restore
+  // what these headings compute as h3 (body font, weight 600, 20px line height
+  // from text-sm, tracking-wider) so the tag change is invisible.
+  const headingClass =
+    headingLevel === "h2"
+      ? "text-sm font-semibold uppercase tracking-wider text-white font-sans! font-semibold! leading-5! tracking-wider!"
+      : "text-sm font-semibold uppercase tracking-wider text-white";
   return (
     <footer className="border-t border-white/30 bg-brand-charcoal text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10 xl:px-12">
@@ -87,9 +104,9 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <Heading className={headingClass}>
               Plumbing Services
-            </h3>
+            </Heading>
             <ul className="mt-4 space-y-2">
               {CORE_SERVICES.map((service) => (
                 <li key={service.href}>
@@ -100,9 +117,9 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <Heading className={headingClass}>
               Service Areas
-            </h3>
+            </Heading>
             <ul className="mt-4 space-y-2">
               {TIER_1_LOCATIONS.map((location) => (
                 <li key={location.href}>
@@ -113,9 +130,9 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <Heading className={headingClass}>
               Get In Touch
-            </h3>
+            </Heading>
             <ul className="mt-4 space-y-2">
               {GET_IN_TOUCH.map((link) => (
                 <li key={link.href}>
