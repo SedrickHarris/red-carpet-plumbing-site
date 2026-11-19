@@ -152,3 +152,20 @@ export const REVIEW_SET_ABOUT = ["jackie-m", "john-r", "rondaelizabeth1", "kimbe
 export const REVIEW_SET_WATER_HEATER = ["chrissy-t", "victoria-k", "brooke-h", "yolanda-d", "tom-p"];
 export const REVIEW_SET_EMERGENCY = ["jessica-r", "steve-b", "tasha-r", "patrick-j", "diane-c"];
 export const REVIEW_SET_LEAK_DETECTION = ["lou-r", "gina-y", "gabriel-h-barbershop", "jessica-r", "tom-p"];
+
+// Hub page sets. Company-wide, name-free reviews shown on service and location hubs.
+export const REVIEW_SET_PLUMBING_SERVICES = getReviewsByIds([
+  "chrissy-t", "sheila-c", "rick-k", "gabriel-h-barbershop", "jackie-m", "gina-y",
+]);
+export const REVIEW_SET_SERVICE_AREAS = getReviewsByIds([
+  "marcel-k", "gary-l", "john-r", "kimberly-g", "claudia-h", "bobs",
+]);
+export const REVIEW_SET_HUB_A = getReviewsByIds([
+  "tim-h", "brooke-h", "jerylann-g", "patrick-j", "sheila-c",
+]);
+export const REVIEW_SET_HUB_B = getReviewsByIds([
+  "marcel-k", "victoria-k", "steve-b", "bobs", "claudia-h",
+]);
+export const REVIEW_SET_HUB_C = getReviewsByIds([
+  "jose-g", "chrissy-t", "tasha-r", "tom-p", "doris-l",
+]);

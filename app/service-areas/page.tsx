@@ -14,6 +14,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { ReviewCarousel } from "@/components/ReviewCarousel";
+import { REVIEW_SET_SERVICE_AREAS } from "@/lib/reviews";
 
 export const metadata: Metadata = {
   title:
@@ -677,6 +679,13 @@ export default function ServiceAreasPage() {
             </ul>
           </div>
         </section>
+
+        {/* REVIEWS: company-wide customer reviews */}
+        <ReviewCarousel
+          reviews={REVIEW_SET_SERVICE_AREAS}
+          heading="Customer Reviews From Google"
+          subcopy="Selected reviews customers posted on Google, shown as written."
+        />
 
         {/* SECTION 10: FAQ */}
         <FaqSection

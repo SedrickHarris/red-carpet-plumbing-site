@@ -18,6 +18,8 @@ import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
 import { GOOGLE_AGGREGATE_RATING } from "@/lib/google-rating";
+import { ReviewCarousel } from "@/components/ReviewCarousel";
+import { REVIEW_SET_HUB_B } from "@/lib/reviews";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Summerlin, NV | Red Carpet Plumbing",
@@ -622,6 +624,13 @@ export default function SummerlinPlumbingServicesPage() {
             </div>
           </div>
         </section>
+
+        {/* REVIEWS: company-wide customer reviews */}
+        <ReviewCarousel
+          reviews={REVIEW_SET_HUB_B}
+          heading="What Customers Say About Red Carpet Plumbing"
+          subcopy="Selected reviews customers posted on Google, shown as written."
+        />
 
         {/* SECTION 8: FAQ */}
         <FaqSection

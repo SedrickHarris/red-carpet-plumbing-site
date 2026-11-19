@@ -14,6 +14,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { FaqSection } from "@/components/FaqSection";
 import { buildFaqPageSchema, type FaqItem } from "@/lib/faq";
 import { OG_IMAGES } from "@/lib/social-image";
+import { ReviewCarousel } from "@/components/ReviewCarousel";
+import { REVIEW_SET_PLUMBING_SERVICES } from "@/lib/reviews";
 
 export const metadata: Metadata = {
   title: "Plumbing Services in Las Vegas, NV | Red Carpet Plumbing",
@@ -581,6 +583,13 @@ export default function PlumbingServicesPage() {
             </ul>
           </div>
         </section>
+
+        {/* REVIEWS: company-wide customer reviews */}
+        <ReviewCarousel
+          reviews={REVIEW_SET_PLUMBING_SERVICES}
+          heading="What Customers Say About Our Plumbing Work"
+          subcopy="Selected reviews customers posted on Google, shown as written."
+        />
 
         {/* SECTION 10: FAQ */}
         <FaqSection
