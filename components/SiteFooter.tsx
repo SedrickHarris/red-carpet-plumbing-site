@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GOOGLE_REVIEW_URL } from "@/lib/reviews";
 
 type FooterLink = { label: string; href: string; built: boolean };
 
@@ -39,6 +40,7 @@ const TIER_1_LOCATIONS: FooterLink[] = [
 const GET_IN_TOUCH: FooterLink[] = [
   { label: "Contact", href: "/contact/", built: true },
   { label: "About", href: "/about/", built: true },
+  { label: "Reviews", href: "/reviews/", built: true },
   { label: "All Service Areas", href: "/service-areas/", built: true },
   { label: "All Plumbing Services", href: "/plumbing-services/", built: true },
 ];
@@ -140,6 +142,19 @@ export function SiteFooter({ headingLevel = "h3" }: SiteFooterProps) {
                 </li>
               ))}
             </ul>
+            {GOOGLE_REVIEW_URL ? (
+              <p className="mt-2 text-sm">
+                <a
+                  href={GOOGLE_REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Leave us a Google review (opens in a new tab)"
+                  className="block text-white/80 transition-colors hover:text-white"
+                >
+                  Leave us a Google review
+                </a>
+              </p>
+            ) : null}
             <p className="mt-4 text-sm">
               <a
                 href="tel:+17025679172"

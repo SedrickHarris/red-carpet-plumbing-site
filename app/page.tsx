@@ -7,6 +7,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { SectionImageSplit } from "@/components/SectionImageSplit";
 import { JsonLd } from "@/components/JsonLd";
 import { QuoteFormPlaceholder } from "@/components/QuoteFormPlaceholder";
+import { ReviewCarousel } from "@/components/ReviewCarousel";
 import { SectionReveal, SectionRevealItem } from "@/components/SectionReveal";
 import { ServiceCard } from "@/components/ServiceCard";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -697,6 +698,9 @@ export default function Home() {
             </SectionImageSplit>
           </div>
         </section>
+
+        {/* SECTION 7.5: CUSTOMER REVIEWS CAROUSEL */}
+        <ReviewCarousel />
 
         {/* SECTION 8: FAQ */}
         <FaqSection

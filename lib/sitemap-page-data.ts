@@ -28,6 +28,7 @@ const EXCLUDED_ROUTES = new Set(["/thank-you", "/sitemap"]);
 const MAIN_PAGES: SitemapLink[] = [
   { href: "/", label: "Home" },
   { href: "/about/", label: "About" },
+  { href: "/reviews/", label: "Reviews" },
   { href: "/plumbing-services/", label: "Plumbing Services" },
   { href: "/service-areas/", label: "Service Areas" },
   { href: "/contact/", label: "Contact" },

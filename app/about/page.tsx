@@ -301,6 +301,16 @@ export default function AboutPage() {
                 repiping, and gas line service, we handle the full range
                 of residential and commercial plumbing needs.
               </p>
+              <p className="text-base leading-7 text-brand-dark/80 sm:text-lg">
+                Read what Las Vegas customers say about our work on our{" "}
+                <Link
+                  href="/reviews/"
+                  className="font-semibold text-brand-dark underline hover:text-brand-dark/70"
+                >
+                  reviews page
+                </Link>
+                .
+              </p>
             </div>
           </div>
         </section>
