@@ -145,7 +145,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/water-heater/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-water-heater-emergency-card.webp",
-    imageAlt: "Water dripping from a tank water heater's drain valve",
+    imageAlt: "Water falling from a brass fitting on the lower side of a tank water heater into a drain pan",
   },
   {
     title: "Slab Leak Emergency",
@@ -154,7 +154,7 @@ const EMERGENCY_SERVICE_TYPES: ServiceTypeCard[] = [
     href: "/emergency-plumbing/slab-leak/",
     image:
       "/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-slab-leak-emergency-card.webp",
-    imageAlt: "Leak detection tools laid out on a wet tile floor",
+    imageAlt: "Leak detection tools and pressure gauges laid out on wet tile",
   },
   {
     title: "Gas Line Emergency",
@@ -574,7 +574,7 @@ export default function EmergencyPlumbingPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-emergency-plumbing-card.webp"
-              alt="Water spraying from a leaking under-sink drain connection beside a plumber's tool bag"
+              alt="Water spraying under a sink and pooling on the floor"
             >
             <SectionReveal>
               <SectionRevealItem>

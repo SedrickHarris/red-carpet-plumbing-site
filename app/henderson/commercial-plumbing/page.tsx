@@ -204,7 +204,7 @@ const COMMERCIAL_SERVICES: {
     href: "/backflow-prevention/",
     image:
       "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-pipe-valve-detail-las-vegas.webp",
-    imageAlt: "Close view of brass ball valves and a gauge on copper",
+    imageAlt: "Brass and copper valve assembly with gauges in a commercial mechanical room",
   },
   {
     title: "Commercial Pipe Repair and Repiping",

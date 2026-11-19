@@ -171,7 +171,7 @@ const TOILET_SERVICES: ServiceTypeCard[] = [
     href: "/toilet-repair-installation/",
     image:
       "/images/services/toilet-repair-installation/red-carpet-plumbing-new-toilet-installation-las-vegas.webp",
-    imageAlt: "New toilet set with wax ring and bolts still out",
+    imageAlt: "Toilet installation with a wax ring, supply line and tools beside a tool bag",
   },
   {
     title: "Wax Ring and Flange Repair",
@@ -534,7 +534,7 @@ export default function ToiletRepairInstallationPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-toilet-repair-installation-card.webp"
-              alt="White toilet with a chrome supply line in a modern bathroom"
+              alt="Toilet beside a wax ring, fill valve and closet bolts"
             >
             <SectionReveal>
               <SectionRevealItem>
@@ -579,7 +579,7 @@ export default function ToiletRepairInstallationPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/toilet-repair-installation/red-carpet-plumbing-commercial-toilet-repair-las-vegas.webp"
-              alt="Commercial restroom toilet repair setup with a tool bag and replacement parts"
+              alt="Commercial restroom with toilets, urinals and an open floor drain beside a plumber's tool bag"
             >
             <SectionReveal>
               <SectionRevealItem>

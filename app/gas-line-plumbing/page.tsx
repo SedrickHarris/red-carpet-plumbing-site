@@ -571,7 +571,7 @@ export default function GasLinePlumbingPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-gas-line-leak-detection-card.webp"
-              alt="Gas regulator and shutoff valve with a handheld gas detector connected"
+              alt="Black iron gas piping and regulator with a leak detector"
             >
             <SectionReveal>
               <SectionRevealItem>

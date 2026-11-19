@@ -174,7 +174,7 @@ const WATER_HEATER_SERVICES: ServiceTypeCard[] = [
     href: "/water-heater-repair-installation/expansion-tank/",
     image:
       "/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-thermal-expansion-tank-installation-card.webp",
-    imageAlt: "Expansion tank mounted on copper above a water heater",
+    imageAlt: "Water heater with a thermal expansion tank mounted on copper piping",
   },
   {
     title: "Gas Water Heater Service",
@@ -539,7 +539,7 @@ export default function WaterHeaterRepairInstallationPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/water-heater-repair-installation/red-carpet-plumbing-las-vegas-water-heater-repair-installation-card.webp"
-              alt="Tank water heater in a garage with supply pipes and a junction box"
+              alt="Tank water heater in a garage with a pan and gauge tool"
             >
             <SectionReveal>
               <SectionRevealItem>
@@ -583,7 +583,7 @@ export default function WaterHeaterRepairInstallationPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/emergency-plumbing/red-carpet-plumbing-las-vegas-water-heater-emergency-card.webp"
-              alt="Water heater with a slow drip at the base valve"
+              alt="Water falling from a brass fitting on the lower side of a tank water heater into a drain pan"
             >
             <SectionReveal>
               <SectionRevealItem>

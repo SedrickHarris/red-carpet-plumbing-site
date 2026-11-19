@@ -134,7 +134,7 @@ const PRESSURE_SERVICES: ServiceTypeCard[] = [
     href: "/water-meter-pressure-regulator-services/",
     image:
       "/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-pressure-regulator-inspection-card.webp",
-    imageAlt: "Meter and regulator assembly with a test fitting case open",
+    imageAlt: "Outdoor water meter, valves and pressure regulator assembly beside a stucco wall",
   },
   {
     title: "Pressure Regulator Replacement",
@@ -537,7 +537,7 @@ export default function WaterMeterPressureRegulatorServicesPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/water-pipe-repair-replacement/red-carpet-plumbing-main-water-line-repair-las-vegas.webp"
-              alt="Water meter and pressure regulator vault with copper piping and a gauge"
+              alt="Main shutoff and regulator inside a recessed wall box"
             >
             <SectionReveal>
               <SectionRevealItem>

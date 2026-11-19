@@ -170,7 +170,7 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     href: "/faucet-sink-repair-installation/",
     image:
       "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-bathroom-faucet-sink-repair-las-vegas.webp",
-    imageAlt: "Angle stops and cartridges laid out under a bathroom vanity",
+    imageAlt: "Open bathroom vanity cabinet with braided supply lines on wall valves under a sink bowl, wrenches and brass parts on a mat, and a tool bag on the floor beside it",
   },
   {
     title: "Under-Sink Leak Repair",
@@ -179,7 +179,7 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     href: "/faucet-sink-repair-installation/",
     image:
       "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-under-sink-leak-repair-card.webp",
-    imageAlt: "Water dripping from a P-trap joint under a sink",
+    imageAlt: "Under-sink cabinet with a P-trap and a small drip from the drain connection",
   },
   {
     title: "Aerator and Cartridge Service",
@@ -197,7 +197,7 @@ const FAUCET_SINK_SERVICES: ServiceTypeCard[] = [
     href: "/drain-cleaning/",
     image:
       "/images/services/faucet-sink-repair-installation/red-carpet-plumbing-las-vegas-drain-p-trap-repair-card.webp",
-    imageAlt: "Corroded trap section and washers removed below a sink",
+    imageAlt: "Black P-trap and supply lines under a sink beside a tool bag",
   },
 ];
 
@@ -534,7 +534,7 @@ export default function FaucetSinkRepairInstallationPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-faucet-repair-replacement-card.webp"
-              alt="Under-sink cabinet with supply lines and drain below a kitchen faucet and sink"
+              alt="Brushed nickel faucet lifted out with seals on a cabinet mat"
             >
             <SectionReveal>
               <SectionRevealItem>

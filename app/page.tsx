@@ -540,7 +540,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/water-pipe-repair-replacement/red-carpet-plumbing-las-vegas-pinhole-leak-repair-card.webp"
-              alt="Copper water line in an opened wall with a pinhole drip at a joint beside soldering tools"
+              alt="Droplet forming at a pinhole in a corroded copper line"
             >
             <SectionReveal>
               <SectionRevealItem>

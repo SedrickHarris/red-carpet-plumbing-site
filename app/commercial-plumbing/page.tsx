@@ -170,7 +170,7 @@ const COMMERCIAL_SERVICES: ServiceTypeCard[] = [
     href: "/backflow-prevention/",
     image:
       "/images/services/commercial-plumbing/red-carpet-plumbing-commercial-pipe-valve-detail-las-vegas.webp",
-    imageAlt: "Close view of brass ball valves and a gauge on copper",
+    imageAlt: "Brass and copper valve assembly with gauges in a commercial mechanical room",
   },
   {
     title: "Commercial Pipe Repair and Repiping",
@@ -603,7 +603,7 @@ export default function CommercialPlumbingPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/water-meter-pressure-regulator-services/red-carpet-plumbing-las-vegas-commercial-pressure-regulation-card.webp"
-              alt="Brass and copper commercial pressure reducing valve assembly with two gauges"
+              alt="Two regulators in parallel on a large copper main indoors"
             >
             <SectionReveal>
               <SectionRevealItem>

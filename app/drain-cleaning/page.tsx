@@ -184,7 +184,7 @@ const DRAIN_TYPES: DrainTypeCard[] = [
     href: "/drain-cleaning/video-camera-inspection/",
     image:
       "/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-video-camera-drain-inspection-card.webp",
-    imageAlt: "Drain camera cable entering a cleanout beside an open tool bag",
+    imageAlt: "Video inspection camera reel and monitor beside a drain cleanout",
   },
 ];
 
@@ -533,7 +533,7 @@ export default function DrainCleaningPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-drain-cleaning-card.webp"
-              alt="Drain machine cabled into an outdoor cleanout beside a stucco wall"
+              alt="Drum cable machine feeding a stucco wall cleanout"
             >
             <SectionReveal>
               <SectionRevealItem>
@@ -577,7 +577,7 @@ export default function DrainCleaningPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/video-camera-plumbing-inspections/red-carpet-plumbing-las-vegas-drain-line-camera-inspection-card.webp"
-              alt="Drain camera reel and monitor beside an open cleanout"
+              alt="Red camera cable fed into a small patio cleanout"
             >
             <SectionReveal>
               <SectionRevealItem>

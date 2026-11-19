@@ -197,7 +197,7 @@ const FIXTURE_SERVICES: ServiceTypeCard[] = [
     href: "/plumbing-fixture-repair-replacement-installation/",
     image:
       "/images/services/plumbing-fixture-repair-replacement-installation/red-carpet-plumbing-las-vegas-fixture-upgrade-renovation-plumbing-card.webp",
-    imageAlt: "New showerhead, trim and stop valves staged on a vanity top",
+    imageAlt: "Bathroom vanity with a faucet, showerhead and replacement fixture parts laid out with wrenches",
   },
 ];
 
@@ -535,7 +535,7 @@ export default function PlumbingFixtureRepairReplacementInstallationPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/faucet-sink-repair-installation/red-carpet-plumbing-bathroom-faucet-sink-repair-las-vegas.webp"
-              alt="Open vanity cabinet under a bathroom sink with a tool bag and a view of the Las Vegas skyline"
+              alt="Open bathroom vanity cabinet with braided supply lines on wall valves under a sink bowl, wrenches and brass parts on a mat, and a tool bag on the floor beside it"
             >
             <SectionReveal>
               <SectionRevealItem>

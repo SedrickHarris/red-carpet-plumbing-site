@@ -154,7 +154,7 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     href: "/sewer-line-services/cipp-lining/",
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-trenchless-sewer-line-replacement-las-vegas.webp",
-    imageAlt: "Pipe section and couplings staged beside a sewer access pit",
+    imageAlt: "Excavation pit with a new pipe section and tools beside a home's sewer cleanout",
   },
   {
     title: "Pipe Bursting",
@@ -164,7 +164,7 @@ const SEWER_LINE_SERVICES_LIST: ServiceTypeCard[] = [
     image:
       "/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-pipe-bursting-card.webp",
     imageAlt:
-      "Hydraulic bursting rig pulling new pipe from a driveway pit",
+      "Pipe bursting machine pulling a new blue pipe through an access pit",
   },
   {
     title: "Root Intrusion Removal and Treatment",
@@ -525,7 +525,7 @@ export default function SewerLineServicesPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/sewer-line-services/red-carpet-plumbing-las-vegas-sewer-line-services-card.webp"
-              alt="Sewer camera cable reel beside a drain cleanout"
+              alt="Sewer camera cable descending into an open cleanout"
             >
             <SectionReveal>
               <SectionRevealItem>
@@ -568,7 +568,7 @@ export default function SewerLineServicesPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/drain-cleaning/red-carpet-plumbing-las-vegas-main-sewer-line-cleaning-card.webp"
-              alt="Large drain machine with a cable reel on a paver walkway"
+              alt="Large drain machine cabled into an outdoor sewer cleanout"
             >
             <SectionReveal>
               <SectionRevealItem>

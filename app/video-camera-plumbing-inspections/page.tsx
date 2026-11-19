@@ -580,7 +580,7 @@ export default function VideoCameraPlumbingInspectionsPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/sewer-line-services/red-carpet-plumbing-sewer-cleanout-inspection-las-vegas.webp"
-              alt="Inspection camera reel and tools at a cleanout beside a home"
+              alt="Sewer camera reel and monitor at an open driveway cleanout"
             >
             <SectionReveal>
               <SectionRevealItem>

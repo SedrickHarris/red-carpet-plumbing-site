@@ -120,7 +120,7 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     href: "/slab-leak-detection-repair/detection/",
     image:
       "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-repair-card.webp",
-    imageAlt: "Leak listening probe, headphones, analyzer and pressure gauge on a tile floor",
+    imageAlt: "Leak analyzer and headphones beside taped tile in a hallway",
   },
   {
     title: "Spot Repair Through Concrete",
@@ -167,7 +167,7 @@ const SLAB_LEAK_SERVICES: ServiceTypeCard[] = [
     image:
       "/images/services/slab-leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-thermal-imaging-card.webp",
     imageAlt:
-      "Thermal camera screen showing a warm pipe run under tile",
+      "Thermal imaging camera, headphones and pressure gauge set up for leak detection",
   },
   {
     title: "Emergency Slab Leak Response",
@@ -528,7 +528,7 @@ export default function SlabLeakDetectionAndRepairPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-slab-leak-detection-card.webp"
-              alt="Leak analyzer, probe and pressure gauge on a tile floor beside taped survey lines"
+              alt="Damp floor patch taped off beside acoustic locating equipment"
             >
             <SectionReveal>
               <SectionRevealItem>

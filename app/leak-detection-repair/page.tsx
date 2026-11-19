@@ -516,7 +516,7 @@ export default function LeakDetectionAndRepairPage() {
           <div className="mx-auto max-w-7xl xl:px-12 px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24">
             <SectionImageSplit
               src="/images/services/leak-detection-repair/red-carpet-plumbing-las-vegas-leak-detection-repair-card.webp"
-              alt="Leak detection monitor and moisture meter beside an opened wall cavity with a leaking pipe"
+              alt="Moisture meter and gauge below a leaking pipe joint"
             >
             <SectionReveal>
               <SectionRevealItem>
